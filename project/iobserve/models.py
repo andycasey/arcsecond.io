@@ -10,17 +10,25 @@ class AstronomicalCoordinates(models.Model):
   equinox = models.FloatField(default=J2000)
 
   def are_empty(self):
-    return self.right_ascension == NOT_A_SCIENTIFIC_NUMBER or
-      self.declination == NOT_A_SCIENTIFIC_NUMBER or
+    return self.right_ascension == NOT_A_SCIENTIFIC_NUMBER or \
+      self.declination == NOT_A_SCIENTIFIC_NUMBER or \
       self.epoch == NOT_A_SCIENTIFIC_NUMBER
 
   def __unicode__(self):
     return u"(R.A.: %.8f, Dec: %.8f, epoch: %.2f, equinox: %.2f)"%(self.right_ascension, self.declination, self.epoch)
 
-class Star(models.Model):
+class BibliographicReference(models.Model):
+  title = models.CharField(max_length=1000)
+
+class Alias(models.Model):
+  value = models.CharField(max_length=100)
+  catalogue_name = models.CharField(max_length=100)
+  astronomical_object = models.ForeignKey('AstronomicalObject', related_name='alias')
+
+class AstronomicalObject(models.Model):
   name = models.CharField(max_length=100)
   coordinates = AstronomicalCoordinates()
-  
+  #references = models.ManyToManyField(BibliographicReference, related_name="references")
 
 class TerrestrialCoordinates(models.Model):
   longitude = models.FloatField(default=NOT_A_SCIENTIFIC_NUMBER)
@@ -29,7 +37,9 @@ class TerrestrialCoordinates(models.Model):
   altitude = models.FloatField(default=NOT_A_SCIENTIFIC_NUMBER)
   
   def are_empty(self):
-    return self.longitude == NOT_A_SCIENTIFIC_NUMBER or self.latitude == NOT_A_SCIENTIFIC_NUMBER or self.altitude == NOT_A_SCIENTIFIC_NUMBER
+    return self.longitude == NOT_A_SCIENTIFIC_NUMBER or \
+        self.latitude == NOT_A_SCIENTIFIC_NUMBER or \
+        self.altitude == NOT_A_SCIENTIFIC_NUMBER
   
   def __unicode__(self):
     return u"(long: %.8f, lat: %.8f, alt: %.2fm)"%(self.longitude, self.latitude, self.altitude)
@@ -90,7 +100,7 @@ class Site(TerrestrialObject):
   acronym = models.CharField(max_length=200)
   address_line_1 = models.CharField(max_length=200)
   address_line_2 = models.CharField(max_length=200)
-  zip_code = modesl.IntegerField()
+  zip_code = models.IntegerField()
   country = models.CharField(max_length=200)
   website = models.URLField()
     
@@ -100,7 +110,7 @@ class ObservingSite(Site):
 class AstronomicalOrganisation(models.Model):
   headquarters = models.OneToOneField(Site, related_name="headquarters")
   secondary_headquarters = models.OneToOneField(Site, related_name="secondary_headquarters")
-  observing_sites = models.ManyToManyField(ObservingSite, related_names="observing_sites")
+  observing_sites = models.ManyToManyField(ObservingSite, related_name="observing_sites")
   
   
   
