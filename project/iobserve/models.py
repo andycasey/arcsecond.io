@@ -15,7 +15,7 @@ class AstronomicalCoordinates(models.Model):
       self.epoch == NOT_A_SCIENTIFIC_NUMBER
 
   def __unicode__(self):
-    return u"(R.A.: %.8f, Dec: %.8f, epoch: %.2f, equinox: %.2f)"%(self.right_ascension, self.declination, self.epoch)
+    return u"(R.A.: %.8f, Dec: %.8f, epoch: %.2f, equinox: %.2f)"%(self.right_ascension, self.declination, self.epoch, self.equinox)
 
 class BibliographicReference(models.Model):
   title = models.CharField(max_length=1000)
@@ -27,8 +27,8 @@ class Alias(models.Model):
 
 class AstronomicalObject(models.Model):
   name = models.CharField(max_length=100)
-  coordinates = AstronomicalCoordinates()
-  #references = models.ManyToManyField(BibliographicReference, related_name="references")
+  coordinates = models.OneToOneField(AstronomicalCoordinates, blank=True)
+  #references = models.ManyToManyField(BibliographicReference, related_name="references", blank=True)
 
 class TerrestrialCoordinates(models.Model):
   longitude = models.FloatField(default=NOT_A_SCIENTIFIC_NUMBER)
