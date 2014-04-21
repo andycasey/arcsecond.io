@@ -9,6 +9,7 @@ from django.conf.urls import url
 from django.conf.urls import include
 
 import views
+import api
 
 urlpatterns = patterns('',
   # url(r'^$', views.index, name='index'),
@@ -16,6 +17,7 @@ urlpatterns = patterns('',
   # url(r'^about', views.about, name='about'),
   # url(r'^sky/object/?$', views.astronomical_object),
   url(r'^sky/object/(?P<name>[0-9a-zA-Z_-]+)/?$', views.astronomical_object),
+  url(r'^sky/object/(?P<name>[0-9a-zA-Z_-]+)/aliases/$', api.AliasList.as_view(), name='alias-list'),
 )
 
 urlpatterns += format_suffix_patterns(urlpatterns)

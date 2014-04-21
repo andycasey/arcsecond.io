@@ -9,22 +9,22 @@ from .serializers import *
 import urllib2
 from astropy.io import votable
 
-root = "http://simbad.harvard.edu/simbad/sim-script?script="
-parameters = "output console=off script=off\nvotable v1 {\nCOO(d;ICRS;2000;2000)\n}\nvotable open v1\n%s\nvotable close"
+SIMBAD_ROOT = "http://simbad.harvard.edu/simbad/sim-script?script="
+coords_script = "output console=off script=off\nvotable v1 {\nCOO(d;ICRS;2000;2000)\n}\nvotable open v1\n%s\nvotable close"
 
 @api_view(['GET'])
 def astronomical_object(request, name="."):
-  url = root+urllib2.quote(parameters%name)
+  coords_url = SIMBAD_ROOT+urllib2.quote(coords_script%name)
 
   try:
-    response = urllib2.urlopen(url)
+    response = urllib2.urlopen(coords_url)
   except urllib2.URLError:
     return Response(status=status.HTTP_503_SERVICE_UNAVAILABLE)
   else:
     response_votable = votable.parse(response)
     coords_table = response_votable.get_first_table()
       
-    coords = AstronomicalCoordinates()
+    coords = AstronomicalCoordinates(source="SIMBAD")
     coords.right_ascension = float(coords_table.array[0][0])
     coords.declination = float(coords_table.array[0][1])
     coords.save()

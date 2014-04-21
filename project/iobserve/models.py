@@ -3,11 +3,26 @@ from django.db import models
 NOT_A_SCIENTIFIC_NUMBER = -9999999999999
 J2000 = 2000
 
+class Person(models.Model):
+  first_name = models.CharField(max_length=1000)
+  middle_name = models.CharField(max_length=1000)
+  last_name = models.CharField(max_length=1000)
+  
+
+class BibliographicReference(models.Model):
+  title = models.CharField(max_length=1000)
+  year = models.IntegerField(default=0)
+#  bibcode = models.RegexField(regex="[0-9]{4}[A-Za-z].{12}[0-9][A-Z]")
+#  authors = ManyToManyField(Person, related_name="authors")
+  
+
 class AstronomicalCoordinates(models.Model):
   right_ascension = models.FloatField(default=NOT_A_SCIENTIFIC_NUMBER)
   declination = models.FloatField(default=NOT_A_SCIENTIFIC_NUMBER)
   epoch = models.FloatField(default=J2000)
   equinox = models.FloatField(default=J2000)
+  source = models.CharField(max_length=1000, blank=True)
+#  reference = models.OneToOneField(BibliographicReference, blank=True)
 
   def are_empty(self):
     return self.right_ascension == NOT_A_SCIENTIFIC_NUMBER or \
@@ -16,10 +31,8 @@ class AstronomicalCoordinates(models.Model):
 
   def __unicode__(self):
     return u"(R.A.: %.8f, Dec: %.8f, epoch: %.2f, equinox: %.2f)"%(self.right_ascension, self.declination, self.epoch, self.equinox)
-
-class BibliographicReference(models.Model):
-  title = models.CharField(max_length=1000)
-
+    
+    
 class Alias(models.Model):
   value = models.CharField(max_length=100)
   catalogue_name = models.CharField(max_length=100)
@@ -28,7 +41,11 @@ class Alias(models.Model):
 class AstronomicalObject(models.Model):
   name = models.CharField(max_length=100)
   coordinates = models.OneToOneField(AstronomicalCoordinates, blank=True)
-  #references = models.ManyToManyField(BibliographicReference, related_name="references", blank=True)
+#  references = models.ManyToManyField(BibliographicReference, related_name="references", blank=True)
+  aliases = models.ManyToManyField(Alias, related_name="aliases", blank=True)
+
+
+
 
 class TerrestrialCoordinates(models.Model):
   longitude = models.FloatField(default=NOT_A_SCIENTIFIC_NUMBER)
