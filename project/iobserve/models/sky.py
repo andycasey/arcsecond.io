@@ -28,8 +28,6 @@ class Alias(models.Model):
     app_label = 'iobserve'
 
   value = models.CharField(max_length=100)
-  catalogue_name = models.CharField(max_length=100)
-  astronomical_object = models.ForeignKey('AstronomicalObject', related_name='alias')
 
 
 class AstronomicalObject(models.Model):

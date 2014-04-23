@@ -17,3 +17,11 @@ class AliasList(generics.ListCreateAPIView):
   model = Alias
   serializer_class = AliasSerializer
 
+class BibliographicReferenceList(generics.ListCreateAPIView):
+  model = BibliographicReference
+  serializer_class = BibliographicReferenceSerializer
+
+class AuthorList(generics.ListCreateAPIView):
+  model = Person
+  serializer_class = PersonSerializer
+

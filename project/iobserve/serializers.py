@@ -2,14 +2,14 @@
 from rest_framework import serializers
 from .models import *
 
-# class PersonSerializer(serializers.HyperlinkedModelSerializer):
-#   class Meta:
-#     model = Person
-#
-# class BibliographicReferenceSerializer(serializers.HyperlinkedModelSerializer):
-#   authors = serializers.HyperlinkedRelatedField(many=True)
-#   class Meta:
-#     model = BibliographicReference
+class PersonSerializer(serializers.HyperlinkedModelSerializer):
+  class Meta:
+    model = Person
+
+class BibliographicReferenceSerializer(serializers.HyperlinkedModelSerializer):
+  authors = serializers.HyperlinkedRelatedField(many=True, view_name='authors-list')
+  class Meta:
+    model = BibliographicReference
 
 class AstronomicalCoordinatesSerializer(serializers.HyperlinkedModelSerializer):
 #  reference = BibliographicReferenceSerializer()
@@ -20,11 +20,12 @@ class AstronomicalCoordinatesSerializer(serializers.HyperlinkedModelSerializer):
 class AliasSerializer(serializers.ModelSerializer):
   class Meta:
     model = Alias
+    fields = ("value",)
   
 class AstronomicalObjectSerializer(serializers.HyperlinkedModelSerializer):
   coordinates = AstronomicalCoordinatesSerializer()
   aliases = serializers.HyperlinkedRelatedField(many=True, view_name='alias-list')
-#  references = serializers.HyperlinkedRelatedField(many=True)
+  #references = serializers.HyperlinkedRelatedField(many=True, view_name='reference-list')
   class Meta:
     model = AstronomicalObject
     fields = ("name", "coordinates", "aliases")
