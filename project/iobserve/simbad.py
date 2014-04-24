@@ -74,7 +74,7 @@ def get_SIMBAD_aliases(name):
     
     for line in response.readlines():
       if ok and len(line.strip()) > 0:
-        alias, created = Alias.objects.get_or_create(value=line.strip())
+        alias, created = Alias.objects.get_or_create(name=line.strip())
         aliases.append(alias)
       if line.find(QUERY_DATA_DELIMITER) >= 0:
         ok = True

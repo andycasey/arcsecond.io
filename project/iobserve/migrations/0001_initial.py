@@ -101,9 +101,8 @@ class Migration(SchemaMigration):
         # Adding model 'Alias'
         db.create_table(u'iobserve_alias', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('value', self.gf('django.db.models.fields.CharField')(max_length=100)),
-            ('catalogue_name', self.gf('django.db.models.fields.CharField')(max_length=100)),
-            ('astronomical_object', self.gf('django.db.models.fields.related.ForeignKey')(related_name='alias', to=orm['iobserve.AstronomicalObject'])),
+            ('name', self.gf('django.db.models.fields.CharField')(max_length=100)),
+            ('astronomical_object', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['iobserve.AstronomicalObject'], null=True)),
         ))
         db.send_create_signal('iobserve', ['Alias'])
 
@@ -111,18 +110,9 @@ class Migration(SchemaMigration):
         db.create_table(u'iobserve_astronomicalobject', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('name', self.gf('django.db.models.fields.CharField')(max_length=100)),
-            ('coordinates', self.gf('django.db.models.fields.related.OneToOneField')(to=orm['iobserve.AstronomicalCoordinates'], unique=True, blank=True)),
+            ('coordinates', self.gf('django.db.models.fields.related.OneToOneField')(to=orm['iobserve.AstronomicalCoordinates'], unique=True, null=True)),
         ))
         db.send_create_signal('iobserve', ['AstronomicalObject'])
-
-        # Adding M2M table for field aliases on 'AstronomicalObject'
-        m2m_table_name = db.shorten_name(u'iobserve_astronomicalobject_aliases')
-        db.create_table(m2m_table_name, (
-            ('id', models.AutoField(verbose_name='ID', primary_key=True, auto_created=True)),
-            ('astronomicalobject', models.ForeignKey(orm['iobserve.astronomicalobject'], null=False)),
-            ('alias', models.ForeignKey(orm['iobserve.alias'], null=False))
-        ))
-        db.create_unique(m2m_table_name, ['astronomicalobject_id', 'alias_id'])
 
 
     def backwards(self, orm):
@@ -162,17 +152,13 @@ class Migration(SchemaMigration):
         # Deleting model 'AstronomicalObject'
         db.delete_table(u'iobserve_astronomicalobject')
 
-        # Removing M2M table for field aliases on 'AstronomicalObject'
-        db.delete_table(db.shorten_name(u'iobserve_astronomicalobject_aliases'))
-
 
     models = {
         'iobserve.alias': {
             'Meta': {'object_name': 'Alias'},
-            'astronomical_object': ('django.db.models.fields.related.ForeignKey', [], {'related_name': "'alias'", 'to': "orm['iobserve.AstronomicalObject']"}),
-            'catalogue_name': ('django.db.models.fields.CharField', [], {'max_length': '100'}),
+            'astronomical_object': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['iobserve.AstronomicalObject']", 'null': 'True'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'value': ('django.db.models.fields.CharField', [], {'max_length': '100'})
+            'name': ('django.db.models.fields.CharField', [], {'max_length': '100'})
         },
         'iobserve.astronomicalcoordinates': {
             'Meta': {'object_name': 'AstronomicalCoordinates'},
@@ -185,8 +171,7 @@ class Migration(SchemaMigration):
         },
         'iobserve.astronomicalobject': {
             'Meta': {'object_name': 'AstronomicalObject'},
-            'aliases': ('django.db.models.fields.related.ManyToManyField', [], {'symmetrical': 'False', 'related_name': "'aliases'", 'blank': 'True', 'to': "orm['iobserve.Alias']"}),
-            'coordinates': ('django.db.models.fields.related.OneToOneField', [], {'to': "orm['iobserve.AstronomicalCoordinates']", 'unique': 'True', 'blank': 'True'}),
+            'coordinates': ('django.db.models.fields.related.OneToOneField', [], {'to': "orm['iobserve.AstronomicalCoordinates']", 'unique': 'True', 'null': 'True'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'name': ('django.db.models.fields.CharField', [], {'max_length': '100'})
         },

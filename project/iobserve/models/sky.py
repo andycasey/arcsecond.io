@@ -12,7 +12,6 @@ class AstronomicalCoordinates(models.Model):
   epoch = models.FloatField(default=J2000)
   equinox = models.FloatField(default=J2000)
   source = models.CharField(max_length=1000, blank=True)
-#  reference = models.OneToOneField(BibliographicReference, blank=True)
 
   def are_empty(self):
     return self.right_ascension == NOT_A_SCIENTIFIC_NUMBER or \
@@ -27,7 +26,8 @@ class Alias(models.Model):
   class Meta:
     app_label = 'iobserve'
 
-  value = models.CharField(max_length=100)
+  name = models.CharField(max_length=100)
+  astronomical_object = models.ForeignKey('AstronomicalObject', null=True, related_name="aliases")
 
 
 class AstronomicalObject(models.Model):
@@ -35,9 +35,9 @@ class AstronomicalObject(models.Model):
     app_label = 'iobserve'
 
   name = models.CharField(max_length=100)
-  coordinates = models.OneToOneField(AstronomicalCoordinates, blank=True)
+  coordinates = models.OneToOneField(AstronomicalCoordinates, null=True)
 #  references = models.ManyToManyField(BibliographicReference, related_name="references", blank=True)
-  aliases = models.ManyToManyField(Alias, related_name="aliases", blank=True)
+  # aliases = models.ManyToManyField(Alias, related_name="aliases", null=True)
 
 
 

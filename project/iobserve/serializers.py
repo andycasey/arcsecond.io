@@ -20,7 +20,7 @@ class AstronomicalCoordinatesSerializer(serializers.HyperlinkedModelSerializer):
 class AliasSerializer(serializers.ModelSerializer):
   class Meta:
     model = Alias
-    fields = ("value",)
+    fields = ("name",)
   
 class AstronomicalObjectSerializer(serializers.HyperlinkedModelSerializer):
   coordinates = AstronomicalCoordinatesSerializer()
