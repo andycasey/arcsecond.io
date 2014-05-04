@@ -102,7 +102,7 @@ class Migration(SchemaMigration):
         db.create_table(u'iobserve_alias', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('name', self.gf('django.db.models.fields.CharField')(max_length=100)),
-            ('astronomical_object', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['iobserve.AstronomicalObject'], null=True)),
+            ('astronomical_object', self.gf('django.db.models.fields.related.ForeignKey')(related_name='aliases', null=True, to=orm['iobserve.AstronomicalObject'])),
         ))
         db.send_create_signal('iobserve', ['Alias'])
 
@@ -156,7 +156,7 @@ class Migration(SchemaMigration):
     models = {
         'iobserve.alias': {
             'Meta': {'object_name': 'Alias'},
-            'astronomical_object': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['iobserve.AstronomicalObject']", 'null': 'True'}),
+            'astronomical_object': ('django.db.models.fields.related.ForeignKey', [], {'related_name': "'aliases'", 'null': 'True', 'to': "orm['iobserve.AstronomicalObject']"}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'name': ('django.db.models.fields.CharField', [], {'max_length': '100'})
         },

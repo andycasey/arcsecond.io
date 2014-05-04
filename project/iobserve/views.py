@@ -21,6 +21,11 @@ def astronomical_object(request, name="."):
     obj.coordinates = coords;
     obj.save()
         
+  # alias = Alias(name="toto")
+  # alias.save()
+        
+  # obj.aliases = [alias,]
+        
   serializer = AstronomicalObjectSerializer(obj)
   return Response(serializer.data)
     

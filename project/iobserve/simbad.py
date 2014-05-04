@@ -21,7 +21,7 @@ QUERY_VOTABLE_FLUXES          = "FLUXDATA(U)\nFLUXDATA(B)\nFLUXDATA(V)\nFLUXDATA
 
 VOTABLE_OPTIONS   = "output console=off script=off\n"
 NAME_SCRIPT       = "sim-script?script="
-QUERY_ALIAS       = '"$%IDLIST"\n'
+QUERY_ALIAS       = '"%IDLIST"\n'
 QUERY_FLUX        = '"$%FLUXLIST[%%*(N=F )]"\n'
 QUERY_COORDS      = '"$%COO($A$D)"\n'
 QUERY_OTYPE       = '"$%OTYPE(S)"\n'
