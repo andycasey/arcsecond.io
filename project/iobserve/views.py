@@ -1,4 +1,5 @@
 
+from rest_framework import generics
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -53,3 +54,37 @@ def astronomical_object_aliases(request, name="."):
   serializer = AliasSerializer(aliases, many=True)
   return Response(serializer.data)
 
+
+class TerrestrialCoordinatesList(generics.ListCreateAPIView):
+  queryset = TerrestrialCoordinates.objects.all()
+  serializer_class = TerrestrialCoordinatesSerializer
+
+
+class TerrestrialCoordinatesDetail(generics.RetrieveUpdateDestroyAPIView):
+  queryset = TerrestrialCoordinates.objects.all()
+  serializer_class = TerrestrialCoordinatesSerializer
+
+
+# @api_view(['GET'])
+# def terrestrial_coordinates(request, pk):
+#   coords = TerrestrialCoordinates.get(pk=pk)
+#
+#   if coords == None:
+#     return Response(status=status.HTTP_503_SERVICE_UNAVAILABLE)
+#
+#   serializer = TerrestrialCoordinatesSerializer(coords)
+#   return Response(serializer.data)
+#
+#
+# @api_view(['GET'])
+# def terrestrial_coordinates_all(request):
+#   coords = TerrestrialCoordinates.objects.all()
+#
+#   if coords == None:
+#     return Response(status=status.HTTP_503_SERVICE_UNAVAILABLE)
+#
+#   serializer = TerrestrialCoordinatesSerializer(coords, many=True)
+#   return Response(serializer.data)
+#
+#
+#

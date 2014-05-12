@@ -30,16 +30,19 @@ class Migration(SchemaMigration):
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('longitude', self.gf('django.db.models.fields.FloatField')(default=-9999999999999)),
             ('latitude', self.gf('django.db.models.fields.FloatField')(default=-9999999999999)),
-            ('east_positive', self.gf('django.db.models.fields.BooleanField')()),
+            ('east_positive', self.gf('django.db.models.fields.BooleanField')(default=True)),
             ('altitude', self.gf('django.db.models.fields.FloatField')(default=-9999999999999)),
         ))
         db.send_create_signal('iobserve', ['TerrestrialCoordinates'])
 
+        # Adding unique constraint on 'TerrestrialCoordinates', fields ['longitude', 'latitude']
+        db.create_unique(u'iobserve_terrestrialcoordinates', ['longitude', 'latitude'])
+
         # Adding model 'TerrestrialObject'
         db.create_table(u'iobserve_terrestrialobject', (
-            (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('name', self.gf('django.db.models.fields.CharField')(max_length=100)),
+            ('name', self.gf('django.db.models.fields.CharField')(max_length=100, primary_key=True)),
             ('long_name', self.gf('django.db.models.fields.CharField')(max_length=100)),
+            ('continent', self.gf('django.db.models.fields.CharField')(max_length=100)),
         ))
         db.send_create_signal('iobserve', ['TerrestrialObject'])
 
@@ -47,34 +50,38 @@ class Migration(SchemaMigration):
         db.create_table(u'iobserve_observingtool', (
             (u'terrestrialobject_ptr', self.gf('django.db.models.fields.related.OneToOneField')(to=orm['iobserve.TerrestrialObject'], unique=True, primary_key=True)),
             ('tool_type', self.gf('django.db.models.fields.CharField')(max_length=100)),
+            ('site', self.gf('django.db.models.fields.related.ForeignKey')(related_name='sites', to=orm['iobserve.ObservingSite'])),
         ))
         db.send_create_signal('iobserve', ['ObservingTool'])
 
         # Adding model 'Site'
         db.create_table(u'iobserve_site', (
             (u'terrestrialobject_ptr', self.gf('django.db.models.fields.related.OneToOneField')(to=orm['iobserve.TerrestrialObject'], unique=True, primary_key=True)),
-            ('continent', self.gf('django.db.models.fields.CharField')(max_length=100)),
-            ('site_type', self.gf('django.db.models.fields.CharField')(default='Unknown', max_length=100)),
             ('acronym', self.gf('django.db.models.fields.CharField')(max_length=200)),
             ('address_line_1', self.gf('django.db.models.fields.CharField')(max_length=200)),
             ('address_line_2', self.gf('django.db.models.fields.CharField')(max_length=200)),
             ('zip_code', self.gf('django.db.models.fields.IntegerField')()),
             ('country', self.gf('django.db.models.fields.CharField')(max_length=200)),
             ('website', self.gf('django.db.models.fields.URLField')(max_length=200)),
+            ('wikipedia_article', self.gf('django.db.models.fields.URLField')(max_length=200)),
         ))
         db.send_create_signal('iobserve', ['Site'])
 
         # Adding model 'ObservingSite'
         db.create_table(u'iobserve_observingsite', (
             (u'site_ptr', self.gf('django.db.models.fields.related.OneToOneField')(to=orm['iobserve.Site'], unique=True, primary_key=True)),
+            ('IAUCode', self.gf('django.db.models.fields.CharField')(max_length=200)),
         ))
         db.send_create_signal('iobserve', ['ObservingSite'])
 
         # Adding model 'AstronomicalOrganisation'
         db.create_table(u'iobserve_astronomicalorganisation', (
-            (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('headquarters', self.gf('django.db.models.fields.related.OneToOneField')(related_name='headquarters', unique=True, to=orm['iobserve.Site'])),
-            ('secondary_headquarters', self.gf('django.db.models.fields.related.OneToOneField')(related_name='secondary_headquarters', unique=True, to=orm['iobserve.Site'])),
+            ('name', self.gf('django.db.models.fields.CharField')(max_length=100, primary_key=True)),
+            ('acronym', self.gf('django.db.models.fields.CharField')(max_length=100)),
+            ('headquarters', self.gf('django.db.models.fields.related.OneToOneField')(related_name='astronomical_organisation', unique=True, to=orm['iobserve.Site'])),
+            ('website', self.gf('django.db.models.fields.URLField')(max_length=200)),
+            ('wikipedia_article', self.gf('django.db.models.fields.URLField')(max_length=200)),
+            ('organisation_type', self.gf('django.db.models.fields.CharField')(default='Unknown', max_length=100)),
         ))
         db.send_create_signal('iobserve', ['AstronomicalOrganisation'])
 
@@ -102,7 +109,7 @@ class Migration(SchemaMigration):
         db.create_table(u'iobserve_alias', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('name', self.gf('django.db.models.fields.CharField')(max_length=100)),
-            ('astronomical_object', self.gf('django.db.models.fields.related.ForeignKey')(related_name='aliases', null=True, to=orm['iobserve.AstronomicalObject'])),
+            ('astronomical_object', self.gf('django.db.models.fields.related.ForeignKey')(blank=True, related_name='aliases', null=True, to=orm['iobserve.AstronomicalObject'])),
         ))
         db.send_create_signal('iobserve', ['Alias'])
 
@@ -116,6 +123,9 @@ class Migration(SchemaMigration):
 
 
     def backwards(self, orm):
+        # Removing unique constraint on 'TerrestrialCoordinates', fields ['longitude', 'latitude']
+        db.delete_unique(u'iobserve_terrestrialcoordinates', ['longitude', 'latitude'])
+
         # Deleting model 'Person'
         db.delete_table(u'iobserve_person')
 
@@ -156,7 +166,7 @@ class Migration(SchemaMigration):
     models = {
         'iobserve.alias': {
             'Meta': {'object_name': 'Alias'},
-            'astronomical_object': ('django.db.models.fields.related.ForeignKey', [], {'related_name': "'aliases'", 'null': 'True', 'to': "orm['iobserve.AstronomicalObject']"}),
+            'astronomical_object': ('django.db.models.fields.related.ForeignKey', [], {'blank': 'True', 'related_name': "'aliases'", 'null': 'True', 'to': "orm['iobserve.AstronomicalObject']"}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'name': ('django.db.models.fields.CharField', [], {'max_length': '100'})
         },
@@ -177,10 +187,13 @@ class Migration(SchemaMigration):
         },
         'iobserve.astronomicalorganisation': {
             'Meta': {'object_name': 'AstronomicalOrganisation'},
-            'headquarters': ('django.db.models.fields.related.OneToOneField', [], {'related_name': "'headquarters'", 'unique': 'True', 'to': "orm['iobserve.Site']"}),
-            u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'observing_sites': ('django.db.models.fields.related.ManyToManyField', [], {'related_name': "'observing_sites'", 'symmetrical': 'False', 'to': "orm['iobserve.ObservingSite']"}),
-            'secondary_headquarters': ('django.db.models.fields.related.OneToOneField', [], {'related_name': "'secondary_headquarters'", 'unique': 'True', 'to': "orm['iobserve.Site']"})
+            'acronym': ('django.db.models.fields.CharField', [], {'max_length': '100'}),
+            'headquarters': ('django.db.models.fields.related.OneToOneField', [], {'related_name': "'astronomical_organisation'", 'unique': 'True', 'to': "orm['iobserve.Site']"}),
+            'name': ('django.db.models.fields.CharField', [], {'max_length': '100', 'primary_key': 'True'}),
+            'observing_sites': ('django.db.models.fields.related.ManyToManyField', [], {'related_name': "'astronomical_organisations'", 'symmetrical': 'False', 'to': "orm['iobserve.ObservingSite']"}),
+            'organisation_type': ('django.db.models.fields.CharField', [], {'default': "'Unknown'", 'max_length': '100'}),
+            'website': ('django.db.models.fields.URLField', [], {'max_length': '200'}),
+            'wikipedia_article': ('django.db.models.fields.URLField', [], {'max_length': '200'})
         },
         'iobserve.bibliographicreference': {
             'Meta': {'object_name': 'BibliographicReference'},
@@ -189,11 +202,13 @@ class Migration(SchemaMigration):
             'year': ('django.db.models.fields.IntegerField', [], {'default': '0'})
         },
         'iobserve.observingsite': {
+            'IAUCode': ('django.db.models.fields.CharField', [], {'max_length': '200'}),
             'Meta': {'object_name': 'ObservingSite', '_ormbases': ['iobserve.Site']},
             u'site_ptr': ('django.db.models.fields.related.OneToOneField', [], {'to': "orm['iobserve.Site']", 'unique': 'True', 'primary_key': 'True'})
         },
         'iobserve.observingtool': {
             'Meta': {'object_name': 'ObservingTool', '_ormbases': ['iobserve.TerrestrialObject']},
+            'site': ('django.db.models.fields.related.ForeignKey', [], {'related_name': "'sites'", 'to': "orm['iobserve.ObservingSite']"}),
             u'terrestrialobject_ptr': ('django.db.models.fields.related.OneToOneField', [], {'to': "orm['iobserve.TerrestrialObject']", 'unique': 'True', 'primary_key': 'True'}),
             'tool_type': ('django.db.models.fields.CharField', [], {'max_length': '100'})
         },
@@ -209,26 +224,25 @@ class Migration(SchemaMigration):
             'acronym': ('django.db.models.fields.CharField', [], {'max_length': '200'}),
             'address_line_1': ('django.db.models.fields.CharField', [], {'max_length': '200'}),
             'address_line_2': ('django.db.models.fields.CharField', [], {'max_length': '200'}),
-            'continent': ('django.db.models.fields.CharField', [], {'max_length': '100'}),
             'country': ('django.db.models.fields.CharField', [], {'max_length': '200'}),
-            'site_type': ('django.db.models.fields.CharField', [], {'default': "'Unknown'", 'max_length': '100'}),
             u'terrestrialobject_ptr': ('django.db.models.fields.related.OneToOneField', [], {'to': "orm['iobserve.TerrestrialObject']", 'unique': 'True', 'primary_key': 'True'}),
             'website': ('django.db.models.fields.URLField', [], {'max_length': '200'}),
+            'wikipedia_article': ('django.db.models.fields.URLField', [], {'max_length': '200'}),
             'zip_code': ('django.db.models.fields.IntegerField', [], {})
         },
         'iobserve.terrestrialcoordinates': {
-            'Meta': {'object_name': 'TerrestrialCoordinates'},
+            'Meta': {'unique_together': "(('longitude', 'latitude'),)", 'object_name': 'TerrestrialCoordinates'},
             'altitude': ('django.db.models.fields.FloatField', [], {'default': '-9999999999999'}),
-            'east_positive': ('django.db.models.fields.BooleanField', [], {}),
+            'east_positive': ('django.db.models.fields.BooleanField', [], {'default': 'True'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'latitude': ('django.db.models.fields.FloatField', [], {'default': '-9999999999999'}),
             'longitude': ('django.db.models.fields.FloatField', [], {'default': '-9999999999999'})
         },
         'iobserve.terrestrialobject': {
             'Meta': {'object_name': 'TerrestrialObject'},
-            u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
+            'continent': ('django.db.models.fields.CharField', [], {'max_length': '100'}),
             'long_name': ('django.db.models.fields.CharField', [], {'max_length': '100'}),
-            'name': ('django.db.models.fields.CharField', [], {'max_length': '100'})
+            'name': ('django.db.models.fields.CharField', [], {'max_length': '100', 'primary_key': 'True'})
         }
     }
 

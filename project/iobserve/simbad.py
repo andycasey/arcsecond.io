@@ -81,3 +81,7 @@ def get_SIMBAD_aliases(name):
 
     print aliases
     return aliases;
+
+
+
+
