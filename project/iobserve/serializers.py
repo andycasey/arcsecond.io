@@ -17,18 +17,18 @@ class AstronomicalCoordinatesSerializer(serializers.HyperlinkedModelSerializer):
   class Meta:
     model = AstronomicalCoordinates
     fields = ("right_ascension", "declination", "epoch", "equinox", "source")
-  
-
-class AstronomicalObjectSerializer(serializers.HyperlinkedModelSerializer):
-  coordinates = AstronomicalCoordinatesSerializer()
-  aliases = serializers.HyperlinkedRelatedField(many=True, read_only=True, view_name='alias-list')
-
-  class Meta:
-    model = AstronomicalObject
-    fields = ("name", "coordinates", "aliases")
 
 
 class AliasSerializer(serializers.HyperlinkedModelSerializer):
   class Meta:
     model = Alias
     fields = ("name",)
+
+
+class AstronomicalObjectSerializer(serializers.HyperlinkedModelSerializer):
+  coordinates = AstronomicalCoordinatesSerializer()
+  aliases = AliasSerializer(many=True)
+
+  class Meta:
+    model = AstronomicalObject
+    fields = ("name", "coordinates", "aliases")

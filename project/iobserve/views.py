@@ -12,19 +12,21 @@ from simbad import *
 def astronomical_object(request, name="."):
   obj, created = AstronomicalObject.objects.get_or_create(name=name)
   
-  if created:
-    coords = get_SIMBAD_coordinates(name)
+  coords = get_SIMBAD_coordinates(name)
+  
+  if coords == None:
+    return Response(status=status.HTTP_503_SERVICE_UNAVAILABLE)
     
-    if coords == None:
-      return Response(status=status.HTTP_503_SERVICE_UNAVAILABLE)
-      
-    obj.coordinates = coords;
-    obj.save()
-        
-  # alias = Alias(name="toto")
-  # alias.save()
-        
-  # obj.aliases = [alias,]
+  obj.coordinates = coords;
+  obj.save()
+
+  aliases = get_SIMBAD_aliases(name)
+  
+  if aliases == None:
+    return Response(status=status.HTTP_503_SERVICE_UNAVAILABLE)
+    
+  obj.aliases = aliases;
+  obj.save()
         
   serializer = AstronomicalObjectSerializer(obj)
   return Response(serializer.data)
