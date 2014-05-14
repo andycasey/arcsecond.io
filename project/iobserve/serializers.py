@@ -43,3 +43,12 @@ class TerrestrialCoordinatesSerializer(serializers.HyperlinkedModelSerializer):
     model = TerrestrialCoordinates
     fields = ("longitude", "latitude", "altitude", "east_positive")
     lookup_field = "url"
+
+
+class ObservingSiteSerializer(serializers.HyperlinkedModelSerializer):
+  coordinates = TerrestrialCoordinatesSerializer()
+  class Meta:
+    model = Site
+    fields = ("name", "coordinates")
+    lookup_field = "url"
+

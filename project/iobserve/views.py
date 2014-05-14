@@ -65,6 +65,17 @@ class TerrestrialCoordinatesDetail(generics.RetrieveUpdateDestroyAPIView):
   serializer_class = TerrestrialCoordinatesSerializer
 
 
+class ObservingSiteList(generics.ListCreateAPIView):
+  queryset = Site.objects.all()
+  serializer_class = ObservingSiteSerializer
+
+
+class ObservingSiteDetail(generics.RetrieveUpdateDestroyAPIView):
+  queryset = Site.objects.all()
+  serializer_class = ObservingSiteSerializer
+
+
+
 # @api_view(['GET'])
 # def terrestrial_coordinates(request, pk):
 #   coords = TerrestrialCoordinates.get(pk=pk)
