@@ -44,11 +44,17 @@ class TerrestrialCoordinatesSerializer(serializers.HyperlinkedModelSerializer):
     fields = ("longitude", "latitude", "altitude", "east_positive")
     lookup_field = "url"
 
-
-class ObservingSiteSerializer(serializers.HyperlinkedModelSerializer):
+class SiteSerializer(serializers.HyperlinkedModelSerializer):
   coordinates = TerrestrialCoordinatesSerializer()
   class Meta:
     model = Site
     fields = ("name", "coordinates")
+    lookup_field = "url"
+
+class ObservingSiteSerializer(serializers.HyperlinkedModelSerializer):
+  coordinates = TerrestrialCoordinatesSerializer()
+  class Meta:
+    model = ObservingSite
+    fields = ("name", "coordinates", "IAUCode")
     lookup_field = "url"
 

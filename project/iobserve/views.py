@@ -64,14 +64,17 @@ class TerrestrialCoordinatesDetail(generics.RetrieveUpdateDestroyAPIView):
   queryset = TerrestrialCoordinates.objects.all()
   serializer_class = TerrestrialCoordinatesSerializer
 
+class SiteList(generics.ListCreateAPIView):
+  queryset = Site.objects.all()
+  serializer_class = SiteSerializer
 
 class ObservingSiteList(generics.ListCreateAPIView):
-  queryset = Site.objects.all()
+  queryset = ObservingSite.objects.all()
   serializer_class = ObservingSiteSerializer
 
 
 class ObservingSiteDetail(generics.RetrieveUpdateDestroyAPIView):
-  queryset = Site.objects.all()
+  queryset = ObservingSite.objects.all()
   serializer_class = ObservingSiteSerializer
 
 

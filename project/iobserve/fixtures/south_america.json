@@ -18,6 +18,13 @@
       "country": "Chile",
       "long_name": "La Silla Observatory"
     }
+  },
+  {
+    "model": "iobserve.ObservingSite",
+    "pk": "La Silla",
+    "fields": {
+      "IAUCode": "201"
+    }
   }
 ]
 

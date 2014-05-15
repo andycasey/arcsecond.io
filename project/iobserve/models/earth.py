@@ -41,14 +41,8 @@ class TerrestrialCoordinates(models.Model):
     coords.east_positive = east_positive
     return coords
 
-
-class EarthLocationManager(models.Manager):
-  def get_by_natural_key(self, name):
-    return self.get(name=name)
    
 class EarthLocation(models.Model):
-  objects = EarthLocationManager()
-
   class Meta:
     app_label = 'iobserve'
     ordering = ["name"]
@@ -65,8 +59,13 @@ class EarthLocation(models.Model):
     return "%s (%s, %s)"%(self, self.name, self.coordinates)
 
 
+class SiteManager(models.Manager):
+  def get_by_natural_key(self, name):
+    return self.get(name=name)
 
 class Site(EarthLocation):
+  objects = SiteManager()
+
   class Meta:
     app_label = 'iobserve'
   
@@ -109,7 +108,13 @@ class Site(EarthLocation):
     return site
 
 
+class ObservingSiteManager(models.Manager):
+  def get_by_natural_key(self, name):
+    return self.get(name=name)
+
 class ObservingSite(Site):
+  objects = ObservingSiteManager()
+  
   class Meta:
     app_label = 'iobserve'
 
