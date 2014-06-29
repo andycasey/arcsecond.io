@@ -35,6 +35,7 @@ QUERY_DATA_DELIMITER   = "::data::"
 COORDS_NO_OBJECTS      = "!! No astronomical object found"
 
 SIMBAD_ROOT = "http://simbad.harvard.edu/simbad/"
+VIZIER_OBJECT_URL_ROOT = "http://vizier.u-strasbg.fr/viz-bin/VizieR-S"
 
 def get_SIMBAD_coordinates(name):
   coords_url = VOTABLE_OPTIONS + SIMBAD_VOTABLE_SCRIPT_START + QUERY_VOTABLE_FULLCOORDINATES + \
@@ -75,6 +76,7 @@ def get_SIMBAD_aliases(name):
     for line in response.readlines():
       if ok and len(line.strip()) > 0:
         alias, created = Alias.objects.get_or_create(name=line.strip())
+        alias.catalogue_url = VIZIER_OBJECT_URL_ROOT + "?" + urllib2.quote(alias.name.encode('utf8'))
         aliases.append(alias)
       if line.find(QUERY_DATA_DELIMITER) >= 0:
         ok = True

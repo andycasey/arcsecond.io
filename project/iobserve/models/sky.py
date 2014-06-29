@@ -27,6 +27,7 @@ class Alias(models.Model):
     app_label = 'iobserve'
 
   name = models.CharField(max_length=100)
+  catalogue_url = models.URLField(null=True)
   astronomical_object = models.ForeignKey('AstronomicalObject', null=True, related_name="aliases", blank=True)
 
 
