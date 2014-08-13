@@ -1,4 +1,4 @@
-web: waitress-serve --port=8080 project.wsgi:application
+web: gunicorn project.wsgi:application --workers $WEB_CONCURRENCY
 
 
 
