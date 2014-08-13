@@ -11,3 +11,6 @@ urlpatterns = patterns('',
   url(r'^', include('project.iobserve.urls', namespace="iobserve")),
   url(r'^admin/', include(admin.site.urls)),
 )
+
+handler404 = 'iobserve.views.custom_404'
+

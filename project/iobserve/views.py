@@ -3,11 +3,12 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
+from django.shortcuts import render_to_response
+
 from .models import *
 from .serializers import *
 
 from simbad import *
-
 
 @api_view(['GET'])
 def astronomical_object(request, name="."):
@@ -104,3 +105,10 @@ class ObservingSiteDetail(generics.RetrieveUpdateDestroyAPIView):
     #
     #
     #
+
+
+def custom_404(request):
+    return render(request, 'iobserve/404.html')
+
+def sky_home(request, path=None):
+    return render_to_response('iobserve/sky.html')
