@@ -1,2 +1,2 @@
-web: gunicorn project:app --workers $WEB_CONCURRENCY
+web: gunicorn iobserve:app --workers $WEB_CONCURRENCY
 
