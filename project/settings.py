@@ -8,9 +8,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.6/ref/settings/
 """
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 
 # Quick-start development settings - unsuitable for production
@@ -72,6 +70,7 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 ALLOWED_HOSTS = ['*']
 
+STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
 STATIC_PATH = os.path.join(PROJECT_PATH, 'static')
