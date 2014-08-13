@@ -19,6 +19,9 @@ PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '7n(ltjp2y#g=+*5e(b34f%9-0+kptopekpzu#=lgw90kinco8z'
 
+DATABASE_URL='postgres://localhost:5432/iobserve'
+os.environ['DATABASE_URL'] = DATABASE_URL
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 TEMPLATE_DEBUG = True
@@ -42,7 +45,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'rest_framework',
     'south',
-    'iobserve',
+    'project.iobserve',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -54,9 +57,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'iobserve.urls'
+ROOT_URLCONF = 'project.urls'
 
-WSGI_APPLICATION = 'iobserve.wsgi.application'
+WSGI_APPLICATION = 'project.wsgi.application'
 
 TEMPLATE_PATH = os.path.join(PROJECT_PATH, 'templates')
 TEMPLATE_DIRS = (

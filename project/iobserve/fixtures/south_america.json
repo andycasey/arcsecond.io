@@ -1,0 +1,30 @@
+[
+  {
+    "model": "iobserve.TerrestrialCoordinates",
+    "pk": null,
+    "fields": {
+      "longitude": -70.73174222222222,
+      "latitude": -29.25512222222222,
+      "altitude": 2400.0
+    }
+  },
+  {
+    "model": "iobserve.Site",
+    "pk": null,
+    "fields": {
+      "name": "La Silla",
+      "coordinates": [-70.73174222222222, -29.25512222222222],
+      "continent": "South America",
+      "country": "Chile",
+      "long_name": "La Silla Observatory"
+    }
+  },
+  {
+    "model": "iobserve.ObservingSite",
+    "pk": "La Silla",
+    "fields": {
+      "IAUCode": "201"
+    }
+  }
+]
+
