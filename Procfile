@@ -1,1 +1,1 @@
-web: gunicorn project.wsgi
+web: gunicorn iobserve:app --workers $WEB_CONCURRENCY
