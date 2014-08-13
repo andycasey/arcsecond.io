@@ -1,1 +1,20 @@
-this is the sky.
+{% extends 'iobserve/base.html' %}
+
+{% load staticfiles %}
+
+{% block extra_head_block %}
+      <link rel="stylesheet" href="{% static 'css/sticky-footer.css' %}" />
+{% endblock %}
+
+{% block body_block %}
+
+  <div class="container">
+    <div class="starter-template">
+        This is the sky
+    </div>
+  </div>
+
+  {% include "iobserve/footer.html" %}
+
+{% endblock %}
+
