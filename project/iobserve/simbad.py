@@ -57,7 +57,7 @@ def get_SIMBAD_coordinates(name):
     except MultipleObjectsReturned:
       coords = AstronomicalCoordinates.objects.filter(right_ascension=ra, declination=dec).first()
       
-    return coords;
+    return coords
 
 
 
@@ -81,8 +81,7 @@ def get_SIMBAD_aliases(name):
       if line.find(QUERY_DATA_DELIMITER) >= 0:
         ok = True
 
-    print aliases
-    return aliases;
+    return aliases
 
 
 

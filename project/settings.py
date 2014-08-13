@@ -17,9 +17,6 @@ PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '7n(ltjp2y#g=+*5e(b34f%9-0+kptopekpzu#=lgw90kinco8z'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-TEMPLATE_DEBUG = True
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True

@@ -2,4 +2,5 @@ venv
 *.pyc
 *.mo
 .idea
+staticfiles
 
