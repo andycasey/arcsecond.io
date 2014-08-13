@@ -3,27 +3,29 @@
 {% load staticfiles %}
 
 <html>
-  <head>
-    <title>iObserve - Server</title>
+    <head>
+        <title>iObserve - Server</title>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" media="screen" />
-    <link href="{% static 'css/bootstrap-theme.min.css' %}" rel="stylesheet" />
-    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" media="screen" />
+        <link href="{% static 'css/bootstrap-theme.min.css' %}" rel="stylesheet" />
+        <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
 
-    <script src="{% static 'js/jquery-1.11.0.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'js/underscore-min.js' %}"></script>
+        <link href="{% static 'css/base.css' %}" rel="stylesheet" />
 
-    {% block extra_head_block %}{% endblock %}
-  </head>
+        <script src="{% static 'js/jquery-1.11.0.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/underscore-min.js' %}"></script>
 
-  {% block body_block %}{% endblock %}
+        {% block extra_head_block %}{% endblock %}
+    </head>
 
-  {% block extra_js_block %}{% endblock %}
-  </body>
+    {% block body_block %}{% endblock %}
+
+    {% block extra_js_block %}{% endblock %}
+    </body>
 </html>

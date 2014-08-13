@@ -3,7 +3,7 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from django.shortcuts import render_to_response
+from django.shortcuts import render, render_to_response
 
 from .models import *
 from .serializers import *
@@ -111,4 +111,4 @@ def custom_404(request):
     return render(request, 'iobserve/404.html')
 
 def sky_home(request, path=None):
-    return render_to_response('iobserve/sky.html')
+    return render(request, 'iobserve/sky_home.html', {'api_version': '1'})
