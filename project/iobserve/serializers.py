@@ -20,7 +20,7 @@ class BibliographicReferenceSerializer(serializers.HyperlinkedModelSerializer):
 class AstronomicalCoordinatesSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = AstronomicalCoordinates
-        fields = ("right_ascension", "declination", "epoch", "equinox", "source")
+        fields = ("right_ascension", "right_ascension_units", "declination", "declination_units", "epoch", "equinox")
 
 
 class AliasSerializer(serializers.HyperlinkedModelSerializer):
@@ -29,13 +29,27 @@ class AliasSerializer(serializers.HyperlinkedModelSerializer):
         fields = ("name", "catalogue_url")
 
 
+class ObjectTypeSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = ObjectType
+        fields = ("value",)
+
+
+class AstronomicalFluxSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = AstronomicalFlux
+        fields = ("name", "value", "error_value", "bibcode")
+
+
 class AstronomicalObjectSerializer(serializers.HyperlinkedModelSerializer):
     coordinates = AstronomicalCoordinatesSerializer()
     aliases = AliasSerializer(many=True)
+    object_types = ObjectTypeSerializer(many=True)
+    fluxes = AstronomicalFluxSerializer(many=True)
 
     class Meta:
         model = AstronomicalObject
-        fields = ("name", "coordinates", "aliases")
+        fields = ("name", "coordinates", "aliases", "object_types", "fluxes")
 
 
 # Earth
