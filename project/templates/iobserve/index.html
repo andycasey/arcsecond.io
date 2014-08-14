@@ -1,0 +1,54 @@
+{% extends 'picolegends/base-navbar.html' %}
+
+{% load staticfiles %}
+{% load i18n %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'picolegends/root.css' %}" />
+{% endblock head %}
+
+{% block navbar-right %}
+  {% include 'picolegends/current-user-navbar-dropdown.html' %}
+{% endblock navbar-right %}
+
+{% block body_block %}
+<div class="jumbotron">
+  <div class="container">
+    {% comment %}Translators: Jumbotron{% endcomment %}
+    <h1 id="rootJumbotronHeader">{% blocktrans %}Title{% endblocktrans %}</h1>
+    <p id="rootJumbotronIntro">{% blocktrans %}Intro{% endblocktrans %}</p>
+    <p id="rootJumbotronFooter">{% blocktrans %}Footer{% endblocktrans %}</p>
+    <p>
+      <a class="btn btn-primary btn-lg" role="button" href="/howitworks/">{% blocktrans %}HowItWorksButton{% endblocktrans %}</a>
+      <a class="btn btn-primary btn-lg" role="button" href="/about/">{% blocktrans %}AboutButton{% endblocktrans %}</a>
+    </p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    
+    <div class="col-md-4">
+      <h2 id="latestFragmentsHeader">{% blocktrans %}latestFragmentsHeader{% endblocktrans %}</h2>
+      <p id="latestFragmentsBody">{% blocktrans %}latestFragmentsBody{% endblocktrans %}</p>
+      <p><a class="btn btn-default" href="fragments/latest" role="button" id="latestFragmentsButton1">{% blocktrans %}latestFragmentsButton1{% endblocktrans %}</a></p>
+      <p><a class="btn btn-default" href="#" role="button" id="latestFragmentsButton2">{% blocktrans %}latestFragmentsButton2{% endblocktrans %}</a></p>
+    </div>
+    
+    <div class="col-md-4">
+      <h2 id="startSeedHeader">{% blocktrans %}startSeedHeader{% endblocktrans %}</h2>
+      <p id="startSeedBody">{% blocktrans %}startSeedBody{% endblocktrans %}</p>
+      <p><a class="btn btn-default" href="/seed" role="button" id="startSeedButton1">{% blocktrans %}startSeedButton1{% endblocktrans %}</a></p>
+    </div>
+    
+    <div class="col-md-4">
+      <h2 id="famousSeedsHeader">{% blocktrans %}famousSeedsHeader{% endblocktrans %}</h2>
+      <p id="famousSeedsBody">{% blocktrans %}famousSeedsBody{% endblocktrans %}</p>
+
+      {% include 'picolegends/famous-seeds-dropdown.html' %}
+      
+    </div>
+  </div> <!-- /row -->
+</div> <!-- /container -->
+  
+{% endblock %}

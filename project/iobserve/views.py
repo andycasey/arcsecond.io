@@ -14,21 +14,22 @@ from simbad import *
 def astronomical_object(request, name="."):
     obj, created = AstronomicalObject.objects.get_or_create(name=name)
 
-    coords = get_SIMBAD_coordinates(name)
+    if created:
+        coords = get_SIMBAD_coordinates(name)
 
-    if coords is None:
-        return Response(status=status.HTTP_503_SERVICE_UNAVAILABLE)
+        if coords is None:
+            return Response(status=status.HTTP_503_SERVICE_UNAVAILABLE)
 
-    obj.coordinates = coords
-    obj.save()
+        obj.coordinates = coords
+        obj.save()
 
-    aliases = get_SIMBAD_aliases(name)
+        aliases = get_SIMBAD_aliases(name)
 
-    if aliases is None:
-        return Response(status=status.HTTP_503_SERVICE_UNAVAILABLE)
+        if aliases is None:
+            return Response(status=status.HTTP_503_SERVICE_UNAVAILABLE)
 
-    obj.aliases = aliases
-    obj.save()
+        obj.aliases = aliases
+        obj.save()
 
     serializer = AstronomicalObjectSerializer(obj)
     return Response(serializer.data)
@@ -112,3 +113,6 @@ def custom_404(request):
 
 def sky_home(request, path=None):
     return render(request, 'iobserve/sky_home.html', {'api_version': '1'})
+
+def earth_home(request, path=None):
+    return render(request, 'iobserve/earth_home.html', {'api_version': '1'})

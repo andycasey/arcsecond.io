@@ -1,0 +1,15 @@
+html,body {
+	padding-top: 20px;
+}
+
+.input-group .input-group-addon {
+    font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
+}
+
+.input-group .form-control {
+    font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
+}
+
+.input-description {
+    height: 100px;
+}

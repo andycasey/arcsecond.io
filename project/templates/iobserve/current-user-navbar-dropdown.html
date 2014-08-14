@@ -1,0 +1,31 @@
+
+{% load staticfiles %}
+{% load i18n %}
+
+<div class="navbar-form navbar-right" role="form">
+
+  {% if user.is_authenticated %}
+
+  <div class="btn-group" id="currentUserDropdown">
+    <button type="button" class="btn btn-info" id="currentUserDropdownButton">{{ user.username }}</button>
+    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+      <span class="caret"></span>
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+      <li><a href="#">Fragments</a></li>
+      <li><a href="#">Author</a></li>
+      <li class="divider"></li>
+      <li><a href="#">Settings</a></li>
+      <li><a href="/accounts/logout/">Logout</a></li>
+    </ul>
+  </div>
+
+  {% else %}
+
+  <button type="submit" class="btn btn-primary" id="goToLoginPageButton" onclick="location.href='/accounts/login';">{% trans "Connect" %}</button>
+  <button type="submit" class="btn btn-primary" id="goToSignupPageButton" onclick="location.href='/accounts/register';">{% trans "Register" %}</button>
+
+  {% endif %}
+
+</div>

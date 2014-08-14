@@ -1,0 +1,33 @@
+{% extends 'picolegends/base-navbar.html' %}
+
+{% load staticfiles %}
+{% load i18n %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'picolegends/register.css' %}" />
+{% endblock head %}
+
+{% block body_block %}
+
+  <div class="container">
+    <div class="row">
+      <form class="form-signin" role="form" method="post" action="?next={{ next|default:"/" }}">
+        <h1>{% blocktrans %}loginHeader{% endblocktrans %}</h1>
+        {% csrf_token %}
+        {% if form.errors %}
+        <div class="alert alert-danger fade in alert-dismissable">{% blocktrans %}CorrectError{% endblocktrans %}:{{ form.non_field_errors }}</div>
+        {% endif %}
+        <dl>
+        <dt><label for="id_username">{% blocktrans %}Username{% endblocktrans %}:</label>{% if form.username.errors %} <span class="error">{{ form.username.errors|join:", " }}</span>{% endif %}</dt>
+        <dd>{{ form.username }}</dd>
+        <dt><label for="id_password">{% blocktrans %}Password{% endblocktrans %}:</label>{% if form.password.errors %} <span class="error">{{ form.password.errors|join:", " }}</span>{% endif %}</dt>
+        <dd>{{ form.password }}</dd>
+        <dt><button class="btn btn-lg btn-primary btn-block" type="submit" style="width:200px;height:50px">{% blocktrans %}LoginButton{% endblocktrans %}</button></dt>
+        </dl>
+        <p>{% blocktrans %}IfNoAccount1{% endblocktrans %},<br>
+        <a href="/accounts/register/">{% blocktrans %}IfNoAccount2{% endblocktrans %}</a>
+      </form>
+    </div>
+  </div>
+{% endblock %}
+

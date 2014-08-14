@@ -1,0 +1,54 @@
+{% extends 'iobserve/base-navbar.html' %}
+
+{% load staticfiles %}
+{% load i18n %}
+
+{% block extra_head_block %}
+    <link rel="stylesheet" href="{% static 'css/sticky-footer.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/earth_home.css' %}" />
+{% endblock extra_head_block %}
+
+{% block navbar-right %}
+  {% include 'iobserve/current-user-navbar-dropdown.html' %}
+{% endblock navbar-right %}
+
+{% block body_block %}
+
+    <div class="container">
+
+        <div class="page-header">
+            <h1>iObserve Server <small>Unified REST APIs for astronomical information</small></h1>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <center>
+                    <img src="{% static 'images/ObservatoryIcon_512x512.png' %}" width=100px>
+                    <h2>Observatories</h2>
+                    <p class="input-description">Observatories are places on Earth where telescopes, antennas and other observing devices are used.</p>
+                    <div class="input-group">
+                        <span class="input-group-addon">/earth/{{ api_version }}/observatory/</span>
+                        <input type="text" class="form-control" placeholder="name">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Go!</button>
+                        </span>
+                    </div>
+                    <br/>
+                    <p><button type="button" class="btn btn-info" style="width:100%" onclick="window.location.replace('/sky/{{ api_version }}/object/GRO J1655-40')">Test an sample object</button></p>
+                </center>
+            </div>
+        </div>
+
+        <br/><br/>
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Looking for Stars <img src="{% static 'images/StarIcon_512x512.png' %}" width=40px>, Exoplanets <img src="{% static 'images/ExoplanetIcon_512x512.png' %}" width=40px> and Small Bodies <img src="{% static 'images/AsteroidIcon_512x512.png' %}" width=40px>?
+                <button type="button" class="btn btn-default" onclick="window.location.replace('/sky')">Yes</button></h3>
+            </div>
+        </div>
+  </div>
+
+  {% include "iobserve/footer.html" %}
+
+{% endblock %}
+

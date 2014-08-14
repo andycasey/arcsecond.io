@@ -1,0 +1,20 @@
+{% extends 'picolegends/base-navbar.html' %}
+
+{% load staticfiles %}
+{% load i18n %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'picolegends/register.css' %}" />
+{% endblock head %}
+
+{% block body_block %}
+
+<div class="container">
+  <div class="row">
+    <h1>{% blocktrans %}logoutHeader{% endblocktrans %}</h1>
+    <p>{% blocktrans %}logoutThanks{% endblocktrans %}
+       <a href="/accounts/login/">{% blocktrans %}logoutNextTime{% endblocktrans %}</a></p>
+  </div>
+</div>
+
+{% endblock %}
