@@ -6,8 +6,7 @@
 {% block navbar_block %}
 
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-  <div class="navbar-inner">
-    <div class="container">
+  <div class="container-fluid">
 
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -16,17 +15,18 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/earth" id="navbarBrandLabel">iObserve Server</a>
+        <a class="navbar-brand" href="/" id="navbarBrandLabel">iObserve Server</a>
       </div>
 
       <div class="navbar-collapse collapse">
-
+        <ul class="nav navbar-nav">
+            <li class="active" id="navbar-brand-subtitle"><small>Unified REST APIs for astronomical information</small>
+        </ul>
         {% block navbar-left %}{% endblock navbar-left %}
         {% block navbar-right %}{% endblock navbar-right %}
-
       </div>
-    </div> <!-- container -->
-  </div> <!-- navbar-inner -->
+
+  </div> <!-- container-fluid -->
 </div> <!-- navbar -->
 
 {% endblock navbar_block %}

@@ -2,3 +2,11 @@ html,body {
 	padding-top: 0px;
 	padding-bottom: 20px;
 }
+
+#navbar-brand-subtitle {
+    color: #d3d3d3;
+}
+
+#navbarBrandLabel {
+    color: #ffffff;
+}

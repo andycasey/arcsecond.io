@@ -1,11 +1,11 @@
-{% extends 'picolegends/base-navbar.html' %}
+{% extends 'iobserve/base-navbar.html' %}
 
 {% load staticfiles %}
 {% load i18n %}
 
-{% block head %}
-  <link rel="stylesheet" href="{% static 'picolegends/register.css' %}" />
-{% endblock head %}
+{% block extra_head_block %}
+  <link rel="stylesheet" href="{% static 'css/register.css' %}" />
+{% endblock extra_head_block %}
 
 {% block body_block %}
 

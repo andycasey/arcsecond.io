@@ -1,3 +1,6 @@
+html,body {
+	padding-top: 50px;
+}
 
 .input-group .input-group-addon {
     font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
