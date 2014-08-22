@@ -15,6 +15,8 @@ class RegistrationView(SimpleRegistrationView):
         return ('/index.html', (), {})
 
 urlpatterns = patterns('',
+    url(r'^$', views.index, name='index'),
+
     url(r'^sky/1/object/(?P<name>[\s\+0-9a-zA-Z_-]+)/?$', views.astronomical_object),
     url(r'^sky/object/(?P<name>[\s\+0-9a-zA-Z_-]+)/?$', views.astronomical_object),
     url(r'^sky/object/(?P<name>[\s\+0-9a-zA-Z_-]+)/coordinates/?$', views.astronomical_coordinates, name='coordinates-detail'),

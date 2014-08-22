@@ -4,11 +4,18 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
 from django.shortcuts import render, render_to_response
+from django.template import RequestContext
 
 from .models import *
 from .serializers import *
 
 from simbad import *
+
+def index(request):
+  context = RequestContext(request)
+  context_dict = {"title": ("iObserve Server")}
+  return render_to_response('iobserve/index.html', context_dict, context)
+
 
 @api_view(['GET'])
 def astronomical_object(request, name="."):
