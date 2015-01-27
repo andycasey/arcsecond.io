@@ -9,21 +9,48 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 """
 
 import os
-PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
+PROJECT_PATH = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '7n(ltjp2y#g=+*5e(b34f%9-0+kptopekpzu#=lgw90kinco8z'
+# Absolute path of the whole project "PicoLegends-Django" root directory.
+ROOT_PATH = os.path.dirname(PROJECT_PATH)
 
+
+ADMINS = (('Cedric', 'server@onekilopars.ec'), )
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = False
+TEMPLATE_DEBUG = False
+SITE_ID = 0  # Local=0, Staging=1, Prod=2
+
+# Internationalization
+from django.utils.translation import ugettext_lazy as _
+LANGUAGES = (
+    ('en', _('English')),
+)
+
+LOCALE_PATH = os.path.join(os.path.join(ROOT_PATH, 'conf'), "locale")
+LOCALE_PATHS = (
+    LOCALE_PATH,
+)
+
+# https://docs.djangoproject.com/en/1.6/topics/i18n/
+# If the locale middleware isn't in use, it decides which translation is served to all users
 LANGUAGE_CODE = 'en-us'
-TIME_ZONE = 'UTC'
+
 USE_I18N = True
 USE_L10N = True
+
+TIME_ZONE = 'UTC'
 USE_TZ = True
 
-DEBUG = True
+from ..utils import get_env_variable
+# Will look in os.environ first, and if None is returned, will look at .env file.
+
+SECRET_KEY = get_env_variable('SECRET_KEY')
+DATABASE_URL = get_env_variable('DATABASE_URL')
+# Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 LOGGING = {
     'version': 1,
@@ -64,19 +91,21 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'south',
     'registration',
+    'mptt',
+    'djangobower',
+    'captcha',
     'project.iobserve',
 )
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.locale.LocaleMiddleware',
 )
 
 ROOT_URLCONF = 'project.urls'
@@ -89,6 +118,18 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows. Don't forget to use absolute paths, not relative paths.
     TEMPLATE_PATH,
 )
+
+# See https://github.com/jakubroztocil/django-settings-export
+TEMPLATE_CONTEXT_PROCESSORS = [
+    'django.contrib.auth.context_processors.auth',
+    'django_settings_export.settings_export',
+    'django.core.context_processors.i18n'
+]
+
+SETTINGS_EXPORT = [
+    'DEBUG',
+    'SITE_ID',
+]
 
 import dj_database_url
 DATABASES = { 'default': dj_database_url.config(default=os.environ['DATABASE_URL']) }
@@ -113,3 +154,13 @@ STATICFILES_FINDERS = (
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
+BOWER_COMPONENTS_ROOT = os.path.join(ROOT_PATH, 'components')
+
+BOWER_INSTALLED_APPS = (
+    'jquery',
+    'underscore',
+    'bootstrap',
+    'fontawesome',
+    'prettify',
+    'angular',
+)

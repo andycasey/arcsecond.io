@@ -6,7 +6,6 @@ from rest_framework.response import Response
 from django.shortcuts import render, render_to_response
 from django.template import RequestContext
 
-from .models import *
 from .serializers import *
 
 from simbad import *

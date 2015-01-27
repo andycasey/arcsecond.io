@@ -1,6 +1,6 @@
-from django.db import models
-from constants import *
-from common import *
+
+from .constants import *
+from .common import *
 
 
 class TerrestrialCoordinatesManager(models.Manager):

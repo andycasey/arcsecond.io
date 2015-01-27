@@ -1,7 +1,7 @@
 
-from django.db import models
-from constants import *
-from common import *
+from .constants import *
+from .common import *
+
 import math
 
 class AstronomicalCoordinates(models.Model):
