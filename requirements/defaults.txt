@@ -1,6 +1,6 @@
-Django==1.7.1
+Django==1.7.7
 Fabric==1.8.3
-astropy==0.4.1
+astropy==1.0.1
 dj-database-url==0.3.0
 dj-static==0.0.6
 django-toolbelt==0.0.1
@@ -20,6 +20,10 @@ django-bower==5.0.1
 gunicorn==19.1.1
 django-autoslug==1.7.2
 django-mptt==0.6.1
-django-recaptcha==1.0.2
 django-lockdown==0.1.1
 django-settings-export==1.0.3
+langdetect==1.0.1
+pytz==2014.10
+-e git://github.com/sunlightlabs/django-honeypot.git@75766be452f67433c9df56baa17299dd70016770#egg=django-honeypot
+mandrill>=1.0.6
+celery==3.1.17
