@@ -1,11 +1,11 @@
 [
   {
-    "model": "iobserve.TerrestrialCoordinates",
+    "model": "iobserve.EarthLocation",
     "pk": null,
     "fields": {
       "longitude": -70.73174222222222,
       "latitude": -29.25512222222222,
-      "altitude": 2400.0
+      "height": 2400.0
     }
   },
   {

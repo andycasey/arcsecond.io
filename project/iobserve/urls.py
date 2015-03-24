@@ -25,8 +25,8 @@ urlpatterns = patterns('',
     url(r'^sky/?$', views.sky_home),
     url(r'^sky/(?P<path>[\s\+0-9a-zA-Z_-]+)/?$', views.sky_home),
 
-    url(r'^earth/site/coordinates/all/?$', views.TerrestrialCoordinatesList.as_view(), name='terrestrialcoordinates-list'),
-    url(r'^earth/site/coordinates/(?P<pk>[0-9]+)/?$', views.TerrestrialCoordinatesDetail.as_view(), name='terrestrialcoordinates-detail'),
+    url(r'^earth/site/coordinates/all/?$', views.EarthLocationList.as_view(), name='terrestrialcoordinates-list'),
+    url(r'^earth/site/coordinates/(?P<pk>[0-9]+)/?$', views.EarthLocationDetail.as_view(), name='terrestrialcoordinates-detail'),
 
     url(r'^earth/site/all/?$', views.SiteList.as_view(), name='site-list'),
     url(r'^earth/observing_site/all/?$', views.ObservingSiteList.as_view(), name='observingsite-list'),

@@ -73,14 +73,14 @@ def astronomical_object_aliases(request, name="."):
     return Response(serializer.data)
 
 
-class TerrestrialCoordinatesList(generics.ListCreateAPIView):
-    queryset = TerrestrialCoordinates.objects.all()
-    serializer_class = TerrestrialCoordinatesSerializer
+class EarthLocationList(generics.ListCreateAPIView):
+    queryset = EarthLocation.objects.all()
+    serializer_class = EarthLocationSerializer
 
 
-class TerrestrialCoordinatesDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = TerrestrialCoordinates.objects.all()
-    serializer_class = TerrestrialCoordinatesSerializer
+class EarthLocationDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = EarthLocation.objects.all()
+    serializer_class = EarthLocationSerializer
 
 
 class SiteList(generics.ListCreateAPIView):
@@ -101,23 +101,23 @@ class ObservingSiteDetail(generics.RetrieveUpdateDestroyAPIView):
 
     # @api_view(['GET'])
     # def terrestrial_coordinates(request, pk):
-    # coords = TerrestrialCoordinates.get(pk=pk)
+    # coords = EarthLocation.get(pk=pk)
     #
     # if coords == None:
     # return Response(status=status.HTTP_503_SERVICE_UNAVAILABLE)
     #
-    #   serializer = TerrestrialCoordinatesSerializer(coords)
+    #   serializer = EarthLocationSerializer(coords)
     #   return Response(serializer.data)
     #
     #
     # @api_view(['GET'])
     # def terrestrial_coordinates_all(request):
-    #   coords = TerrestrialCoordinates.objects.all()
+    #   coords = EarthLocation.objects.all()
     #
     #   if coords == None:
     #     return Response(status=status.HTTP_503_SERVICE_UNAVAILABLE)
     #
-    #   serializer = TerrestrialCoordinatesSerializer(coords, many=True)
+    #   serializer = EarthLocationSerializer(coords, many=True)
     #   return Response(serializer.data)
     #
     #

@@ -1,16 +1,19 @@
 
+# **** ASTROPY COMPATIBILITY: 1.0 **** #
+
 from .constants import *
 from .common import *
 
 
-class TerrestrialCoordinatesManager(models.Manager):
+class EarthLocationManager(models.Manager):
     def get_by_natural_key(self, longitude, latitude):
         return self.get(longitude=longitude, latitude=latitude)
 
 
 # The minimal set of 3D values to define a location coordinates on Earth.
-class TerrestrialCoordinates(models.Model):
-    objects = TerrestrialCoordinatesManager()
+# See http://docs.astropy.org/en/stable/api/astropy.coordinates.EarthLocation.html
+class EarthLocation(models.Model):
+    objects = EarthLocationManager()
 
     class Meta:
         app_label = 'iobserve'
@@ -19,8 +22,7 @@ class TerrestrialCoordinates(models.Model):
 
     longitude = models.FloatField(default=NOT_A_SCIENTIFIC_NUMBER)
     latitude = models.FloatField(default=NOT_A_SCIENTIFIC_NUMBER)
-    altitude = models.FloatField(default=NOT_A_SCIENTIFIC_NUMBER)
-    east_positive = models.BooleanField(default=True)
+    height = models.FloatField(default=NOT_A_SCIENTIFIC_NUMBER)
 
     def natural_key(self):
         return (self.longitude, self.latitude)
@@ -28,37 +30,18 @@ class TerrestrialCoordinates(models.Model):
     def are_empty(self):
         return self.longitude == NOT_A_SCIENTIFIC_NUMBER or \
                self.latitude == NOT_A_SCIENTIFIC_NUMBER or \
-               self.altitude == NOT_A_SCIENTIFIC_NUMBER
+               self.height == NOT_A_SCIENTIFIC_NUMBER
 
     def __unicode__(self):
-        return u"(long: %.8f, lat: %.8f, alt: %.2fm)" % (self.longitude, self.latitude, self.altitude)
+        return u"(long: %.8f, lat: %.8f, h: %.2fm)" % (self.longitude, self.latitude, self.height)
 
     @classmethod
-    def create(cls, longitude, latitude, altitude, east_positive=True):
+    def create(cls, longitude, latitude, height, east_positive=True):
         coords = cls()
-        coords.longitude = longitude
+        coords.longitude = longitude if east_positive is True else -1.0*longitude
         coords.latitude = latitude
-        coords.altitude = altitude
-        coords.east_positive = east_positive
+        coords.height = height
         return coords
-
-
-class EarthLocation(models.Model):
-    class Meta:
-        app_label = 'iobserve'
-        ordering = ["name"]
-        abstract = True
-
-    name = models.CharField(max_length=100, primary_key=True)
-    coordinates = models.OneToOneField(TerrestrialCoordinates, related_name="%(app_label)s_%(class)s_related")
-
-    def natural_key(self):
-        return (self.name,) + self.coordinates.natural_key()
-
-    natural_key.dependencies = ['iobserve.terrestrialcoordinates']
-
-    def __unicode__(self):
-        return "%s (%s, %s)" % (self, self.name, self.coordinates)
 
 
 class SiteManager(models.Manager):
@@ -71,6 +54,9 @@ class Site(EarthLocation):
 
     class Meta:
         app_label = 'iobserve'
+
+    name = models.CharField(max_length=100, primary_key=True)
+    earth_location = models.OneToOneField(EarthLocation, related_name="%(app_label)s_%(class)s_related")
 
     CONTINENT_UNDEFINED = "(Undefined)"
     CONTINENT_ASIA = "Asia"
@@ -103,12 +89,17 @@ class Site(EarthLocation):
     wikipedia_article = models.URLField(null=True, blank=True)
 
     @classmethod
-    def create(cls, name, longitude, latitude, altitude, east_positive=True):
+    def create(cls, name, longitude, latitude, height, east_positive=True):
         site = cls(name=name)
-        coords = TerrestrialCoordinates.create(longitude, latitude, altitude, east_positive)
-        site.coordinates = coords
+        earth_location = EarthLocation.create(longitude, latitude, height, east_positive)
+        site.earth_location = earth_location
         site.displayed_name = site.name
         return site
+
+    def natural_key(self):
+        return (self.name,) + self.coordinates.natural_key()
+    natural_key.dependencies = ['iobserve.earthlocation']
+
 
 
 class ObservingSiteManager(models.Manager):
