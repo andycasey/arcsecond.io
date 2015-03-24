@@ -6,9 +6,9 @@ DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = [
-    '.picolegends.com',
-    '.picolegendes.com',
-    'picolegends-prod.herokuapp.com'
+    '.onekilopars.ec',
+    '.onekiloparsec.com',
+    'iobserve-server.herokuapp.com'
 ]
 
 SITE_ID = 2  # Local=0, Staging=1, Prod=2

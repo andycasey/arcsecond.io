@@ -15,7 +15,6 @@ PROJECT_PATH = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 # Absolute path of the whole project "PicoLegends-Django" root directory.
 ROOT_PATH = os.path.dirname(PROJECT_PATH)
 
-
 ADMINS = (('Cedric', 'server@onekilopars.ec'), )
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -94,7 +93,7 @@ INSTALLED_APPS = (
     'registration',
     'mptt',
     'djangobower',
-    'captcha',
+    'honeypot',
     'project.iobserve',
 )
 
@@ -152,15 +151,17 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    'djangobower.finders.BowerFinder',
 )
 
 BOWER_COMPONENTS_ROOT = os.path.join(ROOT_PATH, 'components')
-
 BOWER_INSTALLED_APPS = (
     'jquery',
     'underscore',
     'bootstrap',
     'fontawesome',
     'prettify',
-    'angular',
 )
+
+# https://github.com/sunlightlabs/django-honeypot
+HONEYPOT_FIELD_NAME = 'oh_really_you_are_a_human'
