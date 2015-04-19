@@ -11,7 +11,9 @@
     </facet>
   </component>
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/project/iobserve" isTestSource="false" />
+    </content>
     <orderEntry type="jdk" jdkName="Python 2.7.6 virtualenv at ~/.virtualenvs/iobs-debug" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

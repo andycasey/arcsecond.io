@@ -132,3 +132,6 @@ def sky_home(request, path=None):
 
 def earth_home(request, path=None):
     return render(request, 'iobserve/earth_home.html', {'api_version': '1'})
+
+def earth_browse(request, path=None):
+    return render(request, 'iobserve/earth_browse.html')

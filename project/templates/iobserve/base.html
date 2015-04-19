@@ -16,6 +16,7 @@
         <link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
 
         <link href="{% static 'css/base.css' %}" rel="stylesheet" />
+        <link href="{% static 'css/sticky-footer.css' %}" rel="stylesheet" />
 
         <script src="{% static 'js/jquery-1.11.0.min.js' %}"></script>
         <script src="{% static 'js/bootstrap.min.js' %}"></script>
@@ -24,8 +25,21 @@
         {% block extra_head_block %}{% endblock %}
     </head>
 
-    {% block navbar_block %}{% endblock navbar_block %}
-    {% block body_block %}{% endblock body_block %}
-    {% block extra_js_block %}{% endblock extra_js_block %}
+    {% block before_body_raw_block %}{% endblock before_body_raw_block %}
+
+    <div id="wrap">
+        <div id="main" class="container clear-top">
+            {% block body_block %}{% endblock body_block %}
+        </div>
+    </div>
+
+    {% block after_body_raw_block %}{% endblock after_body_raw_block %}
+
+    {% include "iobserve/bootstrap-popovers-init.html" %}
+    {% include "iobserve/footer.html" %}
+    {% if settings.SITE_ID == 2 %}
+        {% include "iobserve/google-analytics-code.html" %}
+    {% endif %}
+
     </body>
 </html>

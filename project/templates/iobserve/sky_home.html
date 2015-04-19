@@ -4,79 +4,73 @@
 {% load i18n %}
 
 {% block extra_head_block %}
-    <link rel="stylesheet" href="{% static 'css/sticky-footer.css' %}" />
     <link rel="stylesheet" href="{% static 'css/sky_home.css' %}" />
 {% endblock extra_head_block %}
 
 {% block navbar-right %}
-  {% include 'iobserve/current-user-navbar-dropdown.html' %}
+    {% include 'iobserve/current-user-navbar-dropdown.html' %}
 {% endblock navbar-right %}
 
 {% block body_block %}
 
-    <div class="container">
-
-        <div class="row">
-            <div class="col-md-4">
-                <center>
-                    <img src="{% static 'images/StarIcon_512x512.png' %}" width=100px>
-                    <h2>Objects</h2>
-                    <p class="input-description">To retrieve all informations about an object, enter its name. Data is retrieved from <a href="http://simbad.u-strasbg.fr/simbad/">CDS Simbad</a>, <a href="http://ned.ipac.caltech.edu">NASA/IPAC NED</a> and <a href="http://adsabs.harvard.edu/abstract_service.html">NASA ADS.</a></p>
-                    <div class="input-group">
-                        <span class="input-group-addon">/sky/{{ api_version }}/object/</span>
-                        <input type="text" class="form-control" placeholder="name">
+    <div class="row">
+        <div class="col-md-4">
+            <center>
+                <img src="{% static 'images/StarIcon_512x512.png' %}" width=100px>
+                <h2>Objects</h2>
+                <p class="input-description">To retrieve all informations about an object, enter its name. Data is retrieved from <a href="http://simbad.u-strasbg.fr/simbad/">CDS Simbad</a>, <a href="http://ned.ipac.caltech.edu">NASA/IPAC NED</a> and <a href="http://adsabs.harvard.edu/abstract_service.html">NASA ADS.</a></p>
+                <div class="input-group">
+                    <span class="input-group-addon">/sky/{{ api_version }}/object/</span>
+                    <input type="text" class="form-control" placeholder="name">
                         <span class="input-group-btn">
                             <button class="btn btn-default" type="button">Go!</button>
                         </span>
-                    </div>
-                    <br/>
-                    <p><button type="button" class="btn btn-info" style="width:100%" onclick="window.location.replace('/sky/{{ api_version }}/object/GRO J1655-40')">Test an sample object</button></p>
-                </center>
-            </div>
-            <div class="col-md-4">
-                <center>
-                    <img src="{% static 'images/ExoplanetIcon_512x512.png' %}" width=100px>
-                    <h2>Exoplanets</h2>
-                    <p class="input-description">To retrieve all informations about an exoplanet, enter its name. The parent star name will be included. Data is retrieved from <a href="http://exoplanet.eu">Exoplanet.eu</a></p>
-                    <div class="input-group">
-                        <span class="input-group-addon">/sky/{{ api_version }}/exoplanet/</span>
-                        <input type="text" class="form-control" placeholder="name">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">Go!</button>
-                        </span>
-                    </div>
-                    <br/>
-                    <p><button type="button" class="btn btn-info" style="width:100%" disabled>Test an example</button></p>
-                </center>
-            </div>
-            <div class="col-md-4">
-                <center>
-                    <img src="{% static 'images/AsteroidIcon_512x512.png' %}" width=100px>
-                    <h2>Small Bodies</h2>
-                    <p class="input-description">To retrieve all informations about a small body (either an asteroid or a comet), enter its name. Data is retrieved from <a href="http://ssd.jpl.nasa.gov/?horizons">NASA JPL Horizons.</a></p>
-                    <div class="input-group">
-                        <span class="input-group-addon">/sky/{{ api_version }}/smallbody/</span>
-                        <input type="text" class="form-control" placeholder="name">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">Go!</button>
-                        </span>
-                    </div>
-                    <br/>
-                    <p><button type="button" class="btn btn-info" style="width:100%" disabled>Test an example</button></p>
-                </center>
-            </div>
+                </div>
+                <br/>
+                <p><button type="button" class="btn btn-info" style="width:100%" onclick="window.location.replace('/sky/{{ api_version }}/object/GRO J1655-40')">Test an sample object</button></p>
+            </center>
         </div>
+        <div class="col-md-4">
+            <center>
+                <img src="{% static 'images/ExoplanetIcon_512x512.png' %}" width=100px>
+                <h2>Exoplanets</h2>
+                <p class="input-description">To retrieve all informations about an exoplanet, enter its name. The parent star name will be included. Data is retrieved from <a href="http://exoplanet.eu">Exoplanet.eu</a></p>
+                <div class="input-group">
+                    <span class="input-group-addon">/sky/{{ api_version }}/exoplanet/</span>
+                    <input type="text" class="form-control" placeholder="name">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Go!</button>
+                        </span>
+                </div>
+                <br/>
+                <p><button type="button" class="btn btn-info" style="width:100%" disabled>Test an example</button></p>
+            </center>
+        </div>
+        <div class="col-md-4">
+            <center>
+                <img src="{% static 'images/AsteroidIcon_512x512.png' %}" width=100px>
+                <h2>Small Bodies</h2>
+                <p class="input-description">To retrieve all informations about a small body (either an asteroid or a comet), enter its name. Data is retrieved from <a href="http://ssd.jpl.nasa.gov/?horizons">NASA JPL Horizons.</a></p>
+                <div class="input-group">
+                    <span class="input-group-addon">/sky/{{ api_version }}/smallbody/</span>
+                    <input type="text" class="form-control" placeholder="name">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Go!</button>
+                        </span>
+                </div>
+                <br/>
+                <p><button type="button" class="btn btn-info" style="width:100%" disabled>Test an example</button></p>
+            </center>
+        </div>
+    </div>
 
-        <br/><br/>
-        <div class="row">
-            <div class="col-md-12">
-                <h3>Looking for Observatories <img src="{% static 'images/ObservatoryIcon_512x512.png' %}" width=40px> and Telescopes <img src="{% static 'images/BigTelescopeIcon_512x512.png' %}" width=40px>?
+    <br/><br/>
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Looking for Observatories <img src="{% static 'images/ObservatoryIcon_512x512.png' %}" width=40px> and Telescopes <img src="{% static 'images/BigTelescopeIcon_512x512.png' %}" width=40px>?
                 <button type="button" class="btn btn-default" onclick="window.location.replace('/earth')">Yes</button></h3>
-            </div>
         </div>
-  </div>
-
-  {% include "iobserve/footer.html" %}
+    </div>
 
 {% endblock %}
 

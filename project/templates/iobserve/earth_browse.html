@@ -1,0 +1,23 @@
+{% extends 'iobserve/base-navbar.html' %}
+
+{% load staticfiles %}
+{% load i18n %}
+
+{% block extra_head_block %}
+    <link rel="stylesheet" href="{% static 'css/sticky-footer.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/earth_home.css' %}" />
+{% endblock extra_head_block %}
+
+{% block navbar-right %}
+    {% include 'iobserve/current-user-navbar-dropdown.html' %}
+{% endblock navbar-right %}
+
+{% block body_block %}
+
+    <ul class="nav nav-pills">
+        <li role="presentation" class="active"><a href="#">Home</a></li>
+        <li role="presentation"><a href="#">Profile</a></li>
+        <li role="presentation"><a href="#">Messages</a></li>
+    </ul>
+
+{% endblock body_block %}
