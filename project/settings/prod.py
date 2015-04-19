@@ -2,7 +2,7 @@
 
 from defaults import *
 
-DEBUG = False
+DEBUG = bool(os.environ.get('DJANGO_DEBUG', ''))
 TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = [
