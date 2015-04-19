@@ -94,6 +94,7 @@ INSTALLED_APPS = (
     'mptt',
     'djangobower',
     'honeypot',
+    'leaflet',
     'project.iobserve',
 )
 
@@ -165,3 +166,10 @@ BOWER_INSTALLED_APPS = (
 
 # https://github.com/sunlightlabs/django-honeypot
 HONEYPOT_FIELD_NAME = 'oh_really_you_are_a_human'
+
+LEAFLET_CONFIG = {
+    'DEFAULT_CENTER': (0.0, 0.0),
+    'DEFAULT_ZOOM': 2,
+    'MIN_ZOOM': 2,
+    'MAX_ZOOM': 18,
+}

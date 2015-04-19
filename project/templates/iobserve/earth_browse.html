@@ -2,10 +2,14 @@
 
 {% load staticfiles %}
 {% load i18n %}
+{% load leaflet_tags %}
 
 {% block extra_head_block %}
+    {{ block.super }}
     <link rel="stylesheet" href="{% static 'css/sticky-footer.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/earth_home.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/earth_browse.css' %}" />
+    {% leaflet_js %}
+    {% leaflet_css %}
 {% endblock extra_head_block %}
 
 {% block navbar-right %}
@@ -14,10 +18,51 @@
 
 {% block body_block %}
 
-    <ul class="nav nav-pills">
-        <li role="presentation" class="active"><a href="#">Home</a></li>
-        <li role="presentation"><a href="#">Profile</a></li>
-        <li role="presentation"><a href="#">Messages</a></li>
-    </ul>
+    <div class="row">
+        <div class="col-md-5 col-md-offset-4">
+            <input type="text" class="form-control" placeholder="Search...">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3 col-md-offset-1">
+            <h3 class="text-right"><img src="{% static 'images/ObservatoryIcon_512x512.png' %}" width=25px> Observatories</h3>
+
+            <ul class="nav nav-pills nav-pills nav-stacked text-right">
+                <li role="presentation"><a href="#">Africa <span class="badge">{{ observatory_count.africa }}</span></a></li>
+                <li role="presentation"><a href="#">Antarctica <span class="badge">{{ observatory_count.antarctica }}</span></a></li>
+                <li role="presentation"><a href="#">Asia <span class="badge">{{ observatory_count.asia }}</span></a></li>
+                <li role="presentation"><a href="#">Europe <span class="badge">{{ observatory_count.europe }}</span></a></li>
+                <li role="presentation"><a href="#">North America <span class="badge">{{ observatory_count.north_america }}</span></a></li>
+                <li role="presentation"><a href="#">Oceania <span class="badge">{{ observatory_count.oceania }}</span></a></li>
+                <li role="presentation"><a href="#">South America <span class="badge">{{ observatory_count.south_america }}</span></a></li>
+            </ul>
+        </div>
+    </div>
 
 {% endblock body_block %}
+
+{% block after_body_raw_block %}
+    <div class="row-fluid">
+        <div class="col-md-12" id="earth_map">
+            {% leaflet_map "earth_map" %}
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function is_touch_device() {
+            return 'ontouchstart' in window // works on most browsers
+                    || 'onmsgesturechange' in window; // works on ie10
+        };
+
+        $(document).ready(function () {
+            config_map();
+            function config_map() {
+                if (!is_touch_device()) {
+                    $('earth_map').touchZoom.disable();
+                }
+            };
+        });
+    </script>
+
+{% endblock after_body_raw_block %}

@@ -134,4 +134,5 @@ def earth_home(request, path=None):
     return render(request, 'iobserve/earth_home.html', {'api_version': '1'})
 
 def earth_browse(request, path=None):
-    return render(request, 'iobserve/earth_browse.html')
+    obs_count = {'africa': 0, 'antarctica': 0, 'asia': 0, 'europe': 0, 'north_america': 0, 'oceania': 0, 'south_america': 1 }
+    return render(request, 'iobserve/earth_browse.html', {'observatory_count': obs_count})

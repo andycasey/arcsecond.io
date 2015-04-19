@@ -27,3 +27,4 @@ pytz==2014.10
 -e git://github.com/sunlightlabs/django-honeypot.git@75766be452f67433c9df56baa17299dd70016770#egg=django-honeypot
 mandrill>=1.0.6
 celery==3.1.17
+django-leaflet==0.16.0
