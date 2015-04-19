@@ -1,0 +1,9 @@
+test:
+  override:
+    - ./manage.py test --settings=project.settings.dev
+
+deployment:
+  prod:
+    branch: master
+    heroku:
+      appname: iobserve-prod
