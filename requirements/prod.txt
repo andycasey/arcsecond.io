@@ -1,2 +1,3 @@
--r defaults.txt
+# Install all of our production dependencies only.
+-r requirements/prod.txt
 
