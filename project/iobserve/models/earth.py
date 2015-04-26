@@ -100,7 +100,7 @@ class Site(models.Model):
 
     def natural_key(self):
         return (self.name,) + self.coordinates.natural_key()
-    natural_key.dependencies = ['iobserve.earthlocation']
+    natural_key.dependencies = ['iobserve.coordinates']
 
 
 
