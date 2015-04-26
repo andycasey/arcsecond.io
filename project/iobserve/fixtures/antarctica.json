@@ -1,0 +1,103 @@
+[
+{
+    "pk": null, 
+    "model": "iobserve.Coordinates", 
+    "fields": {
+        "latitude": -80.36666666666666, 
+        "longitude": 77.35, 
+        "height": 4093
+    }
+},
+{
+    "pk": null, 
+    "model": "iobserve.Site", 
+    "fields": {
+        "name": "Dome A", 
+        "time_zone_name": "Antarctica/Vostok", 
+        "country": "Antarctica", 
+        "time_zone": "+00:00", 
+        "coordinates": [
+            77.35, 
+            -80.36666666666666
+        ], 
+        "long_name": "Dome A", 
+        "homepage": "http://ccaa.pmo.ac.cn/plato/", 
+        "continent": "Antarctica", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Dome_A"
+    }
+},
+{
+    "pk": "Dome A", 
+    "model": "iobserve.ObservingSite", 
+    "fields": {
+        "IAUCode": ""
+    }
+},
+{
+    "pk": null, 
+    "model": "iobserve.Coordinates", 
+    "fields": {
+        "latitude": -75.1, 
+        "longitude": 123.33333333333333, 
+        "height": 3233
+    }
+},
+{
+    "pk": null, 
+    "model": "iobserve.Site", 
+    "fields": {
+        "name": "Dome C", 
+        "time_zone_name": "Antarctica/Vostok", 
+        "country": "Antarctica", 
+        "time_zone": "+00:00", 
+        "coordinates": [
+            123.33333333333333, 
+            -75.1
+        ], 
+        "long_name": "Dome C", 
+        "continent": "Antarctica", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Dome_C"
+    }
+},
+{
+    "pk": "Dome C", 
+    "model": "iobserve.ObservingSite", 
+    "fields": {
+        "IAUCode": ""
+    }
+},
+{
+    "pk": null, 
+    "model": "iobserve.Coordinates", 
+    "fields": {
+        "latitude": -77.31666666666666, 
+        "longitude": 39.7, 
+        "height": 3810
+    }
+},
+{
+    "pk": null, 
+    "model": "iobserve.Site", 
+    "fields": {
+        "name": "Dome F", 
+        "time_zone_name": "Antarctica/Syowa", 
+        "country": "Antarctica", 
+        "time_zone": "+00:00", 
+        "coordinates": [
+            39.7, 
+            -77.31666666666666
+        ], 
+        "long_name": "Dome F", 
+        "homepage": "http://onekilopars.ec", 
+        "continent": "Antarctica", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Dome_F"
+    }
+},
+{
+    "pk": "Dome F", 
+    "model": "iobserve.ObservingSite", 
+    "fields": {
+        "IAUCode": ""
+    }
+}
+]

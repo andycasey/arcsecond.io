@@ -5,15 +5,15 @@ from .constants import *
 from .common import *
 
 
-class EarthLocationManager(models.Manager):
+class CoordinatesManager(models.Manager):
     def get_by_natural_key(self, longitude, latitude):
         return self.get(longitude=longitude, latitude=latitude)
 
 
 # The minimal set of 3D values to define a location coordinates on Earth.
-# See http://docs.astropy.org/en/stable/api/astropy.coordinates.EarthLocation.html
-class EarthLocation(models.Model):
-    objects = EarthLocationManager()
+# See http://docs.astropy.org/en/stable/api/astropy.coordinates.Coordinates.html
+class Coordinates(models.Model):
+    objects = CoordinatesManager()
 
     class Meta:
         app_label = 'iobserve'
@@ -37,11 +37,11 @@ class EarthLocation(models.Model):
 
     @classmethod
     def create(cls, longitude, latitude, height, east_positive=True):
-        coords = cls()
-        coords.longitude = longitude if east_positive is True else -1.0*longitude
-        coords.latitude = latitude
-        coords.height = height
-        return coords
+        loc = cls()
+        loc.longitude = longitude if east_positive is True else -1.0*longitude
+        loc.latitude = latitude
+        loc.height = height
+        return loc
 
 
 class SiteManager(models.Manager):
@@ -49,14 +49,14 @@ class SiteManager(models.Manager):
         return self.get(name=name)
 
 
-class Site(EarthLocation):
+class Site(models.Model):
     objects = SiteManager()
 
     class Meta:
         app_label = 'iobserve'
 
     name = models.CharField(max_length=100, primary_key=True)
-    earth_location = models.OneToOneField(EarthLocation, related_name="%(app_label)s_%(class)s_related")
+    long_name = models.CharField(max_length=100, null=True, blank=True)
 
     CONTINENT_UNDEFINED = "(Undefined)"
     CONTINENT_ASIA = "Asia"
@@ -77,21 +77,23 @@ class Site(EarthLocation):
     )
 
     continent = models.CharField(max_length=100, choices=CONTINENTS_TYPES_CHOICES, default=CONTINENT_UNDEFINED)
-
-    long_name = models.CharField(max_length=100, null=True, blank=True)
-    displayed_name = models.CharField(max_length=100, null=True, blank=True)
+    coordinates = models.OneToOneField(Coordinates, related_name="site")
 
     address_line_1 = models.CharField(max_length=200, null=True, blank=True)
     address_line_2 = models.CharField(max_length=200, null=True, blank=True)
     zip_code = models.IntegerField(null=True, blank=True)
     country = models.CharField(max_length=200, null=True)
-    website = models.URLField(null=True, blank=True)
+
+    time_zone = models.CharField(max_length=200, null=True, blank=True)
+    time_zone_name = models.CharField(max_length=200, null=True, blank=True)
+
+    homepage = models.URLField(null=True, blank=True)
     wikipedia_article = models.URLField(null=True, blank=True)
 
     @classmethod
     def create(cls, name, longitude, latitude, height, east_positive=True):
         site = cls(name=name)
-        earth_location = EarthLocation.create(longitude, latitude, height, east_positive)
+        earth_location = Coordinates.create(longitude, latitude, height, east_positive)
         site.earth_location = earth_location
         site.displayed_name = site.name
         return site
@@ -114,14 +116,6 @@ class ObservingSite(Site):
         app_label = 'iobserve'
 
     IAUCode = models.CharField(max_length=200, null=True, blank=True)
-
-
-class ObservingPoint(EarthLocation):
-    class Meta:
-        app_label = 'iobserve'
-
-        # site = models.ForeignKey('ObservingSite', related_name="sites")
-
 
 class AstronomicalOrganisationManager(models.Manager):
     def get_by_natural_key(self, name):
@@ -155,6 +149,7 @@ class AstronomicalOrganisation(models.Model):
         (ORGANISATION_TYPE_MIXED, 'Mixed'),
     )
 
-    organisation_type = models.CharField(max_length=100, choices=ORGANISATION_TYPES_CHOICES,
+    organisation_type = models.CharField(max_length=100,
+                                         choices=ORGANISATION_TYPES_CHOICES,
                                          default=ORGANISATION_TYPE_UNKNOWN)
 

@@ -74,12 +74,12 @@ def astronomical_object_aliases(request, name="."):
 
 
 class EarthLocationList(generics.ListCreateAPIView):
-    queryset = EarthLocation.objects.all()
+    queryset = Coordinates.objects.all()
     serializer_class = EarthLocationSerializer
 
 
 class EarthLocationDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = EarthLocation.objects.all()
+    queryset = Coordinates.objects.all()
     serializer_class = EarthLocationSerializer
 
 
@@ -101,7 +101,7 @@ class ObservingSiteDetail(generics.RetrieveUpdateDestroyAPIView):
 
     # @api_view(['GET'])
     # def terrestrial_coordinates(request, pk):
-    # coords = EarthLocation.get(pk=pk)
+    # coords = Coordinates.get(pk=pk)
     #
     # if coords == None:
     # return Response(status=status.HTTP_503_SERVICE_UNAVAILABLE)
@@ -112,7 +112,7 @@ class ObservingSiteDetail(generics.RetrieveUpdateDestroyAPIView):
     #
     # @api_view(['GET'])
     # def terrestrial_coordinates_all(request):
-    #   coords = EarthLocation.objects.all()
+    #   coords = Coordinates.objects.all()
     #
     #   if coords == None:
     #     return Response(status=status.HTTP_503_SERVICE_UNAVAILABLE)
@@ -134,5 +134,18 @@ def earth_home(request, path=None):
     return render(request, 'iobserve/earth_home.html', {'api_version': '1'})
 
 def earth_browse(request, path=None):
-    obs_count = {'africa': 0, 'antarctica': 0, 'asia': 0, 'europe': 0, 'north_america': 0, 'oceania': 0, 'south_america': 1 }
-    return render(request, 'iobserve/earth_browse.html', {'observatory_count': obs_count})
+    african_sites = ObservingSite.objects.filter(continent='Africa')
+    antarctica_sites = ObservingSite.objects.filter(continent='Antarctica')
+    asian_sites = ObservingSite.objects.filter(continent='Asia')
+    european_sites = ObservingSite.objects.filter(continent='Europe')
+    north_american_sites = ObservingSite.objects.filter(continent='North America')
+    oceania_sites = ObservingSite.objects.filter(continent='Oceania')
+    south_american_sites = ObservingSite.objects.filter(continent='South America')
+
+    return render(request, 'iobserve/earth_browse.html', {'african_sites': african_sites,
+                                                          'antarctica_sites': antarctica_sites,
+                                                          'asian_sites': asian_sites,
+                                                          'european_sites': european_sites,
+                                                          'north_american_sites': north_american_sites,
+                                                          'oceania_sites': oceania_sites,
+                                                          'south_american_sites': south_american_sites})

@@ -1,0 +1,308 @@
+[
+{
+    "pk": null, 
+    "model": "iobserve.Coordinates", 
+    "fields": {
+        "latitude": -31.27703888888889, 
+        "longitude": 149.06608611111113, 
+        "height": 1164
+    }
+},
+{
+    "pk": null, 
+    "model": "iobserve.Site", 
+    "fields": {
+        "name": "AAO", 
+        "time_zone_name": "Australia/Sydney", 
+        "country": "Australia", 
+        "time_zone": "+10:00", 
+        "coordinates": [
+            149.06608611111113, 
+            -31.27703888888889
+        ], 
+        "long_name": "Australian Astronomical Observatory", 
+        "homepage": "http://www.aao.gov.au/", 
+        "continent": "Oceania", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Anglo-Australian_Observatory"
+    }
+},
+{
+    "pk": "AAO", 
+    "model": "iobserve.ObservingSite", 
+    "fields": {
+        "IAUCode": ""
+    }
+},
+{
+    "pk": null, 
+    "model": "iobserve.Coordinates", 
+    "fields": {
+        "latitude": -34.916666666666664, 
+        "longitude": 138.58333333333334, 
+        "height": 30
+    }
+},
+{
+    "pk": null, 
+    "model": "iobserve.Site", 
+    "fields": {
+        "name": "Adelaide", 
+        "time_zone_name": "Australia/Adelaide", 
+        "country": "Australia", 
+        "time_zone": "+09:00", 
+        "coordinates": [
+            138.58333333333334, 
+            -34.916666666666664
+        ], 
+        "long_name": "Adelaide Observatory", 
+        "homepage": "http://www.bom.gov.au/weather/sa/inside/history/the_adelaide_observatory.shtml", 
+        "continent": "Oceania", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Adelaide_Observatory"
+    }
+},
+{
+    "pk": "Adelaide", 
+    "model": "iobserve.ObservingSite", 
+    "fields": {
+        "IAUCode": ""
+    }
+},
+{
+    "pk": null, 
+    "model": "iobserve.Coordinates", 
+    "fields": {
+        "latitude": -37.831388888888895, 
+        "longitude": 144.9758, 
+        "height": 52
+    }
+},
+{
+    "pk": null, 
+    "model": "iobserve.Site", 
+    "fields": {
+        "name": "Melbourne", 
+        "time_zone_name": "Australia/Melbourne", 
+        "country": "Australia", 
+        "time_zone": "+10:00", 
+        "coordinates": [
+            144.9758, 
+            -37.831388888888895
+        ], 
+        "long_name": "Melbourne Observatory", 
+        "homepage": "http://www.melbourneobservatory.com/GreatMelbourneTelescope.htm", 
+        "continent": "Oceania", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Melbourne_Observatory"
+    }
+},
+{
+    "pk": "Melbourne", 
+    "model": "iobserve.ObservingSite", 
+    "fields": {
+        "IAUCode": "907"
+    }
+},
+{
+    "pk": null, 
+    "model": "iobserve.Coordinates", 
+    "fields": {
+        "latitude": -31.267777777777777, 
+        "longitude": 149.09972222222223, 
+        "height": 866
+    }
+},
+{
+    "pk": null, 
+    "model": "iobserve.Site", 
+    "fields": {
+        "name": "Mopra", 
+        "time_zone_name": "Australia/Sydney", 
+        "country": "Australia", 
+        "time_zone": "+10:00", 
+        "coordinates": [
+            149.09972222222223, 
+            -31.267777777777777
+        ], 
+        "long_name": "Mopra Observatory", 
+        "homepage": "http://www.narrabri.atnf.csiro.au/mopra/", 
+        "continent": "Oceania", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Mopra_Observatory"
+    }
+},
+{
+    "pk": "Mopra", 
+    "model": "iobserve.ObservingSite", 
+    "fields": {
+        "IAUCode": ""
+    }
+},
+{
+    "pk": null, 
+    "model": "iobserve.Coordinates", 
+    "fields": {
+        "latitude": -35.32027777777778, 
+        "longitude": 149.0077, 
+        "height": 770
+    }
+},
+{
+    "pk": null, 
+    "model": "iobserve.Site", 
+    "fields": {
+        "name": "Mount Stromlo", 
+        "time_zone_name": "Australia/Sydney", 
+        "country": "Australia", 
+        "time_zone": "+10:00", 
+        "coordinates": [
+            149.0077, 
+            -35.32027777777778
+        ], 
+        "long_name": "Mount Stromlo Observatory", 
+        "homepage": "http://rsaa.anu.edu.au/observatories/mount-stromlo-observatory", 
+        "continent": "Oceania", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Mount_Stromlo_Observatory"
+    }
+},
+{
+    "pk": "Mount Stromlo", 
+    "model": "iobserve.ObservingSite", 
+    "fields": {
+        "IAUCode": "414"
+    }
+},
+{
+    "pk": null, 
+    "model": "iobserve.Coordinates", 
+    "fields": {
+        "latitude": -26.703319444444443, 
+        "longitude": 116.67081388888889, 
+        "height": 378
+    }
+},
+{
+    "pk": null, 
+    "model": "iobserve.Site", 
+    "fields": {
+        "name": "MRO", 
+        "time_zone_name": "Australia/Perth", 
+        "country": "Australia", 
+        "time_zone": "+08:00", 
+        "coordinates": [
+            116.67081388888889, 
+            -26.703319444444443
+        ], 
+        "long_name": "Murchison Radio-astronomy Observatory", 
+        "homepage": "http://www.atnf.csiro.au/facilities/mro.html", 
+        "continent": "Oceania", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Murchison_Radio-astronomy_Observatory"
+    }
+},
+{
+    "pk": "MRO", 
+    "model": "iobserve.ObservingSite", 
+    "fields": {
+        "IAUCode": ""
+    }
+},
+{
+    "pk": null, 
+    "model": "iobserve.Coordinates", 
+    "fields": {
+        "latitude": -32.99996277777778, 
+        "longitude": 148.26232194444444, 
+        "height": 100
+    }
+},
+{
+    "pk": null, 
+    "model": "iobserve.Site", 
+    "fields": {
+        "name": "Parkes", 
+        "time_zone_name": "Australia/Sydney", 
+        "country": "Australia", 
+        "time_zone": "+10:00", 
+        "coordinates": [
+            148.26232194444444, 
+            -32.99996277777778
+        ], 
+        "long_name": "Parkes Observatory", 
+        "homepage": "http://www.parkes.atnf.csiro.au/", 
+        "continent": "Oceania", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Parkes_Observatory"
+    }
+},
+{
+    "pk": "Parkes", 
+    "model": "iobserve.ObservingSite", 
+    "fields": {
+        "IAUCode": ""
+    }
+},
+{
+    "pk": null, 
+    "model": "iobserve.Coordinates", 
+    "fields": {
+        "latitude": -30.31277777777778, 
+        "longitude": 149.56327777777778, 
+        "height": 100
+    }
+},
+{
+    "pk": null, 
+    "model": "iobserve.Site", 
+    "fields": {
+        "name": "Paul Wild", 
+        "time_zone_name": "Australia/Sydney", 
+        "country": "Australia", 
+        "time_zone": "+09:00", 
+        "coordinates": [
+            149.56327777777778, 
+            -30.31277777777778
+        ], 
+        "long_name": "Paul Wild Observatory", 
+        "homepage": "http://www.narrabri.atnf.csiro.au/", 
+        "continent": "Oceania", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Paul_Wild_Observatory"
+    }
+},
+{
+    "pk": "Paul Wild", 
+    "model": "iobserve.ObservingSite", 
+    "fields": {
+        "IAUCode": ""
+    }
+},
+{
+    "pk": null, 
+    "model": "iobserve.Coordinates", 
+    "fields": {
+        "latitude": -31.277105555555554, 
+        "longitude": 149.0661, 
+        "height": 1164
+    }
+},
+{
+    "pk": null, 
+    "model": "iobserve.Site", 
+    "fields": {
+        "name": "Siding Spring", 
+        "time_zone_name": "Australia/Sydney", 
+        "country": "Australia", 
+        "time_zone": "+10:00", 
+        "coordinates": [
+            149.0661, 
+            -31.277105555555554
+        ], 
+        "long_name": "Siding Spring Observatory", 
+        "homepage": "http://www.mso.anu.edu.au/info/sso/", 
+        "continent": "Oceania", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Siding_Spring_Observatory"
+    }
+},
+{
+    "pk": "Siding Spring", 
+    "model": "iobserve.ObservingSite", 
+    "fields": {
+        "IAUCode": "413"
+    }
+}
+]

@@ -10,6 +10,11 @@ html,body {
     font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
 }
 
+.search-field {
+    margin-bottom: 10px;
+}
+
 #earth_map {
+    margin-top: 10px;
     height: 500px;
 }

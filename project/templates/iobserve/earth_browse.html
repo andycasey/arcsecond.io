@@ -20,23 +20,26 @@
 
     <div class="row">
         <div class="col-md-5 col-md-offset-4">
-            <input type="text" class="form-control" placeholder="Search...">
+            <h3 class="text-center"><img src="{% static 'images/ObservatoryIcon_512x512.png' %}" width=25px> Observing Sites</h3>
+            <input type="text" class="form-control search-field" placeholder="Search by Name...">
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-3 col-md-offset-1">
-            <h3 class="text-right"><img src="{% static 'images/ObservatoryIcon_512x512.png' %}" width=25px> Observatories</h3>
-
             <ul class="nav nav-pills nav-pills nav-stacked text-right">
-                <li role="presentation"><a href="#">Africa <span class="badge">{{ observatory_count.africa }}</span></a></li>
-                <li role="presentation"><a href="#">Antarctica <span class="badge">{{ observatory_count.antarctica }}</span></a></li>
-                <li role="presentation"><a href="#">Asia <span class="badge">{{ observatory_count.asia }}</span></a></li>
-                <li role="presentation"><a href="#">Europe <span class="badge">{{ observatory_count.europe }}</span></a></li>
-                <li role="presentation"><a href="#">North America <span class="badge">{{ observatory_count.north_america }}</span></a></li>
-                <li role="presentation"><a href="#">Oceania <span class="badge">{{ observatory_count.oceania }}</span></a></li>
-                <li role="presentation"><a href="#">South America <span class="badge">{{ observatory_count.south_america }}</span></a></li>
+                <li role="presentation"><a href="#">Africa <span class="badge">{{ african_sites.count }}</span></a></li>
+                <li role="presentation"><a href="#">Antarctica <span class="badge">{{ antarctica_sites.count }}</span></a></li>
+                <li role="presentation"><a href="#">Asia <span class="badge">{{ asian_sites.count }}</span></a></li>
+                <li role="presentation"><a href="#">Europe <span class="badge">{{ european_sites.count }}</span></a></li>
+                <li role="presentation"><a href="#">North America <span class="badge">{{ north_american_sites.count }}</span></a></li>
+                <li role="presentation"><a href="#">Oceania <span class="badge">{{ oceania_sites.count }}</span></a></li>
+                <li role="presentation"><a href="#">South America <span class="badge">{{ south_american_sites.count }}</span></a></li>
             </ul>
+        </div>
+
+        <div class="col-md-8">
+
         </div>
     </div>
 
