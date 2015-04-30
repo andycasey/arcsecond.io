@@ -66,18 +66,18 @@ LOGGING = {
             'filters': ['require_debug_false'],
             'class': 'django.utils.log.AdminEmailHandler'
         },
-     'console':{
+        'console':{
             'level': 'DEBUG',
             'class': 'logging.StreamHandler',
+            },
         },
-    },
     'loggers': {
         'django.request': {
             'handlers': ['mail_admins'],
             'level': 'ERROR',
             'propagate': True,
-        },
-    }
+            },
+        }
 }
 
 # Application definition
@@ -95,6 +95,7 @@ INSTALLED_APPS = (
     'djangobower',
     'honeypot',
     'leaflet',
+    'multiselectfield',
     'project.iobserve',
 )
 
@@ -129,7 +130,7 @@ TEMPLATE_CONTEXT_PROCESSORS = [
 SETTINGS_EXPORT = [
     'DEBUG',
     'SITE_ID',
-]
+    ]
 
 import dj_database_url
 DATABASES = { 'default': dj_database_url.config(default=os.environ['DATABASE_URL']) }
@@ -151,7 +152,7 @@ STATICFILES_DIRS = (
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
     'djangobower.finders.BowerFinder',
 )
 
@@ -172,4 +173,4 @@ LEAFLET_CONFIG = {
     'DEFAULT_ZOOM': 2,
     'MIN_ZOOM': 2,
     'MAX_ZOOM': 18,
-}
+    }
