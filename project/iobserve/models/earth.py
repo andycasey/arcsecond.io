@@ -3,22 +3,23 @@
 
 from .constants import *
 from .common import *
+from multiselectfield import MultiSelectField
 
 
 class CoordinatesManager(models.Manager):
     def get_by_natural_key(self, longitude, latitude):
         return self.get(longitude=longitude, latitude=latitude)
 
-
-# The minimal set of 3D values to define a location coordinates on Earth.
-# See http://docs.astropy.org/en/stable/api/astropy.coordinates.Coordinates.html
 class Coordinates(models.Model):
-    objects = CoordinatesManager()
-
+    """The minimal set of 3D values to define a location coordinates on Earth.
+    See http://docs.astropy.org/en/stable/api/astropy.coordinates.Coordinates.html
+    """
     class Meta:
         app_label = 'iobserve'
         unique_together = (('longitude', 'latitude'),)
         ordering = ["longitude", "latitude"]
+
+    objects = CoordinatesManager()
 
     longitude = models.FloatField(default=NOT_A_SCIENTIFIC_NUMBER)
     latitude = models.FloatField(default=NOT_A_SCIENTIFIC_NUMBER)
@@ -48,12 +49,9 @@ class SiteManager(models.Manager):
     def get_by_natural_key(self, name):
         return self.get(name=name)
 
-
 class Site(models.Model):
+    class Meta: app_label = 'iobserve'
     objects = SiteManager()
-
-    class Meta:
-        app_label = 'iobserve'
 
     name = models.CharField(max_length=100, primary_key=True)
     long_name = models.CharField(max_length=100, null=True, blank=True)
@@ -108,25 +106,19 @@ class ObservingSiteManager(models.Manager):
     def get_by_natural_key(self, name):
         return self.get(name=name)
 
-
 class ObservingSite(Site):
+    class Meta: app_label = 'iobserve'
     objects = ObservingSiteManager()
-
-    class Meta:
-        app_label = 'iobserve'
-
     IAUCode = models.CharField(max_length=200, null=True, blank=True)
+
 
 class AstronomicalOrganisationManager(models.Manager):
     def get_by_natural_key(self, name):
         return self.get(name=name)
 
-
 class AstronomicalOrganisation(models.Model):
+    class Meta: app_label = 'iobserve'
     objects = AstronomicalOrganisationManager()
-
-    class Meta:
-        app_label = 'iobserve'
 
     name = models.CharField(max_length=100, primary_key=True)
     acronym = models.CharField(max_length=100, null=True)
@@ -153,3 +145,124 @@ class AstronomicalOrganisation(models.Model):
                                          choices=ORGANISATION_TYPES_CHOICES,
                                          default=ORGANISATION_TYPE_UNKNOWN)
 
+
+class BuildingManager(models.Manager):
+    def get_by_natural_key(self, name):
+        return self.get(name=name)
+
+class Building(models.Model):
+    class Meta: app_label = 'iobserve'
+    objects = BuildingManager()
+    name = models.CharField(max_length=1000, primary_key=True)
+    coordinates = models.ManyToManyField(Coordinates, null=True, blank=True, related_name="building")
+
+
+class DomeManager(models.Manager):
+    def get_by_natural_key(self, name):
+        return self.get(name=name)
+
+class Dome(Building):
+    class Meta: app_label = 'iobserve'
+    objects = DomeManager()
+
+
+class ToolManager(models.Manager):
+    def get_by_natural_key(self, name):
+        return self.get(name=name)
+
+class Tool(models.Model):
+    class Meta: app_label = 'iobserve'
+    objects = ToolManager()
+    name = models.CharField(max_length=1000, primary_key=True)
+    acronym = models.CharField(max_length=100, null=True, blank=True)
+
+
+class ObservingToolManager(models.Manager):
+    def get_by_natural_key(self, name):
+        return self.get(name=name)
+
+class ObservingTool(Tool):
+    class Meta: app_label = 'iobserve'
+    objects = ObservingToolManager()
+    coordinates = models.ManyToManyField(Coordinates, related_name="observing_tool")
+
+
+class TelescopeManager(models.Manager):
+    def get_by_natural_key(self, name):
+        return self.get(name=name)
+
+class Telescope(ObservingTool):
+    class Meta: app_label = 'iobserve'
+    objects = TelescopeManager()
+    dome = models.OneToOneField(Dome, blank=True, null=True, default=None, related_name='telescope')
+
+    WAVELENGTH_DOMAIN_HARD_GAMMARAYS = "hga"
+    WAVELENGTH_DOMAIN_WEAK_GAMMARAYS = "wga"
+    WAVELENGTH_DOMAIN_HARD_XRAYS = "hxr"
+    WAVELENGTH_DOMAIN_WEAK_XRAYS = "wxr"
+    WAVELENGTH_DOMAIN_FAR_UV = "fuv"
+    WAVELENGTH_DOMAIN_NEAR_UV = "nuv"
+    WAVELENGTH_DOMAIN_OPTICAL = "opt"
+    WAVELENGTH_DOMAIN_NEAR_INFRARED = "nir"
+    WAVELENGTH_DOMAIN_MID_INFRARED = "mir"
+    WAVELENGTH_DOMAIN_FAR_INFRARED = "fir"
+    WAVELENGTH_DOMAIN_SUBMM = "smm"
+    WAVELENGTH_DOMAIN_MM = "mmc"
+    WAVELENGTH_DOMAIN_RADIO = "rad"
+
+    WAVELENGTH_DOMAINS = ((WAVELENGTH_DOMAIN_HARD_GAMMARAYS, "Hard gamma-rays"),
+                          (WAVELENGTH_DOMAIN_WEAK_GAMMARAYS, "Weak gamma-rays"),
+                          (WAVELENGTH_DOMAIN_HARD_XRAYS, "Hard x-rays"),
+                          (WAVELENGTH_DOMAIN_WEAK_XRAYS, "Weak x-rays"),
+                          (WAVELENGTH_DOMAIN_FAR_UV, "Far ultraviolet"),
+                          (WAVELENGTH_DOMAIN_NEAR_UV, "Near ultraviolet"),
+                          (WAVELENGTH_DOMAIN_OPTICAL, "Optical"),
+                          (WAVELENGTH_DOMAIN_NEAR_INFRARED, "Near infrared"),
+                          (WAVELENGTH_DOMAIN_MID_INFRARED, "Mid-infrared"),
+                          (WAVELENGTH_DOMAIN_FAR_INFRARED, "Far infrared"),
+                          (WAVELENGTH_DOMAIN_SUBMM, "Sub-milimetric"),
+                          (WAVELENGTH_DOMAIN_MM, "Milimetric"),
+                          (WAVELENGTH_DOMAIN_RADIO, "Radio"))
+
+    wavelength_domains = MultiSelectField(choices=WAVELENGTH_DOMAINS)
+
+    MOUNTING_EQUATORIAL = "equ"
+    MOUNTING_CASSEGRAIN = "cas"
+    MOUNTING_ALTAZ = "aaz"
+
+    MOUNTINGS = ((MOUNTING_EQUATORIAL, "Equatorial"),
+                 (MOUNTING_CASSEGRAIN, "Cassegrain"),
+                 (MOUNTING_ALTAZ, "Alt-Az"))
+
+    mounting = models.CharField(choices=MOUNTINGS, max_length=3)
+
+    OPTICAL_DESIGN_RITCHEY_CHRETIEN = "rc"
+    OPTICAL_DESIGN_SCHMIDT = "sc"
+
+    OPTICAL_DESIGNS = ((OPTICAL_DESIGN_RITCHEY_CHRETIEN, u"Ritchey-Chretien"),
+                       (OPTICAL_DESIGN_SCHMIDT, u"Schmidt"))
+
+    optical_design = models.CharField(choices=OPTICAL_DESIGNS, max_length=2, null=True, blank=True)
+
+
+class ToolComponentManager(models.Manager):
+    def get_by_natural_key(self, name):
+        return self.get(name=name)
+
+class ToolComponent(models.Model):
+    class Meta: app_label = 'iobserve'
+    objects = ToolComponentManager()
+    name = models.CharField(max_length=1000, primary_key=True)
+
+class Mirror(ToolComponent):
+    class Meta: app_label = 'iobserve'
+    telescope = models.ForeignKey(Telescope, blank=True, null=True, default=None, related_name='mirrors')
+
+    diameter = models.FloatField(null=True, blank=True)
+    thickness = models.FloatField(null=True, blank=True)
+    shape = models.CharField(max_length=1000, null=True, blank=True)
+    curvature = models.CharField(max_length=1000, null=True, blank=True)
+    coating = models.CharField(max_length=1000, null=True, blank=True)
+    central_obscuration = models.FloatField(null=True, blank=True)
+    material = models.CharField(max_length=1000, null=True, blank=True)
+    creation_date = models.DateField(null=True, blank=True)
