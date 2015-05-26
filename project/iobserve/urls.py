@@ -9,13 +9,6 @@ from django.conf.urls import include
 import views
 import api
 
-# we subclass the view to redirect to home page after registration
-# http://django-registration.readthedocs.org/en/latest/views.html#registration.views.RegistrationView.get_success_url
-from registration.backends.simple.views import RegistrationView as SimpleRegistrationView
-class RegistrationView(SimpleRegistrationView):
-    def get_success_url(self, request, user):
-        return ('/index.html', (), {})
-
 urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
 
@@ -35,11 +28,6 @@ urlpatterns = patterns('',
 
     url(r'^earth/site/all/?$', views.SiteList.as_view(), name='site-list'),
     url(r'^earth/observing_site/all/?$', views.ObservingSiteList.as_view(), name='observingsite-list'),
-
-
-
-    url(r'^accounts/register/$', RegistrationView.as_view(), name='registration_register'),
-    url(r'^accounts/', include('registration.backends.simple.urls')),
 )
 
 urlpatterns += format_suffix_patterns(urlpatterns)

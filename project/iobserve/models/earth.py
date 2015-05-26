@@ -45,16 +45,17 @@ class Coordinates(models.Model):
         return loc
 
 
-class SiteManager(models.Manager):
+class ObservingSiteManager(models.Manager):
     def get_by_natural_key(self, name):
         return self.get(name=name)
 
-class Site(models.Model):
+class ObservingSite(models.Model):
     class Meta: app_label = 'iobserve'
-    objects = SiteManager()
+    objects = ObservingSiteManager()
 
     name = models.CharField(max_length=100, primary_key=True)
     long_name = models.CharField(max_length=100, null=True, blank=True)
+    IAUCode = models.CharField(max_length=200, null=True, blank=True)
 
     CONTINENT_UNDEFINED = "(Undefined)"
     CONTINENT_ASIA = "Asia"
@@ -101,17 +102,6 @@ class Site(models.Model):
     natural_key.dependencies = ['iobserve.coordinates']
 
 
-
-class ObservingSiteManager(models.Manager):
-    def get_by_natural_key(self, name):
-        return self.get(name=name)
-
-class ObservingSite(Site):
-    class Meta: app_label = 'iobserve'
-    objects = ObservingSiteManager()
-    IAUCode = models.CharField(max_length=200, null=True, blank=True)
-
-
 class AstronomicalOrganisationManager(models.Manager):
     def get_by_natural_key(self, name):
         return self.get(name=name)
@@ -123,7 +113,7 @@ class AstronomicalOrganisation(models.Model):
     name = models.CharField(max_length=100, primary_key=True)
     acronym = models.CharField(max_length=100, null=True)
 
-    headquarters = models.OneToOneField(Site, related_name="astronomical_organisation", null=True, blank=True)
+    headquarters = models.OneToOneField(ObservingSite, related_name="astronomical_organisation", null=True, blank=True)
     observing_sites = models.ManyToManyField(ObservingSite, related_name="astronomical_organisations")
 
     website = models.URLField(null=True, blank=True)
@@ -154,7 +144,7 @@ class Building(models.Model):
     class Meta: app_label = 'iobserve'
     objects = BuildingManager()
     name = models.CharField(max_length=1000, primary_key=True)
-    coordinates = models.ManyToManyField(Coordinates, null=True, blank=True, related_name="building")
+    coordinates = models.ManyToManyField(Coordinates, blank=True, related_name="building")
 
 
 class DomeManager(models.Manager):

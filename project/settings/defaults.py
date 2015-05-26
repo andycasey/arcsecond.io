@@ -69,15 +69,15 @@ LOGGING = {
         'console':{
             'level': 'DEBUG',
             'class': 'logging.StreamHandler',
-            },
         },
+    },
     'loggers': {
         'django.request': {
             'handlers': ['mail_admins'],
             'level': 'ERROR',
             'propagate': True,
-            },
-        }
+        },
+    }
 }
 
 # Application definition
@@ -89,13 +89,17 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'rest_framework',
-    'registration',
     'mptt',
     'djangobower',
     'honeypot',
     'leaflet',
     'multiselectfield',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.twitter',
     'project.iobserve',
 )
 
@@ -130,7 +134,7 @@ TEMPLATE_CONTEXT_PROCESSORS = [
 SETTINGS_EXPORT = [
     'DEBUG',
     'SITE_ID',
-    ]
+]
 
 import dj_database_url
 DATABASES = { 'default': dj_database_url.config(default=os.environ['DATABASE_URL']) }
@@ -173,4 +177,34 @@ LEAFLET_CONFIG = {
     'DEFAULT_ZOOM': 2,
     'MIN_ZOOM': 2,
     'MAX_ZOOM': 18,
-    }
+}
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                # Already defined Django-related contexts here
+                'django.contrib.auth.context_processors.auth',
+                'django_settings_export.settings_export',
+                'django.core.context_processors.i18n'
+
+                # `allauth` needs this from django
+                'django.core.context_processors.request',
+
+                # `allauth` specific context processors
+                'allauth.account.context_processors.account',
+                'allauth.socialaccount.context_processors.socialaccount',
+            ],
+        },
+    },
+]
+
+AUTHENTICATION_BACKENDS = (
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
