@@ -73,20 +73,16 @@ def astronomical_object_aliases(request, name="."):
     return Response(serializer.data)
 
 
-class EarthLocationList(generics.ListCreateAPIView):
-    queryset = Coordinates.objects.all()
-    serializer_class = EarthLocationSerializer
+# Django doc: Note that this method returns a ValuesListQuerySet. This class behaves like a list.
+# Most of the time this is enough, but if you require an actual Python list object, you can simply call list() on it,
+#  which will evaluate the queryset
+class SiteCoordinatesList(generics.ListCreateAPIView):
+    queryset = ObservingSite.objects.all().values_list('coordinates', flat=True)
+    serializer_class = CoordinatesSerializer
 
-
-class EarthLocationDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Coordinates.objects.all()
-    serializer_class = EarthLocationSerializer
-
-
-class SiteList(generics.ListCreateAPIView):
-    queryset = Site.objects.all()
-    serializer_class = SiteSerializer
-
+class SiteCoordinatesDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = ObservingSite.objects.all().values_list('coordinates', flat=True)
+    serializer_class = CoordinatesSerializer
 
 class ObservingSiteList(generics.ListCreateAPIView):
     queryset = ObservingSite.objects.all()

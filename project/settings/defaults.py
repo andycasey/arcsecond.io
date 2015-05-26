@@ -182,14 +182,14 @@ LEAFLET_CONFIG = {
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATE_PATH,],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 # Already defined Django-related contexts here
+                'django.contrib.messages.context_processors.messages',
                 'django.contrib.auth.context_processors.auth',
                 'django_settings_export.settings_export',
-                'django.core.context_processors.i18n'
 
                 # `allauth` needs this from django
                 'django.core.context_processors.request',

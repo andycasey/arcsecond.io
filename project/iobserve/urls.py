@@ -23,13 +23,14 @@ urlpatterns = patterns('',
     url(r'^earth/?$', views.earth_home, name="earth-home"),
     url(r'^earth/browse/?$', views.earth_browse, name="earth-browse"),
 
-    url(r'^earth/site/coordinates/all/?$', views.EarthLocationList.as_view(), name='terrestrialcoordinates-list'),
-    url(r'^earth/site/coordinates/(?P<pk>[0-9]+)/?$', views.EarthLocationDetail.as_view(), name='terrestrialcoordinates-detail'),
+    url(r'^earth/site/?$', views.ObservingSiteList.as_view(), name='site-list'),
+    url(r'^earth/site/(?P<pk>[0-9]+)/?$', views.ObservingSiteDetail.as_view(), name='site-list'),
 
-    url(r'^earth/site/all/?$', views.SiteList.as_view(), name='site-list'),
-    url(r'^earth/observing_site/all/?$', views.ObservingSiteList.as_view(), name='observingsite-list'),
+    url(r'^earth/site/coordinates/?$', views.SiteCoordinatesList.as_view(), name='terrestrialcoordinates-list'),
+    url(r'^earth/site/coordinates/(?P<pk>[0-9]+)/?$', views.SiteCoordinatesDetail.as_view(), name='terrestrialcoordinates-detail'),
 )
 
 urlpatterns += format_suffix_patterns(urlpatterns)
+
 
 

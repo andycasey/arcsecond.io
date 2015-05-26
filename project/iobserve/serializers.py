@@ -54,24 +54,15 @@ class AstronomicalObjectSerializer(serializers.HyperlinkedModelSerializer):
 
 # Earth
 
-class EarthLocationSerializer(serializers.HyperlinkedModelSerializer):
+class CoordinatesSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Coordinates
         fields = ("longitude", "latitude", "height", "east_positive")
         lookup_field = "url"
 
 
-class SiteSerializer(serializers.HyperlinkedModelSerializer):
-    coordinates = EarthLocationSerializer()
-
-    class Meta:
-        model = Site
-        fields = ("name", "coordinates")
-        lookup_field = "url"
-
-
 class ObservingSiteSerializer(serializers.HyperlinkedModelSerializer):
-    coordinates = EarthLocationSerializer()
+    coordinates = CoordinatesSerializer()
 
     class Meta:
         model = ObservingSite
