@@ -87,6 +87,28 @@ if __name__ == '__main__':
             f.write(',\n')
             f.write(json.dumps(observing_site, indent=4))
 
+            if obs['observingTools']:
+                for tool in obs['observingTools']:
+                    if tool['class'] == 'OpticalTelescope':
+                        tel = tool['telescope']
+
+                        dome = {'model': 'iobserve.Dome', 'pk': None}
+                        dome_name = tool['observingTool']['longName']+' Dome'
+                        dome['fields'] = { 'name': dome_name}
+
+                        telescope = {'model':'iobserve.Telescope', 'pk': None}
+                        telescope['fields'] = {'dome': dome_name}
+
+                        if 'mounting' in tel['mounting'] and tel['mounting'].lower() in ['cassegrain', 'equatorial']:
+                            telescope['fields']['mounting'] = "cas" if tel['mounting'].lower() == 'cassegrain' else 'equ'
+
+                        if 'opticalDesign' in tel and tel['opticalDesign'].lower() in [u'ritchey-chrétien', 'schmidt']:
+                            telescope['fields']['optical_design'] = "rc" if tel['opticalDesign'].lower() == 'ritchey-chrétien' else 'sc'
+
+                        # if 'primaryMirror' in tel:
+                        #     mirror = {'model':'iobserve.Mirror', 'pk': None}
+
+
             if observatory_name != observatory_names[-1]:
                 f.write(',\n')
 
