@@ -6,5 +6,5 @@ from django.apps import AppConfig
 
 class iObserveAppConfig(AppConfig):
     name = 'project.iobserve'
-    verbose_name = "iObserve"
+    verbose_name = "eclipt.is"
 

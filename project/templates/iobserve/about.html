@@ -1,7 +1,6 @@
 {% extends 'picolegends/base-navbar.html' %}
 
 {% load staticfiles %}
-{% load i18n %}
 
 {% block head %}
     <link rel="stylesheet" href="{% static 'picolegends/about.css' %}" />
@@ -10,8 +9,11 @@
 {% block body_block %}
 
     <div class="starter-template">
-        <h1 id="aboutHeader">{% blocktrans %}About iObserve Server{% endblocktrans %}</h1>
-        <p class="lead" id="aboutBody">{% blocktrans %}The origin of iObserve-Server is to be found long ago...{% endblocktrans %}</p>
+        <h1 id="aboutHeader">About eclipt.is</h1>
+        <p class="lead" id="aboutBody">Eclipt.is is the result of a need that appeared when a colleague of mine convinced me to write iObserve 2.0.
+            That is, a complete overhaul of my app, with new and exciting features, which need to rethink a bit the whole thing. And of
+            of course, it rapidly appeared that if the app could rely on a server/web app which would do part of the job, things could
+            be a lot more flexible. And it rapidly appeared that eclipt.is could actually be interesting for many other people.</p>
     </div>
 
     {% include "picolegends/footer.html" %}

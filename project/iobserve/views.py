@@ -12,7 +12,7 @@ from simbad import *
 
 def index(request):
   context = RequestContext(request)
-  context_dict = {"title": ("iObserve Server")}
+  context_dict = {"title": ("eclipt.is")}
   return render_to_response('iobserve/index.html', context_dict, context)
 
 
