@@ -6,10 +6,9 @@ DEBUG = bool(os.environ.get('DJANGO_DEBUG', ''))
 TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = [
-    '.onekilopars.ec',
-    '.onekiloparsec.com',
+    '.eclipt.is',
     'iobserve-server.herokuapp.com'
 ]
 
-SITE_ID = 2  # Local=0, Staging=1, Prod=2
+SITE_ID = 1  # Local=1, Staging=1, Prod=2
 

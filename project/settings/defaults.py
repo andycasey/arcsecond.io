@@ -20,7 +20,7 @@ ADMINS = (('Cedric', 'server@onekilopars.ec'), )
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 TEMPLATE_DEBUG = False
-SITE_ID = 0  # Local=0, Staging=1, Prod=2
+SITE_ID = 1  # Local=1, Staging=1, Prod=2
 
 # Internationalization
 from django.utils.translation import ugettext_lazy as _
@@ -171,6 +171,14 @@ BOWER_INSTALLED_APPS = (
 
 # https://github.com/sunlightlabs/django-honeypot
 HONEYPOT_FIELD_NAME = 'oh_really_you_are_a_human'
+
+INSTALLED_APPS += ('django_nose',)
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+NOSE_ARGS = [
+    '--with-coverage',
+    '--cover-package=project.iobserve.forms,project.iobserve.models,project.iobserve.views',
+]
+
 
 LEAFLET_CONFIG = {
     'DEFAULT_CENTER': (0.0, 0.0),
