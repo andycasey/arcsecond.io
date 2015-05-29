@@ -1,5 +1,6 @@
 dependencies:
   post:
+    - export DJANGO_SETTINGS_MODULE=project.iobserve.dev
     - python ./manage.py migrate sites
     - python ./scripts/create_dev_site.py
     - python ./manage.py migrate auth
