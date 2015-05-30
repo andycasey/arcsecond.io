@@ -84,12 +84,12 @@ LOGGING = {
 
 INSTALLED_APPS = (
     'django.contrib.admin',
-    'django.contrib.auth',
     'django.contrib.contenttypes',
+    'django.contrib.sites',
+    'django.contrib.auth',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites',
     'rest_framework',
     'mptt',
     'djangobower',
@@ -128,7 +128,7 @@ TEMPLATE_DIRS = (
 TEMPLATE_CONTEXT_PROCESSORS = [
     'django.contrib.auth.context_processors.auth',
     'django_settings_export.settings_export',
-    'django.core.context_processors.i18n'
+    'django.template.context_processors.i18n'
 ]
 
 SETTINGS_EXPORT = [
@@ -200,7 +200,7 @@ TEMPLATES = [
                 'django_settings_export.settings_export',
 
                 # `allauth` needs this from django
-                'django.core.context_processors.request',
+                'django.template.context_processors.request',
 
                 # `allauth` specific context processors
                 'allauth.account.context_processors.account',
