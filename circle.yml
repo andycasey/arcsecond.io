@@ -1,10 +1,3 @@
-dependencies:
-  post:
-    - python ./manage.py migrate sites --settings=project.settings.dev
-    - python ./scripts/create_dev_site.py --settings=project.settings.dev
-    - python ./manage.py migrate auth --settings=project.settings.dev
-    - python ./manage.py migrate --settings=project.settings.dev
-
 test:
   override:
     - ./manage.py test --settings=project.settings.dev
