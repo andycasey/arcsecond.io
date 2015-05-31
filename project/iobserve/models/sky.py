@@ -1,12 +1,11 @@
 
+from django.db import models
 from .constants import *
-from .common import *
 
 import math
 
 class AstronomicalCoordinates(models.Model):
-    class Meta:
-        app_label = 'iobserve'
+    class Meta: app_label = 'iobserve'
 
     right_ascension = models.FloatField(default=NOT_A_SCIENTIFIC_NUMBER)
     right_ascension_units = models.CharField(max_length=100, default='degrees')
@@ -27,8 +26,7 @@ class AstronomicalCoordinates(models.Model):
 
 
 class Alias(models.Model):
-    class Meta:
-        app_label = 'iobserve'
+    class Meta: app_label = 'iobserve'
 
     name = models.CharField(max_length=500)
     catalogue_url = models.URLField(null=True)
@@ -36,16 +34,14 @@ class Alias(models.Model):
 
 
 class ObjectType(models.Model):
-    class Meta:
-        app_label = 'iobserve'
+    class Meta: app_label = 'iobserve'
 
     value = models.CharField(max_length=500)
     astronomical_object = models.ForeignKey('AstronomicalObject', null=True, related_name="object_types", blank=True)
 
 
 class AstronomicalFlux(models.Model):
-    class Meta:
-        app_label = 'iobserve'
+    class Meta: app_label = 'iobserve'
 
     name = models.CharField(max_length=500)
     value = models.FloatField(default=NOT_A_SCIENTIFIC_NUMBER)
@@ -60,8 +56,7 @@ class AstronomicalFlux(models.Model):
 
 
 class AstronomicalObject(models.Model):
-    class Meta:
-        app_label = 'iobserve'
+    class Meta: app_label = 'iobserve'
 
     name = models.CharField(max_length=100)
     coordinates = models.OneToOneField(AstronomicalCoordinates, null=True)

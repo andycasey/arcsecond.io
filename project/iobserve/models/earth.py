@@ -1,10 +1,9 @@
 
-# **** ASTROPY COMPATIBILITY: 1.0 **** #
-
-from .constants import *
-from .common import *
+from django.db import models
 from multiselectfield import MultiSelectField
+from .constants import *
 
+# **** ASTROPY COMPATIBILITY: 1.0 **** #
 
 class CoordinatesManager(models.Manager):
     def get_by_natural_key(self, longitude, latitude):
