@@ -100,6 +100,7 @@ INSTALLED_APPS = (
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.twitter',
+    'allauth.socialaccount.providers.facebook',
     'project.iobserve',
 )
 
@@ -165,6 +166,7 @@ BOWER_INSTALLED_APPS = (
     'jquery',
     'underscore',
     'bootstrap',
+    'bootstrap-social',
     'fontawesome',
     'prettify',
 )
