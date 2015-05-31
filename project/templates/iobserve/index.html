@@ -3,28 +3,22 @@
 {% load staticfiles %}
 {% load i18n %}
 
-{% block navbar-right %}
-    {% include 'iobserve/current-user-navbar-dropdown.html' %}
-{% endblock navbar-right %}
-
 {% block body_block %}
     <div class="jumbotron">
         <div class="container">
-            <h2 id="rootJumbotronHeader">
-                eclipt.is, a service by <a href="http://onekilopars.ec">onekilopars.ec</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-&nbsp;&nbsp; <a href="https://twitter.com/onekiloparsec" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @onekiloparsec</a>
+            <h2>
+                <strong>eclipt.is</strong>, a service by <a href="http://onekilopars.ec">onekilopars.ec</a>
             </h2>
             <p>The goal is to provide modern web access to astronomical information, that is, <i>browsable</i> APIs
-                where each resource has its own (that is, unique) <i>Uniform Resource Locator</i>, that is, an URL. Astronomy has often
+                where each resource has its own (that is, unique) <i>Uniform Resource Locator</i> (a.k.a. URL). Astronomy has often
                 been in the forefront of organising its big data on the web, making available tons of useful information.
-                However, a lack of contact with the web culture makes this information rarely accessible otherwise than
+                However, contact with the web culture is not strong enough, and makes this information rarely accessible otherwise than
                 through web <i>pages</i>, i.e. readable mostly by humans.
             </p>
             <p>
-                <b>eclipt.is</b> has the ambition to bring some of the web culture to that information, and provide
+                The ambition behind <b>eclipt.is</b> is to bring some of the web culture to that information, and provides
                 <a href="http://en.wikipedia.org/wiki/Representational_state_transfer">RESTful APIs</a>
-                to different sources of astronomical information, thus enabling to build new <i>apps</i> based on it. As a former
+                for various sources of astronomical information, thus enabling to build new <i>apps</i>. As a former
                 professional astronomer, I've written tons of (Python) scripts. Scripts are good, but tend to generate more
                 scripts. That's one of the reason I've built <a href="http://onekilopars.ec/apps">iObserve</a> (also for iPad). An app illustrates
                 the value of <i>integration</i>.<br/> Logically, <b>eclipt.is</b> is also built for being the backend of the coming iObserve 2.

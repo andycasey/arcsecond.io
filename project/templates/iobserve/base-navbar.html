@@ -22,11 +22,14 @@
                 <ul class="nav navbar-nav">
                     <li class="active" id="navbar-brand-subtitle">
                         <small>Unified REST APIs for astronomical information</small>
-                        <br/><a href="https://twitter.com/onekiloparsec" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @onekiloparsec</a>
+                        <br/>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        <a href="https://twitter.com/onekiloparsec" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @onekiloparsec</a>
                     </li>
                 </ul>
                 {% block navbar-left %}{% endblock navbar-left %}
                 {% block navbar-right %}{% endblock navbar-right %}
+                {% include 'iobserve/current-user-navbar-dropdown.html' %}
             </div>
 
         </div> <!-- container-fluid -->
