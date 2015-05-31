@@ -1,0 +1,24 @@
+{% extends 'picolegends/templates/base-navbar.html' %}
+
+{% load staticfiles %}
+{% load i18n %}
+
+{% block head_end_block %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'picolegends/css/user-profile.css' %}" />
+{% endblock head_end_block %}
+
+{% block navbar_right_block %}
+    {% include 'picolegends/blocks/current-user-navbar-dropdown.html' %}
+{% endblock navbar_right_block %}
+
+{% block body_block %}
+
+    <div class="row">
+        <div class="col-md-12">
+            <span class="username_header">{% trans "unknownUserProfile" %} @{{ username }}</span>
+        </div>
+    </div>
+
+{% endblock body_block %}
+

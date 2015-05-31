@@ -12,6 +12,8 @@ import api
 urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
 
+    url(r'^accounts/profile/?$', views.UserProfileView, name='user-profile'),
+
     url(r'^sky/?$', views.sky_home),
 
     url(r'^sky/1/object/(?P<name>[\s\+0-9a-zA-Z_-]+)/?$', views.astronomical_object, name='sky-object'),

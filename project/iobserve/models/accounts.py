@@ -1,19 +1,32 @@
 
+from django.contrib.auth.models import User
 from django.db import models
-# from django.contrib.auth import get_user_model
-# from django.conf import settings
-#
+from allauth.account.models import EmailAddress
+from allauth.socialaccount.models import SocialAccount
+import hashlib
+
 class UserProfile(models.Model):
-    """
-    Represent all the information associated with a user/author that must be added to the
-    basic :model:`auth.User` class, which is kept as is for auth purposes only.
-    """
-    class Meta: app_label = 'iobserve'
+    class Meta:
+        db_table = 'user_profile'
+        app_label = 'iobserve'
 
-    # user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name="profile", primary_key=True)
+    user = models.OneToOneField(User, related_name='profile')
 
-    # def __unicode__(self):
-#         try:
-#             return "UserProfile (user: "+self.user.get_username()+")"
-#         except get_user_model().DoesNotExist:
-#             return "UserProfile (no user set)"
+    def __unicode__(self):
+        return "{}'s profile".format(self.user.username)
+
+    def account_verified(self):
+        if self.user.is_authenticated:
+            result = EmailAddress.objects.filter(email=self.user.email)
+            if len(result):
+                return result[0].verified
+        return False
+
+    def profile_image_url(self):
+        fb_uid = SocialAccount.objects.filter(user_id=self.user.id, provider='facebook')
+        if len(fb_uid):
+            return "http://graph.facebook.com/{}/picture?width=40&height=40".format(fb_uid[0].uid)
+        return "http://www.gravatar.com/avatar/{}?s=40".format(hashlib.md5(self.user.email).hexdigest())
+
+User.profile = property(lambda u: UserProfile.objects.get_or_create(user=u)[0])
+
