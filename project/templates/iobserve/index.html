@@ -3,41 +3,29 @@
 {% load staticfiles %}
 {% load i18n %}
 
-{% block head %}
-  <link rel="stylesheet" href="{% static 'iobserve/root.css' %}" />
-{% endblock head %}
-
 {% block navbar-right %}
-  {% include 'iobserve/current-user-navbar-dropdown.html' %}
+    {% include 'iobserve/current-user-navbar-dropdown.html' %}
 {% endblock navbar-right %}
 
 {% block body_block %}
-<div class="jumbotron">
-  <div class="container">
-    {% comment %}Translators: Jumbotron{% endcomment %}
-    <h1 id="rootJumbotronHeader">eclipt.is</h1>
-  </div>
-</div>
+    <div class="container">
+        <div class="row">
 
-<div class="container">
-  <div class="row">
-    
-    <div class="col-md-6 text-center">
-      <h2 id="latestFragmentsHeader">Sky</h2><br/>
-      <img src="{% static 'images/StarIcon_512x512.png' %}" width=100px>
-      <img src="{% static 'images/ExoplanetIcon_512x512.png' %}" width=100px>
-      <img src="{% static 'images/AsteroidIcon_512x512.png' %}" width=100px><br/><br/><br/>
-      <p><a class="btn btn-default" href="/sky" role="button" id="latestFragmentsButton1">Choose</a></p>
-    </div>
-    
-    <div class="col-md-6 text-center">
-      <h2 id="startSeedHeader">Earth</h2><br/>
-      <img src="{% static 'images/ObservatoryIcon_512x512.png' %}" width=100px>
-      <img src="{% static 'images/BigTelescopeIcon_512x512.png' %}" width=100px><br/><br/><br/>
-      <p><a class="btn btn-default" href="/earth" role="button" id="latestFragmentsButton1">Choose</a></p>
-    </div>
-    
-  </div> <!-- /row -->
-</div> <!-- /container -->
-  
+            <div class="col-md-6 text-center">
+                <h2 id="latestFragmentsHeader">Sky</h2><br/>
+                <img src="{% static 'iobserve/images/StarIcon_512x512.png' %}" width=100px>
+                <img src="{% static 'iobserve/images/ExoplanetIcon_512x512.png' %}" width=100px>
+                <img src="{% static 'iobserve/images/AsteroidIcon_512x512.png' %}" width=100px><br/><br/><br/>
+                <p><a class="btn btn-default" href="/sky" role="button" id="latestFragmentsButton1">Choose</a></p>
+            </div>
+
+            <div class="col-md-6 text-center">
+                <h2 id="startSeedHeader">Earth</h2><br/>
+                <img src="{% static 'iobserve/images/ObservatoryIcon_512x512.png' %}" width=100px>
+                <img src="{% static 'iobserve/images/BigTelescopeIcon_512x512.png' %}" width=100px><br/><br/><br/>
+                <p><a class="btn btn-default" href="/earth" role="button" id="latestFragmentsButton1">Choose</a></p>
+            </div>
+
+        </div> <!-- /row -->
+    </div> <!-- /container -->
 {% endblock %}

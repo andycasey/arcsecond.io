@@ -3,43 +3,42 @@
 {% load staticfiles %}
 
 <html>
-    <head>
-        <title>eclipt.is</title>
+<head>
+    <title>eclipt.is</title>
 
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" media="screen" />
-        <link href="{% static 'css/bootstrap-theme.min.css' %}" rel="stylesheet" />
-        <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
-        <link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+    <link href="{% static 'bootstrap/dist/css/bootstrap.css' %}" rel="stylesheet" media="screen" />
+    <link href="{% static 'fontawesome/css/font-awesome.css' %}" rel="stylesheet" />
+    <link href="{% static 'iobserve/css/base.css' %}" rel="stylesheet" />
 
-        <link href="{% static 'css/base.css' %}" rel="stylesheet" />
-        <link href="{% static 'css/sticky-footer.css' %}" rel="stylesheet" />
+    <script src="{% static 'jquery/dist/jquery.js' %}"></script>
+    <script src="{% static 'bootstrap/dist/js/bootstrap.js' %}"></script>
+    <script src="{% static 'underscore/underscore.js' %}"></script>
+    <script src="{% static 'iobserve/js/css3-mediaqueries.js' %}"></script>
 
-        <script src="{% static 'js/jquery-1.11.0.min.js' %}"></script>
-        <script src="{% static 'js/bootstrap.min.js' %}"></script>
-        <script src="{% static 'js/underscore-min.js' %}"></script>
+    {% block head_end_block %}{% endblock head_end_block %}
+</head>
 
-        {% block extra_head_block %}{% endblock %}
-    </head>
+<body class="no-touch">
 
-    {% block before_body_raw_block %}{% endblock before_body_raw_block %}
+{% block before_body_raw_block %}{% endblock before_body_raw_block %}
 
-    <div id="wrap">
-        <div id="main" class="container clear-top">
-            {% block body_block %}{% endblock body_block %}
-        </div>
+<div id="wrap">
+    <div id="main" class="container clear-top">
+        {% block body_block %}{% endblock body_block %}
     </div>
+</div>
 
-    {% block after_body_raw_block %}{% endblock after_body_raw_block %}
+{% block after_body_raw_block %}{% endblock after_body_raw_block %}
 
-    {% include "iobserve/bootstrap-popovers-init.html" %}
-    {% include "iobserve/footer.html" %}
-    {% if settings.SITE_ID == 2 %}
-        {% include "iobserve/google-analytics-code.html" %}
-    {% endif %}
+{% include "iobserve/bootstrap-popovers-init.html" %}
+{% include "iobserve/footer.html" %}
+{% if settings.SITE_ID == 2 %}
+    {% include "iobserve/google-analytics-code.html" %}
+{% endif %}
 
-    </body>
+</body>
 </html>

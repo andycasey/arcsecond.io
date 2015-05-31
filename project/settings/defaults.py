@@ -15,7 +15,7 @@ PROJECT_PATH = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 # Absolute path of the whole project "PicoLegends-Django" root directory.
 ROOT_PATH = os.path.dirname(PROJECT_PATH)
 
-ADMINS = (('Cedric', 'server@onekilopars.ec'), )
+ADMINS = (('Cedric', 'cedric@onekilopars.ec'), )
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
