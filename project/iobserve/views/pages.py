@@ -7,6 +7,11 @@ def index(request):
   context_dict = {"title": ("eclipt.is")}
   return render_to_response('iobserve/index.html', context_dict, context)
 
+def about(request):
+  context = RequestContext(request)
+  context_dict = {"title": ("about eclipt.is")}
+  return render_to_response('iobserve/about.html', context_dict, context)
+
 def custom_404(request):
     return render(request, 'iobserve/404.html')
 

@@ -4,13 +4,13 @@ from rest_framework.urlpatterns import format_suffix_patterns
 
 from django.conf.urls import patterns
 from django.conf.urls import url
-from django.conf.urls import include
 
 import views
 import api
 
 urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
+    url(r'^about$', views.about, name='about'),
 
     url(r'^accounts/profile/?$', views.UserProfileView, name='user-profile'),
 
