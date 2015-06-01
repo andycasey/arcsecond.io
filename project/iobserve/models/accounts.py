@@ -1,8 +1,9 @@
-
-from django.contrib.auth.models import User
+from django.conf import settings
 from django.db import models
+
 from allauth.account.models import EmailAddress
 from allauth.socialaccount.models import SocialAccount
+
 import hashlib
 
 class UserProfile(models.Model):
@@ -10,7 +11,7 @@ class UserProfile(models.Model):
         db_table = 'user_profile'
         app_label = 'iobserve'
 
-    user = models.OneToOneField(User, related_name='profile')
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, related_name='profile')
 
     def __unicode__(self):
         return "{}'s profile".format(self.user.username)
@@ -28,5 +29,4 @@ class UserProfile(models.Model):
             return "http://graph.facebook.com/{}/picture?width=40&height=40".format(fb_uid[0].uid)
         return "http://www.gravatar.com/avatar/{}?s=40".format(hashlib.md5(self.user.email).hexdigest())
 
-User.profile = property(lambda u: UserProfile.objects.get_or_create(user=u)[0])
 
