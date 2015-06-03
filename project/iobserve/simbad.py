@@ -1,8 +1,10 @@
 
-import math
+import os
+import shutil
 import urllib2
 from .models import *
 from astropy.io import votable
+from rest_framework import status
 from django.core.exceptions import MultipleObjectsReturned
 
 SIMBAD_VOTABLE_SCRIPT_START   = "votable v1 {\n"
@@ -44,20 +46,23 @@ def get_SIMBAD_coordinates(name):
     try:
         response = urllib2.urlopen(SIMBAD_ROOT+NAME_SCRIPT+urllib2.quote(url))
     except urllib2.URLError:
-        return None
+        return None, Messages(error="Invalid URL", http_status_code=status.HTTP_400_BAD_REQUEST)
     else:
-        response_votable = votable.parse(response)
-        first_table = response_votable.get_first_table()
-
-        ra = float(first_table.array[0][0])
-        dec = float(first_table.array[0][1])
-
         try:
-            coords, created = AstronomicalCoordinates.objects.get_or_create(right_ascension=ra, declination=dec)
-        except MultipleObjectsReturned:
-            coords = AstronomicalCoordinates.objects.filter(right_ascension=ra, declination=dec).first()
+            response_votable = votable.parse(response.fp)
+            first_table = response_votable.get_first_table()
+        except:
+            return None, Messages(error="Unrecognized identifier or invalid VO Table for coordinates", http_status_code=status.HTTP_204_NO_CONTENT)
+        else:
+            ra = float(first_table.array[0][0])
+            dec = float(first_table.array[0][1])
 
-        return coords
+            try:
+                coords, created = AstronomicalCoordinates.objects.get_or_create(right_ascension=ra, declination=dec)
+            except MultipleObjectsReturned:
+                coords = AstronomicalCoordinates.objects.filter(right_ascension=ra, declination=dec).first()
+
+            return coords, Messages(http_status_code=200)
 
 
 def get_SIMBAD_aliases(name):

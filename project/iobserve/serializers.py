@@ -14,6 +14,10 @@ class BibliographicReferenceSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = BibliographicReference
 
+class MessagesSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Messages
+        fields = ('warn', 'error', 'info', 'debug', 'http_status_code') if settings.DEBUG is True else ('warn', 'error', 'info', 'http_status_code')
 
 # Sky
 
@@ -46,10 +50,11 @@ class AstronomicalObjectSerializer(serializers.HyperlinkedModelSerializer):
     aliases = AliasSerializer(many=True)
     object_types = ObjectTypeSerializer(many=True)
     fluxes = AstronomicalFluxSerializer(many=True)
+    messages = MessagesSerializer()
 
     class Meta:
         model = AstronomicalObject
-        fields = ("name", "coordinates", "aliases", "object_types", "fluxes")
+        fields = ("name", "coordinates", "aliases", "object_types", "fluxes", "messages")
 
 
 # Earth
