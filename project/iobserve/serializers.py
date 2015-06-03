@@ -20,7 +20,7 @@ class BibliographicReferenceSerializer(serializers.HyperlinkedModelSerializer):
 class AstronomicalCoordinatesSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = AstronomicalCoordinates
-        fields = ("right_ascension", "right_ascension_units", "declination", "declination_units", "epoch", "equinox")
+        fields = ("system", "right_ascension", "right_ascension_units", "declination", "declination_units", "epoch", "equinox")
 
 
 class AliasSerializer(serializers.HyperlinkedModelSerializer):

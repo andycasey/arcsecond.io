@@ -7,6 +7,24 @@ import math
 class AstronomicalCoordinates(models.Model):
     class Meta: app_label = 'iobserve'
 
+    SYSTEM_ICRS = "ICRS"
+    SYSTEM_FK5 = "FK5"
+    SYSTEM_FK4 = "FK4"
+    SYSTEM_FK4NOTERMS = "FK4NoETerms"
+    SYSTEM_GALACTIC = "Galactic"
+    SYSTEM_ALTAZ = "AltAz"
+
+    SYSTEMS_CHOICES = (
+        (SYSTEM_ICRS, 'ICRS'),
+        (SYSTEM_FK5, 'FK5'),
+        (SYSTEM_FK4, 'FK4'),
+        (SYSTEM_FK4NOTERMS, 'FK4NoETerms'),
+        (SYSTEM_GALACTIC, 'Galactic'),
+        (SYSTEM_ALTAZ, 'AltAz'),
+    )
+
+    system = models.CharField(max_length=20, choices=SYSTEMS_CHOICES, default=SYSTEM_ICRS)
+
     right_ascension = models.FloatField(default=NOT_A_SCIENTIFIC_NUMBER)
     right_ascension_units = models.CharField(max_length=100, default='degrees')
 
