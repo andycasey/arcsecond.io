@@ -26,10 +26,9 @@
         <div class="login-or">{% trans 'or' %}</div>
     </div>
 
-
-    <div class="col-md-10 col-md-offset-2">
-        <form class="login form-horizontal" id="login_form" method="post" action="{% url 'account_login' %}">
-            {% csrf_token %}
+    <form class="login form-horizontal" id="login_form" method="post" action="{% url 'account_login' %}">
+        {% csrf_token %}
+        <div class="col-md-10 col-md-offset-2">
 
             {% for field in form.visible_fields %}
                 <div class="form-group" style="display:{% if field.type == 'hidden' %}none{% else %}block{% endif %}">
@@ -56,11 +55,10 @@
             {% for hidden_field in form.hidden_fields %}
                 {{ hidden_field }}
             {% endfor %}
+        </div>
 
-        </form>
-        <div class="col-md-3 col-md-offset-1">
+        <div class="col-md-3 col-md-offset-3">
             <button type="submit" class="btn btn-primary btn-block">{% trans "Log In" %} &raquo;</button>
         </div>
-    </div>
-
+    </form>
 {% endblock %}

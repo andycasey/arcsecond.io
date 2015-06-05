@@ -8,7 +8,10 @@
     {% if user.is_authenticated %}
 
         <div class="btn-group">
-            <button type="button" class="btn btn-info"><img src="{{ request.user.profile.profile_image_url }}" width=18px />&nbsp;{{ user.username }}</button>
+            <button type="button" class="btn btn-info">
+                <img src="{{ request.user.profile.profile_image_url }}" width=18px />&nbsp;{{ user.username }}
+                {% if user.profile.account_verified %} (verified) {% else %} (unverified) {% endif %}
+            </button>
             <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
                 <span class="caret"></span>
                 <span class="sr-only">Toggle Dropdown</span>
