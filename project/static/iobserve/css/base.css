@@ -48,3 +48,7 @@ body {
 .login-or {
     padding: 20px;
 }
+
+.secondaryAction {
+    vertical-align: baseline;
+}
