@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 from django.db import models, migrations
 import multiselectfield.db.fields
 from django.conf import settings
+import django.core.validators
 
 
 class Migration(migrations.Migration):
@@ -22,9 +23,56 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
+            name='AstronomicalAge',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('value', models.FloatField(default=-9999999999999, null=True)),
+                ('error', models.FloatField(default=-9999999999999, null=True)),
+                ('error_up', models.FloatField(default=-9999999999999, null=True)),
+                ('error_down', models.FloatField(default=-9999999999999, null=True)),
+                ('bibcode', models.CharField(default=b'', max_length=50, null=True, validators=[django.core.validators.RegexValidator(regex=b'^[0-9]{4}[A-Za-z].{12}[0-9][A-Z]$', message=b'Invalid bibcode', code=b'nomatch')])),
+                ('unit', models.CharField(default=b'Gyr', max_length=3, choices=[(b'Gyr', b'Gyr'), (b'Myr', b'Myr'), (b'yr', b'yr')])),
+            ],
+            options={
+                'abstract': False,
+            },
+        ),
+        migrations.CreateModel(
+            name='AstronomicalAngularDistance',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('value', models.FloatField(default=-9999999999999, null=True)),
+                ('error', models.FloatField(default=-9999999999999, null=True)),
+                ('error_up', models.FloatField(default=-9999999999999, null=True)),
+                ('error_down', models.FloatField(default=-9999999999999, null=True)),
+                ('bibcode', models.CharField(default=b'', max_length=50, null=True, validators=[django.core.validators.RegexValidator(regex=b'^[0-9]{4}[A-Za-z].{12}[0-9][A-Z]$', message=b'Invalid bibcode', code=b'nomatch')])),
+                ('unit', models.CharField(default=b's', max_length=1, choices=[(b's', b'arcsec'), (b'mn', b'arcmin')])),
+            ],
+            options={
+                'abstract': False,
+            },
+        ),
+        migrations.CreateModel(
+            name='AstronomicalColor',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('value', models.FloatField(default=-9999999999999, null=True)),
+                ('error', models.FloatField(default=-9999999999999, null=True)),
+                ('error_up', models.FloatField(default=-9999999999999, null=True)),
+                ('error_down', models.FloatField(default=-9999999999999, null=True)),
+                ('bibcode', models.CharField(default=b'', max_length=50, null=True, validators=[django.core.validators.RegexValidator(regex=b'^[0-9]{4}[A-Za-z].{12}[0-9][A-Z]$', message=b'Invalid bibcode', code=b'nomatch')])),
+                ('firstMagnitudeName', models.CharField(max_length=2)),
+                ('secondMagnitudeName', models.CharField(max_length=2)),
+            ],
+            options={
+                'abstract': False,
+            },
+        ),
+        migrations.CreateModel(
             name='AstronomicalCoordinates',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('system', models.CharField(default=b'ICRS', max_length=20, choices=[(b'ICRS', b'ICRS'), (b'FK5', b'FK5'), (b'FK4', b'FK4'), (b'FK4NoETerms', b'FK4NoETerms'), (b'Galactic', b'Galactic'), (b'AltAz', b'AltAz')])),
                 ('right_ascension', models.FloatField(default=-9999999999999)),
                 ('right_ascension_units', models.CharField(default=b'degrees', max_length=100)),
                 ('declination', models.FloatField(default=-9999999999999)),
@@ -34,15 +82,108 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
+            name='AstronomicalDistance',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('value', models.FloatField(default=-9999999999999, null=True)),
+                ('error', models.FloatField(default=-9999999999999, null=True)),
+                ('error_up', models.FloatField(default=-9999999999999, null=True)),
+                ('error_down', models.FloatField(default=-9999999999999, null=True)),
+                ('bibcode', models.CharField(default=b'', max_length=50, null=True, validators=[django.core.validators.RegexValidator(regex=b'^[0-9]{4}[A-Za-z].{12}[0-9][A-Z]$', message=b'Invalid bibcode', code=b'nomatch')])),
+                ('unit', models.CharField(default=b'pc', max_length=3, choices=[(b'km', b'km'), (b'UA', b'UA'), (b'ly', b'ly'), (b'pc', b'pc'), (b'kpc', b'kpc'), (b'Mpc', b'Mpc')])),
+            ],
+            options={
+                'abstract': False,
+            },
+        ),
+        migrations.CreateModel(
+            name='AstronomicalEccentricity',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('value', models.FloatField(default=-9999999999999, null=True)),
+                ('error', models.FloatField(default=-9999999999999, null=True)),
+                ('error_up', models.FloatField(default=-9999999999999, null=True)),
+                ('error_down', models.FloatField(default=-9999999999999, null=True)),
+                ('bibcode', models.CharField(default=b'', max_length=50, null=True, validators=[django.core.validators.RegexValidator(regex=b'^[0-9]{4}[A-Za-z].{12}[0-9][A-Z]$', message=b'Invalid bibcode', code=b'nomatch')])),
+            ],
+            options={
+                'abstract': False,
+            },
+        ),
+        migrations.CreateModel(
+            name='AstronomicalEffectiveTemperature',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('value', models.FloatField(default=-9999999999999, null=True)),
+                ('error', models.FloatField(default=-9999999999999, null=True)),
+                ('error_up', models.FloatField(default=-9999999999999, null=True)),
+                ('error_down', models.FloatField(default=-9999999999999, null=True)),
+                ('bibcode', models.CharField(default=b'', max_length=50, null=True, validators=[django.core.validators.RegexValidator(regex=b'^[0-9]{4}[A-Za-z].{12}[0-9][A-Z]$', message=b'Invalid bibcode', code=b'nomatch')])),
+                ('unit', models.CharField(default=b'K', max_length=1, choices=[(b'K', b'Kelvin'), (b'C', b'Celsius')])),
+            ],
+            options={
+                'abstract': False,
+            },
+        ),
+        migrations.CreateModel(
             name='AstronomicalFlux',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('value', models.FloatField(default=-9999999999999, null=True)),
+                ('error', models.FloatField(default=-9999999999999, null=True)),
+                ('error_up', models.FloatField(default=-9999999999999, null=True)),
+                ('error_down', models.FloatField(default=-9999999999999, null=True)),
+                ('bibcode', models.CharField(default=b'', max_length=50, null=True, validators=[django.core.validators.RegexValidator(regex=b'^[0-9]{4}[A-Za-z].{12}[0-9][A-Z]$', message=b'Invalid bibcode', code=b'nomatch')])),
                 ('name', models.CharField(max_length=500)),
-                ('value', models.FloatField(default=-9999999999999)),
-                ('error_value', models.FloatField(default=-9999999999999)),
-                ('bibcode', models.CharField(max_length=500, null=True, blank=True)),
-                ('unit', models.CharField(max_length=500, null=True, blank=True)),
             ],
+            options={
+                'abstract': False,
+            },
+        ),
+        migrations.CreateModel(
+            name='AstronomicalInclination',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('value', models.FloatField(default=-9999999999999, null=True)),
+                ('error', models.FloatField(default=-9999999999999, null=True)),
+                ('error_up', models.FloatField(default=-9999999999999, null=True)),
+                ('error_down', models.FloatField(default=-9999999999999, null=True)),
+                ('bibcode', models.CharField(default=b'', max_length=50, null=True, validators=[django.core.validators.RegexValidator(regex=b'^[0-9]{4}[A-Za-z].{12}[0-9][A-Z]$', message=b'Invalid bibcode', code=b'nomatch')])),
+                ('unit', models.CharField(default=b'degrees', max_length=10)),
+            ],
+            options={
+                'abstract': False,
+            },
+        ),
+        migrations.CreateModel(
+            name='AstronomicalMass',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('value', models.FloatField(default=-9999999999999, null=True)),
+                ('error', models.FloatField(default=-9999999999999, null=True)),
+                ('error_up', models.FloatField(default=-9999999999999, null=True)),
+                ('error_down', models.FloatField(default=-9999999999999, null=True)),
+                ('bibcode', models.CharField(default=b'', max_length=50, null=True, validators=[django.core.validators.RegexValidator(regex=b'^[0-9]{4}[A-Za-z].{12}[0-9][A-Z]$', message=b'Invalid bibcode', code=b'nomatch')])),
+                ('unit', models.CharField(default=b'sun', max_length=3, choices=[(b'sun', b'Sun'), (b'jup', b'Jupiter'), (b'nep', b'Neptune'), (b'eee', b'Earth')])),
+            ],
+            options={
+                'abstract': False,
+            },
+        ),
+        migrations.CreateModel(
+            name='AstronomicalMetallicity',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('value', models.FloatField(default=-9999999999999, null=True)),
+                ('error', models.FloatField(default=-9999999999999, null=True)),
+                ('error_up', models.FloatField(default=-9999999999999, null=True)),
+                ('error_down', models.FloatField(default=-9999999999999, null=True)),
+                ('bibcode', models.CharField(default=b'', max_length=50, null=True, validators=[django.core.validators.RegexValidator(regex=b'^[0-9]{4}[A-Za-z].{12}[0-9][A-Z]$', message=b'Invalid bibcode', code=b'nomatch')])),
+                ('unit', models.CharField(default=b'Z', max_length=4, choices=[(b'Z', b'Z'), (b'F', b'Fe/H')])),
+            ],
+            options={
+                'abstract': False,
+            },
         ),
         migrations.CreateModel(
             name='AstronomicalObject',
@@ -50,7 +191,23 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=100)),
                 ('coordinates', models.OneToOneField(null=True, to='iobserve.AstronomicalCoordinates')),
+                ('mass', models.OneToOneField(null=True, to='iobserve.AstronomicalMass')),
             ],
+        ),
+        migrations.CreateModel(
+            name='AstronomicalOrbitalPeriod',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('value', models.FloatField(default=-9999999999999, null=True)),
+                ('error', models.FloatField(default=-9999999999999, null=True)),
+                ('error_up', models.FloatField(default=-9999999999999, null=True)),
+                ('error_down', models.FloatField(default=-9999999999999, null=True)),
+                ('bibcode', models.CharField(default=b'', max_length=50, null=True, validators=[django.core.validators.RegexValidator(regex=b'^[0-9]{4}[A-Za-z].{12}[0-9][A-Z]$', message=b'Invalid bibcode', code=b'nomatch')])),
+                ('unit', models.CharField(default=b'd', max_length=1, choices=[(b's', b'seconds'), (b'm', b'minutes'), (b'd', b'days'), (b'h', b'hours'), (b'w', b'weeks'), (b'y', b'years')])),
+            ],
+            options={
+                'abstract': False,
+            },
         ),
         migrations.CreateModel(
             name='AstronomicalOrganisation',
@@ -63,11 +220,57 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
+            name='AstronomicalParallax',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('value', models.FloatField(default=-9999999999999, null=True)),
+                ('error', models.FloatField(default=-9999999999999, null=True)),
+                ('error_up', models.FloatField(default=-9999999999999, null=True)),
+                ('error_down', models.FloatField(default=-9999999999999, null=True)),
+                ('bibcode', models.CharField(default=b'', max_length=50, null=True, validators=[django.core.validators.RegexValidator(regex=b'^[0-9]{4}[A-Za-z].{12}[0-9][A-Z]$', message=b'Invalid bibcode', code=b'nomatch')])),
+                ('unit', models.CharField(default=b'mas', max_length=3)),
+            ],
+            options={
+                'abstract': False,
+            },
+        ),
+        migrations.CreateModel(
+            name='AstronomicalRadius',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('value', models.FloatField(default=-9999999999999, null=True)),
+                ('error', models.FloatField(default=-9999999999999, null=True)),
+                ('error_up', models.FloatField(default=-9999999999999, null=True)),
+                ('error_down', models.FloatField(default=-9999999999999, null=True)),
+                ('bibcode', models.CharField(default=b'', max_length=50, null=True, validators=[django.core.validators.RegexValidator(regex=b'^[0-9]{4}[A-Za-z].{12}[0-9][A-Z]$', message=b'Invalid bibcode', code=b'nomatch')])),
+                ('unit', models.CharField(default=b'sun', max_length=3, choices=[(b'sun', b'Sun'), (b'jup', b'Jupiter'), (b'nep', b'Neptune'), (b'eee', b'Earth')])),
+            ],
+            options={
+                'abstract': False,
+            },
+        ),
+        migrations.CreateModel(
+            name='AstronomicalSemiMajorAxis',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('value', models.FloatField(default=-9999999999999, null=True)),
+                ('error', models.FloatField(default=-9999999999999, null=True)),
+                ('error_up', models.FloatField(default=-9999999999999, null=True)),
+                ('error_down', models.FloatField(default=-9999999999999, null=True)),
+                ('bibcode', models.CharField(default=b'', max_length=50, null=True, validators=[django.core.validators.RegexValidator(regex=b'^[0-9]{4}[A-Za-z].{12}[0-9][A-Z]$', message=b'Invalid bibcode', code=b'nomatch')])),
+                ('unit', models.CharField(default=b'UA', max_length=4, choices=[(b'UA', b'UA'), (b'Rsun', b'Rsun')])),
+            ],
+            options={
+                'abstract': False,
+            },
+        ),
+        migrations.CreateModel(
             name='BibliographicReference',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('title', models.CharField(max_length=1000)),
+                ('title', models.CharField(default=b'', max_length=1000)),
                 ('year', models.IntegerField(default=0)),
+                ('bibcode', models.CharField(default=b'', max_length=50, validators=[django.core.validators.RegexValidator(regex=b'^[0-9]{4}[A-Za-z].{12}[0-9][A-Z]$', message=b'Invalid bibcode', code=b'nomatch')])),
             ],
         ),
         migrations.CreateModel(
@@ -87,6 +290,27 @@ class Migration(migrations.Migration):
             options={
                 'ordering': ['longitude', 'latitude'],
             },
+        ),
+        migrations.CreateModel(
+            name='Exoplanet',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('name', models.CharField(max_length=100)),
+                ('mass', models.FloatField(default=-9999999999999)),
+                ('coordinates', models.OneToOneField(null=True, to='iobserve.AstronomicalCoordinates')),
+                ('parent_star', models.ForeignKey(related_name='planets', blank=True, to='iobserve.AstronomicalObject', null=True)),
+            ],
+        ),
+        migrations.CreateModel(
+            name='Messages',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('warn', models.CharField(default=b'', max_length=1000)),
+                ('error', models.CharField(default=b'', max_length=1000)),
+                ('info', models.CharField(default=b'', max_length=1000)),
+                ('debug', models.CharField(default=b'', max_length=1000)),
+                ('http_status_code', models.IntegerField(default=0)),
+            ],
         ),
         migrations.CreateModel(
             name='ObjectType',
@@ -118,9 +342,9 @@ class Migration(migrations.Migration):
             name='Person',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('first_name', models.CharField(max_length=1000)),
-                ('middle_name', models.CharField(max_length=1000)),
-                ('last_name', models.CharField(max_length=1000)),
+                ('first_name', models.CharField(default=b'', max_length=1000)),
+                ('middle_name', models.CharField(default=b'', max_length=1000)),
+                ('last_name', models.CharField(default=b'', max_length=1000)),
             ],
         ),
         migrations.CreateModel(
@@ -183,6 +407,11 @@ class Migration(migrations.Migration):
             model_name='building',
             name='coordinates',
             field=models.ManyToManyField(related_name='building', to='iobserve.Coordinates', blank=True),
+        ),
+        migrations.AddField(
+            model_name='bibliographicreference',
+            name='authors',
+            field=models.ManyToManyField(related_name='authors', to='iobserve.Person'),
         ),
         migrations.AddField(
             model_name='astronomicalorganisation',

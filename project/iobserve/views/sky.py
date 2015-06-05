@@ -1,10 +1,10 @@
-from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
+from ..connectors import *
 from ..serializers import *
-from ..simbad import *
 from ..models import Messages
+
 
 @api_view(['GET'])
 def astronomical_object(request, name="."):

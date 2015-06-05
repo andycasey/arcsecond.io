@@ -1,8 +1,6 @@
 
-import os
-import shutil
 import urllib2
-from .models import *
+from ..models import *
 from astropy.io import votable
 from rest_framework import status
 from django.core.exceptions import MultipleObjectsReturned

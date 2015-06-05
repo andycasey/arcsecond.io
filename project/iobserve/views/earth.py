@@ -2,7 +2,6 @@ from rest_framework import generics
 from django.shortcuts import render
 
 from ..serializers import *
-from ..simbad import *
 
 
 # Django doc: Note that this method returns a ValuesListQuerySet. This class behaves like a list.
@@ -20,36 +19,9 @@ class ObservingSiteList(generics.ListCreateAPIView):
     queryset = ObservingSite.objects.all()
     serializer_class = ObservingSiteSerializer
 
-
 class ObservingSiteDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = ObservingSite.objects.all()
     serializer_class = ObservingSiteSerializer
-
-
-
-    # @api_view(['GET'])
-    # def terrestrial_coordinates(request, pk):
-    # coords = Coordinates.get(pk=pk)
-    #
-    # if coords == None:
-    # return Response(status=status.HTTP_503_SERVICE_UNAVAILABLE)
-    #
-    #   serializer = EarthLocationSerializer(coords)
-    #   return Response(serializer.data)
-    #
-    #
-    # @api_view(['GET'])
-    # def terrestrial_coordinates_all(request):
-    #   coords = Coordinates.objects.all()
-    #
-    #   if coords == None:
-    #     return Response(status=status.HTTP_503_SERVICE_UNAVAILABLE)
-    #
-    #   serializer = EarthLocationSerializer(coords, many=True)
-    #   return Response(serializer.data)
-    #
-    #
-    #
 
 
 def earth_browse(request, path=None):
