@@ -2,6 +2,7 @@
 
 {% load staticfiles %}
 {% load i18n %}
+{% load hosts %}
 
 {% block extra_head_block %}
     <link rel="stylesheet" href="{% static 'iobserve/css/earth_home.css' %}" />
@@ -35,7 +36,7 @@
             <p class="input-description">
                 Browse, edit, explore, create new observatories in the world.
             </p>
-            <p><button type="button" class="btn btn-info btn-block" onclick="window.location.href='{% url 'iobserve:earth-browse' %}'">Go!</button></p>
+            <p><button type="button" class="btn btn-info btn-block" onclick="window.location.href='{% host_url 'earth-browse' host 'www' %}'">Go!</button></p>
         </div>
     </div>
 

@@ -2,16 +2,17 @@
 
 {% load staticfiles %}
 {% load i18n %}
+{% load hosts %}
 
 {% block body_block %}
     <div class="jumbotron">
         <div class="container">
             <h2>
-                <strong>eclipt.is</strong>, a service by <a href="http://onekilopars.ec">onekilopars.ec</a>
+                <strong>eclipt.is API</strong>, a service by <a href="http://onekilopars.ec">onekilopars.ec</a>
             </h2>
             <p><strong>Goal:</strong> provide modern web access to astronomical information. That is, provide <i>browsable</i> APIs
                 where each resource has its own <i>Uniform Resource Locator</i> (a.k.a. URL).
-                See <a href="{% url 'iobserve:about' %}">About</a>.
+                See <a href="{% host_url 'about' host 'api' %}">About</a>.
         </div>
     </div>
 

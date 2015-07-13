@@ -1,6 +1,6 @@
 from django.db import models
 from django.core.validators import RegexValidator
-from .constants import *
+from constants import *
 
 class Person(models.Model):
     class Meta: app_label = 'iobserve'

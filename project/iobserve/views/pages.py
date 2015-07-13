@@ -2,10 +2,15 @@
 from django.shortcuts import render, render_to_response
 from django.template import RequestContext
 
-def index(request):
+def index_www(request):
   context = RequestContext(request)
   context_dict = {"title": ("eclipt.is")}
-  return render_to_response('iobserve/index.html', context_dict, context)
+  return render_to_response('iobserve/index_www.html', context_dict, context)
+
+def index_api(request):
+  context = RequestContext(request)
+  context_dict = {"title": ("eclipt.is")}
+  return render_to_response('iobserve/index_api.html', context_dict, context)
 
 def about(request):
   context = RequestContext(request)

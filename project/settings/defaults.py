@@ -94,17 +94,19 @@ INSTALLED_APPS = (
     'mptt',
     'djangobower',
     'honeypot',
+    'django_hosts',
     'leaflet',
     'multiselectfield',
     'allauth',
     'allauth.account',
-    'allauth.socialaccount',
-    'allauth.socialaccount.providers.twitter',
-    'allauth.socialaccount.providers.facebook',
+    # 'allauth.socialaccount',
+    # 'allauth.socialaccount.providers.twitter',
+    # 'allauth.socialaccount.providers.facebook',
     'project.iobserve',
 )
 
 MIDDLEWARE_CLASSES = (
+    'django_hosts.middleware.HostsRequestMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -112,9 +114,12 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django_hosts.middleware.HostsResponseMiddleware',
 )
 
-ROOT_URLCONF = 'project.urls'
+ROOT_URLCONF = 'project.iobserve.urls_www'
+ROOT_HOSTCONF = 'project.iobserve.hosts'
+DEFAULT_HOST = 'www'
 
 WSGI_APPLICATION = 'project.wsgi.application'
 
@@ -124,13 +129,6 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows. Don't forget to use absolute paths, not relative paths.
     TEMPLATE_PATH,
 )
-
-# See https://github.com/jakubroztocil/django-settings-export
-TEMPLATE_CONTEXT_PROCESSORS = [
-    'django.contrib.auth.context_processors.auth',
-    'django_settings_export.settings_export',
-    'django.template.context_processors.i18n'
-]
 
 SETTINGS_EXPORT = [
     'DEBUG',
@@ -212,6 +210,17 @@ TEMPLATES = [
     },
 ]
 
+# See https://github.com/jakubroztocil/django-settings-export
+TEMPLATE_CONTEXT_PROCESSORS = [
+    'django.contrib.messages.context_processors.messages',
+    'django.contrib.auth.context_processors.auth',
+    'django_settings_export.settings_export',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.request',
+    'allauth.account.context_processors.account',
+    'allauth.socialaccount.context_processors.socialaccount',
+]
+
 AUTHENTICATION_BACKENDS = (
     # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
@@ -221,3 +230,18 @@ AUTHENTICATION_BACKENDS = (
 
 ACCOUNT_AUTHENTICATION_METHOD = "email"
 ACCOUNT_EMAIL_REQUIRED = True
+
+# Used by django-allauth. No need to call url resolver 'reverse'.
+LOGIN_URL = 'account_login'
+# LOGIN_REDIRECT_URL = 'picolegends:user-profile-edit'
+
+# django-allauth
+# The URL to redirect to after a successful e-mail confirmation, in case no user is logged in
+ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL = LOGIN_URL
+# The URL to redirect to after a successful e-mail confirmation, in case of an authenticated user.
+# Set to None to use settings.LOGIN_REDIRECT_URL.
+# ACCOUNT_EMAIL_CONFIRMATION_AUTHENTICATED_REDIRECT_URL = LOGIN_REDIRECT_URL
+# The user is required to hand over an e-mail address when signing up.
+ACCOUNT_EMAIL_REQUIRED = True
+# An integer specifying the minimum password length.
+ACCOUNT_PASSWORD_MIN_LENGTH = 10
