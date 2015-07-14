@@ -5,12 +5,7 @@ from django.conf.urls import url
 from project.iobserve import views
 
 urlpatterns = patterns('',
-    url(r'^$', views.index_api, name='index_api'),
-    # url(r'^about$', views.about, name='about'),
-    #
-    # url(r'^accounts/profile/?$', views.UserProfileView, name='user-profile'),
-    #
-    # url(r'^sky/?$', views.sky_home),
+    url(r'^$', views.index, name='index'),
 
     url(r'^sky/1/object/(?P<name>[\s\+0-9a-zA-Z_-]+)/?$', views.astronomical_object, name='sky-object'),
     url(r'^sky/1/object/(?P<name>[\s\+0-9a-zA-Z_-]+)/coordinates/?$', views.astronomical_coordinates, name='sky-object-coordinates'),
