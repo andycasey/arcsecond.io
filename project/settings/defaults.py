@@ -97,6 +97,8 @@ INSTALLED_APPS = (
     'django_hosts',
     'leaflet',
     'multiselectfield',
+    'corsheaders',
+    'rest_framework_swagger',
     'allauth',
     'allauth.account',
     # 'allauth.socialaccount',
@@ -109,6 +111,7 @@ MIDDLEWARE_CLASSES = (
     'django_hosts.middleware.HostsRequestMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -245,3 +248,37 @@ ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL = LOGIN_URL
 ACCOUNT_EMAIL_REQUIRED = True
 # An integer specifying the minimum password length.
 ACCOUNT_PASSWORD_MIN_LENGTH = 10
+
+CORS_ORIGIN_WHITELIST = (
+    'www.eclipt.is',
+    'api.eclipt.is'
+)
+
+CORS_URLS_REGEX = r'^/docs/.*$'
+
+SWAGGER_SETTINGS = {
+    'exclude_namespaces': [],
+    'api_version': '1',
+    'api_path': '/',
+    'enabled_methods': [
+        'get',
+        'post',
+        'put',
+        'patch',
+        'delete'
+    ],
+    'api_key': '',
+    'is_authenticated': False,
+    'is_superuser': False,
+    'permission_denied_handler': None,
+    'base_path':'www.eclipt.is/docs',
+    'info': {
+        'contact': 'cedric@onekilopars.ec',
+        'description': 'This is the alpha version of eclipt.is APIs.',
+        'license': 'Apache 2.0',
+        'licenseUrl': 'http://www.apache.org/licenses/LICENSE-2.0.html',
+        'termsOfServiceUrl': 'http://www.eclipt.is/terms/',
+        'title': 'eclipt.is Swagger App',
+    },
+    'doc_expansion': 'none'
+}
