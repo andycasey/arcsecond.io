@@ -1,15 +1,15 @@
 from django.core.urlresolvers import reverse
 from django.views.generic import RedirectView
+from django.conf.urls import patterns, url, include
 from rest_framework.urlpatterns import format_suffix_patterns
-
-from django.conf.urls import patterns
-from django.conf.urls import url
 
 from project.iobserve import views
 
 urlpatterns = patterns('',
     url(r'^$', views.index_www, name='index_www'),
     url(r'^about$', views.about, name='about'),
+    url(r'^docs/', include('rest_framework_swagger.urls')),
+
     url(r'^sky/?$', views.sky_home),
     url(r'^earth/?$', views.earth_home, name="earth-home"),
     url(r'^earth/browse/?$', views.earth_browse, name="earth-browse"),
