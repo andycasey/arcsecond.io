@@ -10,6 +10,3 @@ ALLOWED_HOSTS = ['*']
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 BROKER_POOL_LIMIT = 1
-
-# See http://django-debug-toolbar.readthedocs.org/en/1.0/installation.html#explicit-setup
-DEBUG_TOOLBAR_PATCH_SETTINGS = False
