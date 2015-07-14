@@ -1,6 +1,3 @@
-test:
-  override:
-    - ./manage.py test --settings=project.settings.dev
 
 deployment:
   prod:
