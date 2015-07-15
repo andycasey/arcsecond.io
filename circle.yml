@@ -1,12 +1,9 @@
-database:
-  post:
+test:
+  override:
     - ./manage.py migrate sites
     - ./manage.py migrate contenttypes
     - ./manage.py migrate auth
     - ./manage.py migrate
-
-test:
-  override:
     - ./manage.py test --settings=project.settings.dev
 
 deployment:
