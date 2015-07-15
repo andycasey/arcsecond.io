@@ -1,3 +1,10 @@
+database:
+  post:
+    - ./manage.py migrate sites
+    - ./manage.py migrate contenttypes
+    - ./manage.py migrate auth
+    - ./manage.py migrate
+
 test:
   override:
     - ./manage.py test --settings=project.settings.dev
@@ -6,4 +13,4 @@ deployment:
   prod:
     branch: master
     heroku:
-      appname: iobserve-prod
+      appname: ecliptis-prod
