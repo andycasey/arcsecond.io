@@ -7,7 +7,7 @@ TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = [
     '.eclipt.is',
-    'iobserve-prod.herokuapp.com'
+    'ecliptis-prod.herokuapp.com'
 ]
 
 SITE_ID = 2  # Local=1, Staging=1, Prod=2

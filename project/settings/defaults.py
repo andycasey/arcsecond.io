@@ -1,5 +1,5 @@
 """
-Django settings for iobserve project.
+Django settings for ecliptis project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.6/topics/settings/
@@ -104,7 +104,7 @@ INSTALLED_APPS = (
     # 'allauth.socialaccount',
     # 'allauth.socialaccount.providers.twitter',
     # 'allauth.socialaccount.providers.facebook',
-    'project.iobserve',
+    'project.ecliptis',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -120,8 +120,8 @@ MIDDLEWARE_CLASSES = (
     'django_hosts.middleware.HostsResponseMiddleware',
 )
 
-ROOT_URLCONF = 'project.iobserve.urls_www'
-ROOT_HOSTCONF = 'project.iobserve.hosts'
+ROOT_URLCONF = 'project.ecliptis.urls_www'
+ROOT_HOSTCONF = 'project.ecliptis.hosts'
 DEFAULT_HOST = 'www'
 
 WSGI_APPLICATION = 'project.wsgi.application'
@@ -179,7 +179,7 @@ INSTALLED_APPS += ('django_nose',)
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 NOSE_ARGS = [
     '--with-coverage',
-    '--cover-package=project.iobserve.forms,project.iobserve.models,project.iobserve.views',
+    '--cover-package=project.ecliptis.forms,project.ecliptis.models,project.ecliptis.views',
 ]
 
 

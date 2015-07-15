@@ -1,5 +1,5 @@
 """
-WSGI config for iobserve project.
+WSGI config for ecliptis project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

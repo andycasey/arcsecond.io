@@ -1,4 +1,4 @@
-{% extends 'iobserve/base-navbar.html' %}
+{% extends 'ecliptis/base-navbar.html' %}
 
 {% load staticfiles %}
 {% load i18n %}
@@ -19,16 +19,16 @@
     <div class="row">
         <div class="col-md-6 text-center">
             <h2>Sky</h2><br/>
-            <img src="{% static 'iobserve/images/StarIcon_512x512.png' %}" width=100px>
-            <img src="{% static 'iobserve/images/ExoplanetIcon_512x512.png' %}" width=100px>
-            <img src="{% static 'iobserve/images/AsteroidIcon_512x512.png' %}" width=100px><br/><br/><br/>
+            <img src="{% static 'ecliptis/images/StarIcon_512x512.png' %}" width=100px>
+            <img src="{% static 'ecliptis/images/ExoplanetIcon_512x512.png' %}" width=100px>
+            <img src="{% static 'ecliptis/images/AsteroidIcon_512x512.png' %}" width=100px><br/><br/><br/>
             <p><a class="btn btn-default" href="/sky" role="button" id="latestFragmentsButton1">Choose</a></p>
         </div>
 
         <div class="col-md-6 text-center">
             <h2>Earth</h2><br/>
-            <img src="{% static 'iobserve/images/ObservatoryIcon_512x512.png' %}" width=100px>
-            <img src="{% static 'iobserve/images/BigTelescopeIcon_512x512.png' %}" width=100px><br/><br/><br/>
+            <img src="{% static 'ecliptis/images/ObservatoryIcon_512x512.png' %}" width=100px>
+            <img src="{% static 'ecliptis/images/BigTelescopeIcon_512x512.png' %}" width=100px><br/><br/><br/>
             <p><a class="btn btn-default" href="/earth" role="button" id="latestFragmentsButton1">Choose</a></p>
         </div>
     </div>

@@ -1,18 +1,18 @@
-{% extends 'iobserve/base-navbar.html' %}
+{% extends 'ecliptis/base-navbar.html' %}
 
 {% load staticfiles %}
 {% load i18n %}
 {% load hosts %}
 
 {% block extra_head_block %}
-    <link rel="stylesheet" href="{% static 'iobserve/css/earth_home.css' %}" />
+    <link rel="stylesheet" href="{% static 'ecliptis/css/earth_home.css' %}" />
 {% endblock extra_head_block %}
 
 {% block body_block %}
 
     <div class="row">
         <div class="col-md-6 text-center">
-            <img src="{% static 'iobserve/images/ObservatoryIcon_512x512.png' %}" width=100px>
+            <img src="{% static 'ecliptis/images/ObservatoryIcon_512x512.png' %}" width=100px>
             <h2>REST APIs v{{ api_version }}</h2>
             <p class="input-description">
                 Here is the access point to worldwide observatories using REST principles. This is what
@@ -31,7 +31,7 @@
         </div>
 
         <div class="col-md-6 text-center">
-            <img src="{% static 'iobserve/images/ObservatoryIcon_512x512.png' %}" width=100px>
+            <img src="{% static 'ecliptis/images/ObservatoryIcon_512x512.png' %}" width=100px>
             <h2>Browse & Edit v{{ api_version }}</h2>
             <p class="input-description">
                 Browse, edit, explore, create new observatories in the world.
@@ -43,9 +43,9 @@
     <br/><br/>
     <div class="row">
         <div class="col-md-12">
-            <h3>Looking for Stars <img src="{% static 'iobserve/images/StarIcon_512x512.png' %}" width=40px>,
-                Exoplanets <img src="{% static 'iobserve/images/ExoplanetIcon_512x512.png' %}" width=40px>
-                and Small Bodies <img src="{% static 'iobserve/images/AsteroidIcon_512x512.png' %}" width=40px>?
+            <h3>Looking for Stars <img src="{% static 'ecliptis/images/StarIcon_512x512.png' %}" width=40px>,
+                Exoplanets <img src="{% static 'ecliptis/images/ExoplanetIcon_512x512.png' %}" width=40px>
+                and Small Bodies <img src="{% static 'ecliptis/images/AsteroidIcon_512x512.png' %}" width=40px>?
                 <button type="button" class="btn btn-default" onclick="window.location.replace('/sky')">Yes</button></h3>
         </div>
     </div>

@@ -14,7 +14,7 @@ class Coordinates(models.Model):
     See http://docs.astropy.org/en/stable/api/astropy.coordinates.Coordinates.html
     """
     class Meta:
-        app_label = 'iobserve'
+        app_label = 'ecliptis'
         unique_together = (('longitude', 'latitude'),)
         ordering = ["longitude", "latitude"]
 
@@ -49,7 +49,7 @@ class ObservingSiteManager(models.Manager):
         return self.get(name=name)
 
 class ObservingSite(models.Model):
-    class Meta: app_label = 'iobserve'
+    class Meta: app_label = 'ecliptis'
     objects = ObservingSiteManager()
 
     name = models.CharField(max_length=100, primary_key=True)
@@ -98,7 +98,7 @@ class ObservingSite(models.Model):
 
     def natural_key(self):
         return (self.name,) + self.coordinates.natural_key()
-    natural_key.dependencies = ['iobserve.coordinates']
+    natural_key.dependencies = ['ecliptis.coordinates']
 
 
 class AstronomicalOrganisationManager(models.Manager):
@@ -106,7 +106,7 @@ class AstronomicalOrganisationManager(models.Manager):
         return self.get(name=name)
 
 class AstronomicalOrganisation(models.Model):
-    class Meta: app_label = 'iobserve'
+    class Meta: app_label = 'ecliptis'
     objects = AstronomicalOrganisationManager()
 
     name = models.CharField(max_length=100, primary_key=True)
@@ -140,7 +140,7 @@ class BuildingManager(models.Manager):
         return self.get(name=name)
 
 class Building(models.Model):
-    class Meta: app_label = 'iobserve'
+    class Meta: app_label = 'ecliptis'
     objects = BuildingManager()
     name = models.CharField(max_length=1000, primary_key=True)
     coordinates = models.ManyToManyField(Coordinates, blank=True, related_name="building")
@@ -151,7 +151,7 @@ class DomeManager(models.Manager):
         return self.get(name=name)
 
 class Dome(Building):
-    class Meta: app_label = 'iobserve'
+    class Meta: app_label = 'ecliptis'
     objects = DomeManager()
 
 
@@ -160,7 +160,7 @@ class ToolManager(models.Manager):
         return self.get(name=name)
 
 class Tool(models.Model):
-    class Meta: app_label = 'iobserve'
+    class Meta: app_label = 'ecliptis'
     objects = ToolManager()
     name = models.CharField(max_length=1000, primary_key=True)
     acronym = models.CharField(max_length=100, null=True, blank=True)
@@ -171,7 +171,7 @@ class ObservingToolManager(models.Manager):
         return self.get(name=name)
 
 class ObservingTool(Tool):
-    class Meta: app_label = 'iobserve'
+    class Meta: app_label = 'ecliptis'
     objects = ObservingToolManager()
     coordinates = models.ManyToManyField(Coordinates, related_name="observing_tool")
 
@@ -181,7 +181,7 @@ class TelescopeManager(models.Manager):
         return self.get(name=name)
 
 class Telescope(ObservingTool):
-    class Meta: app_label = 'iobserve'
+    class Meta: app_label = 'ecliptis'
     objects = TelescopeManager()
     dome = models.OneToOneField(Dome, blank=True, null=True, default=None, related_name='telescope')
 
@@ -239,12 +239,12 @@ class ToolComponentManager(models.Manager):
         return self.get(name=name)
 
 class ToolComponent(models.Model):
-    class Meta: app_label = 'iobserve'
+    class Meta: app_label = 'ecliptis'
     objects = ToolComponentManager()
     name = models.CharField(max_length=1000, primary_key=True)
 
 class Mirror(ToolComponent):
-    class Meta: app_label = 'iobserve'
+    class Meta: app_label = 'ecliptis'
     telescope = models.ForeignKey(Telescope, blank=True, null=True, default=None, related_name='mirrors')
 
     diameter = models.FloatField(null=True, blank=True)

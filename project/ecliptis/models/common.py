@@ -3,7 +3,7 @@ from django.core.validators import RegexValidator
 from constants import *
 
 class Person(models.Model):
-    class Meta: app_label = 'iobserve'
+    class Meta: app_label = 'ecliptis'
 
     first_name = models.CharField(max_length=1000, default="")
     middle_name = models.CharField(max_length=1000, default="")
@@ -11,7 +11,7 @@ class Person(models.Model):
 
 
 class BibliographicReference(models.Model):
-    class Meta: app_label = 'iobserve'
+    class Meta: app_label = 'ecliptis'
 
     title = models.CharField(max_length=1000, default="")
     year = models.IntegerField(default=0)
@@ -20,7 +20,7 @@ class BibliographicReference(models.Model):
 
 
 class Messages(models.Model):
-    class Meta: app_label = 'iobserve'
+    class Meta: app_label = 'ecliptis'
 
     warn = models.CharField(max_length=1000, default="")
     error = models.CharField(max_length=1000, default="")

@@ -1,4 +1,4 @@
-{% extends 'iobserve/base-navbar.html' %}
+{% extends 'ecliptis/base-navbar.html' %}
 
 {% load staticfiles %}
 {% load i18n %}
@@ -13,14 +13,14 @@
 {% endblock extra_head_block %}
 
 {% block navbar-right %}
-    {% include 'iobserve/current-user-navbar-dropdown.html' %}
+    {% include 'ecliptis/current-user-navbar-dropdown.html' %}
 {% endblock navbar-right %}
 
 {% block body_block %}
 
     <div class="row">
         <div class="col-md-5 col-md-offset-4">
-            <h3 class="text-center"><img src="{% static 'iobserve/images/ObservatoryIcon_512x512.png' %}" width=25px> Observing Sites</h3>
+            <h3 class="text-center"><img src="{% static 'ecliptis/images/ObservatoryIcon_512x512.png' %}" width=25px> Observing Sites</h3>
             <input type="text" class="form-control search-field" placeholder="Search by Name...">
         </div>
     </div>

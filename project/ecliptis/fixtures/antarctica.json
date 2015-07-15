@@ -1,7 +1,7 @@
 [
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": -80.36666666666666, 
         "longitude": 77.35, 
@@ -10,7 +10,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Dome A", 
         "time_zone_name": "Antarctica/Vostok", 
@@ -28,14 +28,14 @@
 },
 {
     "pk": "Dome A", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": ""
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": -75.1, 
         "longitude": 123.33333333333333, 
@@ -44,7 +44,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Dome C", 
         "time_zone_name": "Antarctica/Vostok", 
@@ -61,14 +61,14 @@
 },
 {
     "pk": "Dome C", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": ""
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": -77.31666666666666, 
         "longitude": 39.7, 
@@ -77,7 +77,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Dome F", 
         "time_zone_name": "Antarctica/Syowa", 
@@ -95,7 +95,7 @@
 },
 {
     "pk": "Dome F", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": ""
     }

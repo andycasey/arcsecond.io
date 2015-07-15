@@ -1,7 +1,7 @@
 [
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": -31.799405555555555, 
         "longitude": -69.3021, 
@@ -10,7 +10,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "CASLEO", 
         "time_zone_name": "America/Argentina/San_Juan", 
@@ -28,14 +28,14 @@
 },
 {
     "pk": "CASLEO", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "829"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": -24.5975, 
         "longitude": -70.19638888888889, 
@@ -44,7 +44,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Cerro Armazones", 
         "time_zone_name": "America/Santiago", 
@@ -62,14 +62,14 @@
 },
 {
     "pk": "Cerro Armazones", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "309"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": -30.216666666666665, 
         "longitude": -70.71666666666667, 
@@ -78,7 +78,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Cerro Pach\u00f3n", 
         "time_zone_name": "America/Santiago", 
@@ -96,14 +96,14 @@
 },
 {
     "pk": "Cerro Pach\u00f3n", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "I11"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": -24.625865833333332, 
         "longitude": -70.40323388888889, 
@@ -112,7 +112,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Cerro Paranal", 
         "time_zone_name": "America/Santiago", 
@@ -130,14 +130,14 @@
 },
 {
     "pk": "Cerro Paranal", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "309"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": -23.005777777777777, 
         "longitude": -67.75916666666667, 
@@ -146,7 +146,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Chajnantor", 
         "time_zone_name": "America/Santiago", 
@@ -164,14 +164,14 @@
 },
 {
     "pk": "Chajnantor", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": ""
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": -30.169116666666667, 
         "longitude": -70.8059, 
@@ -180,7 +180,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "CTIO", 
         "time_zone_name": "America/Santiago", 
@@ -198,14 +198,14 @@
 },
 {
     "pk": "CTIO", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "807"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": -34.90838888888889, 
         "longitude": -57.93219444444444, 
@@ -214,7 +214,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "La Plata", 
         "time_zone_name": "America/Argentina/Buenos_Aires", 
@@ -232,14 +232,14 @@
 },
 {
     "pk": "La Plata", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "839"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": -29.255122222222223, 
         "longitude": -70.73174222222222, 
@@ -248,7 +248,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "La Silla", 
         "time_zone_name": "America/Santiago", 
@@ -266,14 +266,14 @@
 },
 {
     "pk": "La Silla", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "809"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": -29.003333333333334, 
         "longitude": -70.702, 
@@ -282,7 +282,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Las Campanas", 
         "time_zone_name": "America/Santiago", 
@@ -300,14 +300,14 @@
 },
 {
     "pk": "Las Campanas", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "304"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 8.788333333333334, 
         "longitude": -70.88722222222222, 
@@ -316,7 +316,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Llano del Hato", 
         "time_zone_name": "America/Caracas", 
@@ -334,14 +334,14 @@
 },
 {
     "pk": "Llano del Hato", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": ""
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": -22.534444444444446, 
         "longitude": -45.5825, 
@@ -350,7 +350,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Pico dos Dias", 
         "time_zone_name": "America/Sao_Paulo", 
@@ -368,14 +368,14 @@
 },
 {
     "pk": "Pico dos Dias", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": ""
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": -33.26916666666666, 
         "longitude": -70.53444444444445, 
@@ -384,7 +384,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Santa Martina", 
         "time_zone_name": "America/Santiago", 
@@ -402,7 +402,7 @@
 },
 {
     "pk": "Santa Martina", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "UNDEFINED_STRING_PROPERTY"
     }

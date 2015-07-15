@@ -19,7 +19,7 @@ if __name__ == '__main__':
     source_path = os.path.join(os.path.expanduser("~"), 'Apps', 'iObserve', 'Observatories')
     obs_list_file = os.path.join(source_path, 'ObservatoryLists.plist')
     obs_list_plist = plist.readPlist(obs_list_file)
-    fixtures_dir = os.path.join(os.path.dirname(os.path.abspath(os.path.dirname(__file__))), 'project', 'iobserve', 'fixtures')
+    fixtures_dir = os.path.join(os.path.dirname(os.path.abspath(os.path.dirname(__file__))), 'project', 'ecliptis', 'fixtures')
 
     continent_keys = ['Africa', 'Antarctica', 'Asia', 'Europe', 'North America', 'Oceania', 'South America']
     for continent_key in continent_keys:
@@ -59,10 +59,10 @@ if __name__ == '__main__':
             longitude_value = longitude_sign * (abs(longitude[0]) + abs(longitude[1])/ 60.0 + abs(longitude[2])/3600.0)
             latitude_value = latitude_sign * (abs(latitude[0]) + abs(latitude[1])/ 60.0 + abs(latitude[2])/3600.0)
 
-            coordinates = {'model': 'iobserve.Coordinates', 'pk': None}
+            coordinates = {'model': 'ecliptis.Coordinates', 'pk': None}
             coordinates['fields'] = { 'longitude': longitude_value, 'latitude': latitude_value, 'height': coords['altitude'] }
 
-            site = {'model': 'iobserve.Site', 'pk': None}
+            site = {'model': 'ecliptis.Site', 'pk': None}
             site['fields'] = {
                 'name': obs['name'],
                 'long_name': obs['longName'],
@@ -78,7 +78,7 @@ if __name__ == '__main__':
             if obs['websites'].has_key('wikipedia-en'):
                 site['fields']['wikipedia_article'] = obs['websites']['wikipedia-en']
 
-            observing_site = {'model': 'iobserve.ObservingSite', 'pk': obs['name']}
+            observing_site = {'model': 'ecliptis.ObservingSite', 'pk': obs['name']}
             observing_site['fields'] = { 'IAUCode': obs['IAUCode'] if obs.has_key('IAUCode') else "" }
 
             f.write(json.dumps(coordinates, indent=4))
@@ -92,11 +92,11 @@ if __name__ == '__main__':
                     if tool['class'] == 'OpticalTelescope':
                         tel = tool['telescope']
 
-                        dome = {'model': 'iobserve.Dome', 'pk': None}
+                        dome = {'model': 'ecliptis.Dome', 'pk': None}
                         dome_name = tool['observingTool']['longName']+' Dome'
                         dome['fields'] = { 'name': dome_name}
 
-                        telescope = {'model':'iobserve.Telescope', 'pk': None}
+                        telescope = {'model':'ecliptis.Telescope', 'pk': None}
                         telescope['fields'] = {'dome': dome_name}
 
                         if 'mounting' in tel['mounting'] and tel['mounting'].lower() in ['cassegrain', 'equatorial']:
@@ -106,7 +106,7 @@ if __name__ == '__main__':
                             telescope['fields']['optical_design'] = "rc" if tel['opticalDesign'].lower() == 'ritchey-chrétien' else 'sc'
 
                         # if 'primaryMirror' in tel:
-                        #     mirror = {'model':'iobserve.Mirror', 'pk': None}
+                        #     mirror = {'model':'ecliptis.Mirror', 'pk': None}
 
 
             if observatory_name != observatory_names[-1]:

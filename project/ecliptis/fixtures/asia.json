@@ -1,7 +1,7 @@
 [
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": -6.8255, 
         "longitude": 107.616, 
@@ -10,7 +10,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Bosscha", 
         "time_zone_name": "Asia/Jakarta", 
@@ -28,14 +28,14 @@
 },
 {
     "pk": "Bosscha", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": ""
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 40.33027777777778, 
         "longitude": 44.27333333333333, 
@@ -44,7 +44,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Byurakan", 
         "time_zone_name": "Asia/Yerevan", 
@@ -62,14 +62,14 @@
 },
 {
     "pk": "Byurakan", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "123"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 19.096516666666666, 
         "longitude": 74.04974166666666, 
@@ -78,7 +78,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "GMRT", 
         "time_zone_name": "Asia/Kolkata", 
@@ -96,14 +96,14 @@
 },
 {
     "pk": "GMRT", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "?"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 24.653055555555554, 
         "longitude": 72.78688317888889, 
@@ -112,7 +112,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Gurushikhar", 
         "time_zone_name": "Asia/Kolkata", 
@@ -128,14 +128,14 @@
 },
 {
     "pk": "Gurushikhar", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "?"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 22.474555555555554, 
         "longitude": 114.22, 
@@ -144,7 +144,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Hong Kong", 
         "time_zone_name": "Asia/Hong_Kong", 
@@ -162,14 +162,14 @@
 },
 {
     "pk": "Hong Kong", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "D17"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 19.066666666666666, 
         "longitude": 73.66666666666667, 
@@ -178,7 +178,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "IGO", 
         "time_zone_name": "Asia/Kolkata", 
@@ -195,14 +195,14 @@
 },
 {
     "pk": "IGO", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "?"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 34.577075, 
         "longitude": 133.59395555555557, 
@@ -211,7 +211,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Okayama", 
         "time_zone_name": "Asia/Tokyo", 
@@ -229,14 +229,14 @@
 },
 {
     "pk": "Okayama", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "371"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 11.38361111111111, 
         "longitude": 76.66611111111112, 
@@ -245,7 +245,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "ORT", 
         "time_zone_name": "Asia/Kolkata", 
@@ -263,14 +263,14 @@
 },
 {
     "pk": "ORT", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "?"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 43.64666666666667, 
         "longitude": 41.44044722222222, 
@@ -279,7 +279,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "SAO", 
         "time_zone_name": "Europe/Moscow", 
@@ -297,14 +297,14 @@
 },
 {
     "pk": "SAO", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": ""
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 18.573725, 
         "longitude": 98.48223888888889, 
@@ -313,7 +313,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "TNO", 
         "time_zone_name": "Asia/Bangkok", 
@@ -331,14 +331,14 @@
 },
 {
     "pk": "TNO", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "UNDEFINED_STRING_PROPERTY"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 12.566666666666666, 
         "longitude": 78.83333333333333, 
@@ -347,7 +347,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "VBO", 
         "time_zone_name": "Asia/Kolkata", 
@@ -365,14 +365,14 @@
 },
 {
     "pk": "VBO", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "?"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 30.595555555555553, 
         "longitude": 34.7625, 
@@ -381,7 +381,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Wise", 
         "time_zone_name": "Asia/Jerusalem", 
@@ -399,7 +399,7 @@
 },
 {
     "pk": "Wise", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "097"
     }

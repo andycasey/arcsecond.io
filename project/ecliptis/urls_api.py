@@ -2,7 +2,7 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from django.conf.urls import patterns
 from django.conf.urls import url
 
-from project.iobserve import views
+from project.ecliptis import views
 
 urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),

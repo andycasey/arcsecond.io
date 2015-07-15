@@ -9,7 +9,7 @@ import hashlib
 class UserProfile(models.Model):
     class Meta:
         db_table = 'user_profile'
-        app_label = 'iobserve'
+        app_label = 'ecliptis'
 
     user = models.OneToOneField(settings.AUTH_USER_MODEL, related_name='profile')
 

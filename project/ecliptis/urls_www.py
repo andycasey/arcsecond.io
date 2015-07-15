@@ -4,7 +4,7 @@ from django.views.generic import RedirectView
 from django.conf.urls import patterns, url, include
 from rest_framework.urlpatterns import format_suffix_patterns
 
-from project.iobserve import views
+from project.ecliptis import views
 
 urlpatterns = patterns('',
     url(r'^$', views.index_www, name='index_www'),

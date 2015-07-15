@@ -12,12 +12,12 @@
 
     <link href="{% static 'bootstrap/dist/css/bootstrap.css' %}" rel="stylesheet" media="screen" />
     <link href="{% static 'fontawesome/css/font-awesome.css' %}" rel="stylesheet" />
-    <link href="{% static 'iobserve/css/base.css' %}" rel="stylesheet" />
+    <link href="{% static 'ecliptis/css/base.css' %}" rel="stylesheet" />
 
     <script src="{% static 'jquery/dist/jquery.js' %}"></script>
     <script src="{% static 'bootstrap/dist/js/bootstrap.js' %}"></script>
     <script src="{% static 'underscore/underscore.js' %}"></script>
-    <script src="{% static 'iobserve/js/css3-mediaqueries.js' %}"></script>
+    <script src="{% static 'ecliptis/js/css3-mediaqueries.js' %}"></script>
 
     {% block head_end_block %}{% endblock head_end_block %}
 </head>
@@ -34,9 +34,9 @@
 
 {% block after_body_raw_block %}{% endblock after_body_raw_block %}
 
-{% include "iobserve/bootstrap-popovers-init.html" %}
+{% include "ecliptis/bootstrap-popovers-init.html" %}
 {% if settings.SITE_ID == 2 %}
-    {% include "iobserve/google-analytics-code.html" %}
+    {% include "ecliptis/google-analytics-code.html" %}
 {% endif %}
 
 </body>

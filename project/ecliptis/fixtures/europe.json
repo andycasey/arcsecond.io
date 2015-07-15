@@ -1,7 +1,7 @@
 [
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 43.17833333333333, 
         "longitude": 16.448333333333334, 
@@ -10,7 +10,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "ACT", 
         "time_zone_name": "Europe/Zagreb", 
@@ -28,14 +28,14 @@
 },
 {
     "pk": "ACT", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": ""
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 43.75388888888889, 
         "longitude": 11.255333333333333, 
@@ -44,7 +44,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Arcetri", 
         "time_zone_name": "Europe/Rome", 
@@ -62,14 +62,14 @@
 },
 {
     "pk": "Arcetri", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "030"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 37.223333333333336, 
         "longitude": -2.5458, 
@@ -78,7 +78,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Calar Alto", 
         "time_zone_name": "Europe/Madrid", 
@@ -96,14 +96,14 @@
 },
 {
     "pk": "Calar Alto", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "493"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 43.401666666666664, 
         "longitude": 12.37638888888889, 
@@ -112,7 +112,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Coloti", 
         "time_zone_name": "Europe/Rome", 
@@ -130,14 +130,14 @@
 },
 {
     "pk": "Coloti", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": ""
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 50.52472222222222, 
         "longitude": 6.882777777777778, 
@@ -146,7 +146,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Effelsberg", 
         "time_zone_name": "Europe/Berlin", 
@@ -164,14 +164,14 @@
 },
 {
     "pk": "Effelsberg", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": ""
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 46.310725, 
         "longitude": 6.135800000000001, 
@@ -180,7 +180,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Geneva", 
         "time_zone_name": "Europe/Paris", 
@@ -198,14 +198,14 @@
 },
 {
     "pk": "Geneva", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "517"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 51.47732222222223, 
         "longitude": 0.0, 
@@ -214,7 +214,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Greenwich", 
         "time_zone_name": "Europe/London", 
@@ -232,14 +232,14 @@
 },
 {
     "pk": "Greenwich", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "000"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 60.15533611111111, 
         "longitude": 24.95861111111111, 
@@ -248,7 +248,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Helsinki", 
         "time_zone_name": "Europe/Helsinki", 
@@ -266,14 +266,14 @@
 },
 {
     "pk": "Helsinki", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "569"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 40.098888888888894, 
         "longitude": 26.474444444444444, 
@@ -282,7 +282,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Istanbul", 
         "time_zone_name": "Europe/Istanbul", 
@@ -299,14 +299,14 @@
 },
 {
     "pk": "Istanbul", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": ""
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 28.76022222222222, 
         "longitude": -17.88238888888889, 
@@ -315,7 +315,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "La Palma", 
         "time_zone_name": "Atlantic/Canary", 
@@ -333,14 +333,14 @@
 },
 {
     "pk": "La Palma", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "950"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 52.155433333333335, 
         "longitude": 4.484, 
@@ -349,7 +349,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Leiden", 
         "time_zone_name": "Europe/Amsterdam", 
@@ -367,14 +367,14 @@
 },
 {
     "pk": "Leiden", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "013"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 50.61805555555556, 
         "longitude": 5.5643, 
@@ -383,7 +383,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Lie\u0300ge", 
         "time_zone_name": "Europe/Brussels", 
@@ -401,14 +401,14 @@
 },
 {
     "pk": "Lie\u0300ge", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "623"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 55.69786111111111, 
         "longitude": 13.187222222222223, 
@@ -417,7 +417,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Lund", 
         "time_zone_name": "Europe/Stockholm", 
@@ -435,14 +435,14 @@
 },
 {
     "pk": "Lund", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "039"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 47.38333333333333, 
         "longitude": 2.2, 
@@ -451,7 +451,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Nanc\u0327ay", 
         "time_zone_name": "Europe/Paris", 
@@ -469,14 +469,14 @@
 },
 {
     "pk": "Nanc\u0327ay", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": ""
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 48.80472222222222, 
         "longitude": 2.2311111111111113, 
@@ -485,7 +485,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Paris Meudon", 
         "time_zone_name": "Europe/Paris", 
@@ -503,14 +503,14 @@
 },
 {
     "pk": "Paris Meudon", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "005"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 44.63388888888889, 
         "longitude": 5.9077777777777785, 
@@ -519,7 +519,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Plateau de Bure", 
         "time_zone_name": "Europe/Paris", 
@@ -537,14 +537,14 @@
 },
 {
     "pk": "Plateau de Bure", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": ""
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 43.93183333333333, 
         "longitude": 5.712777777777778, 
@@ -553,7 +553,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "OHP", 
         "time_zone_name": "Europe/Paris", 
@@ -571,14 +571,14 @@
 },
 {
     "pk": "OHP", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "511"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 57.395833333333336, 
         "longitude": 11.926353333333333, 
@@ -587,7 +587,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Onsala", 
         "time_zone_name": "Europe/Stockholm", 
@@ -605,14 +605,14 @@
 },
 {
     "pk": "Onsala", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": ""
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 37.064166666666665, 
         "longitude": -3.3847222222222224, 
@@ -621,7 +621,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "OSN", 
         "time_zone_name": "Europe/Madrid", 
@@ -639,14 +639,14 @@
 },
 {
     "pk": "OSN", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": ""
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 42.936388888888885, 
         "longitude": 0.1423, 
@@ -655,7 +655,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Pic du Midi", 
         "time_zone_name": "Europe/Paris", 
@@ -673,14 +673,14 @@
 },
 {
     "pk": "Pic du Midi", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "586"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 37.69305555555555, 
         "longitude": 14.97638888888889, 
@@ -689,7 +689,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Serra la Nave", 
         "time_zone_name": "Europe/Rome", 
@@ -707,14 +707,14 @@
 },
 {
     "pk": "Serra la Nave", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "559"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 35.21194444444445, 
         "longitude": 24.899166666666666, 
@@ -723,7 +723,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Skinakas", 
         "time_zone_name": "Europe/Athens", 
@@ -741,14 +741,14 @@
 },
 {
     "pk": "Skinakas", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": ""
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 48.583333333333336, 
         "longitude": 7.768055555555556, 
@@ -757,7 +757,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Strasbourg", 
         "time_zone_name": "Europe/Paris", 
@@ -775,14 +775,14 @@
 },
 {
     "pk": "Strasbourg", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "522"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 58.37968333333333, 
         "longitude": 26.7216, 
@@ -791,7 +791,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Tartu", 
         "time_zone_name": "Europe/Tallinn", 
@@ -809,14 +809,14 @@
 },
 {
     "pk": "Tartu", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "075"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 28.3, 
         "longitude": -16.509722222222223, 
@@ -825,7 +825,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Teide", 
         "time_zone_name": "Atlantic/Canary", 
@@ -843,14 +843,14 @@
 },
 {
     "pk": "Teide", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "954"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 36.82416666666667, 
         "longitude": 30.335555555555555, 
@@ -859,7 +859,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "T\u00dcBITAK", 
         "time_zone_name": "Europe/Istanbul", 
@@ -877,14 +877,14 @@
 },
 {
     "pk": "T\u00dcBITAK", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "A84"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 40.45111111111111, 
         "longitude": -3.726111111111095, 
@@ -893,7 +893,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "UCM", 
         "time_zone_name": "Europe/Madrid", 
@@ -910,14 +910,14 @@
 },
 {
     "pk": "UCM", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "I86"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 59.85805555555556, 
         "longitude": 17.625700000000002, 
@@ -926,7 +926,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Uppsala", 
         "time_zone_name": "Europe/Stockholm", 
@@ -944,14 +944,14 @@
 },
 {
     "pk": "Uppsala", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "549"
     }
 },
 {
     "pk": null, 
-    "model": "iobserve.Coordinates", 
+    "model": "ecliptis.Coordinates",
     "fields": {
         "latitude": 48.231883333333336, 
         "longitude": 16.33361111111111, 
@@ -960,7 +960,7 @@
 },
 {
     "pk": null, 
-    "model": "iobserve.Site", 
+    "model": "ecliptis.Site",
     "fields": {
         "name": "Vienna", 
         "time_zone_name": "Europe/Vienna", 
@@ -978,7 +978,7 @@
 },
 {
     "pk": "Vienna", 
-    "model": "iobserve.ObservingSite", 
+    "model": "ecliptis.ObservingSite",
     "fields": {
         "IAUCode": "045"
     }

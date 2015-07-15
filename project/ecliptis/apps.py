@@ -4,7 +4,7 @@
 
 from django.apps import AppConfig
 
-class iObserveAppConfig(AppConfig):
-    name = 'project.iobserve'
+class EcliptisAppConfig(AppConfig):
+    name = 'project.ecliptis'
     verbose_name = "eclipt.is"
 

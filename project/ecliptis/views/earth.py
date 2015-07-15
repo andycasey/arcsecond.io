@@ -1,8 +1,8 @@
 from rest_framework import generics
 from django.shortcuts import render
 
-from project.iobserve import models
-from project.iobserve import serializers
+from project.ecliptis import models
+from project.ecliptis import serializers
 
 # Django doc: Note that this method returns a ValuesListQuerySet. This class behaves like a list.
 # Most of the time this is enough, but if you require an actual Python list object, you can simply call list() on it,
@@ -32,7 +32,7 @@ def earth_browse(request, path=None):
     oceania_sites = models.ObservingSite.objects.filter(continent='Oceania')
     south_american_sites = models.ObservingSite.objects.filter(continent='South America')
 
-    return render(request, 'iobserve/earth_browse.html', {'african_sites': african_sites,
+    return render(request, 'ecliptis/earth_browse.html', {'african_sites': african_sites,
                                                           'antarctica_sites': antarctica_sites,
                                                           'asian_sites': asian_sites,
                                                           'european_sites': european_sites,

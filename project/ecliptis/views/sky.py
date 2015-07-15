@@ -2,9 +2,9 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from project.iobserve import connectors
-from project.iobserve import serializers
-from project.iobserve import models
+from project.ecliptis import connectors
+from project.ecliptis import serializers
+from project.ecliptis import models
 
 
 @api_view(['GET'])

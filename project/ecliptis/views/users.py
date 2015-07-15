@@ -15,10 +15,10 @@ def UserProfileView(request):
     #     context_data["user_to_show"] = user
     #     profile, created = models.UserProfile.objects.get_or_create(user=user)
     #     context_data["user_profile_to_show"] = profile
-    return render_to_response('iobserve/user-profile.html', {}, RequestContext(request))
+    return render_to_response('ecliptis/user-profile.html', {}, RequestContext(request))
     # else:
     #     context_data["username"] = username
-    #     return render_to_response('iobserve/no-user-profile.html', context_data, RequestContext(request))
+    #     return render_to_response('ecliptis/no-user-profile.html', context_data, RequestContext(request))
 
 # From the doc of SingleObjectMixin
 # See https://docs.djangoproject.com/en/dev/ref/class-based-views/mixins-single-object/#django.views.generic.detail.SingleObjectMixin.queryset
