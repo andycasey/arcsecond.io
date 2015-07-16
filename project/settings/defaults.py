@@ -153,12 +153,11 @@ STATICFILES_DIRS = (
     STATIC_PATH,
 )
 
-# List of finder classes that know how to find static files in
-# various locations.
+# List of finder classes that know how to find static files in various locations.
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    # 'django.contrib.staticfiles.finders.DefaultStorageFinder',
     'djangobower.finders.BowerFinder',
 )
 
@@ -166,10 +165,7 @@ BOWER_COMPONENTS_ROOT = os.path.join(ROOT_PATH, 'components')
 BOWER_INSTALLED_APPS = (
     'jquery',
     'underscore',
-    'bootstrap',
     'bootstrap-social',
-    'fontawesome',
-    'prettify',
 )
 
 # https://github.com/sunlightlabs/django-honeypot
