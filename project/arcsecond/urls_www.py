@@ -7,8 +7,7 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from project.arcsecond import views
 
 urlpatterns = patterns('',
-    url(r'^$', views.index_www, name='index_www'),
-    url(r'^about$', views.about, name='about'),
+    url(r'^$', views.index, name='index'),
     url(r'^docs/', include('rest_framework_swagger.urls')),
 
     url(r'^sky/?$', views.sky_home),
