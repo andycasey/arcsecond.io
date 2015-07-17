@@ -43,7 +43,7 @@ class ObjectTypeSerializer(serializers.HyperlinkedModelSerializer):
 class AstronomicalFluxSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = AstronomicalFlux
-        fields = ("name", "value", "error_value", "bibcode")
+        fields = ("name", "value", "error", "bibcode")
 
 
 class AstronomicalObjectSerializer(serializers.HyperlinkedModelSerializer):
