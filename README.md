@@ -1,8 +1,6 @@
-eclipt.is
-=========
+arcsecond.io
+============
 
-The server side of iObserve
+Unified REST APIs for astronomical information
 
-createdb
-migrate sites, then contenttypes, then auth, then all...
 

@@ -6,4 +6,4 @@ deployment:
   prod:
     branch: master
     heroku:
-      appname: ecliptis-prod
+      appname: arcsecond-prod

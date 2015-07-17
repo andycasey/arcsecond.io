@@ -1,5 +1,5 @@
 """
-WSGI config for ecliptis project.
+WSGI config for arcsecond project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

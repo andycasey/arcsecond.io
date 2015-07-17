@@ -1,0 +1,410 @@
+[
+{
+    "pk": null, 
+    "model": "arcsecond.Coordinates",
+    "fields": {
+        "latitude": -31.799405555555555, 
+        "longitude": -69.3021, 
+        "height": 1200
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Site",
+    "fields": {
+        "name": "CASLEO", 
+        "time_zone_name": "America/Argentina/San_Juan", 
+        "country": "Argentina", 
+        "time_zone": "-04:00", 
+        "coordinates": [
+            -69.3021, 
+            -31.799405555555555
+        ], 
+        "long_name": "Complejo Astronomic\u00f3 el Leoncito", 
+        "homepage": "http://www.casleo.gov.ar/", 
+        "continent": "South America", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Leoncito_Astronomical_Complex"
+    }
+},
+{
+    "pk": "CASLEO", 
+    "model": "arcsecond.ObservingSite",
+    "fields": {
+        "IAUCode": "829"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Coordinates",
+    "fields": {
+        "latitude": -24.5975, 
+        "longitude": -70.19638888888889, 
+        "height": 3064
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Site",
+    "fields": {
+        "name": "Cerro Armazones", 
+        "time_zone_name": "America/Santiago", 
+        "country": "Chile", 
+        "time_zone": "-04:00", 
+        "coordinates": [
+            -70.19638888888889, 
+            -24.5975
+        ], 
+        "long_name": "Cerro Armazones Observatory", 
+        "homepage": "http://www.eso.org/public/teles-instr/e-elt.html", 
+        "continent": "South America", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Cerro_Armazones"
+    }
+},
+{
+    "pk": "Cerro Armazones", 
+    "model": "arcsecond.ObservingSite",
+    "fields": {
+        "IAUCode": "309"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Coordinates",
+    "fields": {
+        "latitude": -30.216666666666665, 
+        "longitude": -70.71666666666667, 
+        "height": 2200
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Site",
+    "fields": {
+        "name": "Cerro Pach\u00f3n", 
+        "time_zone_name": "America/Santiago", 
+        "country": "Chile", 
+        "time_zone": "-04:00", 
+        "coordinates": [
+            -70.71666666666667, 
+            -30.216666666666665
+        ], 
+        "long_name": "Cerro Pach\u00f3n", 
+        "homepage": "http://www.gemini.edu/", 
+        "continent": "South America", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Gemini_Observatory"
+    }
+},
+{
+    "pk": "Cerro Pach\u00f3n", 
+    "model": "arcsecond.ObservingSite",
+    "fields": {
+        "IAUCode": "I11"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Coordinates",
+    "fields": {
+        "latitude": -24.625865833333332, 
+        "longitude": -70.40323388888889, 
+        "height": 2635
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Site",
+    "fields": {
+        "name": "Cerro Paranal", 
+        "time_zone_name": "America/Santiago", 
+        "country": "Chile", 
+        "time_zone": "-04:00", 
+        "coordinates": [
+            -70.40323388888889, 
+            -24.625865833333332
+        ], 
+        "long_name": "Cerro Paranal Observatory", 
+        "homepage": "http://www.eso.org/public/teles-instr/vlt", 
+        "continent": "South America", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Paranal_Observatory"
+    }
+},
+{
+    "pk": "Cerro Paranal", 
+    "model": "arcsecond.ObservingSite",
+    "fields": {
+        "IAUCode": "309"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Coordinates",
+    "fields": {
+        "latitude": -23.005777777777777, 
+        "longitude": -67.75916666666667, 
+        "height": 5000
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Site",
+    "fields": {
+        "name": "Chajnantor", 
+        "time_zone_name": "America/Santiago", 
+        "country": "Chile", 
+        "time_zone": "-04:00", 
+        "coordinates": [
+            -67.75916666666667, 
+            -23.005777777777777
+        ], 
+        "long_name": "Llano de Chajnantor Observatory", 
+        "homepage": "http://www.almaobservatory.org/", 
+        "continent": "South America", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Llano_de_Chajnantor_Observatory"
+    }
+},
+{
+    "pk": "Chajnantor", 
+    "model": "arcsecond.ObservingSite",
+    "fields": {
+        "IAUCode": ""
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Coordinates",
+    "fields": {
+        "latitude": -30.169116666666667, 
+        "longitude": -70.8059, 
+        "height": 2200
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Site",
+    "fields": {
+        "name": "CTIO", 
+        "time_zone_name": "America/Santiago", 
+        "country": "Chile", 
+        "time_zone": "-04:00", 
+        "coordinates": [
+            -70.8059, 
+            -30.169116666666667
+        ], 
+        "long_name": "Cerro Tololo Interamerican Observatory", 
+        "homepage": "http://www.ctio.noao.edu/", 
+        "continent": "South America", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Cerro_Tololo_Inter-American_Observatory"
+    }
+},
+{
+    "pk": "CTIO", 
+    "model": "arcsecond.ObservingSite",
+    "fields": {
+        "IAUCode": "807"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Coordinates",
+    "fields": {
+        "latitude": -34.90838888888889, 
+        "longitude": -57.93219444444444, 
+        "height": 11.1
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Site",
+    "fields": {
+        "name": "La Plata", 
+        "time_zone_name": "America/Argentina/Buenos_Aires", 
+        "country": "Argentina", 
+        "time_zone": "-03:00", 
+        "coordinates": [
+            -57.93219444444444, 
+            -34.90838888888889
+        ], 
+        "long_name": "La Plata Astronomical Observatory", 
+        "homepage": "http://www.fcaglp.unlp.edu.ar/", 
+        "continent": "South America", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/La_Plata_Astronomical_Observatory"
+    }
+},
+{
+    "pk": "La Plata", 
+    "model": "arcsecond.ObservingSite",
+    "fields": {
+        "IAUCode": "839"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Coordinates",
+    "fields": {
+        "latitude": -29.255122222222223, 
+        "longitude": -70.73174222222222, 
+        "height": 2400
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Site",
+    "fields": {
+        "name": "La Silla", 
+        "time_zone_name": "America/Santiago", 
+        "country": "Chile", 
+        "time_zone": "-04:00", 
+        "coordinates": [
+            -70.73174222222222, 
+            -29.255122222222223
+        ], 
+        "long_name": "La Silla Observatory", 
+        "homepage": "http://www.eso.org/public/teles-instr/lasilla/index.html", 
+        "continent": "South America", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/La_Silla_Observatory"
+    }
+},
+{
+    "pk": "La Silla", 
+    "model": "arcsecond.ObservingSite",
+    "fields": {
+        "IAUCode": "809"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Coordinates",
+    "fields": {
+        "latitude": -29.003333333333334, 
+        "longitude": -70.702, 
+        "height": 2400
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Site",
+    "fields": {
+        "name": "Las Campanas", 
+        "time_zone_name": "America/Santiago", 
+        "country": "Chile", 
+        "time_zone": "-04:00", 
+        "coordinates": [
+            -70.702, 
+            -29.003333333333334
+        ], 
+        "long_name": "Las Campanas Observatory", 
+        "homepage": "http://www.lco.cl", 
+        "continent": "South America", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Las_Campanas_Observatory"
+    }
+},
+{
+    "pk": "Las Campanas", 
+    "model": "arcsecond.ObservingSite",
+    "fields": {
+        "IAUCode": "304"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Coordinates",
+    "fields": {
+        "latitude": 8.788333333333334, 
+        "longitude": -70.88722222222222, 
+        "height": 3600
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Site",
+    "fields": {
+        "name": "Llano del Hato", 
+        "time_zone_name": "America/Caracas", 
+        "country": "Venezuela", 
+        "time_zone": "-04:00", 
+        "coordinates": [
+            -70.88722222222222, 
+            8.788333333333334
+        ], 
+        "long_name": "Llano del Hato National Astronomical Observatory", 
+        "homepage": "http://onekilopars.ec", 
+        "continent": "South America", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Llano_del_Hato_National_Astronomical_Observatory"
+    }
+},
+{
+    "pk": "Llano del Hato", 
+    "model": "arcsecond.ObservingSite",
+    "fields": {
+        "IAUCode": ""
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Coordinates",
+    "fields": {
+        "latitude": -22.534444444444446, 
+        "longitude": -45.5825, 
+        "height": 1864
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Site",
+    "fields": {
+        "name": "Pico dos Dias", 
+        "time_zone_name": "America/Sao_Paulo", 
+        "country": "Brasil", 
+        "time_zone": "-03:00", 
+        "coordinates": [
+            -45.5825, 
+            -22.534444444444446
+        ], 
+        "long_name": "Pico dos Dias Observatory", 
+        "homepage": "http://www.lna.br/opd/opd.html", 
+        "continent": "South America", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Pico_dos_Dias_Observatory"
+    }
+},
+{
+    "pk": "Pico dos Dias", 
+    "model": "arcsecond.ObservingSite",
+    "fields": {
+        "IAUCode": ""
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Coordinates",
+    "fields": {
+        "latitude": -33.26916666666666, 
+        "longitude": -70.53444444444445, 
+        "height": 1450
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Site",
+    "fields": {
+        "name": "Santa Martina", 
+        "time_zone_name": "America/Santiago", 
+        "country": "Chile", 
+        "time_zone": "-04:00", 
+        "coordinates": [
+            -70.53444444444445, 
+            -33.26916666666666
+        ], 
+        "long_name": "Santa Martina Observatory", 
+        "homepage": "http://www2.astro.puc.cl/ObsUC/index.php/UC_Observatory", 
+        "continent": "South America", 
+        "wikipedia_article": ""
+    }
+},
+{
+    "pk": "Santa Martina", 
+    "model": "arcsecond.ObservingSite",
+    "fields": {
+        "IAUCode": "UNDEFINED_STRING_PROPERTY"
+    }
+}
+]

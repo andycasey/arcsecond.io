@@ -1,5 +1,5 @@
 """
-Django settings for ecliptis project.
+Django settings for arcsecond project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.6/topics/settings/
@@ -104,7 +104,7 @@ INSTALLED_APPS = (
     # 'allauth.socialaccount',
     # 'allauth.socialaccount.providers.twitter',
     # 'allauth.socialaccount.providers.facebook',
-    'project.ecliptis',
+    'project.arcsecond',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -120,8 +120,8 @@ MIDDLEWARE_CLASSES = (
     'django_hosts.middleware.HostsResponseMiddleware',
 )
 
-ROOT_URLCONF = 'project.ecliptis.urls_www'
-ROOT_HOSTCONF = 'project.ecliptis.hosts'
+ROOT_URLCONF = 'project.arcsecond.urls_www'
+ROOT_HOSTCONF = 'project.arcsecond.hosts'
 DEFAULT_HOST = 'www'
 
 WSGI_APPLICATION = 'project.wsgi.application'
@@ -175,7 +175,7 @@ INSTALLED_APPS += ('django_nose',)
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 NOSE_ARGS = [
     '--with-coverage',
-    '--cover-package=project.ecliptis.forms,project.ecliptis.models,project.ecliptis.views',
+    '--cover-package=project.arcsecond.forms,project.arcsecond.models,project.arcsecond.views',
 ]
 
 
@@ -246,8 +246,8 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_PASSWORD_MIN_LENGTH = 10
 
 CORS_ORIGIN_WHITELIST = (
-    'www.eclipt.is',
-    'api.eclipt.is'
+    'www.arcsecond.io',
+    'api.arcsecond.io'
 )
 
 CORS_URLS_REGEX = r'^/docs/.*$'
@@ -267,14 +267,14 @@ SWAGGER_SETTINGS = {
     'is_authenticated': False,
     'is_superuser': False,
     'permission_denied_handler': None,
-    'base_path':'www.eclipt.is/docs',
+    'base_path':'www.arcsecond.io/docs',
     'info': {
         'contact': 'cedric@onekilopars.ec',
-        'description': 'This is the alpha version of eclipt.is APIs.',
+        'description': 'This is the alpha version of arcsecond.io APIs.',
         'license': 'Apache 2.0',
         'licenseUrl': 'http://www.apache.org/licenses/LICENSE-2.0.html',
-        'termsOfServiceUrl': 'http://www.eclipt.is/terms/',
-        'title': 'eclipt.is Swagger App',
+        'termsOfServiceUrl': 'http://www.arcsecond.io/terms/',
+        'title': 'arcsecond.io Swagger App',
     },
     'doc_expansion': 'none'
 }
