@@ -429,6 +429,8 @@
 
 
 {% block after_body_raw_block %}
+    {{ block.super }}
+
     <script>
         $(document).ready(function () {
             $(".go-button").click(function() {
