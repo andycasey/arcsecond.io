@@ -7417,6 +7417,7 @@ body::after {
 .about__item {
     margin-bottom: 40px;
     text-align: center;
+    min-height: 150px;
 }
 .about-item__title {
     margin-top: 0;

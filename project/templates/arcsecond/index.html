@@ -77,12 +77,13 @@
 
                     <!-- Heading -->
                     <h1 class="heading">
-                        What's the purpose of this <span class="text-primary">service</span>?
+                        One access point: <span class="text-primary">api.arcsecond.io</span>
                     </h1>
 
                     <!-- Sub heading -->
                     <p class="heading__sub">
                         Our goal is to give access to as much information as possible, aggregating information with a philosophy centered around <em>resources</em>.
+                        The APIs will incrementally be introduced here. To follow what's going on, read <a href="http://onekilopars.ec/blog">onekilopars.ec blog</a>.
                     </p>
 
                 </div>
@@ -94,8 +95,17 @@
                             <img src="{% static 'arcsecond/images/StarIcon_512x512.png' %}" border="0" width="25"> Objects
                         </h3>
                         <p class="about-item__content">
-                            Objects are anything SIMBAD and NED services understand: stars, nebulae, galaxies etc.
+                            Objects are anything <a href="http://simbad.u-strasbg.fr/simbad/">SIMBAD</a> and <a href="http://ned.ipac.caltech.edu">NED</a> services understand: stars, nebulae, galaxies etc.
                         </p>
+                        <form class="form-inline">
+                            <div class="form-group form-group-sm">
+                                <div class="input-group">
+                                    <div class="input-group-addon go-api">/{{ api_version }}/objects/</div>
+                                    <input type="text" class="form-control go-input" placeholder="ex: GRO J1655-40">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-default go-button">Go</button>
+                        </form>
                     </div> <!-- / .about__item -->
 
                 </div>
@@ -170,43 +180,43 @@
 
 
 
-    <!-- FEATURES
-    ============================== -->
-    <div class="site-wrapper" id="features">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-
-                    <!-- Heading -->
-                    <h1 class="heading">
-                        One access point: <span class="text-primary">api.arcsecond.io</span>
-                    </h1>
-
-                    <!-- Sub heading -->
-                    <p class="heading__sub">
-                        The APIs will soon be presented here. Follow what's going on in <a href="http://onekilopars.ec/blog">onekilopars.ec blog</a>.
-                    </p>
-
-                </div>
-            </div> <!-- / .row -->
-
-{#            <form role="form" class="contact__form" id="form_sendemail">#}
-{#                <div class="row">#}
-{#                    <div class="col-xs-12">#}
-{#                        <!-- Email -->#}
-{#                        <div class="form-group">#}
-{#                            <label for="email" class="sr-only">Your email address</label>#}
-{#                            <input type="email" name="email" class="form-control" id="email" placeholder="E-mail">#}
-{#                            <span class="help-block"></span>#}
-{#                        </div>#}
-{#                    </div>#}
+{#    <!-- FEATURES#}
+{#    ============================== -->#}
+{#    <div class="site-wrapper" id="features">#}
+{#        <div class="container">#}
+{#            <div class="row">#}
+{#                <div class="col-xs-12">#}
+{##}
+{#                    <!-- Heading -->#}
+{#                    <h1 class="heading">#}
+{#                        One access point: <span class="text-primary">api.arcsecond.io</span>#}
+{#                    </h1>#}
+{##}
+{#                    <!-- Sub heading -->#}
+{#                    <p class="heading__sub">#}
+{#                        The APIs will soon be presented here. Follow what's going on in <a href="http://onekilopars.ec/blog">onekilopars.ec blog</a>.#}
+{#                    </p>#}
+{##}
 {#                </div>#}
-{#            </form>#}
-
-        </div>
-    </div> <!-- / .row -->
-    </div> <!-- / .container -->
-    </div> <!-- / .site-wrapper -->
+{#            </div> <!-- / .row -->#}
+{##}
+            {#            <form role="form" class="contact__form" id="form_sendemail">#}
+            {#                <div class="row">#}
+            {#                    <div class="col-xs-12">#}
+            {#                        <!-- Email -->#}
+            {#                        <div class="form-group">#}
+            {#                            <label for="email" class="sr-only">Your email address</label>#}
+            {#                            <input type="email" name="email" class="form-control" id="email" placeholder="E-mail">#}
+            {#                            <span class="help-block"></span>#}
+            {#                        </div>#}
+            {#                    </div>#}
+            {#                </div>#}
+            {#            </form>#}
+{##}
+{#        </div>#}
+{#    </div> <!-- / .row -->#}
+{#    </div> <!-- / .container -->#}
+{#    </div> <!-- / .site-wrapper -->#}
 
     <!-- TEAM
     ============================== -->
@@ -217,7 +227,7 @@
 
                     <!-- Heading -->
                     <h1 class="heading">
-                        Play  <span class="text-primary">hard</span>, work hard.
+                        Play hard, <span class="text-primary">work hard</span>.
                     </h1>
 
                     <!-- Sub heading -->
@@ -253,18 +263,18 @@
 
                         <!-- Contact -->
                         <div class="team-member__contact">
-{#                            <a href="#" class="team-member-contact__item facebook">#}
-{#                                <i class="fa fa-facebook"></i>#}
-{#                            </a>#}
+                            {#                            <a href="#" class="team-member-contact__item facebook">#}
+                            {#                                <i class="fa fa-facebook"></i>#}
+                            {#                            </a>#}
                             <a href="https://twitter.com/onekiloparsec" class="team-member-contact__item twitter">
                                 <i class="fa fa-twitter"></i>
                             </a>
                             <a href="mailto:cedric@arcsecond.io" class="team-member-contact__item email">
                                 <span class="about-item-title__icon oi oi-envelope-closed" title="Telegrams" aria-hidden="true"></span>
                             </a>
-{#                            <a href="#" class="team-member-contact__item google-plus">#}
-{#                                <i class="fa fa-google-plus"></i>#}
-{#                            </a>#}
+                            {#                            <a href="#" class="team-member-contact__item google-plus">#}
+                            {#                                <i class="fa fa-google-plus"></i>#}
+                            {#                            </a>#}
                         </div>
 
                     </div> <!-- / .team__member -->
@@ -297,117 +307,117 @@
 
                     <!-- Sub heading -->
                     <p class="heading__sub">
-                        Multi-time-zones support guaranteed at <a href="mailto:cedric@arcsecond.io">cedric@arcsecond.io</a>!
+                        Multi-time-zones support guaranteed! <a href="mailto:cedric@arcsecond.io">cedric@arcsecond.io</a>
                     </p>
 
                 </div>
             </div> <!-- / .row -->
 
-{#            <div class="row">#}
-{#                <div class="col-sm-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">#}
-{##}
-{#                    <!-- Alert message -->#}
-{#                    <div class="alert contact-form__alert" id="form_message" role="alert"></div>#}
-{##}
-{#                    <!-- Setting the custom theme for reCaptcha.#}
-{#                         Default themes and customization:#}
-{#                         https://developers.google.com/recaptcha/docs/customization -->#}
-{##}
-{#                    <script type="text/javascript">#}
-{#                        var RecaptchaOptions = {#}
-{#                            theme : 'custom',#}
-{#                            custom_theme_widget: 'recaptcha_widget'#}
-{#                        };#}
-{#                    </script>#}
-{##}
-{#                    <!-- Contact form -->#}
-{#                    <!-- Please carefully read the README.txt file#}
-{#                     in order to setup the PHP contact form properly -->#}
-{#                    <form role="form" class="contact__form" id="form_sendemail">#}
-{#                        <div class="row">#}
-{#                            <div class="col-sm-6">#}
-{#                                <!-- Email -->#}
-{#                                <div class="form-group">#}
-{#                                    <label for="email" class="sr-only">Your email address</label>#}
-{#                                    <input type="email" name="email" class="form-control" id="email" placeholder="E-mail">#}
-{#                                    <span class="help-block"></span>#}
-{#                                </div>#}
-{#                                <!-- Name -->#}
-{#                                <div class="form-group">#}
-{#                                    <label for="name" class="sr-only">Your name</label>#}
-{#                                    <input type="text" name="name" class="form-control" id="name" placeholder="Full Name">#}
-{#                                    <span class="help-block"></span>#}
-{#                                </div>#}
-{##}
-{#                                <!-- reCAPTCHA -->#}
-{#                                <div class="form-group" id="form-captcha">#}
-{#                                    <!-- Start reCAPTCHA -->#}
-{#                                    <div id="recaptcha_widget" style="display:none">#}
-{#                                        <div class="recaptcha__merge">#}
-{#                                            <div class="recaptcha-merge__action">#}
-{#                                                <a href="javascript:Recaptcha.reload()">#}
-{#                                                    <span class="oi oi-loop-square"></span>#}
-{#                                                </a>#}
-{#                                                <a class="recaptcha_only_if_image" href="javascript:Recaptcha.switch_type('audio')">#}
-{#                                                    <span class="oi oi-headphones"></span>#}
-{#                                                </a>#}
-{#                                                <a class="recaptcha_only_if_audio" href="javascript:Recaptcha.switch_type('image')">#}
-{#                                                    <span class="oi oi-image"></span>#}
-{#                                                </a>#}
-{#                                            </div> <!-- / .recaptcha-merge__action -->#}
-{#                                            <!-- reCAPTCHA image -->#}
-{#                                            <div id="recaptcha_image"></div>#}
-{#                                        </div> <!-- / .recaptcha__merge -->#}
-{#                                        <div class="recaptcha_only_if_image text-muted">#}
-{#                                            Enter the words above (powered by reCaptcha):#}
-{#                                        </div>#}
-{#                                        <div class="recaptcha_only_if_audio text-muted">#}
-{#                                            Enter the numbers you hear (powered by reCaptcha):#}
-{#                                        </div>#}
-{#                                        <!-- reCAPTCHA input -->#}
-{#                                        <input class="form-control input-sm" type="text" id="recaptcha_response_field" name="recaptcha_response_field" />#}
-{#                                    </div> <!-- / #recaptcha_widget -->#}
-{##}
-{#                                    <script type="text/javascript"#}
-{#                                            src="http://www.google.com/recaptcha/api/challenge?k=YOUR_PUBLIC_KEY">#}
-{#                                    </script>#}
-{#                                    <noscript>#}
-{#                                        <iframe src="http://www.google.com/recaptcha/api/noscript?k=YOUR_PUBLIC_KEY"#}
-{#                                                height="300" width="500" frameborder="0"></iframe><br>#}
-{#                      <textarea name="recaptcha_challenge_field" rows="3" cols="40">#}
-{#                      </textarea>#}
-{#                                        <input type="hidden" name="recaptcha_response_field"#}
-{#                                               value="manual_challenge">#}
-{#                                    </noscript>#}
-{#                                    <!-- End reCAPTCHA -->#}
-{#                                    <span class="help-block"></span>#}
-{#                                </div> <!-- / .form-group -->#}
-{##}
-{#                            </div>#}
-{##}
-{#                            <div class="col-sm-6">#}
-{#                                <!-- Message -->#}
-{#                                <div class="form-group">#}
-{#                                    <label for="message" class="sr-only">Your message</label>#}
-{#                                    <textarea name="message" class="form-control" rows="11" id="message" placeholder="Message"></textarea>#}
-{#                                    <span class="help-block"></span>#}
-{#                                </div>#}
-{#                            </div>#}
-{#                        </div> <!-- / .row -->#}
-{##}
-{#                        <div class="text-center">#}
-{#                            <button type="submit" class="btn btn-lg btn-default">#}
-{#                                <span class="oi oi-arrow-right" title="Send it" aria-hidden="true"></span>#}
-{#                                <span>Send message</span>#}
-{#                            </button>#}
-{#                            <div class="clearfix"></div>#}
-{#                        </div>#}
-{##}
-{#                    </form>#}
-{#                </div>#}
+            {#            <div class="row">#}
+            {#                <div class="col-sm-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">#}
+            {##}
+            {#                    <!-- Alert message -->#}
+            {#                    <div class="alert contact-form__alert" id="form_message" role="alert"></div>#}
+            {##}
+            {#                    <!-- Setting the custom theme for reCaptcha.#}
+            {#                         Default themes and customization:#}
+            {#                         https://developers.google.com/recaptcha/docs/customization -->#}
+            {##}
+            {#                    <script type="text/javascript">#}
+            {#                        var RecaptchaOptions = {#}
+            {#                            theme : 'custom',#}
+            {#                            custom_theme_widget: 'recaptcha_widget'#}
+            {#                        };#}
+            {#                    </script>#}
+            {##}
+            {#                    <!-- Contact form -->#}
+            {#                    <!-- Please carefully read the README.txt file#}
+            {#                     in order to setup the PHP contact form properly -->#}
+            {#                    <form role="form" class="contact__form" id="form_sendemail">#}
+            {#                        <div class="row">#}
+            {#                            <div class="col-sm-6">#}
+            {#                                <!-- Email -->#}
+            {#                                <div class="form-group">#}
+            {#                                    <label for="email" class="sr-only">Your email address</label>#}
+            {#                                    <input type="email" name="email" class="form-control" id="email" placeholder="E-mail">#}
+            {#                                    <span class="help-block"></span>#}
+            {#                                </div>#}
+            {#                                <!-- Name -->#}
+            {#                                <div class="form-group">#}
+            {#                                    <label for="name" class="sr-only">Your name</label>#}
+            {#                                    <input type="text" name="name" class="form-control" id="name" placeholder="Full Name">#}
+            {#                                    <span class="help-block"></span>#}
+            {#                                </div>#}
+            {##}
+            {#                                <!-- reCAPTCHA -->#}
+            {#                                <div class="form-group" id="form-captcha">#}
+            {#                                    <!-- Start reCAPTCHA -->#}
+            {#                                    <div id="recaptcha_widget" style="display:none">#}
+            {#                                        <div class="recaptcha__merge">#}
+            {#                                            <div class="recaptcha-merge__action">#}
+            {#                                                <a href="javascript:Recaptcha.reload()">#}
+            {#                                                    <span class="oi oi-loop-square"></span>#}
+            {#                                                </a>#}
+            {#                                                <a class="recaptcha_only_if_image" href="javascript:Recaptcha.switch_type('audio')">#}
+            {#                                                    <span class="oi oi-headphones"></span>#}
+            {#                                                </a>#}
+            {#                                                <a class="recaptcha_only_if_audio" href="javascript:Recaptcha.switch_type('image')">#}
+            {#                                                    <span class="oi oi-image"></span>#}
+            {#                                                </a>#}
+            {#                                            </div> <!-- / .recaptcha-merge__action -->#}
+            {#                                            <!-- reCAPTCHA image -->#}
+            {#                                            <div id="recaptcha_image"></div>#}
+            {#                                        </div> <!-- / .recaptcha__merge -->#}
+            {#                                        <div class="recaptcha_only_if_image text-muted">#}
+            {#                                            Enter the words above (powered by reCaptcha):#}
+            {#                                        </div>#}
+            {#                                        <div class="recaptcha_only_if_audio text-muted">#}
+            {#                                            Enter the numbers you hear (powered by reCaptcha):#}
+            {#                                        </div>#}
+            {#                                        <!-- reCAPTCHA input -->#}
+            {#                                        <input class="form-control input-sm" type="text" id="recaptcha_response_field" name="recaptcha_response_field" />#}
+            {#                                    </div> <!-- / #recaptcha_widget -->#}
+            {##}
+            {#                                    <script type="text/javascript"#}
+            {#                                            src="http://www.google.com/recaptcha/api/challenge?k=YOUR_PUBLIC_KEY">#}
+            {#                                    </script>#}
+            {#                                    <noscript>#}
+            {#                                        <iframe src="http://www.google.com/recaptcha/api/noscript?k=YOUR_PUBLIC_KEY"#}
+            {#                                                height="300" width="500" frameborder="0"></iframe><br>#}
+            {#                      <textarea name="recaptcha_challenge_field" rows="3" cols="40">#}
+            {#                      </textarea>#}
+            {#                                        <input type="hidden" name="recaptcha_response_field"#}
+            {#                                               value="manual_challenge">#}
+            {#                                    </noscript>#}
+            {#                                    <!-- End reCAPTCHA -->#}
+            {#                                    <span class="help-block"></span>#}
+            {#                                </div> <!-- / .form-group -->#}
+            {##}
+            {#                            </div>#}
+            {##}
+            {#                            <div class="col-sm-6">#}
+            {#                                <!-- Message -->#}
+            {#                                <div class="form-group">#}
+            {#                                    <label for="message" class="sr-only">Your message</label>#}
+            {#                                    <textarea name="message" class="form-control" rows="11" id="message" placeholder="Message"></textarea>#}
+            {#                                    <span class="help-block"></span>#}
+            {#                                </div>#}
+            {#                            </div>#}
+            {#                        </div> <!-- / .row -->#}
+            {##}
+            {#                        <div class="text-center">#}
+            {#                            <button type="submit" class="btn btn-lg btn-default">#}
+            {#                                <span class="oi oi-arrow-right" title="Send it" aria-hidden="true"></span>#}
+            {#                                <span>Send message</span>#}
+            {#                            </button>#}
+            {#                            <div class="clearfix"></div>#}
+            {#                        </div>#}
+            {##}
+            {#                    </form>#}
+            {#                </div>#}
 
-            </div> <!-- / .row -->
-        </div> <!-- / .container -->
+        </div> <!-- / .row -->
+    </div> <!-- / .container -->
     </div> <!-- / .site-wrapper -->
 
     <!-- Google Map -->
@@ -415,6 +425,22 @@
         <div id="map-canvas" class="contact__map"></div>
     </div> <!-- / .site-wrapper -->
 
-
-
 {% endblock %}
+
+
+{% block after_body_raw_block %}
+    <script>
+        $(document).ready(function () {
+            $(".go-button").click(function() {
+                var input = $(this).parents(".form-inline").find(".go-input").val();
+                if (input) {
+                    var api = $(this).parents(".form-inline").find(".go-api").html();
+                    window.open('http://api.arcsecond.io' + api + input, '_blank');
+                }
+                else {
+                    alert("You need to enter some input.");
+                }
+            });
+        });
+    </script>
+{% endblock after_body_raw_block %}
