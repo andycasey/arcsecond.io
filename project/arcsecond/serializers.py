@@ -22,25 +22,26 @@ class MessagesSerializer(serializers.HyperlinkedModelSerializer):
 
 ######################## Infos ########################
 
+
 class JulianDaySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = JulianDay
-        fields = ("value", "error", "bibcode")
+        fields = ("value", "unit", "error_max", "error_min", "bibcode")
 
 class AlbedoSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Albedo
-        fields = ("value", "error", "bibcode")
+        fields = ("value", "unit", "error_max", "error_min", "bibcode")
 
 class EccentricitySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Eccentricity
-        fields = ("value", "error", "bibcode")
+        fields = ("value", "error_max", "error_min", "bibcode")
 
 class FluxSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Flux
-        fields = ("name", "value", "error", "bibcode")
+        fields = ("value", "unit", "error_max", "error_min", "bibcode")
 
 class ColorSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -50,67 +51,67 @@ class ColorSerializer(serializers.HyperlinkedModelSerializer):
 class MassSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Mass
-        fields = ("value", "unit", "error", "error_up", "error_down", "bibcode")
+        fields = ("value", "unit", "error_max", "error_min", "bibcode")
 
 class RadiusSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Radius
-        fields = ("value", "unit", "error", "error_up", "error_down", "bibcode")
+        fields = ("value", "unit", "error_max", "error_min", "bibcode")
 
 class AgeSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Age
-        fields = ("value", "unit", "error", "error_up", "error_down", "bibcode")
+        fields = ("value", "unit", "error_max", "error_min", "bibcode")
 
 class TemperatureSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Temperature
-        fields = ("value", "unit", "error", "error_up", "error_down", "bibcode")
+        fields = ("value", "unit", "error_max", "error_min", "bibcode")
 
 class MetallicitySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Metallicity
-        fields = ("value", "unit", "error", "error_up", "error_down", "bibcode")
+        fields = ("value", "unit", "error", "error_max", "error_min", "bibcode")
 
 class DistanceSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Distance
-        fields = ("value", "unit", "error", "error_up", "error_down", "bibcode")
+        fields = ("value", "unit", "error_max", "error_min", "bibcode")
 
 class PeriodSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Period
-        fields = ("value", "unit", "error", "error_up", "error_down", "bibcode")
+        fields = ("value", "unit", "error_max", "error_min", "bibcode")
 
 class EllipseAxisSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = EllipseAxis
-        fields = ("value", "unit", "error", "error_up", "error_down", "bibcode")
+        fields = ("value", "unit", "error_max", "error_min", "bibcode")
 
 class AngularDistanceSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = AngularDistance
-        fields = ("value", "unit", "error", "error_up", "error_down", "bibcode")
+        fields = ("value", "unit", "error_max", "error_min", "bibcode")
 
 class AngleSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Angle
-        fields = ("value", "unit", "error", "error_up", "error_down", "bibcode")
+        fields = ("value", "unit", "error_max", "error_min", "bibcode")
 
 class VelocitySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Velocity
-        fields = ("value", "unit", "error", "error_up", "error_down", "bibcode")
+        fields = ("value", "unit", "error_max", "error_min", "bibcode")
 
 class GravitySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Velocity
-        fields = ("value", "unit", "error", "error_up", "error_down", "bibcode")
+        fields = ("value", "unit", "error_max", "error_min", "bibcode")
 
 class ParallaxSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Velocity
-        fields = ("value", "unit", "error", "error_up", "error_down", "bibcode")
+        fields = ("value", "unit", "error_max", "error_min", "bibcode")
 
 ######################## Earth ########################
 
@@ -166,6 +167,14 @@ class AstronomicalObjectSerializer(serializers.HyperlinkedModelSerializer):
 class ExoplanetSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Exoplanet
-        fields = ("name", "messages")
+        fields = ("name", "mass", "radius", "orbital_period", "semi_major_axis", "eccentricity", "inclination", "omega", "geometric_albedo", "messages")
 
+    mass = MassSerializer(required=False)
+    radius = RadiusSerializer(required=False)
+    orbital_period = PeriodSerializer(required=False)
+    semi_major_axis = EllipseAxisSerializer(required=False)
+    eccentricity = EccentricitySerializer(required=False)
+    inclination = AngleSerializer(required=False)
+    omega = AngleSerializer(required=False)
+    geometric_albedo = AlbedoSerializer(required=False)
     messages = MessagesSerializer()

@@ -77,5 +77,7 @@ def exoplanet(request, name="."):
     if hasattr(exoplanet, "messages") is False:
         exoplanet.messages = models.Messages(http_status_code=200)
 
+    exoplanet.save()
+
     serializer = serializers.ExoplanetSerializer(exoplanet)
     return Response(serializer.data)

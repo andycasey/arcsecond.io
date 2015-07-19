@@ -65,11 +65,12 @@ class Exoplanet(models.Model):
     inclination = models.OneToOneField(Angle, null=True, blank=True, related_name="inclination")
     molecules_detected = models.CharField(max_length=100)
 
-    semimajor_axis = models.OneToOneField(EllipseAxis, null=True, blank=True, related_name="semimajor_axis")
+    semi_major_axis = models.OneToOneField(EllipseAxis, null=True, blank=True, related_name="semimajor_axis")
     orbital_period = models.OneToOneField(Period, null=True, blank=True)
     eccentricity = models.OneToOneField(Eccentricity, null=True, blank=True)
     omega = models.OneToOneField(Angle, null=True, blank=True, related_name="omega")
     time_periastron = models.OneToOneField(JulianDay, null=True, blank=True, related_name="time_periastron")
+    angular_distance = models.OneToOneField(Angle, null=True, blank=True, related_name="angular_distance")
 
     primary_transit = models.OneToOneField(JulianDay, null=True, blank=True, related_name="primary_transit")
     secondary_transit = models.OneToOneField(JulianDay, null=True, blank=True, related_name="secondary_transit")
@@ -93,13 +94,13 @@ class Exoplanet(models.Model):
     DETECTION_METHOD_IMAGING = "img"
 
     DETECTION_METHOD_CHOICES = (
-        (DETECTION_METHOD_UNKNOWN, 'unknown'),
-        (DETECTION_METHOD_RV, 'radial velocities'),
-        (DETECTION_METHOD_MICROLENSING, 'microlensing'),
-        (DETECTION_METHOD_TRANSIT, 'transit'),
-        (DETECTION_METHOD_TIMING, 'timing'),
-        (DETECTION_METHOD_ASTROMETRY, 'astrometry'),
-        (DETECTION_METHOD_IMAGING, 'imaging'),
+        (DETECTION_METHOD_UNKNOWN, 'Unknown'),
+        (DETECTION_METHOD_RV, 'Radial Velocity'),
+        (DETECTION_METHOD_MICROLENSING, 'Microlensing'),
+        (DETECTION_METHOD_TRANSIT, 'Primary Transit'),
+        (DETECTION_METHOD_TIMING, 'Timing'),
+        (DETECTION_METHOD_ASTROMETRY, 'Astrometry'),
+        (DETECTION_METHOD_IMAGING, 'Imaging'),
     )
 
     detection_method = models.CharField(max_length=3, blank=True, choices=DETECTION_METHOD_CHOICES, default=DETECTION_METHOD_UNKNOWN)

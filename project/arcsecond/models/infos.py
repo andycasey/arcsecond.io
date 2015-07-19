@@ -9,8 +9,8 @@ class AstronomicalInfo(models.Model):
 
     value = models.FloatField(default=NOT_A_SCIENTIFIC_NUMBER, null=True)
     error = models.FloatField(default=NOT_A_SCIENTIFIC_NUMBER, null=True)
-    error_up = models.FloatField(default=NOT_A_SCIENTIFIC_NUMBER, null=True)
-    error_down = models.FloatField(default=NOT_A_SCIENTIFIC_NUMBER, null=True)
+    error_max = models.FloatField(default=NOT_A_SCIENTIFIC_NUMBER, null=True)
+    error_min = models.FloatField(default=NOT_A_SCIENTIFIC_NUMBER, null=True)
     bibcode = models.CharField(max_length=50, default="", null=True, validators=[RegexValidator(regex=bibcode_regex, message='Invalid bibcode', code='nomatch')])
 
 
