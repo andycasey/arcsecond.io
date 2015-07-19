@@ -1,7 +1,7 @@
 [
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 43.17833333333333, 
         "longitude": 16.448333333333334, 
@@ -10,32 +10,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Austro Croatian Telescope", 
+        "time_zone": "+01:00", 
         "name": "ACT", 
         "time_zone_name": "Europe/Zagreb", 
         "country": "Croatia", 
-        "time_zone": "+01:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Austro_Croatian_Telescope", 
+        "homepage": "http://www.univie.ac.at/dasa/Hvar/hvar-start.html", 
+        "continent": "Europe", 
         "coordinates": [
             16.448333333333334, 
             43.17833333333333
         ], 
-        "long_name": "Austro Croatian Telescope", 
-        "homepage": "http://www.univie.ac.at/dasa/Hvar/hvar-start.html", 
-        "continent": "Europe", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Austro_Croatian_Telescope"
-    }
-},
-{
-    "pk": "ACT", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": ""
+        "IAUCode": {
+            "IAUCode": ""
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 43.75388888888889, 
         "longitude": 11.255333333333333, 
@@ -44,32 +40,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Arcetri Observatory", 
+        "time_zone": "+01:00", 
         "name": "Arcetri", 
         "time_zone_name": "Europe/Rome", 
         "country": "Italy", 
-        "time_zone": "+01:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Arcetri_Observatory", 
+        "homepage": "http://www.arcetri.astro.it/", 
+        "continent": "Europe", 
         "coordinates": [
             11.255333333333333, 
             43.75388888888889
         ], 
-        "long_name": "Arcetri Observatory", 
-        "homepage": "http://www.arcetri.astro.it/", 
-        "continent": "Europe", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Arcetri_Observatory"
-    }
-},
-{
-    "pk": "Arcetri", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "030"
+        "IAUCode": {
+            "IAUCode": "030"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 37.223333333333336, 
         "longitude": -2.5458, 
@@ -78,32 +70,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Calar Alto Observatory", 
+        "time_zone": "-01:00", 
         "name": "Calar Alto", 
         "time_zone_name": "Europe/Madrid", 
         "country": "Spain", 
-        "time_zone": "-01:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Calar_Alto_Observatory", 
+        "homepage": "http://www.caha.es/", 
+        "continent": "Europe", 
         "coordinates": [
             -2.5458, 
             37.223333333333336
         ], 
-        "long_name": "Calar Alto Observatory", 
-        "homepage": "http://www.caha.es/", 
-        "continent": "Europe", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Calar_Alto_Observatory"
-    }
-},
-{
-    "pk": "Calar Alto", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "493"
+        "IAUCode": {
+            "IAUCode": "493"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 43.401666666666664, 
         "longitude": 12.37638888888889, 
@@ -112,32 +100,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Coloti Observatory", 
+        "time_zone": "+01:00", 
         "name": "Coloti", 
         "time_zone_name": "Europe/Rome", 
         "country": "Italy", 
-        "time_zone": "+01:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Coloti_Observatory", 
+        "homepage": "http://astro.fisica.unipg.it/coloti/coloti.htm", 
+        "continent": "Europe", 
         "coordinates": [
             12.37638888888889, 
             43.401666666666664
         ], 
-        "long_name": "Coloti Observatory", 
-        "homepage": "http://astro.fisica.unipg.it/coloti/coloti.htm", 
-        "continent": "Europe", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Coloti_Observatory"
-    }
-},
-{
-    "pk": "Coloti", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": ""
+        "IAUCode": {
+            "IAUCode": ""
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 50.52472222222222, 
         "longitude": 6.882777777777778, 
@@ -146,32 +130,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Effelsberg Observatory", 
+        "time_zone": "+01:00", 
         "name": "Effelsberg", 
         "time_zone_name": "Europe/Berlin", 
         "country": "Germany", 
-        "time_zone": "+01:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Effelsberg_100-m_Radio_Telescope", 
+        "homepage": "http://www.mpifr.de/english/radiotelescope/index.html", 
+        "continent": "Europe", 
         "coordinates": [
             6.882777777777778, 
             50.52472222222222
         ], 
-        "long_name": "Effelsberg Observatory", 
-        "homepage": "http://www.mpifr.de/english/radiotelescope/index.html", 
-        "continent": "Europe", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Effelsberg_100-m_Radio_Telescope"
-    }
-},
-{
-    "pk": "Effelsberg", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": ""
+        "IAUCode": {
+            "IAUCode": ""
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 46.310725, 
         "longitude": 6.135800000000001, 
@@ -180,32 +160,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Observatory of Geneva", 
+        "time_zone": "+01:00", 
         "name": "Geneva", 
         "time_zone_name": "Europe/Paris", 
         "country": "Switzerland", 
-        "time_zone": "+01:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Observatory_of_Geneva", 
+        "homepage": "http://www.unige.ch/sciences/astro/an", 
+        "continent": "Europe", 
         "coordinates": [
             6.135800000000001, 
             46.310725
         ], 
-        "long_name": "Observatory of Geneva", 
-        "homepage": "http://www.unige.ch/sciences/astro/an", 
-        "continent": "Europe", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Observatory_of_Geneva"
-    }
-},
-{
-    "pk": "Geneva", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "517"
+        "IAUCode": {
+            "IAUCode": "517"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 51.47732222222223, 
         "longitude": 0.0, 
@@ -214,32 +190,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Royal Greenwich Observatory", 
+        "time_zone": "+00:00", 
         "name": "Greenwich", 
         "time_zone_name": "Europe/London", 
         "country": "United Kingdom", 
-        "time_zone": "+00:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Royal_Greenwich_Observatory", 
+        "homepage": "http://www.royalgreenwichastro.co.uk/", 
+        "continent": "Europe", 
         "coordinates": [
             0.0, 
             51.47732222222223
         ], 
-        "long_name": "Royal Greenwich Observatory", 
-        "homepage": "http://www.royalgreenwichastro.co.uk/", 
-        "continent": "Europe", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Royal_Greenwich_Observatory"
-    }
-},
-{
-    "pk": "Greenwich", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "000"
+        "IAUCode": {
+            "IAUCode": "000"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 60.15533611111111, 
         "longitude": 24.95861111111111, 
@@ -248,32 +220,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Helsinki Observatory", 
+        "time_zone": "+02:00", 
         "name": "Helsinki", 
         "time_zone_name": "Europe/Helsinki", 
         "country": "Finland", 
-        "time_zone": "+02:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Helsinki_University_Observatory", 
+        "homepage": "http://www.gastro.physics.helsinki.fi/", 
+        "continent": "Europe", 
         "coordinates": [
             24.95861111111111, 
             60.15533611111111
         ], 
-        "long_name": "Helsinki Observatory", 
-        "homepage": "http://www.gastro.physics.helsinki.fi/", 
-        "continent": "Europe", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Helsinki_University_Observatory"
-    }
-},
-{
-    "pk": "Helsinki", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "569"
+        "IAUCode": {
+            "IAUCode": "569"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 40.098888888888894, 
         "longitude": 26.474444444444444, 
@@ -282,31 +250,27 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Istanbul T60", 
+        "time_zone": "+03:00", 
         "name": "Istanbul", 
         "time_zone_name": "Europe/Istanbul", 
         "country": "Turkey", 
-        "time_zone": "+03:00", 
+        "homepage": "http://astronomi.istanbul.edu.tr/meteoist60", 
+        "continent": "Europe", 
         "coordinates": [
             26.474444444444444, 
             40.098888888888894
         ], 
-        "long_name": "Istanbul T60", 
-        "homepage": "http://astronomi.istanbul.edu.tr/meteoist60", 
-        "continent": "Europe"
-    }
-},
-{
-    "pk": "Istanbul", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": ""
+        "IAUCode": {
+            "IAUCode": ""
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 28.76022222222222, 
         "longitude": -17.88238888888889, 
@@ -315,32 +279,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Roque de los Muchachos Observatory", 
+        "time_zone": "-00:00", 
         "name": "La Palma", 
         "time_zone_name": "Atlantic/Canary", 
         "country": "Spain", 
-        "time_zone": "-00:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Roque_de_los_Muchachos_Observatory", 
+        "homepage": "http://www.iac.es/eno.php?op1=2&lang=en", 
+        "continent": "Europe", 
         "coordinates": [
             -17.88238888888889, 
             28.76022222222222
         ], 
-        "long_name": "Roque de los Muchachos Observatory", 
-        "homepage": "http://www.iac.es/eno.php?op1=2&lang=en", 
-        "continent": "Europe", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Roque_de_los_Muchachos_Observatory"
-    }
-},
-{
-    "pk": "La Palma", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "950"
+        "IAUCode": {
+            "IAUCode": "950"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 52.155433333333335, 
         "longitude": 4.484, 
@@ -349,32 +309,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Leiden Observatory", 
+        "time_zone": "+01:00", 
         "name": "Leiden", 
         "time_zone_name": "Europe/Amsterdam", 
         "country": "The Netherlands", 
-        "time_zone": "+01:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Leiden_Observatory", 
+        "homepage": "http://www.strw.leidenuniv.nl/", 
+        "continent": "Europe", 
         "coordinates": [
             4.484, 
             52.155433333333335
         ], 
-        "long_name": "Leiden Observatory", 
-        "homepage": "http://www.strw.leidenuniv.nl/", 
-        "continent": "Europe", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Leiden_Observatory"
-    }
-},
-{
-    "pk": "Leiden", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "013"
+        "IAUCode": {
+            "IAUCode": "013"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 50.61805555555556, 
         "longitude": 5.5643, 
@@ -383,32 +339,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Li\u00e8ge Observatory", 
+        "time_zone": "+01:00", 
         "name": "Lie\u0300ge", 
         "time_zone_name": "Europe/Brussels", 
         "country": "Belgium", 
-        "time_zone": "+01:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Observatoire_de_Cointe", 
+        "homepage": "http://onekilopars.ec", 
+        "continent": "Europe", 
         "coordinates": [
             5.5643, 
             50.61805555555556
         ], 
-        "long_name": "Li\u00e8ge Observatory", 
-        "homepage": "http://onekilopars.ec", 
-        "continent": "Europe", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Observatoire_de_Cointe"
-    }
-},
-{
-    "pk": "Lie\u0300ge", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "623"
+        "IAUCode": {
+            "IAUCode": "623"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 55.69786111111111, 
         "longitude": 13.187222222222223, 
@@ -417,32 +369,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Lund Observatory", 
+        "time_zone": "+01:00", 
         "name": "Lund", 
         "time_zone_name": "Europe/Stockholm", 
         "country": "Sweden", 
-        "time_zone": "+01:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Lund_Observatory", 
+        "homepage": "http://www.astro.lu.se/", 
+        "continent": "Europe", 
         "coordinates": [
             13.187222222222223, 
             55.69786111111111
         ], 
-        "long_name": "Lund Observatory", 
-        "homepage": "http://www.astro.lu.se/", 
-        "continent": "Europe", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Lund_Observatory"
-    }
-},
-{
-    "pk": "Lund", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "039"
+        "IAUCode": {
+            "IAUCode": "039"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 47.38333333333333, 
         "longitude": 2.2, 
@@ -451,32 +399,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Nan\u00e7ay Radio Observatory", 
+        "time_zone": "+01:00", 
         "name": "Nanc\u0327ay", 
         "time_zone_name": "Europe/Paris", 
         "country": "France", 
-        "time_zone": "+01:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Nanc\u0327ay_Radio_Telescope", 
+        "homepage": "http://www.obs-nancay.fr/", 
+        "continent": "Europe", 
         "coordinates": [
             2.2, 
             47.38333333333333
         ], 
-        "long_name": "Nan\u00e7ay Radio Observatory", 
-        "homepage": "http://www.obs-nancay.fr/", 
-        "continent": "Europe", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Nanc\u0327ay_Radio_Telescope"
-    }
-},
-{
-    "pk": "Nanc\u0327ay", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": ""
+        "IAUCode": {
+            "IAUCode": ""
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 48.80472222222222, 
         "longitude": 2.2311111111111113, 
@@ -485,32 +429,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Observatoire de Paris Meudon", 
+        "time_zone": "+01:00", 
         "name": "Paris Meudon", 
         "time_zone_name": "Europe/Paris", 
         "country": "France", 
-        "time_zone": "+01:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Paris_Observatory", 
+        "homepage": "http://www.obspm.fr/", 
+        "continent": "Europe", 
         "coordinates": [
             2.2311111111111113, 
             48.80472222222222
         ], 
-        "long_name": "Observatoire de Paris Meudon", 
-        "homepage": "http://www.obspm.fr/", 
-        "continent": "Europe", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Paris_Observatory"
-    }
-},
-{
-    "pk": "Paris Meudon", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "005"
+        "IAUCode": {
+            "IAUCode": "005"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 44.63388888888889, 
         "longitude": 5.9077777777777785, 
@@ -519,32 +459,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Interf\u00e9rom\u00e8tre du Plateau de Bure", 
+        "time_zone": "+01:00", 
         "name": "Plateau de Bure", 
         "time_zone_name": "Europe/Paris", 
         "country": "France", 
-        "time_zone": "+01:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Plateau_de_Bure_Interferometer", 
+        "homepage": "http://www.iram.fr/IRAMFR/index.htm", 
+        "continent": "Europe", 
         "coordinates": [
             5.9077777777777785, 
             44.63388888888889
         ], 
-        "long_name": "Interf\u00e9rom\u00e8tre du Plateau de Bure", 
-        "homepage": "http://www.iram.fr/IRAMFR/index.htm", 
-        "continent": "Europe", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Plateau_de_Bure_Interferometer"
-    }
-},
-{
-    "pk": "Plateau de Bure", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": ""
+        "IAUCode": {
+            "IAUCode": ""
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 43.93183333333333, 
         "longitude": 5.712777777777778, 
@@ -553,32 +489,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Observatoire de Haute-Provence", 
+        "time_zone": "+01:00", 
         "name": "OHP", 
         "time_zone_name": "Europe/Paris", 
         "country": "France", 
-        "time_zone": "+01:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Haute-Provence_Observatory", 
+        "homepage": "http://www.obs-hp.fr/", 
+        "continent": "Europe", 
         "coordinates": [
             5.712777777777778, 
             43.93183333333333
         ], 
-        "long_name": "Observatoire de Haute-Provence", 
-        "homepage": "http://www.obs-hp.fr/", 
-        "continent": "Europe", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Haute-Provence_Observatory"
-    }
-},
-{
-    "pk": "OHP", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "511"
+        "IAUCode": {
+            "IAUCode": "511"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 57.395833333333336, 
         "longitude": 11.926353333333333, 
@@ -587,32 +519,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Onsala Space Observatory", 
+        "time_zone": "+01:00", 
         "name": "Onsala", 
         "time_zone_name": "Europe/Stockholm", 
         "country": "Sweden", 
-        "time_zone": "+01:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Onsala_Space_Observatory", 
+        "homepage": "http://www.chalmers.se/rss/oso-en", 
+        "continent": "Europe", 
         "coordinates": [
             11.926353333333333, 
             57.395833333333336
         ], 
-        "long_name": "Onsala Space Observatory", 
-        "homepage": "http://www.chalmers.se/rss/oso-en", 
-        "continent": "Europe", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Onsala_Space_Observatory"
-    }
-},
-{
-    "pk": "Onsala", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": ""
+        "IAUCode": {
+            "IAUCode": ""
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 37.064166666666665, 
         "longitude": -3.3847222222222224, 
@@ -621,32 +549,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Observatorio De Sierra Nevada", 
+        "time_zone": "-01:00", 
         "name": "OSN", 
         "time_zone_name": "Europe/Madrid", 
         "country": "Spain", 
-        "time_zone": "-01:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Sierra_Nevada_Observatory", 
+        "homepage": "http://w3-osn.iaa.es/", 
+        "continent": "Europe", 
         "coordinates": [
             -3.3847222222222224, 
             37.064166666666665
         ], 
-        "long_name": "Observatorio De Sierra Nevada", 
-        "homepage": "http://w3-osn.iaa.es/", 
-        "continent": "Europe", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Sierra_Nevada_Observatory"
-    }
-},
-{
-    "pk": "OSN", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": ""
+        "IAUCode": {
+            "IAUCode": ""
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 42.936388888888885, 
         "longitude": 0.1423, 
@@ -655,32 +579,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Observatoire du Pic du Midi", 
+        "time_zone": "+01:00", 
         "name": "Pic du Midi", 
         "time_zone_name": "Europe/Paris", 
         "country": "France", 
-        "time_zone": "+01:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Pic_du_Midi_Observatory", 
+        "homepage": "http://ezomp.omp.obs-mip.fr/", 
+        "continent": "Europe", 
         "coordinates": [
             0.1423, 
             42.936388888888885
         ], 
-        "long_name": "Observatoire du Pic du Midi", 
-        "homepage": "http://ezomp.omp.obs-mip.fr/", 
-        "continent": "Europe", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Pic_du_Midi_Observatory"
-    }
-},
-{
-    "pk": "Pic du Midi", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "586"
+        "IAUCode": {
+            "IAUCode": "586"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 37.69305555555555, 
         "longitude": 14.97638888888889, 
@@ -689,32 +609,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Catania Astrophysical Observatory", 
+        "time_zone": "+01:00", 
         "name": "Serra la Nave", 
         "time_zone_name": "Europe/Rome", 
         "country": "Italia", 
-        "time_zone": "+01:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Catania Astrophysical Observatory", 
+        "homepage": "http://sln.oact.inaf.it/", 
+        "continent": "Europe", 
         "coordinates": [
             14.97638888888889, 
             37.69305555555555
         ], 
-        "long_name": "Catania Astrophysical Observatory", 
-        "homepage": "http://sln.oact.inaf.it/", 
-        "continent": "Europe", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Catania Astrophysical Observatory"
-    }
-},
-{
-    "pk": "Serra la Nave", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "559"
+        "IAUCode": {
+            "IAUCode": "559"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 35.21194444444445, 
         "longitude": 24.899166666666666, 
@@ -723,32 +639,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Skinakas Observatory", 
+        "time_zone": "+02:00", 
         "name": "Skinakas", 
         "time_zone_name": "Europe/Athens", 
         "country": "Greece", 
-        "time_zone": "+02:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Skinakas_Observatory", 
+        "homepage": "http://skinakas.physics.uoc.gr", 
+        "continent": "Europe", 
         "coordinates": [
             24.899166666666666, 
             35.21194444444445
         ], 
-        "long_name": "Skinakas Observatory", 
-        "homepage": "http://skinakas.physics.uoc.gr", 
-        "continent": "Europe", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Skinakas_Observatory"
-    }
-},
-{
-    "pk": "Skinakas", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": ""
+        "IAUCode": {
+            "IAUCode": ""
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 48.583333333333336, 
         "longitude": 7.768055555555556, 
@@ -757,32 +669,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Observatoire astronomique de Strasbourg", 
+        "time_zone": "01:00", 
         "name": "Strasbourg", 
         "time_zone_name": "Europe/Paris", 
         "country": "France", 
-        "time_zone": "01:00", 
+        "wikipedia_article": "http://fr.wikipedia.org/wiki/Observatoire_astronomique_de_Strasbourg", 
+        "homepage": "http://astro.unistra.fr", 
+        "continent": "Europe", 
         "coordinates": [
             7.768055555555556, 
             48.583333333333336
         ], 
-        "long_name": "Observatoire astronomique de Strasbourg", 
-        "homepage": "http://astro.unistra.fr", 
-        "continent": "Europe", 
-        "wikipedia_article": "http://fr.wikipedia.org/wiki/Observatoire_astronomique_de_Strasbourg"
-    }
-},
-{
-    "pk": "Strasbourg", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "522"
+        "IAUCode": {
+            "IAUCode": "522"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 58.37968333333333, 
         "longitude": 26.7216, 
@@ -791,32 +699,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Tartu Observatory", 
+        "time_zone": "+02:00", 
         "name": "Tartu", 
         "time_zone_name": "Europe/Tallinn", 
         "country": "Estonia", 
-        "time_zone": "+02:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Tartu_Observatory", 
+        "homepage": "http://www.aai.ee/", 
+        "continent": "Europe", 
         "coordinates": [
             26.7216, 
             58.37968333333333
         ], 
-        "long_name": "Tartu Observatory", 
-        "homepage": "http://www.aai.ee/", 
-        "continent": "Europe", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Tartu_Observatory"
-    }
-},
-{
-    "pk": "Tartu", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "075"
+        "IAUCode": {
+            "IAUCode": "075"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 28.3, 
         "longitude": -16.509722222222223, 
@@ -825,32 +729,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Teide Observatory", 
+        "time_zone": "+00:00", 
         "name": "Teide", 
         "time_zone_name": "Atlantic/Canary", 
         "country": "Spain", 
-        "time_zone": "+00:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Teide_Observatory", 
+        "homepage": "http://www.iac.es/eno.php?op1=3", 
+        "continent": "Europe", 
         "coordinates": [
             -16.509722222222223, 
             28.3
         ], 
-        "long_name": "Teide Observatory", 
-        "homepage": "http://www.iac.es/eno.php?op1=3", 
-        "continent": "Europe", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Teide_Observatory"
-    }
-},
-{
-    "pk": "Teide", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "954"
+        "IAUCode": {
+            "IAUCode": "954"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 36.82416666666667, 
         "longitude": 30.335555555555555, 
@@ -859,32 +759,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "T\u00dcBITAK National Observatory", 
+        "time_zone": "+02:00", 
         "name": "T\u00dcBITAK", 
         "time_zone_name": "Europe/Istanbul", 
         "country": "Turkey", 
-        "time_zone": "+02:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/TUBITAK_National_Observatory", 
+        "homepage": "http://www.tug.tubitak.gov.tr", 
+        "continent": "Europe", 
         "coordinates": [
             30.335555555555555, 
             36.82416666666667
         ], 
-        "long_name": "T\u00dcBITAK National Observatory", 
-        "homepage": "http://www.tug.tubitak.gov.tr", 
-        "continent": "Europe", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/TUBITAK_National_Observatory"
-    }
-},
-{
-    "pk": "T\u00dcBITAK", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "A84"
+        "IAUCode": {
+            "IAUCode": "A84"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 40.45111111111111, 
         "longitude": -3.726111111111095, 
@@ -893,31 +789,27 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Observatorio Universidad Complutense de Madrid", 
+        "time_zone": "01:00", 
         "name": "UCM", 
         "time_zone_name": "Europe/Madrid", 
         "country": "Spain", 
-        "time_zone": "01:00", 
+        "homepage": "http://www.ucm.es/info/Astrof/obs_ucm/obs_ucm.html", 
+        "continent": "Europe", 
         "coordinates": [
             -3.726111111111095, 
             40.45111111111111
         ], 
-        "long_name": "Observatorio Universidad Complutense de Madrid", 
-        "homepage": "http://www.ucm.es/info/Astrof/obs_ucm/obs_ucm.html", 
-        "continent": "Europe"
-    }
-},
-{
-    "pk": "UCM", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "I86"
+        "IAUCode": {
+            "IAUCode": "I86"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 59.85805555555556, 
         "longitude": 17.625700000000002, 
@@ -926,32 +818,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Uppsala Astronomical Observatory", 
+        "time_zone": "+01:00", 
         "name": "Uppsala", 
         "time_zone_name": "Europe/Stockholm", 
         "country": "Sweden", 
-        "time_zone": "+01:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Uppsala_Astronomical_Observatory", 
+        "homepage": "http://www.fysast.uu.se/astro/", 
+        "continent": "Europe", 
         "coordinates": [
             17.625700000000002, 
             59.85805555555556
         ], 
-        "long_name": "Uppsala Astronomical Observatory", 
-        "homepage": "http://www.fysast.uu.se/astro/", 
-        "continent": "Europe", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Uppsala_Astronomical_Observatory"
-    }
-},
-{
-    "pk": "Uppsala", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "549"
+        "IAUCode": {
+            "IAUCode": "549"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 48.231883333333336, 
         "longitude": 16.33361111111111, 
@@ -960,27 +848,23 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Vienna Observatory", 
+        "time_zone": "+02:00", 
         "name": "Vienna", 
         "time_zone_name": "Europe/Vienna", 
         "country": "Austria", 
-        "time_zone": "+02:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Vienna_Observatory", 
+        "homepage": "http://astro.univie.ac.at/", 
+        "continent": "Europe", 
         "coordinates": [
             16.33361111111111, 
             48.231883333333336
         ], 
-        "long_name": "Vienna Observatory", 
-        "homepage": "http://astro.univie.ac.at/", 
-        "continent": "Europe", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Vienna_Observatory"
-    }
-},
-{
-    "pk": "Vienna", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "045"
+        "IAUCode": {
+            "IAUCode": "045"
+        }
     }
 }
 ]

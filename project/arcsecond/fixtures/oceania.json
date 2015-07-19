@@ -1,7 +1,7 @@
 [
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": -31.27703888888889, 
         "longitude": 149.06608611111113, 
@@ -10,32 +10,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Australian Astronomical Observatory", 
+        "time_zone": "+10:00", 
         "name": "AAO", 
         "time_zone_name": "Australia/Sydney", 
         "country": "Australia", 
-        "time_zone": "+10:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Anglo-Australian_Observatory", 
+        "homepage": "http://www.aao.gov.au/", 
+        "continent": "Oceania", 
         "coordinates": [
             149.06608611111113, 
             -31.27703888888889
         ], 
-        "long_name": "Australian Astronomical Observatory", 
-        "homepage": "http://www.aao.gov.au/", 
-        "continent": "Oceania", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Anglo-Australian_Observatory"
-    }
-},
-{
-    "pk": "AAO", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": ""
+        "IAUCode": {
+            "IAUCode": ""
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": -34.916666666666664, 
         "longitude": 138.58333333333334, 
@@ -44,32 +40,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Adelaide Observatory", 
+        "time_zone": "+09:00", 
         "name": "Adelaide", 
         "time_zone_name": "Australia/Adelaide", 
         "country": "Australia", 
-        "time_zone": "+09:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Adelaide_Observatory", 
+        "homepage": "http://www.bom.gov.au/weather/sa/inside/history/the_adelaide_observatory.shtml", 
+        "continent": "Oceania", 
         "coordinates": [
             138.58333333333334, 
             -34.916666666666664
         ], 
-        "long_name": "Adelaide Observatory", 
-        "homepage": "http://www.bom.gov.au/weather/sa/inside/history/the_adelaide_observatory.shtml", 
-        "continent": "Oceania", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Adelaide_Observatory"
-    }
-},
-{
-    "pk": "Adelaide", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": ""
+        "IAUCode": {
+            "IAUCode": ""
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": -37.831388888888895, 
         "longitude": 144.9758, 
@@ -78,32 +70,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Melbourne Observatory", 
+        "time_zone": "+10:00", 
         "name": "Melbourne", 
         "time_zone_name": "Australia/Melbourne", 
         "country": "Australia", 
-        "time_zone": "+10:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Melbourne_Observatory", 
+        "homepage": "http://www.melbourneobservatory.com/GreatMelbourneTelescope.htm", 
+        "continent": "Oceania", 
         "coordinates": [
             144.9758, 
             -37.831388888888895
         ], 
-        "long_name": "Melbourne Observatory", 
-        "homepage": "http://www.melbourneobservatory.com/GreatMelbourneTelescope.htm", 
-        "continent": "Oceania", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Melbourne_Observatory"
-    }
-},
-{
-    "pk": "Melbourne", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "907"
+        "IAUCode": {
+            "IAUCode": "907"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": -31.267777777777777, 
         "longitude": 149.09972222222223, 
@@ -112,32 +100,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Mopra Observatory", 
+        "time_zone": "+10:00", 
         "name": "Mopra", 
         "time_zone_name": "Australia/Sydney", 
         "country": "Australia", 
-        "time_zone": "+10:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Mopra_Observatory", 
+        "homepage": "http://www.narrabri.atnf.csiro.au/mopra/", 
+        "continent": "Oceania", 
         "coordinates": [
             149.09972222222223, 
             -31.267777777777777
         ], 
-        "long_name": "Mopra Observatory", 
-        "homepage": "http://www.narrabri.atnf.csiro.au/mopra/", 
-        "continent": "Oceania", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Mopra_Observatory"
-    }
-},
-{
-    "pk": "Mopra", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": ""
+        "IAUCode": {
+            "IAUCode": ""
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": -35.32027777777778, 
         "longitude": 149.0077, 
@@ -146,32 +130,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Mount Stromlo Observatory", 
+        "time_zone": "+10:00", 
         "name": "Mount Stromlo", 
         "time_zone_name": "Australia/Sydney", 
         "country": "Australia", 
-        "time_zone": "+10:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Mount_Stromlo_Observatory", 
+        "homepage": "http://rsaa.anu.edu.au/observatories/mount-stromlo-observatory", 
+        "continent": "Oceania", 
         "coordinates": [
             149.0077, 
             -35.32027777777778
         ], 
-        "long_name": "Mount Stromlo Observatory", 
-        "homepage": "http://rsaa.anu.edu.au/observatories/mount-stromlo-observatory", 
-        "continent": "Oceania", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Mount_Stromlo_Observatory"
-    }
-},
-{
-    "pk": "Mount Stromlo", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "414"
+        "IAUCode": {
+            "IAUCode": "414"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": -26.703319444444443, 
         "longitude": 116.67081388888889, 
@@ -180,32 +160,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Murchison Radio-astronomy Observatory", 
+        "time_zone": "+08:00", 
         "name": "MRO", 
         "time_zone_name": "Australia/Perth", 
         "country": "Australia", 
-        "time_zone": "+08:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Murchison_Radio-astronomy_Observatory", 
+        "homepage": "http://www.atnf.csiro.au/facilities/mro.html", 
+        "continent": "Oceania", 
         "coordinates": [
             116.67081388888889, 
             -26.703319444444443
         ], 
-        "long_name": "Murchison Radio-astronomy Observatory", 
-        "homepage": "http://www.atnf.csiro.au/facilities/mro.html", 
-        "continent": "Oceania", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Murchison_Radio-astronomy_Observatory"
-    }
-},
-{
-    "pk": "MRO", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": ""
+        "IAUCode": {
+            "IAUCode": ""
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": -32.99996277777778, 
         "longitude": 148.26232194444444, 
@@ -214,32 +190,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Parkes Observatory", 
+        "time_zone": "+10:00", 
         "name": "Parkes", 
         "time_zone_name": "Australia/Sydney", 
         "country": "Australia", 
-        "time_zone": "+10:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Parkes_Observatory", 
+        "homepage": "http://www.parkes.atnf.csiro.au/", 
+        "continent": "Oceania", 
         "coordinates": [
             148.26232194444444, 
             -32.99996277777778
         ], 
-        "long_name": "Parkes Observatory", 
-        "homepage": "http://www.parkes.atnf.csiro.au/", 
-        "continent": "Oceania", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Parkes_Observatory"
-    }
-},
-{
-    "pk": "Parkes", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": ""
+        "IAUCode": {
+            "IAUCode": ""
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": -30.31277777777778, 
         "longitude": 149.56327777777778, 
@@ -248,32 +220,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Paul Wild Observatory", 
+        "time_zone": "+09:00", 
         "name": "Paul Wild", 
         "time_zone_name": "Australia/Sydney", 
         "country": "Australia", 
-        "time_zone": "+09:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Paul_Wild_Observatory", 
+        "homepage": "http://www.narrabri.atnf.csiro.au/", 
+        "continent": "Oceania", 
         "coordinates": [
             149.56327777777778, 
             -30.31277777777778
         ], 
-        "long_name": "Paul Wild Observatory", 
-        "homepage": "http://www.narrabri.atnf.csiro.au/", 
-        "continent": "Oceania", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Paul_Wild_Observatory"
-    }
-},
-{
-    "pk": "Paul Wild", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": ""
+        "IAUCode": {
+            "IAUCode": ""
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": -31.277105555555554, 
         "longitude": 149.0661, 
@@ -282,27 +250,23 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Siding Spring Observatory", 
+        "time_zone": "+10:00", 
         "name": "Siding Spring", 
         "time_zone_name": "Australia/Sydney", 
         "country": "Australia", 
-        "time_zone": "+10:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Siding_Spring_Observatory", 
+        "homepage": "http://www.mso.anu.edu.au/info/sso/", 
+        "continent": "Oceania", 
         "coordinates": [
             149.0661, 
             -31.277105555555554
         ], 
-        "long_name": "Siding Spring Observatory", 
-        "homepage": "http://www.mso.anu.edu.au/info/sso/", 
-        "continent": "Oceania", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Siding_Spring_Observatory"
-    }
-},
-{
-    "pk": "Siding Spring", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "413"
+        "IAUCode": {
+            "IAUCode": "413"
+        }
     }
 }
 ]

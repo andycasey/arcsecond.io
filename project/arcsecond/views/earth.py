@@ -23,7 +23,7 @@ class ObservingSiteDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.ObservingSite.objects.all()
     serializer_class = serializers.ObservingSiteSerializer
 
-def earth_browse(request, path=None):
+def observingsites(request, path=None):
     african_sites = models.ObservingSite.objects.filter(continent='Africa')
     antarctica_sites = models.ObservingSite.objects.filter(continent='Antarctica')
     asian_sites = models.ObservingSite.objects.filter(continent='Asia')
@@ -32,10 +32,10 @@ def earth_browse(request, path=None):
     oceania_sites = models.ObservingSite.objects.filter(continent='Oceania')
     south_american_sites = models.ObservingSite.objects.filter(continent='South America')
 
-    return render(request, 'arcsecond/earth_browse.html', {'african_sites': african_sites,
-                                                          'antarctica_sites': antarctica_sites,
-                                                          'asian_sites': asian_sites,
-                                                          'european_sites': european_sites,
-                                                          'north_american_sites': north_american_sites,
-                                                          'oceania_sites': oceania_sites,
-                                                          'south_american_sites': south_american_sites})
+    return render(request, 'arcsecond/observingsites.html', {'african_sites': african_sites,
+                                                              'antarctica_sites': antarctica_sites,
+                                                              'asian_sites': asian_sites,
+                                                              'european_sites': european_sites,
+                                                              'north_american_sites': north_american_sites,
+                                                              'oceania_sites': oceania_sites,
+                                                              'south_american_sites': south_american_sites})

@@ -1,7 +1,7 @@
 [
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": -29.038830555555556, 
         "longitude": 26.404722222222222, 
@@ -10,32 +10,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Boyden Observatory", 
+        "time_zone": "02:00", 
         "name": "Boyden", 
         "time_zone_name": "Africa/Johannesburg", 
         "country": "South Africa", 
-        "time_zone": "02:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Boyden_Observatory", 
+        "homepage": "http://www.assabfn.co.za/friendsofboyden/boyden.htm", 
+        "continent": "Africa", 
         "coordinates": [
             26.404722222222222, 
             -29.038830555555556
         ], 
-        "long_name": "Boyden Observatory", 
-        "homepage": "http://www.assabfn.co.za/friendsofboyden/boyden.htm", 
-        "continent": "Africa", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Boyden_Observatory"
-    }
-},
-{
-    "pk": "Boyden", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "074"
+        "IAUCode": {
+            "IAUCode": "074"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": -33.93397777777778, 
         "longitude": 18.476599999999998, 
@@ -44,32 +40,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Cape Town Observatory", 
+        "time_zone": "+02:00", 
         "name": "Cape Town", 
         "time_zone_name": "Africa/Johannesburg", 
         "country": "South Africa", 
-        "time_zone": "+02:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Observatory,_Cape_Town", 
+        "homepage": "http://www.saao.ac.za/", 
+        "continent": "Africa", 
         "coordinates": [
             18.476599999999998, 
             -33.93397777777778
         ], 
-        "long_name": "Cape Town Observatory", 
-        "homepage": "http://www.saao.ac.za/", 
-        "continent": "Africa", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Observatory,_Cape_Town"
-    }
-},
-{
-    "pk": "Cape Town", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "051"
+        "IAUCode": {
+            "IAUCode": "051"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": -23.266666666666666, 
         "longitude": 16.5, 
@@ -78,32 +70,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "High Energy Stereoscopic System", 
+        "time_zone": "+01:00", 
         "name": "H.E.S.S.", 
         "time_zone_name": "Africa/Windhoek", 
         "country": "Namibia", 
-        "time_zone": "+01:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/High_Energy_Stereoscopic_System", 
+        "homepage": "http://www.mpi-hd.mpg.de/hfm/HESS/HESS.shtml", 
+        "continent": "Africa", 
         "coordinates": [
             16.5, 
             -23.266666666666666
         ], 
-        "long_name": "High Energy Stereoscopic System", 
-        "homepage": "http://www.mpi-hd.mpg.de/hfm/HESS/HESS.shtml", 
-        "continent": "Africa", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/High_Energy_Stereoscopic_System"
-    }
-},
-{
-    "pk": "H.E.S.S.", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": ""
+        "IAUCode": {
+            "IAUCode": ""
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": -26.181811111111113, 
         "longitude": 28.075, 
@@ -112,32 +100,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Johannesburg Observatory", 
+        "time_zone": "+01:00", 
         "name": "Johannesburg", 
         "time_zone_name": "Africa/Johannesburg", 
         "country": "South Africa", 
-        "time_zone": "+01:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Johannesburg_Observatory", 
+        "homepage": "http://www.assajhb.co.za", 
+        "continent": "Africa", 
         "coordinates": [
             28.075, 
             -26.181811111111113
         ], 
-        "long_name": "Johannesburg Observatory", 
-        "homepage": "http://www.assajhb.co.za", 
-        "continent": "Africa", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Johannesburg_Observatory"
-    }
-},
-{
-    "pk": "Johannesburg", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "078"
+        "IAUCode": {
+            "IAUCode": "078"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 13.771111111111113, 
         "longitude": -0.13333333333333333, 
@@ -146,32 +130,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Mount Djaogari Astronomical Observatory", 
+        "time_zone": "-00:00", 
         "name": "Mount Djaogari", 
         "time_zone_name": "Africa/Ouagadougou", 
         "country": "Burkina Faso", 
-        "time_zone": "-00:00", 
+        "wikipedia_article": "", 
+        "homepage": "", 
+        "continent": "Africa", 
         "coordinates": [
             -0.13333333333333333, 
             13.771111111111113
         ], 
-        "long_name": "Mount Djaogari Astronomical Observatory", 
-        "homepage": "", 
-        "continent": "Africa", 
-        "wikipedia_article": ""
-    }
-},
-{
-    "pk": "Mount Djaogari", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": ""
+        "IAUCode": {
+            "IAUCode": ""
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": -32.37588888888889, 
         "longitude": 20.8108, 
@@ -180,27 +160,23 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "South African Astronomical Observatory", 
+        "time_zone": "+02:00", 
         "name": "SAAO / SALT", 
         "time_zone_name": "Africa/Johannesburg", 
         "country": "South Africa", 
-        "time_zone": "+02:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/South_African_Astronomical_Observatory", 
+        "homepage": "http://www.saao.ac.za/", 
+        "continent": "Africa", 
         "coordinates": [
             20.8108, 
             -32.37588888888889
         ], 
-        "long_name": "South African Astronomical Observatory", 
-        "homepage": "http://www.saao.ac.za/", 
-        "continent": "Africa", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/South_African_Astronomical_Observatory"
-    }
-},
-{
-    "pk": "SAAO / SALT", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "B31"
+        "IAUCode": {
+            "IAUCode": "B31"
+        }
     }
 }
 ]

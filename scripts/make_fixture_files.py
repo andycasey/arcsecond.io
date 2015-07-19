@@ -62,10 +62,11 @@ if __name__ == '__main__':
             coordinates = {'model': 'arcsecond.Coordinates', 'pk': None}
             coordinates['fields'] = { 'longitude': longitude_value, 'latitude': latitude_value, 'height': coords['altitude'] }
 
-            site = {'model': 'arcsecond.Site', 'pk': None}
-            site['fields'] = {
+            observing_site = {'model': 'arcsecond.ObservingSite', 'pk': None}
+            observing_site['fields'] = {
                 'name': obs['name'],
                 'long_name': obs['longName'],
+                'IAUCode': { 'IAUCode': obs['IAUCode'] if obs.has_key('IAUCode') else "" },
                 'coordinates': [longitude_value, latitude_value],
                 'continent': continent_key,
                 'country': obs['country'],
@@ -74,16 +75,11 @@ if __name__ == '__main__':
             }
 
             if obs['websites'].has_key('main'):
-                site['fields']['homepage'] = obs['websites']['main']
+                observing_site['fields']['homepage'] = obs['websites']['main']
             if obs['websites'].has_key('wikipedia-en'):
-                site['fields']['wikipedia_article'] = obs['websites']['wikipedia-en']
-
-            observing_site = {'model': 'arcsecond.ObservingSite', 'pk': obs['name']}
-            observing_site['fields'] = { 'IAUCode': obs['IAUCode'] if obs.has_key('IAUCode') else "" }
+                observing_site['fields']['wikipedia_article'] = obs['websites']['wikipedia-en']
 
             f.write(json.dumps(coordinates, indent=4))
-            f.write(',\n')
-            f.write(json.dumps(site, indent=4))
             f.write(',\n')
             f.write(json.dumps(observing_site, indent=4))
 
@@ -103,7 +99,7 @@ if __name__ == '__main__':
                             telescope['fields']['mounting'] = "cas" if tel['mounting'].lower() == 'cassegrain' else 'equ'
 
                         if 'opticalDesign' in tel and tel['opticalDesign'].lower() in [u'ritchey-chrétien', 'schmidt']:
-                            telescope['fields']['optical_design'] = "rc" if tel['opticalDesign'].lower() == 'ritchey-chrétien' else 'sc'
+                            telescope['fields']['optical_design'] = u"rc" if tel['opticalDesign'].lower() == u'ritchey-chrétien' else u'sc'
 
                         # if 'primaryMirror' in tel:
                         #     mirror = {'model':'arcsecond.Mirror', 'pk': None}

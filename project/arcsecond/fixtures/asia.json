@@ -1,7 +1,7 @@
 [
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": -6.8255, 
         "longitude": 107.616, 
@@ -10,32 +10,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Bosscha Observatory", 
+        "time_zone": "+07:00", 
         "name": "Bosscha", 
         "time_zone_name": "Asia/Jakarta", 
         "country": "Indonesia", 
-        "time_zone": "+07:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Bosscha_Observatory", 
+        "homepage": "http://bosscha.itb.ac.id/", 
+        "continent": "Asia", 
         "coordinates": [
             107.616, 
             -6.8255
         ], 
-        "long_name": "Bosscha Observatory", 
-        "homepage": "http://bosscha.itb.ac.id/", 
-        "continent": "Asia", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Bosscha_Observatory"
-    }
-},
-{
-    "pk": "Bosscha", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": ""
+        "IAUCode": {
+            "IAUCode": ""
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 40.33027777777778, 
         "longitude": 44.27333333333333, 
@@ -44,32 +40,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Byurakan Astrophysical Observatory", 
+        "time_zone": "+04:00", 
         "name": "Byurakan", 
         "time_zone_name": "Asia/Yerevan", 
         "country": "Armenia", 
-        "time_zone": "+04:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Byurakan_Observatory", 
+        "homepage": "http://www.bao.am", 
+        "continent": "Asia", 
         "coordinates": [
             44.27333333333333, 
             40.33027777777778
         ], 
-        "long_name": "Byurakan Astrophysical Observatory", 
-        "homepage": "http://www.bao.am", 
-        "continent": "Asia", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Byurakan_Observatory"
-    }
-},
-{
-    "pk": "Byurakan", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "123"
+        "IAUCode": {
+            "IAUCode": "123"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 19.096516666666666, 
         "longitude": 74.04974166666666, 
@@ -78,32 +70,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Giant Metrewave Radio Telescope ", 
+        "time_zone": "+05:30", 
         "name": "GMRT", 
         "time_zone_name": "Asia/Kolkata", 
         "country": "India", 
-        "time_zone": "+05:30", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Giant_Metrewave_Radio_Telescope", 
+        "homepage": "http://gmrt.ncra.tifr.res.in/", 
+        "continent": "Asia", 
         "coordinates": [
             74.04974166666666, 
             19.096516666666666
         ], 
-        "long_name": "Giant Metrewave Radio Telescope ", 
-        "homepage": "http://gmrt.ncra.tifr.res.in/", 
-        "continent": "Asia", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Giant_Metrewave_Radio_Telescope"
-    }
-},
-{
-    "pk": "GMRT", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "?"
+        "IAUCode": {
+            "IAUCode": "?"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 24.653055555555554, 
         "longitude": 72.78688317888889, 
@@ -112,30 +100,26 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Gurushikhar Observatory", 
+        "time_zone": "+05:30", 
         "name": "Gurushikhar", 
         "time_zone_name": "Asia/Kolkata", 
         "country": "India", 
-        "time_zone": "+05:30", 
+        "continent": "Asia", 
         "coordinates": [
             72.78688317888889, 
             24.653055555555554
         ], 
-        "long_name": "Gurushikhar Observatory", 
-        "continent": "Asia"
-    }
-},
-{
-    "pk": "Gurushikhar", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "?"
+        "IAUCode": {
+            "IAUCode": "?"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 22.474555555555554, 
         "longitude": 114.22, 
@@ -144,32 +128,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Honk Kong Observatory", 
+        "time_zone": "+08:00", 
         "name": "Hong Kong", 
         "time_zone_name": "Asia/Hong_Kong", 
         "country": "China", 
-        "time_zone": "+08:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Hong_Kong_Observatory", 
+        "homepage": "http://www.hko.gov.hk", 
+        "continent": "Asia", 
         "coordinates": [
             114.22, 
             22.474555555555554
         ], 
-        "long_name": "Honk Kong Observatory", 
-        "homepage": "http://www.hko.gov.hk", 
-        "continent": "Asia", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Hong_Kong_Observatory"
-    }
-},
-{
-    "pk": "Hong Kong", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "D17"
+        "IAUCode": {
+            "IAUCode": "D17"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 19.066666666666666, 
         "longitude": 73.66666666666667, 
@@ -178,31 +158,27 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Iucaa Girawali Observatory", 
+        "time_zone": "+05:30", 
         "name": "IGO", 
         "time_zone_name": "Asia/Kolkata", 
         "country": "India", 
-        "time_zone": "+05:30", 
+        "homepage": "http://akashmitra.wordpress.com", 
+        "continent": "Asia", 
         "coordinates": [
             73.66666666666667, 
             19.066666666666666
         ], 
-        "long_name": "Iucaa Girawali Observatory", 
-        "homepage": "http://akashmitra.wordpress.com", 
-        "continent": "Asia"
-    }
-},
-{
-    "pk": "IGO", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "?"
+        "IAUCode": {
+            "IAUCode": "?"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 34.577075, 
         "longitude": 133.59395555555557, 
@@ -211,32 +187,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Okayama Astrophysical Observatory", 
+        "time_zone": "+09:00", 
         "name": "Okayama", 
         "time_zone_name": "Asia/Tokyo", 
         "country": "Japan", 
-        "time_zone": "+09:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/National_Astronomical_Observatory_of_Japan", 
+        "homepage": "http://www.oao.nao.ac.jp/en/", 
+        "continent": "Asia", 
         "coordinates": [
             133.59395555555557, 
             34.577075
         ], 
-        "long_name": "Okayama Astrophysical Observatory", 
-        "homepage": "http://www.oao.nao.ac.jp/en/", 
-        "continent": "Asia", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/National_Astronomical_Observatory_of_Japan"
-    }
-},
-{
-    "pk": "Okayama", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "371"
+        "IAUCode": {
+            "IAUCode": "371"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 11.38361111111111, 
         "longitude": 76.66611111111112, 
@@ -245,32 +217,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Ooty Radio Telescope", 
+        "time_zone": "+05:30", 
         "name": "ORT", 
         "time_zone_name": "Asia/Kolkata", 
         "country": "India", 
-        "time_zone": "+05:30", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Ooty_Radio_Telescope", 
+        "homepage": "http://www.ncra.tifr.res.in/ncra_hpage/ort/ort.html", 
+        "continent": "Asia", 
         "coordinates": [
             76.66611111111112, 
             11.38361111111111
         ], 
-        "long_name": "Ooty Radio Telescope", 
-        "homepage": "http://www.ncra.tifr.res.in/ncra_hpage/ort/ort.html", 
-        "continent": "Asia", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Ooty_Radio_Telescope"
-    }
-},
-{
-    "pk": "ORT", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "?"
+        "IAUCode": {
+            "IAUCode": "?"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 43.64666666666667, 
         "longitude": 41.44044722222222, 
@@ -279,32 +247,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Special Astrophysical Observatory", 
+        "time_zone": "+03:00", 
         "name": "SAO", 
         "time_zone_name": "Europe/Moscow", 
         "country": "Russia", 
-        "time_zone": "+03:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Special_Astrophysical_Observatory_of_the_Russian_Academy_of_Science", 
+        "homepage": "http://www.sao.ru", 
+        "continent": "Asia", 
         "coordinates": [
             41.44044722222222, 
             43.64666666666667
         ], 
-        "long_name": "Special Astrophysical Observatory", 
-        "homepage": "http://www.sao.ru", 
-        "continent": "Asia", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Special_Astrophysical_Observatory_of_the_Russian_Academy_of_Science"
-    }
-},
-{
-    "pk": "SAO", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": ""
+        "IAUCode": {
+            "IAUCode": ""
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 18.573725, 
         "longitude": 98.48223888888889, 
@@ -313,32 +277,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Thai National Observatory", 
+        "time_zone": "07:00", 
         "name": "TNO", 
         "time_zone_name": "Asia/Bangkok", 
         "country": "Thailand", 
-        "time_zone": "07:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Thai_National_Observatory", 
+        "homepage": "http://www.narit.or.th/en/index.php/facilities/thai-national-observatory-tno/overview", 
+        "continent": "Asia", 
         "coordinates": [
             98.48223888888889, 
             18.573725
         ], 
-        "long_name": "Thai National Observatory", 
-        "homepage": "http://www.narit.or.th/en/index.php/facilities/thai-national-observatory-tno/overview", 
-        "continent": "Asia", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Thai_National_Observatory"
-    }
-},
-{
-    "pk": "TNO", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "UNDEFINED_STRING_PROPERTY"
+        "IAUCode": {
+            "IAUCode": "UNDEFINED_STRING_PROPERTY"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 12.566666666666666, 
         "longitude": 78.83333333333333, 
@@ -347,32 +307,28 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Vainu Bappu Observatory", 
+        "time_zone": "+05:30", 
         "name": "VBO", 
         "time_zone_name": "Asia/Kolkata", 
         "country": "India", 
-        "time_zone": "+05:30", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Vainu_Bappu_Observatory", 
+        "homepage": "http://www.iiap.res.in/centers/vbo", 
+        "continent": "Asia", 
         "coordinates": [
             78.83333333333333, 
             12.566666666666666
         ], 
-        "long_name": "Vainu Bappu Observatory", 
-        "homepage": "http://www.iiap.res.in/centers/vbo", 
-        "continent": "Asia", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Vainu_Bappu_Observatory"
-    }
-},
-{
-    "pk": "VBO", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "?"
+        "IAUCode": {
+            "IAUCode": "?"
+        }
     }
 },
 {
     "pk": null, 
-    "model": "arcsecond.Coordinates",
+    "model": "arcsecond.Coordinates", 
     "fields": {
         "latitude": 30.595555555555553, 
         "longitude": 34.7625, 
@@ -381,27 +337,23 @@
 },
 {
     "pk": null, 
-    "model": "arcsecond.Site",
+    "model": "arcsecond.ObservingSite", 
     "fields": {
+        "long_name": "Wise Observatory", 
+        "time_zone": "+02:00", 
         "name": "Wise", 
         "time_zone_name": "Asia/Jerusalem", 
         "country": "Israel", 
-        "time_zone": "+02:00", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Wise_Observatory", 
+        "homepage": "http://wise-obs.tau.ac.il", 
+        "continent": "Asia", 
         "coordinates": [
             34.7625, 
             30.595555555555553
         ], 
-        "long_name": "Wise Observatory", 
-        "homepage": "http://wise-obs.tau.ac.il", 
-        "continent": "Asia", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Wise_Observatory"
-    }
-},
-{
-    "pk": "Wise", 
-    "model": "arcsecond.ObservingSite",
-    "fields": {
-        "IAUCode": "097"
+        "IAUCode": {
+            "IAUCode": "097"
+        }
     }
 }
 ]
