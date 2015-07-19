@@ -1,1 +1,43 @@
-<h3> This is my system 404 page </h3>
+{% extends 'arcsecond/base.html' %}
+
+{% load staticfiles %}
+{% load i18n %}
+{% load hosts %}
+
+{% block body_block %}
+
+        <!-- WELCOME
+    ============================== -->
+    <div class="welcome_404" id="welcome">
+        <div class="welcome-404-classic__inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+
+                        <!-- Heading -->
+                        <h1 class="heading heading_lg">
+                            Lost in <span class="text-primary">space</span>?
+                        </h1>
+
+                        <!-- Sub heading -->
+                        <p class="heading__sub">
+                            Error 404
+                        </p>
+
+                        <!-- Button -->
+                        <div class="text-center">
+
+                            <a href="/" class="btn btn-xl btn-primary">
+                                <span class="oi oi-arrow-right" title="Find out more" aria-hidden="true"></span>
+                                <span>arcsecond.io</span>
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div> <!-- / .row -->
+            </div> <!-- / .container -->
+        </div> <!-- / .classic-welcome__inner -->
+    </div> <!-- / .welcome_classic -->
+
+{% endblock body_block %}

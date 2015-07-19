@@ -10,10 +10,4 @@ def index(request):
 def custom_404(request):
     return render(request, 'arcsecond/404.html')
 
-def sky_home(request, path=None):
-    return render(request, 'arcsecond/sky_home.html', {'api_version': '1'})
-
-def earth_home(request, path=None):
-    return render(request, 'arcsecond/earth_home.html', {'api_version': '1'})
-
 

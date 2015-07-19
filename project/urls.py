@@ -11,5 +11,3 @@ urlpatterns = patterns('',
     (r'^accounts/', include('allauth.urls')),
 )
 
-handler404 = 'arcsecond.views.custom_404'
-

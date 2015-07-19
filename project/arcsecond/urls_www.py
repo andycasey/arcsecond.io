@@ -29,4 +29,5 @@ if settings.DEBUG:
 urlpatterns += format_suffix_patterns(urlpatterns)
 
 
+handler404 = 'views.custom_404'
 
