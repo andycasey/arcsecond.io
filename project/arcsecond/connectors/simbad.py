@@ -1,6 +1,6 @@
 
 import urllib2
-from ..models import *
+from project.arcsecond.models import *
 from astropy.io import votable
 from rest_framework import status
 from django.core.exceptions import MultipleObjectsReturned
@@ -131,7 +131,7 @@ def get_SIMBAD_fluxes(name):
             flux_value = first_table.array["FLUX_"+filter]
 
             if len(filter_name) == 1 and len(flux_value) == 1 and len(filter_name[0]) > 0 and not math.isnan(flux_value[0]):
-                flux = AstronomicalFlux(name=filter_name[0], value=flux_value[0])
+                flux = Flux(name=filter_name[0], value=flux_value[0])
 
                 flux_error_value = first_table.array["FLUX_ERROR_"+filter]
                 if len(flux_error_value) == 1 and not math.isnan(flux_error_value[0]):

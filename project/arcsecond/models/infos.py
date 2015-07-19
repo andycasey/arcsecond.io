@@ -14,7 +14,30 @@ class AstronomicalInfo(models.Model):
     bibcode = models.CharField(max_length=50, default="", null=True, validators=[RegexValidator(regex=bibcode_regex, message='Invalid bibcode', code='nomatch')])
 
 
-class AstronomicalMass(AstronomicalInfo):
+class JulianDay(AstronomicalInfo):
+    pass
+
+class Albedo(AstronomicalInfo):
+    pass
+
+class Eccentricity(AstronomicalInfo):
+    pass
+
+class Flux(AstronomicalInfo):
+    name = models.CharField(max_length=500)
+    astronomical_object = models.ForeignKey('AstronomicalObject', null=True, related_name="fluxes", blank=True)
+
+    # see https://docs.djangoproject.com/en/1.6/topics/db/models/#model-methods
+    def is_valid(self):
+        return len(self.name) > 0 and not math.isnan(self.value)
+
+
+class Color(AstronomicalInfo):
+    first_magnitude_name = models.CharField(max_length=2)
+    second_magnitude_name = models.CharField(max_length=2)
+
+
+class Mass(AstronomicalInfo):
     MASS_SUN = "sun"
     MASS_JUPITER = "jup"
     MASS_NEPTUNE = "nep"
@@ -29,7 +52,7 @@ class AstronomicalMass(AstronomicalInfo):
 
     unit = models.CharField(max_length=3, choices=MASSES_CHOICES, default=MASS_SUN)
 
-class AstronomicalRadius(AstronomicalInfo):
+class Radius(AstronomicalInfo):
     RADIUS_SUN = "sun"
     RADIUS_JUPITER = "jup"
     RADIUS_NEPTUNE = "nep"
@@ -44,7 +67,7 @@ class AstronomicalRadius(AstronomicalInfo):
 
     unit = models.CharField(max_length=3, choices=RADIUS_CHOICES, default=RADIUS_SUN)
 
-class AstronomicalAge(AstronomicalInfo):
+class Age(AstronomicalInfo):
     AGE_GYR = "Gyr"
     AGE_MYR = "Myr"
     AGE_YR = "yr"
@@ -57,7 +80,7 @@ class AstronomicalAge(AstronomicalInfo):
 
     unit = models.CharField(max_length=3, choices=AGE_CHOICES, default=AGE_GYR)
 
-class AstronomicalEffectiveTemperature(AstronomicalInfo):
+class Temperature(AstronomicalInfo):
     TEMP_KELVIN = "K"
     TEMP_CELSIUS = "C"
 
@@ -68,7 +91,7 @@ class AstronomicalEffectiveTemperature(AstronomicalInfo):
 
     unit = models.CharField(max_length=1, choices=TEMP_CHOICES, default=TEMP_KELVIN)
 
-class AstronomicalMetallicity(AstronomicalInfo):
+class Metallicity(AstronomicalInfo):
     METAL_Z = "Z"
     METAL_FEH = "F"
 
@@ -80,7 +103,7 @@ class AstronomicalMetallicity(AstronomicalInfo):
     unit = models.CharField(max_length=4, choices=METAL_CHOICES, default=METAL_Z)
 
 
-class AstronomicalDistance(AstronomicalInfo):
+class Distance(AstronomicalInfo):
     DISTANCE_KM = "km"
     DISTANCE_UA = "UA"
     DISTANCE_LY = "ly"
@@ -100,20 +123,7 @@ class AstronomicalDistance(AstronomicalInfo):
     unit = models.CharField(max_length=3, choices=DISTANCE_CHOICES, default=DISTANCE_PC)
 
 
-class AstronomicalFlux(AstronomicalInfo):
-    name = models.CharField(max_length=500)
-    astronomical_object = models.ForeignKey('AstronomicalObject', null=True, related_name="fluxes", blank=True)
-
-    # see https://docs.djangoproject.com/en/1.6/topics/db/models/#model-methods
-    def is_valid(self):
-        return len(self.name) > 0 and not math.isnan(self.value)
-
-
-class AstronomicalColor(AstronomicalInfo):
-    firstMagnitudeName = models.CharField(max_length=2)
-    secondMagnitudeName = models.CharField(max_length=2)
-
-class AstronomicalOrbitalPeriod(AstronomicalInfo):
+class Period(AstronomicalInfo):
     OPERIOD_SECOND = "s"
     OPERIOD_MINUTE = "m"
     OPERIOD_DAY = "d"
@@ -132,7 +142,7 @@ class AstronomicalOrbitalPeriod(AstronomicalInfo):
 
     unit = models.CharField(max_length=1, choices=OPERIOD_CHOICES, default=OPERIOD_DAY)
 
-class AstronomicalSemiMajorAxis(AstronomicalInfo):
+class EllipseAxis(AstronomicalInfo):
     AXIS_UA = "UA"
     AXIS_SUN = "Rsun"
 
@@ -143,15 +153,7 @@ class AstronomicalSemiMajorAxis(AstronomicalInfo):
 
     unit = models.CharField(max_length=4, choices=AXIS_CHOICES, default=AXIS_UA)
 
-class AstronomicalEccentricity(AstronomicalInfo):
-    pass
-
-
-class AstronomicalInclination(AstronomicalInfo):
-    unit = models.CharField(max_length=10, default="degrees")
-
-
-class AstronomicalAngularDistance(AstronomicalInfo):
+class AngularDistance(AstronomicalInfo):
     ANG_DISTANCE_ARCSEC = "s"
     ANG_DISTANCE_ARCMIN = "mn"
 
@@ -163,5 +165,14 @@ class AstronomicalAngularDistance(AstronomicalInfo):
     unit = models.CharField(max_length=1, choices=ANG_DISTANCE_CHOICES, default=ANG_DISTANCE_ARCSEC)
 
 
-class AstronomicalParallax(AstronomicalInfo):
+class Angle(AstronomicalInfo):
+    unit = models.CharField(max_length=10, default="degrees")
+
+class Velocity(AstronomicalInfo):
+    unit = models.CharField(max_length=10, default="m/s")
+
+class Gravity(AstronomicalInfo):
+    unit = models.CharField(max_length=10, default="log(g/gH)")
+
+class Parallax(AstronomicalInfo):
     unit = models.CharField(max_length=3, default="mas")

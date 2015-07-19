@@ -65,3 +65,17 @@ def astronomical_object_aliases(request, name="."):
 
     serializer = serializers.AliasSerializer(aliases, many=True)
     return Response(serializer.data)
+
+
+@api_view(['GET'])
+def exoplanet(request, name="."):
+    exoplanet, messages = connectors.get_EXOPLANET_EU_object(name)
+
+    if exoplanet is None:
+        return Response(status=status.HTTP_503_SERVICE_UNAVAILABLE)
+
+    if hasattr(exoplanet, "messages") is False:
+        exoplanet.messages = models.Messages(http_status_code=200)
+
+    serializer = serializers.ExoplanetSerializer(exoplanet)
+    return Response(serializer.data)
