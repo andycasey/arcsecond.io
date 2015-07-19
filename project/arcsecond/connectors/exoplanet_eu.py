@@ -63,5 +63,12 @@ def get_EXOPLANET_EU_object(name):
                 else:
                     last_field_name = "this_impossible_field_name"
 
+            if exoplanet.mass is not None:
+                exoplanet.mass.unit = Mass.MASS_JUPITER
+                exoplanet.mass.save()
+            if exoplanet.radius is not None:
+                exoplanet.radius.unit = Radius.RADIUS_JUPITER
+                exoplanet.radius.save()
+
             return exoplanet, Messages(http_status_code=200)
 

@@ -39,9 +39,9 @@ class Color(AstronomicalInfo):
 
 class Mass(AstronomicalInfo):
     MASS_SUN = "sun"
-    MASS_JUPITER = "jup"
-    MASS_NEPTUNE = "nep"
-    MASS_EARTH = "eee"
+    MASS_JUPITER = "jupiter"
+    MASS_NEPTUNE = "neptune"
+    MASS_EARTH = "earth"
 
     MASSES_CHOICES = (
         (MASS_SUN, 'Sun'),
@@ -50,13 +50,13 @@ class Mass(AstronomicalInfo):
         (MASS_EARTH, 'Earth'),
     )
 
-    unit = models.CharField(max_length=3, choices=MASSES_CHOICES, default=MASS_SUN)
+    unit = models.CharField(max_length=7, choices=MASSES_CHOICES, default=MASS_SUN)
 
 class Radius(AstronomicalInfo):
     RADIUS_SUN = "sun"
-    RADIUS_JUPITER = "jup"
-    RADIUS_NEPTUNE = "nep"
-    RADIUS_EARTH = "eee"
+    RADIUS_JUPITER = "jupiter"
+    RADIUS_NEPTUNE = "neptune"
+    RADIUS_EARTH = "earth"
 
     RADIUS_CHOICES = (
         (RADIUS_SUN, 'Sun'),
@@ -65,7 +65,7 @@ class Radius(AstronomicalInfo):
         (RADIUS_EARTH, 'Earth'),
     )
 
-    unit = models.CharField(max_length=3, choices=RADIUS_CHOICES, default=RADIUS_SUN)
+    unit = models.CharField(max_length=7, choices=RADIUS_CHOICES, default=RADIUS_SUN)
 
 class Age(AstronomicalInfo):
     AGE_GYR = "Gyr"
@@ -143,26 +143,26 @@ class Period(AstronomicalInfo):
     unit = models.CharField(max_length=1, choices=OPERIOD_CHOICES, default=OPERIOD_DAY)
 
 class EllipseAxis(AstronomicalInfo):
-    AXIS_UA = "UA"
-    AXIS_SUN = "Rsun"
+    AXIS_UA = "astronomical unit"
+    AXIS_SUN = "sun radius"
 
     AXIS_CHOICES = (
-        (AXIS_UA, 'UA'),
-        (AXIS_SUN, 'Rsun'),
+        (AXIS_UA, 'astronomical unit'),
+        (AXIS_SUN, 'sun radius'),
     )
 
-    unit = models.CharField(max_length=4, choices=AXIS_CHOICES, default=AXIS_UA)
+    unit = models.CharField(max_length=18, choices=AXIS_CHOICES, default=AXIS_UA)
 
 class AngularDistance(AstronomicalInfo):
-    ANG_DISTANCE_ARCSEC = "s"
-    ANG_DISTANCE_ARCMIN = "mn"
+    ANG_DISTANCE_ARCSEC = "arcsec"
+    ANG_DISTANCE_ARCMIN = "arcmin"
 
     ANG_DISTANCE_CHOICES = (
         (ANG_DISTANCE_ARCSEC, 'arcsec'),
         (ANG_DISTANCE_ARCMIN, 'arcmin'),
     )
 
-    unit = models.CharField(max_length=1, choices=ANG_DISTANCE_CHOICES, default=ANG_DISTANCE_ARCSEC)
+    unit = models.CharField(max_length=6, choices=ANG_DISTANCE_CHOICES, default=ANG_DISTANCE_ARCSEC)
 
 
 class Angle(AstronomicalInfo):
