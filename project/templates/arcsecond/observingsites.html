@@ -6,8 +6,6 @@
 
 {% block extra_head_block %}
     {{ block.super }}
-    <link rel="stylesheet" href="{% static 'css/sticky-footer.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/earth_browse.css' %}" />
     {% leaflet_js %}
     {% leaflet_css %}
 {% endblock extra_head_block %}
@@ -26,7 +24,7 @@
     </div>
 
     <div class="row">
-        <div class="col-md-3 col-md-offset-1">
+        <div class="col-md-2 col-md-offset-1">
             <ul class="nav nav-pills nav-pills nav-stacked text-right">
                 <li role="presentation"><a href="#">Africa <span class="badge">{{ african_sites.count }}</span></a></li>
                 <li role="presentation"><a href="#">Antarctica <span class="badge">{{ antarctica_sites.count }}</span></a></li>
@@ -37,35 +35,18 @@
                 <li role="presentation"><a href="#">South America <span class="badge">{{ south_american_sites.count }}</span></a></li>
             </ul>
         </div>
+    </div>
 
-        <div class="col-md-8">
-
-        </div>
+    <div class="row">
+        <div class="site-wrapper">
+            <div id="map-canvas" class="contact__map"></div>
+        </div> <!-- / .site-wrapper -->
     </div>
 
 {% endblock body_block %}
 
 {% block after_body_raw_block %}
-    <div class="row-fluid">
-        <div class="col-md-12" id="earth_map">
-            {% leaflet_map "earth_map" %}
-        </div>
-    </div>
-
-    <script type="text/javascript">
-        function is_touch_device() {
-            return 'ontouchstart' in window // works on most browsers
-                    || 'onmsgesturechange' in window; // works on ie10
-        };
-
-        $(document).ready(function () {
-            config_map();
-            function config_map() {
-                if (!is_touch_device()) {
-                    $('earth_map').touchZoom.disable();
-                }
-            };
-        });
-    </script>
-
+    {{ block.super }}
+    <script src="{% static 'arcsecond/js/observingsites-maps.js' %}"></script>
 {% endblock after_body_raw_block %}
+

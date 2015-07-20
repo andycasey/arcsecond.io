@@ -467,6 +467,8 @@
 {% block after_body_raw_block %}
     {{ block.super }}
 
+    <script src="{% static 'arcsecond/js/plugins/google-maps.js' %}"></script>
+
     <script>
         $(document).ready(function () {
             $(".go-button").click(function() {
