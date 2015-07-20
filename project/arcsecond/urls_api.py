@@ -6,8 +6,8 @@ from project.arcsecond import views
 
 urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
-    url(r'^1/objects/(?P<name>[\s\+0-9a-zA-Z_-]+)/$', views.astronomical_object, name='objects'),
-    url(r'^1/exoplanets/(?P<name>[\s\+0-9a-zA-Z_-]+)/$', views.exoplanet, name="exoplanets")
+    url(r'^1/objects/(?P<name>[\s\+0-9a-zA-Z_-]+)/$', views.AstronomicalObjectGETView.as_view(), name='objects'),
+    url(r'^1/exoplanets/(?P<name>[\s\+0-9a-zA-Z_-]+)/$', views.exoplanet, name="exoplanets"),
 
     # url(r'^sky/1/object/(?P<name>[\s\+0-9a-zA-Z_-]+)/coordinates/?$', views.astronomical_coordinates, name='sky-object-coordinates'),
     # url(r'^sky/1/object/(?P<name>[\s\+0-9a-zA-Z_-]+)/aliases/?$', views.astronomical_object_aliases, name='sky-object-aliases'),

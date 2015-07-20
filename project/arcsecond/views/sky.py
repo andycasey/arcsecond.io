@@ -1,24 +1,33 @@
+
 from rest_framework import status
 from rest_framework.decorators import api_view
+from rest_framework.generics import RetrieveAPIView
 from rest_framework.response import Response
 
 from project.arcsecond import connectors
 from project.arcsecond import serializers
 from project.arcsecond import models
+from project.arcsecond import mixins
 
 
-@api_view(['GET'])
-def astronomical_object(request, name="."):
-    obj, created = models.AstronomicalObject.objects.get_or_create(name=name)
+class AstronomicalObjectGETView(mixins.RequestLogViewMixin, RetrieveAPIView):
+    queryset = models.AstronomicalObject.objects.all()
+    serializer_class = serializers.AstronomicalObjectSerializer
 
-    if created or obj.coordinates is None:
-        coords, messages = connectors.get_SIMBAD_coordinates(name)
+    def get_object(self):
+        queryset = self.get_queryset()
 
-        if coords is None:
-            obj.messages = messages
-        else:
-            obj.coordinates = coords
-            obj.save()
+        name = self.kwargs.get("name", None)
+        obj, created = models.AstronomicalObject.objects.get_or_create(name=name)
+
+        if created or obj.coordinates is None:
+            coords, messages = connectors.get_SIMBAD_coordinates(name=name)
+
+            if coords is None:
+                obj.messages = messages
+            else:
+                obj.coordinates = coords
+                obj.save()
 
         if created or obj.aliases.all().count() == 0:
             aliases = connectors.get_SIMBAD_aliases(name)
@@ -38,11 +47,7 @@ def astronomical_object(request, name="."):
                 obj.fluxes = fluxes
                 obj.save()
 
-    if hasattr(obj, "messages") is False:
-        obj.messages = models.Messages(http_status_code=200)
-
-    serializer = serializers.AstronomicalObjectSerializer(obj)
-    return Response(serializer.data)
+        return obj
 
 
 @api_view(['GET'])

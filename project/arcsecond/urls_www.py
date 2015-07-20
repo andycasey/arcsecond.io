@@ -1,6 +1,4 @@
 from django.conf import settings
-from django.core.urlresolvers import reverse
-from django.views.generic import RedirectView
 from django.conf.urls import patterns, url, include
 from django.contrib import admin
 
@@ -24,7 +22,8 @@ urlpatterns = patterns('',
 )
 
 if settings.DEBUG:
-    urlpatterns += patterns('', url(r'^1/exoplanets/(?P<name>[\s\+0-9a-zA-Z_-]+)/$', views.exoplanet, name="exoplanets"),)
+    urlpatterns += patterns('', url(r'^1/exoplanets/(?P<name>[\s\+0-9a-zA-Z_-]+)/$', views.exoplanet, name="exoplanets"))
+    urlpatterns += patterns('', url(r'^1/objects_debug/(?P<name>[\s\+0-9a-zA-Z_-]+)/$', views.AstronomicalObjectGETView.as_view(), name='astronomicalobject-detail'))
 
 urlpatterns += format_suffix_patterns(urlpatterns)
 

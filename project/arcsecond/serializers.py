@@ -15,10 +15,10 @@ class BibliographicReferenceSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = BibliographicReference
 
-class MessagesSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Messages
-        fields = ('warn', 'error', 'info', 'debug', 'http_status_code') if settings.DEBUG is True else ('warn', 'error', 'info', 'http_status_code')
+# class MessagesSerializer(serializers.HyperlinkedModelSerializer):
+#     class Meta:
+#         model = Messages
+#         fields = ('warn', 'error', 'info', 'debug', 'http_status_code') if settings.DEBUG is True else ('warn', 'error', 'info', 'http_status_code')
 
 ######################## Infos ########################
 
@@ -132,19 +132,17 @@ class ObservingSiteSerializer(serializers.HyperlinkedModelSerializer):
 
 
 
-######################## Sky ########################
+######################## Objects Properties ########################
 
 class AstronomicalCoordinatesSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = AstronomicalCoordinates
         fields = ("system", "right_ascension", "right_ascension_units", "declination", "declination_units", "epoch", "equinox")
 
-
 class AliasSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Alias
         fields = ("name", "catalogue_url")
-
 
 class ObjectTypeSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -152,22 +150,24 @@ class ObjectTypeSerializer(serializers.HyperlinkedModelSerializer):
         fields = ("value",)
 
 
+######################## Objects ########################
+
 class AstronomicalObjectSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = AstronomicalObject
-        fields = ("name", "coordinates", "aliases", "object_types", "fluxes", "messages")
+        lookup_field = "name"
 
     coordinates = AstronomicalCoordinatesSerializer()
-    aliases = AliasSerializer(many=True)
-    object_types = ObjectTypeSerializer(many=True)
-    fluxes = FluxSerializer(many=True)
-    messages = MessagesSerializer()
+    aliases = AliasSerializer(many=True, required=False)
+    object_types = ObjectTypeSerializer(many=True, required=False)
+    fluxes = FluxSerializer(many=True, required=False)
+
+    mass = MassSerializer(required=False)
 
 
 class ExoplanetSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Exoplanet
-        fields = ("name", "mass", "radius", "orbital_period", "semi_major_axis", "eccentricity", "inclination", "omega", "geometric_albedo", "messages")
 
     mass = MassSerializer(required=False)
     radius = RadiusSerializer(required=False)
@@ -177,4 +177,3 @@ class ExoplanetSerializer(serializers.HyperlinkedModelSerializer):
     inclination = AngleSerializer(required=False)
     omega = AngleSerializer(required=False)
     geometric_albedo = AlbedoSerializer(required=False)
-    messages = MessagesSerializer()
