@@ -15,8 +15,6 @@ class AstronomicalObjectGETView(mixins.RequestLogViewMixin, RetrieveAPIView):
     serializer_class = serializers.AstronomicalObjectSerializer
 
     def get_object(self):
-        queryset = self.get_queryset()
-
         name = self.kwargs.get("name", None)
         obj, created = models.AstronomicalObject.objects.get_or_create(name=name)
 
@@ -50,39 +48,16 @@ class AstronomicalObjectGETView(mixins.RequestLogViewMixin, RetrieveAPIView):
         return obj
 
 
-@api_view(['GET'])
-def astronomical_coordinates(request, name="."):
-    coords = connectors.get_SIMBAD_coordinates(name)
+class ExoplanetGETView(mixins.RequestLogViewMixin, RetrieveAPIView):
+    queryset = models.Exoplanet.objects.all()
+    serializer_class = serializers.ExoplanetSerializer
 
-    if coords is None:
-        return Response(status=status.HTTP_503_SERVICE_UNAVAILABLE)
+    def get_object(self):
+        name = self.kwargs.get("name", None)
+        exoplanet, created = models.Exoplanet.objects.get_or_create(name=name)
 
-    serializer = serializers.AstronomicalCoordinatesSerializer(coords)
-    return Response(serializer.data)
+        if exoplanet is None:
+            exoplanet = connectors.get_EXOPLANET_EU_object(name)
 
-
-@api_view(['GET'])
-def astronomical_object_aliases(request, name="."):
-    aliases = connectors.get_SIMBAD_aliases(name)
-
-    if aliases is None:
-        return Response(status=status.HTTP_503_SERVICE_UNAVAILABLE)
-
-    serializer = serializers.AliasSerializer(aliases, many=True)
-    return Response(serializer.data)
-
-
-@api_view(['GET'])
-def exoplanet(request, name="."):
-    exoplanet, messages = connectors.get_EXOPLANET_EU_object(name)
-
-    if exoplanet is None:
-        return Response(status=status.HTTP_503_SERVICE_UNAVAILABLE)
-
-    if hasattr(exoplanet, "messages") is False:
-        exoplanet.messages = models.Messages(http_status_code=200)
-
-    exoplanet.save()
-
-    serializer = serializers.ExoplanetSerializer(exoplanet)
-    return Response(serializer.data)
+        exoplanet.save()
+        return exoplanet

@@ -44,13 +44,13 @@ def get_SIMBAD_coordinates(name):
     try:
         response = urllib2.urlopen(SIMBAD_ROOT+NAME_SCRIPT+urllib2.quote(url))
     except urllib2.URLError:
-        return None, Messages(error="Invalid URL", http_status_code=status.HTTP_400_BAD_REQUEST)
+        return None
     else:
         try:
             response_votable = votable.parse(response.fp)
             first_table = response_votable.get_first_table()
         except:
-            return None, Messages(error="Unrecognized identifier or invalid VO Table for coordinates", http_status_code=status.HTTP_204_NO_CONTENT)
+            return None
         else:
             ra = float(first_table.array[0][0])
             dec = float(first_table.array[0][1])
@@ -60,7 +60,7 @@ def get_SIMBAD_coordinates(name):
             except MultipleObjectsReturned:
                 coords = AstronomicalCoordinates.objects.filter(right_ascension=ra, declination=dec).first()
 
-            return coords, Messages(http_status_code=200)
+            return coords
 
 
 def get_SIMBAD_aliases(name):

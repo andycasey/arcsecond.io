@@ -13,13 +13,13 @@ def get_EXOPLANET_EU_object(name):
     try:
         response = urllib2.urlopen(url)
     except urllib2.URLError:
-        return None, Messages(error="Invalid URL", http_status_code=status.HTTP_400_BAD_REQUEST)
+        return None
     else:
         try:
             response_votable = votable.parse(response.fp)
             first_table = response_votable.get_first_table()
         except:
-            return None, Messages(error="Unrecognized identifier or invalid VO Table for exoplanet", http_status_code=status.HTTP_204_NO_CONTENT)
+            return None
         else:
             name = first_table.array[0][0]
 
@@ -70,5 +70,5 @@ def get_EXOPLANET_EU_object(name):
                 exoplanet.radius.unit = Radius.RADIUS_JUPITER
                 exoplanet.radius.save()
 
-            return exoplanet, Messages(http_status_code=200)
+            return exoplanet
 

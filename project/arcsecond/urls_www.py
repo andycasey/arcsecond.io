@@ -22,7 +22,7 @@ urlpatterns = patterns('',
 )
 
 if settings.DEBUG:
-    urlpatterns += patterns('', url(r'^1/exoplanets/(?P<name>[\s\+0-9a-zA-Z_-]+)/$', views.exoplanet, name="exoplanets"))
+    urlpatterns += patterns('', url(r'^1/exoplanets_debug/(?P<name>[\s\+0-9a-zA-Z_-]+)/$', views.ExoplanetGETView.as_view(), name="exoplanet-detail"))
     urlpatterns += patterns('', url(r'^1/objects_debug/(?P<name>[\s\+0-9a-zA-Z_-]+)/$', views.AstronomicalObjectGETView.as_view(), name='astronomicalobject-detail'))
 
 urlpatterns += format_suffix_patterns(urlpatterns)

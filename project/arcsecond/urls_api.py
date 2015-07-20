@@ -6,12 +6,8 @@ from project.arcsecond import views
 
 urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
-    url(r'^1/objects/(?P<name>[\s\+0-9a-zA-Z_-]+)/$', views.AstronomicalObjectGETView.as_view(), name='objects'),
-    url(r'^1/exoplanets/(?P<name>[\s\+0-9a-zA-Z_-]+)/$', views.exoplanet, name="exoplanets"),
-
-    # url(r'^sky/1/object/(?P<name>[\s\+0-9a-zA-Z_-]+)/coordinates/?$', views.astronomical_coordinates, name='sky-object-coordinates'),
-    # url(r'^sky/1/object/(?P<name>[\s\+0-9a-zA-Z_-]+)/aliases/?$', views.astronomical_object_aliases, name='sky-object-aliases'),
-    # url(r'^sky/object/(?P<name>[\s\+0-9a-zA-Z_-]+)/?$', RedirectView.as_view(url=reverse('sky-object'), permanent=True)),
+    url(r'^1/objects/(?P<name>[\s\+0-9a-zA-Z_-]+)/$', views.AstronomicalObjectGETView.as_view(), name='astronomicalobject-detail'),
+    url(r'^1/exoplanets/(?P<name>[\s\+0-9a-zA-Z_-]+)/$', views.ExoplanetGETView.as_view(), name="exoplanet-detail"),
 
     # url(r'^earth/?$', views.earth_home, name="earth-home"),
     # url(r'^earth/browse/?$', views.earth_browse, name="earth-browse"),

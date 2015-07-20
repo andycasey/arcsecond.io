@@ -168,6 +168,7 @@ class AstronomicalObjectSerializer(serializers.HyperlinkedModelSerializer):
 class ExoplanetSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Exoplanet
+        lookup_field = "name"
 
     mass = MassSerializer(required=False)
     radius = RadiusSerializer(required=False)
