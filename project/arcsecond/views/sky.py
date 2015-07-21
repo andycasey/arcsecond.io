@@ -19,11 +19,8 @@ class AstronomicalObjectGETView(mixins.RequestLogViewMixin, RetrieveAPIView):
         obj, created = models.AstronomicalObject.objects.get_or_create(name=name)
 
         if created or obj.coordinates is None:
-            coords, messages = connectors.get_SIMBAD_coordinates(name=name)
-
-            if coords is None:
-                obj.messages = messages
-            else:
+            coords = connectors.get_SIMBAD_coordinates(name=name)
+            if coords is not None:
                 obj.coordinates = coords
                 obj.save()
 
