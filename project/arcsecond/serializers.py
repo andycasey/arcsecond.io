@@ -41,7 +41,7 @@ class EccentricitySerializer(serializers.HyperlinkedModelSerializer):
 class FluxSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Flux
-        fields = ("value", "unit", "error_max", "error_min", "bibcode")
+        fields = ("name", "value", "error_max", "error_min", "bibcode")
 
 class ColorSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
