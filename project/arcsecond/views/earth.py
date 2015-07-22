@@ -7,7 +7,7 @@ from project.arcsecond import serializers
 # Django doc: Note that this method returns a ValuesListQuerySet. This class behaves like a list.
 # Most of the time this is enough, but if you require an actual Python list object, you can simply call list() on it,
 #  which will evaluate the queryset
-class SiteCoordinatesList(generics.ListCreateAPIView):
+class SiteCoordinatesList(generics.ListAPIView):
     queryset = models.ObservingSite.objects.all().values_list('coordinates', flat=True)
     serializer_class = serializers.CoordinatesSerializer
 
@@ -15,7 +15,7 @@ class SiteCoordinatesDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.ObservingSite.objects.all().values_list('coordinates', flat=True)
     serializer_class = serializers.CoordinatesSerializer
 
-class ObservingSiteList(generics.ListCreateAPIView):
+class ObservingSiteList(generics.ListAPIView):
     queryset = models.ObservingSite.objects.all()
     serializer_class = serializers.ObservingSiteSerializer
 
