@@ -1,4 +1,5 @@
 
+from django.core import exceptions
 from rest_framework import generics
 
 from project.arcsecond import connectors
@@ -49,14 +50,15 @@ class ExoplanetDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIVie
 
     def get_object(self):
         name = self.kwargs.get("name", None)
-        exoplanet, created = models.Exoplanet.objects.get_or_create(name=name)
+        try:
+            exoplanet = models.Exoplanet.objects.get(name=name)
+        except exceptions.ObjectDoesNotExist:
+            connectors.get_EXOPLANET_EU_full_catalog()
+            exoplanet = models.Exoplanet.objects.get(name=name)
 
-        if exoplanet is None:
-            exoplanet = connectors.get_EXOPLANET_EU_object(name)
-
-        exoplanet.save()
         return exoplanet
 
 class ExoplanetListAPIView(mixins.RequestLogViewMixin, generics.ListAPIView):
     queryset = models.Exoplanet.objects.all()
     serializer_class = serializers.ExoplanetSerializer
+    lookup_field = "name"

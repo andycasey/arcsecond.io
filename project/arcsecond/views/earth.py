@@ -3,23 +3,18 @@ from django.shortcuts import render
 
 from project.arcsecond import models
 from project.arcsecond import serializers
+from project.arcsecond import mixins
 
-# Django doc: Note that this method returns a ValuesListQuerySet. This class behaves like a list.
-# Most of the time this is enough, but if you require an actual Python list object, you can simply call list() on it,
-#  which will evaluate the queryset
-class SiteCoordinatesList(generics.ListAPIView):
+class CoordinatesDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIView):
     queryset = models.ObservingSite.objects.all().values_list('coordinates', flat=True)
     serializer_class = serializers.CoordinatesSerializer
 
-class SiteCoordinatesDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = models.ObservingSite.objects.all().values_list('coordinates', flat=True)
-    serializer_class = serializers.CoordinatesSerializer
-
-class ObservingSiteList(generics.ListAPIView):
+class ObservingSiteListAPIView(mixins.RequestLogViewMixin, generics.ListAPIView):
     queryset = models.ObservingSite.objects.all()
     serializer_class = serializers.ObservingSiteSerializer
+    lookup_field = "name"
 
-class ObservingSiteDetail(generics.RetrieveAPIView):
+class ObservingSiteDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIView):
     queryset = models.ObservingSite.objects.all()
     serializer_class = serializers.ObservingSiteSerializer
     lookup_field = "name"
