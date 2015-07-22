@@ -118,7 +118,7 @@ class ParallaxSerializer(serializers.HyperlinkedModelSerializer):
 class CoordinatesSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Coordinates
-        fields = ("longitude", "latitude", "height", "east_positive")
+        fields = ("longitude", "latitude", "height")
         lookup_field = "url"
 
 

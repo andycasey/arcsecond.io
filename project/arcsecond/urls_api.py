@@ -11,7 +11,10 @@ urlpatterns = patterns('',
 
     # url(r'^earth/?$', views.earth_home, name="earth-home"),
     # url(r'^earth/browse/?$', views.earth_browse, name="earth-browse"),
-    #
+
+    url(r'^1/observingsites/$', views.ObservingSiteList.as_view(), name="observingsite-list"),
+    # url(r'^1/observingsites/(?P<name>[\s\+0-9a-zA-Z_-]+)/$', views.ObservingSiteList.as_view(), name="observingsite-list"),
+
     # url(r'^earth/site/?$', views.ObservingSiteList.as_view(), name='site-list'),
     # url(r'^earth/site/(?P<pk>[0-9]+)/?$', views.ObservingSiteDetail.as_view(), name='site-list'),
     #
