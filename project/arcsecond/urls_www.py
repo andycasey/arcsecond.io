@@ -25,6 +25,8 @@ if settings.DEBUG:
     urlpatterns += patterns('', url(r'^1/exoplanets_debug/(?P<name>[\s\+0-9a-zA-Z_-]+)/$', views.ExoplanetGETView.as_view(), name="exoplanet-detail"))
     urlpatterns += patterns('', url(r'^1/objects_debug/(?P<name>[\s\+0-9a-zA-Z_-]+)/$', views.AstronomicalObjectGETView.as_view(), name='astronomicalobject-detail'))
     urlpatterns += patterns('', url(r'^1/observingsites_debug/$', views.ObservingSiteList.as_view(), name="observingsite-list"))
+    urlpatterns += patterns('', url(r'^1/observingsites_debug/(?P<name>[\s\+0-9a-zA-Z_-]+)/$', views.ObservingSiteDetail.as_view(), name="observingsite-detail"))
+    urlpatterns += patterns('', url(r'^1/coordinates_debug/(?P<pk>\d+)/$', views.SiteCoordinatesDetail.as_view(), name="coordinates-detail"))
 
 urlpatterns += format_suffix_patterns(urlpatterns)
 

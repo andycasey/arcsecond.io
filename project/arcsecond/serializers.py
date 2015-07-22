@@ -113,13 +113,13 @@ class ParallaxSerializer(serializers.HyperlinkedModelSerializer):
         model = Velocity
         fields = ("value", "unit", "error_max", "error_min", "bibcode")
 
+
+
 ######################## Earth ########################
 
 class CoordinatesSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Coordinates
-        fields = ("longitude", "latitude", "height")
-        lookup_field = "url"
 
 
 class ObservingSiteSerializer(serializers.HyperlinkedModelSerializer):
@@ -127,8 +127,7 @@ class ObservingSiteSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = ObservingSite
-        fields = ("name", "coordinates", "IAUCode")
-        lookup_field = "url"
+        lookup_field = "name"
 
 
 

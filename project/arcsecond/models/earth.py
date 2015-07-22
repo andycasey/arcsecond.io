@@ -58,6 +58,7 @@ class ObservingSite(models.Model):
 
     CONTINENT_UNDEFINED = "(Undefined)"
     CONTINENT_ASIA = "Asia"
+    CONTINENT_AFRICA = "Africa"
     CONTINENT_ANTARCTICA = "Antarctica"
     CONTINENT_EUROPE = "Europe"
     CONTINENT_NORTH_AMERICA = "North America"
@@ -67,6 +68,7 @@ class ObservingSite(models.Model):
     CONTINENTS_TYPES_CHOICES = (
         (CONTINENT_UNDEFINED, '(Undefined)'),
         (CONTINENT_ASIA, 'Asia'),
+        (CONTINENT_AFRICA, 'Africa'),
         (CONTINENT_ANTARCTICA, 'Antarctica'),
         (CONTINENT_EUROPE, 'Europe'),
         (CONTINENT_NORTH_AMERICA, 'North America'),

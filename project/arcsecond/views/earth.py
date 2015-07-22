@@ -19,9 +19,10 @@ class ObservingSiteList(generics.ListAPIView):
     queryset = models.ObservingSite.objects.all()
     serializer_class = serializers.ObservingSiteSerializer
 
-class ObservingSiteDetail(generics.RetrieveUpdateDestroyAPIView):
+class ObservingSiteDetail(generics.RetrieveAPIView):
     queryset = models.ObservingSite.objects.all()
     serializer_class = serializers.ObservingSiteSerializer
+    lookup_field = "name"
 
 def observingsites(request, path=None):
     african_sites = models.ObservingSite.objects.filter(continent='Africa')
