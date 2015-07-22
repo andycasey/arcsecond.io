@@ -1,8 +1,5 @@
 
-from rest_framework import status
-from rest_framework.decorators import api_view
-from rest_framework.generics import RetrieveAPIView
-from rest_framework.response import Response
+from rest_framework import generics
 
 from project.arcsecond import connectors
 from project.arcsecond import serializers
@@ -10,7 +7,7 @@ from project.arcsecond import models
 from project.arcsecond import mixins
 
 
-class AstronomicalObjectGETView(mixins.RequestLogViewMixin, RetrieveAPIView):
+class AstronomicalObjectAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIView):
     queryset = models.AstronomicalObject.objects.all()
     serializer_class = serializers.AstronomicalObjectSerializer
 
@@ -45,9 +42,10 @@ class AstronomicalObjectGETView(mixins.RequestLogViewMixin, RetrieveAPIView):
         return obj
 
 
-class ExoplanetGETView(mixins.RequestLogViewMixin, RetrieveAPIView):
+class ExoplanetDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIView):
     queryset = models.Exoplanet.objects.all()
     serializer_class = serializers.ExoplanetSerializer
+    lookup_field = "name"
 
     def get_object(self):
         name = self.kwargs.get("name", None)
@@ -58,3 +56,7 @@ class ExoplanetGETView(mixins.RequestLogViewMixin, RetrieveAPIView):
 
         exoplanet.save()
         return exoplanet
+
+class ExoplanetListAPIView(mixins.RequestLogViewMixin, generics.ListAPIView):
+    queryset = models.Exoplanet.objects.all()
+    serializer_class = serializers.ExoplanetSerializer
