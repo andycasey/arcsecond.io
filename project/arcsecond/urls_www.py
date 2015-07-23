@@ -23,7 +23,8 @@ urlpatterns = patterns('',
 
 if settings.DEBUG:
     urlpatterns += patterns('', url(r'^1/exoplanets_debug/$', views.ExoplanetListAPIView.as_view(), name="exoplanet-list"))
-    urlpatterns += patterns('', url(r'^1/exoplanets_debug/(?P<name>[\s\+0-9a-zA-Z_-]+)/$', views.ExoplanetDetailAPIView.as_view(), name="exoplanet-detail"))
+    urlpatterns += patterns('', url(r'^1/exoplanets_debug/(?P<pk>\d+)/$', views.ExoplanetDetailAPIView.as_view(), name="exoplanet-detail"))
+    urlpatterns += patterns('', url(r'^1/exoplanets_debug/(?P<name>[\s\+0-9a-zA-Z_-]+)/$', views.ExoplanetNamedDetailAPIView.as_view(), name="exoplanet-named-detail"))
 
     urlpatterns += patterns('', url(r'^1/objects_debug/(?P<name>[\s\+0-9a-zA-Z_-]+)/$', views.AstronomicalObjectAPIView.as_view(), name='astronomicalobject-detail'))
 

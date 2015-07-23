@@ -8,8 +8,9 @@ urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
     url(r'^1/objects/(?P<name>[\s\+0-9a-zA-Z_-]+)/$', views.AstronomicalObjectAPIView.as_view(), name='astronomicalobject-detail'),
 
-    url(r'^1/exoplanets/(?P<name>[\s\+0-9a-zA-Z_-]+)/$', views.ExoplanetDetailAPIView.as_view(), name="exoplanet-detail"),
     url(r'^1/exoplanets/$', views.ExoplanetListAPIView.as_view(), name="exoplanet-list"),
+    url(r'^1/exoplanets/(?P<pk>\d+)/$', views.ExoplanetDetailAPIView.as_view(), name="exoplanet-detail"),
+    url(r'^1/exoplanets/(?P<name>[\s\+0-9a-zA-Z_-]+)/$', views.ExoplanetNamedDetailAPIView.as_view(), name="exoplanet-named-detail"),
 
     # url(r'^earth/?$', views.earth_home, name="earth-home"),
     # url(r'^earth/browse/?$', views.earth_browse, name="earth-browse"),
