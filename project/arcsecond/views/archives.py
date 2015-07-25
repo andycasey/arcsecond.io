@@ -1,5 +1,6 @@
-from rest_framework import generics
 from django.core import exceptions
+
+from rest_framework import generics
 
 from project.arcsecond import connectors
 from project.arcsecond import models
@@ -13,10 +14,5 @@ class ESOProgrammeSummaryDetailAPIView(mixins.RequestLogViewMixin, generics.Retr
 
     def get_object(self):
         programme_id = self.kwargs.get("programme_id", None)
-
-        try:
-            obj = models.ESOProgrammeSummary.objects.get(programme_id=programme_id)
-        except exceptions.ObjectDoesNotExist:
-            obj = connectors.get_ESO_programme_id_summary(programme_id)
-
+        obj = connectors.get_ESO_programme_id_summary(programme_id)
         return obj

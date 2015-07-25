@@ -108,7 +108,7 @@ def get_ESO_programme_id_summary(programme_id):
             elif line.startswith(LINE_PUBLICATIONS_PREFIX):
                 value = line.replace(LINE_PUBLICATIONS_PREFIX, "").strip()
                 value_soup = BeautifulSoup(value, "html.parser")
-                prog.publications_url = ESO_ARCHIVE_ROOT+value_soup.a.get('href')
+                prog.publications_url = value_soup.a.get('href')
 
         prog.save()
         return prog
