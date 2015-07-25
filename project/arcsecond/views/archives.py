@@ -14,9 +14,9 @@ class ESOProgrammeSummaryDetailAPIView(mixins.RequestLogViewMixin, generics.Retr
     def get_object(self):
         programme_id = self.kwargs.get("programme_id", None)
 
-        # try:
-        #     obj = models.ESOProgrammeSummary.objects.get(programme_id=programme_id)
-        # except exceptions.ObjectDoesNotExist:
-        obj = connectors.get_ESO_programme_id_summary(programme_id)
+        try:
+            obj = models.ESOProgrammeSummary.objects.get(programme_id=programme_id)
+        except exceptions.ObjectDoesNotExist:
+            obj = connectors.get_ESO_programme_id_summary(programme_id)
 
         return obj
