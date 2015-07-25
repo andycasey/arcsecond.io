@@ -87,7 +87,7 @@
                     </p>
 
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-6">
 
                     <!-- About item #1 -->
                     <div class="about__item">
@@ -109,7 +109,7 @@
                     </div> <!-- / .about__item -->
 
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-6">
 
                     <!-- About item #2 -->
                     <div class="about__item">
@@ -131,7 +131,7 @@
                     </div> <!-- / .about__item -->
 
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-6">
 
                     <!-- About item #3 -->
                     <div class="about__item">
@@ -144,7 +144,7 @@
                     </div> <!-- / .about__item -->
 
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-6">
 
                     <!-- About item #4 -->
                     <div class="about__item">
@@ -157,7 +157,7 @@
                     </div> <!-- / .about__item -->
 
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-6">
 
                     <!-- About item #5 -->
                     <div class="about__item">
@@ -170,7 +170,7 @@
                     </div> <!-- / .about__item -->
 
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-6">
 
                     <!-- About item #6 -->
                     <div class="about__item">
@@ -183,6 +183,37 @@
                     </div> <!-- / .about__item -->
 
                 </div>
+
+                <div class="col-sm-6">
+
+                    <!-- About item #6 -->
+                    <div class="about__item">
+                        <h3 class="about-item__title">
+                            <img src="{% static 'arcsecond/images/FITSIcon_512x512.png' %}" border="0" width="20"> Data Archives
+                        </h3>
+                        <p class="about-item__content">
+                            Data Archives from <a href="http://archive.eso.org/eso/eso_archive_main.html">ESO</a>, <a href="http://archive.stsci.edu">MAST</a> etc. Wouldn't be cool, no? For the moment, I only have ESO programmes summary. But other archives as well as FITS data is planned.
+                        </p>
+                        <form class="form-inline">
+                            <div class="form-group form-group-sm">
+                                <div class="input-group">
+                                    <div class="input-group-addon go-api">/{{ api_version }}/archives/
+                                        <select class="go-select">
+                                            <option>ESO</option>
+                                            <option>HST</option>
+                                            <option>MAST</option>
+                                        </select>&nbsp;/
+                                    </div>
+                                    <input type="text" class="form-control go-input" placeholder="073.D-0473(A)">
+                                    <div class="input-group-addon go-api-suffix">/summary/</div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-default go-button">Go</button>
+                        </form>
+                    </div> <!-- / .about__item -->
+
+                </div>
+
             </div> <!-- / .row -->
         </div> <!-- / .container -->
     </div> <!-- / .site-wrapper_classic -->
@@ -210,48 +241,46 @@
                 </div>
             </div> <!-- / .row -->
 
-{#            <div class="row">#}
-{#                <div class="col-sm-6 col-md-5 col-md-offset-1">#}
-{##}
-{#                    <!-- Features item -->#}
-{#                    <div class="features__item">#}
-{##}
-{#                        <!-- Title -->#}
-{#                        <h3 class="features-item__title">#}
-{#                            <span class="text-primary">01.</span>#}
-{#                            Five color options#}
-{#                        </h3>#}
-{##}
-{#                        <!-- Summary -->#}
-{#                        <div class="features-item__summary">#}
-{#                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at scelerisque diam, ut pellentesque leo. Morbi lacinia ut nibh eget euismod. Donec molestie odio sed leo interdum ultrices.#}
-{#                        </div>#}
-{#                    </div> <!-- / .features__item -->#}
-{##}
-{#                </div>#}
-{#                <div class="col-sm-6 col-md-5">#}
-{##}
-{#                    <!-- Features item -->#}
-{#                    <div class="features__item">#}
-{##}
-{#                        <!-- Title -->#}
-{#                        <h3 class="features-item__title">#}
-{#                            <span class="text-primary">02.</span>#}
-{#                            Two menu types#}
-{#                        </h3>#}
-{##}
-{#                        <!-- Summary -->#}
-{#                        <div class="features-item__summary">#}
-{#                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at scelerisque diam, ut pellentesque leo. Morbi lacinia ut nibh eget euismod. Donec molestie odio sed leo interdum ultrices.#}
-{#                        </div>#}
-{#                    </div> <!-- / .features__item -->#}
-{##}
-{#                </div>#}
-{#            </div> <!-- / .row -->#}
+            {#            <div class="row">#}
+            {#                <div class="col-sm-6 col-md-5 col-md-offset-1">#}
+            {##}
+            {#                    <!-- Features item -->#}
+            {#                    <div class="features__item">#}
+            {##}
+            {#                        <!-- Title -->#}
+            {#                        <h3 class="features-item__title">#}
+            {#                            <span class="text-primary">01.</span>#}
+            {#                            Five color options#}
+            {#                        </h3>#}
+            {##}
+            {#                        <!-- Summary -->#}
+            {#                        <div class="features-item__summary">#}
+            {#                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at scelerisque diam, ut pellentesque leo. Morbi lacinia ut nibh eget euismod. Donec molestie odio sed leo interdum ultrices.#}
+            {#                        </div>#}
+            {#                    </div> <!-- / .features__item -->#}
+            {##}
+            {#                </div>#}
+            {#                <div class="col-sm-6 col-md-5">#}
+            {##}
+            {#                    <!-- Features item -->#}
+            {#                    <div class="features__item">#}
+            {##}
+            {#                        <!-- Title -->#}
+            {#                        <h3 class="features-item__title">#}
+            {#                            <span class="text-primary">02.</span>#}
+            {#                            Two menu types#}
+            {#                        </h3>#}
+            {##}
+            {#                        <!-- Summary -->#}
+            {#                        <div class="features-item__summary">#}
+            {#                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at scelerisque diam, ut pellentesque leo. Morbi lacinia ut nibh eget euismod. Donec molestie odio sed leo interdum ultrices.#}
+            {#                        </div>#}
+            {#                    </div> <!-- / .features__item -->#}
+            {##}
+            {#                </div>#}
+            {#            </div> <!-- / .row -->#}
 
-        </div>
-    </div> <!-- / .row -->
-    </div> <!-- / .container -->
+        </div> <!-- / .container -->
     </div> <!-- / .site-wrapper -->
 
     <!-- TEAM
@@ -471,11 +500,24 @@
 
     <script>
         $(document).ready(function () {
+            $('.selectpicker').selectpicker();
+
             $(".go-button").click(function() {
                 var input = $(this).parents(".form-inline").find(".go-input").val();
                 if (input) {
-                    var api = $(this).parents(".form-inline").find(".go-api").html();
-                    window.open('http://api.arcsecond.io' + api + input, '_blank');
+                    var element = $(this).parents(".form-inline");
+                    var api_url = "http://api.arcsecond.io";
+                    api_url += element.find(".go-api").html().split("\n")[0];
+                    var api_select = element.find(".go-select");
+                    if (typeof api_select != 'undefined') {
+                        api_url += api_select.val() + "/";
+                    }
+                    api_url += input;
+                    var api_suffix = element.find(".go-api-suffix");
+                    if (typeof api_suffix != 'undefined') {
+                        api_url += api_suffix.html();
+                    }
+                    window.open(api_url, '_blank');
                 }
                 else {
                     alert("You need to enter some input.");
@@ -483,4 +525,5 @@
             });
         });
     </script>
+
 {% endblock after_body_raw_block %}

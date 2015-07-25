@@ -32,6 +32,7 @@
 
     <!-- CSS Custom -->
     <link href="{% static 'arcsecond/css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'arcsecond/css/tweaks.css' %}" rel="stylesheet">
 
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -98,6 +99,9 @@
 <!-- JS Custom -->
 <script src="{% static 'arcsecond/js/custom_classic.js' %}"></script>
 <script src="{% static 'arcsecond/js/custom.js' %}"></script>
+
+<link href="{% static 'bootstrap-select/dist/css/bootstrap-select.min.css' %}" rel="stylesheet">
+<script src="{% static 'bootstrap-select/dist/js/bootstrap-select.min.js' %}"></script>
 
 {% if settings.SITE_ID == 2 %}
     {% include "arcsecond/google-analytics-code.html" %}

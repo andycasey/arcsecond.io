@@ -3,6 +3,7 @@ from django.conf.urls import patterns, url, include
 from django.contrib import admin
 
 from rest_framework.urlpatterns import format_suffix_patterns
+from models import constants
 
 from project.arcsecond import views
 
@@ -32,6 +33,11 @@ if settings.DEBUG:
     urlpatterns += patterns('', url(r'^1/observingsites_debug/(?P<name>[\s\+0-9a-zA-Z_-]+)/$', views.ObservingSiteDetailAPIView.as_view(), name="observingsite-detail"))
 
     urlpatterns += patterns('', url(r'^1/coordinates_debug/(?P<pk>\d+)/$', views.CoordinatesDetailAPIView.as_view(), name="coordinates-detail"))
+
+    urlpatterns += patterns('', url(r'^1/archives_debug/ESO/(?P<programme_id>'+constants.eso_programme_id_regex+')/summary/$',
+        views.ESOProgrammeSummaryDetailAPIView.as_view(),
+        name="esoprogrammesummary-detail"))
+
 
 urlpatterns += format_suffix_patterns(urlpatterns)
 

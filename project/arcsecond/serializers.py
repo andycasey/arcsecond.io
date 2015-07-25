@@ -176,3 +176,13 @@ class ExoplanetSerializer(serializers.HyperlinkedModelSerializer):
     inclination = AngleSerializer(required=False)
     omega = AngleSerializer(required=False)
     geometric_albedo = AlbedoSerializer(required=False)
+
+
+
+
+######################## Archives ########################
+
+class ESOProgrammeSummarySerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = ESOProgrammeSummary
+        lookup_field = "programme_id"
