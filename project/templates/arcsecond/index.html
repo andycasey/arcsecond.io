@@ -509,12 +509,12 @@
                     var api_url = "http://api.arcsecond.io";
                     api_url += element.find(".go-api").html().split("\n")[0];
                     var api_select = element.find(".go-select");
-                    if (typeof api_select != 'undefined') {
+                    if (api_select.length == 1) {
                         api_url += api_select.val() + "/";
                     }
                     api_url += input;
                     var api_suffix = element.find(".go-api-suffix");
-                    if (typeof api_suffix != 'undefined') {
+                    if (api_suffix.length == 1) {
                         api_url += api_suffix.html();
                     }
                     window.open(api_url, '_blank');
