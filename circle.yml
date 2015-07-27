@@ -7,3 +7,7 @@ deployment:
     branch: master
     heroku:
       appname: arcsecond-prod
+  staging:
+    branch: staging
+    heroku:
+      appname: arcsecond-staging
