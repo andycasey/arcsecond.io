@@ -5,6 +5,8 @@ import xml
 from bs4 import BeautifulSoup
 from project.arcsecond.models import HSTProgrammeSummary
 
+# Exemple: http://www.stsci.edu/hst/phase2-public/10340.apt
+
 STSCI_ARCHIVE_PROPINFO_ROOT = "http://www.stsci.edu/cgi-bin/get-proposal-info"
 STSCI_ARCHIVE_PROGRAMME_ID_FORMAT = "id="
 STSCI_ARCHIVE_OBSERVATORY_FORMAT = "observatory="
