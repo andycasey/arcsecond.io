@@ -12,14 +12,6 @@ urlpatterns = patterns('',
     url(r'^docs/', include('rest_framework_swagger.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^observingsites/?$', views.observingsites, name="observingsites"),
-
-    # url(r'^accounts/profile/?$', views.UserProfileView, name='user-profile'),
-
-    # url(r'^earth/site/?$', views.ObservingSiteListAPIView.as_view(), name='site-list'),
-    # url(r'^earth/site/(?P<pk>[0-9]+)/?$', views.ObservingSiteDetailAPIView.as_view(), name='site-list'),
-    #
-    # url(r'^earth/site/coordinates/?$', views.SiteCoordinatesList.as_view(), name='terrestrialcoordinates-list'),
-    # url(r'^earth/site/coordinates/(?P<pk>[0-9]+)/?$', views.SiteCoordinatesDetail.as_view(), name='terrestrialcoordinates-detail'),
 )
 
 if settings.DEBUG:
@@ -38,6 +30,9 @@ if settings.DEBUG:
         views.ESOProgrammeSummaryDetailAPIView.as_view(),
         name="esoprogrammesummary-detail"))
 
+    urlpatterns += patterns('', url(r'^1/archives_debug/HST/(?P<programme_id>[0-9]+)/summary/$',
+        views.HSTProgrammeSummaryDetailAPIView.as_view(),
+        name="hstprogrammesummary-detail"))
 
 urlpatterns += format_suffix_patterns(urlpatterns)
 

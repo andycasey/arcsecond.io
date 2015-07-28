@@ -16,3 +16,14 @@ class ESOProgrammeSummaryDetailAPIView(mixins.RequestLogViewMixin, generics.Retr
         programme_id = self.kwargs.get("programme_id", None)
         obj = connectors.get_ESO_programme_id_summary(programme_id)
         return obj
+
+class HSTProgrammeSummaryDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIView):
+    queryset = models.HSTProgrammeSummary.objects.all()
+    serializer_class = serializers.HSTProgrammeSummarySerializer
+    lookup_field = "programme_id"
+
+    def get_object(self):
+        programme_id = self.kwargs.get("programme_id", None)
+        obj = connectors.get_STSCI_programme_id_summary("HST", programme_id)
+        return obj
+

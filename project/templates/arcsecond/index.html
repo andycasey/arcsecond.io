@@ -192,7 +192,9 @@
                             <img src="{% static 'arcsecond/images/FITSIcon_512x512.png' %}" border="0" width="20"> Data Archives
                         </h3>
                         <p class="about-item__content">
-                            Data Archives from <a href="http://archive.eso.org/eso/eso_archive_main.html">ESO</a>, <a href="http://archive.stsci.edu">MAST</a> etc. Wouldn't be cool, no? For the moment, I only have ESO programmes summary. But other archives as well as FITS data is planned.
+                            Data Archives from <a href="http://archive.eso.org/eso/eso_archive_main.html">ESO</a>, <a href="http://archive.stsci.edu">MAST</a> etc.
+                            For the moment, I only have ESO and HST programmes summary. But other archives as well as FITS data is planned. You can test with <b>073.D-0473(A)</b>
+                            for ESO, and <b>10340</b> for HST.
                         </p>
                         <form class="form-inline">
                             <div class="form-group form-group-sm">
@@ -200,6 +202,7 @@
                                     <div class="input-group-addon go-api">/{{ api_version }}/archives/
                                         <select class="go-select">
                                             <option>ESO</option>
+                                            <option>HST</option>
                                         </select>&nbsp;/
                                     </div>
                                     <input type="text" class="form-control go-input" placeholder="073.D-0473(A)">

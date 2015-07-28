@@ -60,3 +60,59 @@ class ESOProgrammeSummary(models.Model):
     publications_url = models.URLField(max_length=500, null=True, blank=True)
 
 
+class HSTProgrammeSummary(models.Model):
+    class Meta: app_label = 'arcsecond'
+
+    programme_id = models.CharField(max_length=20, primary_key=True)
+    cycle = models.CharField(max_length=100, null=True, blank=True)
+    programme_allocation = models.CharField(max_length=100, null=True, blank=True)
+    programme_title = models.CharField(max_length=500)
+
+    programme_principal_investigator = models.CharField(max_length=100)
+    programme_pi_institution = models.CharField(max_length=200)
+
+    PROGRAM_TYPE_UNDEFINED = "(Undefined)"
+    PROGRAM_TYPE_AR = "Archival Research"
+    PROGRAM_TYPE_CAL = "Calibration program"
+    PROGRAM_TYPE_ENG = "Engineering program"
+    PROGRAM_TYPE_GO = "General Observer program"
+    PROGRAM_TYPE_GODD = "Director's Discretionary program"
+    PROGRAM_TYPE_GOPAR = "Pure parallel program"
+    PROGRAM_TYPE_GTO = "Guaranteed Time Observer program"
+    PROGRAM_TYPE_NASA = "Observing program conducted at the direction of NASA"
+    PROGRAM_TYPE_SNAP = "Snapshot program"
+
+    PROGRAM_TYPE_CHOICES = (
+        (PROGRAM_TYPE_UNDEFINED, "(Undefined)"),
+        (PROGRAM_TYPE_AR, "Archival Research"),
+        (PROGRAM_TYPE_CAL, "Calibration program"),
+        (PROGRAM_TYPE_ENG, "Engineering program"),
+        (PROGRAM_TYPE_GO, "General Observer program"),
+        (PROGRAM_TYPE_GODD, "Director's Discretionary program"),
+        (PROGRAM_TYPE_GOPAR, "Pure parallel program"),
+        (PROGRAM_TYPE_GTO, "Guaranteed Time Observer program"),
+        (PROGRAM_TYPE_NASA, "Observing program conducted at the direction of NASA"),
+        (PROGRAM_TYPE_SNAP, "Snapshot program"),
+    )
+
+    programme_type = models.CharField(max_length=100, choices=PROGRAM_TYPE_CHOICES, default=PROGRAM_TYPE_UNDEFINED)
+    programme_type_auxiliary = models.CharField(max_length=100)
+
+    PROGRAM_STATUS_UNDEFINED = "(Undefined)"
+    PROGRAM_STATUS_PENDING_PHASE2_SUBMISSION = "Pending Phase II Submission"
+    PROGRAM_STATUS_IMPLEMENTATION = "Implementation"
+    PROGRAM_STATUS_SCHEDULING = "Scheduling"
+    PROGRAM_STATUS_COMPLETED = "Program has been Completed"
+
+    PROGRAM_STATUS_CHOICES = (
+        (PROGRAM_STATUS_UNDEFINED, "(Undefined)"),
+        (PROGRAM_STATUS_PENDING_PHASE2_SUBMISSION, "Pending Phase II Submission"),
+        (PROGRAM_STATUS_IMPLEMENTATION, "Implementation"),
+        (PROGRAM_STATUS_SCHEDULING, "Scheduling"),
+        (PROGRAM_STATUS_COMPLETED, "Program has been Completed"),
+    )
+
+    programme_status = models.CharField(max_length=100, choices=PROGRAM_STATUS_CHOICES, default=PROGRAM_STATUS_UNDEFINED)
+    programme_abstract = models.CharField(max_length=5000, null=True, blank=True)
+
+    related_programmes = models.ForeignKey('self', blank=True, null=True)

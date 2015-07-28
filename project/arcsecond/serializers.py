@@ -186,3 +186,8 @@ class ESOProgrammeSummarySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = ESOProgrammeSummary
         lookup_field = "programme_id"
+
+class HSTProgrammeSummarySerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = HSTProgrammeSummary
+        lookup_field = "programme_id"

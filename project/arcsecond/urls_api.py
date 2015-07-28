@@ -35,6 +35,10 @@ urlpatterns = patterns('',
     url(r'^1/archives/ESO/(?P<programme_id>'+constants.eso_programme_id_regex+')/summary/$',
         views.ESOProgrammeSummaryDetailAPIView.as_view(),
         name="esoprogrammesummary-detail"),
+
+    url(r'^1/archives/HST/(?P<programme_id>'+constants.eso_programme_id_regex+')/summary/$',
+        views.HST.as_view(),
+        name="esoprogrammesummary-detail"),
 )
 
 urlpatterns += format_suffix_patterns(urlpatterns)
