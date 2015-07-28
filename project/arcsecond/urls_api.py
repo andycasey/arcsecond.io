@@ -38,7 +38,7 @@ urlpatterns = patterns('',
 
     url(r'^1/archives/HST/(?P<programme_id>[0-9]+)/summary/$',
         views.HSTProgrammeSummaryDetailAPIView.as_view(),
-        name="esoprogrammesummary-detail"),
+        name="hstprogrammesummary-detail"),
 )
 
 urlpatterns += format_suffix_patterns(urlpatterns)
