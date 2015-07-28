@@ -15,22 +15,22 @@ urlpatterns = patterns('',
 )
 
 if settings.DEBUG:
-    urlpatterns += patterns('', url(r'^1/exoplanets_debug/$', views.ExoplanetListAPIView.as_view(), name="exoplanet-list"))
-    urlpatterns += patterns('', url(r'^1/exoplanets_debug/(?P<pk>\d+)/$', views.ExoplanetDetailAPIView.as_view(), name="exoplanet-detail"))
-    urlpatterns += patterns('', url(r'^1/exoplanets_debug/(?P<name>[\s\+0-9a-zA-Z_-]+)/$', views.ExoplanetNamedDetailAPIView.as_view(), name="exoplanet-named-detail"))
+    urlpatterns += patterns('', url(r'^1/exoplanets/$', views.ExoplanetListAPIView.as_view(), name="exoplanet-list"))
+    urlpatterns += patterns('', url(r'^1/exoplanets/(?P<pk>\d+)/$', views.ExoplanetDetailAPIView.as_view(), name="exoplanet-detail"))
+    urlpatterns += patterns('', url(r'^1/exoplanets/(?P<name>[\s\+0-9a-zA-Z_-]+)/$', views.ExoplanetNamedDetailAPIView.as_view(), name="exoplanet-named-detail"))
 
-    urlpatterns += patterns('', url(r'^1/objects_debug/(?P<name>[\s\+0-9a-zA-Z_-]+)/$', views.AstronomicalObjectAPIView.as_view(), name='astronomicalobject-detail'))
+    urlpatterns += patterns('', url(r'^1/objects/(?P<name>[\s\+0-9a-zA-Z_-]+)/$', views.AstronomicalObjectAPIView.as_view(), name='astronomicalobject-detail'))
 
-    urlpatterns += patterns('', url(r'^1/observingsites_debug/$', views.ObservingSiteListAPIView.as_view(), name="observingsite-list"))
-    urlpatterns += patterns('', url(r'^1/observingsites_debug/(?P<name>[\s\+0-9a-zA-Z_-]+)/$', views.ObservingSiteDetailAPIView.as_view(), name="observingsite-detail"))
+    urlpatterns += patterns('', url(r'^1/observingsites/$', views.ObservingSiteListAPIView.as_view(), name="observingsite-list"))
+    urlpatterns += patterns('', url(r'^1/observingsites/(?P<name>[\s\+0-9a-zA-Z_-]+)/$', views.ObservingSiteDetailAPIView.as_view(), name="observingsite-detail"))
 
-    urlpatterns += patterns('', url(r'^1/coordinates_debug/(?P<pk>\d+)/$', views.CoordinatesDetailAPIView.as_view(), name="coordinates-detail"))
+    urlpatterns += patterns('', url(r'^1/coordinates/(?P<pk>\d+)/$', views.CoordinatesDetailAPIView.as_view(), name="coordinates-detail"))
 
-    urlpatterns += patterns('', url(r'^1/archives_debug/ESO/(?P<programme_id>'+constants.eso_programme_id_regex+')/summary/$',
+    urlpatterns += patterns('', url(r'^1/archives/ESO/(?P<programme_id>'+constants.eso_programme_id_regex+')/summary/$',
         views.ESOProgrammeSummaryDetailAPIView.as_view(),
         name="esoprogrammesummary-detail"))
 
-    urlpatterns += patterns('', url(r'^1/archives_debug/HST/(?P<programme_id>[0-9]+)/summary/$',
+    urlpatterns += patterns('', url(r'^1/archives/HST/(?P<programme_id>[0-9]+)/summary/$',
         views.HSTProgrammeSummaryDetailAPIView.as_view(),
         name="hstprogrammesummary-detail"))
 

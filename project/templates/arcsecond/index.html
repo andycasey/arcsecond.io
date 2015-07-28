@@ -507,7 +507,13 @@
                 var input = $(this).parents(".form-inline").find(".go-input").val();
                 if (input) {
                     var element = $(this).parents(".form-inline");
-                    var api_url = "http://api.arcsecond.io";
+                    {% if settings.SITE_ID == 2 %}
+                        var api_url = "http://api.arcsecond.io";
+                    {% elif settings.SITE_ID == 1 %}
+                        var api_url = "http://arcsecond-staging.herokuapp.com";
+                    {% else %}
+                        var api_url = "http://127.0.0.1:8000";
+                    {% endif %}
                     api_url += element.find(".go-api").html().split("\n")[0];
                     var api_select = element.find(".go-select");
                     if (api_select.length == 1) {
