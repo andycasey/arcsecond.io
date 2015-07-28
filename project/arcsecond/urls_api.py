@@ -36,7 +36,7 @@ urlpatterns = patterns('',
         views.ESOProgrammeSummaryDetailAPIView.as_view(),
         name="esoprogrammesummary-detail"),
 
-    url(r'^1/archives/HST/(?P<programme_id>'+constants.eso_programme_id_regex+')/summary/$',
+    url(r'^1/archives/HST/(?P<programme_id>[0-9]+)/summary/$',
         views.HSTProgrammeSummaryDetailAPIView.as_view(),
         name="esoprogrammesummary-detail"),
 )
