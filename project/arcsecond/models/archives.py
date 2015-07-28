@@ -65,11 +65,11 @@ class HSTProgrammeSummary(models.Model):
 
     programme_id = models.CharField(max_length=20, primary_key=True)
     cycle = models.CharField(max_length=100, null=True, blank=True)
-    programme_allocation = models.CharField(max_length=100, null=True, blank=True)
-    programme_title = models.CharField(max_length=500)
+    allocation = models.CharField(max_length=100, null=True, blank=True)
+    title = models.CharField(max_length=500)
 
-    programme_principal_investigator = models.CharField(max_length=100)
-    programme_pi_institution = models.CharField(max_length=200)
+    principal_investigator = models.CharField(max_length=100)
+    pi_institution = models.CharField(max_length=200)
 
     PROGRAM_TYPE_UNDEFINED = "(Undefined)"
     PROGRAM_TYPE_AR = "Archival Research"
@@ -113,6 +113,6 @@ class HSTProgrammeSummary(models.Model):
     )
 
     programme_status = models.CharField(max_length=100, choices=PROGRAM_STATUS_CHOICES, default=PROGRAM_STATUS_UNDEFINED)
-    programme_abstract = models.CharField(max_length=5000, null=True, blank=True)
+    abstract = models.CharField(max_length=5000, null=True, blank=True)
 
     related_programmes = models.ForeignKey('self', blank=True, null=True)
