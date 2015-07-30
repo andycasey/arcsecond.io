@@ -16,18 +16,28 @@ Last change:    30/04/2015
 /* Requires Google Maps API */
 
 function initialize() {
-  var myLatlng = new google.maps.LatLng(45.1864039,5.7183749); // Change your location
+  var grenobleLatlng = new google.maps.LatLng(45.1864039,5.7183749); // Change your location
+  var genevaLatlng = new google.maps.LatLng(46.2050295,6.1440885); // Change your location
+
   var mapOptions = {
     zoom: 6, // Change zoom value
     scrollwheel: false, // Change to "true" to enable users scale map on scroll
-    center: myLatlng
+    center: grenobleLatlng
   }
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-  var marker = new google.maps.Marker({
-      position: myLatlng,
+  var grenobleMarker = new google.maps.Marker({
+      position: grenobleLatlng,
       map: map,
-      title: 'Your business is here!' // Change the pinpoint popup text
+      animation: google.maps.Animation.DROP,
+      title: 'Home of onekilopars.ec and arcsecond.io'
+  });
+
+  var genevaMarker = new google.maps.Marker({
+      position: genevaLatlng,
+      map: map,
+      animation: google.maps.Animation.DROP,
+      title: 'Secondary home of onekilopars.ec and arcsecond.io'
   });
 }
 
