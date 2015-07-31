@@ -70,7 +70,7 @@ class Exoplanet(models.Model):
     eccentricity = models.OneToOneField(Eccentricity, null=True, blank=True)
     omega = models.OneToOneField(Angle, null=True, blank=True, related_name="omega")
     time_periastron = models.OneToOneField(JulianDay, null=True, blank=True, related_name="time_periastron")
-    angular_distance = models.OneToOneField(Angle, null=True, blank=True, related_name="angular_distance")
+    angular_distance = models.OneToOneField(AngularDistance, null=True, blank=True, related_name="angular_distance")
 
     primary_transit = models.OneToOneField(JulianDay, null=True, blank=True, related_name="primary_transit")
     secondary_transit = models.OneToOneField(JulianDay, null=True, blank=True, related_name="secondary_transit")
@@ -93,22 +93,40 @@ class Exoplanet(models.Model):
     DETECTION_METHOD_ASTROMETRY = "ast"
     DETECTION_METHOD_IMAGING = "img"
 
-    DETECTION_METHOD_CHOICES = (
-        (DETECTION_METHOD_UNKNOWN, 'Unknown'),
-        (DETECTION_METHOD_RV, 'Radial Velocity'),
-        (DETECTION_METHOD_MICROLENSING, 'Microlensing'),
-        (DETECTION_METHOD_TRANSIT, 'Primary Transit'),
-        (DETECTION_METHOD_TIMING, 'Timing'),
-        (DETECTION_METHOD_ASTROMETRY, 'Astrometry'),
-        (DETECTION_METHOD_IMAGING, 'Imaging'),
+    DETECTION_METHOD_KEYS = (
+        DETECTION_METHOD_UNKNOWN,
+        DETECTION_METHOD_RV,
+        DETECTION_METHOD_MICROLENSING,
+        DETECTION_METHOD_TRANSIT,
+        DETECTION_METHOD_TIMING,
+        DETECTION_METHOD_ASTROMETRY,
+        DETECTION_METHOD_IMAGING,
     )
+
+    DETECTION_METHOD_VALUES = (
+        'Unknown',
+        'Radial Velocity',
+        'Microlensing',
+        'Primary Transit',
+        'Timing',
+        'Astrometry',
+        'Imaging'
+    )
+
+    DETECTION_METHOD_CHOICES = tuple(zip(DETECTION_METHOD_KEYS, DETECTION_METHOD_VALUES))
 
     detection_method = models.CharField(max_length=3, blank=True, choices=DETECTION_METHOD_CHOICES, default=DETECTION_METHOD_UNKNOWN)
     mass_detection_method = models.CharField(max_length=3, blank=True, choices=DETECTION_METHOD_CHOICES, default=DETECTION_METHOD_UNKNOWN)
     radius_detection_method = models.CharField(max_length=3, blank=True, choices=DETECTION_METHOD_CHOICES, default=DETECTION_METHOD_UNKNOWN)
 
 
+class AstronomicalObjectManager(models.Manager):
+    def get_queryset(self):
+        return super(AstronomicalObjectManager, self).get_queryset()
+
 class AstronomicalObject(models.Model):
+    objects = AstronomicalObjectManager()
+
     name = models.CharField(max_length=100)
     coordinates = models.OneToOneField(AstronomicalCoordinates, null=True, blank=True)
     mass = models.OneToOneField(Mass, null=True, blank=True)

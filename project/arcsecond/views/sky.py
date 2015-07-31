@@ -49,12 +49,7 @@ class ExoplanetNamedDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveA
 
     def get_object(self):
         name = self.kwargs.get("name", None)
-        try:
-            exoplanet = models.Exoplanet.objects.get(name=name)
-        except exceptions.ObjectDoesNotExist:
-            connectors.get_EXOPLANET_EU_full_catalog()
-            exoplanet = models.Exoplanet.objects.get(name=name)
-
+        exoplanet = connectors.get_EXOPLANET_EU_object(name=name)
         return exoplanet
 
 class ExoplanetDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIView):

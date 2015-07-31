@@ -7,11 +7,11 @@ import math
 class AstronomicalInfo(models.Model):
     class Meta: abstract = True
 
-    value = models.FloatField(default=NOT_A_SCIENTIFIC_NUMBER, null=True)
-    error = models.FloatField(default=NOT_A_SCIENTIFIC_NUMBER, null=True)
-    error_max = models.FloatField(default=NOT_A_SCIENTIFIC_NUMBER, null=True)
-    error_min = models.FloatField(default=NOT_A_SCIENTIFIC_NUMBER, null=True)
-    bibcode = models.CharField(max_length=50, default="", null=True, validators=[RegexValidator(regex=bibcode_regex, message='Invalid bibcode', code='nomatch')])
+    value = models.FloatField(null=True, blank=True)
+    error = models.FloatField(null=True, blank=True)
+    error_max = models.FloatField(null=True, blank=True)
+    error_min = models.FloatField(null=True, blank=True)
+    bibcode = models.CharField(max_length=50, default="", null=True, blank=True, validators=[RegexValidator(regex=bibcode_regex, message='Invalid bibcode', code='nomatch')])
 
 
 class JulianDay(AstronomicalInfo):

@@ -31,7 +31,7 @@ class JulianDaySerializer(serializers.HyperlinkedModelSerializer):
 class AlbedoSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Albedo
-        fields = ("value", "unit", "error_max", "error_min", "bibcode")
+        fields = ("value", "error_max", "error_min", "bibcode")
 
 class EccentricitySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -168,17 +168,45 @@ class ExoplanetSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Exoplanet
 
+    coordinates = AstronomicalCoordinatesSerializer(required=False)
+    parent_star = AstronomicalObjectSerializer()
+
     mass = MassSerializer(required=False)
     radius = RadiusSerializer(required=False)
-    orbital_period = PeriodSerializer(required=False)
-    semi_major_axis = EllipseAxisSerializer(required=False)
-    eccentricity = EccentricitySerializer(required=False)
     inclination = AngleSerializer(required=False)
+
+    semi_major_axis = EllipseAxisSerializer(required=False)
+    orbital_period = PeriodSerializer(required=False)
+    eccentricity = EccentricitySerializer(required=False)
     omega = AngleSerializer(required=False)
+    time_periastron = JulianDaySerializer(required=False)
+    angular_distance = AngularDistanceSerializer(required=False)
+
+    primary_transit = JulianDaySerializer(required=False)
+    secondary_transit = JulianDaySerializer(required=False)
+    anomaly_angle = AngleSerializer(required=False)
+    impact_parameter_b = AngleSerializer(required=False)
+    time_vr0 = JulianDaySerializer(required=False)
+    velocity_semiamplitude_K = VelocitySerializer(required=False)
+
+    calculated_temperature = TemperatureSerializer(required=False)
+    measured_temperature = TemperatureSerializer(required=False)
+    hottest_point_longitude = AngleSerializer(required=False)
     geometric_albedo = AlbedoSerializer(required=False)
+    surface_gravity = GravitySerializer(required=False)
 
+    detection_method = serializers.SerializerMethodField()
+    mass_detection_method = serializers.SerializerMethodField()
+    radius_detection_method = serializers.SerializerMethodField()
 
+    def get_detection_method(self, obj):
+        return Exoplanet.DETECTION_METHOD_VALUES[Exoplanet.DETECTION_METHOD_KEYS.index(obj.detection_method)]
 
+    def get_mass_detection_method(self, obj):
+        return Exoplanet.DETECTION_METHOD_VALUES[Exoplanet.DETECTION_METHOD_KEYS.index(obj.detection_method)]
+
+    def get_radius_detection_method(self, obj):
+        return Exoplanet.DETECTION_METHOD_VALUES[Exoplanet.DETECTION_METHOD_KEYS.index(obj.detection_method)]
 
 ######################## Archives ########################
 
