@@ -1,6 +1,8 @@
-from rest_framework.urlpatterns import format_suffix_patterns
+from django.conf import settings
 from django.conf.urls import patterns
 from django.conf.urls import url
+
+from rest_framework.urlpatterns import format_suffix_patterns
 
 from project.arcsecond import views
 from project.arcsecond.models import constants
@@ -20,7 +22,7 @@ urlpatterns = patterns('',
         views.ExoplanetDetailAPIView.as_view(),
         name="exoplanet-detail"),
 
-    url(r'^1/exoplanets/(?P<name>[\s\+0-9a-zA-Z_-]+)/$',
+    url(r'^1/exoplanets/(?P<name>[\(\)\.\'\s\+0-9a-zA-Z_-]+)/$',
         views.ExoplanetNamedDetailAPIView.as_view(),
         name="exoplanet-named-detail"),
 
@@ -41,7 +43,8 @@ urlpatterns = patterns('',
         name="hstprogrammesummary-detail"),
 )
 
-urlpatterns += format_suffix_patterns(urlpatterns)
+if settings.DEBUG == False:
+    urlpatterns += format_suffix_patterns(urlpatterns)
 
 
 
