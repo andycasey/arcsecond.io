@@ -1,6 +1,6 @@
 from django.core.validators import RegexValidator
 from django.db import models
-from constants import *
+from .constants import *
 
 class ESOProgrammeSummary(models.Model):
     class Meta: app_label = 'arcsecond'
