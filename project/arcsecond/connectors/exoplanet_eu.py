@@ -112,7 +112,8 @@ def get_exoplanet(name, fields, values):
 
                 if last_field_name in ['ra', 'dec']:
                     if exoplanet.coordinates is None:
-                        coordinates = AstronomicalCoordinates.get_or_create()
+                        coordinates = AstronomicalCoordinates()
+                        coordinates.save()
                         exoplanet.coordinates = coordinates
 
                     if float_value is not None:
