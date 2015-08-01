@@ -30,14 +30,14 @@ function initialize() {
       position: grenobleLatlng,
       map: map,
       animation: google.maps.Animation.DROP,
-      title: 'Home of onekilopars.ec and arcsecond.io'
+      title: 'Day & Night-time development of arcsecond.io during all time left!'
   });
 
   var genevaMarker = new google.maps.Marker({
       position: genevaLatlng,
       map: map,
       animation: google.maps.Animation.DROP,
-      title: 'Secondary home of onekilopars.ec and arcsecond.io'
+      title: 'Night-time only development of arcsecond.io during weekdays'
   });
 }
 
