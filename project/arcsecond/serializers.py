@@ -26,7 +26,7 @@ class BibliographicReferenceSerializer(serializers.HyperlinkedModelSerializer):
 class JulianDaySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = JulianDay
-        fields = ("value", "unit", "error_max", "error_min", "bibcode")
+        fields = ("value", "error_max", "error_min", "bibcode")
 
 class AlbedoSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -53,50 +53,86 @@ class MassSerializer(serializers.HyperlinkedModelSerializer):
         model = Mass
         fields = ("value", "unit", "error_max", "error_min", "bibcode")
 
+    unit = serializers.SerializerMethodField()
+    def get_unit(self, obj):
+        return Mass.MASSES_VALUES[Mass.MASSES_KEYS.index(obj.unit)]
+
 class RadiusSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Radius
         fields = ("value", "unit", "error_max", "error_min", "bibcode")
+
+    unit = serializers.SerializerMethodField()
+    def get_unit(self, obj):
+        return Radius.RADIUS_VALUES[Radius.RADIUS_KEYS.index(obj.unit)]
 
 class AgeSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Age
         fields = ("value", "unit", "error_max", "error_min", "bibcode")
 
+    unit = serializers.SerializerMethodField()
+    def get_unit(self, obj):
+        return Age.AGE_VALUES[Age.AGE_KEYS.index(obj.unit)]
+
+
 class TemperatureSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Temperature
         fields = ("value", "unit", "error_max", "error_min", "bibcode")
+
+    unit = serializers.SerializerMethodField()
+    def get_unit(self, obj):
+        return Temperature.TEMP_VALUES[Temperature.TEMP_KEYS.index(obj.unit)]
+
 
 class MetallicitySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Metallicity
         fields = ("value", "unit", "error", "error_max", "error_min", "bibcode")
 
+    unit = serializers.SerializerMethodField()
+    def get_unit(self, obj):
+        return Metallicity.METAL_VALUES[Metallicity.METAL_KEYS.index(obj.unit)]
+
+
 class DistanceSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Distance
         fields = ("value", "unit", "error_max", "error_min", "bibcode")
+
+    unit = serializers.SerializerMethodField()
+    def get_unit(self, obj):
+        return Distance.DISTANCE_VALUES[Distance.DISTANCE_KEYS.index(obj.unit)]
+
 
 class PeriodSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Period
         fields = ("value", "unit", "error_max", "error_min", "bibcode")
 
+    unit = serializers.SerializerMethodField()
+    def get_unit(self, obj):
+        return Period.PERIOD_VALUES[Period.PERIOD_KEYS.index(obj.unit)]
+
+
 class EllipseAxisSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = EllipseAxis
         fields = ("value", "unit", "error_max", "error_min", "bibcode")
 
-class AngularDistanceSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = AngularDistance
-        fields = ("value", "unit", "error_max", "error_min", "bibcode")
+    unit = serializers.SerializerMethodField()
+    def get_unit(self, obj):
+        return EllipseAxis.AXIS_VALUES[EllipseAxis.AXIS_KEYS.index(obj.unit)]
 
 class AngleSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Angle
         fields = ("value", "unit", "error_max", "error_min", "bibcode")
+
+    unit = serializers.SerializerMethodField()
+    def get_unit(self, obj):
+        return Angle.ANGLE_VALUES[Angle.ANGLE_KEYS.index(obj.unit)]
 
 class VelocitySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -104,11 +140,6 @@ class VelocitySerializer(serializers.HyperlinkedModelSerializer):
         fields = ("value", "unit", "error_max", "error_min", "bibcode")
 
 class GravitySerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Velocity
-        fields = ("value", "unit", "error_max", "error_min", "bibcode")
-
-class ParallaxSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Velocity
         fields = ("value", "unit", "error_max", "error_min", "bibcode")
@@ -180,7 +211,7 @@ class ExoplanetSerializer(serializers.HyperlinkedModelSerializer):
     eccentricity = EccentricitySerializer(required=False)
     omega = AngleSerializer(required=False)
     time_periastron = JulianDaySerializer(required=False)
-    angular_distance = AngularDistanceSerializer(required=False)
+    angular_distance = AngleSerializer(required=False)
 
     primary_transit = JulianDaySerializer(required=False)
     secondary_transit = JulianDaySerializer(required=False)

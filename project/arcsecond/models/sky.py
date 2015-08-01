@@ -70,7 +70,7 @@ class Exoplanet(models.Model):
     eccentricity = models.OneToOneField(Eccentricity, null=True, blank=True)
     omega = models.OneToOneField(Angle, null=True, blank=True, related_name="omega")
     time_periastron = models.OneToOneField(JulianDay, null=True, blank=True, related_name="time_periastron")
-    angular_distance = models.OneToOneField(AngularDistance, null=True, blank=True, related_name="angular_distance")
+    angular_distance = models.OneToOneField(Angle, null=True, blank=True, related_name="angular_distance")
 
     primary_transit = models.OneToOneField(JulianDay, null=True, blank=True, related_name="primary_transit")
     secondary_transit = models.OneToOneField(JulianDay, null=True, blank=True, related_name="secondary_transit")

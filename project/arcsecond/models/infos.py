@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from django.core.validators import RegexValidator
 from django.db import models
 from .constants import *
@@ -39,44 +41,36 @@ class Color(AstronomicalInfo):
 
 class Mass(AstronomicalInfo):
     MASS_SUN = "sun"
-    MASS_JUPITER = "jupiter"
-    MASS_NEPTUNE = "neptune"
-    MASS_EARTH = "earth"
+    MASS_JUPITER = "jup"
+    MASS_NEPTUNE = "nep"
+    MASS_EARTH = "ear"
 
-    MASSES_CHOICES = (
-        (MASS_SUN, 'Sun'),
-        (MASS_JUPITER, 'Jupiter'),
-        (MASS_NEPTUNE, 'Neptune'),
-        (MASS_EARTH, 'Earth'),
-    )
+    MASSES_KEYS = (MASS_SUN, MASS_JUPITER, MASS_NEPTUNE, MASS_EARTH)
+    MASSES_VALUES = ('Sun', 'Jupiter', 'Neptune', 'Earth')
+    MASSES_CHOICES = tuple(zip(MASSES_KEYS, MASSES_VALUES))
 
-    unit = models.CharField(max_length=7, choices=MASSES_CHOICES, default=MASS_SUN)
+    unit = models.CharField(max_length=3, choices=MASSES_CHOICES, default=MASS_SUN)
 
 class Radius(AstronomicalInfo):
     RADIUS_SUN = "sun"
-    RADIUS_JUPITER = "jupiter"
-    RADIUS_NEPTUNE = "neptune"
-    RADIUS_EARTH = "earth"
+    RADIUS_JUPITER = "jup"
+    RADIUS_NEPTUNE = "nep"
+    RADIUS_EARTH = "ear"
 
-    RADIUS_CHOICES = (
-        (RADIUS_SUN, 'Sun'),
-        (RADIUS_JUPITER, 'Jupiter'),
-        (RADIUS_NEPTUNE, 'Neptune'),
-        (RADIUS_EARTH, 'Earth'),
-    )
+    RADIUS_KEYS = (RADIUS_SUN, RADIUS_JUPITER, RADIUS_NEPTUNE, RADIUS_EARTH)
+    RADIUS_VALUES =  ('Sun', 'Jupiter', 'Neptune', 'Earth')
+    RADIUS_CHOICES = tuple(zip(RADIUS_KEYS, RADIUS_VALUES))
 
-    unit = models.CharField(max_length=7, choices=RADIUS_CHOICES, default=RADIUS_SUN)
+    unit = models.CharField(max_length=3, choices=RADIUS_CHOICES, default=RADIUS_SUN)
 
 class Age(AstronomicalInfo):
     AGE_GYR = "Gyr"
     AGE_MYR = "Myr"
     AGE_YR = "yr"
 
-    AGE_CHOICES = (
-        (AGE_GYR, 'Gyr'),
-        (AGE_MYR, 'Myr'),
-        (AGE_YR, 'yr'),
-    )
+    AGE_KEYS = (AGE_GYR, AGE_MYR, AGE_YR)
+    AGE_VALUES = ('Gyr', 'Myr', 'yr')
+    AGE_CHOICES = tuple(zip(AGE_KEYS, AGE_VALUES))
 
     unit = models.CharField(max_length=3, choices=AGE_CHOICES, default=AGE_GYR)
 
@@ -84,10 +78,9 @@ class Temperature(AstronomicalInfo):
     TEMP_KELVIN = "K"
     TEMP_CELSIUS = "C"
 
-    TEMP_CHOICES = (
-        (TEMP_KELVIN, 'Kelvin'),
-        (TEMP_CELSIUS, 'Celsius'),
-    )
+    TEMP_KEYS = (TEMP_KELVIN, TEMP_CELSIUS)
+    TEMP_VALUES = ('Kelvin', 'Celsius')
+    TEMP_CHOICES = tuple(zip(TEMP_KEYS, TEMP_VALUES))
 
     unit = models.CharField(max_length=1, choices=TEMP_CHOICES, default=TEMP_KELVIN)
 
@@ -95,12 +88,11 @@ class Metallicity(AstronomicalInfo):
     METAL_Z = "Z"
     METAL_FEH = "F"
 
-    METAL_CHOICES = (
-        (METAL_Z, 'Z'),
-        (METAL_FEH, 'Fe/H'),
-    )
+    METAL_KEYS = (METAL_Z, METAL_FEH)
+    METAL_VALUES = ('Z', 'Fe/H')
+    METAL_CHOICES = tuple(zip(METAL_KEYS, METAL_VALUES))
 
-    unit = models.CharField(max_length=4, choices=METAL_CHOICES, default=METAL_Z)
+    unit = models.CharField(max_length=1, choices=METAL_CHOICES, default=METAL_Z)
 
 
 class Distance(AstronomicalInfo):
@@ -111,62 +103,49 @@ class Distance(AstronomicalInfo):
     DISTANCE_KPC = "kpc"
     DISTANCE_MPC = "Mpc"
 
-    DISTANCE_CHOICES = (
-        (DISTANCE_KM, 'km'),
-        (DISTANCE_UA, 'UA'),
-        (DISTANCE_LY, 'ly'),
-        (DISTANCE_PC, 'pc'),
-        (DISTANCE_KPC, 'kpc'),
-        (DISTANCE_MPC, 'Mpc'),
-    )
+    DISTANCE_KEYS = (DISTANCE_KM, DISTANCE_UA, DISTANCE_LY, DISTANCE_PC, DISTANCE_KPC, DISTANCE_MPC)
+    DISTANCE_VALUES = ('km', 'UA', 'ly', 'pc', 'kpc', 'Mpc')
+    DISTANCE_CHOICES = tuple(zip(DISTANCE_KEYS, DISTANCE_VALUES))
 
     unit = models.CharField(max_length=3, choices=DISTANCE_CHOICES, default=DISTANCE_PC)
 
 
 class Period(AstronomicalInfo):
-    OPERIOD_SECOND = "s"
-    OPERIOD_MINUTE = "m"
-    OPERIOD_DAY = "d"
-    OPERIOD_HOUR = "h"
-    OPERIOD_WEEK = "w"
-    OPERIOD_YEAR = "y"
+    PERIOD_SECOND = "s"
+    PERIOD_MINUTE = "m"
+    PERIOD_DAY = "d"
+    PERIOD_HOUR = "h"
+    PERIOD_WEEK = "w"
+    PERIOD_YEAR = "y"
 
-    OPERIOD_CHOICES = (
-        (OPERIOD_SECOND, 'seconds'),
-        (OPERIOD_MINUTE, 'minutes'),
-        (OPERIOD_DAY, 'days'),
-        (OPERIOD_HOUR, 'hours'),
-        (OPERIOD_WEEK, 'weeks'),
-        (OPERIOD_YEAR, 'years'),
-    )
+    PERIOD_KEYS = (PERIOD_SECOND, PERIOD_MINUTE, PERIOD_DAY, PERIOD_HOUR, PERIOD_WEEK, PERIOD_YEAR)
+    PERIOD_VALUES = ('seconds', 'minutes', 'days', 'hours', 'weeks', 'years')
+    PERIOD_CHOICES = tuple(zip(PERIOD_KEYS, PERIOD_VALUES))
 
-    unit = models.CharField(max_length=1, choices=OPERIOD_CHOICES, default=OPERIOD_DAY)
+    unit = models.CharField(max_length=1, choices=PERIOD_CHOICES, default=PERIOD_DAY)
 
 class EllipseAxis(AstronomicalInfo):
     AXIS_UA = "astronomical unit"
     AXIS_SUN = "sun radius"
 
-    AXIS_CHOICES = (
-        (AXIS_UA, 'astronomical unit'),
-        (AXIS_SUN, 'sun radius'),
-    )
+    AXIS_KEYS = (AXIS_UA, AXIS_SUN)
+    AXIS_VALUES = ('astronomical unit', 'sun radius')
+    AXIS_CHOICES = tuple(zip(AXIS_KEYS, AXIS_VALUES))
 
     unit = models.CharField(max_length=18, choices=AXIS_CHOICES, default=AXIS_UA)
 
-class AngularDistance(AstronomicalInfo):
-    ANG_DISTANCE_ARCSEC = "arcsec"
-    ANG_DISTANCE_ARCMIN = "arcmin"
-
-    ANG_DISTANCE_CHOICES = (
-        (ANG_DISTANCE_ARCSEC, 'arcsec'),
-        (ANG_DISTANCE_ARCMIN, 'arcmin'),
-    )
-
-    unit = models.CharField(max_length=6, choices=ANG_DISTANCE_CHOICES, default=ANG_DISTANCE_ARCSEC)
-
 
 class Angle(AstronomicalInfo):
-    unit = models.CharField(max_length=10, default="degrees")
+    ANGLE_MILIARCSEC = "mas"
+    ANGLE_ARCSEC = "sec"
+    ANGLE_ARCMIN = "min"
+    ANGLE_DEGREE = "deg"
+
+    ANGLE_KEYS = (ANGLE_MILIARCSEC, ANGLE_ARCSEC, ANGLE_ARCMIN, ANGLE_DEGREE)
+    ANGLE_VALUES = ("mas", "'", "\"", u"º")
+    ANGLE_CHOICES = tuple(zip(ANGLE_KEYS, ANGLE_VALUES))
+
+    unit = models.CharField(max_length=3, choices=ANGLE_CHOICES, default=ANGLE_ARCSEC)
 
 class Velocity(AstronomicalInfo):
     unit = models.CharField(max_length=10, default="m/s")
@@ -174,5 +153,3 @@ class Velocity(AstronomicalInfo):
 class Gravity(AstronomicalInfo):
     unit = models.CharField(max_length=10, default="log(g/gH)")
 
-class Parallax(AstronomicalInfo):
-    unit = models.CharField(max_length=3, default="mas")
