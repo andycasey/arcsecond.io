@@ -58,6 +58,9 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
+SERVER_EMAIL = "cedric@arcsecond.io"
+DEFAULT_FROM_EMAIL = "cedric@arcsecond.io"
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
