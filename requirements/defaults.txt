@@ -40,5 +40,6 @@ requests==2.6.2
 six==1.9.0
 static==1.1.1
 static3==0.5.1
+timestring==1.6.1
 waitress==0.8.9
 -e git://github.com/sunlightlabs/django-honeypot.git@75766be452f67433c9df56baa17299dd70016770#egg=django-honeypot

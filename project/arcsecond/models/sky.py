@@ -1,4 +1,4 @@
-
+from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
 from .infos import *
 from .constants import *
 from django.db import models
@@ -23,10 +23,10 @@ class AstronomicalCoordinates(models.Model):
 
     system = models.CharField(max_length=20, choices=SYSTEMS_CHOICES, default=SYSTEM_ICRS)
 
-    right_ascension = models.FloatField(default=NOT_A_SCIENTIFIC_NUMBER)
+    right_ascension = models.FloatField(null=True, blank=True)
     right_ascension_units = models.CharField(max_length=100, default='degrees')
 
-    declination = models.FloatField(default=NOT_A_SCIENTIFIC_NUMBER)
+    declination = models.FloatField(null=True, blank=True)
     declination_units = models.CharField(max_length=100, default='degrees')
 
     epoch = models.FloatField(default=J2000)
@@ -43,7 +43,7 @@ class AstronomicalCoordinates(models.Model):
 
 class Alias(models.Model):
     name = models.CharField(max_length=500)
-    catalogue_url = models.URLField(null=True)
+    catalogue_url = models.URLField(null=True, blank=True)
     astronomical_object = models.ForeignKey('AstronomicalObject', null=True, related_name="aliases", blank=True)
     exoplanet = models.ForeignKey('Exoplanet', null=True, related_name="aliases", blank=True)
 
@@ -57,27 +57,33 @@ class Exoplanet(models.Model):
     name = models.CharField(max_length=100)
     coordinates = models.OneToOneField(AstronomicalCoordinates, null=True, blank=True)
     parent_star = models.ForeignKey('AstronomicalObject', null=True, blank=True, related_name="planets")
-    discovery_date = models.DateField(null=True, blank=True)
-    last_update = models.DateField(null=True, blank=True)
+    discovery_date = models.DateTimeField(null=True, blank=True)
+    last_update = models.DateTimeField(null=True, blank=True)
 
     mass = models.OneToOneField(Mass, null=True, blank=True)
     radius = models.OneToOneField(Radius, null=True, blank=True)
     inclination = models.OneToOneField(Angle, null=True, blank=True, related_name="inclination")
-    molecules_detected = models.CharField(max_length=100)
 
-    semi_major_axis = models.OneToOneField(EllipseAxis, null=True, blank=True, related_name="semimajor_axis")
-    orbital_period = models.OneToOneField(Period, null=True, blank=True)
+    molecules_detected = models.CharField(max_length=100, null=True, blank=True)
+    publication_status = models.CharField(max_length=200, null=True, blank=True)
+
+    semi_major_axis = models.OneToOneField(EllipseAxis, null=True, blank=True, related_name="semi_major_axis")
+    orbital_period = models.OneToOneField(Period, null=True, blank=True, related_name="orbital_period")
     eccentricity = models.OneToOneField(Eccentricity, null=True, blank=True)
-    omega = models.OneToOneField(Angle, null=True, blank=True, related_name="omega")
+
+    omega_angle = models.OneToOneField(Angle, null=True, blank=True, related_name="omega_angle")
+    anomaly_angle = models.OneToOneField(Angle, null=True, blank=True, related_name="anomaly_angle")
+    lambda_angle = models.OneToOneField(Angle, null=True, blank=True, related_name="lambda_angle")
+
     time_periastron = models.OneToOneField(JulianDay, null=True, blank=True, related_name="time_periastron")
+    time_conjonction = models.OneToOneField(JulianDay, null=True, blank=True, related_name="time_conjonction")
     angular_distance = models.OneToOneField(Angle, null=True, blank=True, related_name="angular_distance")
 
     primary_transit = models.OneToOneField(JulianDay, null=True, blank=True, related_name="primary_transit")
     secondary_transit = models.OneToOneField(JulianDay, null=True, blank=True, related_name="secondary_transit")
-    anomaly_angle = models.OneToOneField(Angle, null=True, blank=True, related_name="anomaly_angle")
-    impact_parameter_b = models.OneToOneField(Angle, null=True, blank=True, related_name="impact_parameter_b")
-    time_vr0 = models.OneToOneField(JulianDay, null=True, blank=True, related_name="time_vr0")
-    velocity_semiamplitude_K = models.OneToOneField(Velocity, null=True, blank=True)
+    impact_parameter = models.OneToOneField(Angle, null=True, blank=True, related_name="impact_parameter")
+    time_radial_velocity_zero = models.OneToOneField(JulianDay, null=True, blank=True, related_name="time_radial_velocity_zero")
+    velocity_semiamplitude = models.OneToOneField(Velocity, null=True, blank=True)
 
     calculated_temperature = models.OneToOneField(Temperature, null=True, blank=True, related_name="calculated_temperature")
     measured_temperature = models.OneToOneField(Temperature, null=True, blank=True, related_name="measured_temperature")
@@ -121,12 +127,47 @@ class Exoplanet(models.Model):
 
 
 class AstronomicalObjectManager(models.Manager):
-    def get_queryset(self):
-        return super(AstronomicalObjectManager, self).get_queryset()
+    def get_with_aliases_or_create(self, name):
+        try:
+            obj = self.get(name=name)
+        except ObjectDoesNotExist:
+
+            try:
+                alias = Alias.objects.get(name=name)
+            except ObjectDoesNotExist:
+                obj = AstronomicalObject(name=name)
+                obj.save()
+                return obj, True
+            except MultipleObjectsReturned:
+                aliases = self.filter(name=name)
+                first = aliases.first()
+                aliases.delete()
+                first.save()
+                return first.astronomical_object, False
+            else:
+                return alias.astronomical_object, False
+
+        except MultipleObjectsReturned:
+            objects = self.filter(name=name)
+            first = objects.first()
+            objects.delete()
+            first.save()
+            return first, False
+        else:
+            return obj, False
+
 
 class AstronomicalObject(models.Model):
     objects = AstronomicalObjectManager()
 
     name = models.CharField(max_length=100)
     coordinates = models.OneToOneField(AstronomicalCoordinates, null=True, blank=True)
+
     mass = models.OneToOneField(Mass, null=True, blank=True)
+    radius = models.OneToOneField(Radius, null=True, blank=True)
+    distance = models.OneToOneField(Distance, null=True, blank=True)
+    metallicity = models.OneToOneField(Metallicity, null=True, blank=True)
+    age = models.OneToOneField(Age, null=True, blank=True)
+    effective_temperature = models.OneToOneField(Temperature, null=True, blank=True)
+    spectral_type = models.CharField(max_length=1000, null=True, blank=True)
+

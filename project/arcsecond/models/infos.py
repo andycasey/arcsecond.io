@@ -46,7 +46,7 @@ class Mass(AstronomicalInfo):
     MASS_EARTH = "ear"
 
     MASSES_KEYS = (MASS_SUN, MASS_JUPITER, MASS_NEPTUNE, MASS_EARTH)
-    MASSES_VALUES = ('Sun', 'Jupiter', 'Neptune', 'Earth')
+    MASSES_VALUES = ('Msun', 'Mjup', 'Mnep', 'Mearth')
     MASSES_CHOICES = tuple(zip(MASSES_KEYS, MASSES_VALUES))
 
     unit = models.CharField(max_length=3, choices=MASSES_CHOICES, default=MASS_SUN)
@@ -58,7 +58,7 @@ class Radius(AstronomicalInfo):
     RADIUS_EARTH = "ear"
 
     RADIUS_KEYS = (RADIUS_SUN, RADIUS_JUPITER, RADIUS_NEPTUNE, RADIUS_EARTH)
-    RADIUS_VALUES =  ('Sun', 'Jupiter', 'Neptune', 'Earth')
+    RADIUS_VALUES =  ('Rsun', 'Rjup', 'Rnep', 'Rearth')
     RADIUS_CHOICES = tuple(zip(RADIUS_KEYS, RADIUS_VALUES))
 
     unit = models.CharField(max_length=3, choices=RADIUS_CHOICES, default=RADIUS_SUN)

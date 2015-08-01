@@ -184,11 +184,17 @@ class AstronomicalObjectSerializer(serializers.HyperlinkedModelSerializer):
         lookup_field = "name"
 
     coordinates = AstronomicalCoordinatesSerializer()
+
     aliases = AliasSerializer(many=True, required=False)
     object_types = ObjectTypeSerializer(many=True, required=False)
     fluxes = FluxSerializer(many=True, required=False)
 
     mass = MassSerializer(required=False)
+    radius = RadiusSerializer(required=False)
+    distance = DistanceSerializer(required=False)
+    metallicity = MetallicitySerializer(required=False)
+    age = AgeSerializer(required=False)
+    effective_temperature = TemperatureSerializer(required=False)
 
 
 class ExoplanetSerializer(serializers.HyperlinkedModelSerializer):
@@ -205,16 +211,20 @@ class ExoplanetSerializer(serializers.HyperlinkedModelSerializer):
     semi_major_axis = EllipseAxisSerializer(required=False)
     orbital_period = PeriodSerializer(required=False)
     eccentricity = EccentricitySerializer(required=False)
-    omega = AngleSerializer(required=False)
+
+    omega_angle = AngleSerializer(required=False)
+    anomaly_angle = AngleSerializer(required=False)
+    lambda_angle = AngleSerializer(required=False)
+
     time_periastron = JulianDaySerializer(required=False)
+    time_conjonction = JulianDaySerializer(required=False)
     angular_distance = AngleSerializer(required=False)
 
     primary_transit = JulianDaySerializer(required=False)
     secondary_transit = JulianDaySerializer(required=False)
-    anomaly_angle = AngleSerializer(required=False)
-    impact_parameter_b = AngleSerializer(required=False)
-    time_vr0 = JulianDaySerializer(required=False)
-    velocity_semiamplitude_K = VelocitySerializer(required=False)
+    impact_parameter = AngleSerializer(required=False)
+    time_radial_velocity_zero = JulianDaySerializer(required=False)
+    velocity_semiamplitude = VelocitySerializer(required=False)
 
     calculated_temperature = TemperatureSerializer(required=False)
     measured_temperature = TemperatureSerializer(required=False)
