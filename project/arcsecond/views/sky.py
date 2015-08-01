@@ -42,6 +42,7 @@ class AstronomicalObjectAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPI
 
         return obj
 
+
 class ExoplanetNamedDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIView):
     queryset = models.Exoplanet.objects.all()
     serializer_class = serializers.ExoplanetSerializer
@@ -52,10 +53,16 @@ class ExoplanetNamedDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveA
         exoplanet = connectors.get_EXOPLANET_EU_object(name=name)
         return exoplanet
 
+
 class ExoplanetDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIView):
     queryset = models.Exoplanet.objects.all()
     serializer_class = serializers.ExoplanetSerializer
 
+
 class ExoplanetListAPIView(mixins.RequestLogViewMixin, generics.ListAPIView):
     queryset = models.Exoplanet.objects.all()
     serializer_class = serializers.ExoplanetSerializer
+
+    def get(self, request, *args, **kwargs):
+        connectors.read_EXOPLANET_EU_full_catalog()
+        return super(ExoplanetListAPIView, self).get(request, *args, **kwargs)
