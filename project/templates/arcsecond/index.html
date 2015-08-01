@@ -513,9 +513,9 @@
                 var input = $(this).parents(".form-inline").find(".go-input").val();
                 if (input) {
                     var element = $(this).parents(".form-inline");
-                    {% if settings.SITE_ID == 2 %}
+                    {% if settings.SITE_ID == 3 %}
                         var api_url = "http://api.arcsecond.io";
-                    {% elif settings.SITE_ID == 1 %}
+                    {% elif settings.SITE_ID == 2 %}
                         var api_url = "http://arcsecond-staging.herokuapp.com";
                     {% else %}
                         var api_url = "http://127.0.0.1:8000";

@@ -20,4 +20,4 @@ ALLOWED_HOSTS = [
 # LOCKDOWN_PASSWORD = 'MarcLevyIsWritingBoringBooks'
 # LOCKDOWN_URL_EXCEPTIONS = (r'^/admin/$',)
 
-SITE_ID = 1  # Local=0, Staging=1, Prod=2
+SITE_ID = 2  # Local=1, Staging=2, Prod=3

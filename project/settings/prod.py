@@ -10,5 +10,5 @@ ALLOWED_HOSTS = [
     'arcsecond-prod.herokuapp.com'
 ]
 
-SITE_ID = 2  # Local=1, Staging=1, Prod=2
+SITE_ID = 3  # Local=1, Staging=2, Prod=3
 
