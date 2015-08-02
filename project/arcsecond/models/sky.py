@@ -1,7 +1,8 @@
 from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
+from django.db import models
+
 from .infos import *
 from .constants import *
-from django.db import models
 
 class AstronomicalCoordinates(models.Model):
 

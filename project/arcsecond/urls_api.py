@@ -41,6 +41,10 @@ urlpatterns = patterns('',
     url(r'^1/archives/HST/(?P<programme_id>[0-9]+)/summary/$',
         views.HSTProgrammeSummaryDetailAPIView.as_view(),
         name="hstprogrammesummary-detail"),
+
+    url(r'^1/converters/coordinates/ra/(?P<ra>[\.\:0-9]+)/dec/(?P<dec>[\.\:0-9]+)/$',
+        views.CoordinatesConverterDetailAPIView.as_view(),
+        name="coordinatesconversion-detail"),
 )
 
 if settings.DEBUG == False:

@@ -245,6 +245,8 @@ class ExoplanetSerializer(serializers.HyperlinkedModelSerializer):
     def get_radius_detection_method(self, obj):
         return Exoplanet.DETECTION_METHOD_VALUES[Exoplanet.DETECTION_METHOD_KEYS.index(obj.detection_method)]
 
+
+
 ######################## Archives ########################
 
 class ESOProgrammeSummarySerializer(serializers.HyperlinkedModelSerializer):
@@ -256,3 +258,12 @@ class HSTProgrammeSummarySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = HSTProgrammeSummary
         lookup_field = "programme_id"
+
+
+
+######################## Conversions ########################
+
+class CoordinatesConversionSerializer(serializers.ModelSerializer):
+    class Meta: model = CoordinatesConversion
+
+    input_coordinates = AstronomicalCoordinatesSerializer()
