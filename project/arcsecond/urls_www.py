@@ -9,7 +9,7 @@ urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
     url(r'^docs/', include('rest_framework_swagger.urls')),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^robots\.txt$', lambda r: HttpResponse("User-agent: *\n", mimetype='text/plain')),
+    url(r'^robots\.txt$', lambda r: HttpResponse("")),
     url(r'^observingsites/?$', views.observingsites, name="observingsites"),
 )
 
