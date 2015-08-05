@@ -260,10 +260,55 @@ class HSTProgrammeSummarySerializer(serializers.HyperlinkedModelSerializer):
         lookup_field = "programme_id"
 
 
+######################## Coordinates ########################
+
+class CIRSCoordinatesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CIRSCoordinates
+        fields = ('ra', 'ra_unit', 'dec', 'dec_unit', 'documentation', 'documentation_URL')
+
+class FK4CoordinatesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = FK4Coordinates
+        fields = ('ra', 'ra_unit', 'dec', 'dec_unit', 'equinox', 'documentation', 'documentation_URL')
+
+class FK4NoETermsCoordinatesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = FK4NoETermsCoordinates
+        fields = ('ra', 'ra_unit', 'dec', 'dec_unit', 'equinox', 'documentation', 'documentation_URL')
+
+class FK5CoordinatesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = FK5Coordinates
+        fields = ('ra', 'ra_unit', 'dec', 'dec_unit', 'equinox', 'documentation', 'documentation_URL')
+
+class GCRSCoordinatesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GCRSCoordinates
+        fields = ('ra', 'ra_unit', 'dec', 'dec_unit', 'documentation', 'documentation_URL')
+
+class GalacticCoordinatesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GalacticCoordinates
+        fields = ('l', 'l_unit', 'b', 'b_unit', 'documentation', 'documentation_URL')
+
+class ICRSCoordinatesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ICRSCoordinates
+        fields = ('ra', 'ra_unit', 'dec', 'dec_unit', 'documentation', 'documentation_URL')
 
 ######################## Conversions ########################
 
 class CoordinatesConversionSerializer(serializers.ModelSerializer):
-    class Meta: model = CoordinatesConversion
+    class Meta:
+        model = CoordinatesConversion
+        fields = ('input_first_value', 'input_second_value', 'input_frame', 'CIRS', 'FK4', 'FK4NoETerms', 'FK5', 'GCRS', 'Galactic', 'ICRS')
 
-    input_coordinates = AstronomicalCoordinatesSerializer()
+    CIRS = CIRSCoordinatesSerializer(required=False)
+    FK4 = FK4CoordinatesSerializer(required=False)
+    FK4NoETerms = FK4NoETermsCoordinatesSerializer(required=False)
+    FK5 = FK5CoordinatesSerializer(required=False)
+    GCRS = GCRSCoordinatesSerializer(required=False)
+    Galactic = GalacticCoordinatesSerializer(required=False)
+    ICRS = ICRSCoordinatesSerializer(required=False)
+

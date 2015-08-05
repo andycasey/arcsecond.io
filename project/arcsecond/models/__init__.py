@@ -7,3 +7,4 @@ from .earth import *
 from .sky import *
 from .archives import *
 from .conversions import *
+from .coordinates import *

@@ -1,46 +1,9 @@
-from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
 from django.db import models
+from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
 
+from .coordinates import AstronomicalCoordinates
 from .infos import *
 from .constants import *
-
-class AstronomicalCoordinates(models.Model):
-
-    SYSTEM_ICRS = "ICRS"
-    SYSTEM_FK5 = "FK5"
-    SYSTEM_FK4 = "FK4"
-    SYSTEM_FK4NOTERMS = "FK4NoETerms"
-    SYSTEM_GALACTIC = "Galactic"
-    SYSTEM_ALTAZ = "AltAz"
-
-    SYSTEMS_CHOICES = (
-        (SYSTEM_ICRS, 'ICRS'),
-        (SYSTEM_FK5, 'FK5'),
-        (SYSTEM_FK4, 'FK4'),
-        (SYSTEM_FK4NOTERMS, 'FK4NoETerms'),
-        (SYSTEM_GALACTIC, 'Galactic'),
-        (SYSTEM_ALTAZ, 'AltAz'),
-    )
-
-    system = models.CharField(max_length=20, choices=SYSTEMS_CHOICES, default=SYSTEM_ICRS)
-
-    right_ascension = models.FloatField(null=True, blank=True)
-    right_ascension_units = models.CharField(max_length=100, default='degrees')
-
-    declination = models.FloatField(null=True, blank=True)
-    declination_units = models.CharField(max_length=100, default='degrees')
-
-    epoch = models.FloatField(default=J2000)
-    equinox = models.FloatField(default=J2000)
-
-    def are_empty(self):
-        return self.right_ascension == NOT_A_SCIENTIFIC_NUMBER or \
-               self.declination == NOT_A_SCIENTIFIC_NUMBER or \
-               self.epoch == NOT_A_SCIENTIFIC_NUMBER
-
-    def __unicode__(self):
-        return u"(R.A.: %.8f, Dec: %.8f, epoch: %.2f, equinox: %.2f)"%(self.right_ascension, self.declination, self.epoch, self.equinox)
-
 
 class Alias(models.Model):
     name = models.CharField(max_length=500)
