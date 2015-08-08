@@ -26,6 +26,10 @@ urlpatterns = patterns('',
         views.ExoplanetNamedDetailAPIView.as_view(),
         name="exoplanet-named-detail"),
 
+    url(r'^1/observingsites/(?P<name>\w)/$',
+        views.ObservingSiteDetailAPIView.as_view(),
+        name="observingsite-detail"),
+
     url(r'^1/observingsites/$',
         views.ObservingSiteListAPIView.as_view(),
         name="observingsite-list"),
