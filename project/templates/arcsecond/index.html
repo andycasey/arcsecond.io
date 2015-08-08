@@ -90,9 +90,8 @@
                     </p>
 
                 </div>
-                <div class="col-sm-6">
 
-                    <!-- About item #1 -->
+                <div class="col-sm-6">
                     <div class="about__item">
                         <h3 class="about-item__title">
                             <img src="{% static 'arcsecond/images/StarIcon_512x512.png' %}" border="0" width="25"> Objects
@@ -110,12 +109,10 @@
                             </div>
                             <button type="submit" class="btn btn-default go-button">Go</button>
                         </form>
-                    </div> <!-- / .about__item -->
-
+                    </div>
                 </div>
-                <div class="col-sm-6">
 
-                    <!-- About item #2 -->
+                <div class="col-sm-6">
                     <div class="about__item">
                         <h3 class="about-item__title">
                             <img src="{% static 'arcsecond/images/ExoplanetIcon_512x512.png' %}" border="0" width="25"> Exoplanets
@@ -132,12 +129,10 @@
                             </div>
                             <button type="submit" class="btn btn-default go-button">Go</button>
                         </form>
-                    </div> <!-- / .about__item -->
-
+                    </div>
                 </div>
-                <div class="col-sm-6">
 
-                    <!-- About item #3 -->
+                <div class="col-sm-6">
                     <div class="about__item">
                         <h3 class="about-item__title">
                             <img src="{% static 'arcsecond/images/AsteroidIcon_512x512.png' %}" border="0" width="25"> <img src="{% static 'arcsecond/images/CometIcon_175x175.png' %}" border="0" width="25"> Asteroids & Comets
@@ -145,25 +140,39 @@
                         <p class="about-item__content">
                             Asteroids and Comets will be retrieved from the <a href="http://ssd.jpl.nasa.gov/?horizons">JPL Horizon service</a>.
                         </p>
-                    </div> <!-- / .about__item -->
-
+                    </div>
                 </div>
-                <div class="col-sm-6">
 
-                    <!-- About item #4 -->
+                <div class="col-sm-6">
                     <div class="about__item">
                         <h3 class="about-item__title">
-                            <img src="{% static 'arcsecond/images/ObservatoryIcon_512x512.png' %}" border="0" width="25"> Observatories & Organisations
+                            <img src="{% static 'arcsecond/images/ObservatoryIcon_512x512.png' %}" border="0" width="25"> Observing Sites
+                            <a tabindex="0" class="btn btn-sm" role="button" title="Why not 'Observatories'?"
+                               data-toggle="popover"
+                               data-trigger="focus"
+                               data-content="The term 'Observatories' is ambiguous, sometimes designating a place, sometimes a whole organisation,
+                                sometimes just a dome with a telescope. As we give access here specifically to locations on Earth, it makes more sense to use 'Observing Sites'.
+                                Organisations, along with universities etc, will have their dedicated entry point.">
+                                <span class="about-item-title__icon oi oi-question-mark" title="Explanations" aria-hidden="true"></span>
+                            </a>
                         </h3>
                         <p class="about-item__content">
-                            Observatories and Organisations are managed directly in arcsecond.io. It will be open for changes to registered users.
+                            Observing Sites are the places where telescopes are located. They are directly managed by arcsecond.io.
+                            Leave empty to get the current list of observing sites. Or use <code>?continent=<continent name></code> to filter according to continents.
                         </p>
-                    </div> <!-- / .about__item -->
-
+                        <form class="form-inline">
+                            <div class="form-group form-group-sm">
+                                <div class="input-group">
+                                    <div class="input-group-addon go-api">/{{ api_version }}/observingsites/</div>
+                                    <input type="text" class="form-control go-input" placeholder="ex: La Silla">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-default go-button">Go</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="col-sm-6">
 
-                    <!-- About item #5 -->
+                <div class="col-sm-6">
                     <div class="about__item">
                         <h3 class="about-item__title">
                             <img src="{% static 'arcsecond/images/BigTelescopeIcon_512x512.png' %}" border="0" width="25"> Telescopes & Instruments
@@ -171,12 +180,10 @@
                         <p class="about-item__content">
                             Telescopes & Instruments are managed directly in arcsecond.io. It will be open for changes to registered users.
                         </p>
-                    </div> <!-- / .about__item -->
-
+                    </div>
                 </div>
-                <div class="col-sm-6">
 
-                    <!-- About item #6 -->
+                <div class="col-sm-6">
                     <div class="about__item">
                         <h3 class="about-item__title">
                             <span class="about-item-title__icon oi oi-envelope-closed" title="Telegrams" aria-hidden="true"></span> Telegrams
@@ -184,13 +191,10 @@
                         <p class="about-item__content">
                             Telegrams is high in the whishlist. GRBs, supernovae etc...
                         </p>
-                    </div> <!-- / .about__item -->
-
+                    </div>
                 </div>
 
                 <div class="col-sm-6">
-
-                    <!-- About item #6 -->
                     <div class="about__item">
                         <h3 class="about-item__title">
                             <img src="{% static 'arcsecond/images/FITSIcon_512x512.png' %}" border="0" width="20"> Data Archives
@@ -214,13 +218,10 @@
                             </div>
                             <button type="submit" class="btn btn-default go-button">Go</button>
                         </form>
-                    </div> <!-- / .about__item -->
-
+                    </div>
                 </div>
 
                 <div class="col-sm-6">
-
-                    <!-- About item #6 -->
                     <div class="about__item">
                         <h3 class="about-item__title">
                             <img src="{% static 'arcsecond/images/ConverterIcon_512x512.png' %}" border="0" width="25"> Converters
@@ -250,14 +251,11 @@
                             </div>
                             <button type="submit" class="btn btn-default go-button">Go</button>
                         </form>
-                    </div> <!-- / .about__item -->
-
+                    </div>
                 </div>
 
 
                 <div class="col-sm-6">
-
-                    <!-- About item #6 -->
                     <div class="about__item">
                         <h3 class="about-item__title">
                             <span class="about-item-title__icon oi oi-people" title="People" aria-hidden="true"></span> People
@@ -266,13 +264,10 @@
                             The people section will regroup all the scientists, and active people in the field, present in papers, proposals, etc.
                             <br/>Hopefully, most of them will open a (soon-to-be-released) user account!
                         </p>
-                    </div> <!-- / .about__item -->
-
+                    </div>
                 </div>
 
                 <div class="col-sm-6">
-
-                    <!-- About item #6 -->
                     <div class="about__item">
                         <h3 class="about-item__title">
                             <img src="{% static 'arcsecond/images/FindingChartsIcon_512x512.png' %}" border="0" width="20"> Finding Charts
@@ -280,8 +275,7 @@
                         <p class="about-item__content">
                             Finding charts will integrate as many sources of charts as possible: SDSS, DSS, 2MASS etc.
                         </p>
-                    </div> <!-- / .about__item -->
-
+                    </div>
                 </div>
 
 
@@ -450,110 +444,110 @@
                 </div>
             </div> <!-- / .row -->
 
-{#            <div class="row">#}
-{#                <div class="col-sm-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">#}
-{##}
-{#                    <!-- Alert message -->#}
-{#                    <div class="alert contact-form__alert" id="form_message" role="alert"></div>#}
-{##}
-{#                    <!-- Setting the custom theme for reCaptcha.#}
-{#                         Default themes and customization:#}
-{#                         https://developers.google.com/recaptcha/docs/customization -->#}
-{##}
-{#                    <script type="text/javascript">#}
-{#                        var RecaptchaOptions = {#}
-{#                            theme : 'custom',#}
-{#                            custom_theme_widget: 'recaptcha_widget'#}
-{#                        };#}
-{#                    </script>#}
-{##}
-{#                    <!-- Contact form -->#}
-{#                    <!-- Please carefully read the README.txt file#}
-{#                     in order to setup the PHP contact form properly -->#}
-{#                    <form role="form" class="contact__form" id="form_sendemail">#}
-{#                        <div class="row">#}
-{#                            <div class="col-sm-6">#}
-{#                                <!-- Email -->#}
-{#                                <div class="form-group">#}
-{#                                    <label for="email" class="sr-only">Your email address</label>#}
-{#                                    <input type="email" name="email" class="form-control" id="email" placeholder="E-mail">#}
-{#                                    <span class="help-block"></span>#}
-{#                                </div>#}
-{#                                <!-- Name -->#}
-{#                                <div class="form-group">#}
-{#                                    <label for="name" class="sr-only">Your name</label>#}
-{#                                    <input type="text" name="name" class="form-control" id="name" placeholder="Full Name">#}
-{#                                    <span class="help-block"></span>#}
-{#                                </div>#}
-{##}
-{#                                <!-- reCAPTCHA -->#}
-{#                                <div class="form-group" id="form-captcha">#}
-{#                                    <!-- Start reCAPTCHA -->#}
-{#                                    <div id="recaptcha_widget" style="display:none">#}
-{#                                        <div class="recaptcha__merge">#}
-{#                                            <div class="recaptcha-merge__action">#}
-{#                                                <a href="javascript:Recaptcha.reload()">#}
-{#                                                    <span class="oi oi-loop-square"></span>#}
-{#                                                </a>#}
-{#                                                <a class="recaptcha_only_if_image" href="javascript:Recaptcha.switch_type('audio')">#}
-{#                                                    <span class="oi oi-headphones"></span>#}
-{#                                                </a>#}
-{#                                                <a class="recaptcha_only_if_audio" href="javascript:Recaptcha.switch_type('image')">#}
-{#                                                    <span class="oi oi-image"></span>#}
-{#                                                </a>#}
-{#                                            </div> <!-- / .recaptcha-merge__action -->#}
-{#                                            <!-- reCAPTCHA image -->#}
-{#                                            <div id="recaptcha_image"></div>#}
-{#                                        </div> <!-- / .recaptcha__merge -->#}
-{#                                        <div class="recaptcha_only_if_image text-muted">#}
-{#                                            Enter the words above (powered by reCaptcha):#}
-{#                                        </div>#}
-{#                                        <div class="recaptcha_only_if_audio text-muted">#}
-{#                                            Enter the numbers you hear (powered by reCaptcha):#}
-{#                                        </div>#}
-{#                                        <!-- reCAPTCHA input -->#}
-{#                                        <input class="form-control input-sm" type="text" id="recaptcha_response_field" name="recaptcha_response_field" />#}
-{#                                    </div> <!-- / #recaptcha_widget -->#}
-{##}
-{#                                    <script type="text/javascript"#}
-{#                                            src="http://www.google.com/recaptcha/api/challenge?k=YOUR_PUBLIC_KEY">#}
-{#                                    </script>#}
-{#                                    <noscript>#}
-{#                                        <iframe src="http://www.google.com/recaptcha/api/noscript?k=YOUR_PUBLIC_KEY"#}
-{#                                                height="300" width="500" frameborder="0"></iframe><br>#}
-{#                                                  <textarea name="recaptcha_challenge_field" rows="3" cols="40">#}
-{#                                                  </textarea>#}
-{#                                        <input type="hidden" name="recaptcha_response_field"#}
-{#                                               value="manual_challenge">#}
-{#                                    </noscript>#}
-{#                                    <!-- End reCAPTCHA -->#}
-{#                                    <span class="help-block"></span>#}
-{#                                </div> <!-- / .form-group -->#}
-{##}
-{#                            </div>#}
-{##}
-{#                            <div class="col-sm-6">#}
-{#                                <!-- Message -->#}
-{#                                <div class="form-group">#}
-{#                                    <label for="message" class="sr-only">Your message</label>#}
-{#                                    <textarea name="message" class="form-control" rows="11" id="message" placeholder="Message"></textarea>#}
-{#                                    <span class="help-block"></span>#}
-{#                                </div>#}
-{#                            </div>#}
-{#                        </div> <!-- / .row -->#}
-{##}
-{#                        <div class="text-center">#}
-{#                            <button type="submit" class="btn btn-lg btn-default">#}
-{#                                <span class="oi oi-arrow-right" title="Send it" aria-hidden="true"></span>#}
-{#                                <span>Send message</span>#}
-{#                            </button>#}
-{#                            <div class="clearfix"></div>#}
-{#                        </div>#}
-{##}
-{#                    </form>#}
-{#                </div>#}
-{##}
-{#            </div> <!-- / .row -->#}
+            {#            <div class="row">#}
+            {#                <div class="col-sm-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">#}
+            {##}
+            {#                    <!-- Alert message -->#}
+            {#                    <div class="alert contact-form__alert" id="form_message" role="alert"></div>#}
+            {##}
+            {#                    <!-- Setting the custom theme for reCaptcha.#}
+            {#                         Default themes and customization:#}
+            {#                         https://developers.google.com/recaptcha/docs/customization -->#}
+            {##}
+            {#                    <script type="text/javascript">#}
+            {#                        var RecaptchaOptions = {#}
+            {#                            theme : 'custom',#}
+            {#                            custom_theme_widget: 'recaptcha_widget'#}
+            {#                        };#}
+            {#                    </script>#}
+            {##}
+            {#                    <!-- Contact form -->#}
+            {#                    <!-- Please carefully read the README.txt file#}
+            {#                     in order to setup the PHP contact form properly -->#}
+            {#                    <form role="form" class="contact__form" id="form_sendemail">#}
+            {#                        <div class="row">#}
+            {#                            <div class="col-sm-6">#}
+            {#                                <!-- Email -->#}
+            {#                                <div class="form-group">#}
+            {#                                    <label for="email" class="sr-only">Your email address</label>#}
+            {#                                    <input type="email" name="email" class="form-control" id="email" placeholder="E-mail">#}
+            {#                                    <span class="help-block"></span>#}
+            {#                                </div>#}
+            {#                                <!-- Name -->#}
+            {#                                <div class="form-group">#}
+            {#                                    <label for="name" class="sr-only">Your name</label>#}
+            {#                                    <input type="text" name="name" class="form-control" id="name" placeholder="Full Name">#}
+            {#                                    <span class="help-block"></span>#}
+            {#                                </div>#}
+            {##}
+            {#                                <!-- reCAPTCHA -->#}
+            {#                                <div class="form-group" id="form-captcha">#}
+            {#                                    <!-- Start reCAPTCHA -->#}
+            {#                                    <div id="recaptcha_widget" style="display:none">#}
+            {#                                        <div class="recaptcha__merge">#}
+            {#                                            <div class="recaptcha-merge__action">#}
+            {#                                                <a href="javascript:Recaptcha.reload()">#}
+            {#                                                    <span class="oi oi-loop-square"></span>#}
+            {#                                                </a>#}
+            {#                                                <a class="recaptcha_only_if_image" href="javascript:Recaptcha.switch_type('audio')">#}
+            {#                                                    <span class="oi oi-headphones"></span>#}
+            {#                                                </a>#}
+            {#                                                <a class="recaptcha_only_if_audio" href="javascript:Recaptcha.switch_type('image')">#}
+            {#                                                    <span class="oi oi-image"></span>#}
+            {#                                                </a>#}
+            {#                                            </div> <!-- / .recaptcha-merge__action -->#}
+            {#                                            <!-- reCAPTCHA image -->#}
+            {#                                            <div id="recaptcha_image"></div>#}
+            {#                                        </div> <!-- / .recaptcha__merge -->#}
+            {#                                        <div class="recaptcha_only_if_image text-muted">#}
+            {#                                            Enter the words above (powered by reCaptcha):#}
+            {#                                        </div>#}
+            {#                                        <div class="recaptcha_only_if_audio text-muted">#}
+            {#                                            Enter the numbers you hear (powered by reCaptcha):#}
+            {#                                        </div>#}
+            {#                                        <!-- reCAPTCHA input -->#}
+            {#                                        <input class="form-control input-sm" type="text" id="recaptcha_response_field" name="recaptcha_response_field" />#}
+            {#                                    </div> <!-- / #recaptcha_widget -->#}
+            {##}
+            {#                                    <script type="text/javascript"#}
+            {#                                            src="http://www.google.com/recaptcha/api/challenge?k=YOUR_PUBLIC_KEY">#}
+            {#                                    </script>#}
+            {#                                    <noscript>#}
+            {#                                        <iframe src="http://www.google.com/recaptcha/api/noscript?k=YOUR_PUBLIC_KEY"#}
+            {#                                                height="300" width="500" frameborder="0"></iframe><br>#}
+            {#                                                  <textarea name="recaptcha_challenge_field" rows="3" cols="40">#}
+            {#                                                  </textarea>#}
+            {#                                        <input type="hidden" name="recaptcha_response_field"#}
+            {#                                               value="manual_challenge">#}
+            {#                                    </noscript>#}
+            {#                                    <!-- End reCAPTCHA -->#}
+            {#                                    <span class="help-block"></span>#}
+            {#                                </div> <!-- / .form-group -->#}
+            {##}
+            {#                            </div>#}
+            {##}
+            {#                            <div class="col-sm-6">#}
+            {#                                <!-- Message -->#}
+            {#                                <div class="form-group">#}
+            {#                                    <label for="message" class="sr-only">Your message</label>#}
+            {#                                    <textarea name="message" class="form-control" rows="11" id="message" placeholder="Message"></textarea>#}
+            {#                                    <span class="help-block"></span>#}
+            {#                                </div>#}
+            {#                            </div>#}
+            {#                        </div> <!-- / .row -->#}
+            {##}
+            {#                        <div class="text-center">#}
+            {#                            <button type="submit" class="btn btn-lg btn-default">#}
+            {#                                <span class="oi oi-arrow-right" title="Send it" aria-hidden="true"></span>#}
+            {#                                <span>Send message</span>#}
+            {#                            </button>#}
+            {#                            <div class="clearfix"></div>#}
+            {#                        </div>#}
+            {##}
+            {#                    </form>#}
+            {#                </div>#}
+            {##}
+            {#            </div> <!-- / .row -->#}
 
         </div> <!-- / .container -->
     </div> <!-- / .site-wrapper -->
@@ -575,6 +569,10 @@
 
     <script>
         $(document).ready(function () {
+            $(function () {
+                $('[data-toggle="popover"]').popover()
+            });
+
             $('.selectpicker').selectpicker();
 
             $('.go-select').change(function(){
@@ -583,45 +581,46 @@
             });
 
             $(".go-button").click(function() {
-                var input = $(this).parents(".form-inline").find(".go-input").val();
+                var element = $(this).parents(".form-inline");
+                {% if settings.SITE_ID == 1 %}
+                    var api_url = "http://127.0.0.1:8000";
+                {% elif settings.SITE_ID == 2 %}
+                    var api_url = "http://arcsecond-staging.herokuapp.com";
+                {% else %}
+                    var api_url = "http://api.arcsecond.io";
+                {% endif %}
+                api_url += element.find(".go-api").html().split("\n")[0];
+
+                var api_select = element.find(".go-select");
+                if (api_select.length == 1) {
+                    api_url += api_select.val();
+                }
+
+                var api_select_suffix = element.find(".go-select-suffix");
+                if (api_select_suffix.length == 1) {
+                    api_url += api_select_suffix.html();
+                }
+
+                var input = element.find(".go-input").val();
                 if (input) {
-                    var element = $(this).parents(".form-inline");
-                    {% if settings.SITE_ID == 1 %}
-                        var api_url = "http://127.0.0.1:8000";
-                    {% elif settings.SITE_ID == 2 %}
-                        var api_url = "http://arcsecond-staging.herokuapp.com";
-                    {% else %}
-                        var api_url = "http://api.arcsecond.io";
-                    {% endif %}
-                    api_url += element.find(".go-api").html().split("\n")[0];
-                    var api_select = element.find(".go-select");
-                    if (api_select.length == 1) {
-                        api_url += api_select.val();
-                    }
-                    var api_select_suffix = element.find(".go-select-suffix");
-                    if (api_select_suffix.length == 1) {
-                        api_url += api_select_suffix.html();
-                    }
                     api_url += input;
-
-                    var api_2 = element.find(".go-api-2");
-                    if (api_2.length == 1) {
-                        api_url += api_2.html();
-                    }
-                    var api_input_2 = element.find(".go-input-2");
-                    if (api_input_2.length == 1) {
-                        api_url += api_input_2.val();
-                    }
-
-                    var api_suffix = element.find(".go-api-suffix");
-                    if (api_suffix.length == 1) {
-                        api_url += api_suffix.html();
-                    }
-                    window.open(api_url, '_blank');
                 }
-                else {
-                    alert("You need to enter some input.");
+
+                var api_2 = element.find(".go-api-2");
+                if (api_2.length == 1) {
+                    api_url += api_2.html();
                 }
+
+                var api_input_2 = element.find(".go-input-2");
+                if (api_input_2.length == 1) {
+                    api_url += api_input_2.val();
+                }
+
+                var api_suffix = element.find(".go-api-suffix");
+                if (api_suffix.length == 1) {
+                    api_url += api_suffix.html();
+                }
+                window.open(api_url, '_blank');
             });
         });
     </script>
