@@ -14,6 +14,14 @@ class ObservingSiteListAPIView(mixins.RequestLogViewMixin, generics.ListAPIView)
     serializer_class = serializers.ObservingSiteSerializer
     lookup_field = "name"
 
+    def get_queryset(self):
+        queryset = models.ObservingSite.objects.all()
+        continent = self.request.query_params.get('continent', None)
+        if continent is not None:
+            queryset = queryset.filter(continent=continent)
+        return queryset
+
+
 class ObservingSiteDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIView):
     queryset = models.ObservingSite.objects.all()
     serializer_class = serializers.ObservingSiteSerializer
