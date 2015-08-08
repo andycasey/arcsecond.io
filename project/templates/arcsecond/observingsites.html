@@ -18,20 +18,20 @@
             <div class="row">
                 <div class="col-md-5 col-md-offset-4">
                     <h3 class="text-center"><img src="{% static 'arcsecond/images/ObservatoryIcon_512x512.png' %}" width=25px> Observing Sites</h3>
-                    <input type="text" class="form-control search-field" placeholder="Search by Name...">
+{#                    <input type="text" class="form-control search-field" placeholder="Search by Name...">#}
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-md-2 col-md-offset-1">
                     <ul class="nav nav-pills nav-pills nav-stacked text-right">
-                        <li role="presentation"><a href="#">Africa <span class="badge">{{ african_sites.count }}</span></a></li>
-                        <li role="presentation"><a href="#">Antarctica <span class="badge">{{ antarctica_sites.count }}</span></a></li>
-                        <li role="presentation"><a href="#">Asia <span class="badge">{{ asian_sites.count }}</span></a></li>
-                        <li role="presentation"><a href="#">Europe <span class="badge">{{ european_sites.count }}</span></a></li>
-                        <li role="presentation"><a href="#">North America <span class="badge">{{ north_american_sites.count }}</span></a></li>
-                        <li role="presentation"><a href="#">Oceania <span class="badge">{{ oceania_sites.count }}</span></a></li>
-                        <li role="presentation"><a href="#">South America <span class="badge">{{ south_american_sites.count }}</span></a></li>
+                        <li role="presentation"><a data-target="#" data-toggle="pill" href="#">Africa <span class="badge">{{ african_sites }}</span></a></li>
+                        <li role="presentation"><a data-target="#" data-toggle="pill" href="#">Antarctica <span class="badge">{{ antarctica_sites }}</span></a></li>
+                        <li role="presentation"><a data-target="#" data-toggle="pill" href="#">Asia <span class="badge">{{ asian_sites }}</span></a></li>
+                        <li role="presentation"><a data-target="#" data-toggle="pill" href="#">Europe <span class="badge">{{ european_sites }}</span></a></li>
+                        <li role="presentation"><a data-target="#" data-toggle="pill" href="#">North America <span class="badge">{{ north_american_sites }}</span></a></li>
+                        <li role="presentation"><a data-target="#" data-toggle="pill" href="#">Oceania <span class="badge">{{ oceania_sites }}</span></a></li>
+                        <li role="presentation"><a data-target="#" data-toggle="pill" href="#">South America <span class="badge">{{ south_american_sites }}</span></a></li>
                     </ul>
                 </div>
             </div>

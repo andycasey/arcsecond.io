@@ -28,10 +28,10 @@ def observingsites(request, path=None):
     oceania_sites = models.ObservingSite.objects.filter(continent='Oceania')
     south_american_sites = models.ObservingSite.objects.filter(continent='South America')
 
-    return render(request, 'arcsecond/observingsites.html', {'african_sites': african_sites,
-                                                              'antarctica_sites': antarctica_sites,
-                                                              'asian_sites': asian_sites,
-                                                              'european_sites': european_sites,
-                                                              'north_american_sites': north_american_sites,
-                                                              'oceania_sites': oceania_sites,
-                                                              'south_american_sites': south_american_sites})
+    return render(request, 'arcsecond/observingsites.html', {'african_sites': african_sites.count,
+                                                              'antarctica_sites': antarctica_sites.count,
+                                                              'asian_sites': asian_sites.count,
+                                                              'european_sites': european_sites.count,
+                                                              'north_american_sites': north_american_sites.count,
+                                                              'oceania_sites': oceania_sites.count,
+                                                              'south_american_sites': south_american_sites.count})
