@@ -147,15 +147,15 @@ class GravitySerializer(serializers.HyperlinkedModelSerializer):
 class CoordinatesSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Coordinates
-
+        fields = ('longitude', 'latitude', 'height')
 
 class ObservingSiteSerializer(serializers.HyperlinkedModelSerializer):
     coordinates = CoordinatesSerializer()
 
     class Meta:
         model = ObservingSite
+        fields = ('name', 'long_name', 'IAUCode', 'continent', 'coordinates', 'address_line_1', 'address_line_2', 'zip_code', 'country', 'time_zone', 'time_zone_name')
         lookup_field = "name"
-
 
 
 ######################## Objects Properties ########################
