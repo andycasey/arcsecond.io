@@ -54,9 +54,9 @@
                 <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
                     <div class="lead text-center text">
                         <em>
-                            <strong>arcsecond.io</strong> aims at providing <i>browsable</i> APIs where
+                            <strong>arcsecond.io</strong> aims at providing browsable, unified APIs where
                             each piece of astronomical information has its own <i>Uniform Resource Locator</i> (a.k.a. URL).
-                            SIMBAD, NED, exoplanet.eu, JPL Horizons, astro telegrams are among the sources of information that
+                            SIMBAD, NASA Exoplanet Archive, JPL Horizons, ADS are among the sources of information that
                             arcsecond.io intend to unify. Because we believe in the force of <strong>integration</strong>.
                         </em>
                     </div>
@@ -83,7 +83,7 @@
                     <!-- Sub heading -->
                     <p class="heading__sub">
                         Our goal is to give access to as much information as possible, aggregating information with a philosophy centered around <em>resources</em>.
-                        The APIs will incrementally be introduced here. To follow what's going on, read <a href="http://onekilopars.ec/blog">onekilopars.ec blog</a>.
+                        <br/>The APIs will incrementally be introduced here. To follow what's going on, read <a href="http://onekilopars.ec/blog">onekilopars.ec blog</a>.
                     </p>
 
                 </div>
@@ -95,7 +95,8 @@
                             <img src="{% static 'arcsecond/images/StarIcon_512x512.png' %}" border="0" width="25"> Objects
                         </h3>
                         <p class="about-item__content">
-                            Objects are anything <a href="http://simbad.u-strasbg.fr/simbad/">SIMBAD</a> and <a href="http://ned.ipac.caltech.edu">NED</a> services understand. Enter the name of a known object and press Go! Still incomplete, but more details will be added.
+                            Objects are a consolidated aggregation of <a href="http://simbad.u-strasbg.fr/simbad/">SIMBAD</a> and <a href="http://ned.ipac.caltech.edu">NED</a> services.
+                            <br/>Enter the name of a known object and press Go!
                         </p>
                         <form class="form-inline">
                             <div class="form-group form-group-sm">
@@ -117,7 +118,7 @@
                             <img src="{% static 'arcsecond/images/ExoplanetIcon_512x512.png' %}" border="0" width="25"> Exoplanets
                         </h3>
                         <p class="about-item__content">
-                            Exoplanets are retrieved from <a href="http://exoplanet.eu">exoplanet.eu</a>. The current implementation is only partially complete, and the access to the whole catalogue will be added.
+                            Exoplanets data are consolidated from <a href="http://exoplanetarchive.ipac.caltech.edu">NASA Exoplanet Archive</a> and <a href="http://exoplanet.eu">exoplanet.eu</a>. The current implementation is only partially complete.
                         </p>
                         <form class="form-inline">
                             <div class="form-group form-group-sm">
@@ -237,11 +238,11 @@
                                     <input type="text" class="form-control go-input" placeholder="ex : 3.4576">
                                     <div class="input-group-addon go-api-2">/dec/</div>
                                     <input type="text" class="form-control go-input-2" placeholder="ex : -70.2452">
-{#                                    <div class="input-group-addon go-api-2">/#}
-{#                                        <select class="go-select-2">#}
-{#                                            <option>(empty)</option>#}
-{#                                        </select>#}
-{#                                    </div>#}
+                                    {#                                    <div class="input-group-addon go-api-2">/#}
+                                    {#                                        <select class="go-select-2">#}
+                                    {#                                            <option>(empty)</option>#}
+                                    {#                                        </select>#}
+                                    {#                                    </div>#}
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-default go-button">Go</button>
@@ -249,6 +250,37 @@
                     </div> <!-- / .about__item -->
 
                 </div>
+
+
+                <div class="col-sm-6">
+
+                    <!-- About item #6 -->
+                    <div class="about__item">
+                        <h3 class="about-item__title">
+                            <span class="about-item-title__icon oi oi-people" title="People" aria-hidden="true"></span> People
+                        </h3>
+                        <p class="about-item__content">
+                            The people section will regroup all the scientists, and active people in the field, present in papers, proposals, etc.
+                            <br/>Hopefully, most of them will open a (soon-to-be-released) user account!
+                        </p>
+                    </div> <!-- / .about__item -->
+
+                </div>
+
+                <div class="col-sm-6">
+
+                    <!-- About item #6 -->
+                    <div class="about__item">
+                        <h3 class="about-item__title">
+                            <img src="{% static 'arcsecond/images/FindingChartsIcon_512x512.png' %}" border="0" width="20"> Finding Charts
+                        </h3>
+                        <p class="about-item__content">
+                            Finding charts will integrate as many sources of charts as possible: SDSS, DSS, 2MASS etc.
+                        </p>
+                    </div> <!-- / .about__item -->
+
+                </div>
+                
 
             </div> <!-- / .row -->
         </div> <!-- / .container -->
@@ -278,44 +310,44 @@
                 </div>
             </div> <!-- / .row -->
 
-            {#            <div class="row">#}
-            {#                <div class="col-sm-6 col-md-5 col-md-offset-1">#}
+            {#                        <div class="row">#}
+            {#                            <div class="col-sm-6 col-md-5 col-md-offset-1">#}
             {##}
-            {#                    <!-- Features item -->#}
-            {#                    <div class="features__item">#}
+            {#                                <!-- Features item -->#}
+            {#                                <div class="features__item">#}
             {##}
-            {#                        <!-- Title -->#}
-            {#                        <h3 class="features-item__title">#}
-            {#                            <span class="text-primary">01.</span>#}
-            {#                            Five color options#}
-            {#                        </h3>#}
+            {#                                    <!-- Title -->#}
+            {#                                    <h3 class="features-item__title">#}
+            {#                                        <span class="text-primary">01.</span>#}
+            {#                                        Five color options#}
+            {#                                    </h3>#}
             {##}
-            {#                        <!-- Summary -->#}
-            {#                        <div class="features-item__summary">#}
-            {#                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at scelerisque diam, ut pellentesque leo. Morbi lacinia ut nibh eget euismod. Donec molestie odio sed leo interdum ultrices.#}
-            {#                        </div>#}
-            {#                    </div> <!-- / .features__item -->#}
+            {#                                    <!-- Summary -->#}
+            {#                                    <div class="features-item__summary">#}
+            {#                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at scelerisque diam, ut pellentesque leo. Morbi lacinia ut nibh eget euismod. Donec molestie odio sed leo interdum ultrices.#}
+            {#                                    </div>#}
+            {#                                </div> <!-- / .features__item -->#}
             {##}
-            {#                </div>#}
-            {#                <div class="col-sm-6 col-md-5">#}
+            {#                            </div>#}
+            {#                            <div class="col-sm-6 col-md-5">#}
             {##}
-            {#                    <!-- Features item -->#}
-            {#                    <div class="features__item">#}
+            {#                                <!-- Features item -->#}
+            {#                                <div class="features__item">#}
             {##}
-            {#                        <!-- Title -->#}
-            {#                        <h3 class="features-item__title">#}
-            {#                            <span class="text-primary">02.</span>#}
-            {#                            Two menu types#}
-            {#                        </h3>#}
+            {#                                    <!-- Title -->#}
+            {#                                    <h3 class="features-item__title">#}
+            {#                                        <span class="text-primary">02.</span>#}
+            {#                                        Two menu types#}
+            {#                                    </h3>#}
             {##}
-            {#                        <!-- Summary -->#}
-            {#                        <div class="features-item__summary">#}
-            {#                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at scelerisque diam, ut pellentesque leo. Morbi lacinia ut nibh eget euismod. Donec molestie odio sed leo interdum ultrices.#}
-            {#                        </div>#}
-            {#                    </div> <!-- / .features__item -->#}
+            {#                                    <!-- Summary -->#}
+            {#                                    <div class="features-item__summary">#}
+            {#                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at scelerisque diam, ut pellentesque leo. Morbi lacinia ut nibh eget euismod. Donec molestie odio sed leo interdum ultrices.#}
+            {#                                    </div>#}
+            {#                                </div> <!-- / .features__item -->#}
             {##}
-            {#                </div>#}
-            {#            </div> <!-- / .row -->#}
+            {#                            </div>#}
+            {#                        </div> <!-- / .row -->#}
 
         </div> <!-- / .container -->
     </div> <!-- / .site-wrapper -->
@@ -360,9 +392,8 @@
                         <!-- Info -->
                         <h4 class="team-member__name">Cédric Foellmi, Ph.D.</h4>
                         <p class="team-member__info">
-                            A guy, former support astronomer at one of the most beautiful observatory on this planet (the <a href="http://www.eso.org/public/teles-instr/lasilla/">La Silla Observatory</a>, picture behind), and for a time interested by the distance of the closest microquasars in our galaxy, and especially <a href="http://arxiv.org/abs/0812.4232">one he thought was located at 1 kiloparsec</a>.
-                            <br/>Hence, his now famous signature...
-                            <br/>More about him at <a href="onekilopars.ec">http://onekilopars.ec</a>.
+                            A guy, former support astronomer at one of the <a href="http://www.eso.org/public/teles-instr/lasilla/">most beautiful observatory on this planet</a> (picture behind), and for a time interested by the distance of the closest microquasars in our galaxy, and especially <a href="http://arxiv.org/abs/0812.4232">one he thought was located at 1 kiloparsec</a>.
+                            <br/>Hence, his now famous <a href="onekilopars.ec">signature</a>...
                         </p>
 
                         <!-- Contact -->
@@ -417,111 +448,111 @@
                 </div>
             </div> <!-- / .row -->
 
-            {#            <div class="row">#}
-            {#                <div class="col-sm-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">#}
-            {##}
-            {#                    <!-- Alert message -->#}
-            {#                    <div class="alert contact-form__alert" id="form_message" role="alert"></div>#}
-            {##}
-            {#                    <!-- Setting the custom theme for reCaptcha.#}
-            {#                         Default themes and customization:#}
-            {#                         https://developers.google.com/recaptcha/docs/customization -->#}
-            {##}
-            {#                    <script type="text/javascript">#}
-            {#                        var RecaptchaOptions = {#}
-            {#                            theme : 'custom',#}
-            {#                            custom_theme_widget: 'recaptcha_widget'#}
-            {#                        };#}
-            {#                    </script>#}
-            {##}
-            {#                    <!-- Contact form -->#}
-            {#                    <!-- Please carefully read the README.txt file#}
-            {#                     in order to setup the PHP contact form properly -->#}
-            {#                    <form role="form" class="contact__form" id="form_sendemail">#}
-            {#                        <div class="row">#}
-            {#                            <div class="col-sm-6">#}
-            {#                                <!-- Email -->#}
-            {#                                <div class="form-group">#}
-            {#                                    <label for="email" class="sr-only">Your email address</label>#}
-            {#                                    <input type="email" name="email" class="form-control" id="email" placeholder="E-mail">#}
-            {#                                    <span class="help-block"></span>#}
-            {#                                </div>#}
-            {#                                <!-- Name -->#}
-            {#                                <div class="form-group">#}
-            {#                                    <label for="name" class="sr-only">Your name</label>#}
-            {#                                    <input type="text" name="name" class="form-control" id="name" placeholder="Full Name">#}
-            {#                                    <span class="help-block"></span>#}
-            {#                                </div>#}
-            {##}
-            {#                                <!-- reCAPTCHA -->#}
-            {#                                <div class="form-group" id="form-captcha">#}
-            {#                                    <!-- Start reCAPTCHA -->#}
-            {#                                    <div id="recaptcha_widget" style="display:none">#}
-            {#                                        <div class="recaptcha__merge">#}
-            {#                                            <div class="recaptcha-merge__action">#}
-            {#                                                <a href="javascript:Recaptcha.reload()">#}
-            {#                                                    <span class="oi oi-loop-square"></span>#}
-            {#                                                </a>#}
-            {#                                                <a class="recaptcha_only_if_image" href="javascript:Recaptcha.switch_type('audio')">#}
-            {#                                                    <span class="oi oi-headphones"></span>#}
-            {#                                                </a>#}
-            {#                                                <a class="recaptcha_only_if_audio" href="javascript:Recaptcha.switch_type('image')">#}
-            {#                                                    <span class="oi oi-image"></span>#}
-            {#                                                </a>#}
-            {#                                            </div> <!-- / .recaptcha-merge__action -->#}
-            {#                                            <!-- reCAPTCHA image -->#}
-            {#                                            <div id="recaptcha_image"></div>#}
-            {#                                        </div> <!-- / .recaptcha__merge -->#}
-            {#                                        <div class="recaptcha_only_if_image text-muted">#}
-            {#                                            Enter the words above (powered by reCaptcha):#}
-            {#                                        </div>#}
-            {#                                        <div class="recaptcha_only_if_audio text-muted">#}
-            {#                                            Enter the numbers you hear (powered by reCaptcha):#}
-            {#                                        </div>#}
-            {#                                        <!-- reCAPTCHA input -->#}
-            {#                                        <input class="form-control input-sm" type="text" id="recaptcha_response_field" name="recaptcha_response_field" />#}
-            {#                                    </div> <!-- / #recaptcha_widget -->#}
-            {##}
-            {#                                    <script type="text/javascript"#}
-            {#                                            src="http://www.google.com/recaptcha/api/challenge?k=YOUR_PUBLIC_KEY">#}
-            {#                                    </script>#}
-            {#                                    <noscript>#}
-            {#                                        <iframe src="http://www.google.com/recaptcha/api/noscript?k=YOUR_PUBLIC_KEY"#}
-            {#                                                height="300" width="500" frameborder="0"></iframe><br>#}
-            {#                      <textarea name="recaptcha_challenge_field" rows="3" cols="40">#}
-            {#                      </textarea>#}
-            {#                                        <input type="hidden" name="recaptcha_response_field"#}
-            {#                                               value="manual_challenge">#}
-            {#                                    </noscript>#}
-            {#                                    <!-- End reCAPTCHA -->#}
-            {#                                    <span class="help-block"></span>#}
-            {#                                </div> <!-- / .form-group -->#}
-            {##}
-            {#                            </div>#}
-            {##}
-            {#                            <div class="col-sm-6">#}
-            {#                                <!-- Message -->#}
-            {#                                <div class="form-group">#}
-            {#                                    <label for="message" class="sr-only">Your message</label>#}
-            {#                                    <textarea name="message" class="form-control" rows="11" id="message" placeholder="Message"></textarea>#}
-            {#                                    <span class="help-block"></span>#}
-            {#                                </div>#}
-            {#                            </div>#}
-            {#                        </div> <!-- / .row -->#}
-            {##}
-            {#                        <div class="text-center">#}
-            {#                            <button type="submit" class="btn btn-lg btn-default">#}
-            {#                                <span class="oi oi-arrow-right" title="Send it" aria-hidden="true"></span>#}
-            {#                                <span>Send message</span>#}
-            {#                            </button>#}
-            {#                            <div class="clearfix"></div>#}
-            {#                        </div>#}
-            {##}
-            {#                    </form>#}
-            {#                </div>#}
+            <div class="row">
+                <div class="col-sm-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
 
-        </div> <!-- / .row -->
-    </div> <!-- / .container -->
+                    <!-- Alert message -->
+                    <div class="alert contact-form__alert" id="form_message" role="alert"></div>
+
+                    <!-- Setting the custom theme for reCaptcha.
+                         Default themes and customization:
+                         https://developers.google.com/recaptcha/docs/customization -->
+
+                    <script type="text/javascript">
+                        var RecaptchaOptions = {
+                            theme : 'custom',
+                            custom_theme_widget: 'recaptcha_widget'
+                        };
+                    </script>
+
+{#                    <!-- Contact form -->#}
+{#                    <!-- Please carefully read the README.txt file#}
+{#                     in order to setup the PHP contact form properly -->#}
+{#                    <form role="form" class="contact__form" id="form_sendemail">#}
+{#                        <div class="row">#}
+{#                            <div class="col-sm-6">#}
+{#                                <!-- Email -->#}
+{#                                <div class="form-group">#}
+{#                                    <label for="email" class="sr-only">Your email address</label>#}
+{#                                    <input type="email" name="email" class="form-control" id="email" placeholder="E-mail">#}
+{#                                    <span class="help-block"></span>#}
+{#                                </div>#}
+{#                                <!-- Name -->#}
+{#                                <div class="form-group">#}
+{#                                    <label for="name" class="sr-only">Your name</label>#}
+{#                                    <input type="text" name="name" class="form-control" id="name" placeholder="Full Name">#}
+{#                                    <span class="help-block"></span>#}
+{#                                </div>#}
+{##}
+{#                                <!-- reCAPTCHA -->#}
+{#                                <div class="form-group" id="form-captcha">#}
+{#                                    <!-- Start reCAPTCHA -->#}
+{#                                    <div id="recaptcha_widget" style="display:none">#}
+{#                                        <div class="recaptcha__merge">#}
+{#                                            <div class="recaptcha-merge__action">#}
+{#                                                <a href="javascript:Recaptcha.reload()">#}
+{#                                                    <span class="oi oi-loop-square"></span>#}
+{#                                                </a>#}
+{#                                                <a class="recaptcha_only_if_image" href="javascript:Recaptcha.switch_type('audio')">#}
+{#                                                    <span class="oi oi-headphones"></span>#}
+{#                                                </a>#}
+{#                                                <a class="recaptcha_only_if_audio" href="javascript:Recaptcha.switch_type('image')">#}
+{#                                                    <span class="oi oi-image"></span>#}
+{#                                                </a>#}
+{#                                            </div> <!-- / .recaptcha-merge__action -->#}
+{#                                            <!-- reCAPTCHA image -->#}
+{#                                            <div id="recaptcha_image"></div>#}
+{#                                        </div> <!-- / .recaptcha__merge -->#}
+{#                                        <div class="recaptcha_only_if_image text-muted">#}
+{#                                            Enter the words above (powered by reCaptcha):#}
+{#                                        </div>#}
+{#                                        <div class="recaptcha_only_if_audio text-muted">#}
+{#                                            Enter the numbers you hear (powered by reCaptcha):#}
+{#                                        </div>#}
+{#                                        <!-- reCAPTCHA input -->#}
+{#                                        <input class="form-control input-sm" type="text" id="recaptcha_response_field" name="recaptcha_response_field" />#}
+{#                                    </div> <!-- / #recaptcha_widget -->#}
+{##}
+{#                                    <script type="text/javascript"#}
+{#                                            src="http://www.google.com/recaptcha/api/challenge?k=YOUR_PUBLIC_KEY">#}
+{#                                    </script>#}
+{#                                    <noscript>#}
+{#                                        <iframe src="http://www.google.com/recaptcha/api/noscript?k=YOUR_PUBLIC_KEY"#}
+{#                                                height="300" width="500" frameborder="0"></iframe><br>#}
+{#                                  <textarea name="recaptcha_challenge_field" rows="3" cols="40">#}
+{#                                  </textarea>#}
+{#                                        <input type="hidden" name="recaptcha_response_field"#}
+{#                                               value="manual_challenge">#}
+{#                                    </noscript>#}
+{#                                    <!-- End reCAPTCHA -->#}
+{#                                    <span class="help-block"></span>#}
+{#                                </div> <!-- / .form-group -->#}
+{##}
+{#                            </div>#}
+{##}
+{#                            <div class="col-sm-6">#}
+{#                                <!-- Message -->#}
+{#                                <div class="form-group">#}
+{#                                    <label for="message" class="sr-only">Your message</label>#}
+{#                                    <textarea name="message" class="form-control" rows="11" id="message" placeholder="Message"></textarea>#}
+{#                                    <span class="help-block"></span>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div> <!-- / .row -->#}
+{##}
+{#                        <div class="text-center">#}
+{#                            <button type="submit" class="btn btn-lg btn-default">#}
+{#                                <span class="oi oi-arrow-right" title="Send it" aria-hidden="true"></span>#}
+{#                                <span>Send message</span>#}
+{#                            </button>#}
+{#                            <div class="clearfix"></div>#}
+{#                        </div>#}
+{##}
+{#                    </form>#}
+{#                </div>#}
+
+            </div> <!-- / .row -->
+        </div> <!-- / .container -->
     </div> <!-- / .site-wrapper -->
 
     <!-- Google Map -->
