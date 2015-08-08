@@ -7,7 +7,7 @@
 
     <!-- NAVBAR
     ============================== -->
-    <div class="navbar navbar-default navbar__initial navbar-fixed-top scrollspy_menu" role="navigation">
+    <div class="navbar navbar-default {% if initial %}navbar__initial scrollspy_menu{% endif %} navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -50,7 +50,7 @@
     </div>
 
     <!-- Sidebar menu -->
-    <div class="sidebar__menu sidebar__menu_hidden scrollspy_menu">
+    <div class="sidebar__menu sidebar__menu_hidden  {% if initial %}scrollspy_menu{% endif %}">
 
         <!-- Sidebar button close -->
         <div class="sidebar__btn sidebar__btn_close">

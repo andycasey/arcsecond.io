@@ -94,10 +94,10 @@
 <script src="{% static 'arcsecond/js/plugins/imagesloaded.pkgd.min.js' %}"></script>
 <script src="{% static 'arcsecond/js/plugins/isotope.pkgd.min.js' %}"></script>
 <script src="{% static 'arcsecond/js/plugins/lightbox.min.js' %}"></script>
-<script src="{% static 'arcsecond/js/plugins/contact.js' %}"></script>
+{#<script src="{% static 'arcsecond/js/plugins/contact.js' %}"></script>#}
 
 <!-- JS Custom -->
-<script src="{% static 'arcsecond/js/custom_classic.js' %}"></script>
+{% if initial %}<script src="{% static 'arcsecond/js/custom_classic.js' %}"></script>{% endif %}
 <script src="{% static 'arcsecond/js/custom.js' %}"></script>
 
 <link href="{% static 'bootstrap-select/dist/css/bootstrap-select.min.css' %}" rel="stylesheet">
