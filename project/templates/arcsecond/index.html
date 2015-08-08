@@ -70,6 +70,9 @@
         </div> <!-- / .container -->
     </div> <!-- / .site-wrapper_classic -->
 
+
+    <!-- APIs
+    ============================== -->
     <div class="site-wrapper">
         <div class="container">
             <div class="row">
@@ -280,12 +283,11 @@
                     </div> <!-- / .about__item -->
 
                 </div>
-                
+
 
             </div> <!-- / .row -->
         </div> <!-- / .container -->
     </div> <!-- / .site-wrapper_classic -->
-
 
 
     <!-- FEATURES
@@ -351,6 +353,7 @@
 
         </div> <!-- / .container -->
     </div> <!-- / .site-wrapper -->
+
 
     <!-- TEAM
     ============================== -->
@@ -427,7 +430,6 @@
     </div> <!-- / .site-wrapper -->
 
 
-
     <!-- CONTACT
     ============================== -->
     <div class="site-wrapper" id="contact">
@@ -448,23 +450,23 @@
                 </div>
             </div> <!-- / .row -->
 
-            <div class="row">
-                <div class="col-sm-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
-
-                    <!-- Alert message -->
-                    <div class="alert contact-form__alert" id="form_message" role="alert"></div>
-
-                    <!-- Setting the custom theme for reCaptcha.
-                         Default themes and customization:
-                         https://developers.google.com/recaptcha/docs/customization -->
-
-                    <script type="text/javascript">
-                        var RecaptchaOptions = {
-                            theme : 'custom',
-                            custom_theme_widget: 'recaptcha_widget'
-                        };
-                    </script>
-
+{#            <div class="row">#}
+{#                <div class="col-sm-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">#}
+{##}
+{#                    <!-- Alert message -->#}
+{#                    <div class="alert contact-form__alert" id="form_message" role="alert"></div>#}
+{##}
+{#                    <!-- Setting the custom theme for reCaptcha.#}
+{#                         Default themes and customization:#}
+{#                         https://developers.google.com/recaptcha/docs/customization -->#}
+{##}
+{#                    <script type="text/javascript">#}
+{#                        var RecaptchaOptions = {#}
+{#                            theme : 'custom',#}
+{#                            custom_theme_widget: 'recaptcha_widget'#}
+{#                        };#}
+{#                    </script>#}
+{##}
 {#                    <!-- Contact form -->#}
 {#                    <!-- Please carefully read the README.txt file#}
 {#                     in order to setup the PHP contact form properly -->#}
@@ -519,8 +521,8 @@
 {#                                    <noscript>#}
 {#                                        <iframe src="http://www.google.com/recaptcha/api/noscript?k=YOUR_PUBLIC_KEY"#}
 {#                                                height="300" width="500" frameborder="0"></iframe><br>#}
-{#                                  <textarea name="recaptcha_challenge_field" rows="3" cols="40">#}
-{#                                  </textarea>#}
+{#                                                  <textarea name="recaptcha_challenge_field" rows="3" cols="40">#}
+{#                                                  </textarea>#}
 {#                                        <input type="hidden" name="recaptcha_response_field"#}
 {#                                               value="manual_challenge">#}
 {#                                    </noscript>#}
@@ -550,12 +552,15 @@
 {##}
 {#                    </form>#}
 {#                </div>#}
+{##}
+{#            </div> <!-- / .row -->#}
 
-            </div> <!-- / .row -->
         </div> <!-- / .container -->
     </div> <!-- / .site-wrapper -->
 
-    <!-- Google Map -->
+
+    <!-- MAP
+    ============================== -->
     <div class="site-wrapper">
         <div id="map-canvas" class="contact__map"></div>
     </div> <!-- / .site-wrapper -->
