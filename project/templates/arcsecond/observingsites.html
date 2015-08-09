@@ -3,9 +3,11 @@
 {% load staticfiles %}
 {% load i18n %}
 
-{% block extra_head_block %}
+{% block head_end_block %}
     {{ block.super }}
-{% endblock extra_head_block %}
+    <script src="{% static 'arcsecond/js/observingsites-angular.js' %}"></script>
+    <link href="{% static 'arcsecond/css/observingsites-angular.css' %}" rel="stylesheet">
+{% endblock head_end_block %}
 
 {% block navbar-right %}
     {% include 'arcsecond/current-user-navbar-dropdown.html' %}
@@ -18,31 +20,34 @@
             <div class="row">
                 <div class="col-md-5 col-md-offset-4">
                     <h3 class="text-center"><img src="{% static 'arcsecond/images/ObservatoryIcon_512x512.png' %}" width=25px> Observing Sites</h3>
-{#                    <input type="text" class="form-control search-field" placeholder="Search by Name...">#}
+                    {#                    <input type="text" class="form-control search-field" placeholder="Search by Name...">#}
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row" ng-controller="SitesListController as siteList">
                 <div class="col-md-2 col-md-offset-1">
                     <ul class="nav nav-pills nav-pills nav-stacked text-right">
-                        <li role="presentation"><a data-target="#" data-toggle="pill" href="#">Africa <span class="badge">{{ african_sites }}</span></a></li>
-                        <li role="presentation"><a data-target="#" data-toggle="pill" href="#">Antarctica <span class="badge">{{ antarctica_sites }}</span></a></li>
-                        <li role="presentation"><a data-target="#" data-toggle="pill" href="#">Asia <span class="badge">{{ asian_sites }}</span></a></li>
-                        <li role="presentation"><a data-target="#" data-toggle="pill" href="#">Europe <span class="badge">{{ european_sites }}</span></a></li>
-                        <li role="presentation"><a data-target="#" data-toggle="pill" href="#">North America <span class="badge">{{ north_american_sites }}</span></a></li>
-                        <li role="presentation"><a data-target="#" data-toggle="pill" href="#">Oceania <span class="badge">{{ oceania_sites }}</span></a></li>
-                        <li role="presentation"><a data-target="#" data-toggle="pill" href="#">South America <span class="badge">{{ south_american_sites }}</span></a></li>
+                        <li role="presentation" ng-repeat="continent in siteList.continents">
+                            <a data-target="#" data-toggle="pill" href="#">[[continent.name]]
+                                <span class="badge">[[ siteList.sites[continent.name].length ]]</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
+
+            <div class="row-fluid">
+                <div id="map-canvas" class="contact__map"></div>
+            </div>
+
         </div>
     </div>
 
-    <div class="row">
-        <div class="site-wrapper">
-            <div id="map-canvas" class="contact__map"></div>
-        </div> <!-- / .site-wrapper -->
-    </div>
+    {#    <div class="row">#}
+    {#        <div class="site-wrapper">#}
+    {#            <div id="map-canvas" class="contact__map"></div>#}
+    {#        </div>#}
+    {#    </div>#}
 
 {% endblock body_block %}
 

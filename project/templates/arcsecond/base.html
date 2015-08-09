@@ -2,18 +2,9 @@
 
 {% load staticfiles %}
 
-<html>
+<html ng-app="arcsecondApp">
 <head>
     <title>arcsecond.io</title>
-
-    {#    <link href="{% static 'bootstrap/dist/css/bootstrap.css' %}" rel="stylesheet" media="screen" />#}
-    {#    <link href="{% static 'fontawesome/css/font-awesome.css' %}" rel="stylesheet" />#}
-    {#    <link href="{% static 'arcsecond/css/base.css' %}" rel="stylesheet" />#}
-    {##}
-    {#    <script src="{% static 'jquery/dist/jquery.js' %}"></script>#}
-    {#    <script src="{% static 'bootstrap/dist/js/bootstrap.js' %}"></script>#}
-    {#    <script src="{% static 'underscore/underscore.js' %}"></script>#}
-    {#    <script src="{% static 'arcsecond/js/css3-mediaqueries.js' %}"></script>#}
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,6 +14,13 @@
     <link rel="icon" href="{% static 'ico/favicon.ico' %}">
 
     <title>arcsecond.io :: Unified REST APIs for astronomical information</title>
+
+    <!-- AngularJS -->
+    {% if settings.DEBUG %}
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+    {% else %}
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    {% endif %}
 
     <!-- CSS Plugins -->
     <link href="{% static 'arcsecond/css/plugins/animate.css' %}" rel="stylesheet">
