@@ -7072,6 +7072,10 @@ body.classic .contact__map {
     height: 500px;
     margin: -70px 0;
 }
+body.classic .sites__map {
+    width: 100%;
+    height: 500px;
+}
 body.classic footer {
     width: 100%;
     left: 0;
