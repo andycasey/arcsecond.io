@@ -16,11 +16,9 @@
     <title>arcsecond.io :: Unified REST APIs for astronomical information</title>
 
     <!-- AngularJS -->
-    {% if settings.DEBUG %}
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
-    {% else %}
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
-    {% endif %}
+    <script src="{% static 'angular/angular.js' %}"></script>
+    <script src="{% static 'angular-resource/angular-resource.js' %}"></script>
+    <script src="{% static 'arcsecond/js/services.js' %}"></script>
 
     <!-- CSS Plugins -->
     <link href="{% static 'arcsecond/css/plugins/animate.css' %}" rel="stylesheet">

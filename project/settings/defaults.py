@@ -178,6 +178,9 @@ BOWER_INSTALLED_APPS = (
     'underscore',
     'bootstrap-social',
     'bootstrap-select',
+    'angular',
+    'angular-route',
+    'angular-resource'
 )
 
 # https://github.com/sunlightlabs/django-honeypot
