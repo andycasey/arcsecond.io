@@ -2,6 +2,12 @@ from django.db import models
 from django.core.validators import RegexValidator
 from constants import *
 
+class Link(models.Model):
+    class Meta: app_label = 'arcsecond'
+
+    title = models.CharField(max_length=1000, null=True, blank=True)
+    url = models.URLField(max_length=2000, null=True, blank=True)
+
 class Person(models.Model):
     class Meta: app_label = 'arcsecond'
 

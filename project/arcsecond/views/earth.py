@@ -1,6 +1,9 @@
+from django.conf import settings
+from django.core.exceptions import ObjectDoesNotExist
 from rest_framework import generics
 from django.shortcuts import render
 
+from project.arcsecond import connectors
 from project.arcsecond import models
 from project.arcsecond import serializers
 from project.arcsecond import mixins
@@ -43,3 +46,14 @@ def observingsites(request, path=None):
                                                               'north_american_sites': north_american_sites.count,
                                                               'oceania_sites': oceania_sites.count,
                                                               'south_american_sites': south_american_sites.count})
+
+
+class AstronomersTelegramDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIView):
+    queryset = models.AstronomersTelegram.objects.all()
+    serializer_class = serializers.AstronomersTelegramSerializer
+    lookup_field = "identifier"
+
+    def get_object(self):
+        identifier = self.kwargs.get("identifier", None)
+        telegram = connectors.get_ATel(identifier=identifier)
+        return telegram

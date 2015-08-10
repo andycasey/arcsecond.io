@@ -8,3 +8,5 @@ from .sky import *
 from .archives import *
 from .conversions import *
 from .coordinates import *
+from .observingsites import *
+from .telegrams import *

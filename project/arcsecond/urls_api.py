@@ -34,9 +34,9 @@ urlpatterns = patterns('',
         views.ObservingSiteListAPIView.as_view(),
         name="observingsite-list"),
 
-    url(r'^1/observingsites/(?P<name>[\s\+0-9a-zA-Z_-]+)/$',
-        views.ObservingSiteDetailAPIView.as_view(),
-        name="observingsite-detail"),
+    url(r'^1/telegrams/ATel/(?P<identifier>\d+)/$',
+        views.AstronomersTelegramDetailAPIView.as_view(),
+        name="astronomerstelegram-detail"),
 
     url(r'^1/archives/ESO/(?P<programme_id>'+constants.eso_programme_id_regex+')/summary/$',
         views.ESOProgrammeSummaryDetailAPIView.as_view(),
