@@ -63,7 +63,7 @@
                     <div class="lead text-center text">
                         <strong>arcsecond.io</strong> is a service of <a href="http://onekilopars.ec">onekilopars.ec</a>,
                         home of <a href="http://onekilopars.ec/apps">iObserve</a>, the best OS X and iOS apps for astronomers,
-                        as well as <a href="http://onekilopars.ec/open-source">multiple open-source and FITS-related goodies</a>.
+                        as well as <a href="http://onekilopars.ec/open-source">multiple open-source projects</a> for FITS files, astronomical algorithms, VOTables, etc.
                     </div>
                 </div>
             </div> <!-- / .row -->
@@ -73,7 +73,7 @@
 
     <!-- APIs
     ============================== -->
-    <div class="site-wrapper">
+    <div class="site-wrapper site-wrapper-blue" id="APIs">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
@@ -97,7 +97,7 @@
                             <img src="{% static 'arcsecond/images/StarIcon_512x512.png' %}" border="0" width="25"> Objects
                         </h3>
                         <p class="about-item__content">
-                            Objects are a consolidated aggregation of <a href="http://simbad.u-strasbg.fr/simbad/">SIMBAD</a> and <a href="http://ned.ipac.caltech.edu">NED</a> services.
+                            Objects will be a consolidation of what <a href="http://simbad.u-strasbg.fr/simbad/">SIMBAD</a> and <a href="http://ned.ipac.caltech.edu">NED</a> services return.
                             <br/>Enter the name of a known object and press Go!
                         </p>
                         <form class="form-inline">
@@ -109,6 +109,9 @@
                             </div>
                             <button type="submit" class="btn btn-default go-button">Go</button>
                         </form>
+                        <p class="about-item__content">
+                            <strong>Current state:</strong> working. Integration with exoplanet host stars and astro telegrams pending completion.
+                        </p>
                     </div>
                 </div>
 
@@ -118,7 +121,7 @@
                             <img src="{% static 'arcsecond/images/ExoplanetIcon_512x512.png' %}" border="0" width="25"> Exoplanets
                         </h3>
                         <p class="about-item__content">
-                            Exoplanets data are consolidated from <a href="http://exoplanetarchive.ipac.caltech.edu">NASA Exoplanet Archive</a> and <a href="http://exoplanet.eu">exoplanet.eu</a>. The current implementation is only partially complete.
+                            Exoplanets data will be consolidated from <a href="http://exoplanetarchive.ipac.caltech.edu">NASA Exoplanet Archive</a> and <a href="http://exoplanet.eu">exoplanet.eu</a>.
                         </p>
                         <form class="form-inline">
                             <div class="form-group form-group-sm">
@@ -129,6 +132,9 @@
                             </div>
                             <button type="submit" class="btn btn-default go-button">Go</button>
                         </form>
+                        <p class="about-item__content">
+                            <strong>Current state:</strong> working with exoplanets.eu only. Full catalog as well individual object are accessible. Parameter filtering pending.
+                        </p>
                     </div>
                 </div>
 
@@ -139,6 +145,9 @@
                         </h3>
                         <p class="about-item__content">
                             Asteroids and Comets will be retrieved from the <a href="http://ssd.jpl.nasa.gov/?horizons">JPL Horizon service</a>.
+                        </p>
+                        <p class="about-item__content">
+                            <strong>Current state:</strong> to be implemented, based on iObserve's know-how.
                         </p>
                     </div>
                 </div>
@@ -157,8 +166,9 @@
                             </a>
                         </h3>
                         <p class="about-item__content">
-                            Observing Sites are the places where telescopes are located. They are directly managed by arcsecond.io.
-                            Leave empty to get the current list of observing sites. Or use <code>?continent=<continent name></code> to filter according to continents.
+                            Observing Sites are directly managed by arcsecond.io.
+                            <br/>Leave empty to get the current list of observing sites.
+                            <br/>Or use <code>?continent=&lt;Continent Name&gt;</code> to filter according to continents.
                         </p>
                         <form class="form-inline">
                             <div class="form-group form-group-sm">
@@ -169,6 +179,9 @@
                             </div>
                             <button type="submit" class="btn btn-default go-button">Go</button>
                         </form>
+                        <p class="about-item__content">
+                            <strong>Current state:</strong> static list of iObserve observatories is in place. Dynamic addition, edition, changes by registered users etc. pending.
+                        </p>
                     </div>
                 </div>
 
@@ -180,6 +193,9 @@
                         <p class="about-item__content">
                             Telescopes & Instruments are managed directly in arcsecond.io. It will be open for changes to registered users.
                         </p>
+                        <p class="about-item__content">
+                            <strong>Current state:</strong> started.
+                        </p>
                     </div>
                 </div>
 
@@ -190,6 +206,9 @@
                         </h3>
                         <p class="about-item__content">
                             Telegrams is high in the whishlist. GRBs, supernovae etc...
+                        </p>
+                        <p class="about-item__content">
+                            <strong>Current state:</strong> started with <a href="http://www.astronomerstelegram.org">ATels</a>.
                         </p>
                     </div>
                 </div>
@@ -218,6 +237,9 @@
                             </div>
                             <button type="submit" class="btn btn-default go-button">Go</button>
                         </form>
+                        <p class="about-item__content">
+                            <strong>Current state:</strong> started, but a lot more to come.
+                        </p>
                     </div>
                 </div>
 
@@ -227,9 +249,9 @@
                             <img src="{% static 'arcsecond/images/ConverterIcon_512x512.png' %}" border="0" width="25"> Converters
                         </h3>
                         <p class="about-item__content">
-                            Converters are URL-based calculations. Very basic support for coordinates is being developed right now.
-                            Below is an example that converts equatorial/ICRS coordinates to all other coordinates as defined in <a href="http://astropy.org">astropy</a>.
-                            More onverters to come.
+                            Converters are URL-based calculations.
+                            <br/>Below is an example that converts equatorial/ICRS coordinates to all other coordinates as defined in <a href="http://astropy.org">astropy</a>.
+                            <br/>More onverters to come.
                         </p>
                         <form class="form-inline">
                             <div class="form-group form-group-sm">
@@ -251,6 +273,9 @@
                             </div>
                             <button type="submit" class="btn btn-default go-button">Go</button>
                         </form>
+                        <p class="about-item__content">
+                            <strong>Current state:</strong> basic Coordinates support. Times converter to be started.
+                        </p>
                     </div>
                 </div>
 
@@ -262,7 +287,10 @@
                         </h3>
                         <p class="about-item__content">
                             The people section will regroup all the scientists, and active people in the field, present in papers, proposals, etc.
-                            <br/>Hopefully, most of them will open a (soon-to-be-released) user account!
+                            Hopefully, most of them will open a arcsecond.io user account!
+                        </p>
+                        <p class="about-item__content">
+                            <strong>Current state:</strong> user accounts implementation is started. Then, will need integration will all other services.
                         </p>
                     </div>
                 </div>
@@ -275,9 +303,25 @@
                         <p class="about-item__content">
                             Finding charts will integrate as many sources of charts as possible: SDSS, DSS, 2MASS etc.
                         </p>
+                        <p class="about-item__content">
+                            <strong>Current state:</strong> to be implemented, with iObserve's know-how.
+                        </p>
                     </div>
                 </div>
 
+                <div class="col-sm-6">
+                    <div class="about__item">
+                        <h3 class="about-item__title">
+                            <span class="about-item-title__icon oi oi-book" title="People" aria-hidden="true"></span> Publications
+                        </h3>
+                        <p class="about-item__content">
+                            Publications will integrated sources such as <a href="http://adswww.harvard.edu">NASA ADS</a> and others.
+                        </p>
+                        <p class="about-item__content">
+                            <strong>Current state:</strong> to be implemented.
+                        </p>
+                    </div>
+                </div>
 
             </div> <!-- / .row -->
         </div> <!-- / .container -->
@@ -348,6 +392,108 @@
         </div> <!-- / .container -->
     </div> <!-- / .site-wrapper -->
 
+    <!-- SDKs
+    ============================== -->
+    <div class="site-wrapper site-wrapper-blue" id="sdks">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+
+                    <!-- Heading -->
+                    <h1 class="heading">
+                        Seamless integration with open-source <span class="text-primary">SDKs</span>
+                    </h1>
+
+                    <!-- Sub heading -->
+                    <p class="heading__sub">
+                        To ease the integration of arcsecond.io services into your own code, we are developing open-source SDKs (a.k.a.
+                        Software Development Kit).
+                        <br/><br/>
+                        For now, it is pretty empty, but it will come...
+                        You can nonetheless <a href="https://github.com/onekiloparsec/arcsecond.io.sdks">check them out</a> on GitHub (no accounts required).
+                    </p>
+                </div>
+            </div> <!-- / .row -->
+
+
+        </div> <!-- / .container -->
+    </div> <!-- / .site-wrapper -->
+
+
+    <!-- Acknowledgments
+    ============================== -->
+    <div class="site-wrapper" id="acknowledgments">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+
+                    <!-- Heading -->
+                    <h1 class="heading">
+                        <span class="text-primary">Acknowledgments</span>
+                    </h1>
+
+                    <!-- Sub heading -->
+                    <p class="heading__sub">
+                        Apart from <a href="http://astropy.org">astropy</a>, arcsecond.io wants to aknowledge the use of the following services:
+                    </p>
+                </div>
+            </div> <!-- / .row -->
+
+            <div class="row">
+
+                <div class="col-sm-6 col-md-4">
+                    <div class="features__item">
+                        <h3 class="features-item__title">
+                            <span class="text-primary">SIMBAD</span>
+                            (CDS)
+                        </h3>
+                        <div class="features-item__summary">
+                            This research has made use of the SIMBAD database, operated at <a href="http://cds.u-strasbg.fr">CDS</a>, Strasbourg, France.
+                            <br/>See <a href="http://adsabs.harvard.edu/abs/2000A%26AS..143....9W">2000, A&AS, 143, 9, "The SIMBAD astronomical database", Wenger et al.</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4">
+                    <div class="features__item">
+                        <h3 class="features-item__title">
+                            <span class="text-primary">exoplanet.eu</span>
+                            (Obs. Paris-Meudon)
+                        </h3>
+                        <div class="features-item__summary">
+                            This work has made of use of fantastic work of the <a href="http://exoplanet.eu/team/">team</a>, at exoplanet.eu.
+                            <br/>(I wish I could link to the catalog publication, but the link is broken...)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4">
+                    <div class="features__item">
+                        <h3 class="features-item__title">
+                            <span class="text-primary">E.S.O.</span>
+                        </h3>
+                        <div class="features-item__summary">
+                            This work has made use of the <a href="http://archive.eso.org">E.S.O. archive</a>.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4">
+                    <div class="features__item">
+                        <h3 class="features-item__title">
+                            <span class="text-primary">M.A.S.T.</span>
+                        </h3>
+                        <div class="features-item__summary">
+                            This work has made use of the <a href="http://archive.stsci.edu">Barbara A. Mikulski Archive for Space Telescopes</a>.
+                        </div>
+                    </div>
+                </div>
+
+
+            </div> <!-- / .row -->
+
+        </div> <!-- / .container -->
+    </div> <!-- / .site-wrapper -->
 
     <!-- TEAM
     ============================== -->

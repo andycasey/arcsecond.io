@@ -6926,6 +6926,9 @@ body.classic #portfolio {
 body.classic .sidebar__btn_open.sidebar__btn_alt {
     color: #555555;
 }
+body.classic .site-wrapper-blue {
+    background-color: rgba(241, 249, 253, 0.5);
+}
 body.classic .welcome_classic {
     display: table;
     height: 100%;
@@ -7438,7 +7441,7 @@ body::after {
 .about__item {
     margin-bottom: 40px;
     text-align: center;
-    min-height: 150px;
+    min-height: 180px;
 }
 .about-item__title {
     margin-top: 0;
@@ -7450,8 +7453,10 @@ body::after {
     color: #4dbce9;
 }
 .about-item__content {
-    margin-bottom: 0;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
+
 /* -------------------- *\
     #PORTFOLIO SCREEN
 \* -------------------- */
