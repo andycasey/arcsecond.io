@@ -319,4 +319,3 @@ class AstronomersTelegramSerializer(serializers.ModelSerializer):
     class Meta:
         model = AstronomersTelegram
         lookup_field = "identifier"
-        # fields = ('url', 'identifier', 'title', 'content', 'related_telegrams', 'external_links')

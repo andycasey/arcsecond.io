@@ -205,10 +205,23 @@
                             <span class="about-item-title__icon oi oi-envelope-closed" title="Telegrams" aria-hidden="true"></span> Telegrams
                         </h3>
                         <p class="about-item__content">
-                            Telegrams is high in the whishlist. GRBs, supernovae etc...
+                            Telegrams are quick publications, often related to ongoing events occuring is the sky. We intend to cover GRBs, supernovae, Circulars etc...
                         </p>
+                        <form class="form-inline">
+                            <div class="form-group form-group-sm">
+                                <div class="input-group">
+                                    <div class="input-group-addon go-api">/{{ api_version }}/telegrams/
+                                        <select class="go-select">
+                                            <option>ATel</option>
+                                        </select>&nbsp;<span class="go-select-suffix">/</span>
+                                    </div>
+                                    <input type="text" class="form-control go-input" placeholder="ex : 7898">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-default go-button">Go</button>
+                        </form>
                         <p class="about-item__content">
-                            <strong>Current state:</strong> started with <a href="http://www.astronomerstelegram.org">ATels</a>.
+                            <strong>Current state:</strong> partial implementation of <a href="http://www.astronomerstelegram.org">ATels</a>.
                         </p>
                     </div>
                 </div>
