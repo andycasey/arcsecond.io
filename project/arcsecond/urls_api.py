@@ -26,7 +26,7 @@ urlpatterns = patterns('',
         views.ExoplanetNamedDetailAPIView.as_view(),
         name="exoplanet-named-detail"),
 
-    url(r'^1/observingsites/(?P<name>\w)/$',
+    url(r'^1/observingsites/(?P<name>[\s\+0-9a-zA-Z_-]+)/$',
         views.ObservingSiteDetailAPIView.as_view(),
         name="observingsite-detail"),
 
@@ -46,7 +46,7 @@ urlpatterns = patterns('',
         views.HSTProgrammeSummaryDetailAPIView.as_view(),
         name="hstprogrammesummary-detail"),
 
-    url(r'^1/converters/coordinates/ra/(?P<ra>[\.\:0-9]+)/dec/(?P<dec>[\.\:0-9]+)/$',
+    url(r'^1/converters/coordinates/ra/(?P<ra>[\+\.\:0-9]+)/dec/(?P<dec>[-\.\:0-9]+)/$',
         views.CoordinatesConverterDetailAPIView.as_view(),
         name="coordinatesconversion-detail"),
 )
