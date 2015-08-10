@@ -1,5 +1,5 @@
 from django.test import TestCase
-from ..models.earth import ObservingSite
+from project.arcsecond.models import ObservingSite
 
 # Create your tests here.
 class ObservingSiteModelTestCase(TestCase):
