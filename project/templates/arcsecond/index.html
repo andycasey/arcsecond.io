@@ -141,20 +141,6 @@
                 <div class="col-sm-6">
                     <div class="about__item">
                         <h3 class="about-item__title">
-                            <img src="{% static 'arcsecond/images/AsteroidIcon_512x512.png' %}" border="0" width="25"> <img src="{% static 'arcsecond/images/CometIcon_175x175.png' %}" border="0" width="25"> Asteroids & Comets
-                        </h3>
-                        <p class="about-item__content">
-                            Asteroids and Comets will be retrieved from the <a href="http://ssd.jpl.nasa.gov/?horizons">JPL Horizon service</a>.
-                        </p>
-                        <p class="about-item__content">
-                            <strong>Current state:</strong> to be implemented, based on iObserve's know-how.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-sm-6">
-                    <div class="about__item">
-                        <h3 class="about-item__title">
                             <img src="{% static 'arcsecond/images/ObservatoryIcon_512x512.png' %}" border="0" width="25"> Observing Sites
                             <a tabindex="0" class="btn btn-sm" role="button" title="Why not 'Observatories'?"
                                data-toggle="popover"
@@ -167,8 +153,7 @@
                         </h3>
                         <p class="about-item__content">
                             Observing Sites are directly managed by arcsecond.io.
-                            <br/>Leave empty to get the current list of observing sites.
-                            <br/>Or use <code>?continent=&lt;Continent Name&gt;</code> to filter according to continents.
+                            <br/>You can use <code>?continent=&lt;Continent Name&gt;</code> to filter according to continents.
                         </p>
                         <form class="form-inline">
                             <div class="form-group form-group-sm">
@@ -260,39 +245,16 @@
                 <div class="col-sm-6">
                     <div class="about__item">
                         <h3 class="about-item__title">
-                            <img src="{% static 'arcsecond/images/ConverterIcon_512x512.png' %}" border="0" width="25"> Converters
+                            <span class="about-item-title__icon oi oi-book" title="People" aria-hidden="true"></span> Publications
                         </h3>
                         <p class="about-item__content">
-                            Converters are URL-based calculations.
-                            Below is an example that converts equatorial/ICRS coordinates to all other coordinates as defined in <a href="http://astropy.org">astropy</a>.
-                            More onverters to come.
+                            Publications will integrated sources such as <a href="http://adswww.harvard.edu">NASA ADS</a> and others.
                         </p>
-                        <form class="form-inline">
-                            <div class="form-group form-group-sm">
-                                <div class="input-group">
-                                    <div class="input-group-addon go-api">/{{ api_version }}/converters/
-                                        <select class="go-select">
-                                            <option>coordinates</option>
-                                        </select>&nbsp;<span class="go-select-suffix">/ra/</span>
-                                    </div>
-                                    <input type="text" class="form-control go-input" placeholder="ex : 3.4576">
-                                    <div class="input-group-addon go-api-2">/dec/</div>
-                                    <input type="text" class="form-control go-input-2" placeholder="ex : -70.2452">
-                                    {#                                    <div class="input-group-addon go-api-2">/#}
-                                    {#                                        <select class="go-select-2">#}
-                                    {#                                            <option>(empty)</option>#}
-                                    {#                                        </select>#}
-                                    {#                                    </div>#}
-                                </div>
-                            </div>
-                            <button type="submit" class="btn btn-default go-button">Go</button>
-                        </form>
                         <p class="about-item__content">
-                            <strong>Current state:</strong> basic Coordinates support. Times converter to be started.
+                            <strong>Current state:</strong> to be implemented.
                         </p>
                     </div>
                 </div>
-
 
                 <div class="col-sm-6">
                     <div class="about__item">
@@ -326,13 +288,49 @@
                 <div class="col-sm-6">
                     <div class="about__item">
                         <h3 class="about-item__title">
-                            <span class="about-item-title__icon oi oi-book" title="People" aria-hidden="true"></span> Publications
+                            <img src="{% static 'arcsecond/images/AsteroidIcon_512x512.png' %}" border="0" width="25"> <img src="{% static 'arcsecond/images/CometIcon_175x175.png' %}" border="0" width="25"> Asteroids & Comets
                         </h3>
                         <p class="about-item__content">
-                            Publications will integrated sources such as <a href="http://adswww.harvard.edu">NASA ADS</a> and others.
+                            Asteroids and Comets will be retrieved from the <a href="http://ssd.jpl.nasa.gov/?horizons">JPL Horizon service</a>.
                         </p>
                         <p class="about-item__content">
-                            <strong>Current state:</strong> to be implemented.
+                            <strong>Current state:</strong> to be implemented, based on iObserve's know-how.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="about__item">
+                        <h3 class="about-item__title">
+                            <img src="{% static 'arcsecond/images/ConverterIcon_512x512.png' %}" border="0" width="25"> Converters
+                        </h3>
+                        <p class="about-item__content">
+                            Converters are URL-based calculations.
+                            Below is an example that converts equatorial/ICRS coordinates to all other coordinates as defined in <a href="http://astropy.org">astropy</a>.
+                            More onverters to come.
+                        </p>
+                        <form class="form-inline">
+                            <div class="form-group form-group-sm">
+                                <div class="input-group">
+                                    <div class="input-group-addon go-api">/{{ api_version }}/converters/
+                                        <select class="go-select">
+                                            <option>coordinates</option>
+                                        </select>&nbsp;<span class="go-select-suffix">/ra/</span>
+                                    </div>
+                                    <input type="text" class="form-control go-input" placeholder="ex : 3.4576">
+                                    <div class="input-group-addon go-api-2">/dec/</div>
+                                    <input type="text" class="form-control go-input-2" placeholder="ex : -70.2452">
+                                    {#                                    <div class="input-group-addon go-api-2">/#}
+                                    {#                                        <select class="go-select-2">#}
+                                    {#                                            <option>(empty)</option>#}
+                                    {#                                        </select>#}
+                                    {#                                    </div>#}
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-default go-button">Go</button>
+                        </form>
+                        <p class="about-item__content">
+                            <strong>Current state:</strong> basic Coordinates support. Times converter to be started.
                         </p>
                     </div>
                 </div>
