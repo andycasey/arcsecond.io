@@ -4,10 +4,11 @@ import re
 import urllib2
 from bs4 import BeautifulSoup
 
-from project.arcsecond.models import AstronomersTelegram
+from project.arcsecond.models import AstronomersTelegram, AstronomicalObject
 
 ATEL_ROOT_URL = "http://www.astronomerstelegram.org/?read="
 ATEL_REGEX = "(http:\/\/www\.astronomerstelegram\.org\/\?read\=[\d+])"
+OBJECTS_REGEX = "(\W[A-Z]+[\d]?[\s]{,1}[a-zA-Z]?[\d\+\-\.]+\W)|(\W[\d]+[a-zA-Z]?[\s]{,1}[\w\+\-\.]+\W)"
 
 def get_ATel(identifier):
 
@@ -23,7 +24,29 @@ def get_ATel(identifier):
         telegram_tag = soup.find("div", id="telegram")
         title_tag = telegram_tag.find("h1", class_="title")
         if title_tag is not None:
-            atel.title = title_tag.string.strip()
+            title = title_tag.string.strip()
+            atel.title = title
+
+            obj_tuples = re.findall(OBJECTS_REGEX, title)
+            delected_objects = []
+            for obj_tuple in obj_tuples:
+                obj_candidate_0 = obj_tuple[0].strip()
+                obj_candidate_1 = obj_tuple[1].strip()
+
+                if len(obj_candidate_0) > 0:
+                    if obj_candidate_0[0] == "(" and obj_candidate_0[-1] == ")":
+                        obj_candidate_0 = obj_candidate_0[1:-1]
+                    delected_objects.append(obj_candidate_0)
+
+                if len(obj_candidate_1) > 0:
+                    if obj_candidate_1[0] == "(" and obj_candidate_1[-1] == ")":
+                        obj_candidate_1 = obj_candidate_1[1:-1]
+                    delected_objects.append(obj_candidate_1)
+
+            for detect_obj in delected_objects:
+                obj, created = AstronomicalObject.objects.get_or_create(name=detect_obj)
+                atel.detected_objects.add(obj)
+                obj.save()
 
         subjects_tag = telegram_tag.find("div", id="subjects")
         if subjects_tag is not None:
@@ -40,7 +63,7 @@ def get_ATel(identifier):
         contentText = ""
         startIndex = max(credentialsIndex, subjectsIndex)
         for index, text in enumerate(telegram_tag.stripped_strings):
-            if index > startIndex and 'tweet' not in text.lower() and 'Facebook' not in text.lower():
+            if index > startIndex and 'tweet' not in text.lower() and 'facebook' not in text.lower():
                 contentText += text.strip()
                 if text.strip()[-6:] != "ATel #" and not re.search("^([0-9]+)$", text.strip()) and not re.search("^http://[.*]", text.strip()):
                     contentText += "\n"

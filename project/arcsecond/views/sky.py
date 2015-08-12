@@ -8,9 +8,10 @@ from project.arcsecond import models
 from project.arcsecond import mixins
 
 
-class AstronomicalObjectAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIView):
+class AstronomicalObjectDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIView):
     queryset = models.AstronomicalObject.objects.all()
     serializer_class = serializers.AstronomicalObjectSerializer
+    lookup_field = "name"
 
     def get_object(self):
         name = self.kwargs.get("name", None)

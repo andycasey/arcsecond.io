@@ -178,12 +178,19 @@ class ObjectTypeSerializer(serializers.HyperlinkedModelSerializer):
 
 ######################## Objects ########################
 
+class AstronomicalObjectShortSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AstronomicalObject
+        lookup_field = "name"
+        fields = ('url', 'name')
+
 class AstronomicalObjectSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = AstronomicalObject
         lookup_field = "name"
+        fields = ('url', 'name', 'coordinates', 'aliases', 'object_types', 'fluxes', 'mass', 'radius', 'distance', 'metallicity', 'age', 'effective_temperature')
 
-    coordinates = AstronomicalCoordinatesSerializer()
+    coordinates = AstronomicalCoordinatesSerializer(required=False)
 
     aliases = AliasSerializer(many=True, required=False)
     object_types = ObjectTypeSerializer(many=True, required=False)
@@ -196,6 +203,10 @@ class AstronomicalObjectSerializer(serializers.HyperlinkedModelSerializer):
     age = AgeSerializer(required=False)
     effective_temperature = TemperatureSerializer(required=False)
 
+
+
+
+######################## Exoplanets ########################
 
 class ExoplanetSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -315,7 +326,23 @@ class CoordinatesConversionSerializer(serializers.ModelSerializer):
 
 ######################## Telegrams ########################
 
-class AstronomersTelegramSerializer(serializers.ModelSerializer):
+class AstronomersTelegramShortSerializer(serializers.ModelSerializer):
     class Meta:
         model = AstronomersTelegram
         lookup_field = "identifier"
+        fields = ('url', 'identifier')
+
+
+class TotoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AstronomicalObject
+
+
+class AstronomersTelegramSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = AstronomersTelegram
+        lookup_field = "identifier"
+        fields = ('url', 'identifier', 'title', 'credential_certification', 'subjects', 'content', 'authors', 'external_links', 'related_telegrams', 'detected_objects')
+
+    related_telegrams = AstronomersTelegramShortSerializer(required=False, many=True)
+    detected_objects = TotoSerializer(required=False, many=True)

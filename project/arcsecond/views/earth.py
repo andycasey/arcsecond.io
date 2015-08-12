@@ -57,3 +57,5 @@ class AstronomersTelegramDetailAPIView(mixins.RequestLogViewMixin, generics.Retr
         identifier = self.kwargs.get("identifier", None)
         telegram = connectors.get_ATel(identifier=identifier)
         return telegram
+
+
