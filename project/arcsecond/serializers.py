@@ -333,16 +333,19 @@ class AstronomersTelegramShortSerializer(serializers.ModelSerializer):
         fields = ('url', 'identifier')
 
 
-class TotoSerializer(serializers.ModelSerializer):
+class AstronomicalObjectShortSerializer(serializers.ModelSerializer):
     class Meta:
         model = AstronomicalObject
+        lookup_field = "name"
+        fields = ('url', 'name')
 
 
 class AstronomersTelegramSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = AstronomersTelegram
         lookup_field = "identifier"
-        fields = ('url', 'identifier', 'title', 'credential_certification', 'subjects', 'content', 'authors', 'external_links', 'related_telegrams', 'detected_objects')
+        fields = ('url', 'identifier', 'title', 'credential_certification', 'subjects', 'content', 'authors',
+                  'external_links', 'related_telegrams', 'detected_objects')
 
     related_telegrams = AstronomersTelegramShortSerializer(required=False, many=True)
-    detected_objects = TotoSerializer(required=False, many=True)
+    detected_objects = AstronomicalObjectShortSerializer(required=False, many=True)

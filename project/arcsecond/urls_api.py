@@ -10,7 +10,7 @@ from project.arcsecond.models import constants
 urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
 
-    url(r'^1/objects/(?P<name>[\s\+0-9a-zA-Z_-]+)/$',
+    url(r'^1/objects/(?P<name>[\s\+\.0-9a-zA-Z_-]+)/$',
         views.AstronomicalObjectDetailAPIView.as_view(),
         name='astronomicalobject-detail'),
 
@@ -26,7 +26,7 @@ urlpatterns = patterns('',
         views.ExoplanetNamedDetailAPIView.as_view(),
         name="exoplanet-named-detail"),
 
-    url(r'^1/observingsites/(?P<name>[\s\+0-9a-zA-Z_-]+)/$',
+    url(r'^1/observingsites/(?P<name>[\s\+\.0-9a-zA-Z_-]+)/$',
         views.ObservingSiteDetailAPIView.as_view(),
         name="observingsite-detail"),
 
