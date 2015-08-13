@@ -49,6 +49,10 @@ urlpatterns = patterns('',
         views.AstronomersTelegramDetailAPIView.as_view(),
         name="astronomerstelegram-detail"),
 
+    url(r'^1/telegrams/ATel/$',
+        views.AstronomersTelegramListAPIView.as_view(),
+        name="astronomerstelegram-list"),
+
 
     # ----- Publications -----
 
