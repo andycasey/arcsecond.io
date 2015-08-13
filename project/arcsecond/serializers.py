@@ -176,7 +176,7 @@ class ObjectTypeSerializer(serializers.HyperlinkedModelSerializer):
         fields = ("value",)
 
 
-######################## Objects ########################
+######################## Shorts ########################
 
 class AstronomicalObjectShortSerializer(serializers.ModelSerializer):
     class Meta:
@@ -184,12 +184,21 @@ class AstronomicalObjectShortSerializer(serializers.ModelSerializer):
         lookup_field = "name"
         fields = ('url', 'name')
 
+class AstronomersTelegramShortSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AstronomersTelegram
+        lookup_field = "identifier"
+        fields = ('url', 'identifier')
+
+
+######################## Objects ########################
 
 class AstronomicalObjectSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = AstronomicalObject
         lookup_field = "name"
-        fields = ('url', 'name', 'coordinates', 'aliases', 'object_types', 'fluxes', 'mass', 'radius', 'distance', 'metallicity', 'age', 'effective_temperature')
+        fields = ('url', 'name', 'coordinates', 'aliases', 'object_types', 'fluxes', 'mass', 'radius', 'distance',
+                  'metallicity', 'age', 'effective_temperature', 'astronomer_telegrams')
 
     coordinates = AstronomicalCoordinatesSerializer(required=False)
 
@@ -204,7 +213,7 @@ class AstronomicalObjectSerializer(serializers.HyperlinkedModelSerializer):
     age = AgeSerializer(required=False)
     effective_temperature = TemperatureSerializer(required=False)
 
-
+    astronomer_telegrams = AstronomersTelegramShortSerializer(required=False, many=True)
 
 
 ######################## Exoplanets ########################
@@ -326,13 +335,6 @@ class CoordinatesConversionSerializer(serializers.ModelSerializer):
 
 
 ######################## Telegrams ########################
-
-class AstronomersTelegramShortSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = AstronomersTelegram
-        lookup_field = "identifier"
-        fields = ('url', 'identifier')
-
 
 
 class AstronomersTelegramSerializer(serializers.HyperlinkedModelSerializer):
