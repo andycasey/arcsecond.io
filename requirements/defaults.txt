@@ -25,6 +25,7 @@ django.js==0.8.1
 djangorestframework==3.1.1
 docopt==0.4.0
 ecdsa==0.13
+feedparser==5.2.1
 gunicorn==19.3.0
 kombu==3.0.26
 langdetect==1.0.5

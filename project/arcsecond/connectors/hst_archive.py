@@ -1,8 +1,8 @@
 # -- coding: utf-8 --
 
-import urllib2
 import xml
-from bs4 import BeautifulSoup
+import urllib2
+
 from project.arcsecond.models import HSTProgrammeSummary
 
 # Exemple: http://www.stsci.edu/hst/phase2-public/10340.apt

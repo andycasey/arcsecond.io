@@ -1,12 +1,17 @@
 # -- coding: utf-8 --
 
 import re
+import xml
 import urllib2
+from django.core.exceptions import ObjectDoesNotExist
+import feedparser
 from bs4 import BeautifulSoup
 
 from project.arcsecond.models import AstronomersTelegram, AstronomicalObject
 
 ATEL_ROOT_URL = "http://www.astronomerstelegram.org/?read="
+ATEL_RSS_URL = "http://www.astronomerstelegram.org/?rss"
+
 ATEL_REGEX = "(http:\/\/www\.astronomerstelegram\.org\/\?read\=[\d+])"
 OBJECTS_REGEX = "(\W[A-Z]+[\d]?[\s]{,1}[a-zA-Z]?[\d\+\-\.]+\W)|(\W[\d]+[a-zA-Z]?[\s]{,1}[\w\+\-\.]+\W)"
 
@@ -92,5 +97,27 @@ def get_ATel(identifier):
 
         atel.save()
         return atel
+
+
+def read_last_ATels(page_size):
+    try:
+        response = urllib2.urlopen(ATEL_RSS_URL)
+    except urllib2.URLError:
+        return None
+    else:
+        rss = feedparser.parse(response.read())
+        first_entry = rss['entries'][0]
+        last_identifier = first_entry['identifier'].lower().replace('atel', '')
+
+        for i in range(page_size):
+            print 'Getting ATel'+last_identifier+'...'
+            try:
+                atel = AstronomersTelegram.objects.get(identifier=last_identifier)
+            except ObjectDoesNotExist:
+                get_ATel(last_identifier)
+            last_identifier = str(int(last_identifier)-1)
+
+
+
 
 
