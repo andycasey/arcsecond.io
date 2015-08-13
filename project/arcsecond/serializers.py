@@ -184,6 +184,7 @@ class AstronomicalObjectShortSerializer(serializers.ModelSerializer):
         lookup_field = "name"
         fields = ('url', 'name')
 
+
 class AstronomicalObjectSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = AstronomicalObject
@@ -332,12 +333,6 @@ class AstronomersTelegramShortSerializer(serializers.ModelSerializer):
         lookup_field = "identifier"
         fields = ('url', 'identifier')
 
-
-class AstronomicalObjectShortSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = AstronomicalObject
-        lookup_field = "name"
-        fields = ('url', 'name')
 
 
 class AstronomersTelegramSerializer(serializers.HyperlinkedModelSerializer):
