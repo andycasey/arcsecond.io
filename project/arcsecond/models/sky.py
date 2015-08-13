@@ -135,3 +135,4 @@ class AstronomicalObject(models.Model):
     effective_temperature = models.OneToOneField(Temperature, null=True, blank=True)
     spectral_type = models.CharField(max_length=1000, null=True, blank=True)
 
+    # Add Image Preview URLs

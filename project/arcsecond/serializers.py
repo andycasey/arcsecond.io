@@ -1,50 +1,100 @@
 from django.conf import settings
 from rest_framework import serializers
+from rest_framework.reverse import reverse
 from .models import *
+
+######################## Shorts ########################
+
+class AstronomicalObjectShortSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AstronomicalObject
+        lookup_field = "name"
+        fields = ('url', 'name')
+
+class AstronomersTelegramShortSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AstronomersTelegram
+        lookup_field = "identifier"
+        fields = ('url', 'identifier')
+
+class PublicationShortSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Publication
+        lookup_field = "bibcode"
+        fields = ('url', 'bibcode')
+
 
 ######################## Common ########################
 
-class PersonSerializer(serializers.HyperlinkedModelSerializer):
+class LinkSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Link
+        fields = ('title', 'url')
+
+class PersonSerializer(serializers.ModelSerializer):
     class Meta:
         model = Person
 
-
-class BibliographicReferenceSerializer(serializers.HyperlinkedModelSerializer):
-    authors = PersonSerializer(many=True)
-
+class PublicationSerializer(serializers.ModelSerializer):
     class Meta:
-        model = BibliographicReference
+        model = Publication
+        lookup_field = 'bibcode'
+        fields = ("url", "bibcode", "eprint_id", "title", "year", "publication_type", "publication_date", "journal_name",
+                  "abstract_copyright", "volume_number", "issue_number", "first_page_number", "number_of_pages",
+                  "abstract", "subjects", "keywords", "origin", "is_refereed", "bibtex_entry", "doi", "authors",
+                  # "references",
+                  # "citations",
+                  # "related_objects"
+                  )
+
+    doi = LinkSerializer(required=False)
+
+    authors = PersonSerializer(required=False, many=True)
+    # references = PublicationShortSerializer(required=False, many=True)
+    # references = serializers.HyperlinkedRelatedField(
+    #     many=True,
+    #     read_only=True,
+    #     view_name='publication-detail',
+    #     lookup_field='bibcode'
+    # )
+
+    # citations = PublicationShortSerializer(required=False, many=True)
+    # related_objects = AstronomicalObjectShortSerializer(required=False, many=True)
+
+    publication_type = serializers.SerializerMethodField()
+    def get_publication_type(self, obj):
+        return Publication.PUBLICATION_VALUES[Publication.PUBLICATION_KEYS.index(obj.publication_type)]
 
 
 ######################## Infos ########################
 
 
-class JulianDaySerializer(serializers.HyperlinkedModelSerializer):
+class JulianDaySerializer(serializers.ModelSerializer):
     class Meta:
         model = JulianDay
         fields = ("value", "error_max", "error_min", "bibcode")
 
-class AlbedoSerializer(serializers.HyperlinkedModelSerializer):
+class AlbedoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Albedo
         fields = ("value", "error_max", "error_min", "bibcode")
 
-class EccentricitySerializer(serializers.HyperlinkedModelSerializer):
+class EccentricitySerializer(serializers.ModelSerializer):
     class Meta:
         model = Eccentricity
         fields = ("value", "error_max", "error_min", "bibcode")
 
-class FluxSerializer(serializers.HyperlinkedModelSerializer):
+class FluxSerializer(serializers.ModelSerializer):
     class Meta:
         model = Flux
         fields = ("name", "value", "error_max", "error_min", "bibcode")
 
-class ColorSerializer(serializers.HyperlinkedModelSerializer):
+class ColorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Color
         fields = ("first_magnitude_name", "second_magnitude_name", "value", "error", "bibcode")
 
-class MassSerializer(serializers.HyperlinkedModelSerializer):
+class MassSerializer(serializers.ModelSerializer):
     class Meta:
         model = Mass
         fields = ("value", "unit", "error_max", "error_min", "bibcode")
@@ -53,7 +103,7 @@ class MassSerializer(serializers.HyperlinkedModelSerializer):
     def get_unit(self, obj):
         return Mass.MASSES_VALUES[Mass.MASSES_KEYS.index(obj.unit)]
 
-class RadiusSerializer(serializers.HyperlinkedModelSerializer):
+class RadiusSerializer(serializers.ModelSerializer):
     class Meta:
         model = Radius
         fields = ("value", "unit", "error_max", "error_min", "bibcode")
@@ -62,7 +112,7 @@ class RadiusSerializer(serializers.HyperlinkedModelSerializer):
     def get_unit(self, obj):
         return Radius.RADIUS_VALUES[Radius.RADIUS_KEYS.index(obj.unit)]
 
-class AgeSerializer(serializers.HyperlinkedModelSerializer):
+class AgeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Age
         fields = ("value", "unit", "error_max", "error_min", "bibcode")
@@ -72,7 +122,7 @@ class AgeSerializer(serializers.HyperlinkedModelSerializer):
         return Age.AGE_VALUES[Age.AGE_KEYS.index(obj.unit)]
 
 
-class TemperatureSerializer(serializers.HyperlinkedModelSerializer):
+class TemperatureSerializer(serializers.ModelSerializer):
     class Meta:
         model = Temperature
         fields = ("value", "unit", "error_max", "error_min", "bibcode")
@@ -82,7 +132,7 @@ class TemperatureSerializer(serializers.HyperlinkedModelSerializer):
         return Temperature.TEMP_VALUES[Temperature.TEMP_KEYS.index(obj.unit)]
 
 
-class MetallicitySerializer(serializers.HyperlinkedModelSerializer):
+class MetallicitySerializer(serializers.ModelSerializer):
     class Meta:
         model = Metallicity
         fields = ("value", "unit", "error", "error_max", "error_min", "bibcode")
@@ -102,7 +152,7 @@ class DistanceSerializer(serializers.HyperlinkedModelSerializer):
         return Distance.DISTANCE_VALUES[Distance.DISTANCE_KEYS.index(obj.unit)]
 
 
-class PeriodSerializer(serializers.HyperlinkedModelSerializer):
+class PeriodSerializer(serializers.ModelSerializer):
     class Meta:
         model = Period
         fields = ("value", "unit", "error_max", "error_min", "bibcode")
@@ -112,7 +162,7 @@ class PeriodSerializer(serializers.HyperlinkedModelSerializer):
         return Period.PERIOD_VALUES[Period.PERIOD_KEYS.index(obj.unit)]
 
 
-class EllipseAxisSerializer(serializers.HyperlinkedModelSerializer):
+class EllipseAxisSerializer(serializers.ModelSerializer):
     class Meta:
         model = EllipseAxis
         fields = ("value", "unit", "error_max", "error_min", "bibcode")
@@ -121,7 +171,7 @@ class EllipseAxisSerializer(serializers.HyperlinkedModelSerializer):
     def get_unit(self, obj):
         return EllipseAxis.AXIS_VALUES[EllipseAxis.AXIS_KEYS.index(obj.unit)]
 
-class AngleSerializer(serializers.HyperlinkedModelSerializer):
+class AngleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Angle
         fields = ("value", "unit", "error_max", "error_min", "bibcode")
@@ -130,12 +180,12 @@ class AngleSerializer(serializers.HyperlinkedModelSerializer):
     def get_unit(self, obj):
         return Angle.ANGLE_VALUES[Angle.ANGLE_KEYS.index(obj.unit)]
 
-class VelocitySerializer(serializers.HyperlinkedModelSerializer):
+class VelocitySerializer(serializers.ModelSerializer):
     class Meta:
         model = Velocity
         fields = ("value", "unit", "error_max", "error_min", "bibcode")
 
-class GravitySerializer(serializers.HyperlinkedModelSerializer):
+class GravitySerializer(serializers.ModelSerializer):
     class Meta:
         model = Velocity
         fields = ("value", "unit", "error_max", "error_min", "bibcode")
@@ -154,41 +204,28 @@ class ObservingSiteSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = ObservingSite
-        fields = ('name', 'long_name', 'IAUCode', 'continent', 'coordinates', 'address_line_1', 'address_line_2', 'zip_code', 'country', 'time_zone', 'time_zone_name')
         lookup_field = "name"
+        fields = ('name', 'long_name', 'IAUCode', 'continent', 'coordinates', 'address_line_1', 'address_line_2',
+                  'zip_code', 'country', 'time_zone', 'time_zone_name')
 
 
 ######################## Objects Properties ########################
 
-class AstronomicalCoordinatesSerializer(serializers.HyperlinkedModelSerializer):
+class AstronomicalCoordinatesSerializer(serializers.ModelSerializer):
     class Meta:
         model = AstronomicalCoordinates
         fields = ("system", "right_ascension", "right_ascension_units", "declination", "declination_units", "epoch", "equinox")
 
-class AliasSerializer(serializers.HyperlinkedModelSerializer):
+class AliasSerializer(serializers.ModelSerializer):
     class Meta:
         model = Alias
         fields = ("name", "catalogue_url")
 
-class ObjectTypeSerializer(serializers.HyperlinkedModelSerializer):
+class ObjectTypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = ObjectType
         fields = ("value",)
 
-
-######################## Shorts ########################
-
-class AstronomicalObjectShortSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = AstronomicalObject
-        lookup_field = "name"
-        fields = ('url', 'name')
-
-class AstronomersTelegramShortSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = AstronomersTelegram
-        lookup_field = "identifier"
-        fields = ('url', 'identifier')
 
 
 ######################## Objects ########################
@@ -270,12 +307,12 @@ class ExoplanetSerializer(serializers.HyperlinkedModelSerializer):
 
 ######################## Archives ########################
 
-class ESOProgrammeSummarySerializer(serializers.HyperlinkedModelSerializer):
+class ESOProgrammeSummarySerializer(serializers.ModelSerializer):
     class Meta:
         model = ESOProgrammeSummary
         lookup_field = "programme_id"
 
-class HSTProgrammeSummarySerializer(serializers.HyperlinkedModelSerializer):
+class HSTProgrammeSummarySerializer(serializers.ModelSerializer):
     class Meta:
         model = HSTProgrammeSummary
         lookup_field = "programme_id"
@@ -318,12 +355,14 @@ class ICRSCoordinatesSerializer(serializers.ModelSerializer):
         model = ICRSCoordinates
         fields = ('ra', 'ra_unit', 'dec', 'dec_unit', 'documentation', 'documentation_URL')
 
+
 ######################## Conversions ########################
 
 class CoordinatesConversionSerializer(serializers.ModelSerializer):
     class Meta:
         model = CoordinatesConversion
-        fields = ('input_first_value', 'input_second_value', 'input_frame', 'CIRS', 'FK4', 'FK4NoETerms', 'FK5', 'GCRS', 'Galactic', 'ICRS')
+        fields = ('input_first_value', 'input_second_value', 'input_frame', 'CIRS', 'FK4', 'FK4NoETerms',
+                  'FK5', 'GCRS', 'Galactic', 'ICRS')
 
     CIRS = CIRSCoordinatesSerializer(required=False)
     FK4 = FK4CoordinatesSerializer(required=False)
@@ -335,7 +374,6 @@ class CoordinatesConversionSerializer(serializers.ModelSerializer):
 
 
 ######################## Telegrams ########################
-
 
 class AstronomersTelegramSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
