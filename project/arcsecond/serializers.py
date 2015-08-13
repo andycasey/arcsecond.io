@@ -176,14 +176,31 @@ class ObjectTypeSerializer(serializers.HyperlinkedModelSerializer):
         fields = ("value",)
 
 
+######################## Shorts ########################
+
+class AstronomicalObjectShortSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AstronomicalObject
+        lookup_field = "name"
+        fields = ('url', 'name')
+
+class AstronomersTelegramShortSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AstronomersTelegram
+        lookup_field = "identifier"
+        fields = ('url', 'identifier')
+
+
 ######################## Objects ########################
 
 class AstronomicalObjectSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = AstronomicalObject
         lookup_field = "name"
+        fields = ('url', 'name', 'coordinates', 'aliases', 'object_types', 'fluxes', 'mass', 'radius', 'distance',
+                  'metallicity', 'age', 'effective_temperature', 'astronomer_telegrams')
 
-    coordinates = AstronomicalCoordinatesSerializer()
+    coordinates = AstronomicalCoordinatesSerializer(required=False)
 
     aliases = AliasSerializer(many=True, required=False)
     object_types = ObjectTypeSerializer(many=True, required=False)
@@ -196,6 +213,10 @@ class AstronomicalObjectSerializer(serializers.HyperlinkedModelSerializer):
     age = AgeSerializer(required=False)
     effective_temperature = TemperatureSerializer(required=False)
 
+    astronomer_telegrams = AstronomersTelegramShortSerializer(required=False, many=True)
+
+
+######################## Exoplanets ########################
 
 class ExoplanetSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -315,7 +336,13 @@ class CoordinatesConversionSerializer(serializers.ModelSerializer):
 
 ######################## Telegrams ########################
 
-class AstronomersTelegramSerializer(serializers.ModelSerializer):
+
+class AstronomersTelegramSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = AstronomersTelegram
         lookup_field = "identifier"
+        fields = ('url', 'identifier', 'title', 'credential_certification', 'subjects', 'content', 'authors',
+                  'external_links', 'related_telegrams', 'detected_objects')
+
+    related_telegrams = AstronomersTelegramShortSerializer(required=False, many=True)
+    detected_objects = AstronomicalObjectShortSerializer(required=False, many=True)
