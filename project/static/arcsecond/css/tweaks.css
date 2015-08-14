@@ -1,8 +1,12 @@
 
-.btn {
+.go-button {
     padding: 4px 12px;
 }
 
-.input-group-addon {
+.go-api {
     padding: 4px 12px;
+}
+
+.login-or {
+    padding: 25px;
 }

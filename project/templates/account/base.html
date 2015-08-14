@@ -1,21 +1,42 @@
 {% extends 'arcsecond/base-navbar.html' %}
 
+{% load static %}
+
+{% block head_end_block %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'bootstrap-social/bootstrap-social.css' %}" />
+    <link rel="stylesheet" href="{% static 'arcsecond/css/tweaks.css' %}" />
+{% endblock head_end_block %}
+
 {% block body_block %}
-{#    {% if messages %}#}
-{#        <div>#}
-{#            <strong>Messages:</strong>#}
-{#            <ul>#}
-{#                {% for message in messages %}#}
-{#                    <li>{{message}}</li>#}
-{#                {% endfor %}#}
-{#            </ul>#}
-{#        </div>#}
-{#    {% endif %}#}
 
-    {% block content %}
-    {% endblock %}
+    <div class="site-wrapper">
+        <div class="container">
+            <div class="row">
+                {% if messages %}
+                    <div>
+                        <strong>Messages:</strong>
+                        <ul>
+                            {% for message in messages %}
+                                <li>{{message}}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
 
-    {% block extra_body %}
-    {% endblock %}
+                {% block content %}
+                {% endblock content %}
+            </div>
+        </div>
+    </div>
+
+    <div class="site-wrapper">
+        <div class="container">
+            <div class="row">
+                {% block extra_body %}
+                {% endblock extra_body %}
+            </div>
+        </div>
+    </div>
 
 {% endblock body_block %}

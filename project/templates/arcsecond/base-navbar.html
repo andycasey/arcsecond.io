@@ -2,6 +2,7 @@
 
 {% load staticfiles %}
 {% load i18n %}
+{% load socialaccount %}
 
 {% block before_body_raw_block %}
 
@@ -29,10 +30,11 @@
             <div class="navbar-collapse collapse">
                 <ul class="fullpage__nav nav navbar-nav navbar-right">
                     <li><a href="#welcome">Welcome</a></li>
-                    <li><a href="#about">About</a></li>
                     <li><a href="#APIs">APIs</a></li>
                     <li><a href="#team">Team</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="/accounts/login">Log In</a></li>
+                    <li><a href="/accounts/signup">Sign Up</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
@@ -65,10 +67,11 @@
         <!-- Sidebar links -->
         <ul class="fullpage__nav sidebar-menu__ul nav">
             <li><a href="#welcome">Welcome</a></li>
-            <li><a href="#about">About</a></li>
             <li><a href="#APIs">APIs</a></li>
             <li><a href="#team">Team</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="/accounts/login">Log In</a></li>
+            <li><a href="/accounts/signup">Sign Up</a></li>
         </ul>
 
     </div> <!-- / .sidebar-menu__ul -->

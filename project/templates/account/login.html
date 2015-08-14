@@ -7,16 +7,14 @@
 
 {% block head_title %}{% trans "Log in" %}{% endblock %}
 
-{% block head_end_block %}
-    {{ block.super }}
-    <link rel="stylesheet" href="{% static 'bootstrap-social/bootstrap-social.css' %}" />
-{% endblock head_end_block %}
-
 {% block content %}
     <div class="col-md-10 col-md-offset-3">
         <h1>{% trans "Log In" %}</h1>
         <p>{% blocktrans %}Don't have an account? Then please <a href="{{ signup_url }}">sign up</a>.{% endblocktrans %}</p>
+        <br/>
     </div>
+
+
 
     <div class="col-md-3 col-md-offset-3">
         <a class="btn btn-block btn-social btn-twitter" href="{% provider_login_url "twitter" %}">
@@ -28,7 +26,7 @@
 
     <form class="login form-horizontal" id="login_form" method="post" action="{% url 'account_login' %}">
         {% csrf_token %}
-        <div class="col-md-10 col-md-offset-2">
+        <div class="col-md-8 col-md-offset-1">
 
             {% for field in form.visible_fields %}
                 <div class="form-group" style="display:{% if field.type == 'hidden' %}none{% else %}block{% endif %}">
