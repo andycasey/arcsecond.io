@@ -22,6 +22,7 @@ urlpatterns = patterns('',
     url(r'^docs/', include('rest_framework_swagger.urls')),
 
     url(r'^@(?P<username>[\w]+)/?$', views.user_profile, name="user-profile"),
+    url(r'^accounts/profile', views.user_account_profile, name='user-account-profile'),
     url(r'^observingsites/?$', views.observingsites, name="observingsites"),
 )
 
