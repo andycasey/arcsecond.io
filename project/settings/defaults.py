@@ -207,7 +207,7 @@ LEAFLET_CONFIG = {
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_PATH,],
+        'DIRS': [TEMPLATE_PATH, os.path.join(TEMPLATE_PATH, 'socialaccount')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -258,7 +258,9 @@ SOCIALACCOUNT_PROVIDERS = {
                             'email-address',
                             'picture-url',
                             'public-profile-url']
-         }
+         },
+    'stackexchange':
+        { 'SITE': 'stackoverflow' }
 }
 
 
