@@ -10,4 +10,43 @@
 
 {% block body_block %}
 
+    <div class="row">
+        <div class="col-sm-4">
+
+            <!-- Team member -->
+            <div class="team__member">
+
+                <!-- Avatar -->
+                <div class="team-member__avatar">
+                    <img class="img-responsive" src="{% static 'arcsecond/img/photo_1.jpg' %}" alt="...">
+                </div>
+
+                <!-- Info -->
+                <h4 class="team-member__name">Cédric Foellmi, Ph.D.</h4>
+                <p class="team-member__info">
+                    A guy, former support astronomer at one of the <a href="http://www.eso.org/public/teles-instr/lasilla/">most beautiful observatory on this planet</a> (picture behind), and for a time interested by the distance of the closest microquasars in our galaxy, and especially <a href="http://arxiv.org/abs/0812.4232">one he thought was located at 1 kiloparsec</a>.
+                    <br/>Hence, his now famous <a href="onekilopars.ec">signature</a>...
+                </p>
+
+                <!-- Contact -->
+                <div class="team-member__contact">
+                    {#                            <a href="#" class="team-member-contact__item facebook">#}
+                    {#                                <i class="fa fa-facebook"></i>#}
+                    {#                            </a>#}
+                    <a href="https://twitter.com/onekiloparsec" class="team-member-contact__item twitter">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="mailto:cedric@arcsecond.io" class="team-member-contact__item email">
+                        <span class="about-item-title__icon oi oi-envelope-closed" title="Telegrams" aria-hidden="true"></span>
+                    </a>
+                    {#                            <a href="#" class="team-member-contact__item google-plus">#}
+                    {#                                <i class="fa fa-google-plus"></i>#}
+                    {#                            </a>#}
+                </div>
+
+            </div> <!-- / .team__member -->
+
+        </div>
+    </div>
+
 {% endblock body_block %}

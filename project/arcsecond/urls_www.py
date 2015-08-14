@@ -21,7 +21,7 @@ urlpatterns = patterns('',
     url(r'^accounts/', include('allauth.urls')),
     url(r'^docs/', include('rest_framework_swagger.urls')),
 
-    url(r'^accounts/profile', views.user_profile, name='user-profile'),
+    url(r'^@(?P<username>[\w]+)/?$', views.user_profile, name="user-profile"),
     url(r'^observingsites/?$', views.observingsites, name="observingsites"),
 )
 

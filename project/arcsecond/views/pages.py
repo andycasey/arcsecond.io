@@ -11,7 +11,7 @@ def custom_404(request):
     return render(request, 'arcsecond/404.html')
 
 
-def user_profile(request):
+def user_profile(request, username):
     context = RequestContext(request)
     context_dict = {"title": ("arcsecond.io - User Profile")}
     return render_to_response('arcsecond/user-profile.html', context_dict, context)

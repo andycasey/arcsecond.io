@@ -10,3 +10,23 @@
 .login-or {
     padding: 25px;
 }
+
+.auth-menu-button {
+    background-color: transparent;
+}
+
+.auth-menu-button {
+    background-color: transparent;
+    padding-top: 10px;
+}
+
+.auth-menu-button:hover,
+.auth-menu-button:focus,
+.auth-menu-button.focus,
+.auth-menu-button:active,
+.auth-menu-button.active,
+.open > .dropdown-toggle.btn-info {
+    color: #ffffff;
+    background-color: transparent;
+    border-color: #269abc;
+}

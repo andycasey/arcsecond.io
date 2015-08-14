@@ -3,32 +3,41 @@
 {% load i18n %}
 {% load account %}
 
-<div class="navbar-form navbar-right" role="form">
+{% if user.is_authenticated %}
 
-    {% if user.is_authenticated %}
+    <div class="navbar-form navbar-right" role="form">
 
         <div class="btn-group">
-            <button type="button" class="btn btn-info">
-                <img src="{{ request.user.profile.profile_image_url }}" width=18px />&nbsp;{{ user.username }}
-                {% if user.profile.account_verified %} (verified) {% else %} (unverified) {% endif %}
+            <button type="button"
+                    class="btn btn-info auth-menu-button"
+                    title="Account {% if user.profile.account_verified %}Verified{% else %}Unverified{% endif %}"
+                    onclick="location.href='/@{% user_display user %}';">
+
+                <img src="{{ request.user.profile.profile_image_url }}" width=12px />&nbsp;{% user_display user %}
+                {% if user.profile.account_verified %}
+                    <span class="about-item-title__icon oi oi-circle-check" aria-hidden="true"></span>
+                {% else %}
+                    <span class="about-item-title__icon oi oi-circle-x" aria-hidden="true"></span>
+                {% endif %}
             </button>
-            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+
+            <button type="button" class="btn btn-info auth-menu-button dropdown-toggle" data-toggle="dropdown">
                 <span class="caret"></span>
                 <span class="sr-only">Toggle Dropdown</span>
             </button>
             <ul class="dropdown-menu" role="menu">
-                <li><a href="#">User</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Settings</a></li>
+                {#                <li><a href="#">User</a></li>#}
+                {#                <li class="divider"></li>#}
+                {#                <li><a href="#">Settings</a></li>#}
                 <li><a href="{% url 'account_logout' %}">Logout</a></li>
             </ul>
         </div>
+    </div>
 
-    {% else %}
+{% else %}
 
-{#        <button type="submit" class="btn btn-primary" onclick="location.href='{% url 'account_login' %}';">{% trans "Log in" %}</button>#}
-{#        <button type="submit" class="btn btn-primary" onclick="location.href='{% url 'account_signup' %}';">{% trans "Sign up" %}</button>#}
+    <li><a href="{% url 'account_login' %}">Log In</a></li>
+    <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
 
-    {% endif %}
+{% endif %}
 
-</div>
