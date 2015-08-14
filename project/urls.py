@@ -8,6 +8,5 @@ urlpatterns = patterns('',
     url(r'^', include('project.arcsecond.urls_www', namespace="www")),
     url(r'^', include('project.arcsecond.urls_api', namespace="api")),
     url(r'^admin/', include(admin.site.urls)),
-    (r'^accounts/', include('allauth.urls')),
 )
 
