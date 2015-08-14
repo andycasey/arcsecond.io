@@ -112,8 +112,8 @@ INSTALLED_APPS = (
     'rest_framework_swagger',
     'allauth',
     'allauth.account',
-    # 'allauth.socialaccount',
-    # 'allauth.socialaccount.providers.twitter',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.twitter',
     # 'allauth.socialaccount.providers.facebook',
     'project.arcsecond',
 )
@@ -212,6 +212,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'django.contrib.auth.context_processors.auth',
                 'django_settings_export.settings_export',
+                'django.core.context_processors.i18n',
 
                 # `allauth` needs this from django
                 'django.template.context_processors.request',
@@ -224,17 +225,6 @@ TEMPLATES = [
     },
 ]
 
-# See https://github.com/jakubroztocil/django-settings-export
-TEMPLATE_CONTEXT_PROCESSORS = [
-    'django.contrib.messages.context_processors.messages',
-    'django.contrib.auth.context_processors.auth',
-    'django_settings_export.settings_export',
-    'django.core.context_processors.i18n',
-    'django.core.context_processors.request',
-    'allauth.account.context_processors.account',
-    'allauth.socialaccount.context_processors.socialaccount',
-]
-
 AUTHENTICATION_BACKENDS = (
     # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
@@ -243,7 +233,6 @@ AUTHENTICATION_BACKENDS = (
 )
 
 ACCOUNT_AUTHENTICATION_METHOD = "email"
-ACCOUNT_EMAIL_REQUIRED = True
 
 # Used by django-allauth. No need to call url resolver 'reverse'.
 LOGIN_URL = 'account_login'

@@ -13,12 +13,15 @@ else:
 
 urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
-    url(r'^onekilopars.ec$', RedirectView.as_view(url="/", permanent=True)),
 
-    url(r'^docs/', include('rest_framework_swagger.urls')),
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^onekilopars.ec$', RedirectView.as_view(url="/", permanent=True)),
     url(r'^robots\.txt$', lambda r: HttpResponse(robots_content)),
 
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'^accounts/', include('allauth.urls')),
+    url(r'^docs/', include('rest_framework_swagger.urls')),
+
+    url(r'^accounts/profile', views.user_profile, name='user-profile'),
     url(r'^observingsites/?$', views.observingsites, name="observingsites"),
 )
 
