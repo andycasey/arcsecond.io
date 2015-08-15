@@ -20,20 +20,20 @@
                             {% endif %}
                         </div>
                         <div class="profile-user__name">
-                            user: {% user_display user %}
+                            @{% user_display user %}
                         </div>
                         <div class="profile-user__name">
-                            fullname: {{ user.get_full_name }}
+                            {{ user.get_full_name }}
                         </div>
                         <div class="profile-user__email">
-                            email: {{ user.email }}
+                            {{ user.email }}
                         </div>
 
                         {% get_social_accounts user as accounts %}
                         {% if accounts %}
-                            Connexions:
+                            <span class="profile-user__accounts">Connected Accounts:</span>
                             {% for account in accounts %}
-                                {{ account }}
+                                <strong>{{ account }}</strong>
                             {% endfor %}
                         {% endif %}
                     </div>
