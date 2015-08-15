@@ -93,6 +93,14 @@
 .profile-user__accounts {
     color: #7d7d7f;
 }
+.profile-user__verification {
+    color: #7d7d7f;
+    font-size: smaller;
+}
+.oi {
+    /*margin-right: 0;*/
+    font-size: x-small;
+}
 .profile-user__info {
     margin-bottom: 20px;
 }
@@ -133,4 +141,11 @@
 }
 .profile-user-contact__item.google-plus:hover {
     background: #c23321;
+}
+
+.alert {
+    display: block;
+    border-radius: 0;
+    border: 0;
+    font-weight: 500;
 }

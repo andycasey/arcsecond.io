@@ -10,7 +10,7 @@
     <div class="site-wrapper" id="about">
         <div class="container">
             <div class="row">
-                <div class="col-md-12  pull-left">
+                <div class="col-md-12 pull-left">
                     <div class="profile_user">
                         <div class="profile-user__avatar">
                             {% if user.profile.image %}
@@ -27,6 +27,13 @@
                         </div>
                         <div class="profile-user__email">
                             {{ user.email }}
+                            {% if user.profile.account_verified %}
+                                <span class="about-item-title__icon oi oi-circle-check" aria-hidden="true"></span>
+                            {% else %}
+                                <span class="profile-user__verification">
+                                    <span class="about-item-title__icon oi oi-circle-x" aria-hidden="true"></span>(unverified)
+                                </span>
+                            {% endif %}
                         </div>
 
                         {% get_social_accounts user as accounts %}
