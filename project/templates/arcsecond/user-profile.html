@@ -1,51 +1,41 @@
-{% extends 'arcsecond/base-navbar.html' %}
+{% extends 'arcsecond/white-navbar.html' %}
 
 {% load static %}
 {% load i18n %}
-
-{% block head_end_block %}
-    {{ block.super }}
-    <link rel="stylesheet" href="{% static 'arcsecond/css/user-profile.css' %}" />
-{% endblock head_end_block %}
+{% load account %}
+{% load socialaccount %}
 
 {% block body_block %}
 
-    <div class="row">
-        <div class="col-sm-4">
+    <div class="site-wrapper" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12  pull-left">
+                    <div class="profile_user">
+                        <div class="profile-user__avatar">
+                            {% if user.profile.image %}
+                                <img class="img-responsive" src="{% static 'arcsecond/img/photo_1.jpg' %}" alt="...">
+                            {% else %}
+                                <span class="oi oi-person" title="Avatar" aria-hidden="true"></span>
+                            {% endif %}
+                        </div>
+                        <div class="profile-user__name">
+                            {% user_display user %}
+                        </div>
+                        <div class="profile-user__name">
+                        {{ user.get_full_name }}
+                        </div>
+                        <div class="profile-user__email">
+                            {{ user.email }}
+                        </div>
 
-            <!-- Team member -->
-            <div class="team__member">
-
-                <!-- Avatar -->
-                <div class="team-member__avatar">
-                    <img class="img-responsive" src="{% static 'arcsecond/img/photo_1.jpg' %}" alt="...">
+                        {% get_social_accounts user as accounts %}
+                        {% for account in accounts %}
+                            {{ account }}
+                        {% endfor %}
+                    </div>
                 </div>
-
-                <!-- Info -->
-                <h4 class="team-member__name">Cédric Foellmi, Ph.D.</h4>
-                <p class="team-member__info">
-                    A guy, former support astronomer at one of the <a href="http://www.eso.org/public/teles-instr/lasilla/">most beautiful observatory on this planet</a> (picture behind), and for a time interested by the distance of the closest microquasars in our galaxy, and especially <a href="http://arxiv.org/abs/0812.4232">one he thought was located at 1 kiloparsec</a>.
-                    <br/>Hence, his now famous <a href="onekilopars.ec">signature</a>...
-                </p>
-
-                <!-- Contact -->
-                <div class="team-member__contact">
-                    {#                            <a href="#" class="team-member-contact__item facebook">#}
-                    {#                                <i class="fa fa-facebook"></i>#}
-                    {#                            </a>#}
-                    <a href="https://twitter.com/onekiloparsec" class="team-member-contact__item twitter">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-                    <a href="mailto:cedric@arcsecond.io" class="team-member-contact__item email">
-                        <span class="about-item-title__icon oi oi-envelope-closed" title="Telegrams" aria-hidden="true"></span>
-                    </a>
-                    {#                            <a href="#" class="team-member-contact__item google-plus">#}
-                    {#                                <i class="fa fa-google-plus"></i>#}
-                    {#                            </a>#}
-                </div>
-
-            </div> <!-- / .team__member -->
-
+            </div>
         </div>
     </div>
 

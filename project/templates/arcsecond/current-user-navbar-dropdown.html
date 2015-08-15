@@ -9,26 +9,25 @@
 
         <div class="btn-group">
             <button type="button"
-                    class="btn btn-info auth-menu-button"
+                    class="btn btn-info auth-menu-button {% if white %}auth-menu-button-white{% endif %}"
                     title="Account {% if user.profile.account_verified %}Verified{% else %}Unverified{% endif %}"
                     onclick="location.href='/@{% user_display user %}';">
 
                 <img src="{{ request.user.profile.profile_image_url }}" width=12px />&nbsp;{% user_display user %}
-                {% if user.profile.account_verified %}
-                    <span class="about-item-title__icon oi oi-circle-check" aria-hidden="true"></span>
-                {% else %}
-                    <span class="about-item-title__icon oi oi-circle-x" aria-hidden="true"></span>
+                {% if white == False %}
+                    {% if user.profile.account_verified %}
+                        <span class="about-item-title__icon oi oi-circle-check" aria-hidden="true"></span>
+                    {% else %}
+                        <span class="about-item-title__icon oi oi-circle-x" aria-hidden="true"></span>
+                    {% endif %}
                 {% endif %}
             </button>
 
-            <button type="button" class="btn btn-info auth-menu-button dropdown-toggle" data-toggle="dropdown">
+            <button type="button" class="btn btn-info auth-menu-button {% if white %}auth-menu-button-white{% endif %} dropdown-toggle" data-toggle="dropdown">
                 <span class="caret"></span>
                 <span class="sr-only">Toggle Dropdown</span>
             </button>
             <ul class="dropdown-menu" role="menu">
-                {#                <li><a href="#">User</a></li>#}
-                {#                <li class="divider"></li>#}
-                {#                <li><a href="#">Settings</a></li>#}
                 <li><a href="{% url 'account_logout' %}">Logout</a></li>
             </ul>
         </div>

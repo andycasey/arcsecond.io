@@ -723,6 +723,8 @@
 {% block after_body_raw_block %}
     {{ block.super }}
 
+    {% include 'arcsecond/footer.html' %}
+
     <script src="{% static 'arcsecond/js/plugins/google-maps.js' %}"></script>
 
     <script>

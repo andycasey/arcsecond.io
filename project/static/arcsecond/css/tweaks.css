@@ -30,3 +30,104 @@
     background-color: transparent;
     border-color: #269abc;
 }
+
+.navbar-white {
+    background-color: transparent;
+}
+
+.navbar-brand-white {
+    color: #4b4b4b;
+}
+
+.auth-menu-button-white {
+    color: #4b4b4b;
+}
+
+.auth-menu-button:hover,
+.auth-menu-button:focus,
+.auth-menu-button.focus,
+.auth-menu-button:active,
+.auth-menu-button.active,
+.open > .dropdown-toggle.btn-info {
+    color: #4b4b4b;
+    border-color: #4b4b4b;
+}
+
+.profile_user {
+}
+
+@media (min-width: 768px) {
+    .profile_user {
+        width: 70%;
+    }
+    .profile_user_chief {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+.profile-user__avatar {
+    width: 120px;
+    height: 120px;
+    max-width: 15%;
+    margin-top: 0;
+    margin-right: 10px;
+    margin-left: auto;
+    margin-bottom: 15px;
+    border: 5px solid rgba(209, 209, 209, 0.8);
+    border-radius: 10%;
+    overflow: hidden;
+    float: left;
+}
+.profile-user__name {
+    color: #4dbce9;
+    position: relative;
+    font-family: "Anonymous Pro", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier New", monospace;
+    font-size: large;
+}
+.profile-user__email {
+    color: #3a3a3b;
+    position: relative;
+    font-family: "Anonymous Pro", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier New", monospace;
+    font-size: large;
+}
+.profile-user__info {
+    margin-bottom: 20px;
+}
+.profile-user__contact {
+    text-align: center;
+}
+.profile-user-contact__item {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    margin: 0 2px;
+    border-radius: 50%;
+    line-height: 30px;
+    color: white;
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.profile-user-contact__item:hover {
+    color: white;
+}
+.profile-user-contact__item.facebook {
+    background: #3b5998;
+}
+.profile-user-contact__item.facebook:hover {
+    background: #2d4373;
+}
+.profile-user-contact__item.twitter {
+    background: #55acee;
+}
+.profile-user-contact__item.twitter:hover {
+    background: #2795e9;
+}
+.profile-user-contact__item.google-plus {
+    background: #dd4b39;
+}
+.profile-user-contact__item.google-plus:hover {
+    background: #c23321;
+}
