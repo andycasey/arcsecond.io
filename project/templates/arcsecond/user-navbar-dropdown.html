@@ -28,6 +28,8 @@
                 <span class="sr-only">Toggle Dropdown</span>
             </button>
             <ul class="dropdown-menu" role="menu">
+                <li><a href="{% url 'user-settings' user.username %}">Settings</a></li>
+                <li class="divider"></li>
                 <li><a href="{% url 'account_logout' %}">Logout</a></li>
             </ul>
         </div>

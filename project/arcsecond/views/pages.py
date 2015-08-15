@@ -24,3 +24,9 @@ def user_profile(request, username):
     context = RequestContext(request)
     context_dict = {"title": ("arcsecond.io - User Profile")}
     return render_to_response('arcsecond/user-profile.html', context_dict, context)
+
+def user_settings(request, username):
+    context = RequestContext(request)
+    context_dict = {"title": ("arcsecond.io - User Settings")}
+    return render_to_response('arcsecond/user-settings.html', context_dict, context)
+
