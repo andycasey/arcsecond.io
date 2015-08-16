@@ -44,11 +44,11 @@
     color: #4b4b4b;
 }
 
-.auth-menu-button:hover,
-.auth-menu-button:focus,
-.auth-menu-button.focus,
-.auth-menu-button:active,
-.auth-menu-button.active,
+.auth-menu-button-white:hover,
+.auth-menu-button-white:focus,
+.auth-menu-button-white.focus,
+.auth-menu-button-white:active,
+.auth-menu-button-white.active,
 .open > .dropdown-toggle.btn-info {
     color: #4b4b4b;
     border-color: #4b4b4b;

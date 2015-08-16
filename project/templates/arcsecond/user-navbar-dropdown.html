@@ -16,9 +16,9 @@
                 <img src="{{ request.user.profile.profile_image_url }}" width=12px />&nbsp;@{% user_display user %}
                 {% if white == False %}
                     {% if user.profile.account_verified %}
-                        <span class="about-item-title__icon oi oi-circle-check" aria-hidden="true"></span>
+                        <span class="about-item-title__icon oi oi-small oi-circle-check" aria-hidden="true"></span>
                     {% else %}
-                        <span class="about-item-title__icon oi oi-circle-x" aria-hidden="true"></span>
+                        <span class="about-item-title__icon oi oi-small oi-circle-x" aria-hidden="true"></span>
                     {% endif %}
                 {% endif %}
             </button>
