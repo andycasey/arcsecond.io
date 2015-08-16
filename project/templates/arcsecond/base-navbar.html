@@ -5,10 +5,17 @@
 {% load socialaccount %}
 
 {% block before_body_raw_block %}
+    <script>
+        $(document).ready(function () {
+            if(self!=top) {
+                $('#main_navbar').remove();
+            }
+        });
+    </script>
 
     <!-- NAVBAR
     ============================== -->
-    <div class="navbar navbar-default {% if initial %}navbar__initial scrollspy_menu{% endif %} navbar-fixed-top" role="navigation">
+    <div id="main_navbar" class="navbar navbar-default {% if initial %}navbar__initial scrollspy_menu{% endif %} navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -75,7 +82,5 @@
 
     </div> <!-- / .sidebar-menu__ul -->
 
-
 {% endblock before_body_raw_block %}
-
 
