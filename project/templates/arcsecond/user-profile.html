@@ -20,7 +20,7 @@
                             {% endif %}
                         </div>
                         <div class="profile-user__name">
-                            @{% user_display user %}
+                            @{{ user.username }}
                         </div>
                         <div class="profile-user__name">
                             {{ user.get_full_name }}
