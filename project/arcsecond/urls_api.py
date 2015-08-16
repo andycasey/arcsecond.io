@@ -61,6 +61,13 @@ urlpatterns = patterns('',
         name="publication-detail"),
 
 
+    # ----- People -----
+
+    url(r'^1/people/(?P<name>[A-Za-z\.\+]+)/$',
+        views.PersonDetailAPIView.as_view(),
+        name="person-detail"),
+
+
     # ----- Archives -----
 
     url(r'^1/archives/ESO/(?P<programme_id>'+constants.eso_programme_id_regex+')/summary/$',

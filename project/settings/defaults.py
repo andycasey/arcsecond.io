@@ -115,6 +115,9 @@ INSTALLED_APPS = (
     'allauth.socialaccount',
     'allauth.socialaccount.providers.twitter',
     # 'allauth.socialaccount.providers.facebook',
+    # 'allauth.socialaccount.providers.github',
+    # 'allauth.socialaccount.providers.flickr',
+    # 'allauth.socialaccount.providers.linkedin_oauth2',
     'project.arcsecond',
 )
 
@@ -204,7 +207,7 @@ LEAFLET_CONFIG = {
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_PATH,],
+        'DIRS': [TEMPLATE_PATH, os.path.join(TEMPLATE_PATH, 'socialaccount')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -225,6 +228,42 @@ TEMPLATES = [
     },
 ]
 
+SOCIALACCOUNT_PROVIDERS = {
+    'facebook':
+        {'METHOD': 'oauth2',
+         'SCOPE': ['email', 'public_profile', 'user_friends'],
+         'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
+         'FIELDS': [
+             'id',
+             'email',
+             'name',
+             'first_name',
+             'last_name',
+             'verified',
+             'locale',
+             'timezone',
+             'link',
+             'gender',
+             'updated_time'],
+         'EXCHANGE_TOKEN': True,
+         'LOCALE_FUNC': lambda request: 'en_US',
+         'VERIFIED_EMAIL': False,
+         'VERSION': 'v2.4'
+         },
+    'linkedin':
+        {'SCOPE': ['r_emailaddress'],
+         'PROFILE_FIELDS': ['id',
+                            'first-name',
+                            'last-name',
+                            'email-address',
+                            'picture-url',
+                            'public-profile-url']
+         },
+    'stackexchange':
+        { 'SITE': 'stackoverflow' }
+}
+
+
 AUTHENTICATION_BACKENDS = (
     # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
@@ -236,7 +275,7 @@ ACCOUNT_AUTHENTICATION_METHOD = "email"
 
 # Used by django-allauth. No need to call url resolver 'reverse'.
 LOGIN_URL = 'account_login'
-# LOGIN_REDIRECT_URL = 'picolegends:user-profile-edit'
+# LOGIN_REDIRECT_URL = 'user-profile'
 
 # django-allauth
 # The URL to redirect to after a successful e-mail confirmation, in case no user is logged in
