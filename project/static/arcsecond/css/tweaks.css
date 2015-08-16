@@ -32,7 +32,8 @@
 }
 
 .navbar-white {
-    background-color: transparent;
+    background-color: white;
+    z-index: 1000;
 }
 
 .navbar-brand-white {
