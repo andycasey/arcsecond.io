@@ -229,6 +229,10 @@
                                             <option>ESO</option>
                                             <option>HST</option>
                                         </select>&nbsp;<span class="go-select-suffix">/</span>
+                                        <select class="go-select-hidden" hidden>
+                                            <option>073.D-0473(A)</option>
+                                            <option>10340</option>
+                                        </select>
                                     </div>
                                     <input type="text" class="form-control go-input" placeholder="ex : 073.D-0473(A)">
                                     <div class="input-group-addon go-api-suffix">/summary/</div>
@@ -245,7 +249,7 @@
                 <div class="col-sm-6">
                     <div class="about__item">
                         <h3 class="about-item__title">
-                            <span class="about-item-title__icon oi oi-book" title="People" aria-hidden="true"></span> Publications
+                            <span class="about-item-title__icon oi oi-book" title="Publications" aria-hidden="true"></span> Publications
                         </h3>
                         <p class="about-item__content">
                             Publications will integrated sources such as <a href="http://adswww.harvard.edu">NASA ADS</a> and others.
@@ -275,6 +279,15 @@
                             The people section will regroup all the scientists, and active people in the field, present in papers, proposals, etc.
                             Hopefully, most of them will open a arcsecond.io user account!
                         </p>
+                        <form class="form-inline">
+                            <div class="form-group form-group-sm">
+                                <div class="input-group">
+                                    <div class="input-group-addon go-api">/{{ api_version }}/people/</div>
+                                    <input type="text" class="form-control go-input" placeholder="ex: Foellmi, C.">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-default go-button">Go</button>
+                        </form>
                         <p class="about-item__content">
                             <strong>Current state:</strong> user accounts implementation is started. Then, will need integration will all other services.
                         </p>
@@ -351,6 +364,23 @@
                                             <option>unix</option>
                                             <option>yday</option>
                                         </select>&nbsp;<span class="go-select-suffix">/</span>
+                                        <select class="go-select-hidden" hidden>
+                                            <option>1999.9999085590325</option>
+                                            <option>B2000.000</option>
+                                            <option>63072064.184</option>
+                                            <option>2000-01-01 00:00:00</option>
+                                            <option>2000.0</option>
+                                            <option>630720013.0</option>
+                                            <option>2000-01-01 00:00:00.000</option>
+                                            <option>2000-01-01T00:00:00.000</option>
+                                            <option>2451544.5</option>
+                                            <option>1999.9986310746065</option>
+                                            <option>J1999.999</option>
+                                            <option>51544.0</option>
+                                            <option>730120.0</option>
+                                            <option>946684800.0</option>
+                                            <option>2000:001:00:00:00.000</option>
+                                        </select>
                                     </div>
                                     <input type="text" class="form-control go-input" placeholder="ex : 2451544.5">
                                 </div>
@@ -656,112 +686,6 @@
 
                 </div>
             </div> <!-- / .row -->
-
-            {#            <div class="row">#}
-            {#                <div class="col-sm-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">#}
-            {##}
-            {#                    <!-- Alert message -->#}
-            {#                    <div class="alert contact-form__alert" id="form_message" role="alert"></div>#}
-            {##}
-            {#                    <!-- Setting the custom theme for reCaptcha.#}
-            {#                         Default themes and customization:#}
-            {#                         https://developers.google.com/recaptcha/docs/customization -->#}
-            {##}
-            {#                    <script type="text/javascript">#}
-            {#                        var RecaptchaOptions = {#}
-            {#                            theme : 'custom',#}
-            {#                            custom_theme_widget: 'recaptcha_widget'#}
-            {#                        };#}
-            {#                    </script>#}
-            {##}
-            {#                    <!-- Contact form -->#}
-            {#                    <!-- Please carefully read the README.txt file#}
-            {#                     in order to setup the PHP contact form properly -->#}
-            {#                    <form role="form" class="contact__form" id="form_sendemail">#}
-            {#                        <div class="row">#}
-            {#                            <div class="col-sm-6">#}
-            {#                                <!-- Email -->#}
-            {#                                <div class="form-group">#}
-            {#                                    <label for="email" class="sr-only">Your email address</label>#}
-            {#                                    <input type="email" name="email" class="form-control" id="email" placeholder="E-mail">#}
-            {#                                    <span class="help-block"></span>#}
-            {#                                </div>#}
-            {#                                <!-- Name -->#}
-            {#                                <div class="form-group">#}
-            {#                                    <label for="name" class="sr-only">Your name</label>#}
-            {#                                    <input type="text" name="name" class="form-control" id="name" placeholder="Full Name">#}
-            {#                                    <span class="help-block"></span>#}
-            {#                                </div>#}
-            {##}
-            {#                                <!-- reCAPTCHA -->#}
-            {#                                <div class="form-group" id="form-captcha">#}
-            {#                                    <!-- Start reCAPTCHA -->#}
-            {#                                    <div id="recaptcha_widget" style="display:none">#}
-            {#                                        <div class="recaptcha__merge">#}
-            {#                                            <div class="recaptcha-merge__action">#}
-            {#                                                <a href="javascript:Recaptcha.reload()">#}
-            {#                                                    <span class="oi oi-loop-square"></span>#}
-            {#                                                </a>#}
-            {#                                                <a class="recaptcha_only_if_image" href="javascript:Recaptcha.switch_type('audio')">#}
-            {#                                                    <span class="oi oi-headphones"></span>#}
-            {#                                                </a>#}
-            {#                                                <a class="recaptcha_only_if_audio" href="javascript:Recaptcha.switch_type('image')">#}
-            {#                                                    <span class="oi oi-image"></span>#}
-            {#                                                </a>#}
-            {#                                            </div> <!-- / .recaptcha-merge__action -->#}
-            {#                                            <!-- reCAPTCHA image -->#}
-            {#                                            <div id="recaptcha_image"></div>#}
-            {#                                        </div> <!-- / .recaptcha__merge -->#}
-            {#                                        <div class="recaptcha_only_if_image text-muted">#}
-            {#                                            Enter the words above (powered by reCaptcha):#}
-            {#                                        </div>#}
-            {#                                        <div class="recaptcha_only_if_audio text-muted">#}
-            {#                                            Enter the numbers you hear (powered by reCaptcha):#}
-            {#                                        </div>#}
-            {#                                        <!-- reCAPTCHA input -->#}
-            {#                                        <input class="form-control input-sm" type="text" id="recaptcha_response_field" name="recaptcha_response_field" />#}
-            {#                                    </div> <!-- / #recaptcha_widget -->#}
-            {##}
-            {#                                    <script type="text/javascript"#}
-            {#                                            src="http://www.google.com/recaptcha/api/challenge?k=YOUR_PUBLIC_KEY">#}
-            {#                                    </script>#}
-            {#                                    <noscript>#}
-            {#                                        <iframe src="http://www.google.com/recaptcha/api/noscript?k=YOUR_PUBLIC_KEY"#}
-            {#                                                height="300" width="500" frameborder="0"></iframe><br>#}
-            {#                                                  <textarea name="recaptcha_challenge_field" rows="3" cols="40">#}
-            {#                                                  </textarea>#}
-            {#                                        <input type="hidden" name="recaptcha_response_field"#}
-            {#                                               value="manual_challenge">#}
-            {#                                    </noscript>#}
-            {#                                    <!-- End reCAPTCHA -->#}
-            {#                                    <span class="help-block"></span>#}
-            {#                                </div> <!-- / .form-group -->#}
-            {##}
-            {#                            </div>#}
-            {##}
-            {#                            <div class="col-sm-6">#}
-            {#                                <!-- Message -->#}
-            {#                                <div class="form-group">#}
-            {#                                    <label for="message" class="sr-only">Your message</label>#}
-            {#                                    <textarea name="message" class="form-control" rows="11" id="message" placeholder="Message"></textarea>#}
-            {#                                    <span class="help-block"></span>#}
-            {#                                </div>#}
-            {#                            </div>#}
-            {#                        </div> <!-- / .row -->#}
-            {##}
-            {#                        <div class="text-center">#}
-            {#                            <button type="submit" class="btn btn-lg btn-default">#}
-            {#                                <span class="oi oi-arrow-right" title="Send it" aria-hidden="true"></span>#}
-            {#                                <span>Send message</span>#}
-            {#                            </button>#}
-            {#                            <div class="clearfix"></div>#}
-            {#                        </div>#}
-            {##}
-            {#                    </form>#}
-            {#                </div>#}
-            {##}
-            {#            </div> <!-- / .row -->#}
-
         </div> <!-- / .container -->
     </div> <!-- / .site-wrapper -->
 
@@ -792,7 +716,9 @@
 
             $('.go-select').change(function(){
                 var element = $(this).parents(".form-inline");
-                element.find(".go-input").attr("placeholder", (this.selectedIndex == 0) ? "ex : 073.D-0473(A)" : "ex : 10340");
+                var values = element.find(".go-select-hidden");
+                var new_placeholder = values[0].options[this.selectedIndex].value;
+                element.find(".go-input").attr("placeholder", new_placeholder);
             });
 
             $(".go-button").click(function() {
