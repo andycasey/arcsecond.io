@@ -115,7 +115,7 @@ INSTALLED_APPS = (
     'allauth.socialaccount',
     'allauth.socialaccount.providers.twitter',
     # 'allauth.socialaccount.providers.facebook',
-    # 'allauth.socialaccount.providers.github',
+    'allauth.socialaccount.providers.github',
     # 'allauth.socialaccount.providers.flickr',
     # 'allauth.socialaccount.providers.linkedin_oauth2',
     'project.arcsecond',
