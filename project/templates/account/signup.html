@@ -19,11 +19,11 @@
             <i class="fa fa-twitter"></i> Sign up with Twitter </a>
 {#        <a class="btn btn-block btn-social btn-facebook" href="{% provider_login_url "facebook" method="js_sdk" process="connect" %}">#}
 {#            <i class="fa fa-facebook"></i> Sign up with Facebook</a>#}
-{#        <a class="btn btn-block btn-social btn-github" href="{% provider_login_url "github" %}">#}
-{#            <i class="fa fa-github"></i> Sign up with GitHub </a>#}
-{#        <a class="btn btn-block btn-social btn-flickr" href="{% provider_login_url "flickr" %}">#}
+        <a class="btn btn-block btn-social btn-github" href="{% provider_login_url "github" process="connect" %}">
+            <i class="fa fa-github"></i> Sign up with GitHub </a>
+{#        <a class="btn btn-block btn-social btn-flickr" href="{% provider_login_url "flickr" process="connect" %}">#}
 {#            <i class="fa fa-flickr"></i> Sign up with Flickr </a>#}
-{#        <a class="btn btn-block btn-social btn-linkedin" href="{% provider_login_url "linkedin_oauth2" %}">#}
+{#        <a class="btn btn-block btn-social btn-linkedin" href="{% provider_login_url "linkedin_oauth2" process="connect" %}">#}
 {#            <i class="fa fa-linkedin"></i> Sign up with LinkedIn </a>#}
         <div class="login-or">{% trans 'or' %}</div>
     </div>
