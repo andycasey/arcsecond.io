@@ -10,10 +10,7 @@
         <div class="btn-group">
             <button type="button"
                     class="btn btn-info auth-menu-button {% if white %}auth-menu-button-white{% endif %}"
-                    title="Account {% if user.profile.account_verified %}Verified{% else %}Unverified{% endif %}"
-                    onclick="location.href='/@{% user_display user %}';">
-
-                <img src="{{ request.user.profile.profile_image_url }}" width=12px />&nbsp;@{% user_display user %}
+                    onclick="location.href='/@{{ user.username }}';">@{{ user.username }}
                 {% if white == False %}
                     {% if user.profile.account_verified %}
                         <span class="about-item-title__icon oi oi-small oi-circle-check" aria-hidden="true"></span>
