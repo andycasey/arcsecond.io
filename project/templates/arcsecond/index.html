@@ -250,8 +250,18 @@
                         <p class="about-item__content">
                             Publications will integrated sources such as <a href="http://adswww.harvard.edu">NASA ADS</a> and others.
                         </p>
+                        <form class="form-inline">
+                            <div class="form-group form-group-sm">
+                                <div class="input-group">
+                                    <div class="input-group-addon go-api">/{{ api_version }}/publications/</div>
+                                    <input type="text" class="form-control go-input" placeholder="ex: 2009NewA...14..674F">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-default go-button">Go</button>
+                        </form>
                         <p class="about-item__content">
-                            <strong>Current state:</strong> to be implemented.
+                            <strong>Current state:</strong> partial implementation of publications with bibcode. arXiv-formatted input pending.
+                            Integration with other services also pending.
                         </p>
                     </div>
                 </div>
@@ -512,6 +522,18 @@
                             This work has made use of the <a href="http://www.astronomerstelegram.org">Astronomer's Telegram</a>.
                             <br/>You can follow it on <a href="https://twitter.com/astronomerstel"><i class="fa fa-twitter"></i></a> and
                             <a href="https://www.facebook.com/astronomerstelegram"><i class="fa fa-facebook"></i></a>.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4">
+                    <div class="features__item">
+                        <h3 class="features-item__title">
+                            <span class="text-primary">NASA ADS</span>
+                        </h3>
+                        <div class="features-item__summary">
+                            This research has made use of <a href="http://www.adsabs.harvard.edu">NASA's Astrophysics Data System</a>.
+                            <br/>You may have a look at their <a href="https://ui.adsabs.harvard.edu">new interface</a>.
                         </div>
                     </div>
                 </div>
