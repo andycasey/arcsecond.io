@@ -322,25 +322,44 @@
                         <form class="form-inline">
                             <div class="form-group form-group-sm">
                                 <div class="input-group">
-                                    <div class="input-group-addon go-api">/{{ api_version }}/converters/
-                                        <select class="go-select">
-                                            <option>coordinates</option>
-                                        </select>&nbsp;<span class="go-select-suffix">/ra/</span>
-                                    </div>
+                                    <div class="input-group-addon go-api">/{{ api_version }}/converters/coordinates/ra/</div>
                                     <input type="text" class="form-control go-input" placeholder="ex : 3.4576">
                                     <div class="input-group-addon go-api-2">/dec/</div>
                                     <input type="text" class="form-control go-input-2" placeholder="ex : -70.2452">
-                                    {#                                    <div class="input-group-addon go-api-2">/#}
-                                    {#                                        <select class="go-select-2">#}
-                                    {#                                            <option>(empty)</option>#}
-                                    {#                                        </select>#}
-                                    {#                                    </div>#}
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-default go-button">Go</button>
+                        </form>
+                        <form class="form-inline">
+                            <div class="form-group form-group-sm">
+                                <div class="input-group">
+                                    <div class="input-group-addon go-api">/{{ api_version }}/converters/times/
+                                        <select class="go-select">
+                                            <option>byear</option>
+                                            <option>byear_str</option>
+                                            <option>cxcsec</option>
+                                            <option>datetime</option>
+                                            <option>decimalyear</option>
+                                            <option>gps</option>
+                                            <option>iso</option>
+                                            <option>isot</option>
+                                            <option selected>jd</option>
+                                            <option>jyear</option>
+                                            <option>jyear_str</option>
+                                            <option>mjd</option>
+                                            <option>plot_date</option>
+                                            <option>unix</option>
+                                            <option>yday</option>
+                                        </select>&nbsp;<span class="go-select-suffix">/</span>
+                                    </div>
+                                    <input type="text" class="form-control go-input" placeholder="ex : 2451544.5">
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-default go-button">Go</button>
                         </form>
                         <p class="about-item__content">
-                            <strong>Current state:</strong> basic Coordinates support. Times converter to be started.
+                            <strong>Current state:</strong> basic coordinates support.
+                            Astropy-compliant times converter added. Fluxes / magnitudes converter started.
                         </p>
                     </div>
                 </div>

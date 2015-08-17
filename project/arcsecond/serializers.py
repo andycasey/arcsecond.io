@@ -372,6 +372,13 @@ class CoordinatesConversionSerializer(serializers.ModelSerializer):
     ICRS = ICRSCoordinatesSerializer(required=False)
 
 
+class TimesConversionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TimesConversion
+        fields = ('input_format', 'input_value', 'documentation_URL', 'byear', 'byear_str', 'cxcsec', 'datetime',
+                  'decimalyear', 'gps', 'iso', 'isot', 'jd', 'jyear', 'jyear_str', 'mjd', 'plot_date', 'unix', 'yday')
+
+
 ######################## Telegrams ########################
 
 class AstronomersTelegramSerializer(serializers.HyperlinkedModelSerializer):

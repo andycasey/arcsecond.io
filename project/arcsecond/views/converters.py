@@ -10,6 +10,7 @@ from project.arcsecond import mixins
 
 from astropy import coordinates as c
 from astropy import units as u
+from astropy import time as t
 
 class CoordinatesConverterDetailAPIView(mixins.RequestLogViewMixin, views.APIView):
 
@@ -86,3 +87,34 @@ class CoordinatesConverterDetailAPIView(mixins.RequestLogViewMixin, views.APIVie
         return response.Response(serializer.data)
 
 
+class TimesDetailAPIView(mixins.RequestLogViewMixin, views.APIView):
+    def get(self, request, input_format, input_value, format=None):
+
+        if input_format in ['byear', 'cxcsec', 'decimalyear', 'gps', 'jd', 'jyear', 'mjd', 'plot_date', 'unix']:
+            input_value = float(input_value)
+
+        time = t.Time(input_value, format=input_format)
+
+        conversion = models.TimesConversion()
+        conversion.input_format = input_format
+        conversion.input_value = input_value
+        conversion.documentation_URL = "http://docs.astropy.org/en/stable/time/index.html#reference-api"
+
+        conversion.byear = time.byear
+        conversion.byear_str = time.byear_str
+        conversion.cxcsec = time.cxcsec
+        conversion.datetime = time.datetime
+        conversion.decimalyear = time.decimalyear
+        conversion.gps = time.gps
+        conversion.iso = time.iso
+        conversion.isot = time.isot
+        conversion.jd = time.jd
+        conversion.jyear = time.jyear
+        conversion.jyear_str = time.jyear_str
+        conversion.mjd = time.mjd
+        conversion.plot_date = time.plot_date
+        conversion.unix = time.unix
+        conversion.yday = time.yday
+
+        serializer = serializers.TimesConversionSerializer(conversion)
+        return response.Response(serializer.data)
