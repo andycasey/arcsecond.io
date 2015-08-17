@@ -86,7 +86,7 @@ urlpatterns = patterns('',
         name="coordinatesconversion-detail"),
 
 
-    url(r'^1/converters/times/(?P<input_format>'+constants.time_formats_regex+')/(?P<input_value>[\+\.\:0-9A-Z]+)/$',
+    url(r'^1/converters/times/(?P<input_format>'+constants.time_formats_regex+')/(?P<input_value>[\-\+\.\:0-9A-Z]+)/$',
         views.TimesDetailAPIView.as_view(),
         name="timesconversion-detail"),
 )
