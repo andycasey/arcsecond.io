@@ -10,3 +10,4 @@ from .conversions import *
 from .coordinates import *
 from .observingsites import *
 from .telegrams import *
+from .charts import *

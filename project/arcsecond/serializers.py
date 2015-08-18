@@ -389,7 +389,7 @@ class TimesConversionSerializer(serializers.ModelSerializer):
 
 ######################## Telegrams ########################
 
-class AstronomersTelegramSerializer(serializers.HyperlinkedModelSerializer):
+class AstronomersTelegramSerializer(serializers.ModelSerializer):
     class Meta:
         model = AstronomersTelegram
         lookup_field = "identifier"
@@ -398,3 +398,19 @@ class AstronomersTelegramSerializer(serializers.HyperlinkedModelSerializer):
 
     related_telegrams = AstronomersTelegramShortSerializer(required=False, many=True)
     detected_objects = AstronomicalObjectShortSerializer(required=False, many=True)
+
+
+######################## Finding Charts ########################
+
+class FindingChartSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = FindingChart
+        lookup_field = "pk"
+        fields = ('url', )
+
+    detection_method = serializers.SerializerMethodField()
+    mass_detection_method = serializers.SerializerMethodField()
+    radius_detection_method = serializers.SerializerMethodField()
+
+    def get_detection_method(self, obj):
+        return Exoplanet.DETECTION_METHOD_VALUES[Exoplanet.DETECTION_METHOD_KEYS.index(obj.detection_method)]
