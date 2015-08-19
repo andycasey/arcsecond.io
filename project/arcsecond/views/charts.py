@@ -10,7 +10,8 @@ class FindingChartDetailAPIView(mixins.RequestLogViewMixin, generics.ListAPIView
     queryset = models.FindingChart.objects.all()
     serializer_class = serializers.FindingChartSerializer
 
-    def get(self, request, *args, **kwargs):
+    def get_queryset(self):
         input_value = self.kwargs.get("input_value", None)
-        charts = connectors.get_OPTIR_charts(input=input_value)
-        return super(FindingChartDetailAPIView, self).get(request, *args, **kwargs)
+        chart_pks = connectors.get_OPTIR_charts(input=input_value)
+        queryset = models.FindingChart.objects.filter(pk__in=chart_pks)
+        return queryset
