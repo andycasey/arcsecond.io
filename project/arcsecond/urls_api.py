@@ -79,6 +79,13 @@ urlpatterns = patterns('',
         name="hstprogrammesummary-detail"),
 
 
+    # ----- Finding Charts -----
+
+    url(r'^1/findingcharts/(?P<input_value>[\(\)\,\:\s\+\-\.0-9a-zA-Z_]+)/$',
+        views.FindingChartDetailAPIView.as_view(),
+        name="findingchart-detail"),
+
+
     # ----- Converters -----
 
     url(r'^1/converters/coordinates/ra/(?P<ra>[\+\.\:0-9]+)/dec/(?P<dec>[-\.\:0-9]+)/$',

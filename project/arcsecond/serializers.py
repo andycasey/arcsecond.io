@@ -357,11 +357,18 @@ class ICRSCoordinatesSerializer(serializers.ModelSerializer):
 
 ######################## Conversions ########################
 
+class ErrorSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Error
+        fields = ('code', 'message')
+
 class CoordinatesConversionSerializer(serializers.ModelSerializer):
     class Meta:
         model = CoordinatesConversion
-        fields = ('input_first_value', 'input_second_value', 'input_frame', 'CIRS', 'FK4', 'FK4NoETerms',
-                  'FK5', 'GCRS', 'Galactic', 'ICRS')
+        fields = ('input_first_value', 'input_second_value', 'input_frame', 'error',
+                  'CIRS', 'FK4', 'FK4NoETerms', 'FK5', 'GCRS', 'Galactic', 'ICRS')
+
+    error = ErrorSerializer(required=False)
 
     CIRS = CIRSCoordinatesSerializer(required=False)
     FK4 = FK4CoordinatesSerializer(required=False)
@@ -375,13 +382,14 @@ class CoordinatesConversionSerializer(serializers.ModelSerializer):
 class TimesConversionSerializer(serializers.ModelSerializer):
     class Meta:
         model = TimesConversion
-        fields = ('input_format', 'input_value', 'documentation_URL', 'byear', 'byear_str', 'cxcsec', 'datetime',
+        fields = ('input_format', 'input_value', 'documentation_URL', 'error', 'byear', 'byear_str', 'cxcsec', 'datetime',
                   'decimalyear', 'gps', 'iso', 'isot', 'jd', 'jyear', 'jyear_str', 'mjd', 'plot_date', 'unix', 'yday')
 
+    error = ErrorSerializer(required=False)
 
 ######################## Telegrams ########################
 
-class AstronomersTelegramSerializer(serializers.HyperlinkedModelSerializer):
+class AstronomersTelegramSerializer(serializers.ModelSerializer):
     class Meta:
         model = AstronomersTelegram
         lookup_field = "identifier"
@@ -390,3 +398,26 @@ class AstronomersTelegramSerializer(serializers.HyperlinkedModelSerializer):
 
     related_telegrams = AstronomersTelegramShortSerializer(required=False, many=True)
     detected_objects = AstronomicalObjectShortSerializer(required=False, many=True)
+
+
+######################## Finding Charts ########################
+
+class FindingChartSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = FindingChart
+        lookup_field = "pk"
+        fields = ('input', 'survey_name', 'width', 'height', 'size_unit', 'orientation', 'band_name',
+                  'observing_date', 'fits_url', 'image_url')
+
+    survey_name = serializers.SerializerMethodField()
+    size_unit = serializers.SerializerMethodField()
+    orientation = serializers.SerializerMethodField()
+
+    def get_survey_name(self, obj):
+        return FindingChart.SURVEY_NAME_VALUES[FindingChart.SURVEY_NAME_KEYS.index(obj.survey_name)]
+
+    def get_size_unit(self, obj):
+        return FindingChart.SIZE_UNIT_VALUES[FindingChart.SIZE_UNIT_KEYS.index(obj.size_unit)]
+
+    def get_orientation(self, obj):
+        return FindingChart.ORIENTATION_VALUES[FindingChart.ORIENTATION_KEYS.index(obj.orientation)]

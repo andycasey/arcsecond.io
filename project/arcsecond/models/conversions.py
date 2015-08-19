@@ -1,6 +1,7 @@
 from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
 from django.db import models
 from .coordinates import *
+from .common import *
 
 class CoordinatesConversion(models.Model):
     class Meta: app_label = 'arcsecond'
@@ -8,6 +9,8 @@ class CoordinatesConversion(models.Model):
     input_first_value = models.CharField(max_length=20, null=True, blank=True)
     input_second_value = models.CharField(max_length=20, null=True, blank=True)
     input_frame = models.CharField(max_length=20, null=True, blank=True)
+
+    error = models.OneToOneField(Error, related_name='coordinates_conversion_error', null=True, blank=True)
 
     CIRS = models.OneToOneField(CIRSCoordinates, null=True, blank=True)
     FK4 = models.OneToOneField(FK4Coordinates, null=True, blank=True)
@@ -24,6 +27,8 @@ class TimesConversion(models.Model):
     input_format = models.CharField(max_length=100, null=True, blank=True)
     input_value = models.CharField(max_length=100, null=True, blank=True)
     documentation_URL = models.URLField(max_length=200, null=True, blank=True)
+
+    error = models.OneToOneField(Error, related_name='times_conversion_error', null=True, blank=True)
 
     byear = models.FloatField(max_length=100, null=True, blank=True)
     byear_str = models.CharField(max_length=100, null=True, blank=True)

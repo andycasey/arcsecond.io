@@ -90,31 +90,57 @@ class CoordinatesConverterDetailAPIView(mixins.RequestLogViewMixin, views.APIVie
 class TimesDetailAPIView(mixins.RequestLogViewMixin, views.APIView):
     def get(self, request, input_format, input_value, format=None):
 
-        if input_format in ['byear', 'cxcsec', 'decimalyear', 'gps', 'jd', 'jyear', 'mjd', 'plot_date', 'unix']:
-            input_value = float(input_value)
-
-        time = t.Time(input_value, format=input_format)
-
         conversion = models.TimesConversion()
         conversion.input_format = input_format
         conversion.input_value = input_value
         conversion.documentation_URL = "http://docs.astropy.org/en/stable/time/index.html#reference-api"
 
-        conversion.byear = time.byear
-        conversion.byear_str = time.byear_str
-        conversion.cxcsec = time.cxcsec
-        conversion.datetime = time.datetime
-        conversion.decimalyear = time.decimalyear
-        conversion.gps = time.gps
-        conversion.iso = time.iso
-        conversion.isot = time.isot
-        conversion.jd = time.jd
-        conversion.jyear = time.jyear
-        conversion.jyear_str = time.jyear_str
-        conversion.mjd = time.mjd
-        conversion.plot_date = time.plot_date
-        conversion.unix = time.unix
-        conversion.yday = time.yday
+        if input_format in ['byear', 'cxcsec', 'decimalyear', 'gps', 'jd', 'jyear', 'mjd', 'plot_date', 'unix']:
+            input_value = float(input_value)
+
+        try:
+            time = t.Time(input_value, format=input_format)
+        except ValueError as e:
+            conversion_error = models.Error(code=9, message=e.message)
+            conversion_error.save()
+            conversion.error = conversion_error
+        else:
+            conversion.byear = time.byear
+            conversion.byear_str = time.byear_str
+            conversion.cxcsec = time.cxcsec
+
+            try:
+                conversion.datetime = time.datetime
+            except ValueError as datetime_e:
+                if conversion.error is None:
+                    conversion_error = models.Error(code=9, message='datetime: '+datetime_e.message)
+                    conversion_error.save()
+                    conversion.error = conversion_error
+                else:
+                    conversion.error.message += ", datetime: "+datetime_e.message
+                    conversion.error.save()
+
+            conversion.decimalyear = time.decimalyear
+            conversion.gps = time.gps
+            conversion.iso = time.iso
+            conversion.isot = time.isot
+            conversion.jd = time.jd
+            conversion.jyear = time.jyear
+            conversion.jyear_str = time.jyear_str
+            conversion.mjd = time.mjd
+            conversion.plot_date = time.plot_date
+            conversion.unix = time.unix
+
+            try:
+                conversion.yday = time.yday
+            except ValueError as datetime_e:
+                if conversion.error is None:
+                    conversion_error = models.Error(code=9, message='yday: '+datetime_e.message)
+                    conversion_error.save()
+                    conversion.error = conversion_error
+                else:
+                    conversion.error.message += ", yday: "+datetime_e.message
+                    conversion.error.save()
 
         serializer = serializers.TimesConversionSerializer(conversion)
         return response.Response(serializer.data)

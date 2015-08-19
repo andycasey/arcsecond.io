@@ -4,22 +4,23 @@ from django.core.validators import RegexValidator
 from .constants import *
 from .sky import AstronomicalObject
 
+class Error(models.Model):
+    class Meta: app_label = 'arcsecond'
+    code = models.PositiveSmallIntegerField()
+    message = models.CharField(max_length=1000, null=True, blank=True)
+
 class Link(models.Model):
     class Meta: app_label = 'arcsecond'
-
     title = models.CharField(max_length=1000, null=True, blank=True)
     url = models.URLField(max_length=2000, null=True, blank=True)
-
     publications = models.ForeignKey('Publication', null=True, blank=True, related_name='download_links')
 
 
 class Person(models.Model):
     class Meta: app_label = 'arcsecond'
-
     first_name = models.CharField(max_length=1000, default="")
     middle_name = models.CharField(max_length=1000, default="")
     last_name = models.CharField(max_length=1000, default="")
-
     profile_URL = models.URLField(max_length=200, null=True, blank=True)
 
 
