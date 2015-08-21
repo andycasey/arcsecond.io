@@ -5,10 +5,15 @@ from django.core.urlresolvers import reverse_lazy, reverse
 from django.http import HttpResponseRedirect, Http404, HttpResponse
 from django.shortcuts import render, render_to_response
 from django.template import RequestContext
+from .utils import get_generic_meta
 
 def index(request):
     context = RequestContext(request)
-    context_dict = {"title": ("arcsecond.io"), 'api_version': '1', 'initial': True}
+    context_dict = {"title": ("arcsecond.io"),
+                    'api_version': '1',
+                    'initial': True,
+                    'meta': get_generic_meta(title="arcsecond.io", url=reverse_lazy('index'))}
+
     return render_to_response('arcsecond/index.html', context_dict, context)
 
 def custom_404(request):
