@@ -103,6 +103,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'rest_framework',
     'mptt',
+    'meta',
     'djangobower',
     'honeypot',
     'django_hosts',
@@ -321,3 +322,7 @@ SWAGGER_SETTINGS = {
     },
     'doc_expansion': 'none'
 }
+
+META_SITE_PROTOCOL = 'http'
+META_USE_SITES = True
+
