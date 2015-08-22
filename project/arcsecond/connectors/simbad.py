@@ -2,7 +2,6 @@
 import urllib2
 from project.arcsecond.models import *
 from astropy.io import votable
-from rest_framework import status
 from django.core.exceptions import MultipleObjectsReturned
 
 SIMBAD_VOTABLE_SCRIPT_START   = "votable v1 {\n"
