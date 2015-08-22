@@ -23,7 +23,8 @@ function initialize() {
     zoom: 6, // Change zoom value
     scrollwheel: false, // Change to "true" to enable users scale map on scroll
     center: grenobleLatlng
-  }
+  };
+
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
   var grenobleMarker = new google.maps.Marker({
