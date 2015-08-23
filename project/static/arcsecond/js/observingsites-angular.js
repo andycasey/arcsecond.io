@@ -18,13 +18,13 @@ app.controller('SitesListController', ['$scope', '$http',
         var siteList = this;
 
         siteList.continents = [
-            {name:'Africa'},
-            {name:'Antarctica'},
-            {name:'Asia'},
-            {name:'Europe'},
-            {name:'North America'},
-            {name:'Oceania'},
-            {name:'South America'}
+            {name:'Africa', key:'africa'},
+            {name:'Antarctica', key:'antarctica'},
+            {name:'Asia', key:'asia'},
+            {name:'Europe', key:'europe'},
+            {name:'North America', key:'north_america'},
+            {name:'Oceania', key:'oceania'},
+            {name:'South America', key:'south_america'}
         ];
 
         siteList.sites = {};
@@ -60,12 +60,6 @@ app.controller('SitesListController', ['$scope', '$http',
                                 title: site.name
                             });
                             continent_markers[j].setMap(map);
-
-                            (function(k) {
-                                continent_markers[j].addListener('click', function() {
-                                    continent_infowindows[k].open(map, continent_markers[k]);
-                                });
-                            })(j);
                         }
 
                         $scope.siteList.markers[continent_name] = continent_markers;
@@ -77,5 +71,9 @@ app.controller('SitesListController', ['$scope', '$http',
                 });
         }
 
+        siteList.selectContinent = function(continent_key) {
+            $('.observatory-list').not('.'+continent_key).hide();
+            $('.observatory-list.'+continent_key).show();
+        };
     }]);
 

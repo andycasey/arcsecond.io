@@ -26,18 +26,33 @@
 
         <div class="row" ng-controller="SitesListController as siteList">
             <div class="col-md-2 col-md-offset-1">
-                <ul class="nav nav-pills nav-pills nav-stacked text-right left">
+                <ul class="nav nav-pills nav-stacked text-right left">
                     <li role="presentation" ng-repeat="continent in siteList.continents">
-                        <a data-target="#" data-toggle="pill" href="#">[[continent.name]]
+                        <a data-target="#" data-toggle="pill" href="#" ng-click="siteList.selectContinent(continent.key)">[[continent.name]]
                             <span class="badge">[[ siteList.sites[continent.name].length ]]</span>
                         </a>
                     </li>
                 </ul>
             </div>
+
+            <div class="col-md-3">
+                <div ng-repeat="continent in siteList.continents" class="observatory-list-container">
+                    <ul class="nav nav-pills nav-stacked observatory-list [[continent.key]] dark">
+                        <li role="presentation" ng-repeat="observatory in siteList.sites[continent.name]">
+                            <a data-target="#" data-toggle="pill" href="#">
+                                <img src="{% static 'arcsecond/img/ObservatoryIcon_512x512.png' %}" width="20px">
+                                <span class="observatory name">[[observatory.long_name]]</span><br/>
+                                <span class="observatory country">[[observatory.country]]</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
-        <div class="row">
-            <div id="map-canvas" class="sites__map"></div>
+        <br/>
+        <div id="map-canvas-container" class="fluid-row">
+            <div id="map-canvas"></div>
         </div>
 
     </div>
