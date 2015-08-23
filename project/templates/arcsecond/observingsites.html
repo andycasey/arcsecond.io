@@ -25,19 +25,38 @@
         </div>
 
         <div class="row" ng-controller="SitesListController as siteList">
-            <div class="col-md-2 col-md-offset-1">
-                <ul class="nav nav-pills nav-pills nav-stacked text-right left">
+            <div class="col-md-2 col-md-offset-1" id="continent-list-container">
+                <ul class="nav nav-pills nav-stacked text-right left">
                     <li role="presentation" ng-repeat="continent in siteList.continents">
-                        <a data-target="#" data-toggle="pill" href="#">[[continent.name]]
-                            <span class="badge">[[ siteList.sites[continent.name].length ]]</span>
+                        <a data-target="#" data-toggle="pill" href="#" ng-click="siteList.selectContinent(continent.key)">[[continent.name]]
+                            <span class="badge">[[ siteList.sites[continent.key].length ]]</span>
                         </a>
                     </li>
                 </ul>
             </div>
+
+            <div class="col-md-3" id="site-list-container">
+                <div ng-repeat="continent in siteList.continents">
+                    <ul class="nav nav-pills nav-stacked site-list [[continent.key]] dark">
+                        <li role="presentation" ng-repeat="site in siteList.sites[continent.key]">
+                            <a data-target="#" data-toggle="pill" href="#"
+                               ng-click="siteList.selectSite(continent.key, $index)">
+                                <img src="{% static 'arcsecond/img/ObservatoryIcon_512x512.png' %}" width="20px">
+                                <span class="site name">[[site.long_name]]</span><br/>
+                                <span class="site country">[[site.country]]</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-3" id="site-property-container" ng-show="siteList.selectedSite"><pre>[[ siteList.selectedSite | json ]]</pre>
+            </div>
         </div>
 
-        <div class="row">
-            <div id="map-canvas" class="sites__map"></div>
+        <br/>
+        <div id="map-canvas-container" class="fluid-row">
+            <div id="map-canvas"></div>
         </div>
 
     </div>

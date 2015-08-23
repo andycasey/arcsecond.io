@@ -1,8 +1,84 @@
 .done-true {
-  text-decoration: line-through;
-  color: grey;
+    text-decoration: line-through;
+    color: grey;
 }
 
 .left > ul {
     float: left;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.inside {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: #ededed;
+  background: -webkit-gradient(linear, left top, left bottom,color-stop(0%, #f4f4f4), color-stop(100%, #ededed));
+  background: -moz-linear-gradient(top, #f4f4f4 0%, #ededed 100%);
+  background: -ms-linear-gradient(top, #f4f4f4 0%, #ededed 100%);
+}
+
+#map-canvas-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+}
+
+#map-canvas {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#continent-list-container {
+    height: 320px;
+}
+
+#site-list-container,
+#site-property-container  {
+    height: 320px;
+    overflow: scroll;
+}
+
+.site-list {
+    display: none;
+}
+
+.site.name {
+    font-size: large;
+}
+
+.site.country {
+    /*color: darkgray;*/
+}
+
+.dark li.active a,
+.dark li.active a:hover,
+.dark li.active a:focus {
+    background-color: #3a3a3b;
+    color: white;
+}
+
+.dark li a,
+.dark li a:hover,
+.dark li a:focus {
+    color: #3a3a3b;
+}
+
+.dark li a .site.country,
+.dark li a:hover .site.country,
+.dark li a:focus .site.country {
+    color: darkgray;
+}
+
+ul {
+    list-style-type: none;
 }
