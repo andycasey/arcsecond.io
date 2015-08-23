@@ -60,6 +60,12 @@ app.controller('SitesListController', ['$scope', '$http',
                                 icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
                             });
                             continent_markers[j].setMap(map);
+
+                            (function(k) {
+                                continent_markers[j].addListener('click', function() {
+                                    continent_infowindows[k].open(map, continent_markers[k]);
+                                });
+                            })(j);
                         }
 
                         $scope.siteList.markers[continent_key] = continent_markers;
