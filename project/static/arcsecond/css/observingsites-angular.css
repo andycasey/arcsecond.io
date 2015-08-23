@@ -14,6 +14,15 @@ html, body {
     padding: 0;
 }
 
+.inside {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: #ededed;
+  background: -webkit-gradient(linear, left top, left bottom,color-stop(0%, #f4f4f4), color-stop(100%, #ededed));
+  background: -moz-linear-gradient(top, #f4f4f4 0%, #ededed 100%);
+  background: -ms-linear-gradient(top, #f4f4f4 0%, #ededed 100%);
+}
+
 #map-canvas-container {
     position: relative;
     width: 100%;
@@ -29,19 +38,25 @@ html, body {
     left: 0;
 }
 
-.observatory-list-container {
-    /*overflow: scroll;    */
+#continent-list-container {
+    height: 300px;
 }
 
-.observatory-list {
+#site-list-container,
+#site-property-container  {
+    height: 300px;
+    overflow: scroll;
+}
+
+.site-list {
     display: none;
 }
 
-.observatory.name {
+.site.name {
     font-size: large;
 }
 
-.observatory.country {
+.site.country {
     /*color: darkgray;*/
 }
 
@@ -58,8 +73,8 @@ html, body {
     color: #3a3a3b;
 }
 
-.dark li a .observatory.country,
-.dark li a:hover .observatory.country,
-.dark li a:focus .observatory.country {
+.dark li a .site.country,
+.dark li a:hover .site.country,
+.dark li a:focus .site.country {
     color: darkgray;
 }

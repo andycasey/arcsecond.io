@@ -39,11 +39,11 @@ app.controller('SitesListController', ['$scope', '$http',
                 params: {continent: continentName}
             })
                 .then(function(response) {
-                    var continent_name = response.config.params.continent;
-                    $scope.siteList.sites[continent_name] = response.data;
+                    var continent_key = response.config.params.continent.toLowerCase().replace(' ', '_');
+                    $scope.siteList.sites[continent_key] = response.data;
 
                     if (map !== "undefined") {
-                        continent_sites = $scope.siteList.sites[continent_name];
+                        continent_sites = $scope.siteList.sites[continent_key];
                         var continent_markers = [];
                         var continent_infowindows = [];
 
@@ -57,13 +57,14 @@ app.controller('SitesListController', ['$scope', '$http',
 
                             continent_markers[j] = new google.maps.Marker({
                                 position: latlong,
-                                title: site.name
+                                title: site.name,
+                                icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
                             });
                             continent_markers[j].setMap(map);
                         }
 
-                        $scope.siteList.markers[continent_name] = continent_markers;
-                        $scope.siteList.infowindows[continent_name] = continent_infowindows;
+                        $scope.siteList.markers[continent_key] = continent_markers;
+                        $scope.siteList.infowindows[continent_key] = continent_infowindows;
                     }
 
                 }, function(response) {
@@ -72,8 +73,25 @@ app.controller('SitesListController', ['$scope', '$http',
         }
 
         siteList.selectContinent = function(continent_key) {
-            $('.observatory-list').not('.'+continent_key).hide();
-            $('.observatory-list.'+continent_key).show();
+            $('.site-list').not('.'+continent_key).hide();
+            $('.site-list.'+continent_key).show();
+
+            var bounds = new google.maps.LatLngBounds();
+
+            for (var i = 0; i < $scope.siteList.continents.length; i++) {
+                var current_continent_key = $scope.siteList.continents[i].key;
+                current_markers = $scope.siteList.markers[current_continent_key];
+                for (var j = 0; j < current_markers.length; j++) {
+                    if (current_continent_key === continent_key) {
+                        bounds.extend(current_markers[j].position);
+                        current_markers[j].setIcon("http://maps.google.com/mapfiles/ms/icons/blue-dot.png");
+                    }
+                    else {
+                        current_markers[j].setIcon("http://maps.google.com/mapfiles/ms/icons/red-dot.png");
+                    }
+                }
+            }
+            map.fitBounds(bounds);
         };
     }]);
 
