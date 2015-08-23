@@ -4,7 +4,6 @@
 
 var API_VERSION = "1";
 var API_PROTOCOL = "http";
-var API_ROOT_URL = "127.0.0.1:8000";
 
 var app = angular.module('arcsecondApp', []);
 
@@ -34,7 +33,7 @@ app.controller('SitesListController', ['$scope', '$http',
         for (var i = 0; i < siteList.continents.length; i++) {
             var continentName = siteList.continents[i].name;
             $http({
-                url: API_PROTOCOL+"://"+API_ROOT_URL+"/"+API_VERSION+"/observingsites",
+                url: API_PROTOCOL+"://"+location.host+"/"+API_VERSION+"/observingsites",
                 method: "GET",
                 params: {continent: continentName}
             })
