@@ -39,7 +39,8 @@
                 <div ng-repeat="continent in siteList.continents">
                     <ul class="nav nav-pills nav-stacked site-list [[continent.key]] dark">
                         <li role="presentation" ng-repeat="site in siteList.sites[continent.key]">
-                            <a data-target="#" data-toggle="pill" href="#">
+                            <a data-target="#" data-toggle="pill" href="#"
+                               ng-click="siteList.selectSite(continent.key, $index)">
                                 <img src="{% static 'arcsecond/img/ObservatoryIcon_512x512.png' %}" width="20px">
                                 <span class="site name">[[site.long_name]]</span><br/>
                                 <span class="site country">[[site.country]]</span>
@@ -49,7 +50,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3" id="site-property-container">
+            <div class="col-md-3" id="site-property-container" ng-show="siteList.selectedSite"><pre>[[ siteList.selectedSite | json ]]</pre>
             </div>
         </div>
 

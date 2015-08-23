@@ -5,6 +5,10 @@
 var API_VERSION = "1";
 var API_PROTOCOL = "http";
 
+angular.isUndefinedOrNull = function(val) {
+    return angular.isUndefined(val) || val === null
+};
+
 var app = angular.module('arcsecondApp', []);
 
 app.config(function($interpolateProvider) {
@@ -29,6 +33,10 @@ app.controller('SitesListController', ['$scope', '$http',
         siteList.sites = {};
         siteList.markers = {};
         siteList.infowindows = {};
+
+        siteList.selectedSite = null;
+        siteList.siteProperties = ["name", "long_name", "IAUCode",  "continent",  "address_line_1",  "address_line_2",
+            "zip_code", "country",  "time_zone", "time_zone_name"];
 
         for (var i = 0; i < siteList.continents.length; i++) {
             var continentName = siteList.continents[i].name;
@@ -97,6 +105,12 @@ app.controller('SitesListController', ['$scope', '$http',
                 }
             }
             map.fitBounds(bounds);
+        };
+
+        siteList.selectSite = function(continent_key, site_index) {
+            markers = $scope.siteList.markers[continent_key];
+            google.maps.event.trigger(markers[site_index], 'click');
+            $scope.siteList.selectedSite = $scope.siteList.sites[continent_key][site_index];
         };
     }]);
 

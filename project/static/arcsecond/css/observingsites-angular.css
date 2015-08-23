@@ -39,12 +39,12 @@ html, body {
 }
 
 #continent-list-container {
-    height: 300px;
+    height: 320px;
 }
 
 #site-list-container,
 #site-property-container  {
-    height: 300px;
+    height: 320px;
     overflow: scroll;
 }
 
@@ -77,4 +77,8 @@ html, body {
 .dark li a:hover .site.country,
 .dark li a:focus .site.country {
     color: darkgray;
+}
+
+ul {
+    list-style-type: none;
 }
