@@ -38,10 +38,15 @@ app.controller('SitesListController', ['$scope', '$http',
         siteList.siteProperties = ["name", "long_name", "IAUCode",  "continent",  "address_line_1",  "address_line_2",
             "zip_code", "country",  "time_zone", "time_zone_name"];
 
+        var location_host = location.host;
+        if (location_host === 'www.arcsecond.io') {
+            location_host = 'api.arcsecond.io';
+        }
+
         for (var i = 0; i < siteList.continents.length; i++) {
             var continentName = siteList.continents[i].name;
             $http({
-                url: API_PROTOCOL+"://"+location.host+"/"+API_VERSION+"/observingsites",
+                url: API_PROTOCOL+"://"+location_host+"/"+API_VERSION+"/observingsites",
                 method: "GET",
                 params: {continent: continentName}
             })
