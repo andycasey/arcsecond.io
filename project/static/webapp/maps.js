@@ -13,9 +13,11 @@ function map_initialize() {
     };
 
     window.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    window.map.lastBounds = 0;
 
-    window.map_centers = {};
-    window.map_centers['europe'] = new google.maps.LatLng(5.0, 45.0);
+    google.maps.event.addListenerOnce(window.map, 'idle', function(){
+        window.map.lastBounds = window.map.getBounds();
+    });
 }
 
 google.maps.event.addDomListener(window, 'load', map_initialize);

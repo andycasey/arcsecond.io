@@ -1,26 +1,8 @@
-.done-true {
-    text-decoration: line-through;
-    color: grey;
-}
-
-.left > ul {
-    float: left;
-}
-
 html, body {
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
-}
-
-.inside {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  background: #ededed;
-  background: -webkit-gradient(linear, left top, left bottom,color-stop(0%, #f4f4f4), color-stop(100%, #ededed));
-  background: -moz-linear-gradient(top, #f4f4f4 0%, #ededed 100%);
-  background: -ms-linear-gradient(top, #f4f4f4 0%, #ededed 100%);
 }
 
 #map-canvas-container {
