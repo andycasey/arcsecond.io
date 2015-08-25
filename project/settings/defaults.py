@@ -107,7 +107,6 @@ INSTALLED_APPS = (
     'djangobower',
     'honeypot',
     'django_hosts',
-    'leaflet',
     'multiselectfield',
     'corsheaders',
     'rest_framework_swagger',
@@ -184,7 +183,7 @@ BOWER_INSTALLED_APPS = (
     'bootstrap-select',
     'angular',
     'angular-route',
-    'angular-resource'
+    'angular-resource',
 )
 
 # https://github.com/sunlightlabs/django-honeypot
@@ -196,14 +195,6 @@ NOSE_ARGS = [
     '--with-coverage',
     '--cover-package=project.arcsecond.forms,project.arcsecond.models,project.arcsecond.views',
 ]
-
-
-LEAFLET_CONFIG = {
-    'DEFAULT_CENTER': (0.0, 0.0),
-    'DEFAULT_ZOOM': 2,
-    'MIN_ZOOM': 2,
-    'MAX_ZOOM': 18,
-}
 
 TEMPLATES = [
     {
