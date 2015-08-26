@@ -5,7 +5,7 @@ import urllib2
 import feedparser
 
 from django.utils import dateparse
-from project.arcsecond.models import FindingChart
+from project.arcsecond.models import FindingChart, AstronomicalObject
 
 IPAC_ROOT_URL = "http://irsa.ipac.caltech.edu/cgi-bin/FinderChart/nph-finder?mode=prog&locstr="
 
@@ -45,6 +45,10 @@ def get_OPTIR_charts(input):
                                                             orientation=orientation, size_unit=FindingChart.SIZE_UNIT_ARCMINUTES,
                                                             width=float_size, height=float_size, observing_date=observing_date,
                                                             fits_url=fits_url, image_url=image_url)
+
+        obj, created = AstronomicalObject.objects.get_with_aliases_or_create(name=input)
+        chart.astronomical_object = obj
+        chart.save()
 
         chart_pks.append(chart.pk)
 

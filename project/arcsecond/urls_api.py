@@ -81,9 +81,9 @@ urlpatterns = patterns('',
 
     # ----- Finding Charts -----
 
-    url(r'^1/findingcharts/(?P<input_value>[\(\)\,\:\s\+\-\.0-9a-zA-Z_]+)/$',
-        views.FindingChartDetailAPIView.as_view(),
-        name="findingchart-detail"),
+    url(r'^1/findingcharts/(?P<input>[\(\)\,\:\s\+\-\.0-9a-zA-Z_]+)/$',
+        views.FindingChartListAPIView.as_view(),
+        name="findingchart-list"),
 
 
     # ----- Converters -----
