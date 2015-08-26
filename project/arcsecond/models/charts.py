@@ -6,6 +6,7 @@ class FindingChart(models.Model):
     class Meta: app_label = 'arcsecond'
 
     input = models.CharField(max_length=100, null=True, blank=True)
+    astronomical_object = models.ForeignKey('AstronomicalObject', null=True, related_name="finding_charts", blank=True)
 
     SURVEY_NAME_UNDEFINED = "unk"
     SURVEY_NAME_SDSS = "sdss"
