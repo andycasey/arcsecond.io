@@ -13,12 +13,11 @@ function map_initialize() {
     };
 
     window.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-    window.map.lastBounds = 0;
 
     google.maps.event.addListenerOnce(window.map, 'idle', function(){
-        window.map.lastBounds = window.map.getBounds();
+        var angScope = angular.element($('#ObservingSitesNavigationCtlr')).scope();
+        angScope.sitesCtlr.installSiteCountsAndMapMarkers();
     });
 }
 
 google.maps.event.addDomListener(window, 'load', map_initialize);
-
