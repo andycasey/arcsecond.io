@@ -5,15 +5,9 @@
 var API_VERSION = "1";
 var API_PROTOCOL = "http";
 
-var app = angular.module('arcsecondApp', []);
-
-app.config(function($interpolateProvider) {
-    $interpolateProvider.startSymbol('[[');
-    $interpolateProvider.endSymbol(']]');
-});
-
-app.controller('ObservingSitesNavigationCtlr', ['$scope', '$http', '$rootScope',
-        function ($scope, $http, $rootScope) {
+arcsecondApp
+    .controller('ObservingSitesNavigationCtlr', ['$scope', '$http',
+        function ($scope, $http) {
             var sitesCtlr = this;
 
             sitesCtlr.continents = [
@@ -63,25 +57,23 @@ app.controller('ObservingSitesNavigationCtlr', ['$scope', '$http', '$rootScope',
                 $scope.sitesCtlr.infowindows[continent_key] = continent_infowindows;
             };
 
-            //$rootScope.$on('GoogleMapReady', function (event, data) {
-            //    console.log('Hey GoogleMapReady!');
-            //});
-
-            for (var i = 0; i < sitesCtlr.continents.length; i++) {
-                var continentName = sitesCtlr.continents[i].name;
-                $http({
-                    url: API_PROTOCOL + "://" + location.host + "/" + API_VERSION + "/observingsites",
-                    method: "GET",
-                    params: {continent: continentName}
-                })
-                    .then(function (response) {
-                        var continent_key = response.config.params.continent.toLowerCase().replace(' ', '_');
-                        $scope.sitesCtlr.sites[continent_key] = response.data;
-                        $scope.sitesCtlr.installMarkers(window.map, continent_key);
-                    }, function (response) {
-                        console.log("error " + response.status);
-                    });
-            }
+            sitesCtlr.installSiteCountsAndMapMarkers = function() {
+                for (var i = 0; i < sitesCtlr.continents.length; i++) {
+                    var continentName = sitesCtlr.continents[i].name;
+                    $http({
+                        url: API_PROTOCOL + "://" + location.host + "/" + API_VERSION + "/observingsites",
+                        method: "GET",
+                        params: {continent: continentName}
+                    })
+                        .then(function (response) {
+                            var continent_key = response.config.params.continent.toLowerCase().replace(' ', '_');
+                            $scope.sitesCtlr.sites[continent_key] = response.data;
+                            $scope.sitesCtlr.installMarkers(window.map, continent_key);
+                        }, function (response) {
+                            console.log("error " + response.status);
+                        });
+                }
+            };
 
             sitesCtlr.selectContinent = function(continent_key) {
                 $('.site-list').not('.'+continent_key).hide();

@@ -5,7 +5,6 @@
 
 {% block head_end_block %}
     {{ block.super }}
-    <script src="{% static 'webapp/controllers.js' %}"></script>
     <link href="{% static 'webapp/observingsites-angular.css' %}" rel="stylesheet">
 {% endblock head_end_block %}
 
@@ -24,7 +23,7 @@
             </div>
         </div>
 
-        <div class="row" ng-controller="ObservingSitesNavigationCtlr as sitesCtlr">
+        <div class="row" ng-controller="ObservingSitesNavigationCtlr as sitesCtlr" id="ObservingSitesNavigationCtlr">
             <div class="col-md-2 col-md-offset-2" id="continent-list-container">
                 <ul class="nav nav-pills nav-stacked text-right left">
                     <li role="presentation" ng-repeat="continent in sitesCtlr.continents">
@@ -66,7 +65,8 @@
 
 {% block after_body_raw_block %}
     {{ block.super }}
-    <script src="{% static 'webapp/maps.js' %}"></script>
     <script src="{% static 'webapp/app.js' %}"></script>
+    <script src="{% static 'webapp/controllers.js' %}"></script>
+    <script src="{% static 'webapp/maps.js' %}"></script>
 {% endblock after_body_raw_block %}
 
