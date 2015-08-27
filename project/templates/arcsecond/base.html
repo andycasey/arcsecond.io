@@ -42,28 +42,28 @@
     <![endif]-->
 
     <!-- ****** faviconit.com favicons ****** -->
-	<link rel="shortcut icon" href="{% static 'arcsecond/img/favicon.ico' %}">
-	<link rel="icon" sizes="16x16 32x32 64x64" href="{% static 'arcsecond/img/favicon.ico' %}">
-	<link rel="icon" type="image/png" sizes="196x196" href="{% static 'arcsecond/img/favicon-192.png' %}">
-	<link rel="icon" type="image/png" sizes="160x160" href="{% static 'arcsecond/img/favicon-160.png' %}">
-	<link rel="icon" type="image/png" sizes="96x96" href="{% static 'arcsecond/img/favicon-96.png' %}">
-	<link rel="icon" type="image/png" sizes="64x64" href="{% static 'arcsecond/img/favicon-64.png' %}">
-	<link rel="icon" type="image/png" sizes="32x32" href="{% static 'arcsecond/img/favicon-32.png' %}">
-	<link rel="icon" type="image/png" sizes="16x16" href="{% static 'arcsecond/img/favicon-16.png' %}">
-	<link rel="apple-touch-icon" href="{% static 'arcsecond/img/favicon-57.png' %}">
-	<link rel="apple-touch-icon" sizes="114x114" href="{% static 'arcsecond/img/favicon-114.png' %}">
-	<link rel="apple-touch-icon" sizes="72x72" href="{% static 'arcsecond/img/favicon-72.png' %}">
-	<link rel="apple-touch-icon" sizes="144x144" href="{% static 'arcsecond/img/favicon-144.png' %}">
-	<link rel="apple-touch-icon" sizes="60x60" href="{% static 'arcsecond/img/favicon-60.png' %}">
-	<link rel="apple-touch-icon" sizes="120x120" href="{% static 'arcsecond/img/favicon-120.png' %}">
-	<link rel="apple-touch-icon" sizes="76x76" href="{% static 'arcsecond/img/favicon-76.png' %}">
-	<link rel="apple-touch-icon" sizes="152x152" href="{% static 'arcsecond/img/favicon-152.png' %}">
-	<link rel="apple-touch-icon" sizes="180x180" href="{% static 'arcsecond/img/favicon-180.png' %}">
-	<meta name="msapplication-TileColor" content="#FFFFFF">
-	<meta name="msapplication-TileImage" content="/favicon-144.png">
-	<meta name="msapplication-config" content="/browserconfig.xml">
+    <link rel="shortcut icon" href="{% static 'arcsecond/img/favicon.ico' %}">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="{% static 'arcsecond/img/favicon.ico' %}">
+    <link rel="icon" type="image/png" sizes="196x196" href="{% static 'arcsecond/img/favicon-192.png' %}">
+    <link rel="icon" type="image/png" sizes="160x160" href="{% static 'arcsecond/img/favicon-160.png' %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'arcsecond/img/favicon-96.png' %}">
+    <link rel="icon" type="image/png" sizes="64x64" href="{% static 'arcsecond/img/favicon-64.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'arcsecond/img/favicon-32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'arcsecond/img/favicon-16.png' %}">
+    <link rel="apple-touch-icon" href="{% static 'arcsecond/img/favicon-57.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'arcsecond/img/favicon-114.png' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'arcsecond/img/favicon-72.png' %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'arcsecond/img/favicon-144.png' %}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static 'arcsecond/img/favicon-60.png' %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'arcsecond/img/favicon-120.png' %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'arcsecond/img/favicon-76.png' %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'arcsecond/img/favicon-152.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'arcsecond/img/favicon-180.png' %}">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="/favicon-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-	<!-- ****** faviconit.com favicons ****** -->
+    <!-- ****** faviconit.com favicons ****** -->
 
     <script src="{% static 'jquery/dist/jquery.min.js' %}"></script>
 
@@ -76,15 +76,14 @@
 
 {% block body_block %}{% endblock body_block %}
 
-
-<!-- JavaScript
-================================================== -->
-
 <!-- JS Global -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 
+<!-- Bootstrap -->
 <script src="{% static 'arcsecond/js/bootstrap/bootstrap.min.js' %}"></script>
+<link href="{% static 'bootstrap-select/dist/css/bootstrap-select.min.css' %}" rel="stylesheet">
+<script src="{% static 'bootstrap-select/dist/js/bootstrap-select.min.js' %}"></script>
 
 <!-- JS Plugins -->
 <script src="{% static 'arcsecond/js/plugins/jquery.parallax-1.1.3.js' %}"></script>
@@ -99,14 +98,11 @@
 {% if initial %}<script src="{% static 'arcsecond/js/custom_classic.js' %}"></script>{% endif %}
 <script src="{% static 'arcsecond/js/custom.js' %}"></script>
 
-<link href="{% static 'bootstrap-select/dist/css/bootstrap-select.min.css' %}" rel="stylesheet">
-<script src="{% static 'bootstrap-select/dist/js/bootstrap-select.min.js' %}"></script>
+{% block after_body_raw_block %}{% endblock after_body_raw_block %}
 
 {% if settings.SITE_ID == 3 %}
     {% include "arcsecond/google-analytics-code.html" %}
 {% endif %}
-
-{% block after_body_raw_block %}{% endblock after_body_raw_block %}
 
 </body>
 </html>
