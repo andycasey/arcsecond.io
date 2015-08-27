@@ -5,8 +5,14 @@
 var API_VERSION = "1";
 var API_PROTOCOL = "http";
 
-angular.module('arcsecondApp')
-    .controller('ObservingSitesNavigationCtlr', ['$scope', '$http', '$rootScope',
+var app = angular.module('arcsecondApp', []);
+
+app.config(function($interpolateProvider) {
+    $interpolateProvider.startSymbol('[[');
+    $interpolateProvider.endSymbol(']]');
+});
+
+app.controller('ObservingSitesNavigationCtlr', ['$scope', '$http', '$rootScope',
         function ($scope, $http, $rootScope) {
             var sitesCtlr = this;
 
