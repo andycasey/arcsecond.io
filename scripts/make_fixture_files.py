@@ -1,13 +1,15 @@
-#!/usr/bin/env python
+#!/Users/onekiloparsec/.virtualenvs/iobs-debug/bin/python
 # -*- coding: utf-8 -*-
 
 __author__ = 'onekiloparsec'
 
 import os
-import sys
 import plistlib as plist
 import json
 from datetime import datetime
+import sys
+sys.path.append("..")
+from project.arcsecond.models.observingsites import *
 
 class ObservingSitesEncoder(json.JSONEncoder):
     def default(self, obj):
@@ -15,32 +17,50 @@ class ObservingSitesEncoder(json.JSONEncoder):
             return obj.isoformat()
         return json.JSONEncoder.default(self, obj)
 
-if __name__ == '__main__':
-    source_path = os.path.join(os.path.expanduser("~"), 'Apps', 'iObserve', 'Observatories')
+def get_source_path():
+    return os.path.join(os.path.expanduser("~"), 'Apps', 'iObserve1', 'Observatories')
+
+def get_clean_obs_name(observatory_name):
+    clean_obs_name = observatory_name.lower().replace(' ', '').replace('/', '')
+    clean_obs_name = clean_obs_name.replace(u'ó', u'o').replace('.', '').replace(u'á', 'a').replace(u'ü', 'u')
+    clean_obs_name = clean_obs_name.replace(u'ç', 'c').replace(u'é', u'e').replace(u'è', u'e')
+    return clean_obs_name
+
+def get_obervatory_property_file(observatory_name):
+    clean_obs_name = get_clean_obs_name(observatory_name)
+    return os.path.join(get_source_path(), 'Properties', clean_obs_name+'.plist')
+
+def get_fixtures_file_path(continent_name, suffix):
+    fixtures_dir = os.path.join(os.path.dirname(os.path.abspath(os.path.dirname(__file__))), 'project', 'arcsecond', 'fixtures')
+    fixture_file_path = os.path.join(fixtures_dir, continent_name.lower().replace(' ', '_')) + '_'+suffix+'.json'
+    return fixture_file_path
+
+def get_observatory_names(continent_name):
+    source_path = get_source_path()
     obs_list_file = os.path.join(source_path, 'ObservatoryLists.plist')
     obs_list_plist = plist.readPlist(obs_list_file)
-    fixtures_dir = os.path.join(os.path.dirname(os.path.abspath(os.path.dirname(__file__))), 'project', 'arcsecond', 'fixtures')
+    return obs_list_plist[continent_name]
 
+
+def create_observing_site_fixtures():
     continent_keys = ['Africa', 'Antarctica', 'Asia', 'Europe', 'North America', 'Oceania', 'South America']
     for continent_key in continent_keys:
-        observatory_names = obs_list_plist[continent_key]
-        fixture_file = os.path.join(fixtures_dir, continent_key.lower().replace(' ', '_')) + '.json'
-        print fixture_file
+        observatory_names = get_observatory_names(continent_key)
+        fixture_file_path = get_fixtures_file_path(continent_key, 'observing_sites')
+        print fixture_file_path
 
-        f = open(fixture_file, 'w')
+        f = open(fixture_file_path, 'w')
         f.write('[\n')
 
         for observatory_name in observatory_names:
-            print '***' + observatory_name + '***'
-
-            clean_obs_name = observatory_name.lower().replace(' ', '').replace('/', '')
-            clean_obs_name = clean_obs_name.replace(u'ó', u'o').replace('.', '').replace(u'á', 'a').replace(u'ü', 'u')
-            clean_obs_name = clean_obs_name.replace(u'ç', 'c').replace(u'é', u'e').replace(u'è', u'e')
-            obs_file = os.path.join(source_path, 'Properties', clean_obs_name+'.plist')
+            if u'→' in observatory_name: continue
+            print u' • ' + observatory_name
+            obs_file = get_obervatory_property_file(observatory_name)
 
             if not os.path.exists(obs_file):
-                print obs_file
-                raise Exception
+                print '*** NOT FOUND', obs_file
+                # raise Exception
+                continue
 
             obs_plist = plist.readPlist(obs_file)
             obs = obs_plist['observatory'] if obs_plist.has_key('observatory') else obs_plist
@@ -50,11 +70,11 @@ if __name__ == '__main__':
 
             longitude_sign = 1.0
             if float(longitude[0]) < 0 or float(longitude[1]) < 0 or float(longitude[2]) < 0:
-                longitude_sign = -1.0;
+                longitude_sign = -1.0
 
             latitude_sign = 1.0
             if float(latitude[0]) < 0 or float(latitude[1]) < 0 or float(latitude[2]) < 0:
-                latitude_sign = -1.0;
+                latitude_sign = -1.0
 
             longitude_value = longitude_sign * (abs(longitude[0]) + abs(longitude[1])/ 60.0 + abs(longitude[2])/3600.0)
             latitude_value = latitude_sign * (abs(latitude[0]) + abs(latitude[1])/ 60.0 + abs(latitude[2])/3600.0)
@@ -66,7 +86,7 @@ if __name__ == '__main__':
             observing_site['fields'] = {
                 'name': obs['name'],
                 'long_name': obs['longName'],
-                'IAUCode': { 'IAUCode': obs['IAUCode'] if obs.has_key('IAUCode') else "" },
+                'IAUCode': obs['IAUCode'] if obs.has_key('IAUCode') else "",
                 'coordinates': [longitude_value, latitude_value],
                 'continent': continent_key,
                 'country': obs['country'],
@@ -83,30 +103,99 @@ if __name__ == '__main__':
             f.write(',\n')
             f.write(json.dumps(observing_site, indent=4))
 
-            if obs['observingTools']:
-                for tool in obs['observingTools']:
-                    if tool['class'] == 'OpticalTelescope':
-                        tel = tool['telescope']
-
-                        dome = {'model': 'arcsecond.Dome', 'pk': None}
-                        dome_name = tool['observingTool']['longName']+' Dome'
-                        dome['fields'] = { 'name': dome_name}
-
-                        telescope = {'model':'arcsecond.Telescope', 'pk': None}
-                        telescope['fields'] = {'dome': dome_name}
-
-                        if 'mounting' in tel['mounting'] and tel['mounting'].lower() in ['cassegrain', 'equatorial']:
-                            telescope['fields']['mounting'] = "cas" if tel['mounting'].lower() == 'cassegrain' else 'equ'
-
-                        if 'opticalDesign' in tel and tel['opticalDesign'].lower() in [u'ritchey-chrétien', 'schmidt']:
-                            telescope['fields']['optical_design'] = u"rc" if tel['opticalDesign'].lower() == u'ritchey-chrétien' else u'sc'
-
-                        # if 'primaryMirror' in tel:
-                        #     mirror = {'model':'arcsecond.Mirror', 'pk': None}
-
-
             if observatory_name != observatory_names[-1]:
                 f.write(',\n')
 
         f.write('\n]')
         f.close()
+
+def create_telescope_fixtures():
+    continent_keys = ['Africa', 'Antarctica', 'Asia', 'Europe', 'North America', 'Oceania', 'South America']
+    for continent_key in continent_keys:
+        observatory_names = get_observatory_names(continent_key)
+        fixture_file_path = get_fixtures_file_path(continent_key, 'telescopes')
+        print fixture_file_path
+
+        s = ""
+        for observatory_name in observatory_names:
+            if u'→' in observatory_name: continue
+            print u' • ' + observatory_name
+            obs_file = get_obervatory_property_file(observatory_name)
+
+            if not os.path.exists(obs_file):
+                print '*** NOT FOUND', obs_file
+                # raise Exception
+                continue
+
+            obs_plist = plist.readPlist(obs_file)
+            obs = obs_plist['observatory'] if obs_plist.has_key('observatory') else obs_plist
+
+            if obs['observingTools']:
+                for tool in obs['observingTools']:
+                    if tool['class'] == 'OpticalTelescope':
+                        tel = tool['telescope']
+                        tel_name = tool['observingTool']['longName']
+
+                        # print tel
+
+                        dome = {'model': 'arcsecond.Dome', 'pk': None}
+                        dome_name = tel_name+' Dome'
+                        dome['fields'] = { 'name': dome_name }
+
+                        telescope = {'model':'arcsecond.Telescope', 'pk': None}
+                        telescope['fields'] = {
+                            'dome': dome_name,
+                            'name': tel_name
+                        }
+
+                        if 'mounting' in tel['mounting']:
+                            if tel['mounting'].lower() in ['cassegrain',]:
+                                telescope['fields']['mounting'] = Telescope.MOUNTING_CASSEGRAIN
+                            elif tel['mounting'].lower() in ['equatorial',]:
+                                telescope['fields']['mounting'] = Telescope.MOUNTING_EQUATORIAL
+                            elif tel['mounting'].lower() in ['alt-az', 'alt-azimuth']:
+                                telescope['fields']['mounting'] = Telescope.MOUNTING_ALTAZ
+                            elif tel['mounting'].lower() in ['off-axis']:
+                                telescope['fields']['mounting'] = Telescope.MOUNTING_OFF_AXIS
+
+                        if 'opticalDesign' in tel:
+                            if tel['opticalDesign'].lower() in [u'ritchey-chrétien',]:
+                                telescope['fields']['optical_design'] = Telescope.OPTICAL_DESIGN_RITCHEY_CHRETIEN
+                            elif tel['opticalDesign'].lower() in [u'schmidt',]:
+                                telescope['fields']['optical_design'] = Telescope.OPTICAL_DESIGN_SCHMIDT
+
+                        mirror = None
+                        if 'primaryMirror' in tel:
+                            mirror = {'model':'arcsecond.Mirror', 'pk': None}
+                            mirror['fields'] = {
+                                'mirror_index': 0,
+                                'telescope': tel_name,
+                                'diameter': float(tel['primaryMirror']['diameter'])
+                            }
+
+                        if 'hasAdaptativeOptics' in tel:
+                            telescope['fields']['has_active_optics'] = True if tel['hasAdaptativeOptics'] == 'YES' else False
+                        if 'hasActiveOptics' in tel:
+                            telescope['fields']['has_adaptative_optics'] = True if tel['hasActiveOptics'] == 'YES' else False
+                        if 'hasLaserGuideStar' in tel:
+                            telescope['fields']['has_laser_guide_star'] = True if tel['hasLaserGuideStar'] == 'YES' else False
+
+                        s += json.dumps(dome, indent=4)
+                        s += ',\n'
+                        if mirror is not None:
+                            s += json.dumps(mirror, indent=4)
+                            s += ',\n'
+                        s += json.dumps(telescope, indent=4)
+                        s += ',\n'
+
+        s = s[:-2]
+        f = open(fixture_file_path, 'w')
+        f.write('[\n')
+        f.write(s)
+        f.write('\n]')
+        f.close()
+
+
+if __name__ == '__main__':
+    create_observing_site_fixtures()
+    create_telescope_fixtures()

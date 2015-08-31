@@ -24,9 +24,7 @@
             16.448333333333334, 
             43.17833333333333
         ], 
-        "IAUCode": {
-            "IAUCode": ""
-        }
+        "IAUCode": ""
     }
 },
 {
@@ -54,9 +52,7 @@
             11.255333333333333, 
             43.75388888888889
         ], 
-        "IAUCode": {
-            "IAUCode": "030"
-        }
+        "IAUCode": "030"
     }
 },
 {
@@ -84,9 +80,7 @@
             -2.5458, 
             37.223333333333336
         ], 
-        "IAUCode": {
-            "IAUCode": "493"
-        }
+        "IAUCode": "493"
     }
 },
 {
@@ -114,9 +108,7 @@
             12.37638888888889, 
             43.401666666666664
         ], 
-        "IAUCode": {
-            "IAUCode": ""
-        }
+        "IAUCode": ""
     }
 },
 {
@@ -144,9 +136,7 @@
             6.882777777777778, 
             50.52472222222222
         ], 
-        "IAUCode": {
-            "IAUCode": ""
-        }
+        "IAUCode": ""
     }
 },
 {
@@ -174,9 +164,7 @@
             6.135800000000001, 
             46.310725
         ], 
-        "IAUCode": {
-            "IAUCode": "517"
-        }
+        "IAUCode": "517"
     }
 },
 {
@@ -204,9 +192,7 @@
             0.0, 
             51.47732222222223
         ], 
-        "IAUCode": {
-            "IAUCode": "000"
-        }
+        "IAUCode": "000"
     }
 },
 {
@@ -234,9 +220,7 @@
             24.95861111111111, 
             60.15533611111111
         ], 
-        "IAUCode": {
-            "IAUCode": "569"
-        }
+        "IAUCode": "569"
     }
 },
 {
@@ -263,9 +247,7 @@
             26.474444444444444, 
             40.098888888888894
         ], 
-        "IAUCode": {
-            "IAUCode": ""
-        }
+        "IAUCode": ""
     }
 },
 {
@@ -293,9 +275,7 @@
             -17.88238888888889, 
             28.76022222222222
         ], 
-        "IAUCode": {
-            "IAUCode": "950"
-        }
+        "IAUCode": "950"
     }
 },
 {
@@ -323,9 +303,7 @@
             4.484, 
             52.155433333333335
         ], 
-        "IAUCode": {
-            "IAUCode": "013"
-        }
+        "IAUCode": "013"
     }
 },
 {
@@ -353,9 +331,7 @@
             5.5643, 
             50.61805555555556
         ], 
-        "IAUCode": {
-            "IAUCode": "623"
-        }
+        "IAUCode": "623"
     }
 },
 {
@@ -383,9 +359,7 @@
             13.187222222222223, 
             55.69786111111111
         ], 
-        "IAUCode": {
-            "IAUCode": "039"
-        }
+        "IAUCode": "039"
     }
 },
 {
@@ -413,9 +387,7 @@
             2.2, 
             47.38333333333333
         ], 
-        "IAUCode": {
-            "IAUCode": ""
-        }
+        "IAUCode": ""
     }
 },
 {
@@ -443,9 +415,7 @@
             2.2311111111111113, 
             48.80472222222222
         ], 
-        "IAUCode": {
-            "IAUCode": "005"
-        }
+        "IAUCode": "005"
     }
 },
 {
@@ -467,15 +437,13 @@
         "time_zone_name": "Europe/Paris", 
         "country": "France", 
         "wikipedia_article": "http://en.wikipedia.org/wiki/Plateau_de_Bure_Interferometer", 
-        "homepage": "http://www.iram.fr/IRAMFR/index.htm", 
+        "homepage": "http://www.iram-institute.org", 
         "continent": "Europe", 
         "coordinates": [
             5.9077777777777785, 
             44.63388888888889
         ], 
-        "IAUCode": {
-            "IAUCode": ""
-        }
+        "IAUCode": ""
     }
 },
 {
@@ -503,9 +471,7 @@
             5.712777777777778, 
             43.93183333333333
         ], 
-        "IAUCode": {
-            "IAUCode": "511"
-        }
+        "IAUCode": "511"
     }
 },
 {
@@ -533,9 +499,7 @@
             11.926353333333333, 
             57.395833333333336
         ], 
-        "IAUCode": {
-            "IAUCode": ""
-        }
+        "IAUCode": ""
     }
 },
 {
@@ -557,15 +521,13 @@
         "time_zone_name": "Europe/Madrid", 
         "country": "Spain", 
         "wikipedia_article": "http://en.wikipedia.org/wiki/Sierra_Nevada_Observatory", 
-        "homepage": "http://w3-osn.iaa.es/", 
+        "homepage": "http://www.osn.iaa.es", 
         "continent": "Europe", 
         "coordinates": [
             -3.3847222222222224, 
             37.064166666666665
         ], 
-        "IAUCode": {
-            "IAUCode": ""
-        }
+        "IAUCode": ""
     }
 },
 {
@@ -593,9 +555,7 @@
             0.1423, 
             42.936388888888885
         ], 
-        "IAUCode": {
-            "IAUCode": "586"
-        }
+        "IAUCode": "586"
     }
 },
 {
@@ -623,9 +583,7 @@
             14.97638888888889, 
             37.69305555555555
         ], 
-        "IAUCode": {
-            "IAUCode": "559"
-        }
+        "IAUCode": "559"
     }
 },
 {
@@ -653,9 +611,7 @@
             24.899166666666666, 
             35.21194444444445
         ], 
-        "IAUCode": {
-            "IAUCode": ""
-        }
+        "IAUCode": ""
     }
 },
 {
@@ -683,9 +639,7 @@
             7.768055555555556, 
             48.583333333333336
         ], 
-        "IAUCode": {
-            "IAUCode": "522"
-        }
+        "IAUCode": "522"
     }
 },
 {
@@ -713,9 +667,7 @@
             26.7216, 
             58.37968333333333
         ], 
-        "IAUCode": {
-            "IAUCode": "075"
-        }
+        "IAUCode": "075"
     }
 },
 {
@@ -743,9 +695,7 @@
             -16.509722222222223, 
             28.3
         ], 
-        "IAUCode": {
-            "IAUCode": "954"
-        }
+        "IAUCode": "954"
     }
 },
 {
@@ -773,9 +723,7 @@
             30.335555555555555, 
             36.82416666666667
         ], 
-        "IAUCode": {
-            "IAUCode": "A84"
-        }
+        "IAUCode": "A84"
     }
 },
 {
@@ -802,9 +750,7 @@
             -3.726111111111095, 
             40.45111111111111
         ], 
-        "IAUCode": {
-            "IAUCode": "I86"
-        }
+        "IAUCode": "I86"
     }
 },
 {
@@ -826,15 +772,13 @@
         "time_zone_name": "Europe/Stockholm", 
         "country": "Sweden", 
         "wikipedia_article": "http://en.wikipedia.org/wiki/Uppsala_Astronomical_Observatory", 
-        "homepage": "http://www.fysast.uu.se/astro/", 
+        "homepage": "http://www.physics.uu.se/astro/", 
         "continent": "Europe", 
         "coordinates": [
             17.625700000000002, 
             59.85805555555556
         ], 
-        "IAUCode": {
-            "IAUCode": "549"
-        }
+        "IAUCode": "549"
     }
 },
 {
@@ -862,9 +806,7 @@
             16.33361111111111, 
             48.231883333333336
         ], 
-        "IAUCode": {
-            "IAUCode": "045"
-        }
+        "IAUCode": "045"
     }
 }
 ]

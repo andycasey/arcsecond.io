@@ -1,0 +1,299 @@
+[
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Anglo-Australian Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 3893.0, 
+        "mirror_index": 0, 
+        "telescope": "Anglo-Australian Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "Anglo-Australian Telescope Dome", 
+        "name": "Anglo-Australian Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "22m Mopra Radio Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 22000.0, 
+        "mirror_index": 0, 
+        "telescope": "22m Mopra Radio Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "22m Mopra Radio Telescope Dome", 
+        "name": "22m Mopra Radio Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "64-metre Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 64000.0, 
+        "mirror_index": 0, 
+        "telescope": "64-metre Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "64-metre Telescope Dome", 
+        "name": "64-metre Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Australia Telescope Compact Array Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 22000.0, 
+        "mirror_index": 0, 
+        "telescope": "Australia Telescope Compact Array"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "Australia Telescope Compact Array Dome", 
+        "name": "Australia Telescope Compact Array"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Anglo-Australian Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 3900.0, 
+        "mirror_index": 0, 
+        "telescope": "Anglo-Australian Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "Anglo-Australian Telescope Dome", 
+        "name": "Anglo-Australian Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "UK Schmidt Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 1200.0, 
+        "mirror_index": 0, 
+        "telescope": "UK Schmidt Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "UK Schmidt Telescope Dome", 
+        "name": "UK Schmidt Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Faulkes Telescope South Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 2000.0, 
+        "mirror_index": 0, 
+        "telescope": "Faulkes Telescope South"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "Faulkes Telescope South Dome", 
+        "name": "Faulkes Telescope South"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "SkyMapper Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 1300.0, 
+        "mirror_index": 0, 
+        "telescope": "SkyMapper Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "SkyMapper Telescope Dome", 
+        "name": "SkyMapper Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Advanced Technology Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 2300.0, 
+        "mirror_index": 0, 
+        "telescope": "Advanced Technology Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "Advanced Technology Telescope Dome", 
+        "name": "Advanced Technology Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "0.5m Uppsala Southern Schmidt Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 500.0, 
+        "mirror_index": 0, 
+        "telescope": "0.5m Uppsala Southern Schmidt Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "0.5m Uppsala Southern Schmidt Telescope Dome", 
+        "name": "0.5m Uppsala Southern Schmidt Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Automated Patrol Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 500.0, 
+        "mirror_index": 0, 
+        "telescope": "Automated Patrol Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "Automated Patrol Telescope Dome", 
+        "name": "Automated Patrol Telescope"
+    }
+}
+]

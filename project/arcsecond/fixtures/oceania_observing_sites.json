@@ -24,9 +24,7 @@
             149.06608611111113, 
             -31.27703888888889
         ], 
-        "IAUCode": {
-            "IAUCode": ""
-        }
+        "IAUCode": ""
     }
 },
 {
@@ -48,15 +46,13 @@
         "time_zone_name": "Australia/Adelaide", 
         "country": "Australia", 
         "wikipedia_article": "http://en.wikipedia.org/wiki/Adelaide_Observatory", 
-        "homepage": "http://www.bom.gov.au/weather/sa/inside/history/the_adelaide_observatory.shtml", 
+        "homepage": "http://www.adelaideobservatory.org", 
         "continent": "Oceania", 
         "coordinates": [
             138.58333333333334, 
             -34.916666666666664
         ], 
-        "IAUCode": {
-            "IAUCode": ""
-        }
+        "IAUCode": ""
     }
 },
 {
@@ -78,15 +74,13 @@
         "time_zone_name": "Australia/Melbourne", 
         "country": "Australia", 
         "wikipedia_article": "http://en.wikipedia.org/wiki/Melbourne_Observatory", 
-        "homepage": "http://www.melbourneobservatory.com/GreatMelbourneTelescope.htm", 
+        "homepage": "http://www.onlymelbourne.com.au/old-melbourne-observatory", 
         "continent": "Oceania", 
         "coordinates": [
             144.9758, 
             -37.831388888888895
         ], 
-        "IAUCode": {
-            "IAUCode": "907"
-        }
+        "IAUCode": "907"
     }
 },
 {
@@ -114,9 +108,7 @@
             149.09972222222223, 
             -31.267777777777777
         ], 
-        "IAUCode": {
-            "IAUCode": ""
-        }
+        "IAUCode": ""
     }
 },
 {
@@ -144,9 +136,7 @@
             149.0077, 
             -35.32027777777778
         ], 
-        "IAUCode": {
-            "IAUCode": "414"
-        }
+        "IAUCode": "414"
     }
 },
 {
@@ -174,9 +164,7 @@
             116.67081388888889, 
             -26.703319444444443
         ], 
-        "IAUCode": {
-            "IAUCode": ""
-        }
+        "IAUCode": ""
     }
 },
 {
@@ -204,9 +192,7 @@
             148.26232194444444, 
             -32.99996277777778
         ], 
-        "IAUCode": {
-            "IAUCode": ""
-        }
+        "IAUCode": ""
     }
 },
 {
@@ -234,9 +220,7 @@
             149.56327777777778, 
             -30.31277777777778
         ], 
-        "IAUCode": {
-            "IAUCode": ""
-        }
+        "IAUCode": ""
     }
 },
 {
@@ -258,15 +242,13 @@
         "time_zone_name": "Australia/Sydney", 
         "country": "Australia", 
         "wikipedia_article": "http://en.wikipedia.org/wiki/Siding_Spring_Observatory", 
-        "homepage": "http://www.mso.anu.edu.au/info/sso/", 
+        "homepage": "http://rsaa.anu.edu.au/observatories/siding-spring-observatory", 
         "continent": "Oceania", 
         "coordinates": [
             149.0661, 
             -31.277105555555554
         ], 
-        "IAUCode": {
-            "IAUCode": "413"
-        }
+        "IAUCode": "413"
     }
 }
 ]

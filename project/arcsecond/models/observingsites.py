@@ -1,3 +1,4 @@
+# coding=utf-8
 from django.db import models
 from multiselectfield import MultiSelectField
 from .earth import *
@@ -143,7 +144,7 @@ class TelescopeManager(models.Manager):
 class Telescope(ObservingTool):
     class Meta: app_label = 'arcsecond'
     objects = TelescopeManager()
-    dome = models.OneToOneField(Dome, blank=True, null=True, default=None, related_name='telescope')
+    dome = models.OneToOneField(Dome, blank=True, null=True, related_name='telescope')
 
     WAVELENGTH_DOMAIN_HARD_GAMMARAYS = "hga"
     WAVELENGTH_DOMAIN_WEAK_GAMMARAYS = "wga"
@@ -159,39 +160,88 @@ class Telescope(ObservingTool):
     WAVELENGTH_DOMAIN_MM = "mmc"
     WAVELENGTH_DOMAIN_RADIO = "rad"
 
-    WAVELENGTH_DOMAINS = ((WAVELENGTH_DOMAIN_HARD_GAMMARAYS, "Hard gamma-rays"),
-                          (WAVELENGTH_DOMAIN_WEAK_GAMMARAYS, "Weak gamma-rays"),
-                          (WAVELENGTH_DOMAIN_HARD_XRAYS, "Hard x-rays"),
-                          (WAVELENGTH_DOMAIN_WEAK_XRAYS, "Weak x-rays"),
-                          (WAVELENGTH_DOMAIN_FAR_UV, "Far ultraviolet"),
-                          (WAVELENGTH_DOMAIN_NEAR_UV, "Near ultraviolet"),
-                          (WAVELENGTH_DOMAIN_OPTICAL, "Optical"),
-                          (WAVELENGTH_DOMAIN_NEAR_INFRARED, "Near infrared"),
-                          (WAVELENGTH_DOMAIN_MID_INFRARED, "Mid-infrared"),
-                          (WAVELENGTH_DOMAIN_FAR_INFRARED, "Far infrared"),
-                          (WAVELENGTH_DOMAIN_SUBMM, "Sub-milimetric"),
-                          (WAVELENGTH_DOMAIN_MM, "Milimetric"),
-                          (WAVELENGTH_DOMAIN_RADIO, "Radio"))
+    WAVELENGTH_DOMAIN_KEYS = (
+        WAVELENGTH_DOMAIN_HARD_GAMMARAYS,
+        WAVELENGTH_DOMAIN_WEAK_GAMMARAYS,
+        WAVELENGTH_DOMAIN_HARD_XRAYS,
+        WAVELENGTH_DOMAIN_WEAK_XRAYS,
+        WAVELENGTH_DOMAIN_FAR_UV,
+        WAVELENGTH_DOMAIN_NEAR_UV,
+        WAVELENGTH_DOMAIN_OPTICAL,
+        WAVELENGTH_DOMAIN_NEAR_INFRARED,
+        WAVELENGTH_DOMAIN_MID_INFRARED,
+        WAVELENGTH_DOMAIN_FAR_INFRARED,
+        WAVELENGTH_DOMAIN_SUBMM,
+        WAVELENGTH_DOMAIN_MM,
+        WAVELENGTH_DOMAIN_RADIO
+    )
 
-    wavelength_domains = MultiSelectField(choices=WAVELENGTH_DOMAINS)
+    WAVELENGTH_DOMAINS_VALUES = (
+        "Hard gamma-rays",
+        "Weak gamma-rays",
+        "Hard x-rays",
+        "Weak x-rays",
+        "Far ultraviolet",
+        "Near ultraviolet",
+        "Optical",
+        "Near infrared",
+        "Mid-infrared",
+        "Far infrared",
+        "Sub-milimetric",
+        "Milimetric",
+        "Radio"
+    )
 
+    WAVELENGTH_DOMAINS_CHOICES = tuple(zip(WAVELENGTH_DOMAIN_KEYS, WAVELENGTH_DOMAINS_VALUES))
+    wavelength_domains = MultiSelectField(choices=WAVELENGTH_DOMAINS_CHOICES)
+
+    MOUNTING_UNDEFINED = "unk"
     MOUNTING_EQUATORIAL = "equ"
     MOUNTING_CASSEGRAIN = "cas"
     MOUNTING_ALTAZ = "aaz"
+    MOUNTING_OFF_AXIS = "off"
 
-    MOUNTINGS = ((MOUNTING_EQUATORIAL, "Equatorial"),
-                 (MOUNTING_CASSEGRAIN, "Cassegrain"),
-                 (MOUNTING_ALTAZ, "Alt-Az"))
+    MOUNTINGS_KEYS = (
+        MOUNTING_UNDEFINED,
+        MOUNTING_EQUATORIAL,
+        MOUNTING_CASSEGRAIN,
+        MOUNTING_ALTAZ,
+        MOUNTING_OFF_AXIS
+    )
 
-    mounting = models.CharField(choices=MOUNTINGS, max_length=3)
+    MOUNTINGS_VALUES = (
+        "Unknown",
+        "Equatorial"
+        "Cassegrain",
+        "Alt-Az",
+        "Off-Axis"
+    )
 
+    MOUNTING_CHOICES = tuple(zip(MOUNTINGS_KEYS, MOUNTINGS_VALUES))
+    mounting = models.CharField(choices=MOUNTING_CHOICES, max_length=3, blank=True, default=MOUNTING_UNDEFINED)
+
+    OPTICAL_DESIGN_UNDEFINED = "unk"
     OPTICAL_DESIGN_RITCHEY_CHRETIEN = "rc"
     OPTICAL_DESIGN_SCHMIDT = "sc"
 
-    OPTICAL_DESIGNS = ((OPTICAL_DESIGN_RITCHEY_CHRETIEN, u"Ritchey-Chretien"),
-                       (OPTICAL_DESIGN_SCHMIDT, u"Schmidt"))
+    OPTICAL_DESIGNS_KEYS = (
+        OPTICAL_DESIGN_UNDEFINED,
+        OPTICAL_DESIGN_RITCHEY_CHRETIEN,
+        OPTICAL_DESIGN_SCHMIDT
+    )
 
-    optical_design = models.CharField(choices=OPTICAL_DESIGNS, max_length=2, null=True, blank=True)
+    OPTICAL_DESIGNS_VALUES = (
+        u"Unknown",
+        u"Ritchey-Chrétien",
+        u"Schmidt"
+    )
+
+    OPTICAL_DESIGNS_CHOICES = tuple(zip(OPTICAL_DESIGNS_KEYS, OPTICAL_DESIGNS_VALUES))
+    optical_design = models.CharField(choices=OPTICAL_DESIGNS_CHOICES, max_length=3, default=OPTICAL_DESIGN_UNDEFINED, blank=True)
+
+    has_active_optics = models.NullBooleanField()
+    has_adaptative_optics = models.NullBooleanField()
+    has_laser_guide_star = models.NullBooleanField()
 
 
 class ToolComponentManager(models.Manager):
@@ -201,17 +251,18 @@ class ToolComponentManager(models.Manager):
 class ToolComponent(models.Model):
     class Meta: app_label = 'arcsecond'
     objects = ToolComponentManager()
-    name = models.CharField(max_length=1000, primary_key=True)
+    name = models.CharField(max_length=100, primary_key=True)
 
 class Mirror(ToolComponent):
     class Meta: app_label = 'arcsecond'
     telescope = models.ForeignKey(Telescope, blank=True, null=True, default=None, related_name='mirrors')
 
+    mirror_index = models.IntegerField(null=True, blank=True, default=0)
     diameter = models.FloatField(null=True, blank=True)
     thickness = models.FloatField(null=True, blank=True)
-    shape = models.CharField(max_length=1000, null=True, blank=True)
-    curvature = models.CharField(max_length=1000, null=True, blank=True)
-    coating = models.CharField(max_length=1000, null=True, blank=True)
+    shape = models.CharField(max_length=100, null=True, blank=True)
+    curvature = models.CharField(max_length=100, null=True, blank=True)
+    coating = models.CharField(max_length=100, null=True, blank=True)
     central_obscuration = models.FloatField(null=True, blank=True)
-    material = models.CharField(max_length=1000, null=True, blank=True)
+    material = models.CharField(max_length=100, null=True, blank=True)
     creation_date = models.DateField(null=True, blank=True)

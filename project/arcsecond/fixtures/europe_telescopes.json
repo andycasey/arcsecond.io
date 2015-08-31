@@ -1,0 +1,1382 @@
+[
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "The 3.5m Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 3500.0, 
+        "mirror_index": 0, 
+        "telescope": "The 3.5m Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "The 3.5m Telescope Dome", 
+        "name": "The 3.5m Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "The 2.2m Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 2200.0, 
+        "mirror_index": 0, 
+        "telescope": "The 2.2m Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "The 2.2m Telescope Dome", 
+        "name": "The 2.2m Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "The 1.2m Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 1230.0, 
+        "mirror_index": 0, 
+        "telescope": "The 1.2m Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "The 1.2m Telescope Dome", 
+        "name": "The 1.2m Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "100-m Radio Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 100000.0, 
+        "mirror_index": 0, 
+        "telescope": "100-m Radio Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "100-m Radio Telescope Dome", 
+        "name": "100-m Radio Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Gran Telescopio CANARIAS Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 11350.0, 
+        "mirror_index": 0, 
+        "telescope": "Gran Telescopio CANARIAS"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": true, 
+        "has_active_optics": true, 
+        "has_laser_guide_star": false, 
+        "dome": "Gran Telescopio CANARIAS Dome", 
+        "name": "Gran Telescopio CANARIAS"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "William Herschel Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 4200.0, 
+        "mirror_index": 0, 
+        "telescope": "William Herschel Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "William Herschel Telescope Dome", 
+        "name": "William Herschel Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Telescopio Nazionale Galileo Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 3580.0, 
+        "mirror_index": 0, 
+        "telescope": "Telescopio Nazionale Galileo"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "Telescopio Nazionale Galileo", 
+        "has_active_optics": false, 
+        "dome": "Telescopio Nazionale Galileo Dome", 
+        "optical_design": "rc", 
+        "has_adaptative_optics": true, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Nordic Optical Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 2560.0, 
+        "mirror_index": 0, 
+        "telescope": "Nordic Optical Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "Nordic Optical Telescope Dome", 
+        "name": "Nordic Optical Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Isaac Newton Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 2540.0, 
+        "mirror_index": 0, 
+        "telescope": "Isaac Newton Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "Isaac Newton Telescope Dome", 
+        "name": "Isaac Newton Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Liverpool Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 2000.0, 
+        "mirror_index": 0, 
+        "telescope": "Liverpool Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "Liverpool Telescope Dome", 
+        "name": "Liverpool Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Mercator Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 1200.0, 
+        "mirror_index": 0, 
+        "telescope": "Mercator Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "Mercator Telescope", 
+        "has_active_optics": false, 
+        "dome": "Mercator Telescope Dome", 
+        "optical_design": "rc", 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Automatic Transit Circle Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 180.0, 
+        "mirror_index": 0, 
+        "telescope": "Automatic Transit Circle"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "Automatic Transit Circle Dome", 
+        "name": "Automatic Transit Circle"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Swedish Solar Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 1000.0, 
+        "mirror_index": 0, 
+        "telescope": "Swedish Solar Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "Swedish Solar Telescope Dome", 
+        "name": "Swedish Solar Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Open Dutch Solar Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 450.0, 
+        "mirror_index": 0, 
+        "telescope": "Open Dutch Solar Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "Open Dutch Solar Telescope Dome", 
+        "name": "Open Dutch Solar Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Major Atmospheric Gamma Imaging Cherenkov Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 17000.0, 
+        "mirror_index": 0, 
+        "telescope": "Major Atmospheric Gamma Imaging Cherenkov"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "Major Atmospheric Gamma Imaging Cherenkov Dome", 
+        "name": "Major Atmospheric Gamma Imaging Cherenkov"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Super Wide Angle Search for Planets (North) Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 2000.0, 
+        "mirror_index": 0, 
+        "telescope": "Super Wide Angle Search for Planets (North)"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "Super Wide Angle Search for Planets (North) Dome", 
+        "name": "Super Wide Angle Search for Planets (North)"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "193cm Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 1906.0, 
+        "mirror_index": 0, 
+        "telescope": "193cm Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "193cm Telescope Dome", 
+        "name": "193cm Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "152cm Telescope` Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 1500.0, 
+        "mirror_index": 0, 
+        "telescope": "152cm Telescope`"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "152cm Telescope` Dome", 
+        "name": "152cm Telescope`"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "80cm Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 800.0, 
+        "mirror_index": 0, 
+        "telescope": "80cm Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "80cm Telescope Dome", 
+        "name": "80cm Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Onsala 20m Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 20000.0, 
+        "mirror_index": 0, 
+        "telescope": "Onsala 20m Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "Onsala 20m Telescope Dome", 
+        "name": "Onsala 20m Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Onsala 25m Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 25000.0, 
+        "mirror_index": 0, 
+        "telescope": "Onsala 25m Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "Onsala 25m Telescope Dome", 
+        "name": "Onsala 25m Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "55cm (Robley Dome) Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 550.0, 
+        "mirror_index": 0, 
+        "telescope": "55cm (Robley Dome)"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "55cm (Robley Dome) Dome", 
+        "name": "55cm (Robley Dome)"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "60cm (T60) Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 600.0, 
+        "mirror_index": 0, 
+        "telescope": "60cm (T60)"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "60cm (T60) Dome", 
+        "name": "60cm (T60)"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "106cm (Gentilli Dome) Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 1060.0, 
+        "mirror_index": 0, 
+        "telescope": "106cm (Gentilli Dome)"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "106cm (Gentilli Dome) Dome", 
+        "name": "106cm (Gentilli Dome)"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "2m Bernard Lyot Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 2000.0, 
+        "mirror_index": 0, 
+        "telescope": "2m Bernard Lyot Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "2m Bernard Lyot Telescope Dome", 
+        "name": "2m Bernard Lyot Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Coronograph CLIMSO Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 0.0, 
+        "mirror_index": 0, 
+        "telescope": "Coronograph CLIMSO"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "Coronograph CLIMSO Dome", 
+        "name": "Coronograph CLIMSO"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "1.3m Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 1290.0, 
+        "mirror_index": 0, 
+        "telescope": "1.3m Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "1.3m Telescope Dome", 
+        "name": "1.3m Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "0.6m Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 610.0, 
+        "mirror_index": 0, 
+        "telescope": "0.6m Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "0.6m Telescope", 
+        "has_active_optics": false, 
+        "dome": "0.6m Telescope Dome", 
+        "optical_design": "rc", 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "0.3m Flat Field Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 610.0, 
+        "mirror_index": 0, 
+        "telescope": "0.3m Flat Field Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "0.3m Flat Field Telescope Dome", 
+        "name": "0.3m Flat Field Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "1.5m Telescope AZT-12 Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 1500.0, 
+        "mirror_index": 0, 
+        "telescope": "1.5m Telescope AZT-12"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "1.5m Telescope AZT-12 Dome", 
+        "name": "1.5m Telescope AZT-12"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "0.6m Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 600.0, 
+        "mirror_index": 0, 
+        "telescope": "0.6m Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "0.6m Telescope Dome", 
+        "name": "0.6m Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "0.5m Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 500.0, 
+        "mirror_index": 0, 
+        "telescope": "0.5m Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "0.5m Telescope Dome", 
+        "name": "0.5m Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Solar Vacuum Tower Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 700.0, 
+        "mirror_index": 0, 
+        "telescope": "Solar Vacuum Tower Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "Solar Vacuum Tower Telescope Dome", 
+        "name": "Solar Vacuum Tower Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "TH\u00c9MIS Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 900.0, 
+        "mirror_index": 0, 
+        "telescope": "TH\u00c9MIS"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "TH\u00c9MIS Dome", 
+        "name": "TH\u00c9MIS"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Birmingham Solar Oscillations Network Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 0.0, 
+        "mirror_index": 0, 
+        "telescope": "Birmingham Solar Oscillations Network"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "Birmingham Solar Oscillations Network Dome", 
+        "name": "Birmingham Solar Oscillations Network"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Carlos S\u00e1nchez Infrared Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 1520.0, 
+        "mirror_index": 0, 
+        "telescope": "Carlos S\u00e1nchez Infrared Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "Carlos S\u00e1nchez Infrared Telescope Dome", 
+        "name": "Carlos S\u00e1nchez Infrared Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Mons Reflecting Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 500.0, 
+        "mirror_index": 0, 
+        "telescope": "Mons Reflecting Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "Mons Reflecting Telescope Dome", 
+        "name": "Mons Reflecting Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "IAC-80 Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 800.0, 
+        "mirror_index": 0, 
+        "telescope": "IAC-80"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "IAC-80 Dome", 
+        "name": "IAC-80"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Stellar Astrophysics & Research on Exoplanets Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 100.0, 
+        "mirror_index": 0, 
+        "telescope": "Stellar Astrophysics & Research on Exoplanets Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "Stellar Astrophysics & Research on Exoplanets Telescope Dome", 
+        "name": "Stellar Astrophysics & Research on Exoplanets Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "STELLA (I & II) Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 1200.0, 
+        "mirror_index": 0, 
+        "telescope": "STELLA (I & II)"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "STELLA (I & II) Dome", 
+        "name": "STELLA (I & II)"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "SLOOH Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 0.0, 
+        "mirror_index": 0, 
+        "telescope": "SLOOH"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "SLOOH Dome", 
+        "name": "SLOOH"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "33GHz Interferometer Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 0.0, 
+        "mirror_index": 0, 
+        "telescope": "33GHz Interferometer"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "33GHz Interferometer Dome", 
+        "name": "33GHz Interferometer"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "COSMOSOMAS Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 0.0, 
+        "mirror_index": 0, 
+        "telescope": "COSMOSOMAS"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "COSMOSOMAS Dome", 
+        "name": "COSMOSOMAS"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Very Small Array Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 0.0, 
+        "mirror_index": 0, 
+        "telescope": "Very Small Array"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "Very Small Array Dome", 
+        "name": "Very Small Array"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "RTT150 Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 1500.0, 
+        "mirror_index": 0, 
+        "telescope": "RTT150"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "RTT150 Dome", 
+        "name": "RTT150"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "T100 Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 1000.0, 
+        "mirror_index": 0, 
+        "telescope": "T100"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "T100 Dome", 
+        "name": "T100"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "ROTSEIIID Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 450.0, 
+        "mirror_index": 0, 
+        "telescope": "ROTSEIIID"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "ROTSEIIID Dome", 
+        "name": "ROTSEIIID"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "T40 Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 400.0, 
+        "mirror_index": 0, 
+        "telescope": "T40"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "T40 Dome", 
+        "name": "T40"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Celestron 11'' Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 279.0, 
+        "mirror_index": 0, 
+        "telescope": "Celestron 11''"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "Celestron 11'' Dome", 
+        "name": "Celestron 11''"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Meade LX200 12'' Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 305.0, 
+        "mirror_index": 0, 
+        "telescope": "Meade LX200 12''"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "Meade LX200 12'' Dome", 
+        "name": "Meade LX200 12''"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Vienna Little Telescope Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 800.0, 
+        "mirror_index": 0, 
+        "telescope": "Vienna Little Telescope"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "Vienna Little Telescope Dome", 
+        "name": "Vienna Little Telescope"
+    }
+}
+]
