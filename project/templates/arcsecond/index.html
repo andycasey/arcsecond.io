@@ -87,6 +87,7 @@
                     <p class="heading__sub">
                         Our goal is to give access to as much information as possible, aggregating information with a philosophy centered around <em>resources</em>.
                         <br/>The APIs will incrementally be introduced here. To follow what's going on, read <a href="http://onekilopars.ec/blog">onekilopars.ec blog</a>.
+                        <br/>Example values are inserted below to speed up experimentation, but feel free to play with other values.
                     </p>
 
                 </div>
@@ -104,7 +105,7 @@
                             <div class="form-group form-group-sm">
                                 <div class="input-group">
                                     <div class="input-group-addon go-api">/{{ api_version }}/objects/</div>
-                                    <input type="text" class="form-control go-input" placeholder="ex: GRO J1655-40">
+                                    <input type="text" class="form-control go-input" placeholder="ex: GRO J1655-40" value="GRO J1655-40">
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-default go-button">Go</button>
@@ -127,7 +128,7 @@
                             <div class="form-group form-group-sm">
                                 <div class="input-group">
                                     <div class="input-group-addon go-api">/{{ api_version }}/exoplanets/</div>
-                                    <input type="text" class="form-control go-input" placeholder="ex: 51 Peg b">
+                                    <input type="text" class="form-control go-input" placeholder="ex: 51 Peg b" value="51 Peg b">
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-default go-button">Go</button>
@@ -160,7 +161,7 @@
                             <div class="form-group form-group-sm">
                                 <div class="input-group">
                                     <div class="input-group-addon go-api">/{{ api_version }}/observingsites/</div>
-                                    <input type="text" class="form-control go-input" placeholder="ex: La Silla">
+                                    <input type="text" class="form-control go-input" placeholder="ex: La Silla" value="La Silla">
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-default go-button">Go</button>
@@ -202,7 +203,7 @@
                                             <option>ATel</option>
                                         </select>&nbsp;<span class="go-select-suffix">/</span>
                                     </div>
-                                    <input type="text" class="form-control go-input" placeholder="ex : 7898">
+                                    <input type="text" class="form-control go-input" placeholder="ex : 7898" value="7898">
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-default go-button">Go</button>
@@ -235,7 +236,7 @@
                                             <option>10340</option>
                                         </select>
                                     </div>
-                                    <input type="text" class="form-control go-input" placeholder="ex : 073.D-0473(A)">
+                                    <input type="text" class="form-control go-input" placeholder="ex : 073.D-0473(A)" value="073.D-0473(A)">
                                     <div class="input-group-addon go-api-suffix">/summary/</div>
                                 </div>
                             </div>
@@ -259,7 +260,7 @@
                             <div class="form-group form-group-sm">
                                 <div class="input-group">
                                     <div class="input-group-addon go-api">/{{ api_version }}/publications/</div>
-                                    <input type="text" class="form-control go-input" placeholder="ex: 2009NewA...14..674F">
+                                    <input type="text" class="form-control go-input" placeholder="ex: 2009NewA...14..674F" value="2009NewA...14..674F">
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-default go-button">Go</button>
@@ -307,7 +308,7 @@
                             <div class="form-group form-group-sm">
                                 <div class="input-group">
                                     <div class="input-group-addon go-api">/{{ api_version }}/findingcharts/</div>
-                                    <input type="text" class="form-control go-input" placeholder="ex: HD 5980">
+                                    <input type="text" class="form-control go-input" placeholder="ex: HD 5980" value="HD 5980">
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-default go-button">Go</button>
@@ -339,16 +340,16 @@
                         </h3>
                         <p class="about-item__content">
                             Converters are URL-based calculations.
-                            Below is an example that converts equatorial/ICRS coordinates to all other coordinates as defined in <a href="http://astropy.org">astropy</a>.
-                            More onverters to come.
+                            Below are an example that converts equatorial/ICRS coordinates to all other coordinates,
+                            and one that converts times in various units. Both follow definitions of <a href="http://astropy.org">astropy</a>.
                         </p>
                         <form class="form-inline">
                             <div class="form-group form-group-sm">
                                 <div class="input-group">
                                     <div class="input-group-addon go-api">/{{ api_version }}/converters/coordinates/ra/</div>
-                                    <input type="text" class="form-control go-input" placeholder="ex : 3.4576" style="width:100px;">
+                                    <input type="text" class="form-control go-input" placeholder="ex : 3.4576" style="width:100px;" value="3.4576">
                                     <div class="input-group-addon go-api-2">/dec/</div>
-                                    <input type="text" class="form-control go-input-2" placeholder="ex : -70.2452" style="width:100px;">
+                                    <input type="text" class="form-control go-input-2" placeholder="ex : -70.2452" style="width:100px;" value="-70.2452">
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-default go-button">Go</button>
@@ -393,7 +394,7 @@
                                             <option>2000:001:00:00:00.000</option>
                                         </select>
                                     </div>
-                                    <input type="text" class="form-control go-input" placeholder="ex : 2451544.5">
+                                    <input type="text" class="form-control go-input" placeholder="ex : 2451544.5" value="2451544.5">
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-default go-button">Go</button>
@@ -745,6 +746,7 @@
                 var values = element.find(".go-select-hidden");
                 var new_placeholder = values[0].options[this.selectedIndex].value;
                 element.find(".go-input").attr("placeholder", new_placeholder);
+                element.find(".go-input").attr("value", new_placeholder);
             });
 
             $(".go-button").click(function() {
