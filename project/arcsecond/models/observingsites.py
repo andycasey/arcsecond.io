@@ -237,7 +237,7 @@ class Telescope(ObservingTool):
     )
 
     OPTICAL_DESIGNS_CHOICES = tuple(zip(OPTICAL_DESIGNS_KEYS, OPTICAL_DESIGNS_VALUES))
-    optical_design = models.CharField(choices=OPTICAL_DESIGNS_CHOICES, max_length=2, default=OPTICAL_DESIGN_UNDEFINED, blank=True)
+    optical_design = models.CharField(choices=OPTICAL_DESIGNS_CHOICES, max_length=3, default=OPTICAL_DESIGN_UNDEFINED, blank=True)
 
     has_active_optics = models.NullBooleanField()
     has_adaptative_optics = models.NullBooleanField()
@@ -251,7 +251,7 @@ class ToolComponentManager(models.Manager):
 class ToolComponent(models.Model):
     class Meta: app_label = 'arcsecond'
     objects = ToolComponentManager()
-    name = models.CharField(max_length=1000, primary_key=True)
+    name = models.CharField(max_length=100, primary_key=True)
 
 class Mirror(ToolComponent):
     class Meta: app_label = 'arcsecond'
@@ -260,9 +260,9 @@ class Mirror(ToolComponent):
     mirror_index = models.IntegerField(null=True, blank=True, default=0)
     diameter = models.FloatField(null=True, blank=True)
     thickness = models.FloatField(null=True, blank=True)
-    shape = models.CharField(max_length=1000, null=True, blank=True)
-    curvature = models.CharField(max_length=1000, null=True, blank=True)
-    coating = models.CharField(max_length=1000, null=True, blank=True)
+    shape = models.CharField(max_length=100, null=True, blank=True)
+    curvature = models.CharField(max_length=100, null=True, blank=True)
+    coating = models.CharField(max_length=100, null=True, blank=True)
     central_obscuration = models.FloatField(null=True, blank=True)
-    material = models.CharField(max_length=1000, null=True, blank=True)
+    material = models.CharField(max_length=100, null=True, blank=True)
     creation_date = models.DateField(null=True, blank=True)
