@@ -24,9 +24,7 @@
             -105.82027777777778, 
             32.780277777777776
         ], 
-        "IAUCode": {
-            "IAUCode": "645"
-        }
+        "IAUCode": "645"
     }
 },
 {
@@ -54,9 +52,7 @@
             -66.75305555555556, 
             18.343474999999998
         ], 
-        "IAUCode": {
-            "IAUCode": "251"
-        }
+        "IAUCode": "251"
     }
 },
 {
@@ -74,7 +70,7 @@
     "fields": {
         "long_name": "Byrne Observatory", 
         "time_zone": "-08:00", 
-        "name": "Byrne Observatory", 
+        "name": "Byrne", 
         "time_zone_name": "America/Los_Angeles", 
         "country": "U.S.A.", 
         "wikipedia_article": "http://en.wikipedia.org/wiki/Las_Cumbres_Observatory_Global_Telescope_Network", 
@@ -84,9 +80,7 @@
             -120.04222222222222, 
             34.69138888888889
         ], 
-        "IAUCode": {
-            "IAUCode": ""
-        }
+        "IAUCode": ""
     }
 },
 {
@@ -114,9 +108,7 @@
             -118.1416463888889, 
             37.28038138888889
         ], 
-        "IAUCode": {
-            "IAUCode": ""
-        }
+        "IAUCode": ""
     }
 },
 {
@@ -144,39 +136,7 @@
             -123.41805555555555, 
             48.52027777777778
         ], 
-        "IAUCode": {
-            "IAUCode": ""
-        }
-    }
-},
-{
-    "pk": null, 
-    "model": "arcsecond.Coordinates", 
-    "fields": {
-        "latitude": 34.7444, 
-        "longitude": -111.42219999999998, 
-        "height": 2360.0
-    }
-},
-{
-    "pk": null, 
-    "model": "arcsecond.ObservingSite", 
-    "fields": {
-        "long_name": "Discovery Channel Telescope", 
-        "time_zone": "-07:00", 
-        "name": "DCT", 
-        "time_zone_name": "America/Phoenix", 
-        "country": "Usa", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Discovery_Channel_Telescope", 
-        "homepage": "http://www.lowell.edu/research_telescopes_dct.php", 
-        "continent": "North America", 
-        "coordinates": [
-            -111.42219999999998, 
-            34.7444
-        ], 
-        "IAUCode": {
-            "IAUCode": "UNDEFINED_STRING_PROPERTY"
-        }
+        "IAUCode": ""
     }
 },
 {
@@ -204,9 +164,35 @@
             -75.7165, 
             45.394108333333335
         ], 
-        "IAUCode": {
-            "IAUCode": "790"
-        }
+        "IAUCode": "790"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Coordinates", 
+    "fields": {
+        "latitude": 37.87833333333333, 
+        "longitude": -78.69333333333333, 
+        "height": 566.0
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.ObservingSite", 
+    "fields": {
+        "long_name": "Fan Mountain Observatory", 
+        "time_zone": "-05:00", 
+        "name": "Fan Mountain", 
+        "time_zone_name": "America/New_York", 
+        "country": "U.S.A", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Fan_Mountain_Observatory", 
+        "homepage": "http://www.astro.virginia.edu/research/observatories/FanMt.php", 
+        "continent": "North America", 
+        "coordinates": [
+            -78.69333333333333, 
+            37.87833333333333
+        ], 
+        "IAUCode": "I18"
     }
 },
 {
@@ -234,9 +220,7 @@
             -111.74027777777778, 
             35.18416666666666
         ], 
-        "IAUCode": {
-            "IAUCode": "689"
-        }
+        "IAUCode": "689"
     }
 },
 {
@@ -264,9 +248,7 @@
             -93.15219444444445, 
             44.46177777777778
         ], 
-        "IAUCode": {
-            "IAUCode": "741"
-        }
+        "IAUCode": "741"
     }
 },
 {
@@ -294,9 +276,7 @@
             -79.83983888888888, 
             38.43312777777778
         ], 
-        "IAUCode": {
-            "IAUCode": "256"
-        }
+        "IAUCode": "256"
     }
 },
 {
@@ -324,9 +304,7 @@
             -111.59469444444444, 
             31.958444444444442
         ], 
-        "IAUCode": {
-            "IAUCode": "695"
-        }
+        "IAUCode": "695"
     }
 },
 {
@@ -354,9 +332,7 @@
             -121.64550000000001, 
             37.34017777777778
         ], 
-        "IAUCode": {
-            "IAUCode": "662"
-        }
+        "IAUCode": "662"
     }
 },
 {
@@ -372,10 +348,10 @@
     "pk": null, 
     "model": "arcsecond.ObservingSite", 
     "fields": {
-        "long_name": "Large Millimeter Telescope", 
-        "time_zone": "+06:00", 
+        "long_name": "Large Millimeter Telescope Alfonso Serrano", 
+        "time_zone": "-06:00", 
         "name": "LMT", 
-        "time_zone_name": "Asia/Rangoon", 
+        "time_zone_name": "America/Mexico_City", 
         "country": "Mexico", 
         "wikipedia_article": "http://en.wikipedia.org/wiki/Large_Millimeter_Telescope", 
         "homepage": "http://www.lmtgtm.org", 
@@ -384,9 +360,7 @@
             -97.31472222222222, 
             18.985
         ], 
-        "IAUCode": {
-            "IAUCode": "?"
-        }
+        "IAUCode": "?"
     }
 },
 {
@@ -414,9 +388,7 @@
             -111.6633, 
             35.20166666666667
         ], 
-        "IAUCode": {
-            "IAUCode": "690"
-        }
+        "IAUCode": "690"
     }
 },
 {
@@ -444,9 +416,7 @@
             -155.46887583333333, 
             19.825251666666666
         ], 
-        "IAUCode": {
-            "IAUCode": "568"
-        }
+        "IAUCode": "568"
     }
 },
 {
@@ -474,9 +444,7 @@
             -104.02198916666667, 
             30.671761944444444
         ], 
-        "IAUCode": {
-            "IAUCode": "711"
-        }
+        "IAUCode": "711"
     }
 },
 {
@@ -504,9 +472,7 @@
             -110.72, 
             32.398605555555555
         ], 
-        "IAUCode": {
-            "IAUCode": "698"
-        }
+        "IAUCode": "698"
     }
 },
 {
@@ -534,9 +500,7 @@
             -109.8890638888889, 
             32.70111111111111
         ], 
-        "IAUCode": {
-            "IAUCode": "290"
-        }
+        "IAUCode": "290"
     }
 },
 {
@@ -564,9 +528,7 @@
             -71.15330555555556, 
             45.45494444444445
         ], 
-        "IAUCode": {
-            "IAUCode": "301"
-        }
+        "IAUCode": "301"
     }
 },
 {
@@ -594,9 +556,7 @@
             -118.05638888888889, 
             34.2247
         ], 
-        "IAUCode": {
-            "IAUCode": "672"
-        }
+        "IAUCode": "672"
     }
 },
 {
@@ -624,9 +584,7 @@
             -116.86399999999999, 
             33.356005555555555
         ], 
-        "IAUCode": {
-            "IAUCode": "675"
-        }
+        "IAUCode": "675"
     }
 },
 {
@@ -654,9 +612,7 @@
             -83.61, 
             41.65
         ], 
-        "IAUCode": {
-            "IAUCode": ""
-        }
+        "IAUCode": ""
     }
 },
 {
@@ -684,9 +640,7 @@
             -114.28830555555555, 
             50.86830555555556
         ], 
-        "IAUCode": {
-            "IAUCode": "661"
-        }
+        "IAUCode": "661"
     }
 },
 {
@@ -714,9 +668,7 @@
             -115.46330555555556, 
             31.043333333333337
         ], 
-        "IAUCode": {
-            "IAUCode": "679"
-        }
+        "IAUCode": "679"
     }
 },
 {
@@ -744,9 +696,7 @@
             -77.06580555555556, 
             38.92055555555555
         ], 
-        "IAUCode": {
-            "IAUCode": "786"
-        }
+        "IAUCode": "786"
     }
 },
 {
@@ -774,9 +724,7 @@
             -107.6177, 
             34.07868611111112
         ], 
-        "IAUCode": {
-            "IAUCode": ""
-        }
+        "IAUCode": ""
     }
 },
 {
@@ -804,9 +752,7 @@
             -110.88455555555556, 
             31.688777777777776
         ], 
-        "IAUCode": {
-            "IAUCode": "696"
-        }
+        "IAUCode": "696"
     }
 },
 {
@@ -834,9 +780,7 @@
             -88.55666666666666, 
             42.57
         ], 
-        "IAUCode": {
-            "IAUCode": "754"
-        }
+        "IAUCode": "754"
     }
 }
 ]

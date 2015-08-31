@@ -1,0 +1,140 @@
+[
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "PLATeau Observatory Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 0.0, 
+        "mirror_index": 0, 
+        "telescope": "PLATeau Observatory"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "PLATeau Observatory Dome", 
+        "name": "PLATeau Observatory"
+    }
+},
+,
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Differential Image Motion Monitor Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 2800.0, 
+        "mirror_index": 0, 
+        "telescope": "Differential Image Motion Monitor"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "Differential Image Motion Monitor Dome", 
+        "name": "Differential Image Motion Monitor"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Generalized Seeing Monitor Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 0.0, 
+        "mirror_index": 0, 
+        "telescope": "Generalized Seeing Monitor"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "Generalized Seeing Monitor Dome", 
+        "name": "Generalized Seeing Monitor"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Single Star Scidar Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 0.0, 
+        "mirror_index": 0, 
+        "telescope": "Single Star Scidar"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "Single Star Scidar Dome", 
+        "name": "Single Star Scidar"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "SKY-CAM Dome"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 0.0, 
+        "mirror_index": 0, 
+        "telescope": "SKY-CAM"
+    }
+},
+{
+    "pk": null, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "has_adaptative_optics": false, 
+        "has_active_optics": false, 
+        "has_laser_guide_star": false, 
+        "dome": "SKY-CAM Dome", 
+        "name": "SKY-CAM"
+    }
+},
+,
+
+]
