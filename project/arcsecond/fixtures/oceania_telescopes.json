@@ -26,9 +26,6 @@
         "name": "Anglo-Australian Telescope"
     }
 },
-,
-,
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -56,9 +53,6 @@
         "name": "22m Mopra Radio Telescope"
     }
 },
-,
-,
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -86,7 +80,6 @@
         "name": "64-metre Telescope"
     }
 },
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -114,7 +107,6 @@
         "name": "Australia Telescope Compact Array"
     }
 },
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -303,6 +295,5 @@
         "dome": "Automated Patrol Telescope Dome", 
         "name": "Automated Patrol Telescope"
     }
-},
-
+}
 ]

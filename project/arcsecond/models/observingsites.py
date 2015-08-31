@@ -144,7 +144,7 @@ class TelescopeManager(models.Manager):
 class Telescope(ObservingTool):
     class Meta: app_label = 'arcsecond'
     objects = TelescopeManager()
-    dome = models.OneToOneField(Dome, blank=True, null=True, default=None, related_name='telescope')
+    dome = models.OneToOneField(Dome, blank=True, null=True, related_name='telescope')
 
     WAVELENGTH_DOMAIN_HARD_GAMMARAYS = "hga"
     WAVELENGTH_DOMAIN_WEAK_GAMMARAYS = "wga"

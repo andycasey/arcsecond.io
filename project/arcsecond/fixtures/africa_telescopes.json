@@ -188,7 +188,6 @@
         "name": "20 cm Coelostat (Solar Telescope)"
     }
 },
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -297,7 +296,6 @@
         "name": "Visual Refractor 0.15m"
     }
 },
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -406,8 +404,6 @@
         "name": "CT4"
     }
 },
-,
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -436,7 +432,6 @@
         "has_laser_guide_star": false
     }
 },
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -598,6 +593,5 @@
         "dome": "InfraRed Survey Facility Dome", 
         "name": "InfraRed Survey Facility"
     }
-},
-
+}
 ]

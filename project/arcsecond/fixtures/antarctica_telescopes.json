@@ -26,7 +26,6 @@
         "name": "PLATeau Observatory"
     }
 },
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -134,7 +133,5 @@
         "dome": "SKY-CAM Dome", 
         "name": "SKY-CAM"
     }
-},
-,
-
+}
 ]

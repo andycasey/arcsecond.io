@@ -108,7 +108,6 @@
         "name": "Astrographe of Southerm Hemisphere"
     }
 },
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -136,7 +135,6 @@
         "name": "European Extremely Large Telescope"
     }
 },
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -165,7 +163,6 @@
         "has_laser_guide_star": false
     }
 },
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -332,7 +329,6 @@
         "name": "VLT Survey Telescope "
     }
 },
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -414,7 +410,6 @@
         "name": "Q/U Imaging ExperimenT"
     }
 },
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -551,8 +546,6 @@
         "name": "0.9m SMARTS Telescope"
     }
 },
-,
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -803,7 +796,6 @@
         "has_laser_guide_star": false
     }
 },
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -914,8 +906,6 @@
         "has_laser_guide_star": false
     }
 },
-,
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -998,8 +988,5 @@
         "dome": "0.6m Zeiss Telescope Dome", 
         "name": "0.6m Zeiss Telescope"
     }
-},
-,
-,
-
+}
 ]

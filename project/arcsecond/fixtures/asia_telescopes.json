@@ -134,7 +134,6 @@
         "name": "Unitron Refractor"
     }
 },
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -189,11 +188,6 @@
         "name": "Schmidt 1.0"
     }
 },
-,
-,
-,
-,
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -302,8 +296,6 @@
         "name": "The 65cm Solar Telescope"
     }
 },
-,
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -412,7 +404,6 @@
         "name": "Academy of Science Radio Telescope (RATAN-600)"
     }
 },
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -469,7 +460,6 @@
         "has_laser_guide_star": false
     }
 },
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -497,7 +487,6 @@
         "name": "Vainu Bappu Telescope"
     }
 },
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -525,6 +514,5 @@
         "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
-},
-
+}
 ]

@@ -80,7 +80,6 @@
         "name": "1.0-meter Telescope"
     }
 },
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -108,19 +107,6 @@
         "name": "305-meter Telescope"
     }
 },
-,
-,
-,
-,
-,
-,
-,
-,
-,
-,
-,
-,
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -365,8 +351,6 @@
         "name": "Univ. of Hawai'i 0.9m Telescope"
     }
 },
-,
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -422,7 +406,6 @@
         "has_laser_guide_star": false
     }
 },
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -504,7 +487,6 @@
         "name": "Vatican Advanced Technology Telescope"
     }
 },
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -533,7 +515,6 @@
         "has_laser_guide_star": false
     }
 },
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -561,7 +542,6 @@
         "name": "Hooker 100-inch Telescope"
     }
 },
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -697,7 +677,6 @@
         "name": "24-inch Telescope"
     }
 },
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -726,8 +705,6 @@
         "has_laser_guide_star": false
     }
 },
-,
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -812,9 +789,6 @@
         "has_laser_guide_star": false
     }
 },
-,
-,
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -1057,7 +1031,5 @@
         "dome": "MEarth Array Dome", 
         "name": "MEarth Array"
     }
-},
-,
-
+}
 ]

@@ -116,9 +116,7 @@ def create_telescope_fixtures():
         fixture_file_path = get_fixtures_file_path(continent_key, 'telescopes')
         print fixture_file_path
 
-        f = open(fixture_file_path, 'w')
-        f.write('[\n')
-
+        s = ""
         for observatory_name in observatory_names:
             if u'→' in observatory_name: continue
             print u' • ' + observatory_name
@@ -138,7 +136,7 @@ def create_telescope_fixtures():
                         tel = tool['telescope']
                         tel_name = tool['observingTool']['longName']
 
-                        print tel
+                        # print tel
 
                         dome = {'model': 'arcsecond.Dome', 'pk': None}
                         dome_name = tel_name+' Dome'
@@ -182,17 +180,18 @@ def create_telescope_fixtures():
                         if 'hasLaserGuideStar' in tel:
                             telescope['fields']['has_laser_guide_star'] = True if tel['hasLaserGuideStar'] == 'YES' else False
 
-                        f.write(json.dumps(dome, indent=4))
-                        f.write(',\n')
+                        s += json.dumps(dome, indent=4)
+                        s += ',\n'
                         if mirror is not None:
-                            f.write(json.dumps(mirror, indent=4))
-                            f.write(',\n')
-                        f.write(json.dumps(telescope, indent=4))
-                        f.write(',\n')
+                            s += json.dumps(mirror, indent=4)
+                            s += ',\n'
+                        s += json.dumps(telescope, indent=4)
+                        s += ',\n'
 
-            if observatory_name != observatory_names[-1]:
-                f.write(',\n')
-
+        s = s[:-2]
+        f = open(fixture_file_path, 'w')
+        f.write('[\n')
+        f.write(s)
         f.write('\n]')
         f.close()
 

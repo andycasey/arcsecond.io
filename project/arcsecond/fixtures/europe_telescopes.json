@@ -1,6 +1,4 @@
 [
-,
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -82,8 +80,6 @@
         "name": "The 1.2m Telescope"
     }
 },
-,
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -111,11 +107,6 @@
         "name": "100-m Radio Telescope"
     }
 },
-,
-,
-,
-,
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -442,13 +433,6 @@
         "name": "Super Wide Angle Search for Planets (North)"
     }
 },
-,
-,
-,
-,
-,
-,
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -530,7 +514,6 @@
         "name": "80cm Telescope"
     }
 },
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -585,8 +568,6 @@
         "name": "Onsala 25m Telescope"
     }
 },
-,
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -722,8 +703,6 @@
         "name": "Coronograph CLIMSO"
     }
 },
-,
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -806,8 +785,6 @@
         "name": "0.3m Flat Field Telescope"
     }
 },
-,
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -889,7 +866,6 @@
         "name": "0.5m Telescope"
     }
 },
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -1214,7 +1190,6 @@
         "name": "Very Small Array"
     }
 },
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -1323,7 +1298,6 @@
         "name": "T40"
     }
 },
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -1378,8 +1352,6 @@
         "name": "Meade LX200 12''"
     }
 },
-,
-,
 {
     "pk": null, 
     "model": "arcsecond.Dome", 
@@ -1406,6 +1378,5 @@
         "dome": "Vienna Little Telescope Dome", 
         "name": "Vienna Little Telescope"
     }
-},
-
+}
 ]
