@@ -43,6 +43,16 @@ urlpatterns = patterns('',
         name="observingsite-list"),
 
 
+    # ----- Telescopes -----
+
+    url(r'^1/telescopes/(?P<name>[\s\+\.0-9a-zA-Z_-]+)/$',
+        views.TelescopeDetailAPIView.as_view(),
+        name="telescope-detail"),
+
+    url(r'^1/telescopes/$',
+        views.TelescopeListAPIView.as_view(),
+        name="telescope-list"),
+
     # ----- Telegrams -----
 
     url(r'^1/telegrams/ATel/(?P<identifier>\d+)/$',
