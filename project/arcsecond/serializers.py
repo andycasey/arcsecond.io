@@ -1,5 +1,6 @@
 
 from rest_framework import serializers
+from rest_framework.reverse import reverse
 from .models import *
 
 ######################## Shorts ########################
@@ -198,6 +199,21 @@ class CoordinatesSerializer(serializers.HyperlinkedModelSerializer):
         model = Coordinates
         fields = ('longitude', 'latitude', 'height')
 
+######################## Observing Sites ########################
+
+# class TelescopeHyperlinkRelatedField(serializers.HyperlinkedRelatedField):
+#     # http://www.django-rest-framework.org/api-guide/relations/#custom-hyperlinked-fields
+#
+#     view_name = 'telescope-detail'
+#     queryset = Telescope.objects.all()
+#
+#     def get_url(self, obj, view_name, request, format):
+#         url_kwargs = {
+#             'name': obj.name,
+#         }
+#         return reverse(view_name, url_kwargs, request=request, format=format)
+
+
 class ObservingSiteSerializer(serializers.HyperlinkedModelSerializer):
     coordinates = CoordinatesSerializer()
 
@@ -206,6 +222,45 @@ class ObservingSiteSerializer(serializers.HyperlinkedModelSerializer):
         lookup_field = "name"
         fields = ('name', 'long_name', 'IAUCode', 'continent', 'coordinates', 'address_line_1', 'address_line_2',
                   'zip_code', 'country', 'time_zone', 'time_zone_name')
+
+    # telescopes = serializers.HyperlinkedRelatedField(many=True,
+    #                                                  read_only=True,
+    #                                                  allow_null=True,
+    #                                                  view_name='telescope-detail',
+    #                                                  lookup_field='name',
+    #                                                  lookup_url_kwarg='name')
+
+
+######################## Telescopes ########################
+
+class DomeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Dome
+        fields = ('name', 'shape', 'image')
+
+class MirrorSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Mirror
+        fields = ('mirror_index', 'diameter')
+
+class TelescopeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Telescope
+        lookup_field = "name"
+        fields = ('name', 'acronym', 'observing_site', 'mounting', 'optical_design', 'has_active_optics',
+                  'has_adaptative_optics', 'has_laser_guide_star', 'wavelength_domains', 'dome', 'mirrors')
+
+    observing_site = serializers.HyperlinkedRelatedField(read_only=True,
+                                                         view_name='observingsite-detail',
+                                                         lookup_field='name')
+
+    wavelength_domains = serializers.SerializerMethodField()
+    dome = DomeSerializer(required=False)
+    mirrors = MirrorSerializer(required=False, many=True)
+
+    def get_wavelength_domains(self, obj):
+        return [Telescope.WAVELENGTH_DOMAINS_VALUES[Telescope.WAVELENGTH_DOMAINS_KEYS.index(domain)] for domain in obj.wavelength_domains]
+
 
 
 ######################## Objects Properties ########################
