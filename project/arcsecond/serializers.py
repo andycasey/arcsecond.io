@@ -23,6 +23,12 @@ class PublicationShortSerializer(serializers.ModelSerializer):
         lookup_field = "bibcode"
         fields = ('url', 'bibcode')
 
+class TelescopeShortSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Telescope
+        lookup_field = "name"
+        fields = ('url', 'name')
+
 
 ######################## Common ########################
 
@@ -142,7 +148,7 @@ class MetallicitySerializer(serializers.ModelSerializer):
         return Metallicity.METAL_VALUES[Metallicity.METAL_KEYS.index(obj.unit)]
 
 
-class DistanceSerializer(serializers.HyperlinkedModelSerializer):
+class DistanceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Distance
         fields = ("value", "unit", "error_max", "error_min", "bibcode")
@@ -194,7 +200,7 @@ class GravitySerializer(serializers.ModelSerializer):
 
 ######################## Earth ########################
 
-class CoordinatesSerializer(serializers.HyperlinkedModelSerializer):
+class CoordinatesSerializer(serializers.ModelSerializer):
     class Meta:
         model = Coordinates
         fields = ('longitude', 'latitude', 'height')
@@ -214,22 +220,19 @@ class CoordinatesSerializer(serializers.HyperlinkedModelSerializer):
 #         return reverse(view_name, url_kwargs, request=request, format=format)
 
 
-class ObservingSiteSerializer(serializers.HyperlinkedModelSerializer):
-    coordinates = CoordinatesSerializer()
-
+class ObservingSiteSerializer(serializers.ModelSerializer):
     class Meta:
         model = ObservingSite
         lookup_field = "name"
         fields = ('name', 'long_name', 'IAUCode', 'continent', 'coordinates', 'address_line_1', 'address_line_2',
-                  'zip_code', 'country', 'time_zone', 'time_zone_name')
+                  'zip_code', 'country', 'time_zone', 'time_zone_name', 'telescopes')
 
+    coordinates = CoordinatesSerializer()
+    # telescopes = TelescopeShortSerializer(many=True, required=False)
     # telescopes = serializers.HyperlinkedRelatedField(many=True,
     #                                                  read_only=True,
-    #                                                  allow_null=True,
     #                                                  view_name='telescope-detail',
-    #                                                  lookup_field='name',
-    #                                                  lookup_url_kwarg='name')
-
+    #                                                  lookup_field='name')
 
 ######################## Telescopes ########################
 
@@ -315,7 +318,7 @@ class AstronomicalObjectSerializer(serializers.ModelSerializer):
 
 ######################## Exoplanets ########################
 
-class ExoplanetSerializer(serializers.HyperlinkedModelSerializer):
+class ExoplanetSerializer(serializers.ModelSerializer):
     class Meta:
         model = Exoplanet
 
