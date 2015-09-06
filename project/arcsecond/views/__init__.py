@@ -9,3 +9,4 @@ from .telegrams import *
 from .observingsites import *
 from .accounts import *
 from .charts import *
+from .telescopes import *
