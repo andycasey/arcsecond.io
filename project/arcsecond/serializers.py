@@ -229,10 +229,10 @@ class ObservingSiteSerializer(serializers.ModelSerializer):
 
     coordinates = CoordinatesSerializer()
     # telescopes = TelescopeShortSerializer(many=True, required=False)
-    # telescopes = serializers.HyperlinkedRelatedField(many=True,
-    #                                                  read_only=True,
-    #                                                  view_name='telescope-detail',
-    #                                                  lookup_field='name')
+    telescopes = serializers.HyperlinkedRelatedField(many=True,
+                                                     read_only=True,
+                                                     view_name='telescope-detail',
+                                                     lookup_url_kwarg='name')
 
 ######################## Telescopes ########################
 
