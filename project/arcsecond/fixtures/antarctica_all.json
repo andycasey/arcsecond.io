@@ -107,7 +107,7 @@
     "fields": {
         "diameter": 0.0, 
         "mirror_index": 0, 
-        "telescope": 7
+        "telescope": 22
     }
 },
 {
@@ -138,7 +138,7 @@
     "fields": {
         "diameter": 2800.0, 
         "mirror_index": 0, 
-        "telescope": 8
+        "telescope": 23
     }
 },
 {
@@ -169,7 +169,7 @@
     "fields": {
         "diameter": 0.0, 
         "mirror_index": 0, 
-        "telescope": 8
+        "telescope": 24
     }
 },
 {
@@ -200,7 +200,7 @@
     "fields": {
         "diameter": 0.0, 
         "mirror_index": 0, 
-        "telescope": 8
+        "telescope": 25
     }
 },
 {
@@ -231,7 +231,7 @@
     "fields": {
         "diameter": 0.0, 
         "mirror_index": 0, 
-        "telescope": 8
+        "telescope": 26
     }
 }
 ]

@@ -175,7 +175,7 @@ def create_fixtures():
                             mirror = {'model':'arcsecond.Mirror', 'pk': tools_index}
                             mirror['fields'] = {
                                 'mirror_index': 0,
-                                'telescope': index,
+                                'telescope': tools_index,
                                 'diameter': float(tel['primaryMirror']['diameter'])
                             }
 

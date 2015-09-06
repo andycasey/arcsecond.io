@@ -360,7 +360,7 @@
     "fields": {
         "diameter": 1200.0, 
         "mirror_index": 0, 
-        "telescope": 87
+        "telescope": 143
     }
 },
 {
@@ -391,7 +391,7 @@
     "fields": {
         "diameter": 1500.0, 
         "mirror_index": 0, 
-        "telescope": 87
+        "telescope": 144
     }
 },
 {
@@ -422,7 +422,7 @@
     "fields": {
         "diameter": 609.6, 
         "mirror_index": 0, 
-        "telescope": 87
+        "telescope": 145
     }
 },
 {
@@ -453,7 +453,7 @@
     "fields": {
         "diameter": 450.0, 
         "mirror_index": 0, 
-        "telescope": 87
+        "telescope": 146
     }
 },
 {
@@ -484,7 +484,7 @@
     "fields": {
         "diameter": 42000.0, 
         "mirror_index": 0, 
-        "telescope": 88
+        "telescope": 147
     }
 },
 {
@@ -516,7 +516,7 @@
     "fields": {
         "diameter": 8100.0, 
         "mirror_index": 0, 
-        "telescope": 89
+        "telescope": 148
     }
 },
 {
@@ -548,7 +548,7 @@
     "fields": {
         "diameter": 8202.0, 
         "mirror_index": 0, 
-        "telescope": 90
+        "telescope": 149
     }
 },
 {
@@ -580,7 +580,7 @@
     "fields": {
         "diameter": 8202.0, 
         "mirror_index": 0, 
-        "telescope": 90
+        "telescope": 150
     }
 },
 {
@@ -612,7 +612,7 @@
     "fields": {
         "diameter": 8202.0, 
         "mirror_index": 0, 
-        "telescope": 90
+        "telescope": 151
     }
 },
 {
@@ -644,7 +644,7 @@
     "fields": {
         "diameter": 8202.0, 
         "mirror_index": 0, 
-        "telescope": 90
+        "telescope": 152
     }
 },
 {
@@ -675,7 +675,7 @@
     "fields": {
         "diameter": 4100.0, 
         "mirror_index": 0, 
-        "telescope": 90
+        "telescope": 153
     }
 },
 {
@@ -706,7 +706,7 @@
     "fields": {
         "diameter": 2610.0, 
         "mirror_index": 0, 
-        "telescope": 90
+        "telescope": 154
     }
 },
 {
@@ -737,7 +737,7 @@
     "fields": {
         "diameter": 0.0, 
         "mirror_index": 0, 
-        "telescope": 91
+        "telescope": 155
     }
 },
 {
@@ -768,7 +768,7 @@
     "fields": {
         "diameter": 12000.0, 
         "mirror_index": 0, 
-        "telescope": 91
+        "telescope": 156
     }
 },
 {
@@ -799,7 +799,7 @@
     "fields": {
         "diameter": 0.0, 
         "mirror_index": 0, 
-        "telescope": 91
+        "telescope": 157
     }
 },
 {
@@ -831,7 +831,7 @@
     "fields": {
         "diameter": 4022.9, 
         "mirror_index": 0, 
-        "telescope": 92
+        "telescope": 158
     }
 },
 {
@@ -862,7 +862,7 @@
     "fields": {
         "diameter": 1500.0, 
         "mirror_index": 0, 
-        "telescope": 92
+        "telescope": 159
     }
 },
 {
@@ -893,7 +893,7 @@
     "fields": {
         "diameter": 1300.0, 
         "mirror_index": 0, 
-        "telescope": 92
+        "telescope": 160
     }
 },
 {
@@ -924,7 +924,7 @@
     "fields": {
         "diameter": 1000.0, 
         "mirror_index": 0, 
-        "telescope": 92
+        "telescope": 161
     }
 },
 {
@@ -955,7 +955,7 @@
     "fields": {
         "diameter": 900.0, 
         "mirror_index": 0, 
-        "telescope": 92
+        "telescope": 162
     }
 },
 {
@@ -987,7 +987,7 @@
     "fields": {
         "diameter": 3600.0, 
         "mirror_index": 0, 
-        "telescope": 94
+        "telescope": 163
     }
 },
 {
@@ -1019,7 +1019,7 @@
     "fields": {
         "diameter": 3580.0, 
         "mirror_index": 0, 
-        "telescope": 94
+        "telescope": 164
     }
 },
 {
@@ -1051,7 +1051,7 @@
     "fields": {
         "diameter": 2200.0, 
         "mirror_index": 0, 
-        "telescope": 94
+        "telescope": 165
     }
 },
 {
@@ -1083,7 +1083,7 @@
     "fields": {
         "diameter": 1200.0, 
         "mirror_index": 0, 
-        "telescope": 94
+        "telescope": 166
     }
 },
 {
@@ -1115,7 +1115,7 @@
     "fields": {
         "diameter": 1540.0, 
         "mirror_index": 0, 
-        "telescope": 94
+        "telescope": 167
     }
 },
 {
@@ -1146,7 +1146,7 @@
     "fields": {
         "diameter": 600.0, 
         "mirror_index": 0, 
-        "telescope": 94
+        "telescope": 168
     }
 },
 {
@@ -1177,7 +1177,7 @@
     "fields": {
         "diameter": 250.0, 
         "mirror_index": 0, 
-        "telescope": 94
+        "telescope": 169
     }
 },
 {
@@ -1209,7 +1209,7 @@
     "fields": {
         "diameter": 600.0, 
         "mirror_index": 0, 
-        "telescope": 94
+        "telescope": 170
     }
 },
 {
@@ -1241,7 +1241,7 @@
     "fields": {
         "diameter": 1000.0, 
         "mirror_index": 0, 
-        "telescope": 94
+        "telescope": 171
     }
 },
 {
@@ -1272,7 +1272,7 @@
     "fields": {
         "diameter": 6502.4, 
         "mirror_index": 0, 
-        "telescope": 95
+        "telescope": 172
     }
 },
 {
@@ -1303,7 +1303,7 @@
     "fields": {
         "diameter": 6502.4, 
         "mirror_index": 0, 
-        "telescope": 95
+        "telescope": 173
     }
 },
 {
@@ -1335,7 +1335,7 @@
     "fields": {
         "diameter": 2540.0, 
         "mirror_index": 0, 
-        "telescope": 95
+        "telescope": 174
     }
 },
 {
@@ -1367,7 +1367,7 @@
     "fields": {
         "diameter": 1016.0, 
         "mirror_index": 0, 
-        "telescope": 95
+        "telescope": 175
     }
 },
 {
@@ -1399,7 +1399,7 @@
     "fields": {
         "diameter": 1574.0, 
         "mirror_index": 0, 
-        "telescope": 97
+        "telescope": 176
     }
 },
 {
@@ -1431,7 +1431,7 @@
     "fields": {
         "diameter": 609.0, 
         "mirror_index": 0, 
-        "telescope": 97
+        "telescope": 177
     }
 },
 {
@@ -1462,7 +1462,7 @@
     "fields": {
         "diameter": 600.0, 
         "mirror_index": 0, 
-        "telescope": 97
+        "telescope": 178
     }
 }
 ]
