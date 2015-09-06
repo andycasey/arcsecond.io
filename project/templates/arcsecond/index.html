@@ -167,7 +167,8 @@
                             <button type="submit" class="btn btn-default go-button">Go</button>
                         </form>
                         <p class="about-item__content">
-                            <strong>Current state:</strong> static list of iObserve observatories is in place. Dynamic addition, edition, changes by registered users etc. pending.
+                            <strong>Current state:</strong> static list of iObserve observatories is in place.
+                            Dynamic addition, edition, changes by registered users etc. pending.
                         </p>
                     </div>
                 </div>
@@ -179,9 +180,21 @@
                         </h3>
                         <p class="about-item__content">
                             Telescopes & Instruments are managed directly in arcsecond.io. It will be open for changes to registered users.
+                            <a href="/telescopes">See them here!</a>
+                            <br/>You can use <code>?continent=&lt;Continent Name&gt;</code> to filter according to continents.
                         </p>
+                        <form class="form-inline">
+                            <div class="form-group form-group-sm">
+                                <div class="input-group">
+                                    <div class="input-group-addon go-api">/{{ api_version }}/telescopes/</div>
+                                    <input type="text" class="form-control go-input" placeholder="ex: New Technology Telescope" value="New Technology Telescope">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-default go-button">Go</button>
+                        </form>
                         <p class="about-item__content">
-                            <strong>Current state:</strong> started.
+                            <strong>Current state:</strong> static list of iObserve telescopes is in place.
+                            Dynamic addition, edition, changes by registered users etc. pending.
                         </p>
                     </div>
                 </div>
