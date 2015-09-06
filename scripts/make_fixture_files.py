@@ -8,8 +8,27 @@ import plistlib as plist
 import json
 from datetime import datetime
 import sys
-sys.path.append("..")
+sys.path.append(".")
+# from project.arcsecond.models.observingsites import *
+from project.arcsecond.models.telescopes import *
 from project.arcsecond.models.observingsites import *
+
+def clear_existing_objects():
+    import django
+    django.setup()
+
+    all_coordinates = Coordinates.objects.all()
+    all_domes = Dome.objects.all()
+    all_mirrors = Mirror.objects.all()
+    all_telescopes = Telescope.objects.all()
+    all_observingsites = ObservingSite.objects.all()
+
+    all_coordinates.delete()
+    all_domes.delete()
+    all_mirrors.delete()
+    all_telescopes.delete()
+    all_observingsites.delete()
+
 
 class ObservingSitesEncoder(json.JSONEncoder):
     def default(self, obj):
@@ -41,16 +60,22 @@ def get_observatory_names(continent_name):
     obs_list_plist = plist.readPlist(obs_list_file)
     return obs_list_plist[continent_name]
 
+def create_fixtures():
 
-def create_observing_site_fixtures():
+    index = 1
+    tools_index = 1
+
     continent_keys = ['Africa', 'Antarctica', 'Asia', 'Europe', 'North America', 'Oceania', 'South America']
+
     for continent_key in continent_keys:
         observatory_names = get_observatory_names(continent_key)
-        fixture_file_path = get_fixtures_file_path(continent_key, 'observing_sites')
-        print fixture_file_path
+        sites_file_path = get_fixtures_file_path(continent_key, 'observingsites')
+        telescopes_file_path = get_fixtures_file_path(continent_key, 'telescopes')
+        all_file_path = get_fixtures_file_path(continent_key, 'all')
+        print all_file_path
 
-        f = open(fixture_file_path, 'w')
-        f.write('[\n')
+        s1 = ""
+        s2 = ""
 
         for observatory_name in observatory_names:
             if u'→' in observatory_name: continue
@@ -64,6 +89,7 @@ def create_observing_site_fixtures():
 
             obs_plist = plist.readPlist(obs_file)
             obs = obs_plist['observatory'] if obs_plist.has_key('observatory') else obs_plist
+
             coords = obs['coordinates']
             longitude = coords['longitude']
             latitude = coords['latitude']
@@ -79,14 +105,13 @@ def create_observing_site_fixtures():
             longitude_value = longitude_sign * (abs(longitude[0]) + abs(longitude[1])/ 60.0 + abs(longitude[2])/3600.0)
             latitude_value = latitude_sign * (abs(latitude[0]) + abs(latitude[1])/ 60.0 + abs(latitude[2])/3600.0)
 
-            coordinates = {'model': 'arcsecond.Coordinates', 'pk': None}
+            coordinates = {'model': 'arcsecond.Coordinates', 'pk': index}
             coordinates['fields'] = { 'longitude': longitude_value, 'latitude': latitude_value, 'height': coords['altitude'] }
 
-            observing_site = {'model': 'arcsecond.ObservingSite', 'pk': None}
+            observing_site = {'model': 'arcsecond.ObservingSite', 'pk': index}
             observing_site['fields'] = {
                 'name': obs['name'],
                 'long_name': obs['longName'],
-                'IAUCode': obs['IAUCode'] if obs.has_key('IAUCode') else "",
                 'coordinates': [longitude_value, latitude_value],
                 'continent': continent_key,
                 'country': obs['country'],
@@ -94,41 +119,20 @@ def create_observing_site_fixtures():
                 'time_zone_name': obs['timeZoneName']
             }
 
+            rawIAUCode = obs['IAUCode'] if obs.has_key('IAUCode') else None
+            IAUCode = rawIAUCode if rawIAUCode is not None and rawIAUCode != "UNDEFINED_STRING_PROPERTY" and rawIAUCode != "?" and rawIAUCode != "" else None
+            if IAUCode is not None:
+                observing_site['fields']['IAUCode'] = IAUCode
+
             if obs['websites'].has_key('main'):
                 observing_site['fields']['homepage'] = obs['websites']['main']
             if obs['websites'].has_key('wikipedia-en'):
                 observing_site['fields']['wikipedia_article'] = obs['websites']['wikipedia-en']
 
-            f.write(json.dumps(coordinates, indent=4))
-            f.write(',\n')
-            f.write(json.dumps(observing_site, indent=4))
-
-            if observatory_name != observatory_names[-1]:
-                f.write(',\n')
-
-        f.write('\n]')
-        f.close()
-
-def create_telescope_fixtures():
-    continent_keys = ['Africa', 'Antarctica', 'Asia', 'Europe', 'North America', 'Oceania', 'South America']
-    for continent_key in continent_keys:
-        observatory_names = get_observatory_names(continent_key)
-        fixture_file_path = get_fixtures_file_path(continent_key, 'telescopes')
-        print fixture_file_path
-
-        s = ""
-        for observatory_name in observatory_names:
-            if u'→' in observatory_name: continue
-            print u' • ' + observatory_name
-            obs_file = get_obervatory_property_file(observatory_name)
-
-            if not os.path.exists(obs_file):
-                print '*** NOT FOUND', obs_file
-                # raise Exception
-                continue
-
-            obs_plist = plist.readPlist(obs_file)
-            obs = obs_plist['observatory'] if obs_plist.has_key('observatory') else obs_plist
+            s1 += json.dumps(coordinates, indent=4)
+            s1 += ',\n'
+            s1 += json.dumps(observing_site, indent=4)
+            s1 += ',\n'
 
             if obs['observingTools']:
                 for tool in obs['observingTools']:
@@ -136,16 +140,18 @@ def create_telescope_fixtures():
                         tel = tool['telescope']
                         tel_name = tool['observingTool']['longName']
 
-                        # print tel
-
-                        dome = {'model': 'arcsecond.Dome', 'pk': None}
+                        dome = {'model': 'arcsecond.Dome', 'pk': tools_index}
                         dome_name = tel_name+' Dome'
                         dome['fields'] = { 'name': dome_name }
 
-                        telescope = {'model':'arcsecond.Telescope', 'pk': None}
+                        telescope = {'model':'arcsecond.Telescope', 'pk': tools_index}
                         telescope['fields'] = {
-                            'dome': dome_name,
-                            'name': tel_name
+                            'dome': tools_index,
+                            'name': tel_name,
+                            'observing_site': index,
+                            'wavelength_domains': [
+                                Telescope.WAVELENGTH_DOMAIN_OPTICAL,
+                            ]
                         }
 
                         if 'mounting' in tel['mounting']:
@@ -166,10 +172,10 @@ def create_telescope_fixtures():
 
                         mirror = None
                         if 'primaryMirror' in tel:
-                            mirror = {'model':'arcsecond.Mirror', 'pk': None}
+                            mirror = {'model':'arcsecond.Mirror', 'pk': tools_index}
                             mirror['fields'] = {
                                 'mirror_index': 0,
-                                'telescope': tel_name,
+                                'telescope': index,
                                 'diameter': float(tel['primaryMirror']['diameter'])
                             }
 
@@ -180,22 +186,35 @@ def create_telescope_fixtures():
                         if 'hasLaserGuideStar' in tel:
                             telescope['fields']['has_laser_guide_star'] = True if tel['hasLaserGuideStar'] == 'YES' else False
 
-                        s += json.dumps(dome, indent=4)
-                        s += ',\n'
+                        s2 += json.dumps(dome, indent=4)
+                        s2 += ',\n'
+                        s2 += json.dumps(telescope, indent=4)
+                        s2 += ',\n'
                         if mirror is not None:
-                            s += json.dumps(mirror, indent=4)
-                            s += ',\n'
-                        s += json.dumps(telescope, indent=4)
-                        s += ',\n'
+                            s2 += json.dumps(mirror, indent=4)
+                            s2 += ',\n'
 
-        s = s[:-2]
-        f = open(fixture_file_path, 'w')
+                        tools_index += 1
+
+            index += 1
+
+
+        # s1 = s1[:-2]
+        s2 = s2[:-2]
+
+        f = open(all_file_path, 'w')
         f.write('[\n')
-        f.write(s)
+        f.write(s1)
+        # f.write('\n]')
+        # f.close()
+        #
+        # f = open(telescopes_file_path, 'w')
+        # f.write('[\n')
+        f.write(s2)
         f.write('\n]')
         f.close()
 
 
 if __name__ == '__main__':
-    create_observing_site_fixtures()
-    create_telescope_fixtures()
+    clear_existing_objects()
+    create_fixtures()

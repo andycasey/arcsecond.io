@@ -1,0 +1,531 @@
+[
+{
+    "pk": 79, 
+    "model": "arcsecond.Coordinates", 
+    "fields": {
+        "latitude": -34.916666666666664, 
+        "longitude": 138.58333333333334, 
+        "height": 30
+    }
+},
+{
+    "pk": 79, 
+    "model": "arcsecond.ObservingSite", 
+    "fields": {
+        "name": "Adelaide", 
+        "time_zone_name": "Australia/Adelaide", 
+        "country": "Australia", 
+        "time_zone": "+09:00", 
+        "coordinates": [
+            138.58333333333334, 
+            -34.916666666666664
+        ], 
+        "long_name": "Adelaide Observatory", 
+        "homepage": "http://www.adelaideobservatory.org", 
+        "continent": "Oceania", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Adelaide_Observatory"
+    }
+},
+{
+    "pk": 80, 
+    "model": "arcsecond.Coordinates", 
+    "fields": {
+        "latitude": -37.831388888888895, 
+        "longitude": 144.9758, 
+        "height": 52
+    }
+},
+{
+    "pk": 80, 
+    "model": "arcsecond.ObservingSite", 
+    "fields": {
+        "name": "Melbourne", 
+        "time_zone_name": "Australia/Melbourne", 
+        "country": "Australia", 
+        "time_zone": "+10:00", 
+        "coordinates": [
+            144.9758, 
+            -37.831388888888895
+        ], 
+        "IAUCode": "907", 
+        "long_name": "Melbourne Observatory", 
+        "homepage": "http://www.onlymelbourne.com.au/old-melbourne-observatory", 
+        "continent": "Oceania", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Melbourne_Observatory"
+    }
+},
+{
+    "pk": 81, 
+    "model": "arcsecond.Coordinates", 
+    "fields": {
+        "latitude": -31.267777777777777, 
+        "longitude": 149.09972222222223, 
+        "height": 866
+    }
+},
+{
+    "pk": 81, 
+    "model": "arcsecond.ObservingSite", 
+    "fields": {
+        "name": "Mopra", 
+        "time_zone_name": "Australia/Sydney", 
+        "country": "Australia", 
+        "time_zone": "+10:00", 
+        "coordinates": [
+            149.09972222222223, 
+            -31.267777777777777
+        ], 
+        "long_name": "Mopra Observatory", 
+        "homepage": "http://www.narrabri.atnf.csiro.au/mopra/", 
+        "continent": "Oceania", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Mopra_Observatory"
+    }
+},
+{
+    "pk": 82, 
+    "model": "arcsecond.Coordinates", 
+    "fields": {
+        "latitude": -35.32027777777778, 
+        "longitude": 149.0077, 
+        "height": 770
+    }
+},
+{
+    "pk": 82, 
+    "model": "arcsecond.ObservingSite", 
+    "fields": {
+        "name": "Mount Stromlo", 
+        "time_zone_name": "Australia/Sydney", 
+        "country": "Australia", 
+        "time_zone": "+10:00", 
+        "coordinates": [
+            149.0077, 
+            -35.32027777777778
+        ], 
+        "IAUCode": "414", 
+        "long_name": "Mount Stromlo Observatory", 
+        "homepage": "http://rsaa.anu.edu.au/observatories/mount-stromlo-observatory", 
+        "continent": "Oceania", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Mount_Stromlo_Observatory"
+    }
+},
+{
+    "pk": 83, 
+    "model": "arcsecond.Coordinates", 
+    "fields": {
+        "latitude": -26.703319444444443, 
+        "longitude": 116.67081388888889, 
+        "height": 378
+    }
+},
+{
+    "pk": 83, 
+    "model": "arcsecond.ObservingSite", 
+    "fields": {
+        "name": "MRO", 
+        "time_zone_name": "Australia/Perth", 
+        "country": "Australia", 
+        "time_zone": "+08:00", 
+        "coordinates": [
+            116.67081388888889, 
+            -26.703319444444443
+        ], 
+        "long_name": "Murchison Radio-astronomy Observatory", 
+        "homepage": "http://www.atnf.csiro.au/facilities/mro.html", 
+        "continent": "Oceania", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Murchison_Radio-astronomy_Observatory"
+    }
+},
+{
+    "pk": 84, 
+    "model": "arcsecond.Coordinates", 
+    "fields": {
+        "latitude": -32.99996277777778, 
+        "longitude": 148.26232194444444, 
+        "height": 100
+    }
+},
+{
+    "pk": 84, 
+    "model": "arcsecond.ObservingSite", 
+    "fields": {
+        "name": "Parkes", 
+        "time_zone_name": "Australia/Sydney", 
+        "country": "Australia", 
+        "time_zone": "+10:00", 
+        "coordinates": [
+            148.26232194444444, 
+            -32.99996277777778
+        ], 
+        "long_name": "Parkes Observatory", 
+        "homepage": "http://www.parkes.atnf.csiro.au/", 
+        "continent": "Oceania", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Parkes_Observatory"
+    }
+},
+{
+    "pk": 85, 
+    "model": "arcsecond.Coordinates", 
+    "fields": {
+        "latitude": -30.31277777777778, 
+        "longitude": 149.56327777777778, 
+        "height": 100
+    }
+},
+{
+    "pk": 85, 
+    "model": "arcsecond.ObservingSite", 
+    "fields": {
+        "name": "Paul Wild", 
+        "time_zone_name": "Australia/Sydney", 
+        "country": "Australia", 
+        "time_zone": "+09:00", 
+        "coordinates": [
+            149.56327777777778, 
+            -30.31277777777778
+        ], 
+        "long_name": "Paul Wild Observatory", 
+        "homepage": "http://www.narrabri.atnf.csiro.au/", 
+        "continent": "Oceania", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Paul_Wild_Observatory"
+    }
+},
+{
+    "pk": 86, 
+    "model": "arcsecond.Coordinates", 
+    "fields": {
+        "latitude": -31.277105555555554, 
+        "longitude": 149.0661, 
+        "height": 1164
+    }
+},
+{
+    "pk": 86, 
+    "model": "arcsecond.ObservingSite", 
+    "fields": {
+        "name": "Siding Spring", 
+        "time_zone_name": "Australia/Sydney", 
+        "country": "Australia", 
+        "time_zone": "+10:00", 
+        "coordinates": [
+            149.0661, 
+            -31.277105555555554
+        ], 
+        "IAUCode": "413", 
+        "long_name": "Siding Spring Observatory", 
+        "homepage": "http://rsaa.anu.edu.au/observatories/siding-spring-observatory", 
+        "continent": "Oceania", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Siding_Spring_Observatory"
+    }
+},
+{
+    "pk": 133, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "22m Mopra Radio Telescope Dome"
+    }
+},
+{
+    "pk": 133, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "22m Mopra Radio Telescope", 
+        "observing_site": 81, 
+        "has_active_optics": false, 
+        "dome": 133, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 133, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 22000.0, 
+        "mirror_index": 0, 
+        "telescope": 81
+    }
+},
+{
+    "pk": 134, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "64-metre Telescope Dome"
+    }
+},
+{
+    "pk": 134, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "64-metre Telescope", 
+        "observing_site": 84, 
+        "has_active_optics": false, 
+        "dome": 134, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 134, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 64000.0, 
+        "mirror_index": 0, 
+        "telescope": 84
+    }
+},
+{
+    "pk": 135, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Australia Telescope Compact Array Dome"
+    }
+},
+{
+    "pk": 135, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "Australia Telescope Compact Array", 
+        "observing_site": 85, 
+        "has_active_optics": false, 
+        "dome": 135, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 135, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 22000.0, 
+        "mirror_index": 0, 
+        "telescope": 85
+    }
+},
+{
+    "pk": 136, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Anglo-Australian Telescope Dome"
+    }
+},
+{
+    "pk": 136, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "Anglo-Australian Telescope", 
+        "observing_site": 86, 
+        "has_active_optics": false, 
+        "dome": 136, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 136, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 3900.0, 
+        "mirror_index": 0, 
+        "telescope": 86
+    }
+},
+{
+    "pk": 137, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "UK Schmidt Telescope Dome"
+    }
+},
+{
+    "pk": 137, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "UK Schmidt Telescope", 
+        "observing_site": 86, 
+        "has_active_optics": false, 
+        "dome": 137, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 137, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 1200.0, 
+        "mirror_index": 0, 
+        "telescope": 86
+    }
+},
+{
+    "pk": 138, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Faulkes Telescope South Dome"
+    }
+},
+{
+    "pk": 138, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "Faulkes Telescope South", 
+        "observing_site": 86, 
+        "has_active_optics": false, 
+        "dome": 138, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 138, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 2000.0, 
+        "mirror_index": 0, 
+        "telescope": 86
+    }
+},
+{
+    "pk": 139, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "SkyMapper Telescope Dome"
+    }
+},
+{
+    "pk": 139, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "SkyMapper Telescope", 
+        "observing_site": 86, 
+        "has_active_optics": false, 
+        "dome": 139, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 139, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 1300.0, 
+        "mirror_index": 0, 
+        "telescope": 86
+    }
+},
+{
+    "pk": 140, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Advanced Technology Telescope Dome"
+    }
+},
+{
+    "pk": 140, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "Advanced Technology Telescope", 
+        "observing_site": 86, 
+        "has_active_optics": false, 
+        "dome": 140, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 140, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 2300.0, 
+        "mirror_index": 0, 
+        "telescope": 86
+    }
+},
+{
+    "pk": 141, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "0.5m Uppsala Southern Schmidt Telescope Dome"
+    }
+},
+{
+    "pk": 141, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "0.5m Uppsala Southern Schmidt Telescope", 
+        "observing_site": 86, 
+        "has_active_optics": false, 
+        "dome": 141, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 141, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 500.0, 
+        "mirror_index": 0, 
+        "telescope": 86
+    }
+},
+{
+    "pk": 142, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Automated Patrol Telescope Dome"
+    }
+},
+{
+    "pk": 142, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "Automated Patrol Telescope", 
+        "observing_site": 86, 
+        "has_active_optics": false, 
+        "dome": 142, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 142, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 500.0, 
+        "mirror_index": 0, 
+        "telescope": 86
+    }
+}
+]

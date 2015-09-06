@@ -11,3 +11,5 @@ from .coordinates import *
 from .observingsites import *
 from .telegrams import *
 from .charts import *
+from .telescopes import *
+

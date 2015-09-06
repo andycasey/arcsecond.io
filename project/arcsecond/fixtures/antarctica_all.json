@@ -1,0 +1,237 @@
+[
+{
+    "pk": 7, 
+    "model": "arcsecond.Coordinates", 
+    "fields": {
+        "latitude": -80.36666666666666, 
+        "longitude": 77.35, 
+        "height": 4093
+    }
+},
+{
+    "pk": 7, 
+    "model": "arcsecond.ObservingSite", 
+    "fields": {
+        "name": "Dome A", 
+        "time_zone_name": "Antarctica/Vostok", 
+        "country": "Antarctica", 
+        "time_zone": "+00:00", 
+        "coordinates": [
+            77.35, 
+            -80.36666666666666
+        ], 
+        "long_name": "Dome A", 
+        "homepage": "http://ccaa.pmo.ac.cn/plato/", 
+        "continent": "Antarctica", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Dome_A"
+    }
+},
+{
+    "pk": 8, 
+    "model": "arcsecond.Coordinates", 
+    "fields": {
+        "latitude": -75.1, 
+        "longitude": 123.33333333333333, 
+        "height": 3233
+    }
+},
+{
+    "pk": 8, 
+    "model": "arcsecond.ObservingSite", 
+    "fields": {
+        "name": "Dome C", 
+        "time_zone_name": "Antarctica/Vostok", 
+        "country": "Antarctica", 
+        "time_zone": "+00:00", 
+        "coordinates": [
+            123.33333333333333, 
+            -75.1
+        ], 
+        "long_name": "Dome C", 
+        "continent": "Antarctica", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Dome_C"
+    }
+},
+{
+    "pk": 9, 
+    "model": "arcsecond.Coordinates", 
+    "fields": {
+        "latitude": -77.31666666666666, 
+        "longitude": 39.7, 
+        "height": 3810
+    }
+},
+{
+    "pk": 9, 
+    "model": "arcsecond.ObservingSite", 
+    "fields": {
+        "name": "Dome F", 
+        "time_zone_name": "Antarctica/Syowa", 
+        "country": "Antarctica", 
+        "time_zone": "+00:00", 
+        "coordinates": [
+            39.7, 
+            -77.31666666666666
+        ], 
+        "long_name": "Dome F", 
+        "homepage": "http://onekilopars.ec", 
+        "continent": "Antarctica", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Dome_F"
+    }
+},
+{
+    "pk": 22, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "PLATeau Observatory Dome"
+    }
+},
+{
+    "pk": 22, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "PLATeau Observatory", 
+        "observing_site": 7, 
+        "has_active_optics": false, 
+        "dome": 22, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 22, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 0.0, 
+        "mirror_index": 0, 
+        "telescope": 7
+    }
+},
+{
+    "pk": 23, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Differential Image Motion Monitor Dome"
+    }
+},
+{
+    "pk": 23, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "Differential Image Motion Monitor", 
+        "observing_site": 8, 
+        "has_active_optics": false, 
+        "dome": 23, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 23, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 2800.0, 
+        "mirror_index": 0, 
+        "telescope": 8
+    }
+},
+{
+    "pk": 24, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Generalized Seeing Monitor Dome"
+    }
+},
+{
+    "pk": 24, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "Generalized Seeing Monitor", 
+        "observing_site": 8, 
+        "has_active_optics": false, 
+        "dome": 24, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 24, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 0.0, 
+        "mirror_index": 0, 
+        "telescope": 8
+    }
+},
+{
+    "pk": 25, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Single Star Scidar Dome"
+    }
+},
+{
+    "pk": 25, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "Single Star Scidar", 
+        "observing_site": 8, 
+        "has_active_optics": false, 
+        "dome": 25, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 25, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 0.0, 
+        "mirror_index": 0, 
+        "telescope": 8
+    }
+},
+{
+    "pk": 26, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "SKY-CAM Dome"
+    }
+},
+{
+    "pk": 26, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "SKY-CAM", 
+        "observing_site": 8, 
+        "has_active_optics": false, 
+        "dome": 26, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 26, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 0.0, 
+        "mirror_index": 0, 
+        "telescope": 8
+    }
+}
+]

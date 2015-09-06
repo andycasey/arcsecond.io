@@ -1,0 +1,919 @@
+[
+{
+    "pk": 10, 
+    "model": "arcsecond.Coordinates", 
+    "fields": {
+        "latitude": -6.8255, 
+        "longitude": 107.616, 
+        "height": 1286.49
+    }
+},
+{
+    "pk": 10, 
+    "model": "arcsecond.ObservingSite", 
+    "fields": {
+        "name": "Bosscha", 
+        "time_zone_name": "Asia/Jakarta", 
+        "country": "Indonesia", 
+        "time_zone": "+07:00", 
+        "coordinates": [
+            107.616, 
+            -6.8255
+        ], 
+        "long_name": "Bosscha Observatory", 
+        "homepage": "http://bosscha.itb.ac.id/", 
+        "continent": "Asia", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Bosscha_Observatory"
+    }
+},
+{
+    "pk": 11, 
+    "model": "arcsecond.Coordinates", 
+    "fields": {
+        "latitude": 40.33027777777778, 
+        "longitude": 44.27333333333333, 
+        "height": 1413.0
+    }
+},
+{
+    "pk": 11, 
+    "model": "arcsecond.ObservingSite", 
+    "fields": {
+        "name": "Byurakan", 
+        "time_zone_name": "Asia/Yerevan", 
+        "country": "Armenia", 
+        "time_zone": "+04:00", 
+        "coordinates": [
+            44.27333333333333, 
+            40.33027777777778
+        ], 
+        "IAUCode": "123", 
+        "long_name": "Byurakan Astrophysical Observatory", 
+        "homepage": "http://www.bao.am", 
+        "continent": "Asia", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Byurakan_Observatory"
+    }
+},
+{
+    "pk": 12, 
+    "model": "arcsecond.Coordinates", 
+    "fields": {
+        "latitude": 19.096516666666666, 
+        "longitude": 74.04974166666666, 
+        "height": 700
+    }
+},
+{
+    "pk": 12, 
+    "model": "arcsecond.ObservingSite", 
+    "fields": {
+        "name": "GMRT", 
+        "time_zone_name": "Asia/Kolkata", 
+        "country": "India", 
+        "time_zone": "+05:30", 
+        "coordinates": [
+            74.04974166666666, 
+            19.096516666666666
+        ], 
+        "long_name": "Giant Metrewave Radio Telescope ", 
+        "homepage": "http://gmrt.ncra.tifr.res.in/", 
+        "continent": "Asia", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Giant_Metrewave_Radio_Telescope"
+    }
+},
+{
+    "pk": 13, 
+    "model": "arcsecond.Coordinates", 
+    "fields": {
+        "latitude": 24.653055555555554, 
+        "longitude": 72.78688317888889, 
+        "height": 1680
+    }
+},
+{
+    "pk": 13, 
+    "model": "arcsecond.ObservingSite", 
+    "fields": {
+        "name": "Gurushikhar", 
+        "time_zone_name": "Asia/Kolkata", 
+        "country": "India", 
+        "time_zone": "+05:30", 
+        "coordinates": [
+            72.78688317888889, 
+            24.653055555555554
+        ], 
+        "long_name": "Gurushikhar Observatory", 
+        "continent": "Asia"
+    }
+},
+{
+    "pk": 14, 
+    "model": "arcsecond.Coordinates", 
+    "fields": {
+        "latitude": 22.474555555555554, 
+        "longitude": 114.22, 
+        "height": -9.8
+    }
+},
+{
+    "pk": 14, 
+    "model": "arcsecond.ObservingSite", 
+    "fields": {
+        "name": "Hong Kong", 
+        "time_zone_name": "Asia/Hong_Kong", 
+        "country": "China", 
+        "time_zone": "+08:00", 
+        "coordinates": [
+            114.22, 
+            22.474555555555554
+        ], 
+        "IAUCode": "D17", 
+        "long_name": "Honk Kong Observatory", 
+        "homepage": "http://www.hko.gov.hk", 
+        "continent": "Asia", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Hong_Kong_Observatory"
+    }
+},
+{
+    "pk": 15, 
+    "model": "arcsecond.Coordinates", 
+    "fields": {
+        "latitude": 19.066666666666666, 
+        "longitude": 73.66666666666667, 
+        "height": 1000.0
+    }
+},
+{
+    "pk": 15, 
+    "model": "arcsecond.ObservingSite", 
+    "fields": {
+        "name": "IGO", 
+        "time_zone_name": "Asia/Kolkata", 
+        "country": "India", 
+        "time_zone": "+05:30", 
+        "coordinates": [
+            73.66666666666667, 
+            19.066666666666666
+        ], 
+        "long_name": "Iucaa Girawali Observatory", 
+        "homepage": "http://akashmitra.wordpress.com", 
+        "continent": "Asia"
+    }
+},
+{
+    "pk": 16, 
+    "model": "arcsecond.Coordinates", 
+    "fields": {
+        "latitude": 34.577075, 
+        "longitude": 133.59395555555557, 
+        "height": 372
+    }
+},
+{
+    "pk": 16, 
+    "model": "arcsecond.ObservingSite", 
+    "fields": {
+        "name": "Okayama", 
+        "time_zone_name": "Asia/Tokyo", 
+        "country": "Japan", 
+        "time_zone": "+09:00", 
+        "coordinates": [
+            133.59395555555557, 
+            34.577075
+        ], 
+        "IAUCode": "371", 
+        "long_name": "Okayama Astrophysical Observatory", 
+        "homepage": "http://www.oao.nao.ac.jp/en/", 
+        "continent": "Asia", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/National_Astronomical_Observatory_of_Japan"
+    }
+},
+{
+    "pk": 17, 
+    "model": "arcsecond.Coordinates", 
+    "fields": {
+        "latitude": 11.38361111111111, 
+        "longitude": 76.66611111111112, 
+        "height": 700
+    }
+},
+{
+    "pk": 17, 
+    "model": "arcsecond.ObservingSite", 
+    "fields": {
+        "name": "ORT", 
+        "time_zone_name": "Asia/Kolkata", 
+        "country": "India", 
+        "time_zone": "+05:30", 
+        "coordinates": [
+            76.66611111111112, 
+            11.38361111111111
+        ], 
+        "long_name": "Ooty Radio Telescope", 
+        "homepage": "http://www.ncra.tifr.res.in/ncra_hpage/ort/ort.html", 
+        "continent": "Asia", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Ooty_Radio_Telescope"
+    }
+},
+{
+    "pk": 18, 
+    "model": "arcsecond.Coordinates", 
+    "fields": {
+        "latitude": 43.64666666666667, 
+        "longitude": 41.44044722222222, 
+        "height": 2070.0
+    }
+},
+{
+    "pk": 18, 
+    "model": "arcsecond.ObservingSite", 
+    "fields": {
+        "name": "SAO", 
+        "time_zone_name": "Europe/Moscow", 
+        "country": "Russia", 
+        "time_zone": "+03:00", 
+        "coordinates": [
+            41.44044722222222, 
+            43.64666666666667
+        ], 
+        "long_name": "Special Astrophysical Observatory", 
+        "homepage": "http://www.sao.ru", 
+        "continent": "Asia", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Special_Astrophysical_Observatory_of_the_Russian_Academy_of_Science"
+    }
+},
+{
+    "pk": 19, 
+    "model": "arcsecond.Coordinates", 
+    "fields": {
+        "latitude": 18.573725, 
+        "longitude": 98.48223888888889, 
+        "height": 2457.0
+    }
+},
+{
+    "pk": 19, 
+    "model": "arcsecond.ObservingSite", 
+    "fields": {
+        "name": "TNO", 
+        "time_zone_name": "Asia/Bangkok", 
+        "country": "Thailand", 
+        "time_zone": "07:00", 
+        "coordinates": [
+            98.48223888888889, 
+            18.573725
+        ], 
+        "long_name": "Thai National Observatory", 
+        "homepage": "http://www.narit.or.th/en/index.php/facilities/thai-national-observatory-tno/overview", 
+        "continent": "Asia", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Thai_National_Observatory"
+    }
+},
+{
+    "pk": 20, 
+    "model": "arcsecond.Coordinates", 
+    "fields": {
+        "latitude": 12.566666666666666, 
+        "longitude": 78.83333333333333, 
+        "height": 700
+    }
+},
+{
+    "pk": 20, 
+    "model": "arcsecond.ObservingSite", 
+    "fields": {
+        "name": "VBO", 
+        "time_zone_name": "Asia/Kolkata", 
+        "country": "India", 
+        "time_zone": "+05:30", 
+        "coordinates": [
+            78.83333333333333, 
+            12.566666666666666
+        ], 
+        "long_name": "Vainu Bappu Observatory", 
+        "homepage": "http://www.iiap.res.in/centers/vbo", 
+        "continent": "Asia", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Vainu_Bappu_Observatory"
+    }
+},
+{
+    "pk": 21, 
+    "model": "arcsecond.Coordinates", 
+    "fields": {
+        "latitude": 30.595555555555553, 
+        "longitude": 34.7625, 
+        "height": 875
+    }
+},
+{
+    "pk": 21, 
+    "model": "arcsecond.ObservingSite", 
+    "fields": {
+        "name": "Wise", 
+        "time_zone_name": "Asia/Jerusalem", 
+        "country": "Israel", 
+        "time_zone": "+02:00", 
+        "coordinates": [
+            34.7625, 
+            30.595555555555553
+        ], 
+        "IAUCode": "097", 
+        "long_name": "Wise Observatory", 
+        "homepage": "http://wise-obs.tau.ac.il", 
+        "continent": "Asia", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Wise_Observatory"
+    }
+},
+{
+    "pk": 27, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Zeiss double refractor Dome"
+    }
+},
+{
+    "pk": 27, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "Zeiss double refractor", 
+        "observing_site": 10, 
+        "has_active_optics": false, 
+        "dome": 27, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 27, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 600.0, 
+        "mirror_index": 0, 
+        "telescope": 10
+    }
+},
+{
+    "pk": 28, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Schmidt Telescope (Bima Sakti) Dome"
+    }
+},
+{
+    "pk": 28, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "Schmidt Telescope (Bima Sakti)", 
+        "observing_site": 10, 
+        "has_active_optics": false, 
+        "dome": 28, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 28, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 711.2, 
+        "mirror_index": 0, 
+        "telescope": 10
+    }
+},
+{
+    "pk": 29, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Bamberg Refractor Dome"
+    }
+},
+{
+    "pk": 29, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "Bamberg Refractor", 
+        "observing_site": 10, 
+        "has_active_optics": false, 
+        "dome": 29, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 29, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 370.0, 
+        "mirror_index": 0, 
+        "telescope": 10
+    }
+},
+{
+    "pk": 30, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "GOTO Dome"
+    }
+},
+{
+    "pk": 30, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "GOTO", 
+        "observing_site": 10, 
+        "has_active_optics": false, 
+        "dome": 30, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 30, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 0.0, 
+        "mirror_index": 0, 
+        "telescope": 10
+    }
+},
+{
+    "pk": 31, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Unitron Refractor Dome"
+    }
+},
+{
+    "pk": 31, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "Unitron Refractor", 
+        "observing_site": 10, 
+        "has_active_optics": false, 
+        "dome": 31, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 31, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 130.0, 
+        "mirror_index": 0, 
+        "telescope": 10
+    }
+},
+{
+    "pk": 32, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Cassegrain 2.6m Dome"
+    }
+},
+{
+    "pk": 32, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "Cassegrain 2.6m", 
+        "observing_site": 11, 
+        "has_active_optics": false, 
+        "dome": 32, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 32, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 2640.0, 
+        "mirror_index": 0, 
+        "telescope": 11
+    }
+},
+{
+    "pk": 33, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Schmidt 1.0 Dome"
+    }
+},
+{
+    "pk": 33, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "Schmidt 1.0", 
+        "observing_site": 11, 
+        "has_active_optics": false, 
+        "dome": 33, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 33, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 1000.0, 
+        "mirror_index": 0, 
+        "telescope": 11
+    }
+},
+{
+    "pk": 34, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "The 188cm Telescope Dome"
+    }
+},
+{
+    "pk": 34, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "The 188cm Telescope", 
+        "observing_site": 16, 
+        "has_active_optics": false, 
+        "dome": 34, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 34, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 1880.0, 
+        "mirror_index": 0, 
+        "telescope": 16
+    }
+},
+{
+    "pk": 35, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "The 91cm Telescope Dome"
+    }
+},
+{
+    "pk": 35, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "The 91cm Telescope", 
+        "observing_site": 16, 
+        "has_active_optics": false, 
+        "dome": 35, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 35, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 910.0, 
+        "mirror_index": 0, 
+        "telescope": 16
+    }
+},
+{
+    "pk": 36, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "The 50cm Telescope Dome"
+    }
+},
+{
+    "pk": 36, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "The 50cm Telescope", 
+        "observing_site": 16, 
+        "has_active_optics": false, 
+        "dome": 36, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 36, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 500.0, 
+        "mirror_index": 0, 
+        "telescope": 16
+    }
+},
+{
+    "pk": 37, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "The 65cm Solar Telescope Dome"
+    }
+},
+{
+    "pk": 37, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "The 65cm Solar Telescope", 
+        "observing_site": 16, 
+        "has_active_optics": false, 
+        "dome": 37, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 37, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 910.0, 
+        "mirror_index": 0, 
+        "telescope": 16
+    }
+},
+{
+    "pk": 38, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Large Altazimuth Telescope (BTA-6) Dome"
+    }
+},
+{
+    "pk": 38, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "Large Altazimuth Telescope (BTA-6)", 
+        "observing_site": 18, 
+        "has_active_optics": false, 
+        "dome": 38, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 38, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 6000.0, 
+        "mirror_index": 0, 
+        "telescope": 18
+    }
+},
+{
+    "pk": 39, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Zeiss-1000 Dome"
+    }
+},
+{
+    "pk": 39, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "Zeiss-1000", 
+        "observing_site": 18, 
+        "has_active_optics": false, 
+        "dome": 39, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 39, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 1000.0, 
+        "mirror_index": 0, 
+        "telescope": 18
+    }
+},
+{
+    "pk": 40, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Zeiss 60cm Dome"
+    }
+},
+{
+    "pk": 40, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "Zeiss 60cm", 
+        "observing_site": 18, 
+        "has_active_optics": false, 
+        "dome": 40, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 40, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 600.0, 
+        "mirror_index": 0, 
+        "telescope": 18
+    }
+},
+{
+    "pk": 41, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Academy of Science Radio Telescope (RATAN-600) Dome"
+    }
+},
+{
+    "pk": 41, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "Academy of Science Radio Telescope (RATAN-600)", 
+        "observing_site": 18, 
+        "has_active_optics": false, 
+        "dome": 41, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 41, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 576000.0, 
+        "mirror_index": 0, 
+        "telescope": 18
+    }
+},
+{
+    "pk": 42, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Thai National Telescope Dome"
+    }
+},
+{
+    "pk": 42, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "Thai National Telescope", 
+        "observing_site": 19, 
+        "has_active_optics": false, 
+        "dome": 42, 
+        "optical_design": "rc", 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 42, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 2400.0, 
+        "mirror_index": 0, 
+        "telescope": 19
+    }
+},
+{
+    "pk": 43, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "0.5m Telescope Dome"
+    }
+},
+{
+    "pk": 43, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "0.5m Telescope", 
+        "observing_site": 19, 
+        "has_active_optics": false, 
+        "dome": 43, 
+        "optical_design": "rc", 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 43, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 500.0, 
+        "mirror_index": 0, 
+        "telescope": 19
+    }
+},
+{
+    "pk": 44, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Vainu Bappu Telescope Dome"
+    }
+},
+{
+    "pk": 44, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "Vainu Bappu Telescope", 
+        "observing_site": 20, 
+        "has_active_optics": false, 
+        "dome": 44, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 44, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 2340.0, 
+        "mirror_index": 0, 
+        "telescope": 20
+    }
+},
+{
+    "pk": 45, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Boller-Chivens Telescope Dome"
+    }
+},
+{
+    "pk": 45, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "Boller-Chivens Telescope", 
+        "observing_site": 21, 
+        "has_active_optics": false, 
+        "dome": 45, 
+        "optical_design": "rc", 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 45, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 1016.0, 
+        "mirror_index": 0, 
+        "telescope": 21
+    }
+}
+]
