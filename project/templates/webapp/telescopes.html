@@ -1,0 +1,72 @@
+{% extends 'arcsecond/white-navbar.html' %}
+
+{% load staticfiles %}
+{% load i18n %}
+
+{% block head_end_block %}
+    {{ block.super }}
+    <link href="{% static 'webapp/observingsites-angular.css' %}" rel="stylesheet">
+{% endblock head_end_block %}
+
+{% block navbar-right %}
+    {% include 'arcsecond/user-navbar-dropdown.html' %}
+{% endblock navbar-right %}
+
+{% block body_block %}
+
+    <div class="site-wrapper-short">
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="text-center">
+                    <img src="{% static 'arcsecond/img/BigTelescopeIcon_512x512.png' %}" width=25px> Telescopes</h3>
+            </div>
+        </div>
+
+        <div class="row" ng-controller="ObservingSitesNavigationCtlr as sitesCtlr" id="ObservingSitesNavigationCtlr">
+            <div class="col-md-2 col-md-offset-2" id="continent-list-container">
+                <ul class="nav nav-pills nav-stacked text-right left">
+                    <li role="presentation" ng-repeat="continent in sitesCtlr.continents">
+                        <a data-target="#" data-toggle="pill" href="#" ng-click="sitesCtlr.selectContinent(continent.key)">[[continent.name]]
+                            <span class="badge">[[ sitesCtlr.sites[continent.key].length ]]</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-3" id="site-list-container">
+                <div ng-repeat="continent in sitesCtlr.continents">
+                    <ul class="nav nav-pills nav-stacked site-list [[continent.key]] dark">
+                        <li role="presentation" ng-repeat="site in sitesCtlr.sites[continent.key]">
+                            <a data-target="#" data-toggle="pill" href="#"
+                               ng-click="sitesCtlr.selectSite(continent.key, $index)">
+                                <img src="{% static 'arcsecond/img/BigTelescopeIcon_512x512.png' %}" width="20px">
+                                <span class="site name">[[site.long_name]]</span><br/>
+                                <span class="site country">[[site.country]]</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-3" id="site-property-container" ng-show="sitesCtlr.selectedSite">
+                <pre>[[ sitesCtlr.selectedSite | json ]]</pre>
+            </div>
+        </div>
+
+        <br/>
+        <div id="map-canvas-container" class="fluid-row">
+            <div id="map-canvas"></div>
+        </div>
+
+    </div>
+
+{% endblock body_block %}
+
+{% block after_body_raw_block %}
+    {{ block.super }}
+    <script src="{% static 'webapp/app.js' %}"></script>
+    <script src="{% static 'webapp/controllers.js' %}"></script>
+    <script src="{% static 'webapp/maps.js' %}"></script>
+{% endblock after_body_raw_block %}
+
