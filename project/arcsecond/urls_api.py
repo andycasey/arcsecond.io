@@ -7,12 +7,14 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from project.arcsecond import views
 from project.arcsecond.models import constants
 
+full_string_regex = "[\s\d\w()\.+-_\'\,\:]+"
+
 urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
 
     # ----- Objects -----
 
-    url(r'^1/objects/(?P<name>[\s\+\.0-9a-zA-Z_-]+)/$',
+    url(r'^1/objects/(?P<name>'+full_string_regex+')/$',
         views.AstronomicalObjectDetailAPIView.as_view(),
         name='astronomicalobject-detail'),
 
@@ -27,14 +29,14 @@ urlpatterns = patterns('',
         views.ExoplanetDetailAPIView.as_view(),
         name="exoplanet-detail"),
 
-    url(r'^1/exoplanets/(?P<name>[\(\)\.\'\s\+0-9a-zA-Z_-]+)/$',
+    url(r'^1/exoplanets/(?P<name>'+full_string_regex+')/$',
         views.ExoplanetNamedDetailAPIView.as_view(),
         name="exoplanet-named-detail"),
 
 
     # ----- Observing Sites -----
 
-    url(r'^1/observingsites/(?P<name>[\s\+\.0-9a-zA-Z_-]+)/$',
+    url(r'^1/observingsites/(?P<name>'+full_string_regex+')/$',
         views.ObservingSiteDetailAPIView.as_view(),
         name="observingsite-detail"),
 
@@ -45,7 +47,7 @@ urlpatterns = patterns('',
 
     # ----- Telescopes -----
 
-    url(r'^1/telescopes/(?P<name>[\s\+\.0-9a-zA-Z_-]+)/$',
+    url(r'^1/telescopes/(?P<name>'+full_string_regex+')/$',
         views.TelescopeDetailAPIView.as_view(),
         name="telescope-detail"),
 
@@ -73,7 +75,7 @@ urlpatterns = patterns('',
 
     # ----- People -----
 
-    url(r'^1/people/(?P<name>[A-Za-z\.\+]+)/$',
+    url(r'^1/people/(?P<name>'+full_string_regex+')/$',
         views.PersonDetailAPIView.as_view(),
         name="person-detail"),
 
@@ -91,7 +93,7 @@ urlpatterns = patterns('',
 
     # ----- Finding Charts -----
 
-    url(r'^1/findingcharts/(?P<input>[\(\)\,\:\s\+\-\.0-9a-zA-Z_]+)/$',
+    url(r'^1/findingcharts/(?P<input>'+full_string_regex+')/$',
         views.FindingChartListAPIView.as_view(),
         name="findingchart-list"),
 

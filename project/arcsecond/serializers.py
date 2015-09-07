@@ -1,4 +1,3 @@
-
 from rest_framework import serializers
 from rest_framework.reverse import reverse
 from .models import *
@@ -207,18 +206,6 @@ class CoordinatesSerializer(serializers.ModelSerializer):
 
 ######################## Observing Sites ########################
 
-# class TelescopeHyperlinkRelatedField(serializers.HyperlinkedRelatedField):
-#     # http://www.django-rest-framework.org/api-guide/relations/#custom-hyperlinked-fields
-#
-#     view_name = 'telescope-detail'
-#     queryset = Telescope.objects.all()
-#
-#     def get_url(self, obj, view_name, request, format):
-#         url_kwargs = {
-#             'name': obj.name,
-#         }
-#         return reverse(view_name, url_kwargs, request=request, format=format)
-
 
 class ObservingSiteSerializer(serializers.ModelSerializer):
     class Meta:
@@ -228,11 +215,10 @@ class ObservingSiteSerializer(serializers.ModelSerializer):
                   'zip_code', 'country', 'time_zone', 'time_zone_name', 'telescopes')
 
     coordinates = CoordinatesSerializer()
-    # telescopes = TelescopeShortSerializer(many=True, required=False)
     telescopes = serializers.HyperlinkedRelatedField(many=True,
                                                      read_only=True,
                                                      view_name='telescope-detail',
-                                                     lookup_url_kwarg='name')
+                                                     lookup_field='name')
 
 ######################## Telescopes ########################
 
