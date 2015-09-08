@@ -914,12 +914,13 @@
     "fields": {
         "name": "Gemini Northern Telescope", 
         "observing_site": 65, 
-        "has_active_optics": true, 
+        "mounting": "equ", 
+        "has_active_optics": false, 
         "dome": 100, 
         "wavelength_domains": [
             "opt"
         ], 
-        "has_adaptative_optics": false, 
+        "has_adaptative_optics": true, 
         "has_laser_guide_star": true
     }
 },
@@ -977,12 +978,12 @@
     "fields": {
         "name": "W. M. Keck Observatory I", 
         "observing_site": 65, 
-        "has_active_optics": true, 
+        "has_active_optics": false, 
         "dome": 102, 
         "wavelength_domains": [
             "opt"
         ], 
-        "has_adaptative_optics": false, 
+        "has_adaptative_optics": true, 
         "has_laser_guide_star": false
     }
 },
@@ -1008,12 +1009,12 @@
     "fields": {
         "name": "W. M. Keck Observatory II", 
         "observing_site": 65, 
-        "has_active_optics": true, 
+        "has_active_optics": false, 
         "dome": 103, 
         "wavelength_domains": [
             "opt"
         ], 
-        "has_adaptative_optics": false, 
+        "has_adaptative_optics": true, 
         "has_laser_guide_star": false
     }
 },
@@ -1288,12 +1289,13 @@
     "fields": {
         "name": "The Submillimeter Telescope", 
         "observing_site": 68, 
-        "has_active_optics": false, 
+        "mounting": "aaz", 
+        "has_active_optics": true, 
         "dome": 112, 
         "wavelength_domains": [
             "opt"
         ], 
-        "has_adaptative_optics": true, 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
@@ -1319,6 +1321,7 @@
     "fields": {
         "name": "Vatican Advanced Technology Telescope", 
         "observing_site": 68, 
+        "mounting": "aaz", 
         "has_active_optics": false, 
         "dome": 113, 
         "wavelength_domains": [
@@ -1350,6 +1353,7 @@
     "fields": {
         "name": "Boller & Chivens 1.6m", 
         "observing_site": 69, 
+        "mounting": "equ", 
         "has_active_optics": false, 
         "dome": 114, 
         "optical_design": "rc", 
@@ -1413,12 +1417,12 @@
     "fields": {
         "name": "200-inch Hale Telescope", 
         "observing_site": 71, 
-        "has_active_optics": true, 
+        "has_active_optics": false, 
         "dome": 116, 
         "wavelength_domains": [
             "opt"
         ], 
-        "has_adaptative_optics": false, 
+        "has_adaptative_optics": true, 
         "has_laser_guide_star": true
     }
 },

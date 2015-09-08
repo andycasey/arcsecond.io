@@ -154,12 +154,12 @@ def create_fixtures():
                             ]
                         }
 
-                        if 'mounting' in tel['mounting']:
+                        if 'mounting' in tel:
                             if tel['mounting'].lower() in ['cassegrain',]:
                                 telescope['fields']['mounting'] = Telescope.MOUNTING_CASSEGRAIN
-                            elif tel['mounting'].lower() in ['equatorial',]:
+                            elif tel['mounting'].lower() in ['equatorial', 'German equatorial']:
                                 telescope['fields']['mounting'] = Telescope.MOUNTING_EQUATORIAL
-                            elif tel['mounting'].lower() in ['alt-az', 'alt-azimuth']:
+                            elif tel['mounting'].lower() in ['alt-az', 'alt-azimuth', 'altazimuth']:
                                 telescope['fields']['mounting'] = Telescope.MOUNTING_ALTAZ
                             elif tel['mounting'].lower() in ['off-axis']:
                                 telescope['fields']['mounting'] = Telescope.MOUNTING_OFF_AXIS
@@ -179,10 +179,10 @@ def create_fixtures():
                                 'diameter': float(tel['primaryMirror']['diameter'])
                             }
 
-                        if 'hasAdaptativeOptics' in tel:
-                            telescope['fields']['has_active_optics'] = True if tel['hasAdaptativeOptics'] == 'YES' else False
                         if 'hasActiveOptics' in tel:
-                            telescope['fields']['has_adaptative_optics'] = True if tel['hasActiveOptics'] == 'YES' else False
+                            telescope['fields']['has_active_optics'] = True if tel['hasActiveOptics'] == 'YES' else False
+                        if 'hasAdaptativeOptics' in tel:
+                            telescope['fields']['has_adaptative_optics'] = True if tel['hasAdaptativeOptics'] == 'YES' else False
                         if 'hasLaserGuideStar' in tel:
                             telescope['fields']['has_laser_guide_star'] = True if tel['hasLaserGuideStar'] == 'YES' else False
 

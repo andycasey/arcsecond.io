@@ -813,6 +813,7 @@
     "fields": {
         "name": "The 3.5m Telescope", 
         "observing_site": 24, 
+        "mounting": "equ", 
         "has_active_optics": false, 
         "dome": 46, 
         "wavelength_domains": [
@@ -844,6 +845,7 @@
     "fields": {
         "name": "The 2.2m Telescope", 
         "observing_site": 24, 
+        "mounting": "equ", 
         "has_active_optics": false, 
         "dome": 47, 
         "wavelength_domains": [
@@ -968,6 +970,7 @@
     "fields": {
         "name": "William Herschel Telescope", 
         "observing_site": 31, 
+        "mounting": "aaz", 
         "has_active_optics": false, 
         "dome": 51, 
         "wavelength_domains": [
@@ -999,13 +1002,14 @@
     "fields": {
         "name": "Telescopio Nazionale Galileo", 
         "observing_site": 31, 
-        "has_active_optics": false, 
+        "mounting": "aaz", 
+        "has_active_optics": true, 
         "dome": 52, 
         "optical_design": "rc", 
         "wavelength_domains": [
             "opt"
         ], 
-        "has_adaptative_optics": true, 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
@@ -1062,6 +1066,7 @@
     "fields": {
         "name": "Isaac Newton Telescope", 
         "observing_site": 31, 
+        "mounting": "cas", 
         "has_active_optics": false, 
         "dome": 54, 
         "wavelength_domains": [
@@ -1093,6 +1098,7 @@
     "fields": {
         "name": "Liverpool Telescope", 
         "observing_site": 31, 
+        "mounting": "aaz", 
         "has_active_optics": false, 
         "dome": 55, 
         "wavelength_domains": [
@@ -1124,6 +1130,7 @@
     "fields": {
         "name": "Mercator Telescope", 
         "observing_site": 31, 
+        "mounting": "aaz", 
         "has_active_optics": false, 
         "dome": 56, 
         "optical_design": "rc", 
@@ -1559,6 +1566,7 @@
     "fields": {
         "name": "2m Bernard Lyot Telescope", 
         "observing_site": 41, 
+        "mounting": "cas", 
         "has_active_optics": false, 
         "dome": 70, 
         "wavelength_domains": [
@@ -1621,6 +1629,7 @@
     "fields": {
         "name": "1.3m Telescope", 
         "observing_site": 43, 
+        "mounting": "equ", 
         "has_active_optics": false, 
         "dome": 72, 
         "wavelength_domains": [
@@ -1652,6 +1661,7 @@
     "fields": {
         "name": "0.6m Telescope", 
         "observing_site": 43, 
+        "mounting": "equ", 
         "has_active_optics": false, 
         "dome": 73, 
         "optical_design": "rc", 
@@ -1684,6 +1694,7 @@
     "fields": {
         "name": "0.3m Flat Field Telescope", 
         "observing_site": 43, 
+        "mounting": "equ", 
         "has_active_optics": false, 
         "dome": 74, 
         "wavelength_domains": [
@@ -2273,6 +2284,7 @@
     "fields": {
         "name": "Celestron 11''", 
         "observing_site": 48, 
+        "mounting": "equ", 
         "has_active_optics": false, 
         "dome": 93, 
         "wavelength_domains": [
@@ -2304,6 +2316,7 @@
     "fields": {
         "name": "Meade LX200 12''", 
         "observing_site": 48, 
+        "mounting": "equ", 
         "has_active_optics": false, 
         "dome": 94, 
         "wavelength_domains": [
@@ -2335,6 +2348,7 @@
     "fields": {
         "name": "Vienna Little Telescope", 
         "observing_site": 50, 
+        "mounting": "equ", 
         "has_active_optics": false, 
         "dome": 95, 
         "wavelength_domains": [

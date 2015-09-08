@@ -23,23 +23,23 @@
             </div>
         </div>
 
-        <div class="row" ng-controller="ObservingSitesNavigationCtlr as sitesCtlr" id="ObservingSitesNavigationCtlr">
+        <div class="row" ng-controller="TelescopesNavigationCtlr as telescopesCtlr" id="ObservingSitesNavigationCtlr">
             <div class="col-md-2 col-md-offset-2" id="continent-list-container">
                 <ul class="nav nav-pills nav-stacked text-right left">
-                    <li role="presentation" ng-repeat="continent in sitesCtlr.continents">
-                        <a data-target="#" data-toggle="pill" href="#" ng-click="sitesCtlr.selectContinent(continent.key)">[[continent.name]]
-                            <span class="badge">[[ sitesCtlr.sites[continent.key].length ]]</span>
+                    <li role="presentation" ng-repeat="continent in telescopesCtlr.continents">
+                        <a data-target="#" data-toggle="pill" href="#" ng-click="telescopesCtlr.selectContinent(continent.key)">[[continent.name]]
+                            <span class="badge">[[ telescopesCtlr.sites[continent.key].length ]]</span>
                         </a>
                     </li>
                 </ul>
             </div>
 
             <div class="col-md-3" id="site-list-container">
-                <div ng-repeat="continent in sitesCtlr.continents">
+                <div ng-repeat="continent in telescopesCtlr.continents">
                     <ul class="nav nav-pills nav-stacked site-list [[continent.key]] dark">
-                        <li role="presentation" ng-repeat="site in sitesCtlr.sites[continent.key]">
+                        <li role="presentation" ng-repeat="site in telescopesCtlr.sites[continent.key]">
                             <a data-target="#" data-toggle="pill" href="#"
-                               ng-click="sitesCtlr.selectSite(continent.key, $index)">
+                               ng-click="telescopesCtlr.selectSite(continent.key, $index)">
                                 <img src="{% static 'arcsecond/img/BigTelescopeIcon_512x512.png' %}" width="20px">
                                 <span class="site name">[[site.long_name]]</span><br/>
                                 <span class="site country">[[site.country]]</span>
@@ -49,8 +49,8 @@
                 </div>
             </div>
 
-            <div class="col-md-3" id="site-property-container" ng-show="sitesCtlr.selectedSite">
-                <pre>[[ sitesCtlr.selectedSite | json ]]</pre>
+            <div class="col-md-3" id="site-property-container" ng-show="telescopesCtlr.selectedTelescope">
+                <pre>[[ telescopesCtlr.selectedTelescope | json ]]</pre>
             </div>
         </div>
 

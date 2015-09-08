@@ -92,7 +92,7 @@ class Telescope(models.Model):
     MOUNTING_ALTAZ = "aaz"
     MOUNTING_OFF_AXIS = "off"
 
-    MOUNTINGS_KEYS = (
+    MOUNTING_KEYS = (
         MOUNTING_UNDEFINED,
         MOUNTING_EQUATORIAL,
         MOUNTING_CASSEGRAIN,
@@ -100,15 +100,15 @@ class Telescope(models.Model):
         MOUNTING_OFF_AXIS
     )
 
-    MOUNTINGS_VALUES = (
+    MOUNTING_VALUES = (
         "Unknown",
-        "Equatorial"
+        "Equatorial",
         "Cassegrain",
         "Alt-Az",
         "Off-Axis"
     )
 
-    MOUNTING_CHOICES = tuple(zip(MOUNTINGS_KEYS, MOUNTINGS_VALUES))
+    MOUNTING_CHOICES = tuple(zip(MOUNTING_KEYS, MOUNTING_VALUES))
     mounting = models.CharField(choices=MOUNTING_CHOICES, max_length=3, blank=True, default=MOUNTING_UNDEFINED)
 
     OPTICAL_DESIGN_UNDEFINED = "unk"

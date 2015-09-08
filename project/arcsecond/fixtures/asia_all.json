@@ -678,6 +678,7 @@
     "fields": {
         "name": "Large Altazimuth Telescope (BTA-6)", 
         "observing_site": 18, 
+        "mounting": "aaz", 
         "has_active_optics": false, 
         "dome": 38, 
         "wavelength_domains": [
@@ -802,6 +803,7 @@
     "fields": {
         "name": "Thai National Telescope", 
         "observing_site": 19, 
+        "mounting": "aaz", 
         "has_active_optics": false, 
         "dome": 42, 
         "optical_design": "rc", 
@@ -834,6 +836,7 @@
     "fields": {
         "name": "0.5m Telescope", 
         "observing_site": 19, 
+        "mounting": "equ", 
         "has_active_optics": false, 
         "dome": 43, 
         "optical_design": "rc", 
@@ -866,6 +869,7 @@
     "fields": {
         "name": "Vainu Bappu Telescope", 
         "observing_site": 20, 
+        "mounting": "equ", 
         "has_active_optics": false, 
         "dome": 44, 
         "wavelength_domains": [

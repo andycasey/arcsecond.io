@@ -178,6 +178,7 @@
     "fields": {
         "name": "60in Rockefeller Reflector (Boyden-UFS Telescope)", 
         "observing_site": 1, 
+        "mounting": "cas", 
         "has_active_optics": false, 
         "dome": 1, 
         "wavelength_domains": [
@@ -488,6 +489,7 @@
     "fields": {
         "name": "CT1", 
         "observing_site": 3, 
+        "mounting": "aaz", 
         "has_active_optics": false, 
         "dome": 11, 
         "wavelength_domains": [
@@ -519,6 +521,7 @@
     "fields": {
         "name": "CT2", 
         "observing_site": 3, 
+        "mounting": "aaz", 
         "has_active_optics": false, 
         "dome": 12, 
         "wavelength_domains": [
@@ -550,6 +553,7 @@
     "fields": {
         "name": "CT3", 
         "observing_site": 3, 
+        "mounting": "aaz", 
         "has_active_optics": false, 
         "dome": 13, 
         "wavelength_domains": [
@@ -581,6 +585,7 @@
     "fields": {
         "name": "CT4", 
         "observing_site": 3, 
+        "mounting": "aaz", 
         "has_active_optics": false, 
         "dome": 14, 
         "wavelength_domains": [
@@ -612,6 +617,7 @@
     "fields": {
         "name": "Le Marly", 
         "observing_site": 5, 
+        "mounting": "equ", 
         "has_active_optics": false, 
         "dome": 15, 
         "optical_design": "rc", 
@@ -706,6 +712,7 @@
     "fields": {
         "name": "1.0m (Elizabeth) Telescope", 
         "observing_site": 6, 
+        "mounting": "equ", 
         "has_active_optics": false, 
         "dome": 18, 
         "wavelength_domains": [
@@ -737,6 +744,7 @@
     "fields": {
         "name": "0.75 Telescope", 
         "observing_site": 6, 
+        "mounting": "equ", 
         "has_active_optics": false, 
         "dome": 19, 
         "wavelength_domains": [
@@ -768,6 +776,7 @@
     "fields": {
         "name": "0.5m Reflector Telescope", 
         "observing_site": 6, 
+        "mounting": "equ", 
         "has_active_optics": false, 
         "dome": 20, 
         "wavelength_domains": [
@@ -799,6 +808,7 @@
     "fields": {
         "name": "InfraRed Survey Facility", 
         "observing_site": 6, 
+        "mounting": "aaz", 
         "has_active_optics": false, 
         "dome": 21, 
         "wavelength_domains": [

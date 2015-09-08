@@ -344,6 +344,7 @@
     "fields": {
         "name": "Jorge Sahade Telescope (2.15m)", 
         "observing_site": 87, 
+        "mounting": "equ", 
         "has_active_optics": false, 
         "dome": 143, 
         "optical_design": "rc", 
@@ -376,6 +377,7 @@
     "fields": {
         "name": "Telescopio Solar de Ondas Submilim\u00e9tricas", 
         "observing_site": 87, 
+        "mounting": "equ", 
         "has_active_optics": false, 
         "dome": 144, 
         "wavelength_domains": [
@@ -407,6 +409,7 @@
     "fields": {
         "name": "Helen Sawyer Hogg Telescope", 
         "observing_site": 87, 
+        "mounting": "equ", 
         "has_active_optics": false, 
         "dome": 145, 
         "wavelength_domains": [
@@ -438,6 +441,7 @@
     "fields": {
         "name": "Astrographe of Southerm Hemisphere", 
         "observing_site": 87, 
+        "mounting": "equ", 
         "has_active_optics": false, 
         "dome": 146, 
         "wavelength_domains": [
@@ -469,12 +473,12 @@
     "fields": {
         "name": "European Extremely Large Telescope", 
         "observing_site": 88, 
-        "has_active_optics": true, 
+        "has_active_optics": false, 
         "dome": 147, 
         "wavelength_domains": [
             "opt"
         ], 
-        "has_adaptative_optics": false, 
+        "has_adaptative_optics": true, 
         "has_laser_guide_star": false
     }
 },
@@ -500,6 +504,7 @@
     "fields": {
         "name": "Gemini South", 
         "observing_site": 89, 
+        "mounting": "aaz", 
         "has_active_optics": true, 
         "dome": 148, 
         "optical_design": "rc", 
@@ -532,13 +537,14 @@
     "fields": {
         "name": "Unit Telescope 1 (Antu)", 
         "observing_site": 90, 
-        "has_active_optics": true, 
+        "mounting": "aaz", 
+        "has_active_optics": false, 
         "dome": 149, 
         "optical_design": "rc", 
         "wavelength_domains": [
             "opt"
         ], 
-        "has_adaptative_optics": false, 
+        "has_adaptative_optics": true, 
         "has_laser_guide_star": false
     }
 },
@@ -564,13 +570,14 @@
     "fields": {
         "name": "Unit Telescope 2 (Kueyen)", 
         "observing_site": 90, 
-        "has_active_optics": true, 
+        "mounting": "aaz", 
+        "has_active_optics": false, 
         "dome": 150, 
         "optical_design": "rc", 
         "wavelength_domains": [
             "opt"
         ], 
-        "has_adaptative_optics": false, 
+        "has_adaptative_optics": true, 
         "has_laser_guide_star": false
     }
 },
@@ -596,13 +603,14 @@
     "fields": {
         "name": "Unit Telescope 3 (Melipal)", 
         "observing_site": 90, 
-        "has_active_optics": true, 
+        "mounting": "aaz", 
+        "has_active_optics": false, 
         "dome": 151, 
         "optical_design": "rc", 
         "wavelength_domains": [
             "opt"
         ], 
-        "has_adaptative_optics": false, 
+        "has_adaptative_optics": true, 
         "has_laser_guide_star": false
     }
 },
@@ -628,13 +636,14 @@
     "fields": {
         "name": "Unit Telescope 4 (Yepun)", 
         "observing_site": 90, 
-        "has_active_optics": true, 
+        "mounting": "aaz", 
+        "has_active_optics": false, 
         "dome": 152, 
         "optical_design": "rc", 
         "wavelength_domains": [
             "opt"
         ], 
-        "has_adaptative_optics": false, 
+        "has_adaptative_optics": true, 
         "has_laser_guide_star": true
     }
 },
@@ -660,12 +669,12 @@
     "fields": {
         "name": "Visible and Infrared Survey Telescope for Astronomy ", 
         "observing_site": 90, 
-        "has_active_optics": false, 
+        "has_active_optics": true, 
         "dome": 153, 
         "wavelength_domains": [
             "opt"
         ], 
-        "has_adaptative_optics": true, 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
@@ -815,13 +824,14 @@
     "fields": {
         "name": "4m Victor Blanco Telescope", 
         "observing_site": 92, 
-        "has_active_optics": false, 
+        "mounting": "aaz", 
+        "has_active_optics": true, 
         "dome": 158, 
         "optical_design": "rc", 
         "wavelength_domains": [
             "opt"
         ], 
-        "has_adaptative_optics": true, 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
@@ -847,12 +857,12 @@
     "fields": {
         "name": "1.5m SMARTS Telescope", 
         "observing_site": 92, 
-        "has_active_optics": false, 
+        "has_active_optics": true, 
         "dome": 159, 
         "wavelength_domains": [
             "opt"
         ], 
-        "has_adaptative_optics": true, 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
@@ -878,12 +888,13 @@
     "fields": {
         "name": "1.3m SMARTS Telescope (ex-2MASS)", 
         "observing_site": 92, 
-        "has_active_optics": false, 
+        "mounting": "equ", 
+        "has_active_optics": true, 
         "dome": 160, 
         "wavelength_domains": [
             "opt"
         ], 
-        "has_adaptative_optics": true, 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
@@ -909,12 +920,13 @@
     "fields": {
         "name": "1.0m SMARTS Telescope (ex-YALLO)", 
         "observing_site": 92, 
-        "has_active_optics": false, 
+        "mounting": "equ", 
+        "has_active_optics": true, 
         "dome": 161, 
         "wavelength_domains": [
             "opt"
         ], 
-        "has_adaptative_optics": true, 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
@@ -940,12 +952,12 @@
     "fields": {
         "name": "0.9m SMARTS Telescope", 
         "observing_site": 92, 
-        "has_active_optics": false, 
+        "has_active_optics": true, 
         "dome": 162, 
         "wavelength_domains": [
             "opt"
         ], 
-        "has_adaptative_optics": true, 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
@@ -971,6 +983,7 @@
     "fields": {
         "name": "ESO 3.6m", 
         "observing_site": 94, 
+        "mounting": "equ", 
         "has_active_optics": false, 
         "dome": 163, 
         "optical_design": "rc", 
@@ -1003,13 +1016,14 @@
     "fields": {
         "name": "New Technology Telescope", 
         "observing_site": 94, 
-        "has_active_optics": false, 
+        "mounting": "aaz", 
+        "has_active_optics": true, 
         "dome": 164, 
         "optical_design": "rc", 
         "wavelength_domains": [
             "opt"
         ], 
-        "has_adaptative_optics": true, 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
@@ -1035,6 +1049,7 @@
     "fields": {
         "name": "ESO 2.2m", 
         "observing_site": 94, 
+        "mounting": "equ", 
         "has_active_optics": false, 
         "dome": 165, 
         "optical_design": "rc", 
@@ -1067,6 +1082,7 @@
     "fields": {
         "name": "1.2m Euler (Swiss) Telescope", 
         "observing_site": 94, 
+        "mounting": "equ", 
         "has_active_optics": false, 
         "dome": 166, 
         "optical_design": "rc", 
@@ -1099,6 +1115,7 @@
     "fields": {
         "name": "Danish 1.54-metre Telescope", 
         "observing_site": 94, 
+        "mounting": "off", 
         "has_active_optics": false, 
         "dome": 167, 
         "optical_design": "rc", 
@@ -1225,6 +1242,7 @@
     "fields": {
         "name": "ESO 1-metre Schmidt Telescope", 
         "observing_site": 94, 
+        "mounting": "equ", 
         "has_active_optics": false, 
         "dome": 171, 
         "optical_design": "sc", 
@@ -1257,12 +1275,13 @@
     "fields": {
         "name": "Walter Baade Telescope (Magellan I)", 
         "observing_site": 95, 
-        "has_active_optics": false, 
+        "mounting": "aaz", 
+        "has_active_optics": true, 
         "dome": 172, 
         "wavelength_domains": [
             "opt"
         ], 
-        "has_adaptative_optics": true, 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
@@ -1288,12 +1307,13 @@
     "fields": {
         "name": "Clay Telescope (Magellan II)", 
         "observing_site": 95, 
-        "has_active_optics": false, 
+        "mounting": "aaz", 
+        "has_active_optics": true, 
         "dome": 173, 
         "wavelength_domains": [
             "opt"
         ], 
-        "has_adaptative_optics": true, 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
@@ -1319,6 +1339,7 @@
     "fields": {
         "name": "2.5m Ir\u00e9n\u00e9e du Pont Telescope", 
         "observing_site": 95, 
+        "mounting": "equ", 
         "has_active_optics": false, 
         "dome": 174, 
         "optical_design": "rc", 
@@ -1351,6 +1372,7 @@
     "fields": {
         "name": "1m Henrietta Swope Telescope", 
         "observing_site": 95, 
+        "mounting": "equ", 
         "has_active_optics": false, 
         "dome": 175, 
         "optical_design": "rc", 
@@ -1383,6 +1405,7 @@
     "fields": {
         "name": "1.6m Perkin-Elmer", 
         "observing_site": 97, 
+        "mounting": "off", 
         "has_active_optics": false, 
         "dome": 176, 
         "optical_design": "rc", 
@@ -1415,6 +1438,7 @@
     "fields": {
         "name": "0.6m Boller & Chivens Telescope", 
         "observing_site": 97, 
+        "mounting": "off", 
         "has_active_optics": false, 
         "dome": 177, 
         "optical_design": "rc", 
@@ -1447,6 +1471,7 @@
     "fields": {
         "name": "0.6m Zeiss Telescope", 
         "observing_site": 97, 
+        "mounting": "cas", 
         "has_active_optics": false, 
         "dome": 178, 
         "wavelength_domains": [

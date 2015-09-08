@@ -36,7 +36,7 @@ arcsecondApp
                     var latlong = new google.maps.LatLng(site.coordinates.latitude,site.coordinates.longitude);
 
                     continent_infowindows[j] = new google.maps.InfoWindow({
-                        content: '<h5>'+site.long_name+'</h5><br/>'+site.country
+                        content: '<h5>'+site.long_name+'</h5>'+site.country
                     });
 
                     continent_markers[j] = new google.maps.Marker({
@@ -121,21 +121,22 @@ arcsecondApp
                 {name:'South America', key:'south_america'}
             ];
 
-            telescopesCtlr.sites = {};
+            telescopesCtlr.telescopes = {};
             telescopesCtlr.markers = {};
             telescopesCtlr.infowindows = {};
 
-            telescopesCtlr.installMarkers = function(current_map, continent_key) {
-                continent_sites = $scope.sitesCtlr.sites[continent_key];
+            telescopesCtlr.installTelescopeMarker = function(current_map, continent_key, telescope_index) {
+                continent_telescopes = $scope.telescopesCtlr.telescopes[continent_key];
+
                 var continent_markers = [];
                 var continent_infowindows = [];
 
-                for (var j = 0; j < continent_sites.length; j++) {
-                    var site = continent_sites[j];
+                for (var j = 0; j < continent_telescopes.length; j++) {
+                    var telescope = continent_telescopes[j];
                     var latlong = new google.maps.LatLng(site.coordinates.latitude,site.coordinates.longitude);
 
                     continent_infowindows[j] = new google.maps.InfoWindow({
-                        content: '<h5>'+site.long_name+'</h5><br/>'+site.country
+                        content: '<h5>'+site.long_name+'</h5>'+site.country
                     });
 
                     continent_markers[j] = new google.maps.Marker({
@@ -152,22 +153,25 @@ arcsecondApp
                     })(j);
                 }
 
-                $scope.telescopesCtlr.markers[continent_key] = continent_markers;
-                $scope.telescopesCtlr.infowindows[continent_key] = continent_infowindows;
             };
 
             telescopesCtlr.installTelescopeCountsAndMapMarkers = function() {
-                for (var i = 0; i < sitesCtlr.continents.length; i++) {
-                    var continentName = sitesCtlr.continents[i].name;
+                for (var i = 0; i < telescopesCtlr.continents.length; i++) {
+                    var continent_name = telescopesCtlr.continents[i].name;
+
+                    $scope.telescopesCtlr.markers[continent_name] = [];
+                    $scope.telescopesCtlr.infowindows[continent_name] = [];
+
                     $http({
                         url: API_PROTOCOL + "://" + location.host + "/" + API_VERSION + "/telescopes",
                         method: "GET",
-                        params: {continent: continentName}
+                        params: {continent: continent_name}
                     })
                         .then(function (response) {
                             var continent_key = response.config.params.continent.toLowerCase().replace(' ', '_');
-                            $scope.telescopesCtlr.sites[continent_key] = response.data;
-                            $scope.telescopesCtlr.installMarkers(window.map, continent_key);
+                            $scope.telescopesCtlr.telescopes[continent_key] = response.data;
+
+                            $scope.telescopesCtlr.installTelescopeMarker(window.map, continent_key, index);
                         }, function (response) {
                             console.log("error " + response.status);
                         });
@@ -175,14 +179,14 @@ arcsecondApp
             };
 
             telescopesCtlr.selectContinent = function(continent_key) {
-                $('.site-list').not('.'+continent_key).hide();
-                $('.site-list.'+continent_key).show();
+                $('.telescope-list').not('.'+continent_key).hide();
+                $('.telescope-list.'+continent_key).show();
 
                 var bounds = new google.maps.LatLngBounds();
 
-                for (var i = 0; i < $scope.sitesCtlr.continents.length; i++) {
-                    var current_continent_key = $scope.sitesCtlr.continents[i].key;
-                    current_markers = $scope.sitesCtlr.markers[current_continent_key];
+                for (var i = 0; i < $scope.telescopesCtlr.continents.length; i++) {
+                    var current_continent_key = $scope.telescopesCtlr.continents[i].key;
+                    current_markers = $scope.telescopesCtlr.markers[current_continent_key];
                     for (var j = 0; j < current_markers.length; j++) {
                         if (current_continent_key === continent_key) {
                             bounds.extend(current_markers[j].position);
@@ -196,10 +200,10 @@ arcsecondApp
                 map.fitBounds(bounds);
             };
 
-            telescopesCtlr.selectSite = function(continent_key, site_index) {
+            telescopesCtlr.selectedTelescope = function(continent_key, telescope_index) {
                 markers = $scope.telescopesCtlr.markers[continent_key];
-                google.maps.event.trigger(markers[site_index], 'click');
-                $scope.telescopesCtlr.selectedSite = $scope.telescopesCtlr.sites[continent_key][site_index];
+                google.maps.event.trigger(markers[telescope_index], 'click');
+                $scope.telescopesCtlr.selectedTelescope = $scope.telescopesCtlr.telescopes[continent_key][telescope_index];
             };
         }]);
 

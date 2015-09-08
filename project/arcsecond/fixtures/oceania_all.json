@@ -262,6 +262,7 @@
     "fields": {
         "name": "64-metre Telescope", 
         "observing_site": 84, 
+        "mounting": "equ", 
         "has_active_optics": false, 
         "dome": 134, 
         "wavelength_domains": [
@@ -324,6 +325,7 @@
     "fields": {
         "name": "Anglo-Australian Telescope", 
         "observing_site": 86, 
+        "mounting": "equ", 
         "has_active_optics": false, 
         "dome": 136, 
         "wavelength_domains": [
@@ -355,6 +357,7 @@
     "fields": {
         "name": "UK Schmidt Telescope", 
         "observing_site": 86, 
+        "mounting": "equ", 
         "has_active_optics": false, 
         "dome": 137, 
         "wavelength_domains": [

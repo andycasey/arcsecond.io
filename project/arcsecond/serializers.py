@@ -243,12 +243,21 @@ class TelescopeSerializer(serializers.ModelSerializer):
                                                          view_name='observingsite-detail',
                                                          lookup_field='name')
 
-    wavelength_domains = serializers.SerializerMethodField()
     dome = DomeSerializer(required=False)
     mirrors = MirrorSerializer(required=False, many=True)
 
+    wavelength_domains = serializers.SerializerMethodField()
+    mounting = serializers.SerializerMethodField()
+    optical_design = serializers.SerializerMethodField()
+
     def get_wavelength_domains(self, obj):
         return [Telescope.WAVELENGTH_DOMAINS_VALUES[Telescope.WAVELENGTH_DOMAINS_KEYS.index(domain)] for domain in obj.wavelength_domains]
+
+    def get_mounting(self, obj):
+        return Telescope.MOUNTING_VALUES[Telescope.MOUNTING_KEYS.index(obj.mounting)]
+
+    def get_optical_design(self, obj):
+        return Telescope.OPTICAL_DESIGNS_VALUES[Telescope.OPTICAL_DESIGNS_KEYS.index(obj.optical_design)]
 
 
 
