@@ -62,8 +62,11 @@ def get_observatory_names(continent_name):
 
 def create_fixtures():
 
-    index = 1
-    tools_index = 1
+    coords_index = 1
+    site_index = 1
+    telescope_index = 1
+    dome_index = 1
+    mirror_index = 1
 
     continent_keys = ['Africa', 'Antarctica', 'Asia', 'Europe', 'North America', 'Oceania', 'South America']
 
@@ -74,8 +77,8 @@ def create_fixtures():
         all_file_path = get_fixtures_file_path(continent_key, 'all')
         print all_file_path
 
-        s1 = ""
-        s2 = ""
+        s1 = u""
+        s2 = u""
 
         for observatory_name in observatory_names:
             if u'→' in observatory_name: continue
@@ -105,10 +108,10 @@ def create_fixtures():
             longitude_value = longitude_sign * (abs(longitude[0]) + abs(longitude[1])/ 60.0 + abs(longitude[2])/3600.0)
             latitude_value = latitude_sign * (abs(latitude[0]) + abs(latitude[1])/ 60.0 + abs(latitude[2])/3600.0)
 
-            coordinates = {'model': 'arcsecond.Coordinates', 'pk': index}
+            coordinates = {'model': 'arcsecond.Coordinates', 'pk': coords_index}
             coordinates['fields'] = { 'longitude': longitude_value, 'latitude': latitude_value, 'height': coords['altitude'] }
 
-            observing_site = {'model': 'arcsecond.ObservingSite', 'pk': index}
+            observing_site = {'model': 'arcsecond.ObservingSite', 'pk': site_index}
             observing_site['fields'] = {
                 'name': obs['name'],
                 'long_name': obs['longName'],
@@ -140,15 +143,15 @@ def create_fixtures():
                         tel = tool['telescope']
                         tel_name = tool['observingTool']['longName']
 
-                        dome = {'model': 'arcsecond.Dome', 'pk': tools_index}
+                        dome = {'model': 'arcsecond.Dome', 'pk': dome_index}
                         dome_name = tel_name+' Dome'
                         dome['fields'] = { 'name': dome_name }
 
-                        telescope = {'model':'arcsecond.Telescope', 'pk': tools_index}
+                        telescope = {'model':'arcsecond.Telescope', 'pk': telescope_index}
                         telescope['fields'] = {
-                            'dome': tools_index,
+                            'dome': dome_index,
                             'name': tel_name,
-                            'observing_site': index,
+                            'observing_site': site_index,
                             'wavelength_domains': [
                                 Telescope.WAVELENGTH_DOMAIN_OPTICAL,
                             ]
@@ -172,10 +175,10 @@ def create_fixtures():
 
                         mirror = None
                         if 'primaryMirror' in tel:
-                            mirror = {'model':'arcsecond.Mirror', 'pk': tools_index}
+                            mirror = {'model':'arcsecond.Mirror', 'pk': mirror_index}
                             mirror['fields'] = {
                                 'mirror_index': 0,
-                                'telescope': tools_index,
+                                'telescope': telescope_index,
                                 'diameter': float(tel['primaryMirror']['diameter'])
                             }
 
@@ -193,10 +196,13 @@ def create_fixtures():
                         if mirror is not None:
                             s2 += json.dumps(mirror, indent=4)
                             s2 += ',\n'
+                            mirror_index += 1
 
-                        tools_index += 1
+                        dome_index += 1
+                        telescope_index += 1
 
-            index += 1
+            coords_index += 1
+            site_index += 1
 
 
         # s1 = s1[:-2]

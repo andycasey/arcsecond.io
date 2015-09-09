@@ -512,7 +512,7 @@
     "pk": 69, 
     "model": "arcsecond.ObservingSite", 
     "fields": {
-        "name": "Mont Me\u0301gantic", 
+        "name": "Mont Mégantic",
         "time_zone_name": "America/Montreal", 
         "country": "Canada", 
         "time_zone": "-05:00", 
@@ -521,10 +521,10 @@
             45.45494444444445
         ], 
         "IAUCode": "301", 
-        "long_name": "Observatoire du Mont M\u00e9gantic", 
+        "long_name": "Observatoire du Mont Mégantic",
         "homepage": "http://www.astro.umontreal.ca/omm", 
         "continent": "North America", 
-        "wikipedia_article": "http://en.wikipedia.org/wiki/Mont_Me\u0301gantic_Observatory"
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Mont_Mégantic_Observatory"
     }
 },
 {
