@@ -7,7 +7,7 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from project.arcsecond import views
 from project.arcsecond.models import constants
 
-full_string_regex = "[\s\d\w()\.+-_\'\,\:]+"
+full_string_regex = "[\s\d\w()\.+-_\'\,\:&]+"
 
 urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),

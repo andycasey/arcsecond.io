@@ -1340,14 +1340,14 @@
     "pk": 63, 
     "model": "arcsecond.Dome", 
     "fields": {
-        "name": "152cm Telescope` Dome"
+        "name": "152cm Telescope Dome"
     }
 },
 {
     "pk": 63, 
     "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "152cm Telescope`", 
+        "name": "152cm Telescope",
         "observing_site": 38, 
         "has_active_optics": false, 
         "dome": 63, 
