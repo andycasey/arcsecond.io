@@ -1,5 +1,5 @@
-
 from rest_framework import serializers
+from rest_framework.reverse import reverse
 from .models import *
 
 ######################## Shorts ########################
@@ -21,6 +21,12 @@ class PublicationShortSerializer(serializers.ModelSerializer):
         model = Publication
         lookup_field = "bibcode"
         fields = ('url', 'bibcode')
+
+class TelescopeShortSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Telescope
+        lookup_field = "name"
+        fields = ('url', 'name')
 
 
 ######################## Common ########################
@@ -141,7 +147,7 @@ class MetallicitySerializer(serializers.ModelSerializer):
         return Metallicity.METAL_VALUES[Metallicity.METAL_KEYS.index(obj.unit)]
 
 
-class DistanceSerializer(serializers.HyperlinkedModelSerializer):
+class DistanceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Distance
         fields = ("value", "unit", "error_max", "error_min", "bibcode")
@@ -193,19 +199,66 @@ class GravitySerializer(serializers.ModelSerializer):
 
 ######################## Earth ########################
 
-class CoordinatesSerializer(serializers.HyperlinkedModelSerializer):
+class CoordinatesSerializer(serializers.ModelSerializer):
     class Meta:
         model = Coordinates
         fields = ('longitude', 'latitude', 'height')
 
-class ObservingSiteSerializer(serializers.HyperlinkedModelSerializer):
-    coordinates = CoordinatesSerializer()
+######################## Observing Sites ########################
 
+
+class ObservingSiteSerializer(serializers.ModelSerializer):
     class Meta:
         model = ObservingSite
         lookup_field = "name"
         fields = ('name', 'long_name', 'IAUCode', 'continent', 'coordinates', 'address_line_1', 'address_line_2',
-                  'zip_code', 'country', 'time_zone', 'time_zone_name')
+                  'zip_code', 'country', 'time_zone', 'time_zone_name', 'telescopes')
+
+    coordinates = CoordinatesSerializer()
+    telescopes = serializers.HyperlinkedRelatedField(many=True,
+                                                     read_only=True,
+                                                     view_name='telescope-detail',
+                                                     lookup_field='name')
+
+######################## Telescopes ########################
+
+class DomeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Dome
+        fields = ('name', 'shape', 'image')
+
+class MirrorSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Mirror
+        fields = ('mirror_index', 'diameter')
+
+class TelescopeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Telescope
+        lookup_field = "name"
+        fields = ('name', 'acronym', 'observing_site', 'mounting', 'optical_design', 'has_active_optics',
+                  'has_adaptative_optics', 'has_laser_guide_star', 'wavelength_domains', 'dome', 'mirrors')
+
+    observing_site = serializers.HyperlinkedRelatedField(read_only=True,
+                                                         view_name='observingsite-detail',
+                                                         lookup_field='name')
+
+    dome = DomeSerializer(required=False)
+    mirrors = MirrorSerializer(required=False, many=True)
+
+    wavelength_domains = serializers.SerializerMethodField()
+    mounting = serializers.SerializerMethodField()
+    optical_design = serializers.SerializerMethodField()
+
+    def get_wavelength_domains(self, obj):
+        return [Telescope.WAVELENGTH_DOMAINS_VALUES[Telescope.WAVELENGTH_DOMAINS_KEYS.index(domain)] for domain in obj.wavelength_domains]
+
+    def get_mounting(self, obj):
+        return Telescope.MOUNTING_VALUES[Telescope.MOUNTING_KEYS.index(obj.mounting)]
+
+    def get_optical_design(self, obj):
+        return Telescope.OPTICAL_DESIGNS_VALUES[Telescope.OPTICAL_DESIGNS_KEYS.index(obj.optical_design)]
+
 
 
 ######################## Objects Properties ########################
@@ -260,7 +313,7 @@ class AstronomicalObjectSerializer(serializers.ModelSerializer):
 
 ######################## Exoplanets ########################
 
-class ExoplanetSerializer(serializers.HyperlinkedModelSerializer):
+class ExoplanetSerializer(serializers.ModelSerializer):
     class Meta:
         model = Exoplanet
 

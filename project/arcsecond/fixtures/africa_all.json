@@ -1,0 +1,830 @@
+[
+{
+    "pk": 1, 
+    "model": "arcsecond.Coordinates", 
+    "fields": {
+        "latitude": -29.038830555555556, 
+        "longitude": 26.404722222222222, 
+        "height": 1430
+    }
+},
+{
+    "pk": 1, 
+    "model": "arcsecond.ObservingSite", 
+    "fields": {
+        "name": "Boyden", 
+        "time_zone_name": "Africa/Johannesburg", 
+        "country": "South Africa", 
+        "time_zone": "02:00", 
+        "coordinates": [
+            26.404722222222222, 
+            -29.038830555555556
+        ], 
+        "IAUCode": "074", 
+        "long_name": "Boyden Observatory", 
+        "homepage": "http://www.assabfn.co.za/friendsofboyden/boyden.htm", 
+        "continent": "Africa", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Boyden_Observatory"
+    }
+},
+{
+    "pk": 2, 
+    "model": "arcsecond.Coordinates", 
+    "fields": {
+        "latitude": -33.93397777777778, 
+        "longitude": 18.476599999999998, 
+        "height": 30
+    }
+},
+{
+    "pk": 2, 
+    "model": "arcsecond.ObservingSite", 
+    "fields": {
+        "name": "Cape Town", 
+        "time_zone_name": "Africa/Johannesburg", 
+        "country": "South Africa", 
+        "time_zone": "+02:00", 
+        "coordinates": [
+            18.476599999999998, 
+            -33.93397777777778
+        ], 
+        "IAUCode": "051", 
+        "long_name": "Cape Town Observatory", 
+        "homepage": "http://www.saao.ac.za/", 
+        "continent": "Africa", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Observatory,_Cape_Town"
+    }
+},
+{
+    "pk": 3, 
+    "model": "arcsecond.Coordinates", 
+    "fields": {
+        "latitude": -23.266666666666666, 
+        "longitude": 16.5, 
+        "height": 100
+    }
+},
+{
+    "pk": 3, 
+    "model": "arcsecond.ObservingSite", 
+    "fields": {
+        "name": "H.E.S.S.", 
+        "time_zone_name": "Africa/Windhoek", 
+        "country": "Namibia", 
+        "time_zone": "+01:00", 
+        "coordinates": [
+            16.5, 
+            -23.266666666666666
+        ], 
+        "long_name": "High Energy Stereoscopic System", 
+        "homepage": "http://www.mpi-hd.mpg.de/hfm/HESS/HESS.shtml", 
+        "continent": "Africa", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/High_Energy_Stereoscopic_System"
+    }
+},
+{
+    "pk": 4, 
+    "model": "arcsecond.Coordinates", 
+    "fields": {
+        "latitude": -26.181811111111113, 
+        "longitude": 28.075, 
+        "height": 1825
+    }
+},
+{
+    "pk": 4, 
+    "model": "arcsecond.ObservingSite", 
+    "fields": {
+        "name": "Johannesburg", 
+        "time_zone_name": "Africa/Johannesburg", 
+        "country": "South Africa", 
+        "time_zone": "+01:00", 
+        "coordinates": [
+            28.075, 
+            -26.181811111111113
+        ], 
+        "IAUCode": "078", 
+        "long_name": "Johannesburg Observatory", 
+        "homepage": "http://www.assajhb.co.za", 
+        "continent": "Africa", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/Johannesburg_Observatory"
+    }
+},
+{
+    "pk": 5, 
+    "model": "arcsecond.Coordinates", 
+    "fields": {
+        "latitude": 13.771111111111113, 
+        "longitude": -0.13333333333333333, 
+        "height": 459
+    }
+},
+{
+    "pk": 5, 
+    "model": "arcsecond.ObservingSite", 
+    "fields": {
+        "name": "Mount Djaogari", 
+        "time_zone_name": "Africa/Ouagadougou", 
+        "country": "Burkina Faso", 
+        "time_zone": "-00:00", 
+        "coordinates": [
+            -0.13333333333333333, 
+            13.771111111111113
+        ], 
+        "long_name": "Mount Djaogari Astronomical Observatory", 
+        "homepage": "", 
+        "continent": "Africa", 
+        "wikipedia_article": ""
+    }
+},
+{
+    "pk": 6, 
+    "model": "arcsecond.Coordinates", 
+    "fields": {
+        "latitude": -32.37588888888889, 
+        "longitude": 20.8108, 
+        "height": 1798
+    }
+},
+{
+    "pk": 6, 
+    "model": "arcsecond.ObservingSite", 
+    "fields": {
+        "name": "SAAO/SALT", 
+        "time_zone_name": "Africa/Johannesburg", 
+        "country": "South Africa", 
+        "time_zone": "+02:00", 
+        "coordinates": [
+            20.8108, 
+            -32.37588888888889
+        ], 
+        "IAUCode": "B31", 
+        "long_name": "South African Astronomical Observatory", 
+        "homepage": "http://www.saao.ac.za/", 
+        "continent": "Africa", 
+        "wikipedia_article": "http://en.wikipedia.org/wiki/South_African_Astronomical_Observatory"
+    }
+},
+{
+    "pk": 1, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "60in Rockefeller Reflector (Boyden-UFS Telescope) Dome"
+    }
+},
+{
+    "pk": 1, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "60in Rockefeller Reflector (Boyden-UFS Telescope)", 
+        "observing_site": 1, 
+        "mounting": "cas", 
+        "has_active_optics": false, 
+        "dome": 1, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 1, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 1500.0, 
+        "mirror_index": 0, 
+        "telescope": 1
+    }
+},
+{
+    "pk": 2, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "16in Nishimura Reflector Dome"
+    }
+},
+{
+    "pk": 2, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "16in Nishimura Reflector", 
+        "observing_site": 1, 
+        "has_active_optics": false, 
+        "dome": 2, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 2, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 410.0, 
+        "mirror_index": 0, 
+        "telescope": 2
+    }
+},
+{
+    "pk": 3, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "16in Watcher Robotic Reflector Dome"
+    }
+},
+{
+    "pk": 3, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "16in Watcher Robotic Reflector", 
+        "observing_site": 1, 
+        "has_active_optics": false, 
+        "dome": 3, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 3, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 400.0, 
+        "mirror_index": 0, 
+        "telescope": 3
+    }
+},
+{
+    "pk": 4, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "13in Alvin Clark Refractor Dome"
+    }
+},
+{
+    "pk": 4, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "13in Alvin Clark Refractor", 
+        "observing_site": 1, 
+        "has_active_optics": false, 
+        "dome": 4, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 4, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 330.0, 
+        "mirror_index": 0, 
+        "telescope": 4
+    }
+},
+{
+    "pk": 5, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "10in Metcalf Photographic Triplet Refractor Dome"
+    }
+},
+{
+    "pk": 5, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "10in Metcalf Photographic Triplet Refractor", 
+        "observing_site": 1, 
+        "has_active_optics": false, 
+        "dome": 5, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 5, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 254.0, 
+        "mirror_index": 0, 
+        "telescope": 5
+    }
+},
+{
+    "pk": 6, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "20 cm Coelostat (Solar Telescope) Dome"
+    }
+},
+{
+    "pk": 6, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "20 cm Coelostat (Solar Telescope)", 
+        "observing_site": 1, 
+        "has_active_optics": false, 
+        "dome": 6, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 6, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 200.0, 
+        "mirror_index": 0, 
+        "telescope": 6
+    }
+},
+{
+    "pk": 7, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "McClean 0.61m Dome"
+    }
+},
+{
+    "pk": 7, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "McClean 0.61m", 
+        "observing_site": 2, 
+        "has_active_optics": false, 
+        "dome": 7, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 7, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 610.0, 
+        "mirror_index": 0, 
+        "telescope": 7
+    }
+},
+{
+    "pk": 8, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Dall-Kirkham 0.45m Dome"
+    }
+},
+{
+    "pk": 8, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "Dall-Kirkham 0.45m", 
+        "observing_site": 2, 
+        "has_active_optics": false, 
+        "dome": 8, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 8, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 450.0, 
+        "mirror_index": 0, 
+        "telescope": 8
+    }
+},
+{
+    "pk": 9, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Parks 0.41m Dome"
+    }
+},
+{
+    "pk": 9, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "Parks 0.41m", 
+        "observing_site": 2, 
+        "has_active_optics": false, 
+        "dome": 9, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 9, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 410.0, 
+        "mirror_index": 0, 
+        "telescope": 9
+    }
+},
+{
+    "pk": 10, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Visual Refractor 0.15m Dome"
+    }
+},
+{
+    "pk": 10, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "Visual Refractor 0.15m", 
+        "observing_site": 2, 
+        "has_active_optics": false, 
+        "dome": 10, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 10, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 150.0, 
+        "mirror_index": 0, 
+        "telescope": 10
+    }
+},
+{
+    "pk": 11, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "CT1 Dome"
+    }
+},
+{
+    "pk": 11, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "CT1", 
+        "observing_site": 3, 
+        "mounting": "aaz", 
+        "has_active_optics": false, 
+        "dome": 11, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 11, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 13000.0, 
+        "mirror_index": 0, 
+        "telescope": 11
+    }
+},
+{
+    "pk": 12, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "CT2 Dome"
+    }
+},
+{
+    "pk": 12, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "CT2", 
+        "observing_site": 3, 
+        "mounting": "aaz", 
+        "has_active_optics": false, 
+        "dome": 12, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 12, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 13000.0, 
+        "mirror_index": 0, 
+        "telescope": 12
+    }
+},
+{
+    "pk": 13, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "CT3 Dome"
+    }
+},
+{
+    "pk": 13, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "CT3", 
+        "observing_site": 3, 
+        "mounting": "aaz", 
+        "has_active_optics": false, 
+        "dome": 13, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 13, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 13000.0, 
+        "mirror_index": 0, 
+        "telescope": 13
+    }
+},
+{
+    "pk": 14, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "CT4 Dome"
+    }
+},
+{
+    "pk": 14, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "CT4", 
+        "observing_site": 3, 
+        "mounting": "aaz", 
+        "has_active_optics": false, 
+        "dome": 14, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 14, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 13000.0, 
+        "mirror_index": 0, 
+        "telescope": 14
+    }
+},
+{
+    "pk": 15, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "Le Marly Dome"
+    }
+},
+{
+    "pk": 15, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "Le Marly", 
+        "observing_site": 5, 
+        "mounting": "equ", 
+        "has_active_optics": false, 
+        "dome": 15, 
+        "optical_design": "rc", 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 15, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 1000.0, 
+        "mirror_index": 0, 
+        "telescope": 15
+    }
+},
+{
+    "pk": 16, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "South African Large Telescope Dome"
+    }
+},
+{
+    "pk": 16, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "South African Large Telescope", 
+        "observing_site": 6, 
+        "has_active_optics": false, 
+        "dome": 16, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 16, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 11000.0, 
+        "mirror_index": 0, 
+        "telescope": 16
+    }
+},
+{
+    "pk": 17, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "1.9m (Radcliffe) Telescope Dome"
+    }
+},
+{
+    "pk": 17, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "1.9m (Radcliffe) Telescope", 
+        "observing_site": 6, 
+        "has_active_optics": false, 
+        "dome": 17, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 17, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 1900.0, 
+        "mirror_index": 0, 
+        "telescope": 17
+    }
+},
+{
+    "pk": 18, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "1.0m (Elizabeth) Telescope Dome"
+    }
+},
+{
+    "pk": 18, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "1.0m (Elizabeth) Telescope", 
+        "observing_site": 6, 
+        "mounting": "equ", 
+        "has_active_optics": false, 
+        "dome": 18, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 18, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 1000.0, 
+        "mirror_index": 0, 
+        "telescope": 18
+    }
+},
+{
+    "pk": 19, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "0.75 Telescope Dome"
+    }
+},
+{
+    "pk": 19, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "0.75 Telescope", 
+        "observing_site": 6, 
+        "mounting": "equ", 
+        "has_active_optics": false, 
+        "dome": 19, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 19, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 750.0, 
+        "mirror_index": 0, 
+        "telescope": 19
+    }
+},
+{
+    "pk": 20, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "0.5m Reflector Telescope Dome"
+    }
+},
+{
+    "pk": 20, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "0.5m Reflector Telescope", 
+        "observing_site": 6, 
+        "mounting": "equ", 
+        "has_active_optics": false, 
+        "dome": 20, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 20, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 500.0, 
+        "mirror_index": 0, 
+        "telescope": 20
+    }
+},
+{
+    "pk": 21, 
+    "model": "arcsecond.Dome", 
+    "fields": {
+        "name": "InfraRed Survey Facility Dome"
+    }
+},
+{
+    "pk": 21, 
+    "model": "arcsecond.Telescope", 
+    "fields": {
+        "name": "InfraRed Survey Facility", 
+        "observing_site": 6, 
+        "mounting": "aaz", 
+        "has_active_optics": false, 
+        "dome": 21, 
+        "wavelength_domains": [
+            "opt"
+        ], 
+        "has_adaptative_optics": false, 
+        "has_laser_guide_star": false
+    }
+},
+{
+    "pk": 21, 
+    "model": "arcsecond.Mirror", 
+    "fields": {
+        "diameter": 1400.0, 
+        "mirror_index": 0, 
+        "telescope": 21
+    }
+}
+]

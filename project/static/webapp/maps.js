@@ -16,7 +16,12 @@ function map_initialize() {
 
     google.maps.event.addListenerOnce(window.map, 'idle', function(){
         var angScope = angular.element($('#ObservingSitesNavigationCtlr')).scope();
-        angScope.sitesCtlr.installSiteCountsAndMapMarkers();
+        if (angScope.sitesCtlr !== undefined) {
+            angScope.sitesCtlr.installSiteCountsAndMapMarkers();
+        }
+        if (angScope.telescopesCtlr !== undefined) {
+            angScope.telescopesCtlr.installTelescopeCountsAndMapMarkers();
+        }
     });
 }
 
