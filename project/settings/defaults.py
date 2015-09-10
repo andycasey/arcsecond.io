@@ -179,11 +179,11 @@ BOWER_COMPONENTS_ROOT = os.path.join(ROOT_PATH, 'components')
 BOWER_INSTALLED_APPS = (
     'jquery',
     'underscore',
-    'bootstrap-social',
+    'bootstrap-social#~4.9.1',
     'bootstrap-select',
-    'angular',
-    'angular-route',
-    'angular-resource',
+    'angular#1.4.4',
+    'angular-route#1.4.4',
+    'angular-resource#1.4.4',
 )
 
 # https://github.com/sunlightlabs/django-honeypot

@@ -29,21 +29,3 @@ class TelescopeDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIVie
     #     return self.get_queryset().get(name=name)
 
 
-def telescopes(request, path=None):
-    african_telescopes = models.Telescope.objects.filter(observing_site__continent='Africa')
-    antarctica_telescopes = models.Telescope.objects.filter(observing_site__continent='Antarctica')
-    asian_telescopes = models.Telescope.objects.filter(observing_site__continent='Asia')
-    european_telescopes = models.Telescope.objects.filter(observing_site__continent='Europe')
-    north_american_telescopes = models.Telescope.objects.filter(observing_site__continent='North America')
-    oceania_telescopes = models.Telescope.objects.filter(observing_site__continent='Oceania')
-    south_american_telescopes = models.Telescope.objects.filter(observing_site__continent='South America')
-
-    return render(request, 'webapp/telescopes.html', {'african_telescopes': african_telescopes.count,
-                                                      'antarctica_telescopes': antarctica_telescopes.count,
-                                                      'asian_telescopes': asian_telescopes.count,
-                                                      'european_telescopes': european_telescopes.count,
-                                                      'north_american_telescopes': north_american_telescopes.count,
-                                                      'oceania_telescopes': oceania_telescopes.count,
-                                                      'south_american_telescopes': south_american_telescopes.count})
-
-
