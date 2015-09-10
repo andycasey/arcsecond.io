@@ -159,8 +159,24 @@
 }
 
 .site-wrapper-short {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 70px;
+    padding-bottom: 70px;
     border-bottom: 1px solid #eee;
 }
 
+.plus-button {
+    border: 0;
+    padding: 1px 7px;
+}
+
+.plus-button:hover {
+    background: lightgray;
+}
+
+.navbar-text {
+    margin-top: 22px;
+}
+
+.navbar-title {
+    font-size: large;
+}

@@ -20,21 +20,16 @@ urlpatterns = patterns('',
     url(r'^accounts/', include('allauth.urls')),
     url(r'^docs/', include('rest_framework_swagger.urls')),
 
-    url(r'^@(?P<username>[\w]+)/$', views.user_profile, name="user-profile"),
-    url(r'^@(?P<username>[\w]+)/settings$', views.user_settings, name="user-settings"),
+    url(r'^@(?P<username>[\w@\.]+)/$', views.user_profile, name="user-profile"),
+    url(r'^@(?P<username>[\w@\.]+)/settings$', views.user_settings, name="user-settings"),
     url(r'^accounts/profile', views.user_account_profile, name='user-account-profile'),
     url(r'^observingsites/?$', views.observingsites, name="observingsites"),
-    # url(r'^telescopes/?$', views.telescopes, name="telescopes"),
 
     # CORS HEADERS SOLUTION PENDING
 
     url(r'^1/observingsites/$',
         views.ObservingSiteListAPIView.as_view(),
         name="www-observingsite-list"),
-
-    # url(r'^1/telescopes/$',
-    #     views.TelescopeListAPIView.as_view(),
-    #     name="www-telescope-list"),
 )
 
 if settings.DEBUG is True:
