@@ -79,6 +79,11 @@ arcsecondApp
                 $('.site-list').not('.'+continent_key).hide();
                 $('.site-list.'+continent_key).show();
 
+                if ($scope.sitesCtlr.selectedContinent !== undefined && $scope.sitesCtlr.selectedContinent !== continent_key) {
+                    $scope.sitesCtlr.selectedSite = null;
+                }
+                $scope.sitesCtlr.selectedContinent = continent_key;
+
                 var bounds = new google.maps.LatLngBounds();
 
                 for (var i = 0; i < $scope.sitesCtlr.continents.length; i++) {
@@ -99,8 +104,17 @@ arcsecondApp
 
             sitesCtlr.selectSite = function(continent_key, site_index) {
                 markers = $scope.sitesCtlr.markers[continent_key];
-                google.maps.event.trigger(markers[site_index], 'click');
-                $scope.sitesCtlr.selectedSite = $scope.sitesCtlr.sites[continent_key][site_index];
+                infowindows = $scope.sitesCtlr.infowindows[continent_key];
+
+                for (var j = 0; j < markers.length; j++) {
+                    if (j !== site_index) {
+                        infowindows[j].close();
+                    }
+                    else {
+                        google.maps.event.trigger(markers[site_index], 'click');
+                        $scope.sitesCtlr.selectedSite = $scope.sitesCtlr.sites[continent_key][site_index];
+                    }
+                }
             };
         }]);
 
