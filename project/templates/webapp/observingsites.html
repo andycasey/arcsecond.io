@@ -36,7 +36,8 @@
                         <a data-target="#" data-toggle="pill" href="#" ng-click="sitesCtlr.selectContinent(continent.key)">[[continent.name]]
                             <span class="badge">[[ sitesCtlr.sites[continent.key].length ]]</span>
                                 <button class="btn btn-info plus-button"
-                                        onClick="parent.location='{% if user.is_authenticated %}{% url 'observingsite-new' %}{% else %}{% url 'account_login' %}{% endif %}'">
+{#                                        onClick="parent.location='{% if user.is_authenticated %}{% url 'observingsite-new' %}{% else %}{% url 'account_login' %}{% endif %}'"#}
+                                        >
                                     +
                                 </button>
                         </a>
