@@ -116,8 +116,6 @@ INSTALLED_APPS = (
     'allauth.socialaccount.providers.twitter',
     # 'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.github',
-    # 'allauth.socialaccount.providers.flickr',
-    # 'allauth.socialaccount.providers.linkedin_oauth2',
     'project.arcsecond',
 )
 
@@ -125,9 +123,9 @@ MIDDLEWARE_CLASSES = (
     'django_hosts.middleware.HostsRequestMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -184,6 +182,7 @@ BOWER_INSTALLED_APPS = (
     'angular#1.4.4',
     'angular-route#1.4.4',
     'angular-resource#1.4.4',
+    'angular-cookies#1.4.4',
 )
 
 # https://github.com/sunlightlabs/django-honeypot
@@ -280,12 +279,18 @@ ACCOUNT_EMAIL_REQUIRED = True
 # An integer specifying the minimum password length.
 ACCOUNT_PASSWORD_MIN_LENGTH = 10
 
-CORS_ORIGIN_WHITELIST = (
-    'www.arcsecond.io',
-    'api.arcsecond.io'
-)
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ALLOW_CREDENTIALS = True
+CSRF_COOKIE_DOMAIN = "*"
 
-CORS_URLS_REGEX = r'^/docs/.*$'
+CORS_ALLOW_HEADERS = (
+    'x-requested-with',
+    'content-type',
+    'accept',
+    'origin',
+    'authorization',
+    'X-CSRFToken'
+)
 
 SWAGGER_SETTINGS = {
     'exclude_namespaces': [],

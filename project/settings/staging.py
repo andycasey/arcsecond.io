@@ -21,3 +21,8 @@ ALLOWED_HOSTS = [
 # LOCKDOWN_URL_EXCEPTIONS = (r'^/admin/$',)
 
 SITE_ID = 2  # Local=1, Staging=2, Prod=3
+
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_WHITELIST = (
+    'arcsecond-staging.herokuapp.com',
+)

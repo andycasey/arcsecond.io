@@ -12,3 +12,8 @@ ALLOWED_HOSTS = [
 
 SITE_ID = 3  # Local=1, Staging=2, Prod=3
 
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_WHITELIST = (
+    'www.arcsecond.io',
+    'api.arcsecond.io'
+)

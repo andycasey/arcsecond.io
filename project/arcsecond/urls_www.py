@@ -24,17 +24,10 @@ urlpatterns = patterns('',
     url(r'^@(?P<username>[\w@\.]+)/settings$', views.user_settings, name="user-settings"),
     url(r'^accounts/profile', views.user_account_profile, name='user-account-profile'),
     url(r'^observingsites/?$', views.observingsites, name="observingsites"),
-
-    # CORS HEADERS SOLUTION PENDING
-
-    url(r'^1/observingsites/$',
-        views.ObservingSiteListAPIView.as_view(),
-        name="www-observingsite-list"),
 )
 
-if settings.DEBUG is True:
-    import urls_api
-    urlpatterns += urls_api.urlpatterns
+import urls_api
+urlpatterns += urls_api.urlpatterns
 
 handler404 = 'views.custom_404'
 
