@@ -75,19 +75,12 @@
 {% block before_body_raw_block %}{% endblock before_body_raw_block %}
 
 {% if messages %}
-    <div class="site-wrapper">
-        <div class="container">
-            <div class="row">
-                {% for message in messages %}
-                    <div class="alert alert-{% if message.tags %}{{ message.tags }}{% else %}info{% endif %} alert-dismissible" role="alert">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        {{message}}
-                    </div>
-                {% endfor %}
-
-            </div>
+    {% for message in messages %}
+        <div class="alert alert-{% if message.tags %}{{ message.tags }}{% else %}info{% endif %} alert-dismissible alert-absolute" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            {{ message|safe }}
         </div>
-    </div>
+    {% endfor %}
 {% endif %}
 
 {% block body_block %}

@@ -16,6 +16,7 @@ PROJECT_PATH = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 ROOT_PATH = os.path.dirname(PROJECT_PATH)
 
 ADMINS = (('Cedric', 'cedric@onekilopars.ec'), )
+MANAGERS = ADMINS
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -110,6 +111,7 @@ INSTALLED_APPS = (
     'multiselectfield',
     'corsheaders',
     'rest_framework_swagger',
+    'contact_form',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',

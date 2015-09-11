@@ -81,6 +81,10 @@ arcsecondApp
 
                 if ($scope.sitesCtlr.selectedContinent !== undefined && $scope.sitesCtlr.selectedContinent !== continent_key) {
                     $scope.sitesCtlr.selectedSite = null;
+                    infowindows = $scope.sitesCtlr.infowindows[$scope.sitesCtlr.selectedContinent];
+                    for (var k = 0; k < infowindows.length; k++) {
+                        infowindows[k].close();
+                    }
                 }
                 $scope.sitesCtlr.selectedContinent = continent_key;
 
