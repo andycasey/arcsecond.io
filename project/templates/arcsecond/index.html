@@ -213,7 +213,12 @@
                                     <div class="input-group-addon go-api">/{{ api_version }}/telegrams/
                                         <select class="go-select">
                                             <option>ATel</option>
+                                            <option>GCN/Circulars</option>
                                         </select>&nbsp;<span class="go-select-suffix">/</span>
+                                        <select class="go-select-hidden" hidden>
+                                            <option>7898</option>
+                                            <option>14447</option>
+                                        </select>
                                     </div>
                                     <input type="text" class="form-control go-input" placeholder="ex : 7898" value="7898">
                                 </div>
@@ -221,7 +226,8 @@
                             <button type="submit" class="btn btn-default go-button">Go</button>
                         </form>
                         <p class="about-item__content">
-                            <strong>Current state:</strong> partial implementation of <a href="http://www.astronomerstelegram.org">ATels</a>.
+                            <strong>Current state:</strong> partial implementation of <a href="http://www.astronomerstelegram.org">ATels</a>,
+                            and <a href="http://gcn.gsfc.nasa.gov">GCN Circulars</a>.
                         </p>
                     </div>
                 </div>

@@ -33,3 +33,16 @@ class AstronomersTelegramListAPIView(mixins.RequestLogViewMixin, generics.ListAP
     def get_queryset(self):
         connectors.read_last_ATels(StandardResultsSetPagination.page_size)
         return super(AstronomersTelegramListAPIView, self).get_queryset()
+
+
+
+class GCNCircularDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIView):
+    queryset = models.GCNCircular.objects.all()
+    serializer_class = serializers.GCNCircularSerializer
+    lookup_field = "identifier"
+
+    def get_object(self):
+        identifier = self.kwargs.get("identifier", None)
+        gcn_circular = connectors.get_GCN_circular(identifier=identifier)
+        return gcn_circular
+
