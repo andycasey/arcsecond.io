@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ObjectDoesNotExist
@@ -5,7 +6,19 @@ from django.core.urlresolvers import reverse_lazy, reverse
 from django.http import HttpResponseRedirect, Http404, HttpResponse
 from django.shortcuts import render, render_to_response
 from django.template import RequestContext
+
+from contact_form import forms
 from .utils import get_generic_meta
+
+MESSAGE_SENT = """
+<strong>Your message was sent, thanks!</strong> Follow us on
+<a href="https://twitter.com/arcsecond_io" class="social__item">
+    <i class="fa fa-twitter"></i>
+</a> and
+<a href="http://facebook.com/arcsecond.io" class="social__item">
+    <i class="fa fa-facebook"></i>
+</a>.
+"""
 
 def index(request):
     context = RequestContext(request)
@@ -14,6 +27,15 @@ def index(request):
                     'initial': True,
                     'meta': get_generic_meta(title="arcsecond.io", url=reverse_lazy('index'))}
 
+    if request.method == 'POST':
+        form = forms.ContactForm(request=request, data=request.POST)
+        if form.is_valid():
+            form.save()
+            messages.info(request, MESSAGE_SENT)
+            return HttpResponseRedirect(reverse_lazy('index'))
+
+    form = forms.ContactForm(request=request)
+    context_dict.update({'form': form})
     return render_to_response('arcsecond/index.html', context_dict, context)
 
 def custom_404(request):
