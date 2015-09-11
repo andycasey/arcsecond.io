@@ -2,4 +2,28 @@
 {% load staticfiles %}
 
 {% compress js %}
+    <!-- JS Global -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+    <!-- Bootstrap -->
+    <script src="{% static 'arcsecond/js/bootstrap/bootstrap.min.js' %}"></script>
+    <link href="{% static 'bootstrap-select/dist/css/bootstrap-select.min.css' %}" rel="stylesheet">
+    <script src="{% static 'bootstrap-select/dist/js/bootstrap-select.min.js' %}"></script>
+
+    <!-- JS Plugins -->
+    <script src="{% static 'arcsecond/js/plugins/jquery.parallax-1.1.3.js' %}"></script>
+    <script src="{% static 'arcsecond/js/plugins/smoothscroll.js' %}"></script>
+    <script src="{% static 'arcsecond/js/plugins/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'arcsecond/js/plugins/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'arcsecond/js/plugins/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'arcsecond/js/plugins/lightbox.min.js' %}"></script>
+    {#<script src="{% static 'arcsecond/js/plugins/contact.js' %}"></script>#}
+
+    <!-- JS Custom -->
+    {% if initial %}<script src="{% static 'arcsecond/js/custom_classic.js' %}"></script>{% endif %}
+    <script src="{% static 'arcsecond/js/custom.js' %}"></script>
+
+
+    <!-- Angular WebApp -->
 {% endcompress %}
