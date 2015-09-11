@@ -16,6 +16,12 @@ class AstronomersTelegramShortSerializer(serializers.ModelSerializer):
         lookup_field = "identifier"
         fields = ('url', 'identifier')
 
+class GCNCircularShortSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GCNCircular
+        lookup_field = "identifier"
+        fields = ('url', 'identifier')
+
 class PublicationShortSerializer(serializers.ModelSerializer):
     class Meta:
         model = Publication
@@ -452,11 +458,26 @@ class AstronomersTelegramSerializer(serializers.ModelSerializer):
     class Meta:
         model = AstronomersTelegram
         lookup_field = "identifier"
-        fields = ('url', 'identifier', 'title', 'credential_certification', 'subjects', 'content', 'authors',
-                  'external_links', 'related_telegrams', 'detected_objects')
+        fields = ('identifier', 'title', 'credential_certification', 'subjects', 'content', 'authors',
+                  'related_telegrams', 'detected_objects', 'external_links')
 
     related_telegrams = AstronomersTelegramShortSerializer(required=False, many=True)
     detected_objects = AstronomicalObjectShortSerializer(required=False, many=True)
+
+
+class GCNCircularSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GCNCircular
+        lookup_field = "identifier"
+        fields = ('identifier', 'title', 'date', 'content', 'submitter', 'authors',
+                  'related_circulars', 'external_links')
+
+    submitter = PersonSerializer(required=False)
+    related_circulars = serializers.HyperlinkedRelatedField(many=True,
+                                                            read_only=True,
+                                                            view_name='gcncircular-detail',
+                                                            lookup_field='identifier')
+
 
 
 ######################## Finding Charts ########################

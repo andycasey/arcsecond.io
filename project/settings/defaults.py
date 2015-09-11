@@ -103,8 +103,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'mptt',
     'meta',
+    'compressor',
     'djangobower',
     'honeypot',
     'django_hosts',
@@ -173,6 +173,7 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     # 'django.contrib.staticfiles.finders.DefaultStorageFinder',
     'djangobower.finders.BowerFinder',
+    'compressor.finders.CompressorFinder',
 )
 
 BOWER_COMPONENTS_ROOT = os.path.join(ROOT_PATH, 'components')
@@ -185,6 +186,7 @@ BOWER_INSTALLED_APPS = (
     'angular-route#1.4.4',
     'angular-resource#1.4.4',
     'angular-cookies#1.4.4',
+    'ngDialog',
 )
 
 # https://github.com/sunlightlabs/django-honeypot
@@ -212,10 +214,6 @@ TEMPLATES = [
 
                 # `allauth` needs this from django
                 'django.template.context_processors.request',
-
-                # `allauth` specific context processors
-                'allauth.account.context_processors.account',
-                'allauth.socialaccount.context_processors.socialaccount',
             ],
         },
     },

@@ -55,6 +55,7 @@ urlpatterns = patterns('',
         views.TelescopeListAPIView.as_view(),
         name="telescope-list"),
 
+
     # ----- Telegrams -----
 
     url(r'^1/telegrams/ATel/(?P<identifier>\d+)/$',
@@ -64,6 +65,10 @@ urlpatterns = patterns('',
     url(r'^1/telegrams/ATel/$',
         views.AstronomersTelegramListAPIView.as_view(),
         name="astronomerstelegram-list"),
+
+    url(r'^1/telegrams/GCN/Circulars/(?P<identifier>\d+)/$',
+        views.GCNCircularDetailAPIView.as_view(),
+        name="gcncircular-detail"),
 
 
     # ----- Publications -----
