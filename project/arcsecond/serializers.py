@@ -292,7 +292,7 @@ class AstronomicalObjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = AstronomicalObject
         lookup_field = "name"
-        fields = ('url', 'name', 'coordinates', 'aliases', 'object_types', 'fluxes', 'mass', 'radius', 'distance',
+        fields = ('name', 'coordinates', 'aliases', 'object_types', 'fluxes', 'mass', 'radius', 'distance',
                   'metallicity', 'age', 'effective_temperature', 'astronomer_telegrams', 'finding_charts')
 
     coordinates = AstronomicalCoordinatesSerializer(required=False)
@@ -300,12 +300,6 @@ class AstronomicalObjectSerializer(serializers.ModelSerializer):
     aliases = AliasSerializer(many=True, required=False)
     object_types = ObjectTypeSerializer(many=True, required=False)
     fluxes = FluxSerializer(many=True, required=False)
-
-    finding_charts = serializers.HyperlinkedIdentityField(view_name='findingchart-list',
-                                                          lookup_field='name',
-                                                          lookup_url_kwarg='input',
-                                                          read_only=True,
-                                                          required=False)
 
     mass = MassSerializer(required=False)
     radius = RadiusSerializer(required=False)
@@ -315,6 +309,11 @@ class AstronomicalObjectSerializer(serializers.ModelSerializer):
     effective_temperature = TemperatureSerializer(required=False)
 
     astronomer_telegrams = AstronomersTelegramShortSerializer(required=False, many=True)
+    finding_charts = serializers.HyperlinkedIdentityField(view_name='findingchart-list',
+                                                          lookup_field='name',
+                                                          lookup_url_kwarg='input',
+                                                          read_only=True,
+                                                          required=False)
 
 
 ######################## Exoplanets ########################
