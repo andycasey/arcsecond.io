@@ -1,3 +1,15 @@
+.welcome_classic_api {
+    background-image: url(../img/bg-pattern_alt.png), url(../img/screen-bg_10.jpg);
+}
+.welcome_classic_www {
+    background-image: url(../img/bg-pattern_alt.png), url(../img/screen-bg_11.jpg);
+}
+
+.btn-primary-black {
+    color: #333333;
+    background-color: transparent;
+    border-color: #333333;
+}
 
 .go-button {
     padding: 4px 12px;

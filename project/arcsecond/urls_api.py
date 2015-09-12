@@ -1,6 +1,5 @@
 from django.conf import settings
-from django.conf.urls import patterns
-from django.conf.urls import url
+from django.conf.urls import patterns, include, url
 
 from rest_framework.urlpatterns import format_suffix_patterns
 
@@ -10,7 +9,8 @@ from project.arcsecond.models import constants
 full_string_regex = "[\s\d\w()\.+-_\'\,\:&]+"
 
 urlpatterns = patterns('',
-    url(r'^$', views.index, name='index'),
+    url(r'^$', views.index_api, name='index_api'),
+    url(r'^accounts/', include('allauth.urls')),
 
     # ----- Objects -----
 
@@ -37,8 +37,12 @@ urlpatterns = patterns('',
     # ----- Observing Sites -----
 
     url(r'^1/observingsites/(?P<name>'+full_string_regex+')/$',
-        views.ObservingSiteDetailAPIView.as_view(),
-        name="observingsite-detail"),
+        views.ObservingSiteNamedDetailAPIView.as_view(),
+        name="observingsite-named-detail"),
+
+    # url(r'^1/observingsites/(?P<pk>\d+)/$',
+    #     views.ObservingSiteDetailAPIView.as_view(),
+    #     name="observingsite-detail"),
 
     url(r'^1/observingsites/$',
         views.ObservingSiteListAPIView.as_view(),

@@ -137,6 +137,8 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'project.arcsecond.urls_www'
 ROOT_HOSTCONF = 'project.arcsecond.hosts'
 DEFAULT_HOST = 'www'
+PARENT_HOST = '<to_be_overriden>'
+HOST_OVERRIDE_URL_TAG = True
 
 WSGI_APPLICATION = 'project.wsgi.application'
 

@@ -6934,7 +6934,6 @@ body.classic .welcome_classic {
     height: 100%;
     min-height: 100%;
     width: 100%;
-    background-image: url(../img/bg-pattern_alt.png), url(../img/screen-bg_11.jpg);
     background-position: top left, center center;
     background-size: auto, cover;
     background-repeat: repeat, no-repeat;

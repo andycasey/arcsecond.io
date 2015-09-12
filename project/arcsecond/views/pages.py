@@ -5,10 +5,11 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.core.urlresolvers import reverse_lazy, reverse
 from django.http import HttpResponseRedirect, Http404, HttpResponse
 from django.shortcuts import render, render_to_response
+from django.views.decorators.csrf import ensure_csrf_cookie
 from django.template import RequestContext
 
 from contact_form import forms
-from .utils import get_generic_meta
+from project.arcsecond.views.utils import get_generic_meta
 
 MESSAGE_SENT = """
 <strong>Your message was sent, thanks!</strong> Follow us on
@@ -20,12 +21,14 @@ MESSAGE_SENT = """
 </a>.
 """
 
-def index(request):
+@ensure_csrf_cookie
+def index_www(request):
     context = RequestContext(request)
     context_dict = {"title": ("arcsecond.io"),
                     'api_version': '1',
                     'initial': True,
-                    'meta': get_generic_meta(title="arcsecond.io", url=reverse_lazy('index'))}
+                    'angular_app': 'arcsecondApp',
+                    'meta': get_generic_meta(title="arcsecond.io", url=reverse_lazy('index_www'))}
 
     if request.method == 'POST':
         form = forms.ContactForm(request=request, data=request.POST)
@@ -36,7 +39,33 @@ def index(request):
 
     form = forms.ContactForm(request=request)
     context_dict.update({'form': form})
-    return render_to_response('arcsecond/index.html', context_dict, context)
+    return render_to_response('arcsecond/index_www.html', context_dict, context)
+
+
+def index_api(request):
+    context = RequestContext(request)
+    context_dict = {"title": ("arcsecond.io"),
+                    'api_version': '1',
+                    'initial': True,
+                    'meta': get_generic_meta(title="arcsecond.io", url=reverse_lazy('index_api'))}
+
+    return render_to_response('arcsecond/index_api.html', context_dict, context)
+
+
+
+
+
+from django.views.generic.base import TemplateView
+from django.utils.decorators import method_decorator
+
+
+class IndexView(TemplateView):
+    template_name = 'arcsecond/index_webapp.html'
+
+    @method_decorator(ensure_csrf_cookie)
+    def dispatch(self, *args, **kwargs):
+        return super(IndexView, self).dispatch(*args, **kwargs)
+
 
 def custom_404(request):
     return render(request, 'arcsecond/404.html')

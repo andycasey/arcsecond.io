@@ -246,7 +246,7 @@ class TelescopeSerializer(serializers.ModelSerializer):
                   'has_adaptative_optics', 'has_laser_guide_star', 'wavelength_domains', 'dome', 'mirrors')
 
     observing_site = serializers.HyperlinkedRelatedField(read_only=True,
-                                                         view_name='observingsite-detail',
+                                                         view_name='observingsite-named-detail',
                                                          lookup_field='name')
 
     dome = DomeSerializer(required=False)

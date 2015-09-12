@@ -1,0 +1,290 @@
+{% extends 'arcsecond/base.html' %}
+
+{% load staticfiles %}
+{% load i18n %}
+{% load hosts %}
+
+{% block body_block %}
+
+    <!-- WELCOME
+    ============================== -->
+    <div class="welcome_classic welcome_classic_www" id="welcome" title="Amazing picture by ESO/José Francisco Salgado (josefrancisco.org)">
+        <div class="welcome-classic__inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+
+                        <!-- Pre heading -->
+                        <p class="heading__pre">
+                            Version 1 (alpha)
+                        </p>
+
+                        <!-- Heading -->
+                        <h1 class="heading heading_lg">
+                            Welcome to <span class="text-primary">arcsecond.io</span>
+                        </h1>
+
+                        <!-- Sub heading -->
+                        <p class="heading__sub">
+                            Your integrated access point to world-wide astronomical data
+                        </p>
+
+                        <!-- Button -->
+                        <div class="text-center">
+                            <a href="#about" class="btn btn-xl btn-primary">
+                                <span class="oi oi-arrow-right" title="Find out more" aria-hidden="true"></span>
+                                <span>Learn how to feed your next astro app</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div> <!-- / .row -->
+            </div> <!-- / .container -->
+        </div> <!-- / .classic-welcome__inner -->
+    </div> <!-- / .welcome_classic -->
+
+
+    <!-- ABOUT
+    ============================== -->
+    <div class="site-wrapper" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+                    <div class="lead text-center text">
+                        <em>
+                            <strong>arcsecond.io</strong> aims at providing browsable, unified Application Programming
+                            Interfaces (APIs) where each piece of astronomical information has its own <i>URL</i>.
+                            SIMBAD, NASA Exoplanet Archive, JPL Horizons, ADS are among the sources of information that
+                            arcsecond.io intend to unify. Because we believe in the force of <strong>integration</strong>.
+                        </em>
+                    </div>
+                    <div class="lead text-center text">
+                        <strong>arcsecond.io</strong> is a service of <a href="http://onekilopars.ec">onekilopars.ec</a>,
+                        home of <a href="http://onekilopars.ec/apps">iObserve</a>, the best OS X and iOS apps for astronomers,
+                        as well as <a href="http://onekilopars.ec/open-source">multiple open-source projects</a> for FITS files, astronomical algorithms, VOTables, etc.
+                    </div>
+                </div>
+            </div> <!-- / .row -->
+        </div> <!-- / .container -->
+    </div> <!-- / .site-wrapper_classic -->
+
+
+    <!-- APIs
+    ============================== -->
+    <div class="site-wrapper site-wrapper-blue" id="APIs">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+
+                    <!-- Heading -->
+                    <h1 class="heading">
+                        One access point: <span class="text-primary">api.arcsecond.io</span>
+                    </h1>
+
+                    <!-- Sub heading -->
+                    <p class="heading__sub">
+                        Our goal is to give access to as much information as possible, aggregating information with a philosophy centered around <em>resources</em>.
+                        <br/>The APIs will incrementally be introduced here. To follow what's going on, read <a href="http://onekilopars.ec/blog">onekilopars.ec blog</a>.
+                        <br/>Example values are inserted below to speed up experimentation, but feel free to play with other values.
+                    </p>
+
+                    <div class="text-center">
+                        {% if settings.SITE_ID == 3 %}
+                            <a href="http://api.arcsecond.io" class="btn btn-xl btn-primary btn-primary-black">
+                        {% elif settings.SITE_ID == 2 %}
+                            <a href="http://api.arcsecond-staging.herokuapp.com" class="btn btn-xl btn-primary btn-primary-black">
+                        {% else %}
+                            <a href="http://api.lvho.st:8000" class="btn btn-xl btn-primary btn-primary-black">
+                        {% endif %}
+                        <span class="oi oi-arrow-right" title="Discover APIs" aria-hidden="true"></span>
+                        <span>Discover APIs</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- TEAM
+    ============================== -->
+    <div class="site-wrapper" id="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+
+                    <!-- Heading -->
+                    <h1 class="heading">
+                        Play hard, <span class="text-primary">work hard</span>.
+                    </h1>
+
+                    <!-- Sub heading -->
+                    <p class="heading__sub">
+                        A team of hard-working enthusiastic single guy who's passionate about his softwares...
+                    </p>
+
+                </div>
+            </div> <!-- / .row -->
+            <div class="row">
+                <div class="col-sm-4">
+
+                    <!-- Team member -->
+                    <div class="team__member">
+                    </div> <!-- / .team__member -->
+
+                </div>
+                <div class="col-sm-4">
+
+                    <!-- Team member -->
+                    <div class="team__member team__member_chief">
+
+                        <!-- Avatar -->
+                        <div class="team-member__avatar">
+                            <img class="img-responsive" src="{% static 'arcsecond/img/photo_1.jpg' %}" alt="...">
+                        </div>
+
+                        <!-- Info -->
+                        <h4 class="team-member__name">Cédric Foellmi, Ph.D.</h4>
+                        <p class="team-member__info">
+                            A guy, former support astronomer at one of the <a href="http://www.eso.org/public/teles-instr/lasilla/">most
+                            beautiful observatory on this planet</a> (picture behind), and for a time interested by the distance of
+                            the closest microquasars in our galaxy, and especially <a href="http://arxiv.org/abs/0812.4232">one he
+                            thought was located at 1 kiloparsec</a>.
+                            <br/>Hence, his now famous <a href="http://onekilopars.ec">signature</a>...
+                        </p>
+
+                        <!-- Contact -->
+                        <div class="team-member__contact">
+                            {#                            <a href="#" class="team-member-contact__item facebook">#}
+                            {#                                <i class="fa fa-facebook"></i>#}
+                            {#                            </a>#}
+                            <a href="https://twitter.com/onekiloparsec" class="team-member-contact__item twitter">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="mailto:cedric@arcsecond.io" class="team-member-contact__item email">
+                                <span class="about-item-title__icon oi oi-envelope-closed" title="Telegrams" aria-hidden="true"></span>
+                            </a>
+                            {#                            <a href="#" class="team-member-contact__item google-plus">#}
+                            {#                                <i class="fa fa-google-plus"></i>#}
+                            {#                            </a>#}
+                        </div>
+
+                    </div> <!-- / .team__member -->
+
+                </div>
+                <div class="col-sm-4">
+
+                    <!-- Team member -->
+                    <div class="team__member">
+                    </div> <!-- / .team__member -->
+
+                </div>
+            </div> <!-- / .row -->
+        </div> <!-- / .container -->
+    </div> <!-- / .site-wrapper -->
+
+
+    <!-- CONTACT
+    ============================== -->
+    <div class="site-wrapper" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+
+                    <!-- Heading -->
+                    <h1 class="heading">
+                        Feel free to <span class="text-primary">contact me</span>
+                    </h1>
+
+                    <!-- Sub heading -->
+                    <p class="heading__sub">
+                        Multi-time-zones support guaranteed! <a href="mailto:cedric@arcsecond.io">cedric@arcsecond.io</a>
+                    </p>
+
+                    {% include 'contact_form/contact_form.html' %}
+
+                </div>
+            </div> <!-- / .row -->
+        </div> <!-- / .container -->
+    </div> <!-- / .site-wrapper -->
+
+
+    <!-- MAP
+    ============================== -->
+    <div class="site-wrapper">
+        <div id="map-canvas" class="contact__map"></div>
+    </div> <!-- / .site-wrapper -->
+
+{% endblock %}
+
+
+{% block after_body_raw_block %}
+    {{ block.super }}
+
+    {% include 'arcsecond/blocks/footer.html' %}
+
+    <script src="{% static 'arcsecond/js/plugins/google-maps.js' %}"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(function () {
+                $('[data-toggle="popover"]').popover()
+            });
+
+            $('.selectpicker').selectpicker();
+
+            $('.go-select').change(function(){
+                var element = $(this).parents(".form-inline");
+                var values = element.find(".go-select-hidden");
+                var new_placeholder = values[0].options[this.selectedIndex].value;
+                element.find(".go-input").attr("placeholder", new_placeholder);
+                element.find(".go-input").attr("value", new_placeholder);
+            });
+
+            $(".go-button").click(function() {
+                var element = $(this).parents(".form-inline");
+                {% if settings.SITE_ID == 1 %}
+                    var api_url = "http://127.0.0.1:8000";
+                {% elif settings.SITE_ID == 2 %}
+                    var api_url = "http://arcsecond-staging.herokuapp.com";
+                {% else %}
+                    var api_url = "http://api.arcsecond.io";
+                {% endif %}
+                api_url += element.find(".go-api").html().split("\n")[0];
+
+                var api_select = element.find(".go-select");
+                if (api_select.length == 1) {
+                    api_url += api_select.val();
+                }
+
+                var api_select_suffix = element.find(".go-select-suffix");
+                if (api_select_suffix.length == 1) {
+                    api_url += api_select_suffix.html();
+                }
+
+                var input = element.find(".go-input").val();
+                if (input) {
+                    api_url += input;
+                }
+
+                var api_2 = element.find(".go-api-2");
+                if (api_2.length == 1) {
+                    api_url += api_2.html();
+                }
+
+                var api_input_2 = element.find(".go-input-2");
+                if (api_input_2.length == 1) {
+                    api_url += api_input_2.val();
+                }
+
+                var api_suffix = element.find(".go-api-suffix");
+                if (api_suffix.length == 1) {
+                    api_url += api_suffix.html();
+                }
+                window.open(api_url, '_blank');
+            });
+        });
+    </script>
+
+{% endblock after_body_raw_block %}
