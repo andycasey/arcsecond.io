@@ -89,6 +89,11 @@ class Exoplanet(models.Model):
     mass_detection_method = models.CharField(max_length=3, blank=True, choices=DETECTION_METHOD_CHOICES, default=DETECTION_METHOD_UNKNOWN)
     radius_detection_method = models.CharField(max_length=3, blank=True, choices=DETECTION_METHOD_CHOICES, default=DETECTION_METHOD_UNKNOWN)
 
+    def _get_parent_star_name(self):
+        return self.parent_star.name
+    parent_star_name = property(_get_parent_star_name)
+
+
 
 class AstronomicalObjectManager(models.Manager):
     def get_with_aliases_or_create(self, name):
