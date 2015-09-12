@@ -1,10 +1,12 @@
 
 from rest_framework import generics
 from django.shortcuts import render
+from django.views.generic.edit import CreateView
 
 from project.arcsecond import models
 from project.arcsecond import serializers
 from project.arcsecond import mixins
+from project.arcsecond import forms
 
 class ObservingSiteListAPIView(mixins.RequestLogViewMixin, generics.ListAPIView):
     queryset = models.ObservingSite.objects.all()
@@ -42,4 +44,8 @@ def observingsites(request, path=None):
                                                               'south_american_sites': south_american_sites.count})
 
 
-
+class ObservingSiteCreateView(CreateView):
+    model = models.ObservingSite
+    template_name = 'webapp/new_observingsite.html'
+    form_class = forms.ObservingSiteForm
+    context_object_name = "context"

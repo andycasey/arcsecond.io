@@ -3,7 +3,7 @@
 # Do not import any models here.
 
 from django.apps import AppConfig
-from allauth.account.signals import user_signed_up
+from allauth.account.signals import user_signed_up, user_logged_in
 from .signals import *
 
 class ArcsecondIOAppConfig(AppConfig):
@@ -12,3 +12,4 @@ class ArcsecondIOAppConfig(AppConfig):
 
     def ready(self):
         user_signed_up.connect(process_upon_user_signed_up, dispatch_uid="process_upon_user_signed_up")
+        user_logged_in.connect(process_upon_user_logged_in, dispatch_uid="process_upon_user_logged_in")
