@@ -92,7 +92,7 @@
                         {% if settings.SITE_ID == 3 %}
                             <a href="http://api.arcsecond.io" class="btn btn-xl btn-primary btn-primary-black">
                         {% elif settings.SITE_ID == 2 %}
-                            <a href="http://api.arcsecond-staging.herokuapp.com" class="btn btn-xl btn-primary btn-primary-black">
+                            <a href="http://arcsecond-staging.herokuapp.com/api" class="btn btn-xl btn-primary btn-primary-black">
                         {% else %}
                             <a href="http://api.lvho.st:8000" class="btn btn-xl btn-primary btn-primary-black">
                         {% endif %}
@@ -221,70 +221,6 @@
 
 {% block after_body_raw_block %}
     {{ block.super }}
-
     {% include 'arcsecond/blocks/footer.html' %}
-
     <script src="{% static 'arcsecond/js/plugins/google-maps.js' %}"></script>
-
-    <script>
-        $(document).ready(function () {
-            $(function () {
-                $('[data-toggle="popover"]').popover()
-            });
-
-            $('.selectpicker').selectpicker();
-
-            $('.go-select').change(function(){
-                var element = $(this).parents(".form-inline");
-                var values = element.find(".go-select-hidden");
-                var new_placeholder = values[0].options[this.selectedIndex].value;
-                element.find(".go-input").attr("placeholder", new_placeholder);
-                element.find(".go-input").attr("value", new_placeholder);
-            });
-
-            $(".go-button").click(function() {
-                var element = $(this).parents(".form-inline");
-                {% if settings.SITE_ID == 1 %}
-                    var api_url = "http://127.0.0.1:8000";
-                {% elif settings.SITE_ID == 2 %}
-                    var api_url = "http://arcsecond-staging.herokuapp.com";
-                {% else %}
-                    var api_url = "http://api.arcsecond.io";
-                {% endif %}
-                api_url += element.find(".go-api").html().split("\n")[0];
-
-                var api_select = element.find(".go-select");
-                if (api_select.length == 1) {
-                    api_url += api_select.val();
-                }
-
-                var api_select_suffix = element.find(".go-select-suffix");
-                if (api_select_suffix.length == 1) {
-                    api_url += api_select_suffix.html();
-                }
-
-                var input = element.find(".go-input").val();
-                if (input) {
-                    api_url += input;
-                }
-
-                var api_2 = element.find(".go-api-2");
-                if (api_2.length == 1) {
-                    api_url += api_2.html();
-                }
-
-                var api_input_2 = element.find(".go-input-2");
-                if (api_input_2.length == 1) {
-                    api_url += api_input_2.val();
-                }
-
-                var api_suffix = element.find(".go-api-suffix");
-                if (api_suffix.length == 1) {
-                    api_url += api_suffix.html();
-                }
-                window.open(api_url, '_blank');
-            });
-        });
-    </script>
-
 {% endblock after_body_raw_block %}

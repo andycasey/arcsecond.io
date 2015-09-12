@@ -22,5 +22,11 @@ urlpatterns = patterns('',
     url(r'^@(?P<username>[\w@\.]+)/$', views.user_profile, name="user-profile"),
 )
 
+if settings.SITE_ID == 2:
+    import urls_api
+    urlpatterns += patterns('',
+        url(r'^api/', include(urls_api.urlpatterns))
+    )
+
 handler404 = 'views.custom_404'
 
