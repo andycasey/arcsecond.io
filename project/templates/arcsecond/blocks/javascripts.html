@@ -1,6 +1,6 @@
 {#{% load compress %}#}
 
-{% load staticfiles %}
+{% load static %}
 
 {#{% compress js %}#}
 <!-- JS Global -->
@@ -31,10 +31,23 @@
     <script type="text/javascript" src="{% static 'webapp/javascripts/webapp.config.js' %}"></script>
     <script type="text/javascript" src="{% static 'webapp/javascripts/webapp.routes.js' %}"></script>
 
+    <!-- Angular WebApp: Layout -->
+    <script type="text/javascript" src="{% static 'webapp/javascripts/layout/layout.module.js' %}"></script>
+    <script type="text/javascript" src="{% static 'webapp/javascripts/layout/controllers/index.controller.js' %}"></script>
+
+    <!-- Angular WebApp: Utils -->
+    <script type="text/javascript" src="{% static 'webapp/javascripts/utils/utils.module.js' %}"></script>
+    <script type="text/javascript" src="{% static 'webapp/javascripts/utils/services/snackbar.service.js' %}"></script>
+
     <!-- Angular WebApp: ObservingSites -->
     <script type="text/javascript" src="{% static 'webapp/javascripts/observingsites/observingsites.module.js' %}"></script>
     <script type="text/javascript" src="{% static 'webapp/javascripts/observingsites/services/observingsites.service.js' %}"></script>
+
+    <script type="text/javascript" src="{% static 'webapp/javascripts/observingsites/directives/observingsites.directive.js' %}"></script>
+    <script type="text/javascript" src="{% static 'webapp/javascripts/observingsites/directives/observingsite.directive.js' %}"></script>
+
     <script type="text/javascript" src="{% static 'webapp/javascripts/observingsites/controllers/update.controller.js' %}"></script>
+    <script type="text/javascript" src="{% static 'webapp/javascripts/observingsites/controllers/observingsites.controller.js' %}"></script>
 {% endif %}
 
 {#{% endcompress %}#}

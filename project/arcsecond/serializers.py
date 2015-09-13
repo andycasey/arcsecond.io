@@ -217,7 +217,7 @@ class ObservingSiteSerializer(serializers.ModelSerializer):
     class Meta:
         model = ObservingSite
         lookup_field = "name"
-        fields = ('name', 'long_name', 'IAUCode', 'continent', 'coordinates', 'address_line_1', 'address_line_2',
+        fields = ('id', 'name', 'long_name', 'IAUCode', 'continent', 'coordinates', 'address_line_1', 'address_line_2',
                   'zip_code', 'country', 'time_zone', 'time_zone_name', 'telescopes')
 
     coordinates = CoordinatesSerializer()

@@ -27,7 +27,7 @@ def index_www(request):
     context_dict = {"title": ("arcsecond.io"),
                     'api_version': '1',
                     'initial': True,
-                    'angular_app': 'arcsecondApp',
+                    'angular_app': 'webapp',
                     'meta': get_generic_meta(title="arcsecond.io", url=reverse_lazy('index_www'))}
 
     if request.method == 'POST':
@@ -61,6 +61,11 @@ from django.utils.decorators import method_decorator
 
 class IndexView(TemplateView):
     template_name = 'arcsecond/index_webapp.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(IndexView, self).get_context_data(**kwargs)
+        context['angular_app'] = "webapp"
+        return context
 
     @method_decorator(ensure_csrf_cookie)
     def dispatch(self, *args, **kwargs):

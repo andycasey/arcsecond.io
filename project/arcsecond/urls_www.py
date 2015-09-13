@@ -12,6 +12,7 @@ else:
 
 urlpatterns = patterns('',
     url(r'^$', views.index_www, name='index_www'),
+    url('^.*$', views.IndexView.as_view(), name='index'),
 
     url(r'^robots\.txt$', lambda r: HttpResponse(robots_content)),
     url(r'^admin/', include(admin.site.urls)),

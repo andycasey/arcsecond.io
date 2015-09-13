@@ -12,11 +12,18 @@
      * @desc Define valid application routes
      */
     function config($routeProvider) {
-        $routeProvider.when('/observingsites/:site_name/update', {
-            controller: 'UpdateController',
-            controllerAs: 'vm',
-            templateUrl: '/static/webapp/templates/observingsites/update.html'
-        }).otherwise('/');
+        $routeProvider
+            .when('/observingsites', {
+                controller: 'IndexController',
+                controllerAs: 'vm',
+                templateUrl: '/static/webapp/templates/layout/index.html'
+            })
+            .when('/observingsites/:site_name/update', {
+                controller: 'UpdateController',
+                controllerAs: 'vm',
+                templateUrl: '/static/webapp/templates/observingsites/update.html'
+            })
+            .otherwise('/');
     }
 })();
 

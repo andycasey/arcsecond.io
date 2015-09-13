@@ -1,17 +1,15 @@
-<!DOCTYPE html>
-<html ng-app="webapp">
-<head>
-  <title>webapp</title>
-  <base href="/" />
-</head>
+{% extends 'arcsecond/base.html' %}
 
-<body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-12 ng-view"></div>
+{% block head_end_block  %}
+    <base href="/" />
+{% endblock head_end_block %}
+
+{% block body_block %}
+    <div class="site-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 ng-view"></div>
+            </div>
+        </div>
     </div>
-  </div>
-
-  {% include 'arcsecond/blocks/javascripts.html' %}
-</body>
-</html>
+{% endblock body_block %}

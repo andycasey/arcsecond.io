@@ -5,6 +5,8 @@
         .module('webapp', [
             'webapp.config',
             'webapp.routes',
+            'webapp.utils',
+            'webapp.layout',
             'webapp.observingsites'
         ]);
 

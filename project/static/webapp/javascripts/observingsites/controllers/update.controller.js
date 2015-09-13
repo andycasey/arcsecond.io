@@ -18,7 +18,20 @@
         var vm = this;
 
         vm.original_name = $routeParams.site_name;
+        vm.retrieve = retrieve;
         vm.update = update;
+
+        activate();
+
+
+        /**
+         * @name retrieve
+         * @desc Retrieve an ObservingSite
+         * @memberOf webapp.observingsites.controllers.UpdateController
+         */
+        function retrieve() {
+            ObservingSites.retrieve(vm.original_name);
+        }
 
         /**
          * @name update
