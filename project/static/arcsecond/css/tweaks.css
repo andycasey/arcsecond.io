@@ -1,8 +1,9 @@
-.welcome_classic_api {
-    background-image: url(../img/bg-pattern_alt.png), url(../img/screen-bg_10.jpg);
-}
 .welcome_classic_www {
     background-image: url(../img/bg-pattern_alt.png), url(../img/screen-bg_11.jpg);
+}
+
+.welcome_classic_api {
+    background-image: url(../img/bg-pattern_alt.png), url(../img/screen-bg_10.jpg);
 }
 
 .btn-primary-black {
