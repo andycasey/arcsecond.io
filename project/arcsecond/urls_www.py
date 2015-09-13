@@ -20,6 +20,7 @@ urlpatterns = patterns('',
     url(r'^accounts/', include('allauth.urls')),
     url(r'^accounts/profile', views.user_account_profile, name='user-account-profile'),
     url(r'^@(?P<username>[\w@\.]+)/$', views.user_profile, name="user-profile"),
+    url(r'^@(?P<username>[\w@\.]+)/settings$', views.user_settings, name="user-settings"),
 )
 
 if settings.SITE_ID == 2:
