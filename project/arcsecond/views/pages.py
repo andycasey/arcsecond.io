@@ -37,7 +37,7 @@ def index_www(request):
         if form.is_valid():
             form.save()
             messages.info(request, MESSAGE_SENT)
-            return HttpResponseRedirect(reverse_lazy('index'))
+            return HttpResponseRedirect(reverse_lazy('index_www'))
 
     form = forms.ContactForm(request=request)
     context_dict.update({'form': form})
@@ -68,6 +68,7 @@ class ObservingSitesIndexView(TemplateView):
         context = super(ObservingSitesIndexView, self).get_context_data(**kwargs)
         context['angular_app'] = "webapp"
         context['api_root_url'] = settings.ARCSECOND_API_ROOT_URL
+        context['meta'] = get_generic_meta(title="arcsecond.io", url=reverse_lazy('index_www'))
         return context
 
     @method_decorator(ensure_csrf_cookie)
