@@ -22,7 +22,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{% url 'index_www' %}">
+            <a class="navbar-brand" href="{% host_url 'index_www' host 'www' %}">
                 <img src="{% static 'arcsecond/img/favicon-60.png' %}" border="0" width="20px" style="float:left;">&nbsp;
                 {% if settings.SITE_ID == 1 %}
                     [DEVELOPMENT]
