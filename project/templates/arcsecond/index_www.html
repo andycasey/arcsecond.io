@@ -4,6 +4,14 @@
 {% load i18n %}
 {% load hosts %}
 
+{% block head_end_block %}
+    {% if angular_app %}
+        <script>
+            var ARCSECOND_API_ROOT_URL = "{{ api_root_url }}";
+        </script>
+    {% endif %}
+{% endblock head_end_block %}
+
 {% block body_block %}
 
     <!-- WELCOME

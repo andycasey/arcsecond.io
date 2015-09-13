@@ -18,6 +18,6 @@ CORS_ORIGIN_WHITELIST = (
     'api.arcsecond.io'
 )
 
-# http://django-hosts.readthedocs.org/en/latest/index.html#django.conf.settings.PARENT_HOST
-PARENT_HOST = "arcsecond.io"
+ARCSECOND_API_ROOT_URL = "api.arcsecond.io"
+
 

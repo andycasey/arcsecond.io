@@ -15,4 +15,5 @@ CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
 
 # Amazing trick: http://stackoverflow.com/questions/7335680/subdomain-on-localhost
-PARENT_HOST = "lvho.st:8000"
+ARCSECOND_API_ROOT_URL = "api.lvho.st:8000"
+

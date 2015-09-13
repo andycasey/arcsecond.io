@@ -21,9 +21,6 @@
         vm.retrieve = retrieve;
         vm.update = update;
 
-        activate();
-
-
         /**
          * @name retrieve
          * @desc Retrieve an ObservingSite

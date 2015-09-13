@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
@@ -28,6 +29,7 @@ def index_www(request):
                     'api_version': '1',
                     'initial': True,
                     'angular_app': 'webapp',
+                    'api_root_url': settings.ARCSECOND_API_ROOT_URL,
                     'meta': get_generic_meta(title="arcsecond.io", url=reverse_lazy('index_www'))}
 
     if request.method == 'POST':
@@ -65,6 +67,7 @@ class IndexView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
         context['angular_app'] = "webapp"
+        context['api_root_url'] = settings.ARCSECOND_API_ROOT_URL
         return context
 
     @method_decorator(ensure_csrf_cookie)

@@ -9,13 +9,13 @@
         .module('webapp.observingsites.services')
         .factory('ObservingSites', ObservingSites);
 
-    ObservingSites.$inject = ['$cookies', '$http'];
+    ObservingSites.$inject = ['$cookies', '$http', '$window'];
 
     /**
      * @namespace Authentication
      * @returns {Factory}
      */
-    function ObservingSites($cookies, $http) {
+    function ObservingSites($cookies, $http, $window) {
         /**
          * @name ObservingSites
          * @desc The Factory to be returned
@@ -38,7 +38,7 @@
          * @memberOf webapp.observingsites.services.ObservingSites
          */
         function all() {
-            return $http.get('http://api.lvho.st:8000/1/observingsites/?format=json');
+            return $http.get('http://'+ $window.ARCSECOND_API_ROOT_URL +'/1/observingsites/');
         }
 
         /**
