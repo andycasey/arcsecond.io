@@ -12,7 +12,16 @@ else:
 
 urlpatterns = patterns('',
     url(r'^$', views.index_www, name='index_www'),
-    url('^.*$', views.IndexView.as_view(), name='index'),
+)
+
+if settings.SITE_ID == 2:
+    import urls_api
+    urlpatterns += patterns('',
+        url(r'^api/', include(urls_api.urlpatterns))
+    )
+
+urlpatterns += patterns('',
+    url('^.+$', views.ObservingSitesIndexView.as_view(), name='index_observingsites'),
 
     url(r'^robots\.txt$', lambda r: HttpResponse(robots_content)),
     url(r'^admin/', include(admin.site.urls)),
@@ -23,12 +32,6 @@ urlpatterns = patterns('',
     url(r'^@(?P<username>[\w@\.]+)/$', views.user_profile, name="user-profile"),
     url(r'^@(?P<username>[\w@\.]+)/settings$', views.user_settings, name="user-settings"),
 )
-
-if settings.SITE_ID == 2:
-    import urls_api
-    urlpatterns += patterns('',
-        url(r'^api/', include(urls_api.urlpatterns))
-    )
 
 handler404 = 'views.custom_404'
 
