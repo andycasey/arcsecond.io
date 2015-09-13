@@ -21,6 +21,7 @@ if settings.SITE_ID == 2:
     )
 
 urlpatterns += patterns('',
+    url(r'^observingsites/map?$', views.observingsites_map, name="observingsites-map"),
     url('^.+$', views.ObservingSitesIndexView.as_view(), name='index_observingsites'),
 
     url(r'^robots\.txt$', lambda r: HttpResponse(robots_content)),

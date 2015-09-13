@@ -154,7 +154,12 @@
                             </a>
                         </h3>
                         <p class="about-item__content">
-                            Observing Sites are directly managed by arcsecond.io. <a href="/observingsites">See them here!</a>
+                            Observing Sites are directly managed by arcsecond.io.
+                            {% if settings.SITE_ID == 1 %}
+                                <a href="{% host_url 'observingsites-map' host 'www' %}">See them here!</a>
+                            {% else %}
+                                <a href="{% url 'observingsites-map' %}">See them here!</a>
+                            {% endif %}
                             <br/>You can use <code>?continent=&lt;Continent Name&gt;</code> to filter according to continents.
                         </p>
                         <form class="form-inline">
