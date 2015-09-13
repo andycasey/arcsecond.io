@@ -38,7 +38,7 @@
          * @memberOf webapp.observingsites.services.ObservingSites
          */
         function all() {
-            return $http.get('/1/observingsites/');
+            return $http.get('http://api.lvho.st:8000/1/observingsites/?format=json');
         }
 
         /**
