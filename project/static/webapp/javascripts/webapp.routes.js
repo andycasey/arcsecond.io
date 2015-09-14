@@ -18,12 +18,17 @@
                 controllerAs: 'vm',
                 templateUrl: '/static/webapp/templates/layout/index.html'
             })
-            .when('/observingsites/:site_name/update', {
-                controller: 'UpdateController',
+            .when('/observingsites/:site_name', {
+                controller: 'SingleController',
                 controllerAs: 'vm',
-                templateUrl: '/static/webapp/templates/observingsites/update.html'
+                templateUrl: '/static/webapp/templates/layout/single.html'
             })
-            .otherwise('/');
+            //.when('/observingsites/:site_name/update', {
+            //    controller: 'UpdateController',
+            //    controllerAs: 'vm',
+            //    templateUrl: '/static/webapp/templates/observingsites/update.html'
+            //})
+            .otherwise('/observingsites');
     }
 })();
 

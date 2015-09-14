@@ -3,13 +3,14 @@
         <div class="well">
             <div class="observingsite">
                 <div class="observingsite__meta">
-                    <a href="/observingsites/{{ observingsite.name }}/update">
+                    <a href="/observingsites/{{ observingsite.name }}">
                         {{ observingsite.name }}
                     </a>
+                    (long. {{ observingsite.coordinates.longitude }}º, lat. {{ observingsite.coordinates.latitude }}º, h. {{ observingsite.coordinates.height }}m)
                 </div>
 
                 <div class="observingsite__longname">
-                    {{ observingsite.long_name }}
+                    {{ observingsite.long_name }} ({{ observingsite.country }}) [{{ observingsite.IAUCode }}]
                 </div>
             </div>
         </div>
