@@ -16,11 +16,8 @@
      */
     function ObservingSitesController($scope) {
         var vm = this;
-
         vm.columns = [];
-
         activate();
-
 
         /**
          * @name activate

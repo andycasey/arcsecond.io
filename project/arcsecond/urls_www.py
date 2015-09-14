@@ -16,6 +16,7 @@ urlpatterns = patterns('',
 if settings.SITE_ID == 2:
     import urls_api
     urlpatterns += patterns('',
+        url(r'^api/$', views.index_api, name='index_api'),
         url(r'^api/', include(urls_api.urlpatterns))
     )
 
@@ -33,7 +34,7 @@ urlpatterns += patterns('',
     url(r'^@(?P<username>[\w@\.]+)/settings$', views.user_settings, name="user-settings"),
 
     # The 'old' Angular piece of code, not using (yet) the service.
-    url(r'^observingsites/map?$', views.observingsites_map, name="observingsites-map"),
+    url(r'^observingsites/map$', views.observingsites_map, name="observingsites-map"),
 
     url('^.+$', views.ObservingSitesIndexView.as_view(), name='index_observingsites'),
 )
