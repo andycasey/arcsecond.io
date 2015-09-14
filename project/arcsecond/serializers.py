@@ -292,20 +292,14 @@ class AstronomicalObjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = AstronomicalObject
         lookup_field = "name"
-        fields = ('url', 'name', 'coordinates', 'aliases', 'object_types', 'fluxes', 'mass', 'radius', 'distance',
-                  'metallicity', 'age', 'effective_temperature', 'astronomer_telegrams', 'finding_charts')
+        fields = ('name', 'coordinates', 'aliases', 'object_types', 'fluxes', 'mass', 'radius', 'distance',
+                  'metallicity', 'age', 'effective_temperature', 'planets', 'astronomer_telegrams', 'finding_charts')
 
     coordinates = AstronomicalCoordinatesSerializer(required=False)
 
     aliases = AliasSerializer(many=True, required=False)
     object_types = ObjectTypeSerializer(many=True, required=False)
     fluxes = FluxSerializer(many=True, required=False)
-
-    finding_charts = serializers.HyperlinkedIdentityField(view_name='findingchart-list',
-                                                          lookup_field='name',
-                                                          lookup_url_kwarg='input',
-                                                          read_only=True,
-                                                          required=False)
 
     mass = MassSerializer(required=False)
     radius = RadiusSerializer(required=False)
@@ -314,17 +308,37 @@ class AstronomicalObjectSerializer(serializers.ModelSerializer):
     age = AgeSerializer(required=False)
     effective_temperature = TemperatureSerializer(required=False)
 
+    planets = serializers.HyperlinkedRelatedField(many=True,
+                                                  read_only=True,
+                                                  view_name='exoplanet-named-detail',
+                                                  lookup_field='name')
+
     astronomer_telegrams = AstronomersTelegramShortSerializer(required=False, many=True)
 
+    finding_charts = serializers.HyperlinkedIdentityField(view_name='findingchart-list',
+                                                          lookup_field='name',
+                                                          lookup_url_kwarg='input',
+                                                          read_only=True,
+                                                          required=False)
 
 ######################## Exoplanets ########################
 
 class ExoplanetSerializer(serializers.ModelSerializer):
     class Meta:
         model = Exoplanet
+        fields = ('name', 'coordinates', 'mass', 'radius', 'inclination', 'semi_major_axis', 'orbital_period',
+                  'eccentricity', 'omega_angle', 'anomaly_angle', 'lambda_angle', 'time_periastron', 'time_conjonction',
+                  'angular_distance', 'primary_transit', 'secondary_transit', 'impact_parameter', 'time_radial_velocity_zero',
+                  'velocity_semiamplitude', 'calculated_temperature', 'measured_temperature', 'hottest_point_longitude',
+                  'geometric_albedo', 'surface_gravity', 'detection_method', 'mass_detection_method', 'radius_detection_method',
+                  'parent_star')
 
     coordinates = AstronomicalCoordinatesSerializer(required=False)
-    parent_star = AstronomicalObjectSerializer()
+    parent_star = serializers.HyperlinkedIdentityField(view_name='astronomicalobject-detail',
+                                                       lookup_field='parent_star_name',
+                                                       lookup_url_kwarg='name',
+                                                       read_only=True,
+                                                       required=False)
 
     mass = MassSerializer(required=False)
     radius = RadiusSerializer(required=False)
