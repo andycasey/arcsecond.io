@@ -1,7 +1,7 @@
-<observingsites observingsites="vm.observingsites" ng-show="vm.observingsites && vm.observingsites.length"></observingsites>
-<a class="btn btn-primary btn-fab btn-raised mdi-content-add btn-add-new-observingsite"
-  href="javascript:void(0)"
-  ng-show="vm.isAuthenticated"
-  ng-dialog="/static/templates/observingsites/new-observingsite.html"
-  ng-dialog-controller="NewObservingSiteController as vm"></a>
+<div id="observingsites-container" class="row">
+    <observingsites observingsites="vm.observingsites" ng-show="vm.observingsites && vm.observingsites.length"></observingsites>
+</div>
 
+<div id="map-canvas-container">
+    <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+</div>

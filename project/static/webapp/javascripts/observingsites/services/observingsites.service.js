@@ -11,15 +11,7 @@
 
     ObservingSites.$inject = ['$cookies', '$http', '$window'];
 
-    /**
-     * @namespace Authentication
-     * @returns {Factory}
-     */
     function ObservingSites($cookies, $http, $window) {
-        /**
-         * @name ObservingSites
-         * @desc The Factory to be returned
-         */
         var ObservingSites = {
             all: all,
             create: create,
@@ -27,49 +19,38 @@
             update: update
         };
 
+        ObservingSites.continents = [
+            {name:'Africa', key:'africa'},
+            {name:'Antarctica', key:'antarctica'},
+            {name:'Asia', key:'asia'},
+            {name:'Europe', key:'europe'},
+            {name:'North America', key:'north_america'},
+            {name:'Oceania', key:'oceania'},
+            {name:'South America', key:'south_america'}
+        ];
+
         return ObservingSites;
 
         ////////////////////
 
-        /**
-         * @name all
-         * @desc Get all Observing Sites
-         * @returns {Promise}
-         * @memberOf webapp.observingsites.services.ObservingSites
-         */
-        function all() {
-            return $http.get('http://'+ $window.ARCSECOND_API_ROOT_URL +'/1/observingsites/');
+        function all(continent_name) {
+            var url = 'http://'+ $window.ARCSECOND_API_ROOT_URL +'/1/observingsites/';
+            if (continent_name !== undefined) {
+                url += "?continent="+continent_name;
+            }
+            return $http.get(url);
         }
 
-        /**
-         * @name create
-         * @desc Create a new Observing Site
-         * @param {string} content The content of the new Observing Site
-         * @returns {Promise}
-         * @memberOf webapp.observingsites.services.ObservingSites
-         */
         function create(content) {
             return $http.post('/1/observingsites/', {
                 content: content
             });
         }
 
-        /**
-         * @name get
-         * @desc Get an ObservingSite
-         * @returns {Promise}
-         * @memberOf webapp.observingsites.services.ObservingSites
-         */
         function get(original_name) {
             return $http.get('/1/observingsites/' + original_name);
         }
 
-        /**
-         * @name update
-         * @desc Update an ObservingSite
-         * @returns {Promise}
-         * @memberOf webapp.observingsites.services.ObservingSites
-         */
         function update(original_name, name, long_name, IAUCode) {
             return $http.post('/1/observingsites/'+original_name, {
                 name: name,

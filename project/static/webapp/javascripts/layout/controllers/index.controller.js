@@ -1,7 +1,3 @@
-/**
- * IndexController
- * @namespace webapp.layout.controllers
- */
 (function () {
     'use strict';
 
@@ -11,49 +7,33 @@
 
     IndexController.$inject = ['$scope', 'ObservingSites', 'Snackbar'];
 
-    /**
-     * @namespace IndexController
-     */
     function IndexController($scope, ObservingSites, Snackbar) {
         var vm = this;
 
-        //vm.isAuthenticated = Authentication.isAuthenticated();
-        vm.observingsites = [];
+        vm.observingsites = {};
+        for (var i = 0; i < ObservingSites.continents.length; i++) {
+            var continent_key = ObservingSites.continents[i].key;
+            vm.observingsites[continent_key] = [];
+        }
 
         activate();
 
-        /**
-         * @name activate
-         * @desc Actions to be performed when this controller is instantiated
-         * @memberOf webapp.layout.controllers.IndexController
-         */
         function activate() {
-            ObservingSites.all().then(observingsitesSuccessFn, observingsitesErrorFn);
-
-            $scope.$on('observingsite.created', function (event, observingsite) {
-                vm.observingsites.unshift(observingsite);
-            });
-
-            $scope.$on('observingsite.created.error', function () {
-                vm.observingsites.shift();
-            });
-
-
-            /**
-             * @name observingsitesSuccessFn
-             * @desc Update observingsites array on view
-             */
-            function observingsitesSuccessFn(data, status, headers, config) {
-                vm.observingsites = data.data;
+            for (var i = 0; i < ObservingSites.continents.length; i++) {
+                var continent = ObservingSites.continents[i];
+                ObservingSites.all(continent.name).then(successFn, errorFn);
             }
 
+            function successFn(data, status, headers, config) {
+                var url = document.createElement('a');
+                url.href = data.config.url;
+                var continent_key = url.search.split('=')[1].toLowerCase().replace(' ', '_');
+                vm.observingsites[continent_key] = data.data;
+            }
 
-            /**
-             * @name observingsitesErrorFn
-             * @desc Show snackbar with error
-             */
-            function observingsitesErrorFn(data, status, headers, config) {
+            function errorFn(data, status, headers, config) {
                 Snackbar.error(data.error);
+                console.log(data.error);
             }
         }
     }

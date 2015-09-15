@@ -9,7 +9,7 @@
         ]);
 
     angular
-        .module('webapp.observingsites.controllers', []);
+        .module('webapp.observingsites.controllers', ['uiGmapgoogle-maps']);
 
     angular
         .module('webapp.observingsites.directives', ['ngDialog']);
