@@ -50,7 +50,7 @@ class PublicationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Publication
         lookup_field = 'bibcode'
-        fields = ("url", "bibcode", "eprint_id", "title", "year", "publication_type", "publication_date", "journal_name",
+        fields = ("bibcode", "eprint_id", "title", "year", "publication_type", "publication_date", "journal_name",
                   "abstract_copyright", "volume_number", "issue_number", "first_page_number", "number_of_pages",
                   "abstract", "subjects", "keywords", "origin", "is_refereed", "bibtex_entry", "doi", "authors",
                   # "references",
@@ -475,8 +475,15 @@ class AstronomersTelegramSerializer(serializers.ModelSerializer):
         fields = ('identifier', 'title', 'credential_certification', 'subjects', 'content', 'authors',
                   'related_telegrams', 'detected_objects', 'external_links')
 
-    related_telegrams = AstronomersTelegramShortSerializer(required=False, many=True)
-    detected_objects = AstronomicalObjectShortSerializer(required=False, many=True)
+    related_telegrams = serializers.HyperlinkedRelatedField(many=True,
+                                                            read_only=True,
+                                                            view_name='astronomerstelegram-detail',
+                                                            lookup_field='identifier')
+
+    detected_objects = serializers.HyperlinkedRelatedField(many=True,
+                                                           read_only=True,
+                                                           view_name='astronomicalobject-detail',
+                                                           lookup_field='name')
 
 
 class GCNCircularSerializer(serializers.ModelSerializer):
