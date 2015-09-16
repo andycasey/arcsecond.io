@@ -157,6 +157,8 @@
                             Observing Sites are directly managed by arcsecond.io.
                             {% if settings.SITE_ID == 1 %}
                                 <a href="{% host_url 'observingsites-map' host 'www' %}">See them here!</a>
+                            {% elif settings.SITE_ID == 2 %}
+                                <a href="{% url 'observingsites-map' %}">See them here!</a>
                             {% else %}
                                 <a href="{% url 'observingsites-map' %}">See them here!</a>
                             {% endif %}

@@ -16,7 +16,6 @@ urlpatterns = patterns('',
 if settings.SITE_ID == 2:
     import urls_api
     urlpatterns += patterns('',
-        url(r'^api/$', views.index_api, name='index_api'),
         url(r'^api/', include(urls_api.urlpatterns))
     )
 
