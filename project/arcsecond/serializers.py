@@ -475,8 +475,15 @@ class AstronomersTelegramSerializer(serializers.ModelSerializer):
         fields = ('identifier', 'title', 'credential_certification', 'subjects', 'content', 'authors',
                   'related_telegrams', 'detected_objects', 'external_links')
 
-    related_telegrams = AstronomersTelegramShortSerializer(required=False, many=True)
-    detected_objects = AstronomicalObjectShortSerializer(required=False, many=True)
+    related_telegrams = serializers.HyperlinkedRelatedField(many=True,
+                                                            read_only=True,
+                                                            view_name='astronomerstelegram-detail',
+                                                            lookup_field='identifier')
+
+    detected_objects = serializers.HyperlinkedRelatedField(many=True,
+                                                           read_only=True,
+                                                           view_name='astronomicalobject-detail',
+                                                           lookup_field='name')
 
 
 class GCNCircularSerializer(serializers.ModelSerializer):
