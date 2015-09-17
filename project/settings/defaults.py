@@ -189,7 +189,8 @@ BOWER_INSTALLED_APPS = (
     'angular-cookies#1.4.4',
     'ngDialog',
     'snackbarjs',
-    'angular-google-maps'
+    'angular-google-maps',
+    'ngmap'
 )
 
 # https://github.com/sunlightlabs/django-honeypot
@@ -293,6 +294,8 @@ CORS_ALLOW_HEADERS = (
     'origin',
     'authorization',
     'X-CSRFToken'
+    'accept-encoding',
+    'accept-language'
 )
 
 SWAGGER_SETTINGS = {

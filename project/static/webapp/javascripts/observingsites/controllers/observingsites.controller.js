@@ -5,9 +5,9 @@
         .module('webapp.observingsites.controllers')
         .controller('ObservingSitesController', ObservingSitesController);
 
-    ObservingSitesController.$inject = ['$scope', '$window'];
+    ObservingSitesController.$inject = ['$scope', '$window', 'ObservingSites'];
 
-    function ObservingSitesController($scope, $window) {
+    function ObservingSitesController($scope, $window, ObservingSites) {
         var vm = this;
         vm.observingsites = [];
         vm.map = undefined;
@@ -15,10 +15,11 @@
 
         function activate() {
             $scope.$watchCollection(function () { return $scope.observingsites; }, render);
-            $scope.map = { center: { latitude: 15.0, longitude: 0.0 }, zoom: 2 };
+            vm.map = { center: { latitude: 15.0, longitude: 0.0 }, zoom: 2 };
         }
 
         function render(current, original) {
+            vm.continents = ObservingSites.continents;
             if (current !== original) {
                 vm.observingsites = current;
             }

@@ -1,26 +1,46 @@
+textarea:focus, input:focus{
+    outline: 0;
+}
+
 .no-observingsites-here {
     text-align: center;
 }
 
-.observingsite {}
-
-.observingsite .observingsite__meta {
-    font-weight: bold;
-    text-align: right;
-    padding-bottom: 19px;
+.observingsite {
+    padding: 5px;
 }
 
-.observingsite .observingsite__meta a:hover {
-    text-decoration: none;
+.observingsite  {
+    padding-bottom: 20px;
+}
+
+.observingsite__name {
+    font-size: 24pt;
+}
+
+.observingsite__subtitle {
+    font-size: 16pt;
+}
+
+.observingsite__elements {
+    font-size: 16pt;
+}
+
+.observingsite:hover {
+    background: #dbf0fc;
+}
+
+.lighter {
+    color: darkgray;
 }
 
 
 /* --- MAP --- */
 
 #map-canvas-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    /*width: 100%;*/
+    /*height: 100%;*/
     min-height: 500px;
     bottom: 0px;
     /*margin-top: 10px;*/
@@ -77,4 +97,63 @@
 
 ul {
     list-style-type: none;
+}
+
+#search-container  {
+    padding-top: 40px;
+    width: 100%;
+}
+
+#search-container .input-group {
+    width: 100%;
+}
+
+.query {
+    -webkit-appearance: none;
+    -webkit-background-clip: border-box;
+    -webkit-background-origin: padding-box;
+    -webkit-background-size: auto;
+    -webkit-rtl-ordering: logical;
+    -webkit-user-select: text;
+    -webkit-writing-mode: horizontal-tb;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-origin: padding-box;
+    background-size: auto;
+    border-bottom-color: rgb(128, 128, 128);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0px;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-color: rgb(152, 152, 159);
+    border-left-style: solid;
+    border-left-width: 0px;
+    border-right-color: rgb(152, 152, 159);
+    border-right-style: solid;
+    border-right-width: 0px;
+    border-top-color: rgb(152, 152, 159);
+    border-top-style: solid;
+    border-top-width: 0px;
+    box-sizing: border-box;
+    color: rgb(219, 240, 252);
+    cursor: auto;
+    display: block;
+    font-size: 34px;
+    line-height: 57px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 1px;
+    text-align: start;
+    width: 90%;
+    word-spacing: 0px;
+    writing-mode: lr-tb;
 }

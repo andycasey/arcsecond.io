@@ -1,7 +1,22 @@
+<div id="search-container" class="fluid-row">
+    <form class="form-inline">
+        <div class="form-group form-group-sm">
+            <div class="input-group">
+                <input autocomplete="off" autofocus="autofocus" class="query" id="observingsite_search" placeholder="Find an Observing Site" type="search">
+            </div>
+        </div>
+    </form>
+
+    <div class="continent_filters">
+        <div ng-repeat="continent in vm.continents" class="btn btn-default btn-group">{{ continent.name }}</div>
+    </div>
+</div>
+
+
 <div id="observingsites-container" class="row">
     <observingsites observingsites="vm.observingsites" ng-show="vm.observingsites && vm.observingsites.length"></observingsites>
 </div>
 
 <div id="map-canvas-container">
-    <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+    <map center="-34.397, 150.644" zoom="8"></map>
 </div>

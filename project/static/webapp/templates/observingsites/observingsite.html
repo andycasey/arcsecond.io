@@ -1,17 +1,23 @@
 <div class="row">
     <div class="col-sm-12">
-        <div class="well">
-            <div class="observingsite">
-                <div class="observingsite__meta">
-                    <a href="/observingsites/{{ observingsite.name }}">
-                        {{ observingsite.name }}
-                    </a>
-                    (long. {{ observingsite.coordinates.longitude }}º, lat. {{ observingsite.coordinates.latitude }}º, h. {{ observingsite.coordinates.height }}m)
+        <div class="observingsite">
+            <div class="observingsite__title">
+                <div class="observingsite__name">
+                    <a href="/observingsites/{{ observingsite.name }}">{{ observingsite.name }}</a>
+            <span class="observingsite__subtitle">
+            {{ observingsite.country }}
+            </span>
                 </div>
+            </div>
 
-                <div class="observingsite__longname">
-                    {{ observingsite.long_name }} ({{ observingsite.country }}) [{{ observingsite.IAUCode }}]
+            <div class="observingsite__elements">
+                <div class="observingsite__subtitle lighter">
+                    {{ observingsite.long_name }}
                 </div>
+                (long. {{ observingsite.coordinates.longitude | number:2 }}º,
+                lat. {{ observingsite.coordinates.latitude | number:2 }}º,
+                h. {{ observingsite.coordinates.height | number:0}}m)
+                [IAU: {{ observingsite.IAUCode }}]
             </div>
         </div>
     </div>

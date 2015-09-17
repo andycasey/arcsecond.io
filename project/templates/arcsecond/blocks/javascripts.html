@@ -14,8 +14,7 @@
 <script type="text/javascript" src="{% static 'arcsecond/js/plugins/jquery.waypoints.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'arcsecond/js/plugins/imagesloaded.pkgd.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'arcsecond/js/plugins/isotope.pkgd.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'arcsecond/js/plugins/lightbox.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'arcsecond/js/plugins/lightbox.min.js' %}"></script>
+{#<script type="text/javascript" src="{% static 'arcsecond/js/plugins/lightbox.min.js' %}"></script>#}
 <script type="text/javascript" src="{% static 'snackbarjs/dist/snackbar.min.js' %}"></script>
 
 <!-- JS Custom -->
@@ -25,10 +24,12 @@
 <script src="{% static 'arcsecond/js/custom.js' %}"></script>
 
 {% if angular_app %}
-    <script type="text/javascript" src="{% static 'lodash/lodash.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'angular-simple-logger/dist/index.js' %}"></script>
-    <script type="text/javascript" src="{% static 'angular-google-maps/dist/angular-google-maps.min.js' %}"></script>
-{#    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>#}
+    <script type="text/javascript" src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+    <script type="text/javascript" src="{% static 'ngmap/build/scripts/ng-map.min.js' %}"></script>
+
+{#    <script type="text/javascript" src="{% static 'lodash/lodash.min.js' %}"></script>#}
+{#    <script type="text/javascript" src="{% static 'angular-simple-logger/dist/index.js' %}"></script>#}
+{#    <script type="text/javascript" src="{% static 'angular-google-maps/dist/angular-google-maps.min.js' %}"></script>#}
 
     <!-- Angular WebApp -->
     <script type="text/javascript" src="{% static 'webapp/javascripts/webapp.js' %}"></script>

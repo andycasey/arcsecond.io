@@ -1,12 +1,12 @@
 <div class="row" ng-cloak>
     <div ng-repeat="observingsite in observingsites">
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="col-md-12">
             <observingsite observingsite="observingsite"></observingsite>
         </div>
     </div>
 </div>
 
-<div ng-hide="vm.columns && vm.columns.length">
+<div ng-hide="observingsites">
     <div class="col-sm-12 no-observingsite-here">
         <em>The are no observing sites here.</em>
     </div>
