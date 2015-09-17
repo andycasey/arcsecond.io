@@ -9,10 +9,7 @@
 
     function ObservingSitesController($scope, $window) {
         var vm = this;
-        vm.columns = [];
-        vm.sites = {};
-        vm.markers = {};
-        vm.infowindows = {};
+        vm.observingsites = [];
         vm.map = undefined;
         activate();
 
@@ -23,15 +20,7 @@
 
         function render(current, original) {
             if (current !== original) {
-                vm.columns = [];
-                vm.sites = {};
-                vm.markers = {};
-                vm.infowindows = {};
-
-                console.log('--------');
-                console.log(original);
-                console.log(current);
-
+                vm.observingsites = current;
             }
         }
     }

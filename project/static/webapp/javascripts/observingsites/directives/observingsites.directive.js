@@ -1,7 +1,3 @@
-/**
- * Observing Sites
- * @namespace webapp.observingsites.directives
- */
 (function () {
     'use strict';
 
@@ -9,15 +5,7 @@
         .module('webapp.observingsites.directives')
         .directive('observingsites', observingsites);
 
-    /**
-     * @namespace Observing Sites
-     */
     function observingsites() {
-        /**
-         * @name directive
-         * @desc The directive to be returned
-         * @memberOf webapp.observingsites.directives.ObservingSites
-         */
         var directive = {
             controller: 'ObservingSitesController',
             controllerAs: 'vm',
