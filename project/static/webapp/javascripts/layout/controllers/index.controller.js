@@ -13,6 +13,8 @@
         activate();
 
         function activate() {
+            vm.continents = ObservingSites.continents;
+
             var areaLat = 15.0,
                 areaLng = 0.0,
                 areaZoom = 2;

@@ -1,5 +1,5 @@
 <div class="site-wrapper">
-    <div class="container">
+    <div class="container observingsites-search-container">
 
         <div id="search-container" class="row">
             <form class="form-inline">
@@ -11,7 +11,7 @@
             </form>
 
             <div class="continent_filters">
-                <div ng-repeat="continent in vm.continents" class="btn btn-default btn-group">{{ continent.name }}</div>
+                <div ng-repeat="continent in vm.continents" class="btn btn-info btn-group continent-pill">{{ continent.name }}</div>
             </div>
         </div>
 

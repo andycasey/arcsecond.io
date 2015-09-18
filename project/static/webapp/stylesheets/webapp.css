@@ -2,11 +2,72 @@ textarea:focus, input:focus{
     outline: 0;
 }
 
+#search-container  {
+    padding-top: 0px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+}
+
+#search-container .form-group {
+    width: 100%;
+}
+#search-container .input-group {
+    width: 100%;
+}
+
+.query {
+    -webkit-appearance: none;
+    -webkit-background-clip: border-box;
+    -webkit-background-origin: padding-box;
+    -webkit-background-size: auto;
+    -webkit-rtl-ordering: logical;
+    -webkit-user-select: text;
+    -webkit-writing-mode: horizontal-tb;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-origin: padding-box;
+    background-size: auto;
+    border-bottom-color: rgb(128, 128, 128);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0px;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-color: rgb(152, 152, 159);
+    border-left-style: solid;
+    border-left-width: 0px;
+    border-right-color: rgb(152, 152, 159);
+    border-right-style: solid;
+    border-right-width: 0px;
+    border-top-color: rgb(152, 152, 159);
+    border-top-style: solid;
+    border-top-width: 0px;
+    box-sizing: border-box;
+    color: rgb(72, 176, 227);
+    font-size: 34px;
+    line-height: 57px;
+    padding: 1px;
+    text-align: start;
+    width: 95%;
+    word-spacing: 0px;
+    writing-mode: lr-tb;
+}
+
+.continent-pill {
+    width: 120px;
+    padding: 10px;
+    margin: 10px;
+}
+
 .no-observingsites-here {
     text-align: center;
 }
 
 .observingsite {
+    width: 90%;
     padding: 5px;
 }
 
@@ -34,6 +95,10 @@ textarea:focus, input:focus{
     color: darkgray;
 }
 
+#observingsites-container {
+    height: 100%;
+    padding-bottom: 400px;
+}
 
 /* --- MAP --- */
 
@@ -43,17 +108,9 @@ textarea:focus, input:focus{
 
 #map-canvas-container {
     position: fixed;
-    width: 100% !important;
-    bottom: 0px !important;
+    width: 100%;
+    bottom: 0px;
 }
-
-/*#map-canvas {*/
-    /*position: absolute;*/
-    /*top: 0;*/
-    /*right: 0;*/
-    /*bottom: 0;*/
-    /*left: 0;*/
-/*}*/
 
 #continent-list-container {
     height: 320px;
@@ -100,57 +157,4 @@ ul {
     list-style-type: none;
 }
 
-#search-container  {
-    padding-top: 0px;
-    padding-bottom: 20px;
-    padding-left: 5px;
-    width: 100%;
-}
 
-#search-container .form-group {
-    width: 100%;
-}
-#search-container .input-group {
-    width: 100%;
-}
-
-.query {
-    -webkit-appearance: none;
-    -webkit-background-clip: border-box;
-    -webkit-background-origin: padding-box;
-    -webkit-background-size: auto;
-    -webkit-rtl-ordering: logical;
-    -webkit-user-select: text;
-    -webkit-writing-mode: horizontal-tb;
-    background-attachment: scroll;
-    background-clip: border-box;
-    background-color: rgba(0, 0, 0, 0);
-    background-origin: padding-box;
-    background-size: auto;
-    border-bottom-color: rgb(128, 128, 128);
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-image-outset: 0px;
-    border-image-repeat: stretch;
-    border-image-slice: 100%;
-    border-image-source: none;
-    border-image-width: 1;
-    border-left-color: rgb(152, 152, 159);
-    border-left-style: solid;
-    border-left-width: 0px;
-    border-right-color: rgb(152, 152, 159);
-    border-right-style: solid;
-    border-right-width: 0px;
-    border-top-color: rgb(152, 152, 159);
-    border-top-style: solid;
-    border-top-width: 0px;
-    box-sizing: border-box;
-    color: rgb(219, 240, 252);
-    font-size: 34px;
-    line-height: 57px;
-    padding: 1px;
-    text-align: start;
-    width: 100%;
-    word-spacing: 0px;
-    writing-mode: lr-tb;
-}
