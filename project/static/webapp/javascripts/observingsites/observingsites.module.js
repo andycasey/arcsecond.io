@@ -9,7 +9,7 @@
         ]);
 
     angular
-        .module('webapp.observingsites.controllers', ['ngMap']);
+        .module('webapp.observingsites.controllers', []);
 
     angular
         .module('webapp.observingsites.directives', ['ngDialog']);
