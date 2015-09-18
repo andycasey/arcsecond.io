@@ -146,13 +146,6 @@ HOST_OVERRIDE_URL_TAG = False
 
 WSGI_APPLICATION = 'project.wsgi.application'
 
-TEMPLATE_PATH = os.path.join(PROJECT_PATH, 'templates')
-TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows. Don't forget to use absolute paths, not relative paths.
-    TEMPLATE_PATH,
-)
-
 SETTINGS_EXPORT = [
     'DEBUG',
     'SITE_ID',
@@ -206,10 +199,11 @@ NOSE_ARGS = [
     '--cover-package=project.arcsecond.forms,project.arcsecond.models,project.arcsecond.views',
 ]
 
+FULL_TEMPLATE_PATH = os.path.join(PROJECT_PATH, 'templates')
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_PATH, os.path.join(TEMPLATE_PATH, 'socialaccount')],
+        'DIRS': [FULL_TEMPLATE_PATH, os.path.join(FULL_TEMPLATE_PATH, 'socialaccount')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
