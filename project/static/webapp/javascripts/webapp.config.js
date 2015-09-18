@@ -5,15 +5,17 @@
         .module('webapp.config')
         .config(config);
 
-    config.$inject = ['$locationProvider'];
+    config.$inject = ['$locationProvider', 'uiGmapGoogleMapApiProvider'];
 
-    /**
-     * @name config
-     * @desc Enable HTML5 routing
-     */
-    function config($locationProvider) {
+    function config($locationProvider, uiGmapGoogleMapApiProvider) {
         $locationProvider.html5Mode(true);
         $locationProvider.hashPrefix('!');
+
+        uiGmapGoogleMapApiProvider.configure({
+            //key: 'YOUR KEY HERE',
+            v: '3.17',
+            libraries: 'weather,geometry,visualization'
+        });
     }
 })();
 

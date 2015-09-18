@@ -1,22 +1,28 @@
-<div id="search-container" class="fluid-row">
-    <form class="form-inline">
-        <div class="form-group form-group-sm">
-            <div class="input-group">
-                <input autocomplete="off" autofocus="autofocus" class="query" id="observingsite_search" placeholder="Find an Observing Site" type="search">
+<div class="site-wrapper">
+    <div class="container">
+
+        <div id="search-container" class="row">
+            <form class="form-inline">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input autocomplete="off" autofocus="autofocus" class="query" id="observingsite_search" placeholder="Find an Observing Site" type="search">
+                    </div>
+                </div>
+            </form>
+
+            <div class="continent_filters">
+                <div ng-repeat="continent in vm.continents" class="btn btn-default btn-group">{{ continent.name }}</div>
             </div>
         </div>
-    </form>
 
-    <div class="continent_filters">
-        <div ng-repeat="continent in vm.continents" class="btn btn-default btn-group">{{ continent.name }}</div>
+
+        <div id="observingsites-container" class="row">
+            <observingsites observingsites="vm.observingsites" ng-show="vm.observingsites && vm.observingsites.length"></observingsites>
+        </div>
+
     </div>
 </div>
 
-
-<div id="observingsites-container" class="row">
-    <observingsites observingsites="vm.observingsites" ng-show="vm.observingsites && vm.observingsites.length"></observingsites>
-</div>
-
-<div id="map-canvas-container">
-    <map center="-34.397, 150.644" zoom="8"></map>
+<div id="map-canvas-container" class="fluid-row">
+    <ui-gmap-google-map center='map.center' zoom='2'></ui-gmap-google-map>
 </div>

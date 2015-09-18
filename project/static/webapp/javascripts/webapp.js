@@ -11,7 +11,7 @@
         ]);
 
     angular
-        .module('webapp.config', []);
+        .module('webapp.config', ['uiGmapgoogle-maps']);
 
     angular
         .module('webapp.routes', ['ngRoute']);

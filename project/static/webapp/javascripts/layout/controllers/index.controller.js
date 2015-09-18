@@ -5,14 +5,31 @@
         .module('webapp.layout.controllers')
         .controller('IndexController', IndexController);
 
-    IndexController.$inject = ['$scope', 'ObservingSites', 'Snackbar'];
+    IndexController.$inject = ['$scope', 'ObservingSites', 'uiGmapGoogleMapApi', 'Snackbar'];
 
-    function IndexController($scope, ObservingSites, Snackbar) {
+    function IndexController($scope, ObservingSites, uiGmapGoogleMapApi, Snackbar) {
         var vm = this;
         vm.observingsites = undefined;
         activate();
 
         function activate() {
+            var areaLat = 15.0,
+                areaLng = 0.0,
+                areaZoom = 2;
+
+            uiGmapGoogleMapApi.then(function(maps) {
+                $scope.map = {
+                    center: {
+                        latitude: areaLat,
+                        longitude: areaLng
+                    },
+                    zoom: areaZoom
+                };
+                $scope.options = {
+                    scrollwheel: false
+                };
+            });
+
             ObservingSites.all().then(successFn, errorFn);
 
             function successFn(data, status, headers, config) {
