@@ -27,5 +27,6 @@ CORS_ORIGIN_WHITELIST = (
     'arcsecond-staging.herokuapp.com',
 )
 
-ARCSECOND_API_ROOT_URL = "arcsecond-staging.herokuapp.com/api"
+ARCSECOND_API_ROOT_URL = "http://arcsecond-staging.herokuapp.com/api"
+PARENT_HOST = "arcsecond-staging.herokuapp.com"
 

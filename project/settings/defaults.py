@@ -61,6 +61,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 SERVER_EMAIL = "cedric@arcsecond.io"
 DEFAULT_FROM_EMAIL = "cedric@arcsecond.io"
+ARCSECOND_API_ROOT_URL = "<to be overriden>"
 
 LOGGING = {
     'version': 1,
@@ -134,9 +135,13 @@ MIDDLEWARE_CLASSES = (
     'django_hosts.middleware.HostsResponseMiddleware',
 )
 
+# Hosts
+ALLOWED_HOSTS = ['']
 ROOT_URLCONF = 'project.arcsecond.urls_www'
 ROOT_HOSTCONF = 'project.arcsecond.hosts'
 DEFAULT_HOST = 'www'
+HOST_SCHEME = 'http'
+PARENT_HOST = "<parent host to be overriden>"
 HOST_OVERRIDE_URL_TAG = False
 
 WSGI_APPLICATION = 'project.wsgi.application'
@@ -157,8 +162,6 @@ import dj_database_url
 DATABASES = { 'default': dj_database_url.config(default=os.environ['DATABASE_URL']) }
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-ALLOWED_HOSTS = ['*']
 
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
@@ -330,4 +333,3 @@ SWAGGER_SETTINGS = {
 META_SITE_PROTOCOL = 'http'
 META_USE_SITES = True
 
-ARCSECOND_API_ROOT_URL = "<to be overriden>"

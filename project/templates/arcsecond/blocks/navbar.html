@@ -23,17 +23,12 @@
                 <span class="icon-bar"></span>
             </button>
             {% if settings.SITE_ID == 1 %}
-                <a class="navbar-brand" href="{% host_url 'index_www' %}">
-                    <img src="{% static 'arcsecond/img/favicon-60.png' %}" border="0" width="20px" style="float:left;">&nbsp;
-                    [DEVELOPMENT]
-                </a>
-            {% elif settings.SITE_ID == 2 %}
-                <a class="navbar-brand" href="{% url 'index_www' %}">
+                <a class="navbar-brand" href="http://arcsecond-staging.herokuapp.com">
                     <img src="{% static 'arcsecond/img/favicon-60.png' %}" border="0" width="20px" style="float:left;">&nbsp;
                     [STAGING]
                 </a>
             {% else %}
-                <a class="navbar-brand" href="{% url 'index_www' %}">
+                <a class="navbar-brand" href="{% host_url 'index_www' host 'www' %}">
                     <img src="{% static 'arcsecond/img/favicon-60.png' %}" border="0" width="20px" style="float:left;">&nbsp;
                     arcsecond.io v1 (alpha)
                 </a>

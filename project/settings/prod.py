@@ -18,6 +18,6 @@ CORS_ORIGIN_WHITELIST = (
     'api.arcsecond.io'
 )
 
-ARCSECOND_API_ROOT_URL = "api.arcsecond.io"
-
+ARCSECOND_API_ROOT_URL = "http://api.arcsecond.io"
+PARENT_HOST = "arcsecond.io"
 

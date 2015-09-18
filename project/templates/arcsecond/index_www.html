@@ -5,6 +5,7 @@
 {% load hosts %}
 
 {% block head_end_block %}
+    {#    <script type="text/javascript" src='//maps.googleapis.com/maps/api/js?sensor=false'></script>#}
     {% if angular_app %}
         <script>
             var ARCSECOND_API_ROOT_URL = "{{ api_root_url }}";
@@ -96,15 +97,9 @@
                     </p>
 
                     <div class="text-center">
-                        {% if settings.SITE_ID == 3 %}
-                            <a href="http://api.arcsecond.io" class="btn btn-xl btn-primary btn-primary-black">
-                        {% elif settings.SITE_ID == 2 %}
-                            <a href="http://arcsecond-staging.herokuapp.com/api" class="btn btn-xl btn-primary btn-primary-black">
-                        {% else %}
-                            <a href="http://api.lvho.st:8000" class="btn btn-xl btn-primary btn-primary-black">
-                        {% endif %}
-                        <span class="oi oi-arrow-right" title="Discover APIs" aria-hidden="true"></span>
-                        <span>Discover APIs</span>
+                        <a href="{{ api_root_url }}" class="btn btn-xl btn-primary btn-primary-black">
+                            <span class="oi oi-arrow-right" title="Discover APIs" aria-hidden="true"></span>
+                            <span>Discover APIs</span>
                         </a>
                     </div>
 

@@ -49,6 +49,7 @@ def index_api(request):
     context_dict = {"title": ("arcsecond.io"),
                     'api_version': '1',
                     'initial': True,
+                    'api_root_url': settings.ARCSECOND_API_ROOT_URL,
                     'meta': get_generic_meta(title="arcsecond.io", url=reverse_lazy('index_api'))}
 
     return render_to_response('arcsecond/index_api.html', context_dict, context)
