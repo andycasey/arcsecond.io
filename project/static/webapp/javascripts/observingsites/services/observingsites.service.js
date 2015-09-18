@@ -34,7 +34,7 @@
         ////////////////////
 
         function all(continent_name) {
-            var url = 'http://'+ $window.ARCSECOND_API_ROOT_URL + '/1/observingsites/';
+            var url = $window.ARCSECOND_API_ROOT_URL + '/1/observingsites/';
             if (continent_name !== undefined) {
                 url += "?continent="+continent_name;
             }
@@ -48,7 +48,7 @@
         }
 
         function get(original_name) {
-            return $http.get('http://'+ $window.ARCSECOND_API_ROOT_URL + '/1/observingsites/' + original_name);
+            return $http.get($window.ARCSECOND_API_ROOT_URL + '/1/observingsites/' + original_name);
         }
 
         function update(original_name, name, long_name, IAUCode) {
