@@ -291,9 +291,11 @@ CORS_ALLOW_HEADERS = (
     'accept',
     'origin',
     'authorization',
-    'X-CSRFToken'
+    'X-CSRFToken',
     'accept-encoding',
-    'accept-language'
+    'accept-language',
+    'dnt',
+    'cache-control'
 )
 
 SWAGGER_SETTINGS = {
