@@ -160,7 +160,7 @@
                             {% elif settings.SITE_ID == 2 %}
                                 <a href="{% url 'observingsites-map' %}">See them here!</a>
                             {% else %}
-                                <a href="{% url 'observingsites-map' %}">See them here!</a>
+                                <a href="{% host_url 'observingsites-map' host 'www' %}">See them here!</a>
                             {% endif %}
                             <br/>You can use <code>?continent=&lt;Continent Name&gt;</code> to filter according to continents.
                         </p>
