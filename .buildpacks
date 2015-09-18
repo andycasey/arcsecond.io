@@ -1,2 +1,2 @@
-https://github.com/heroku/heroku-buildpack-nodejs.git#80
-https://github.com/onekiloparsec/heroku-buildpack-python-with-django-bower.git
+https://github.com/heroku/heroku-buildpack-nodejs.git#v80
+https://github.com/onekiloparsec/heroku-buildpack-python-with-django-bower.git#1e59ee7ac4b4
