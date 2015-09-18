@@ -5,4 +5,4 @@ from project.arcsecond.models import ObservingSite
 class ObservingSiteForm(forms.ModelForm):
     class Meta:
         model = ObservingSite
-        fields = ['name', 'long_name', 'IAUCode', 'continent', 'coordinates']
+        fields = ['short_name', 'name', 'alternate_name_1', 'alternate_name_2', 'IAUCode', 'continent', 'country', 'coordinates']
