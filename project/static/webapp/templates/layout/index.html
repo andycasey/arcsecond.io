@@ -5,7 +5,13 @@
             <form class="form-inline">
                 <div class="form-group">
                     <div class="input-group">
-                        <input autocomplete="off" autofocus="autofocus" class="query" id="observingsite_search" placeholder="Find an Observing Site" type="search">
+                        <input autocomplete="off"
+                               autofocus="autofocus"
+                               class="query"
+                               id="observingsite_search"
+                               placeholder="Find an Observing Site by Name"
+                               type="text"
+                               ng-model="searchString" />
                     </div>
                 </div>
             </form>
@@ -17,7 +23,13 @@
 
 
         <div id="observingsites-container" class="row">
-            <observingsites observingsites="vm.observingsites" ng-show="vm.observingsites && vm.observingsites.length"></observingsites>
+            <div class="row" ng-cloak>
+                <div ng-repeat="observingsite in vm.observingsites | nameContainsSubstring:searchString">
+                    <div class="col-md-12">
+                        <observingsite observingsite="observingsite"></observingsite>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
