@@ -26,17 +26,17 @@
                 <span class="sr-only">Toggle Dropdown</span>
             </button>
             <ul class="dropdown-menu" role="menu">
-                <li><a href="{% host_url 'user-settings' with user.username host 'www' %}">Settings</a></li>
+                <li><a href="{% url 'user-settings' user.username %}">Settings</a></li>
                 <li class="divider"></li>
-                <li><a href="{% host_url 'account_logout' host 'www' %}">Logout</a></li>
+                <li><a href="{% url 'account_logout' %}">Logout</a></li>
             </ul>
         </div>
     </div>
 
 {% else %}
 
-    <li><a href="{% host_url 'account_login' host 'www' %}">Log In</a></li>
-    <li><a href="{% host_url 'account_signup' host 'www' %}">Sign Up</a></li>
+    <li><a href="{% url 'account_login' %}">Log In</a></li>
+    <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
 
 {% endif %}
 
