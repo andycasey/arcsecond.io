@@ -5,7 +5,13 @@
             <form class="form-inline">
                 <div class="form-group">
                     <div class="input-group">
-                        <input autocomplete="off" autofocus="autofocus" class="query" id="observingsite_search" placeholder="Find an Observing Site" type="search">
+                        <input autocomplete="off"
+                               autofocus="autofocus"
+                               class="query"
+                               id="observingsite_search"
+                               placeholder="Find an Observing Site by Name"
+                               type="text"
+                               ng-model="searchString" />
                     </div>
                 </div>
             </form>
@@ -17,12 +23,38 @@
 
 
         <div id="observingsites-container" class="row">
-            <observingsites observingsites="vm.observingsites" ng-show="vm.observingsites && vm.observingsites.length"></observingsites>
+            <div class="row" ng-cloak>
+                <div ng-repeat="observingsite in vm.observingsites | nameContainsSubstring:searchString">
+                    <div class="col-md-12">
+                        <observingsite observingsite="observingsite"></observingsite>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" ng-hide="vm.observingsites.length">
+            <div class="col-sm-12 no-observingsite-here">
+                <em>No observing sites could be found. That's a problem. </em>
+                Inform Cédric about it via <a href="mailto:cedric@arcsecond.io">@</a>,
+                or <a href="https://twitter.com/arcsecond_io" class="social__item"><i class="fa fa-twitter"></i></a>.
+            </div>
         </div>
 
     </div>
 </div>
 
 <div id="map-canvas-container" class="fluid-row">
-    <ui-gmap-google-map center='map.center' zoom='2'></ui-gmap-google-map>
+    <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+        <ui-gmap-marker ng-repeat="marker in markers track by $index"
+                        coords="marker.coords"
+                        idkey="marker.idKey"
+                        icon="marker.icon">
+            <ui-gmap-window>
+                <div>
+                    <h5>{{ marker.window.title }}</h5>
+                    {{ marker.window.subtitle }}
+                </div>
+            </ui-gmap-window>
+        </ui-gmap-marker>
+    </ui-gmap-google-map>
 </div>

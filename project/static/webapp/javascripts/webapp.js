@@ -4,6 +4,7 @@
     angular
         .module('webapp', [
             'webapp.config',
+            'webapp.filters',
             'webapp.routes',
             'webapp.utils',
             'webapp.layout',
