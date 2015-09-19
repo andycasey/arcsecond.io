@@ -32,10 +32,7 @@ urlpatterns += patterns('',
     url(r'^@(?P<username>[\w@\.]+)/$', views.user_profile, name="user-profile"),
     url(r'^@(?P<username>[\w@\.]+)/settings$', views.user_settings, name="user-settings"),
 
-    # The 'old' Angular piece of code, not using (yet) the service.
-    # url(r'^observingsites/map$', views.observingsites_map, name="observingsites-map"),
-
-    url('^.+$', views.ObservingSitesIndexView.as_view(), name='index_observingsites'),
+    url('^observingsites/.*$', views.ObservingSitesIndexView.as_view(), name='index_observingsites'),
 )
 
 handler404 = 'views.custom_404'

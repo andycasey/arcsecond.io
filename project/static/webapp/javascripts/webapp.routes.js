@@ -22,13 +22,13 @@
                 controller: 'SingleController',
                 controllerAs: 'vm',
                 templateUrl: '/static/webapp/templates/layout/single.html'
-            })
+            });
             //.when('/observingsites/:site_name/update', {
             //    controller: 'UpdateController',
             //    controllerAs: 'vm',
             //    templateUrl: '/static/webapp/templates/observingsites/update.html'
             //})
-            .otherwise('/observingsites');
+            //.otherwise('/observingsites');
     }
 })();
 

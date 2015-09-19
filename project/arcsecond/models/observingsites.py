@@ -11,8 +11,12 @@ class ObservingSite(models.Model):
     class Meta: app_label = 'arcsecond'
     objects = ObservingSiteManager()
 
-    name = models.CharField(max_length=100, null=True, blank=True, unique=True)
-    long_name = models.CharField(max_length=100, null=True, blank=True)
+    short_name = models.CharField(max_length=100, null=True, blank=True, unique=True)
+    name = models.CharField(max_length=100, null=True, blank=True)
+    alternate_name_1 = models.CharField(max_length=100, null=True, blank=True)
+    alternate_name_2 = models.CharField(max_length=100, null=True, blank=True)
+    acronym = models.CharField(max_length=100, null=True, blank=True, unique=True)
+
     IAUCode = models.CharField(max_length=200, null=True, blank=True, unique=True)
 
     CONTINENT_UNDEFINED = "(Undefined)"
@@ -41,6 +45,7 @@ class ObservingSite(models.Model):
     address_line_1 = models.CharField(max_length=200, null=True, blank=True)
     address_line_2 = models.CharField(max_length=200, null=True, blank=True)
     zip_code = models.IntegerField(null=True, blank=True)
+    state_province = models.CharField(max_length=200, null=True)
     country = models.CharField(max_length=200, null=True)
 
     time_zone = models.CharField(max_length=200, null=True, blank=True)
@@ -48,14 +53,6 @@ class ObservingSite(models.Model):
 
     homepage = models.URLField(null=True, blank=True)
     wikipedia_article = models.URLField(null=True, blank=True)
-
-    @classmethod
-    def create(cls, name, longitude, latitude, height, east_positive=True):
-        site = cls(name=name)
-        earth_location = Coordinates.create(longitude, latitude, height, east_positive)
-        site.earth_location = earth_location
-        site.displayed_name = site.name
-        return site
 
     def natural_key(self):
         return (self.name,)
