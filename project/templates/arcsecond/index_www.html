@@ -70,7 +70,8 @@
                     <div class="lead text-center text">
                         <strong>arcsecond.io</strong> is a service of <a href="http://onekilopars.ec">onekilopars.ec</a>,
                         home of <a href="http://onekilopars.ec/apps">iObserve</a>, the best OS X and iOS apps for astronomers,
-                        as well as <a href="http://onekilopars.ec/open-source">multiple open-source projects</a> for FITS files, astronomical algorithms, VOTables, etc.
+                        as well as <a href="http://onekilopars.ec/open-source">multiple open-source projects</a> for FITS
+                        files, astronomical algorithms, VOTables, etc.
                     </div>
                 </div>
             </div> <!-- / .row -->
@@ -92,7 +93,8 @@
 
                     <!-- Sub heading -->
                     <p class="heading__sub">
-                        Our goal is to give access to as much information as possible, aggregating information with a philosophy centered around <em>resources</em>.
+                        Our goal is to give access to as much information as possible, aggregating information with a
+                        philosophy centered around <em>resources</em>.
                         To follow what's going on, read <a href="http://onekilopars.ec/blog">onekilopars.ec blog</a>.
                     </p>
 
@@ -128,6 +130,15 @@
                     </p>
 
                     <div class="text-center">
+                        For now, you can browse the current
+                        <a href="{% host_url 'index_observingsites' host 'www' %}">Observing Sites</a> managed by arcsecond.io. We intend to provide
+                        a comprehensive list of observing sites throughout the world. Soon, everyone with an account will
+                        be able to add / update / edit these sites, which will automatically be part of the
+                        <a target="_self" href="{{ api_root_url }}/1/observingsites">observing sites data</a>.
+                    </div>
+
+                    <div class="text-center">
+                        <br/><br/>
                         <a href="https://twitter.com/arcsecond_io" class="twitter-follow-button" data-show-count="false" data-size="large" data-dnt="true">Follow @arcsecond_io</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
                     </div>
 
