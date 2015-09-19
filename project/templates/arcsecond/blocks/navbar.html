@@ -23,12 +23,12 @@
                 <span class="icon-bar"></span>
             </button>
             {% if settings.SITE_ID == 2 %}
-                <a class="navbar-brand" href="http://arcsecond-staging.herokuapp.com">
+                <a class="navbar-brand" target="_self" href="http://arcsecond-staging.herokuapp.com">
                     <img src="{% static 'arcsecond/img/favicon-60.png' %}" border="0" width="20px" style="float:left;">&nbsp;
                     [STAGING]
                 </a>
             {% else %}
-                <a class="navbar-brand" href="{% host_url 'index_www' host 'www' %}">
+                <a class="navbar-brand" target="_self" href="{% host_url 'index_www' host 'www' %}">
                     <img src="{% static 'arcsecond/img/favicon-60.png' %}" border="0" width="20px" style="float:left;">&nbsp;
                     arcsecond.io v1 (alpha)
                 </a>
@@ -36,11 +36,13 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="fullpage__nav nav navbar-nav navbar-right">
-                <li><a href="#welcome">Welcome</a></li>
-                <li><a href="#APIs">APIs</a></li>
-                {% if request.host.name == 'www' %}
-                    <li><a href="#team">Team</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                {% if request.path == '/' %}
+                    <li><a target="_self" href="#welcome">Welcome</a></li>
+                    <li><a target="_self" href="#APIs">APIs</a></li>
+                    {% if request.host.name == 'www' %}
+                        <li><a target="_self" href="#team">Team</a></li>
+                        <li><a target="_self" href="#contact">Contact</a></li>
+                    {% endif %}
                 {% endif %}
                 {% include 'arcsecond/blocks/user-navbar-dropdown.html' %}
             </ul>
