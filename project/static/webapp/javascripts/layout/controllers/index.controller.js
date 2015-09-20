@@ -48,9 +48,19 @@
 
             function successFn(data, status, headers, config) {
                 vm.observingsites = data.data;
+                $scope.map.markers = getMapMarkers(vm.observingsites);
 
-                for (var i = 0; i < vm.observingsites.length; i++) {
-                    var site = vm.observingsites[i];
+            }
+
+            function errorFn(data, status, headers, config) {
+                Snackbar.error(data.error);
+                console.log(data.error);
+            }
+
+            function getMapMarkers(observingsites) {
+                var markers = [];
+                for (var i = 0; i < observingsites.length; i++) {
+                    var site = observingsites[i];
 
                     var marker = {
                         "idKey": site.id,
@@ -58,21 +68,16 @@
                             "latitude": site.coordinates.latitude,
                             "longitude": site.coordinates.longitude
                         },
-                        "title": site.name,
+                        "name": site.name,
                         "icon": "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
                         "window": {
                             "title": site.name,
                             "subtitle": site.country
                         }
                     };
-
-                    $scope.map.markers.push(marker);
+                    markers.push(marker);
                 }
-            }
-
-            function errorFn(data, status, headers, config) {
-                Snackbar.error(data.error);
-                console.log(data.error);
+                return markers;
             }
         }
     }

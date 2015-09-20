@@ -47,10 +47,10 @@
     <ui-gmap-google-map center='map.center' zoom='map.zoom'>
 
         <ui-gmap-markers idkey="'idKey'"
-                         models="map.markers"
+                         models="map.markers | nameContainsSubstring:searchString"
                          coords="'coords'"
                          docluster="false"
-                         fit="'false'"
+                         fit="false"
                          icon="'icon'">
 
         </ui-gmap-markers>
