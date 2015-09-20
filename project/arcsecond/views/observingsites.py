@@ -30,7 +30,7 @@ class ObservingSiteListAPIView(mixins.RequestLogViewMixin, generics.ListAPIView)
         return queryset
 
 
-class ObservingSiteNamedDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveUpdateAPIView):
+class ObservingSiteNamedDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIView):
     queryset = models.ObservingSite.objects.all()
     serializer_class = serializers.ObservingSiteSerializer
     lookup_field = "name"
