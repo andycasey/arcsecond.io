@@ -1,6 +1,5 @@
 <div class="site-wrapper">
     <div class="container observingsites-search-container">
-
         <div id="search-container" class="row">
             <form class="form-inline">
                 <div class="form-group">
@@ -16,8 +15,8 @@
                 </div>
             </form>
 
-            <div class="continent_filters">
-                <div ng-repeat="continent in vm.continents" class="btn btn-info btn-group continent-pill">{{ continent.name }}</div>
+            <div class="heading__sub pull-left">
+                Total: {{ vm.observingsites.length }}, Sources: <a target="_self" href="http://onekilopars.ec/apps">iObserve</a>, <a target="_self" href="http://www.clearskyinstitute.com/xephem/">Xephem</a> (filtered)
             </div>
         </div>
 
@@ -49,7 +48,7 @@
         <ui-gmap-markers idkey="'idKey'"
                          models="map.markers | nameContainsSubstring:searchString"
                          coords="'coords'"
-                         docluster="false"
+                         docluster="true"
                          fit="false"
                          icon="'icon'">
 
