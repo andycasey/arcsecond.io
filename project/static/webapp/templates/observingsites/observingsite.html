@@ -1,23 +1,18 @@
 <div class="row">
     <div class="col-sm-12">
         <div class="observingsite">
-            <div class="observingsite__title">
-                <div class="observingsite__name">
-                    <a href="/observingsites/{{ observingsite.name }}">{{ observingsite.name }}</a>
-            <span class="observingsite__subtitle">
-            {{ observingsite.country }}
-            </span>
-                </div>
-            </div>
-
-            <div class="observingsite__elements">
-                <div class="observingsite__subtitle lighter">
-                    {{ observingsite.long_name }}
-                </div>
-                (long. {{ observingsite.coordinates.longitude | number:2 }}º,
-                lat. {{ observingsite.coordinates.latitude | number:2 }}º,
-                h. {{ observingsite.coordinates.height | number:0}}m)
-                [IAU: {{ observingsite.IAUCode }}]
+            <div class="observingsite__name">
+                <a href="/observingsites/{{ observingsite.name }}">
+                    {{ observingsite.name }}
+                </a>
+                    <span class="observingsite__subtitle">
+                        {{ observingsite.country }}
+                    </span>
+                <span class="observingsite__elements">
+                    (long. {{ observingsite.coordinates.longitude | number:2 }}º,
+                    lat. {{ observingsite.coordinates.latitude | number:2 }}º,
+                    h. {{ observingsite.coordinates.height | number:0}}m)
+                </span>
             </div>
         </div>
     </div>

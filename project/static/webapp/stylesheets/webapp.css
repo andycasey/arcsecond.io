@@ -68,15 +68,16 @@ textarea:focus, input:focus{
 
 .observingsite {
     width: 90%;
-    padding: 5px;
+    padding: 1px;
 }
 
 .observingsite  {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .observingsite__name {
-    font-size: 24pt;
+    font-size: 20pt;
+    clear: none;
 }
 
 .observingsite__subtitle {
@@ -84,7 +85,8 @@ textarea:focus, input:focus{
 }
 
 .observingsite__elements {
-    font-size: 16pt;
+    font-size: 14pt;
+    color: darkgray;
 }
 
 .observingsite:hover {
@@ -110,28 +112,6 @@ textarea:focus, input:focus{
     position: fixed;
     width: 100%;
     bottom: 0px;
-}
-
-#continent-list-container {
-    height: 320px;
-}
-
-#site-list-container,
-#site-property-container  {
-    height: 320px;
-    overflow: scroll;
-}
-
-.site-list {
-    display: none;
-}
-
-.site.name {
-    font-size: large;
-}
-
-.site.country {
-    /*color: darkgray;*/
 }
 
 .dark li.active a,
