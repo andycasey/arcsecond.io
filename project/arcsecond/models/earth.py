@@ -34,12 +34,3 @@ class Coordinates(models.Model):
     def __unicode__(self):
         return u"(long: %.8f, lat: %.8f, h: %.2fm)" % (self.longitude, self.latitude, self.height)
 
-    @classmethod
-    def create(cls, longitude, latitude, height, east_positive=True):
-        loc = cls()
-        loc.longitude = longitude if east_positive is True else -1.0*longitude
-        loc.latitude = latitude
-        loc.height = height
-        return loc
-
-

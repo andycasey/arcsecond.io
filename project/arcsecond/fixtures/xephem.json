@@ -1,0 +1,8286 @@
+[
+{
+	"pk" : 1000, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -31.2944444444,
+		"longitude": 149.233333333,
+		"height": 837.9
+	}
+},
+{
+	"pk" : 1000, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "ATCA Mopra",
+		"state_province": "",
+		"country": "Australia",
+		"coordinates": 1000
+	}
+},
+{
+	"pk" : 1001, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -30.4444444444,
+		"longitude": 149.569444444,
+		"height": 210.8
+	}
+},
+{
+	"pk" : 1001, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "ATCA Narrabri",
+		"state_province": "",
+		"country": "Australia",
+		"coordinates": 1001
+	}
+},
+{
+	"pk" : 1002, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 50.7666666667,
+		"longitude": 6.1,
+		"height": 285.0
+	}
+},
+{
+	"pk" : 1002, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Aachen",
+		"state_province": "",
+		"country": "Germany",
+		"coordinates": 1002
+	}
+},
+{
+	"pk" : 1003, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 57.2694444444,
+		"longitude": -2.43888888889,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1003, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Aberdeen",
+		"state_province": "Scotland",
+		"country": "U.K.",
+		"coordinates": 1003
+	}
+},
+{
+	"pk" : 1004, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 32.4638888889,
+		"longitude": -99.8583333333,
+		"height": 521.2
+	}
+},
+{
+	"pk" : 1004, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Abilene",
+		"state_province": "",
+		"country": "Texas",
+		"coordinates": 1004
+	}
+},
+{
+	"pk" : 1005, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -34.9166666667,
+		"longitude": 138.583333333,
+		"height": 72.0
+	}
+},
+{
+	"pk" : 1005, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Adelaide",
+		"state_province": "South Astralia",
+		"country": "Australia",
+		"coordinates": 1005
+	}
+},
+{
+	"pk" : 1006, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.0833333333,
+		"longitude": -81.6222222222,
+		"height": 266.4
+	}
+},
+{
+	"pk" : 1006, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Akron",
+		"state_province": "Ohio",
+		"country": "U.S.A.",
+		"coordinates": 1006
+	}
+},
+{
+	"pk" : 1007, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.6527777778,
+		"longitude": -73.7527777778,
+		"height": 6.1
+	}
+},
+{
+	"pk" : 1007, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Albany",
+		"state_province": "New York",
+		"country": "U.S.A.",
+		"coordinates": 1007
+	}
+},
+{
+	"pk" : 1008, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 35.0861111111,
+		"longitude": -106.663888889,
+		"height": 1507.2
+	}
+},
+{
+	"pk" : 1008, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Albuquerque",
+		"state_province": "New Mexico",
+		"country": "U.S.A.",
+		"coordinates": 1008
+	}
+},
+{
+	"pk" : 1009, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -23.8833333333,
+		"longitude": 133.908333333,
+		"height": 609.0
+	}
+},
+{
+	"pk" : 1009, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Alice Springs",
+		"state_province": "Northern Territory",
+		"country": "Australia",
+		"coordinates": 1009
+	}
+},
+{
+	"pk" : 1010, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.6305555556,
+		"longitude": -75.4833333333,
+		"height": 77.7
+	}
+},
+{
+	"pk" : 1010, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Allentown",
+		"state_province": "Pennsylvania",
+		"country": "U.S.A.",
+		"coordinates": 1010
+	}
+},
+{
+	"pk" : 1011, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.6527777778,
+		"longitude": -78.4083333333,
+		"height": 359.7
+	}
+},
+{
+	"pk" : 1011, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Altoona",
+		"state_province": "Pennsylvania",
+		"country": "U.S.A.",
+		"coordinates": 1011
+	}
+},
+{
+	"pk" : 1012, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 35.275,
+		"longitude": -101.844444444,
+		"height": 1123.2
+	}
+},
+{
+	"pk" : 1012, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Amarillo",
+		"state_province": "Texas",
+		"country": "U.S.A.",
+		"coordinates": 1012
+	}
+},
+{
+	"pk" : 1013, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 52.3666666667,
+		"longitude": 4.9,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1013, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Amsterdam",
+		"state_province": "",
+		"country": "Netherlands",
+		"coordinates": 1013
+	}
+},
+{
+	"pk" : 1014, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 61.1666666667,
+		"longitude": -149.983333333,
+		"height": 36.0
+	}
+},
+{
+	"pk" : 1014, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Anchorage",
+		"state_province": "Alaska",
+		"country": "U.S.A.",
+		"coordinates": 1014
+	}
+},
+{
+	"pk" : 1015, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.4305555556,
+		"longitude": -83.8777777778,
+		"height": 268.2
+	}
+},
+{
+	"pk" : 1015, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Ann Arbor",
+		"state_province": "Michigan",
+		"country": "U.S.A.",
+		"coordinates": 1015
+	}
+},
+{
+	"pk" : 1016, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 51.2111111111,
+		"longitude": 4.45833333333,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1016, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Antwerp",
+		"state_province": "",
+		"country": "Belgium",
+		"coordinates": 1016
+	}
+},
+{
+	"pk" : 1017, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 32.9027777778,
+		"longitude": -105.852777778,
+		"height": 2788.0
+	}
+},
+{
+	"pk" : 1017, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Apache Point Observatory",
+		"state_province": "New Mexico",
+		"country": "U.S.A.",
+		"coordinates": 1017
+	}
+},
+{
+	"pk" : 1018, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 18.3888888889,
+		"longitude": -66.8027777778,
+		"height": 496.0
+	}
+},
+{
+	"pk" : 1018, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Arecibo Radiotelescope",
+		"state_province": "Puerto Rico",
+		"country": "U.S.A.",
+		"coordinates": 1018
+	}
+},
+{
+	"pk" : 1019, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 38.8666666667,
+		"longitude": -77.1166666667,
+		"height": 9.1
+	}
+},
+{
+	"pk" : 1019, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Arlington",
+		"state_province": "Virginia",
+		"country": "U.S.A.",
+		"coordinates": 1019
+	}
+},
+{
+	"pk" : 1020, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 35.7,
+		"longitude": -82.6222222222,
+		"height": 605.0
+	}
+},
+{
+	"pk" : 1020, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Asheville",
+		"state_province": "North Carolina",
+		"country": "U.S.A.",
+		"coordinates": 1020
+	}
+},
+{
+	"pk" : 1021, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 38.5666666667,
+		"longitude": -82.6972222222,
+		"height": 163.4
+	}
+},
+{
+	"pk" : 1021, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Ashland",
+		"state_province": "Kentucky",
+		"country": "U.S.A.",
+		"coordinates": 1021
+	}
+},
+{
+	"pk" : 1022, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 37.9666666667,
+		"longitude": 23.7333333333,
+		"height": 91.4
+	}
+},
+{
+	"pk" : 1022, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Athens",
+		"state_province": "",
+		"country": "Greece",
+		"coordinates": 1022
+	}
+},
+{
+	"pk" : 1023, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 33.7777777778,
+		"longitude": -84.4861111111,
+		"height": 320.0
+	}
+},
+{
+	"pk" : 1023, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Atlanta",
+		"state_province": "Georgia",
+		"country": "U.S.A.",
+		"coordinates": 1023
+	}
+},
+{
+	"pk" : 1024, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 39.4388888889,
+		"longitude": -74.5638888889,
+		"height": 3.0
+	}
+},
+{
+	"pk" : 1024, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Atlantic City",
+		"state_province": "New Jersey",
+		"country": "U.S.A.",
+		"coordinates": 1024
+	}
+},
+{
+	"pk" : 1025, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 33.5222222222,
+		"longitude": -81.9666666667,
+		"height": 43.6
+	}
+},
+{
+	"pk" : 1025, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Augusta",
+		"state_province": "Georgia",
+		"country": "U.S.A.",
+		"coordinates": 1025
+	}
+},
+{
+	"pk" : 1026, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 44.4472222222,
+		"longitude": -69.8472222222,
+		"height": 13.7
+	}
+},
+{
+	"pk" : 1026, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Augusta",
+		"state_province": "Maine",
+		"country": "U.S.A.",
+		"coordinates": 1026
+	}
+},
+{
+	"pk" : 1027, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 30.2916666667,
+		"longitude": -97.8361111111,
+		"height": 153.9
+	}
+},
+{
+	"pk" : 1027, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Austin",
+		"state_province": "Texas",
+		"country": "U.S.A.",
+		"coordinates": 1027
+	}
+},
+{
+	"pk" : 1028, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.8166666667,
+		"longitude": -121.466666667,
+		"height": 1043.0
+	}
+},
+{
+	"pk" : 1028, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "BIMA Hat Creek",
+		"state_province": "California",
+		"country": "U.S.A.",
+		"coordinates": 1028
+	}
+},
+{
+	"pk" : 1029, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 35.4527777778,
+		"longitude": -119.066666667,
+		"height": 121.9
+	}
+},
+{
+	"pk" : 1029, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Bakersfield",
+		"state_province": "California",
+		"country": "U.S.A.",
+		"coordinates": 1029
+	}
+},
+{
+	"pk" : 1030, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 39.3833333333,
+		"longitude": -76.725,
+		"height": 6.1
+	}
+},
+{
+	"pk" : 1030, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Baltimore",
+		"state_province": "Maryland",
+		"country": "U.S.A.",
+		"coordinates": 1030
+	}
+},
+{
+	"pk" : 1031, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 13.7333333333,
+		"longitude": 100.5,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1031, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Bangkok",
+		"state_province": "",
+		"country": "Thailand",
+		"coordinates": 1031
+	}
+},
+{
+	"pk" : 1032, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 44.8361111111,
+		"longitude": -68.8166666667,
+		"height": 6.1
+	}
+},
+{
+	"pk" : 1032, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Bangor",
+		"state_province": "Maine",
+		"country": "U.S.A.",
+		"coordinates": 1032
+	}
+},
+{
+	"pk" : 1033, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.3833333333,
+		"longitude": 2.15,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1033, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Barcelona",
+		"state_province": "",
+		"country": "Spain",
+		"coordinates": 1033
+	}
+},
+{
+	"pk" : 1034, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 10.15,
+		"longitude": -64.1861111111,
+		"height": 4.1
+	}
+},
+{
+	"pk" : 1034, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Barcelona",
+		"state_province": "",
+		"country": "Venezuela",
+		"coordinates": 1034
+	}
+},
+{
+	"pk" : 1035, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 10.2083333333,
+		"longitude": -69.4277777778,
+		"height": 596.9
+	}
+},
+{
+	"pk" : 1035, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Barquisimeto",
+		"state_province": "",
+		"country": "Venezuela",
+		"coordinates": 1035
+	}
+},
+{
+	"pk" : 1036, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 30.5944444444,
+		"longitude": -91.1833333333,
+		"height": 17.4
+	}
+},
+{
+	"pk" : 1036, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Baton Rouge",
+		"state_province": "Louisiana",
+		"country": "U.S.A.",
+		"coordinates": 1036
+	}
+},
+{
+	"pk" : 1037, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.4611111111,
+		"longitude": -85.3,
+		"height": 249.9
+	}
+},
+{
+	"pk" : 1037, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Battle Creek",
+		"state_province": "Michigan",
+		"country": "U.S.A.",
+		"coordinates": 1037
+	}
+},
+{
+	"pk" : 1038, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 43.6666666667,
+		"longitude": 40.0,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1038, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Batumi",
+		"state_province": "Georgia",
+		"country": "U.S.A.",
+		"coordinates": 1038
+	}
+},
+{
+	"pk" : 1039, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 43.6111111111,
+		"longitude": -83.925,
+		"height": 181.4
+	}
+},
+{
+	"pk" : 1039, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Bay City",
+		"state_province": "Michigan",
+		"country": "U.S.A.",
+		"coordinates": 1039
+	}
+},
+{
+	"pk" : 1040, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 30.1388888889,
+		"longitude": -94.125,
+		"height": 6.1
+	}
+},
+{
+	"pk" : 1040, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Beaumont",
+		"state_province": "Texas",
+		"country": "U.S.A.",
+		"coordinates": 1040
+	}
+},
+{
+	"pk" : 1041, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 39.9,
+		"longitude": 116.466666667,
+		"height": 182.9
+	}
+},
+{
+	"pk" : 1041, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Beijing",
+		"state_province": "",
+		"country": "China",
+		"coordinates": 1041
+	}
+},
+{
+	"pk" : 1042, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 33.9,
+		"longitude": 35.4666666667,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1042, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Beirut",
+		"state_province": "",
+		"country": "Lebanon",
+		"coordinates": 1042
+	}
+},
+{
+	"pk" : 1043, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 54.5833333333,
+		"longitude": -5.83333333333,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1043, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Belfast",
+		"state_province": "Northern Ireland",
+		"country": "U.K.",
+		"coordinates": 1043
+	}
+},
+{
+	"pk" : 1044, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 48.8444444444,
+		"longitude": -122.566666667,
+		"height": 18.3
+	}
+},
+{
+	"pk" : 1044, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Bellingham",
+		"state_province": "Washington",
+		"country": "U.S.A.",
+		"coordinates": 1044
+	}
+},
+{
+	"pk" : 1045, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -32.0861111111,
+		"longitude": 115.952777778,
+		"height": 76.0
+	}
+},
+{
+	"pk" : 1045, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Bentley",
+		"state_province": "Western Australia",
+		"country": "Australia",
+		"coordinates": 1045
+	}
+},
+{
+	"pk" : 1046, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 37.8944444444,
+		"longitude": -122.313888889,
+		"height": 12.2
+	}
+},
+{
+	"pk" : 1046, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Berkeley",
+		"state_province": "California",
+		"country": "U.S.A.",
+		"coordinates": 1046
+	}
+},
+{
+	"pk" : 1047, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 52.5166666667,
+		"longitude": 13.4166666667,
+		"height": 81.0
+	}
+},
+{
+	"pk" : 1047, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Berlin",
+		"state_province": "",
+		"country": "Germany",
+		"coordinates": 1047
+	}
+},
+{
+	"pk" : 1048, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.6611111111,
+		"longitude": -75.4611111111,
+		"height": 71.6
+	}
+},
+{
+	"pk" : 1048, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Bethlehem",
+		"state_province": "Pennsylvania",
+		"country": "U.S.A.",
+		"coordinates": 1048
+	}
+},
+{
+	"pk" : 1049, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 45.7833333333,
+		"longitude": -108.511111111,
+		"height": 951.0
+	}
+},
+{
+	"pk" : 1049, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Billings",
+		"state_province": "Montana",
+		"country": "U.S.A.",
+		"coordinates": 1049
+	}
+},
+{
+	"pk" : 1050, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 30.5166666667,
+		"longitude": -88.8833333333,
+		"height": 6.1
+	}
+},
+{
+	"pk" : 1050, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Biloxi",
+		"state_province": "Mississippi",
+		"country": "U.S.A.",
+		"coordinates": 1050
+	}
+},
+{
+	"pk" : 1051, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.1083333333,
+		"longitude": -76.0305555556,
+		"height": 263.7
+	}
+},
+{
+	"pk" : 1051, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Binghamton",
+		"state_province": "New York",
+		"country": "U.S.A.",
+		"coordinates": 1051
+	}
+},
+{
+	"pk" : 1052, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 33.5194444444,
+		"longitude": -86.9,
+		"height": 182.9
+	}
+},
+{
+	"pk" : 1052, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Birmingham",
+		"state_province": "Alabama",
+		"country": "U.S.A.",
+		"coordinates": 1052
+	}
+},
+{
+	"pk" : 1053, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 46.8638888889,
+		"longitude": -100.830555556,
+		"height": 510.2
+	}
+},
+{
+	"pk" : 1053, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Bismarck",
+		"state_province": "North Dakota",
+		"country": "U.S.A.",
+		"coordinates": 1053
+	}
+},
+{
+	"pk" : 1054, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.6277777778,
+		"longitude": -89.0833333333,
+		"height": 243.8
+	}
+},
+{
+	"pk" : 1054, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Bloomington",
+		"state_province": "Illinois",
+		"country": "U.S.A.",
+		"coordinates": 1054
+	}
+},
+{
+	"pk" : 1055, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 4.63333333333,
+		"longitude": -74.0833333333,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1055, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Bogota",
+		"state_province": "Colombia",
+		"country": "U.S.A.",
+		"coordinates": 1055
+	}
+},
+{
+	"pk" : 1056, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 43.6361111111,
+		"longitude": -116.344444444,
+		"height": 824.2
+	}
+},
+{
+	"pk" : 1056, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Boise",
+		"state_province": "Idaho",
+		"country": "U.S.A.",
+		"coordinates": 1056
+	}
+},
+{
+	"pk" : 1057, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 19.0916666667,
+		"longitude": 72.8583333333,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1057, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Bombay",
+		"state_province": "",
+		"country": "India",
+		"coordinates": 1057
+	}
+},
+{
+	"pk" : 1058, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 50.7333333333,
+		"longitude": 7.1,
+		"height": 60.0
+	}
+},
+{
+	"pk" : 1058, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Bonn",
+		"state_province": "",
+		"country": "Germany",
+		"coordinates": 1058
+	}
+},
+{
+	"pk" : 1059, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 44.8333333333,
+		"longitude": -0.583333333333,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1059, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Bordeaux",
+		"state_province": "",
+		"country": "France",
+		"coordinates": 1059
+	}
+},
+{
+	"pk" : 1060, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.4166666667,
+		"longitude": -71.1194444444,
+		"height": 6.4
+	}
+},
+{
+	"pk" : 1060, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Boston",
+		"state_province": "Massachusetts",
+		"country": "U.S.A.",
+		"coordinates": 1060
+	}
+},
+{
+	"pk" : 1061, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 37.0972222222,
+		"longitude": -86.525,
+		"height": 155.4
+	}
+},
+{
+	"pk" : 1061, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Bowling Green",
+		"state_province": "Kentucky",
+		"country": "U.S.A.",
+		"coordinates": 1061
+	}
+},
+{
+	"pk" : 1062, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 48.1666666667,
+		"longitude": 17.1166666667,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1062, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Bratislava",
+		"state_province": "",
+		"country": "Slovak Republic",
+		"coordinates": 1062
+	}
+},
+{
+	"pk" : 1063, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.8666666667,
+		"longitude": -72.6833333333,
+		"height": 91.4
+	}
+},
+{
+	"pk" : 1063, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Brattleboro",
+		"state_province": "Vermont",
+		"country": "U.S.A.",
+		"coordinates": 1063
+	}
+},
+{
+	"pk" : 1064, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 53.1583333333,
+		"longitude": 8.87222222222,
+		"height": 11.0
+	}
+},
+{
+	"pk" : 1064, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Bremen",
+		"state_province": "",
+		"country": "Germany",
+		"coordinates": 1064
+	}
+},
+{
+	"pk" : 1065, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 48.3833333333,
+		"longitude": -4.48333333333,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1065, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Brest",
+		"state_province": "",
+		"country": "France",
+		"coordinates": 1065
+	}
+},
+{
+	"pk" : 1066, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.3027777778,
+		"longitude": -73.2444444444,
+		"height": 3.0
+	}
+},
+{
+	"pk" : 1066, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Bridgeport",
+		"state_province": "Connecticut",
+		"country": "U.S.A.",
+		"coordinates": 1066
+	}
+},
+{
+	"pk" : 1067, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -27.5,
+		"longitude": 153.0,
+		"height": 24.0
+	}
+},
+{
+	"pk" : 1067, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Brisbane",
+		"state_province": "Queensland",
+		"country": "Australia",
+		"coordinates": 1067
+	}
+},
+{
+	"pk" : 1068, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.0888888889,
+		"longitude": -71.0861111111,
+		"height": 39.6
+	}
+},
+{
+	"pk" : 1068, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Brockton",
+		"state_province": "Massachusetts",
+		"country": "U.S.A.",
+		"coordinates": 1068
+	}
+},
+{
+	"pk" : 1069, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -31.95,
+		"longitude": 141.433333333,
+		"height": 72.0
+	}
+},
+{
+	"pk" : 1069, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Broken Hill",
+		"state_province": "New South Wales",
+		"country": "Australia",
+		"coordinates": 1069
+	}
+},
+{
+	"pk" : 1070, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 25.9194444444,
+		"longitude": -97.6444444444,
+		"height": 10.7
+	}
+},
+{
+	"pk" : 1070, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Brownsville",
+		"state_province": "Texas",
+		"country": "U.S.A.",
+		"coordinates": 1070
+	}
+},
+{
+	"pk" : 1071, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 50.8888888889,
+		"longitude": 4.66666666667,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1071, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Brussels",
+		"state_province": "",
+		"country": "Belgium",
+		"coordinates": 1071
+	}
+},
+{
+	"pk" : 1072, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 44.5555555556,
+		"longitude": 26.2388888889,
+		"height": 75.0
+	}
+},
+{
+	"pk" : 1072, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Bucharest",
+		"state_province": "",
+		"country": "Romania",
+		"coordinates": 1072
+	}
+},
+{
+	"pk" : 1073, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 47.5,
+		"longitude": 19.0833333333,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1073, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Budapest",
+		"state_province": "",
+		"country": "Hungary",
+		"coordinates": 1073
+	}
+},
+{
+	"pk" : 1074, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -34.5666666667,
+		"longitude": -58.05,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1074, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Buenos Aires",
+		"state_province": "",
+		"country": "Argentina",
+		"coordinates": 1074
+	}
+},
+{
+	"pk" : 1075, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 43.0111111111,
+		"longitude": -78.925,
+		"height": 178.3
+	}
+},
+{
+	"pk" : 1075, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Buffalo",
+		"state_province": "New York",
+		"country": "U.S.A.",
+		"coordinates": 1075
+	}
+},
+{
+	"pk" : 1076, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 44.5611111111,
+		"longitude": -73.3277777778,
+		"height": 33.5
+	}
+},
+{
+	"pk" : 1076, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Burlington",
+		"state_province": "Vermont",
+		"country": "U.S.A.",
+		"coordinates": 1076
+	}
+},
+{
+	"pk" : 1077, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 46.0333333333,
+		"longitude": -112.563888889,
+		"height": 1757.2
+	}
+},
+{
+	"pk" : 1077, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Butte",
+		"state_province": "Montana",
+		"country": "U.S.A.",
+		"coordinates": 1077
+	}
+},
+{
+	"pk" : 1078, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 35.375,
+		"longitude": -75.6611111111,
+		"height": 2.0
+	}
+},
+{
+	"pk" : 1078, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Buxton",
+		"state_province": "North Carolina",
+		"country": "U.S.A.",
+		"coordinates": 1078
+	}
+},
+{
+	"pk" : 1079, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.3333333333,
+		"longitude": 44.3,
+		"height": 1500.0
+	}
+},
+{
+	"pk" : 1079, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Byurakan Observatory",
+		"state_province": "",
+		"country": "?",
+		"coordinates": 1079
+	}
+},
+{
+	"pk" : 1080, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -16.9166666667,
+		"longitude": 145.766666667,
+		"height": 0.0
+	}
+},
+{
+	"pk" : 1080, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Cairns",
+		"state_province": "Queensland",
+		"country": "Australia",
+		"coordinates": 1080
+	}
+},
+{
+	"pk" : 1081, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 31.25,
+		"longitude": 31.05,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1081, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Cairo",
+		"state_province": "",
+		"country": "Egypt",
+		"coordinates": 1081
+	}
+},
+{
+	"pk" : 1082, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 52.1666666667,
+		"longitude": 0.1,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1082, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Cambridge",
+		"state_province": "England",
+		"country": "U.K.",
+		"coordinates": 1082
+	}
+},
+{
+	"pk" : 1083, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.3694444444,
+		"longitude": -71.1611111111,
+		"height": 6.1
+	}
+},
+{
+	"pk" : 1083, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Cambridge",
+		"state_province": "Massachusetts",
+		"country": "U.S.A.",
+		"coordinates": 1083
+	}
+},
+{
+	"pk" : 1084, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.0472222222,
+		"longitude": -75.1555555556,
+		"height": 9.1
+	}
+},
+{
+	"pk" : 1084, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Camden",
+		"state_province": "New Jersey",
+		"country": "U.S.A.",
+		"coordinates": 1084
+	}
+},
+{
+	"pk" : 1085, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -35.3,
+		"longitude": 149.15,
+		"height": 609.0
+	}
+},
+{
+	"pk" : 1085, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Canberra",
+		"state_province": "Australian Capital Territory",
+		"country": "Australia",
+		"coordinates": 1085
+	}
+},
+{
+	"pk" : 1086, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.9222222222,
+		"longitude": -81.4694444444,
+		"height": 313.9
+	}
+},
+{
+	"pk" : 1086, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Canton",
+		"state_province": "Ohio",
+		"country": "U.S.A.",
+		"coordinates": 1086
+	}
+},
+{
+	"pk" : 1087, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -33.9333333333,
+		"longitude": 18.4083333333,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1087, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Capetown",
+		"state_province": "",
+		"country": "South Africa",
+		"coordinates": 1087
+	}
+},
+{
+	"pk" : 1088, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 10.5666666667,
+		"longitude": -67.0277777778,
+		"height": 914.4
+	}
+},
+{
+	"pk" : 1088, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Caracas",
+		"state_province": "",
+		"country": "Venezuela",
+		"coordinates": 1088
+	}
+},
+{
+	"pk" : 1089, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 36.6388888889,
+		"longitude": -122.136111111,
+		"height": 5.0
+	}
+},
+{
+	"pk" : 1089, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Carmel-by-the-Sea",
+		"state_province": "California",
+		"country": "U.S.A.",
+		"coordinates": 1089
+	}
+},
+{
+	"pk" : 1090, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 39.1666666667,
+		"longitude": -119.766666667,
+		"height": 1426.5
+	}
+},
+{
+	"pk" : 1090, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Carson City",
+		"state_province": "Nevada",
+		"country": "U.S.A.",
+		"coordinates": 1090
+	}
+},
+{
+	"pk" : 1091, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.9694444444,
+		"longitude": -91.7972222222,
+		"height": 222.5
+	}
+},
+{
+	"pk" : 1091, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Cedar Rapids",
+		"state_province": "Iowa",
+		"country": "U.S.A.",
+		"coordinates": 1091
+	}
+},
+{
+	"pk" : 1092, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -33.4333333333,
+		"longitude": 151.383333333,
+		"height": 6.0
+	}
+},
+{
+	"pk" : 1092, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Central Coast (Erina)",
+		"state_province": "New South Wales",
+		"country": "Australia",
+		"coordinates": 1092
+	}
+},
+{
+	"pk" : 1093, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.85,
+		"longitude": -73.2,
+		"height": 24.4
+	}
+},
+{
+	"pk" : 1093, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Central Islip",
+		"state_province": "New York",
+		"country": "U.S.A.",
+		"coordinates": 1093
+	}
+},
+{
+	"pk" : 1094, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.1305555556,
+		"longitude": -88.3666666667,
+		"height": 225.6
+	}
+},
+{
+	"pk" : 1094, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Champaign",
+		"state_province": "Illinois",
+		"country": "U.S.A.",
+		"coordinates": 1094
+	}
+},
+{
+	"pk" : 1095, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 32.8638888889,
+		"longitude": -80.0638888889,
+		"height": 2.7
+	}
+},
+{
+	"pk" : 1095, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Charleston",
+		"state_province": "South Carolina",
+		"country": "U.S.A.",
+		"coordinates": 1095
+	}
+},
+{
+	"pk" : 1096, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 38.3527777778,
+		"longitude": -81.7611111111,
+		"height": 183.2
+	}
+},
+{
+	"pk" : 1096, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Charleston",
+		"state_province": "West Virginia",
+		"country": "U.S.A.",
+		"coordinates": 1096
+	}
+},
+{
+	"pk" : 1097, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 35.3388888889,
+		"longitude": -80.9583333333,
+		"height": 219.5
+	}
+},
+{
+	"pk" : 1097, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Charlotte",
+		"state_province": "North Carolina",
+		"country": "U.S.A.",
+		"coordinates": 1097
+	}
+},
+{
+	"pk" : 1098, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 35.1472222222,
+		"longitude": -85.3888888889,
+		"height": 205.7
+	}
+},
+{
+	"pk" : 1098, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Chattanooga",
+		"state_province": "Tennessee",
+		"country": "U.S.A.",
+		"coordinates": 1098
+	}
+},
+{
+	"pk" : 1099, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.1583333333,
+		"longitude": -104.836111111,
+		"height": 1859.3
+	}
+},
+{
+	"pk" : 1099, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Cheyenne",
+		"state_province": "Wyoming",
+		"country": "U.S.A.",
+		"coordinates": 1099
+	}
+},
+{
+	"pk" : 1100, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.9444444444,
+		"longitude": -87.6944444444,
+		"height": 181.4
+	}
+},
+{
+	"pk" : 1100, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Chicago",
+		"state_province": "Illinois",
+		"country": "U.S.A.",
+		"coordinates": 1100
+	}
+},
+{
+	"pk" : 1101, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 39.1194444444,
+		"longitude": -84.5972222222,
+		"height": 271.6
+	}
+},
+{
+	"pk" : 1101, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Cincinnatti",
+		"state_province": "Ohio",
+		"country": "U.S.A.",
+		"coordinates": 1101
+	}
+},
+{
+	"pk" : 1102, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.625,
+		"longitude": -81.8222222222,
+		"height": 201.2
+	}
+},
+{
+	"pk" : 1102, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Cleveland",
+		"state_province": "Ohio",
+		"country": "U.S.A.",
+		"coordinates": 1102
+	}
+},
+{
+	"pk" : 1103, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 50.95,
+		"longitude": 6.95,
+		"height": 81.0
+	}
+},
+{
+	"pk" : 1103, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Cologne",
+		"state_province": "",
+		"country": "Germany",
+		"coordinates": 1103
+	}
+},
+{
+	"pk" : 1104, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 38.8527777778,
+		"longitude": -104.861111111,
+		"height": 1822.7
+	}
+},
+{
+	"pk" : 1104, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Colorado Springs",
+		"state_province": "Colorado",
+		"country": "U.S.A.",
+		"coordinates": 1104
+	}
+},
+{
+	"pk" : 1105, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 38.9583333333,
+		"longitude": -92.4444444444,
+		"height": 222.5
+	}
+},
+{
+	"pk" : 1105, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Columbia",
+		"state_province": "Missouri",
+		"country": "U.S.A.",
+		"coordinates": 1105
+	}
+},
+{
+	"pk" : 1106, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 34.0055555556,
+		"longitude": -81.0333333333,
+		"height": 57.9
+	}
+},
+{
+	"pk" : 1106, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Columbia",
+		"state_province": "South Carolina",
+		"country": "U.S.A.",
+		"coordinates": 1106
+	}
+},
+{
+	"pk" : 1107, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 32.4861111111,
+		"longitude": -85.05,
+		"height": 80.8
+	}
+},
+{
+	"pk" : 1107, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Columbus",
+		"state_province": "Georgia",
+		"country": "U.S.A.",
+		"coordinates": 1107
+	}
+},
+{
+	"pk" : 1108, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.0805555556,
+		"longitude": -83.0472222222,
+		"height": 237.8
+	}
+},
+{
+	"pk" : 1108, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Columbus",
+		"state_province": "Ohio",
+		"country": "U.S.A.",
+		"coordinates": 1108
+	}
+},
+{
+	"pk" : 1109, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 43.2611111111,
+		"longitude": -71.6027777778,
+		"height": 88.4
+	}
+},
+{
+	"pk" : 1109, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Concord",
+		"state_province": "New Hampshire",
+		"country": "U.S.A.",
+		"coordinates": 1109
+	}
+},
+{
+	"pk" : 1110, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 55.8194444444,
+		"longitude": 12.6694444444,
+		"height": 40.0
+	}
+},
+{
+	"pk" : 1110, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Round Tower Observatory",
+		"state_province": "",
+		"country": "Denmark",
+		"coordinates": 1110
+	}
+},
+{
+	"pk" : 1111, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 27.925,
+		"longitude": -97.5083333333,
+		"height": 10.7
+	}
+},
+{
+	"pk" : 1111, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Corpus Christi",
+		"state_province": "Texas",
+		"country": "U.S.A.",
+		"coordinates": 1111
+	}
+},
+{
+	"pk" : 1112, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 35.3333333333,
+		"longitude": 25.15,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1112, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Crete",
+		"state_province": "",
+		"country": "Greece",
+		"coordinates": 1112
+	}
+},
+{
+	"pk" : 1113, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 32.8083333333,
+		"longitude": -96.8861111111,
+		"height": 132.6
+	}
+},
+{
+	"pk" : 1113, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Dallas",
+		"state_province": "Texas",
+		"country": "U.S.A.",
+		"coordinates": 1113
+	}
+},
+{
+	"pk" : 1114, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -12.5611111111,
+		"longitude": 131.013888889,
+		"height": 0.0
+	}
+},
+{
+	"pk" : 1114, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Darwin",
+		"state_province": "Northern Territory",
+		"country": "Australia",
+		"coordinates": 1114
+	}
+},
+{
+	"pk" : 1115, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.5694444444,
+		"longitude": -90.6583333333,
+		"height": 179.8
+	}
+},
+{
+	"pk" : 1115, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Davenport",
+		"state_province": "Iowa",
+		"country": "U.S.A.",
+		"coordinates": 1115
+	}
+},
+{
+	"pk" : 1116, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 39.8388888889,
+		"longitude": -84.3027777778,
+		"height": 307.6
+	}
+},
+{
+	"pk" : 1116, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Dayton",
+		"state_province": "Ohio",
+		"country": "U.S.A.",
+		"coordinates": 1116
+	}
+},
+{
+	"pk" : 1117, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 29.3222222222,
+		"longitude": -81.0444444444,
+		"height": 2.1
+	}
+},
+{
+	"pk" : 1117, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Daytona Beach",
+		"state_province": "Florida",
+		"country": "U.S.A.",
+		"coordinates": 1117
+	}
+},
+{
+	"pk" : 1118, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 39.95,
+		"longitude": -89.0638888889,
+		"height": 207.9
+	}
+},
+{
+	"pk" : 1118, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Decatur",
+		"state_province": "Illinois",
+		"country": "U.S.A.",
+		"coordinates": 1118
+	}
+},
+{
+	"pk" : 1119, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 39.8944444444,
+		"longitude": -105.044444444,
+		"height": 1609.3
+	}
+},
+{
+	"pk" : 1119, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Denver",
+		"state_province": "Colorado",
+		"country": "U.S.A.",
+		"coordinates": 1119
+	}
+},
+{
+	"pk" : 1120, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.6222222222,
+		"longitude": -93.6166666667,
+		"height": 245.4
+	}
+},
+{
+	"pk" : 1120, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Des Moines",
+		"state_province": "Iowa",
+		"country": "U.S.A.",
+		"coordinates": 1120
+	}
+},
+{
+	"pk" : 1121, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.45,
+		"longitude": -83.1916666667,
+		"height": 211.3
+	}
+},
+{
+	"pk" : 1121, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Detroit",
+		"state_province": "Michigan",
+		"country": "U.S.A.",
+		"coordinates": 1121
+	}
+},
+{
+	"pk" : 1122, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 37.7972222222,
+		"longitude": -100.041666667,
+		"height": 755.9
+	}
+},
+{
+	"pk" : 1122, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Dodge City",
+		"state_province": "Kansas",
+		"country": "U.S.A.",
+		"coordinates": 1122
+	}
+},
+{
+	"pk" : 1123, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 51.5166666667,
+		"longitude": 7.46666666667,
+		"height": 76.0
+	}
+},
+{
+	"pk" : 1123, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Dortmund",
+		"state_province": "",
+		"country": "Germany",
+		"coordinates": 1123
+	}
+},
+{
+	"pk" : 1124, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 53.4555555556,
+		"longitude": -6.29166666667,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1124, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Dublin",
+		"state_province": "",
+		"country": "Ireland",
+		"coordinates": 1124
+	}
+},
+{
+	"pk" : 1125, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.6361111111,
+		"longitude": -90.6888888889,
+		"height": 189.0
+	}
+},
+{
+	"pk" : 1125, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Dubuque",
+		"state_province": "Iowa",
+		"country": "U.S.A.",
+		"coordinates": 1125
+	}
+},
+{
+	"pk" : 1126, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 46.9222222222,
+		"longitude": -92.1666666667,
+		"height": 185.9
+	}
+},
+{
+	"pk" : 1126, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Duluth",
+		"state_province": "Minnesota",
+		"country": "U.S.A.",
+		"coordinates": 1126
+	}
+},
+{
+	"pk" : 1127, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 36.0,
+		"longitude": -79.025,
+		"height": 123.4
+	}
+},
+{
+	"pk" : 1127, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Durham",
+		"state_province": "North Carolina",
+		"country": "U.S.A.",
+		"coordinates": 1127
+	}
+},
+{
+	"pk" : 1128, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 51.3055555556,
+		"longitude": 6.92777777778,
+		"height": 38.0
+	}
+},
+{
+	"pk" : 1128, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Dusseldorf",
+		"state_province": "",
+		"country": "Germany",
+		"coordinates": 1128
+	}
+},
+{
+	"pk" : 1129, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 44.8861111111,
+		"longitude": -91.6194444444,
+		"height": 240.8
+	}
+},
+{
+	"pk" : 1129, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Eau Claire",
+		"state_province": "Wisconsin",
+		"country": "U.S.A.",
+		"coordinates": 1129
+	}
+},
+{
+	"pk" : 1130, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 55.9166666667,
+		"longitude": -3.16666666667,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1130, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Edinburgh",
+		"state_province": "Scotland",
+		"country": "U.K.",
+		"coordinates": 1130
+	}
+},
+{
+	"pk" : 1131, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 53.6805555556,
+		"longitude": -113.733333333,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1131, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Edmonton Alberta",
+		"state_province": "",
+		"country": "Canada",
+		"coordinates": 1131
+	}
+},
+{
+	"pk" : 1132, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 10.1055555556,
+		"longitude": -69.4444444444,
+		"height": 604.0
+	}
+},
+{
+	"pk" : 1132, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "El Manzano",
+		"state_province": "",
+		"country": "Venezuela",
+		"coordinates": 1132
+	}
+},
+{
+	"pk" : 1133, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 31.85,
+		"longitude": -106.513888889,
+		"height": 1126.2
+	}
+},
+{
+	"pk" : 1133, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "El Paso",
+		"state_province": "Texas",
+		"country": "U.S.A.",
+		"coordinates": 1133
+	}
+},
+{
+	"pk" : 1134, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.7694444444,
+		"longitude": -74.3638888889,
+		"height": 6.4
+	}
+},
+{
+	"pk" : 1134, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Elizabeth",
+		"state_province": "New Jersey",
+		"country": "U.S.A.",
+		"coordinates": 1134
+	}
+},
+{
+	"pk" : 1135, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 36.4944444444,
+		"longitude": -97.9638888889,
+		"height": 378.0
+	}
+},
+{
+	"pk" : 1135, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Enid",
+		"state_province": "Oklahoma",
+		"country": "U.S.A.",
+		"coordinates": 1135
+	}
+},
+{
+	"pk" : 1136, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.1583333333,
+		"longitude": -80.225,
+		"height": 208.8
+	}
+},
+{
+	"pk" : 1136, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Erie",
+		"state_province": "Pennsylvania",
+		"country": "U.S.A.",
+		"coordinates": 1136
+	}
+},
+{
+	"pk" : 1137, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 51.45,
+		"longitude": 7.01666666667,
+		"height": 116.0
+	}
+},
+{
+	"pk" : 1137, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Essen",
+		"state_province": "",
+		"country": "Germany",
+		"coordinates": 1137
+	}
+},
+{
+	"pk" : 1138, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 44.0944444444,
+		"longitude": -123.166666667,
+		"height": 128.6
+	}
+},
+{
+	"pk" : 1138, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Eugene",
+		"state_province": "Oregon",
+		"country": "U.S.A.",
+		"coordinates": 1138
+	}
+},
+{
+	"pk" : 1139, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.8222222222,
+		"longitude": -124.277777778,
+		"height": 13.7
+	}
+},
+{
+	"pk" : 1139, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Eureka",
+		"state_province": "California",
+		"country": "U.S.A.",
+		"coordinates": 1139
+	}
+},
+{
+	"pk" : 1140, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 38.0222222222,
+		"longitude": -87.625,
+		"height": 117.3
+	}
+},
+{
+	"pk" : 1140, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Evansville",
+		"state_province": "Indiana",
+		"country": "U.S.A.",
+		"coordinates": 1140
+	}
+},
+{
+	"pk" : 1141, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.7166666667,
+		"longitude": -71.2,
+		"height": 12.2
+	}
+},
+{
+	"pk" : 1141, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Fall River",
+		"state_province": "Massachusetts",
+		"country": "U.S.A.",
+		"coordinates": 1141
+	}
+},
+{
+	"pk" : 1142, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 46.95,
+		"longitude": -96.8333333333,
+		"height": 274.3
+	}
+},
+{
+	"pk" : 1142, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Fargo",
+		"state_province": "North Dakota",
+		"country": "U.S.A.",
+		"coordinates": 1142
+	}
+},
+{
+	"pk" : 1143, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 35.2833333333,
+		"longitude": -111.666666667,
+		"height": 2103.1
+	}
+},
+{
+	"pk" : 1143, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Flagstaff",
+		"state_province": "Arizona",
+		"country": "U.S.A.",
+		"coordinates": 1143
+	}
+},
+{
+	"pk" : 1144, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 43.1388888889,
+		"longitude": -83.775,
+		"height": 228.6
+	}
+},
+{
+	"pk" : 1144, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Flint",
+		"state_province": "Michigan",
+		"country": "U.S.A.",
+		"coordinates": 1144
+	}
+},
+{
+	"pk" : 1145, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 35.4111111111,
+		"longitude": -94.5166666667,
+		"height": 134.1
+	}
+},
+{
+	"pk" : 1145, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Fort Smith",
+		"state_province": "Arkansas",
+		"country": "U.S.A.",
+		"coordinates": 1145
+	}
+},
+{
+	"pk" : 1146, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.125,
+		"longitude": -85.2055555556,
+		"height": 240.8
+	}
+},
+{
+	"pk" : 1146, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Fort Wayne",
+		"state_province": "Indiana",
+		"country": "U.S.A.",
+		"coordinates": 1146
+	}
+},
+{
+	"pk" : 1147, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 32.8861111111,
+		"longitude": -97.4388888889,
+		"height": 204.2
+	}
+},
+{
+	"pk" : 1147, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Fort Worth",
+		"state_province": "Texas",
+		"country": "U.S.A.",
+		"coordinates": 1147
+	}
+},
+{
+	"pk" : 1148, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 50.1166666667,
+		"longitude": 8.68333333333,
+		"height": 112.0
+	}
+},
+{
+	"pk" : 1148, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Frankfurt",
+		"state_province": "",
+		"country": "Germany",
+		"coordinates": 1148
+	}
+},
+{
+	"pk" : 1149, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 36.8527777778,
+		"longitude": -121.636111111,
+		"height": 838.0
+	}
+},
+{
+	"pk" : 1149, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Fremont Peak Observatory",
+		"state_province": "California",
+		"country": "U.S.A.",
+		"coordinates": 1149
+	}
+},
+{
+	"pk" : 1150, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 36.7666666667,
+		"longitude": -119.813888889,
+		"height": 86.9
+	}
+},
+{
+	"pk" : 1150, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Fresno",
+		"state_province": "California",
+		"country": "U.S.A.",
+		"coordinates": 1150
+	}
+},
+{
+	"pk" : 1151, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 34.1583333333,
+		"longitude": -86.1138888889,
+		"height": 169.2
+	}
+},
+{
+	"pk" : 1151, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Gadsden",
+		"state_province": "Alabama",
+		"country": "U.S.A.",
+		"coordinates": 1151
+	}
+},
+{
+	"pk" : 1152, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 29.7888888889,
+		"longitude": -82.3694444444,
+		"height": 53.3
+	}
+},
+{
+	"pk" : 1152, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Gainesville",
+		"state_province": "Florida",
+		"country": "U.S.A.",
+		"coordinates": 1152
+	}
+},
+{
+	"pk" : 1153, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 35.6,
+		"longitude": -108.816666667,
+		"height": 1993.4
+	}
+},
+{
+	"pk" : 1153, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Gallup",
+		"state_province": "New Mexico",
+		"country": "U.S.A.",
+		"coordinates": 1153
+	}
+},
+{
+	"pk" : 1154, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 29.3277777778,
+		"longitude": -94.9027777778,
+		"height": 1.5
+	}
+},
+{
+	"pk" : 1154, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Galveston",
+		"state_province": "Texas",
+		"country": "U.S.A.",
+		"coordinates": 1154
+	}
+},
+{
+	"pk" : 1155, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.6333333333,
+		"longitude": -87.3861111111,
+		"height": 179.8
+	}
+},
+{
+	"pk" : 1155, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Gary",
+		"state_province": "Indiana",
+		"country": "U.S.A.",
+		"coordinates": 1155
+	}
+},
+{
+	"pk" : 1156, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 46.2333333333,
+		"longitude": 6.1,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1156, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Geneva",
+		"state_province": "",
+		"country": "Switzerland",
+		"coordinates": 1156
+	}
+},
+{
+	"pk" : 1157, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 56.5,
+		"longitude": -94.7,
+		"height": 145.0
+	}
+},
+{
+	"pk" : 1157, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Gillam Manitoba",
+		"state_province": "",
+		"country": "Canada",
+		"coordinates": 1157
+	}
+},
+{
+	"pk" : 1158, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 39.0833333333,
+		"longitude": -108.7,
+		"height": 1399.0
+	}
+},
+{
+	"pk" : 1158, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Grand Junction",
+		"state_province": "Colorado",
+		"country": "U.S.A.",
+		"coordinates": 1158
+	}
+},
+{
+	"pk" : 1159, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.975,
+		"longitude": -85.7027777778,
+		"height": 185.9
+	}
+},
+{
+	"pk" : 1159, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Grand Rapids",
+		"state_province": "Michigan",
+		"country": "U.S.A.",
+		"coordinates": 1159
+	}
+},
+{
+	"pk" : 1160, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 47.0694444444,
+		"longitude": 15.45,
+		"height": 357.0
+	}
+},
+{
+	"pk" : 1160, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Graz",
+		"state_province": "",
+		"country": "Austria",
+		"coordinates": 1160
+	}
+},
+{
+	"pk" : 1161, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 47.575,
+		"longitude": -111.363888889,
+		"height": 1018.0
+	}
+},
+{
+	"pk" : 1161, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Great Falls",
+		"state_province": "Montana",
+		"country": "U.S.A.",
+		"coordinates": 1161
+	}
+},
+{
+	"pk" : 1162, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 44.6333333333,
+		"longitude": -88.1388888889,
+		"height": 179.8
+	}
+},
+{
+	"pk" : 1162, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Green Bay",
+		"state_province": "Wisconsin",
+		"country": "U.S.A.",
+		"coordinates": 1162
+	}
+},
+{
+	"pk" : 1163, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 36.1138888889,
+		"longitude": -79.8527777778,
+		"height": 255.7
+	}
+},
+{
+	"pk" : 1163, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Greensboro",
+		"state_province": "North Carolina",
+		"country": "U.S.A.",
+		"coordinates": 1163
+	}
+},
+{
+	"pk" : 1164, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 34.9722222222,
+		"longitude": -82.4027777778,
+		"height": 294.4
+	}
+},
+{
+	"pk" : 1164, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Greenville",
+		"state_province": "South Carolina",
+		"country": "U.S.A.",
+		"coordinates": 1164
+	}
+},
+{
+	"pk" : 1165, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 51.5,
+		"longitude": -0.0,
+		"height": 74.7
+	}
+},
+{
+	"pk" : 1165, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Greenwich",
+		"state_province": "",
+		"country": "England",
+		"coordinates": 1165
+	}
+},
+{
+	"pk" : 1166, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.6555555556,
+		"longitude": -72.6055555556,
+		"height": 250.0
+	}
+},
+{
+	"pk" : 1166, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Groton",
+		"state_province": "New York",
+		"country": "U.S.A.",
+		"coordinates": 1166
+	}
+},
+{
+	"pk" : 1167, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 14.6333333333,
+		"longitude": -90.3666666667,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1167, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Guatemala City",
+		"state_province": "",
+		"country": "Guatemala",
+		"coordinates": 1167
+	}
+},
+{
+	"pk" : 1168, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 30.3777777778,
+		"longitude": -89.1833333333,
+		"height": 6.1
+	}
+},
+{
+	"pk" : 1168, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Gulfport",
+		"state_province": "Mississippi",
+		"country": "U.S.A.",
+		"coordinates": 1168
+	}
+},
+{
+	"pk" : 1169, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 44.7861111111,
+		"longitude": -63.6361111111,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1169, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Halifax Nova Scotia",
+		"state_province": "",
+		"country": "Canada",
+		"coordinates": 1169
+	}
+},
+{
+	"pk" : 1170, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 53.55,
+		"longitude": 9.98333333333,
+		"height": 6.0
+	}
+},
+{
+	"pk" : 1170, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Hamburg",
+		"state_province": "",
+		"country": "Germany",
+		"coordinates": 1170
+	}
+},
+{
+	"pk" : 1171, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 39.5472222222,
+		"longitude": -84.6805555556,
+		"height": 182.9
+	}
+},
+{
+	"pk" : 1171, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Hamilton",
+		"state_province": "Ohio",
+		"country": "U.S.A.",
+		"coordinates": 1171
+	}
+},
+{
+	"pk" : 1172, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -37.5416666667,
+		"longitude": 144.766666667,
+		"height": 1143.0
+	}
+},
+{
+	"pk" : 1172, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Hanging Rock",
+		"state_province": "Victoria",
+		"country": "Australia",
+		"coordinates": 1172
+	}
+},
+{
+	"pk" : 1173, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 52.4444444444,
+		"longitude": 9.78611111111,
+		"height": 55.0
+	}
+},
+{
+	"pk" : 1173, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Hannover",
+		"state_province": "",
+		"country": "Germany",
+		"coordinates": 1173
+	}
+},
+{
+	"pk" : 1174, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -17.8333333333,
+		"longitude": 31.05,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1174, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Harare",
+		"state_province": "",
+		"country": "Zimbabwe",
+		"coordinates": 1174
+	}
+},
+{
+	"pk" : 1175, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.3694444444,
+		"longitude": -77.0305555556,
+		"height": 111.3
+	}
+},
+{
+	"pk" : 1175, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Harrisburg",
+		"state_province": "Pennsylvania",
+		"country": "U.S.A.",
+		"coordinates": 1175
+	}
+},
+{
+	"pk" : 1176, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.8,
+		"longitude": -72.8027777778,
+		"height": 12.2
+	}
+},
+{
+	"pk" : 1176, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Hartford",
+		"state_province": "Connecticut",
+		"country": "U.S.A.",
+		"coordinates": 1176
+	}
+},
+{
+	"pk" : 1177, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 46.675,
+		"longitude": -112.1,
+		"height": 1266.4
+	}
+},
+{
+	"pk" : 1177, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Helena",
+		"state_province": "Montana",
+		"country": "U.S.A.",
+		"coordinates": 1177
+	}
+},
+{
+	"pk" : 1178, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 60.1666666667,
+		"longitude": 24.8333333333,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1178, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Helsinki",
+		"state_province": "",
+		"country": "Finland",
+		"coordinates": 1178
+	}
+},
+{
+	"pk" : 1179, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -42.8333333333,
+		"longitude": 147.333333333,
+		"height": 151.0
+	}
+},
+{
+	"pk" : 1179, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Hobart Tas",
+		"state_province": "",
+		"country": "Australia",
+		"coordinates": 1179
+	}
+},
+{
+	"pk" : 1180, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.2805555556,
+		"longitude": -72.7,
+		"height": 35.1
+	}
+},
+{
+	"pk" : 1180, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Holyoke",
+		"state_province": "Massachusetts",
+		"country": "U.S.A.",
+		"coordinates": 1180
+	}
+},
+{
+	"pk" : 1181, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 21.3611111111,
+		"longitude": -157.947222222,
+		"height": 6.4
+	}
+},
+{
+	"pk" : 1181, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Honolulu",
+		"state_province": "Hawaii",
+		"country": "U.S.A.",
+		"coordinates": 1181
+	}
+},
+{
+	"pk" : 1182, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 29.8222222222,
+		"longitude": -95.4527777778,
+		"height": 12.2
+	}
+},
+{
+	"pk" : 1182, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Houston",
+		"state_province": "Texas",
+		"country": "U.S.A.",
+		"coordinates": 1182
+	}
+},
+{
+	"pk" : 1183, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 38.45,
+		"longitude": -82.525,
+		"height": 172.2
+	}
+},
+{
+	"pk" : 1183, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Huntington",
+		"state_province": "West Virginia",
+		"country": "U.S.A.",
+		"coordinates": 1183
+	}
+},
+{
+	"pk" : 1184, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 34.7833333333,
+		"longitude": -86.6361111111,
+		"height": 195.1
+	}
+},
+{
+	"pk" : 1184, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Huntsville",
+		"state_province": "Alabama",
+		"country": "U.S.A.",
+		"coordinates": 1184
+	}
+},
+{
+	"pk" : 1185, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -32.9666666667,
+		"longitude": 149.866666667,
+		"height": 825.0
+	}
+},
+{
+	"pk" : 1185, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Ilford NSW",
+		"state_province": "",
+		"country": "Australia",
+		"coordinates": 1185
+	}
+},
+{
+	"pk" : 1186, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 39.7861111111,
+		"longitude": -86.2777777778,
+		"height": 216.4
+	}
+},
+{
+	"pk" : 1186, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Indianapolis",
+		"state_province": "Indiana",
+		"country": "U.S.A.",
+		"coordinates": 1186
+	}
+},
+{
+	"pk" : 1187, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.7527777778,
+		"longitude": -91.6638888889,
+		"height": 208.8
+	}
+},
+{
+	"pk" : 1187, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Iowa City",
+		"state_province": "Iowa",
+		"country": "U.S.A.",
+		"coordinates": 1187
+	}
+},
+{
+	"pk" : 1188, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.3527777778,
+		"longitude": -84.4611111111,
+		"height": 286.5
+	}
+},
+{
+	"pk" : 1188, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Jackson",
+		"state_province": "Michigan",
+		"country": "U.S.A.",
+		"coordinates": 1188
+	}
+},
+{
+	"pk" : 1189, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 32.4388888889,
+		"longitude": -90.2,
+		"height": 90.8
+	}
+},
+{
+	"pk" : 1189, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Jackson",
+		"state_province": "Mississippi",
+		"country": "U.S.A.",
+		"coordinates": 1189
+	}
+},
+{
+	"pk" : 1190, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 30.4388888889,
+		"longitude": -81.7666666667,
+		"height": 6.1
+	}
+},
+{
+	"pk" : 1190, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Jacksonville",
+		"state_province": "Florida",
+		"country": "U.S.A.",
+		"coordinates": 1190
+	}
+},
+{
+	"pk" : 1191, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -6.18333333333,
+		"longitude": 106.833333333,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1191, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Jakarta",
+		"state_province": "",
+		"country": "Indonesia",
+		"coordinates": 1191
+	}
+},
+{
+	"pk" : 1192, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.8555555556,
+		"longitude": -74.2055555556,
+		"height": 6.1
+	}
+},
+{
+	"pk" : 1192, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Jersey City",
+		"state_province": "New Jersey",
+		"country": "U.S.A.",
+		"coordinates": 1192
+	}
+},
+{
+	"pk" : 1193, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 31.7833333333,
+		"longitude": 35.2166666667,
+		"height": 762.0
+	}
+},
+{
+	"pk" : 1193, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Jerusalem",
+		"state_province": "",
+		"country": "Israel",
+		"coordinates": 1193
+	}
+},
+{
+	"pk" : 1194, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -26.1666666667,
+		"longitude": 28.0333333333,
+		"height": 234.7
+	}
+},
+{
+	"pk" : 1194, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Johannesburg",
+		"state_province": "",
+		"country": "South Africa",
+		"coordinates": 1194
+	}
+},
+{
+	"pk" : 1195, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.4138888889,
+		"longitude": -78.925,
+		"height": 361.2
+	}
+},
+{
+	"pk" : 1195, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Johnstown",
+		"state_province": "Pennsylvania",
+		"country": "U.S.A.",
+		"coordinates": 1195
+	}
+},
+{
+	"pk" : 1196, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 37.1555555556,
+		"longitude": -94.5,
+		"height": 301.8
+	}
+},
+{
+	"pk" : 1196, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Joplin",
+		"state_province": "Missouri",
+		"country": "U.S.A.",
+		"coordinates": 1196
+	}
+},
+{
+	"pk" : 1197, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 58.3333333333,
+		"longitude": -134.483333333,
+		"height": 15.2
+	}
+},
+{
+	"pk" : 1197, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Juneau",
+		"state_province": "Alaska",
+		"country": "U.S.A.",
+		"coordinates": 1197
+	}
+},
+{
+	"pk" : 1198, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.3638888889,
+		"longitude": -85.6222222222,
+		"height": 230.1
+	}
+},
+{
+	"pk" : 1198, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Kalamazoo",
+		"state_province": "Michigan",
+		"country": "U.S.A.",
+		"coordinates": 1198
+	}
+},
+{
+	"pk" : 1199, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 39.1277777778,
+		"longitude": -94.7,
+		"height": 228.6
+	}
+},
+{
+	"pk" : 1199, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Kansas City",
+		"state_province": "Kansas",
+		"country": "U.S.A.",
+		"coordinates": 1199
+	}
+},
+{
+	"pk" : 1200, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.7027777778,
+		"longitude": -87.8638888889,
+		"height": 185.9
+	}
+},
+{
+	"pk" : 1200, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Kenosha",
+		"state_province": "Wisconsin",
+		"country": "U.S.A.",
+		"coordinates": 1200
+	}
+},
+{
+	"pk" : 1201, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -33.8666666667,
+		"longitude": 151.216666667,
+		"height": 6.0
+	}
+},
+{
+	"pk" : 1201, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Kensington",
+		"state_province": "New South Wales",
+		"country": "Australia",
+		"coordinates": 1201
+	}
+},
+{
+	"pk" : 1202, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 24.6333333333,
+		"longitude": -81.8333333333,
+		"height": 1.5
+	}
+},
+{
+	"pk" : 1202, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Key West",
+		"state_province": "Florida",
+		"country": "U.S.A.",
+		"coordinates": 1202
+	}
+},
+{
+	"pk" : 1203, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 36.0583333333,
+		"longitude": -83.9361111111,
+		"height": 271.3
+	}
+},
+{
+	"pk" : 1203, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Knoxville",
+		"state_province": "Tennessee",
+		"country": "U.S.A.",
+		"coordinates": 1203
+	}
+},
+{
+	"pk" : 1204, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 3.13333333333,
+		"longitude": 101.7,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1204, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Kuala Lumpur",
+		"state_province": "",
+		"country": "Malaysia",
+		"coordinates": 1204
+	}
+},
+{
+	"pk" : 1205, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.4472222222,
+		"longitude": -86.9916666667,
+		"height": 167.6
+	}
+},
+{
+	"pk" : 1205, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Lafayette",
+		"state_province": "Indiana",
+		"country": "U.S.A.",
+		"coordinates": 1205
+	}
+},
+{
+	"pk" : 1206, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.1027777778,
+		"longitude": -76.3805555556,
+		"height": 108.2
+	}
+},
+{
+	"pk" : 1206, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Lancaster",
+		"state_province": "Pennsylvania",
+		"country": "U.S.A.",
+		"coordinates": 1206
+	}
+},
+{
+	"pk" : 1207, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.7361111111,
+		"longitude": -84.5916666667,
+		"height": 253.0
+	}
+},
+{
+	"pk" : 1207, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Lansing",
+		"state_province": "Michigan",
+		"country": "U.S.A.",
+		"coordinates": 1207
+	}
+},
+{
+	"pk" : 1208, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 27.5611111111,
+		"longitude": -99.5833333333,
+		"height": 134.1
+	}
+},
+{
+	"pk" : 1208, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Laredo",
+		"state_province": "Texas",
+		"country": "U.S.A.",
+		"coordinates": 1208
+	}
+},
+{
+	"pk" : 1209, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 36.2222222222,
+		"longitude": -115.236111111,
+		"height": 618.7
+	}
+},
+{
+	"pk" : 1209, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Las Vegas",
+		"state_province": "Nevada",
+		"country": "U.S.A.",
+		"coordinates": 1209
+	}
+},
+{
+	"pk" : 1210, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.7444444444,
+		"longitude": -71.1888888889,
+		"height": 19.8
+	}
+},
+{
+	"pk" : 1210, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Lawrence",
+		"state_province": "Massachusetts",
+		"country": "U.S.A.",
+		"coordinates": 1210
+	}
+},
+{
+	"pk" : 1211, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 38.1722222222,
+		"longitude": -84.6111111111,
+		"height": 291.1
+	}
+},
+{
+	"pk" : 1211, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Lexington",
+		"state_province": "Kentucky",
+		"country": "U.S.A.",
+		"coordinates": 1211
+	}
+},
+{
+	"pk" : 1212, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 50.6333333333,
+		"longitude": 3.06666666667,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1212, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Lille",
+		"state_province": "",
+		"country": "France",
+		"coordinates": 1212
+	}
+},
+{
+	"pk" : 1213, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.8305555556,
+		"longitude": -84.1555555556,
+		"height": 263.7
+	}
+},
+{
+	"pk" : 1213, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Lima",
+		"state_province": "Ohio",
+		"country": "U.S.A.",
+		"coordinates": 1213
+	}
+},
+{
+	"pk" : 1214, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.9638888889,
+		"longitude": -96.7416666667,
+		"height": 350.5
+	}
+},
+{
+	"pk" : 1214, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Lincoln",
+		"state_province": "Nebraska",
+		"country": "U.S.A.",
+		"coordinates": 1214
+	}
+},
+{
+	"pk" : 1215, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 38.7166666667,
+		"longitude": -9.13333333333,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1215, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Lisbon",
+		"state_province": "",
+		"country": "Portugal",
+		"coordinates": 1215
+	}
+},
+{
+	"pk" : 1216, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 34.85,
+		"longitude": -92.3694444444,
+		"height": 87.2
+	}
+},
+{
+	"pk" : 1216, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Little Rock",
+		"state_province": "Arkansas",
+		"country": "U.S.A.",
+		"coordinates": 1216
+	}
+},
+{
+	"pk" : 1217, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 51.5833333333,
+		"longitude": -0.183333333333,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1217, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "London",
+		"state_province": "",
+		"country": "England",
+		"coordinates": 1217
+	}
+},
+{
+	"pk" : 1218, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 33.8055555556,
+		"longitude": -118.233333333,
+		"height": 10.7
+	}
+},
+{
+	"pk" : 1218, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Long Beach",
+		"state_province": "California",
+		"country": "U.S.A.",
+		"coordinates": 1218
+	}
+},
+{
+	"pk" : 1219, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 78.225,
+		"longitude": 15.9388888889,
+		"height": 13.0
+	}
+},
+{
+	"pk" : 1219, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Longyearbyen",
+		"state_province": "",
+		"country": "Norway",
+		"coordinates": 1219
+	}
+},
+{
+	"pk" : 1220, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.4805555556,
+		"longitude": -82.3027777778,
+		"height": 185.9
+	}
+},
+{
+	"pk" : 1220, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Lorain",
+		"state_province": "Ohio",
+		"country": "U.S.A.",
+		"coordinates": 1220
+	}
+},
+{
+	"pk" : 1221, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 34.0916666667,
+		"longitude": -118.311111111,
+		"height": 103.6
+	}
+},
+{
+	"pk" : 1221, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Los Angeles",
+		"state_province": "California",
+		"country": "U.S.A.",
+		"coordinates": 1221
+	}
+},
+{
+	"pk" : 1222, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 38.3638888889,
+		"longitude": -85.8861111111,
+		"height": 137.2
+	}
+},
+{
+	"pk" : 1222, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Louisville",
+		"state_province": "Kentucky",
+		"country": "U.S.A.",
+		"coordinates": 1222
+	}
+},
+{
+	"pk" : 1223, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.7027777778,
+		"longitude": -71.3555555556,
+		"height": 30.5
+	}
+},
+{
+	"pk" : 1223, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Lowell",
+		"state_province": "Massachusetts",
+		"country": "U.S.A.",
+		"coordinates": 1223
+	}
+},
+{
+	"pk" : 1224, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 33.5972222222,
+		"longitude": -101.925,
+		"height": 973.8
+	}
+},
+{
+	"pk" : 1224, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Lubbock",
+		"state_province": "Texas",
+		"country": "U.S.A.",
+		"coordinates": 1224
+	}
+},
+{
+	"pk" : 1225, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 56.15,
+		"longitude": 13.3,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1225, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Lund",
+		"state_province": "",
+		"country": "Sweden",
+		"coordinates": 1225
+	}
+},
+{
+	"pk" : 1226, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 49.6166666667,
+		"longitude": 6.15,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1226, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Luxembourg",
+		"state_province": "",
+		"country": "Luxembourg",
+		"coordinates": 1226
+	}
+},
+{
+	"pk" : 1227, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 32.8666666667,
+		"longitude": -83.7166666667,
+		"height": 102.1
+	}
+},
+{
+	"pk" : 1227, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Macon",
+		"state_province": "Georgia",
+		"country": "U.S.A.",
+		"coordinates": 1227
+	}
+},
+{
+	"pk" : 1228, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 43.1305555556,
+		"longitude": -89.5194444444,
+		"height": 262.1
+	}
+},
+{
+	"pk" : 1228, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Madison",
+		"state_province": "Wisconsin",
+		"country": "U.S.A.",
+		"coordinates": 1228
+	}
+},
+{
+	"pk" : 1229, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.4166666667,
+		"longitude": -3.7,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1229, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Madrid",
+		"state_province": "",
+		"country": "Spain",
+		"coordinates": 1229
+	}
+},
+{
+	"pk" : 1230, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 34.0,
+		"longitude": -107.241666667,
+		"height": 3235.0
+	}
+},
+{
+	"pk" : 1230, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Magdalena Ridge Observatory",
+		"state_province": "New Mexico",
+		"country": "U.S.A.",
+		"coordinates": 1230
+	}
+},
+{
+	"pk" : 1231, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 13.2666666667,
+		"longitude": -87.6666666667,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1231, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Managua",
+		"state_province": "",
+		"country": "Nicaragua",
+		"coordinates": 1231
+	}
+},
+{
+	"pk" : 1232, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 43.0555555556,
+		"longitude": -71.5638888889,
+		"height": 53.3
+	}
+},
+{
+	"pk" : 1232, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Manchester",
+		"state_province": "New Hampshire",
+		"country": "U.S.A.",
+		"coordinates": 1232
+	}
+},
+{
+	"pk" : 1233, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 43.2833333333,
+		"longitude": 5.36666666667,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1233, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Marseille",
+		"state_province": "",
+		"country": "France",
+		"coordinates": 1233
+	}
+},
+{
+	"pk" : 1234, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 32.55,
+		"longitude": -94.3833333333,
+		"height": 125.0
+	}
+},
+{
+	"pk" : 1234, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Marshall",
+		"state_province": "Texas",
+		"country": "U.S.A.",
+		"coordinates": 1234
+	}
+},
+{
+	"pk" : 1235, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -37.8,
+		"longitude": 144.966666667,
+		"height": 9.0
+	}
+},
+{
+	"pk" : 1235, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Melbourne",
+		"state_province": "Victoria",
+		"country": "Australia",
+		"coordinates": 1235
+	}
+},
+{
+	"pk" : 1236, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 35.2611111111,
+		"longitude": -90.0861111111,
+		"height": 83.8
+	}
+},
+{
+	"pk" : 1236, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Memphis",
+		"state_province": "Tennessee",
+		"country": "U.S.A.",
+		"coordinates": 1236
+	}
+},
+{
+	"pk" : 1237, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 43.7805555556,
+		"longitude": 1.29444444444,
+		"height": 135.0
+	}
+},
+{
+	"pk" : 1237, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Menville",
+		"state_province": "",
+		"country": "France",
+		"coordinates": 1237
+	}
+},
+{
+	"pk" : 1238, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 8.73888888889,
+		"longitude": -71.1833333333,
+		"height": 1603.0
+	}
+},
+{
+	"pk" : 1238, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Merida",
+		"state_province": "",
+		"country": "Venezuela",
+		"coordinates": 1238
+	}
+},
+{
+	"pk" : 1239, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.55,
+		"longitude": -72.8666666667,
+		"height": 57.9
+	}
+},
+{
+	"pk" : 1239, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Meriden",
+		"state_province": "Connecticut",
+		"country": "U.S.A.",
+		"coordinates": 1239
+	}
+},
+{
+	"pk" : 1240, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 19.175,
+		"longitude": -98.4694444444,
+		"height": 1956.0
+	}
+},
+{
+	"pk" : 1240, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Metepec",
+		"state_province": "Puebla",
+		"country": "Mexico",
+		"coordinates": 1240
+	}
+},
+{
+	"pk" : 1241, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 25.8694444444,
+		"longitude": -80.2722222222,
+		"height": 3.0
+	}
+},
+{
+	"pk" : 1241, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Miami",
+		"state_province": "Florida",
+		"country": "U.S.A.",
+		"coordinates": 1241
+	}
+},
+{
+	"pk" : 1242, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 45.5305555556,
+		"longitude": 9.20833333333,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1242, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Milano",
+		"state_province": "",
+		"country": "Italy",
+		"coordinates": 1242
+	}
+},
+{
+	"pk" : 1243, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 43.0861111111,
+		"longitude": -87.9416666667,
+		"height": 193.5
+	}
+},
+{
+	"pk" : 1243, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Milwaukee",
+		"state_province": "Wisconsin",
+		"country": "U.S.A.",
+		"coordinates": 1243
+	}
+},
+{
+	"pk" : 1244, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 45.125,
+		"longitude": -93.3694444444,
+		"height": 248.4
+	}
+},
+{
+	"pk" : 1244, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Minneapolis",
+		"state_province": "Minnesota",
+		"country": "U.S.A.",
+		"coordinates": 1244
+	}
+},
+{
+	"pk" : 1245, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 48.2583333333,
+		"longitude": -101.388888889,
+		"height": 472.4
+	}
+},
+{
+	"pk" : 1245, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Minot",
+		"state_province": "North Dakota",
+		"country": "U.S.A.",
+		"coordinates": 1245
+	}
+},
+{
+	"pk" : 1246, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 30.7833333333,
+		"longitude": -88.125,
+		"height": 1.5
+	}
+},
+{
+	"pk" : 1246, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Mobile",
+		"state_province": "Alabama",
+		"country": "U.S.A.",
+		"coordinates": 1246
+	}
+},
+{
+	"pk" : 1247, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.5861111111,
+		"longitude": -90.6361111111,
+		"height": 178.3
+	}
+},
+{
+	"pk" : 1247, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Moline",
+		"state_province": "Illinois",
+		"country": "U.S.A.",
+		"coordinates": 1247
+	}
+},
+{
+	"pk" : 1248, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 17.2194444444,
+		"longitude": -96.8027777778,
+		"height": 1700.0
+	}
+},
+{
+	"pk" : 1248, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Monte Alban",
+		"state_province": "Oaxaca",
+		"country": "Mexico",
+		"coordinates": 1248
+	}
+},
+{
+	"pk" : 1249, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 36.7444444444,
+		"longitude": -121.972222222,
+		"height": 5.0
+	}
+},
+{
+	"pk" : 1249, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Monterey",
+		"state_province": "California",
+		"country": "U.S.A.",
+		"coordinates": 1249
+	}
+},
+{
+	"pk" : 1250, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 32.4583333333,
+		"longitude": -86.3861111111,
+		"height": 48.8
+	}
+},
+{
+	"pk" : 1250, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Montgomery",
+		"state_province": "Alabama",
+		"country": "U.S.A.",
+		"coordinates": 1250
+	}
+},
+{
+	"pk" : 1251, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 44.35,
+		"longitude": -72.6805555556,
+		"height": 147.8
+	}
+},
+{
+	"pk" : 1251, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Montpelier",
+		"state_province": "Vermont",
+		"country": "U.S.A.",
+		"coordinates": 1251
+	}
+},
+{
+	"pk" : 1252, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 45.5666666667,
+		"longitude": -73.5722222222,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1252, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Montréal",
+		"state_province": "Québec",
+		"country": "Canada",
+		"coordinates": 1252
+	}
+},
+{
+	"pk" : 1253, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 6.75,
+		"longitude": 79.9166666667,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1253, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Moratuwa",
+		"state_province": "",
+		"country": "Sri Lanka",
+		"coordinates": 1253
+	}
+},
+{
+	"pk" : 1254, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 55.75,
+		"longitude": 37.7,
+		"height": 120.1
+	}
+},
+{
+	"pk" : 1254, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Moscow",
+		"state_province": "",
+		"country": "Russia",
+		"coordinates": 1254
+	}
+},
+{
+	"pk" : 1255, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -32.6,
+		"longitude": 150.9,
+		"height": 582.0
+	}
+},
+{
+	"pk" : 1255, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Mudgee",
+		"state_province": "New South Wales",
+		"country": "Australia",
+		"coordinates": 1255
+	}
+},
+{
+	"pk" : 1256, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.2611111111,
+		"longitude": -85.4277777778,
+		"height": 289.6
+	}
+},
+{
+	"pk" : 1256, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Muncie",
+		"state_province": "Indiana",
+		"country": "U.S.A.",
+		"coordinates": 1256
+	}
+},
+{
+	"pk" : 1257, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 48.1333333333,
+		"longitude": 11.5666666667,
+		"height": 519.0
+	}
+},
+{
+	"pk" : 1257, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Munich",
+		"state_province": "",
+		"country": "Germany",
+		"coordinates": 1257
+	}
+},
+{
+	"pk" : 1258, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.9777777778,
+		"longitude": 14.3,
+		"height": 150.0
+	}
+},
+{
+	"pk" : 1258, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Naples",
+		"state_province": "",
+		"country": "Italy",
+		"coordinates": 1258
+	}
+},
+{
+	"pk" : 1259, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 36.2416666667,
+		"longitude": -86.9194444444,
+		"height": 137.2
+	}
+},
+{
+	"pk" : 1259, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Nashville",
+		"state_province": "Tennessee",
+		"country": "U.S.A.",
+		"coordinates": 1259
+	}
+},
+{
+	"pk" : 1260, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 31.6833333333,
+		"longitude": -91.4666666667,
+		"height": 64.0
+	}
+},
+{
+	"pk" : 1260, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Natchez",
+		"state_province": "Mississippi",
+		"country": "U.S.A.",
+		"coordinates": 1260
+	}
+},
+{
+	"pk" : 1261, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.6694444444,
+		"longitude": -71.0305555556,
+		"height": 4.6
+	}
+},
+{
+	"pk" : 1261, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "New Bedford",
+		"state_province": "Massachusetts",
+		"country": "U.S.A.",
+		"coordinates": 1261
+	}
+},
+{
+	"pk" : 1262, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.6888888889,
+		"longitude": -72.9305555556,
+		"height": 61.0
+	}
+},
+{
+	"pk" : 1262, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "New Britain",
+		"state_province": "Connecticut",
+		"country": "U.S.A.",
+		"coordinates": 1262
+	}
+},
+{
+	"pk" : 1263, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 28.6333333333,
+		"longitude": 77.2,
+		"height": 234.7
+	}
+},
+{
+	"pk" : 1263, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "New Delhi",
+		"state_province": "",
+		"country": "India",
+		"coordinates": 1263
+	}
+},
+{
+	"pk" : 1264, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.3694444444,
+		"longitude": -73.0,
+		"height": 12.2
+	}
+},
+{
+	"pk" : 1264, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "New Haven",
+		"state_province": "Connecticut",
+		"country": "U.S.A.",
+		"coordinates": 1264
+	}
+},
+{
+	"pk" : 1265, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 30.0805555556,
+		"longitude": -90.0944444444,
+		"height": 1.5
+	}
+},
+{
+	"pk" : 1265, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "New Orleans",
+		"state_province": "Louisiana",
+		"country": "U.S.A.",
+		"coordinates": 1265
+	}
+},
+{
+	"pk" : 1266, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.7666666667,
+		"longitude": -74.0916666667,
+		"height": 16.8
+	}
+},
+{
+	"pk" : 1266, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "New York",
+		"state_province": "New York",
+		"country": "U.S.A.",
+		"coordinates": 1266
+	}
+},
+{
+	"pk" : 1267, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.7722222222,
+		"longitude": -74.2194444444,
+		"height": 16.8
+	}
+},
+{
+	"pk" : 1267, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Newark",
+		"state_province": "New Jersey",
+		"country": "U.S.A.",
+		"coordinates": 1267
+	}
+},
+{
+	"pk" : 1268, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -32.8666666667,
+		"longitude": 151.816666667,
+		"height": 1.0
+	}
+},
+{
+	"pk" : 1268, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Newcastle",
+		"state_province": "New South Wales",
+		"country": "Australia",
+		"coordinates": 1268
+	}
+},
+{
+	"pk" : 1269, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 43.1777777778,
+		"longitude": -79.1222222222,
+		"height": 173.7
+	}
+},
+{
+	"pk" : 1269, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Niagara Falls",
+		"state_province": "New York",
+		"country": "U.S.A.",
+		"coordinates": 1269
+	}
+},
+{
+	"pk" : 1270, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 36.8777777778,
+		"longitude": -76.3416666667,
+		"height": 3.0
+	}
+},
+{
+	"pk" : 1270, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Norfolk",
+		"state_province": "Virginia",
+		"country": "U.S.A.",
+		"coordinates": 1270
+	}
+},
+{
+	"pk" : 1271, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 37.8083333333,
+		"longitude": -122.4,
+		"height": 7.6
+	}
+},
+{
+	"pk" : 1271, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Oakland",
+		"state_province": "California",
+		"country": "U.S.A.",
+		"coordinates": 1271
+	}
+},
+{
+	"pk" : 1272, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 17.175,
+		"longitude": -96.9527777778,
+		"height": 1625.0
+	}
+},
+{
+	"pk" : 1272, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Oaxaca",
+		"state_province": "Oaxaca",
+		"country": "Mexico",
+		"coordinates": 1272
+	}
+},
+{
+	"pk" : 1273, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 50.8,
+		"longitude": 4.35,
+		"height": 105.0
+	}
+},
+{
+	"pk" : 1273, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Observatoire Royal de Belgique",
+		"state_province": "",
+		"country": "Belgium",
+		"coordinates": 1273
+	}
+},
+{
+	"pk" : 1274, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 47.3722222222,
+		"longitude": 6.04722222222,
+		"height": 360.0
+	}
+},
+{
+	"pk" : 1274, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Observatoire de Besançon",
+		"state_province": "",
+		"country": "France",
+		"coordinates": 1274
+	}
+},
+{
+	"pk" : 1275, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 43.8,
+		"longitude": 6.98333333333,
+		"height": 1270.0
+	}
+},
+{
+	"pk" : 1275, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Observatoire de Calern",
+		"state_province": "",
+		"country": "France",
+		"coordinates": 1275
+	}
+},
+{
+	"pk" : 1276, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 43.7166666667,
+		"longitude": 7.3,
+		"height": 372.0
+	}
+},
+{
+	"pk" : 1276, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Observatoire de Nice",
+		"state_province": "",
+		"country": "France",
+		"coordinates": 1276
+	}
+},
+{
+	"pk" : 1277, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 48.8,
+		"longitude": 2.23333333333,
+		"height": 162.0
+	}
+},
+{
+	"pk" : 1277, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Observatoire de Paris",
+		"state_province": "",
+		"country": "France",
+		"coordinates": 1277
+	}
+},
+{
+	"pk" : 1278, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.3027777778,
+		"longitude": -112.025,
+		"height": 1309.1
+	}
+},
+{
+	"pk" : 1278, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Ogden",
+		"state_province": "Utah",
+		"country": "U.S.A.",
+		"coordinates": 1278
+	}
+},
+{
+	"pk" : 1279, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 35.5388888889,
+		"longitude": -97.5277777778,
+		"height": 364.2
+	}
+},
+{
+	"pk" : 1279, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Oklahoma City",
+		"state_province": "Oklahoma",
+		"country": "U.S.A.",
+		"coordinates": 1279
+	}
+},
+{
+	"pk" : 1280, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.3666666667,
+		"longitude": -95.9722222222,
+		"height": 317.0
+	}
+},
+{
+	"pk" : 1280, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Omaha",
+		"state_province": "Nebraska",
+		"country": "U.S.A.",
+		"coordinates": 1280
+	}
+},
+{
+	"pk" : 1281, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 28.65,
+		"longitude": -81.4722222222,
+		"height": 21.3
+	}
+},
+{
+	"pk" : 1281, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Orlando",
+		"state_province": "Florida",
+		"country": "U.S.A.",
+		"coordinates": 1281
+	}
+},
+{
+	"pk" : 1282, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 59.9166666667,
+		"longitude": 10.75,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1282, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Oslo",
+		"state_province": "",
+		"country": "Norway",
+		"coordinates": 1282
+	}
+},
+{
+	"pk" : 1283, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 45.4,
+		"longitude": -75.65,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1283, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Ottawa",
+		"state_province": "Ontario",
+		"country": "Canada",
+		"coordinates": 1283
+	}
+},
+{
+	"pk" : 1284, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 37.1194444444,
+		"longitude": -88.5722222222,
+		"height": 105.2
+	}
+},
+{
+	"pk" : 1284, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Paducah",
+		"state_province": "Kentucky",
+		"country": "U.S.A.",
+		"coordinates": 1284
+	}
+},
+{
+	"pk" : 1285, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 48.8722222222,
+		"longitude": 2.37222222222,
+		"height": 91.4
+	}
+},
+{
+	"pk" : 1285, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Paris",
+		"state_province": "",
+		"country": "France",
+		"coordinates": 1285
+	}
+},
+{
+	"pk" : 1286, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -33.0,
+		"longitude": 148.366666667,
+		"height": 392.0
+	}
+},
+{
+	"pk" : 1286, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Parkes Radiotelescope",
+		"state_province": "",
+		"country": "Australia",
+		"coordinates": 1286
+	}
+},
+{
+	"pk" : 1287, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 34.2555555556,
+		"longitude": -118.247222222,
+		"height": 253.0
+	}
+},
+{
+	"pk" : 1287, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Pasadena",
+		"state_province": "California",
+		"country": "U.S.A.",
+		"coordinates": 1287
+	}
+},
+{
+	"pk" : 1288, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.9194444444,
+		"longitude": -74.225,
+		"height": 30.5
+	}
+},
+{
+	"pk" : 1288, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Paterson",
+		"state_province": "New Jersey",
+		"country": "U.S.A.",
+		"coordinates": 1288
+	}
+},
+{
+	"pk" : 1289, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 30.5416666667,
+		"longitude": -87.3555555556,
+		"height": 4.6
+	}
+},
+{
+	"pk" : 1289, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Pensacola",
+		"state_province": "Florida",
+		"country": "U.S.A.",
+		"coordinates": 1289
+	}
+},
+{
+	"pk" : 1290, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.8,
+		"longitude": -89.675,
+		"height": 143.3
+	}
+},
+{
+	"pk" : 1290, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Peoria",
+		"state_province": "Illinois",
+		"country": "U.S.A.",
+		"coordinates": 1290
+	}
+},
+{
+	"pk" : 1291, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -32.0138888889,
+		"longitude": 116.102777778,
+		"height": 67.0
+	}
+},
+{
+	"pk" : 1291, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Perth",
+		"state_province": "Western Australia",
+		"country": "Australia",
+		"coordinates": 1291
+	}
+},
+{
+	"pk" : 1292, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.0944444444,
+		"longitude": -75.2083333333,
+		"height": 30.5
+	}
+},
+{
+	"pk" : 1292, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Philadelphia",
+		"state_province": "Pennsylvania",
+		"country": "U.S.A.",
+		"coordinates": 1292
+	}
+},
+{
+	"pk" : 1293, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 33.4833333333,
+		"longitude": -112.144444444,
+		"height": 332.2
+	}
+},
+{
+	"pk" : 1293, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Phoenix",
+		"state_province": "Arizona",
+		"country": "U.S.A.",
+		"coordinates": 1293
+	}
+},
+{
+	"pk" : 1294, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 44.4166666667,
+		"longitude": -100.483333333,
+		"height": 451.1
+	}
+},
+{
+	"pk" : 1294, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Pierre",
+		"state_province": "South Dakota",
+		"country": "U.S.A.",
+		"coordinates": 1294
+	}
+},
+{
+	"pk" : 1295, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.5361111111,
+		"longitude": -80.0,
+		"height": 227.1
+	}
+},
+{
+	"pk" : 1295, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Pittsburgh",
+		"state_province": "Pennsylvania",
+		"country": "U.S.A.",
+		"coordinates": 1295
+	}
+},
+{
+	"pk" : 1296, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.5805555556,
+		"longitude": -73.2888888889,
+		"height": 309.4
+	}
+},
+{
+	"pk" : 1296, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Pittsfield",
+		"state_province": "Massachusetts",
+		"country": "U.S.A.",
+		"coordinates": 1296
+	}
+},
+{
+	"pk" : 1297, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.9555555556,
+		"longitude": -112.452777778,
+		"height": 1359.4
+	}
+},
+{
+	"pk" : 1297, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Pocatello",
+		"state_province": "Idaho",
+		"country": "U.S.A.",
+		"coordinates": 1297
+	}
+},
+{
+	"pk" : 1298, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 29.95,
+		"longitude": -93.975,
+		"height": 3.0
+	}
+},
+{
+	"pk" : 1298, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Port Arthur",
+		"state_province": "Texas",
+		"country": "U.S.A.",
+		"coordinates": 1298
+	}
+},
+{
+	"pk" : 1299, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 43.7416666667,
+		"longitude": -70.3027777778,
+		"height": 7.6
+	}
+},
+{
+	"pk" : 1299, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Portland",
+		"state_province": "Maine",
+		"country": "U.S.A.",
+		"coordinates": 1299
+	}
+},
+{
+	"pk" : 1300, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 45.5333333333,
+		"longitude": -122.763888889,
+		"height": 23.5
+	}
+},
+{
+	"pk" : 1300, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Portland",
+		"state_province": "Oregon",
+		"country": "U.S.A.",
+		"coordinates": 1300
+	}
+},
+{
+	"pk" : 1301, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 43.15,
+		"longitude": -70.8166666667,
+		"height": 6.1
+	}
+},
+{
+	"pk" : 1301, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Portsmouth",
+		"state_province": "New Hampshire",
+		"country": "U.S.A.",
+		"coordinates": 1301
+	}
+},
+{
+	"pk" : 1302, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 36.8527777778,
+		"longitude": -76.3388888889,
+		"height": 3.0
+	}
+},
+{
+	"pk" : 1302, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Portsmouth",
+		"state_province": "Virginia",
+		"country": "U.S.A.",
+		"coordinates": 1302
+	}
+},
+{
+	"pk" : 1303, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 50.0833333333,
+		"longitude": 14.4,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1303, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Prague",
+		"state_province": "",
+		"country": "Czech Republic",
+		"coordinates": 1303
+	}
+},
+{
+	"pk" : 1304, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.9055555556,
+		"longitude": -71.5138888889,
+		"height": 24.4
+	}
+},
+{
+	"pk" : 1304, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Providence",
+		"state_province": "Rhode Island",
+		"country": "U.S.A.",
+		"coordinates": 1304
+	}
+},
+{
+	"pk" : 1305, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.25,
+		"longitude": -111.716666667,
+		"height": 1386.8
+	}
+},
+{
+	"pk" : 1305, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Provo",
+		"state_province": "Utah",
+		"country": "U.S.A.",
+		"coordinates": 1305
+	}
+},
+{
+	"pk" : 1306, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 30.7055555556,
+		"longitude": -103.969444444,
+		"height": 1539.2
+	}
+},
+{
+	"pk" : 1306, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Prude Ranch",
+		"state_province": "Texas",
+		"country": "U.S.A.",
+		"coordinates": 1306
+	}
+},
+{
+	"pk" : 1307, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 19.1527777778,
+		"longitude": -98.4138888889,
+		"height": 2195.0
+	}
+},
+{
+	"pk" : 1307, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Puebla",
+		"state_province": "Puebla",
+		"country": "Mexico",
+		"coordinates": 1307
+	}
+},
+{
+	"pk" : 1308, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 38.3138888889,
+		"longitude": -104.691666667,
+		"height": 1429.5
+	}
+},
+{
+	"pk" : 1308, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Pueblo",
+		"state_province": "Colorado",
+		"country": "U.S.A.",
+		"coordinates": 1308
+	}
+},
+{
+	"pk" : 1309, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.8527777778,
+		"longitude": -87.8166666667,
+		"height": 192.0
+	}
+},
+{
+	"pk" : 1309, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Racine",
+		"state_province": "Wisconsin",
+		"country": "U.S.A.",
+		"coordinates": 1309
+	}
+},
+{
+	"pk" : 1310, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 35.8722222222,
+		"longitude": -78.6916666667,
+		"height": 111.3
+	}
+},
+{
+	"pk" : 1310, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Raleigh",
+		"state_province": "North Carolina",
+		"country": "U.S.A.",
+		"coordinates": 1310
+	}
+},
+{
+	"pk" : 1311, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 62.85,
+		"longitude": -92.2,
+		"height": 19.0
+	}
+},
+{
+	"pk" : 1311, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Rankin Inlet Nunavut",
+		"state_province": "",
+		"country": "Canada",
+		"coordinates": 1311
+	}
+},
+{
+	"pk" : 1312, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 44.2111111111,
+		"longitude": -103.247222222,
+		"height": 984.5
+	}
+},
+{
+	"pk" : 1312, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Rapid City",
+		"state_province": "South Dakota",
+		"country": "U.S.A.",
+		"coordinates": 1312
+	}
+},
+{
+	"pk" : 1313, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.3583333333,
+		"longitude": -76.0277777778,
+		"height": 80.8
+	}
+},
+{
+	"pk" : 1313, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Reading",
+		"state_province": "Pennsylvania",
+		"country": "U.S.A.",
+		"coordinates": 1313
+	}
+},
+{
+	"pk" : 1314, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 36.5944444444,
+		"longitude": -6.25,
+		"height": 30.0
+	}
+},
+{
+	"pk" : 1314, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Real Observario de la Armada",
+		"state_province": "",
+		"country": "Spain",
+		"coordinates": 1314
+	}
+},
+{
+	"pk" : 1315, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 39.5916666667,
+		"longitude": -119.911111111,
+		"height": 1368.6
+	}
+},
+{
+	"pk" : 1315, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Reno",
+		"state_province": "Nevada",
+		"country": "U.S.A.",
+		"coordinates": 1315
+	}
+},
+{
+	"pk" : 1316, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 64.2472222222,
+		"longitude": -21.9694444444,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1316, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Reykjavik",
+		"state_province": "Iceland",
+		"country": "U.S.A.",
+		"coordinates": 1316
+	}
+},
+{
+	"pk" : 1317, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 37.575,
+		"longitude": -77.4583333333,
+		"height": 48.8
+	}
+},
+{
+	"pk" : 1317, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Richmond",
+		"state_province": "Virginia",
+		"country": "U.S.A.",
+		"coordinates": 1317
+	}
+},
+{
+	"pk" : 1318, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -23.0027777778,
+		"longitude": -43.2777777778,
+		"height": 9.1
+	}
+},
+{
+	"pk" : 1318, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Rio de Janeiro",
+		"state_province": "",
+		"country": "Brazil",
+		"coordinates": 1318
+	}
+},
+{
+	"pk" : 1319, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 37.3027777778,
+		"longitude": -80.0555555556,
+		"height": 275.8
+	}
+},
+{
+	"pk" : 1319, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Roanoke",
+		"state_province": "Virginia",
+		"country": "U.S.A.",
+		"coordinates": 1319
+	}
+},
+{
+	"pk" : 1320, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 44.075,
+		"longitude": -92.475,
+		"height": 301.8
+	}
+},
+{
+	"pk" : 1320, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Rochester",
+		"state_province": "Minnesota",
+		"country": "U.S.A.",
+		"coordinates": 1320
+	}
+},
+{
+	"pk" : 1321, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 43.2638888889,
+		"longitude": -77.6583333333,
+		"height": 157.0
+	}
+},
+{
+	"pk" : 1321, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Rochester",
+		"state_province": "New York",
+		"country": "U.S.A.",
+		"coordinates": 1321
+	}
+},
+{
+	"pk" : 1322, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.2861111111,
+		"longitude": -89.2166666667,
+		"height": 217.9
+	}
+},
+{
+	"pk" : 1322, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Rockford",
+		"state_province": "Illinois",
+		"country": "U.S.A.",
+		"coordinates": 1322
+	}
+},
+{
+	"pk" : 1323, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.8833333333,
+		"longitude": 12.5,
+		"height": 29.0
+	}
+},
+{
+	"pk" : 1323, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Rome",
+		"state_province": "",
+		"country": "Italy",
+		"coordinates": 1323
+	}
+},
+{
+	"pk" : 1324, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 28.8333333333,
+		"longitude": -18.0,
+		"height": 2327.0
+	}
+},
+{
+	"pk" : 1324, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Roque de los Muchachos",
+		"state_province": "La Palma",
+		"country": "Spain",
+		"coordinates": 1324
+	}
+},
+{
+	"pk" : 1325, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 50.8666666667,
+		"longitude": 0.333333333333,
+		"height": 34.0
+	}
+},
+{
+	"pk" : 1325, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Royal Greenwich Observatory",
+		"state_province": "England",
+		"country": "U.K.",
+		"coordinates": 1325
+	}
+},
+{
+	"pk" : 1326, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 38.725,
+		"longitude": -121.597222222,
+		"height": 9.1
+	}
+},
+{
+	"pk" : 1326, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Sacramento",
+		"state_province": "California",
+		"country": "U.S.A.",
+		"coordinates": 1326
+	}
+},
+{
+	"pk" : 1327, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 43.5611111111,
+		"longitude": -83.9472222222,
+		"height": 181.4
+	}
+},
+{
+	"pk" : 1327, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Saginaw",
+		"state_province": "Michigan",
+		"country": "U.S.A.",
+		"coordinates": 1327
+	}
+},
+{
+	"pk" : 1328, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 45.5666666667,
+		"longitude": -94.2333333333,
+		"height": 317.0
+	}
+},
+{
+	"pk" : 1328, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Saint Cloud",
+		"state_province": "Minnesota",
+		"country": "U.S.A.",
+		"coordinates": 1328
+	}
+},
+{
+	"pk" : 1329, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 39.9083333333,
+		"longitude": -94.8555555556,
+		"height": 259.1
+	}
+},
+{
+	"pk" : 1329, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Saint Joseph",
+		"state_province": "Missouri",
+		"country": "U.S.A.",
+		"coordinates": 1329
+	}
+},
+{
+	"pk" : 1330, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 38.7416666667,
+		"longitude": -90.2611111111,
+		"height": 138.7
+	}
+},
+{
+	"pk" : 1330, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Saint Louis",
+		"state_province": "Missouri",
+		"country": "U.S.A.",
+		"coordinates": 1330
+	}
+},
+{
+	"pk" : 1331, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -27.5055555556,
+		"longitude": 153.113888889,
+		"height": 24.0
+	}
+},
+{
+	"pk" : 1331, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Saint Lucia",
+		"state_province": "Queensland",
+		"country": "Australia",
+		"coordinates": 1331
+	}
+},
+{
+	"pk" : 1332, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 45.0027777778,
+		"longitude": -93.1194444444,
+		"height": 237.7
+	}
+},
+{
+	"pk" : 1332, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Saint Paul",
+		"state_province": "Minnesota",
+		"country": "U.S.A.",
+		"coordinates": 1332
+	}
+},
+{
+	"pk" : 1333, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 27.8166666667,
+		"longitude": -82.6861111111,
+		"height": 6.1
+	}
+},
+{
+	"pk" : 1333, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Saint Petersburg",
+		"state_province": "Florida",
+		"country": "U.S.A.",
+		"coordinates": 1333
+	}
+},
+{
+	"pk" : 1334, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 45.0,
+		"longitude": -123.180555556,
+		"height": 47.2
+	}
+},
+{
+	"pk" : 1334, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Salem",
+		"state_province": "Oregon",
+		"country": "U.S.A.",
+		"coordinates": 1334
+	}
+},
+{
+	"pk" : 1335, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 38.9333333333,
+		"longitude": -97.7277777778,
+		"height": 374.6
+	}
+},
+{
+	"pk" : 1335, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Salina",
+		"state_province": "Kansas",
+		"country": "U.S.A.",
+		"coordinates": 1335
+	}
+},
+{
+	"pk" : 1336, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.8138888889,
+		"longitude": -111.955555556,
+		"height": 1338.1
+	}
+},
+{
+	"pk" : 1336, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Salt Lake City",
+		"state_province": "Utah",
+		"country": "U.S.A.",
+		"coordinates": 1336
+	}
+},
+{
+	"pk" : 1337, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 47.9055555556,
+		"longitude": 13.0944444444,
+		"height": 424.0
+	}
+},
+{
+	"pk" : 1337, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Salzburg",
+		"state_province": "",
+		"country": "Austria",
+		"coordinates": 1337
+	}
+},
+{
+	"pk" : 1338, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 31.5583333333,
+		"longitude": -100.441666667,
+		"height": 562.4
+	}
+},
+{
+	"pk" : 1338, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "San Angelo",
+		"state_province": "Texas",
+		"country": "U.S.A.",
+		"coordinates": 1338
+	}
+},
+{
+	"pk" : 1339, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 29.5194444444,
+		"longitude": -98.5,
+		"height": 198.1
+	}
+},
+{
+	"pk" : 1339, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "San Antonio",
+		"state_province": "Texas",
+		"country": "U.S.A.",
+		"coordinates": 1339
+	}
+},
+{
+	"pk" : 1340, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 34.1833333333,
+		"longitude": -117.361111111,
+		"height": 329.2
+	}
+},
+{
+	"pk" : 1340, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "San Bernardino",
+		"state_province": "California",
+		"country": "U.S.A.",
+		"coordinates": 1340
+	}
+},
+{
+	"pk" : 1341, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 32.8472222222,
+		"longitude": -117.208333333,
+		"height": 6.1
+	}
+},
+{
+	"pk" : 1341, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "San Diego",
+		"state_province": "California",
+		"country": "U.S.A.",
+		"coordinates": 1341
+	}
+},
+{
+	"pk" : 1342, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 37.875,
+		"longitude": -122.511111111,
+		"height": 19.8
+	}
+},
+{
+	"pk" : 1342, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "San Francisco",
+		"state_province": "California",
+		"country": "U.S.A.",
+		"coordinates": 1342
+	}
+},
+{
+	"pk" : 1343, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 37.3777777778,
+		"longitude": -121.95,
+		"height": 27.4
+	}
+},
+{
+	"pk" : 1343, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "San Jose",
+		"state_province": "California",
+		"country": "U.S.A.",
+		"coordinates": 1343
+	}
+},
+{
+	"pk" : 1344, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 18.4666666667,
+		"longitude": -66.1166666667,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1344, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "San Juan",
+		"state_province": "Puerto Rico",
+		"country": "U.S.A.",
+		"coordinates": 1344
+	}
+},
+{
+	"pk" : 1345, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 34.4666666667,
+		"longitude": -119.836111111,
+		"height": 30.5
+	}
+},
+{
+	"pk" : 1345, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Santa Barbara",
+		"state_province": "California",
+		"country": "U.S.A.",
+		"coordinates": 1345
+	}
+},
+{
+	"pk" : 1346, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 37.0166666667,
+		"longitude": -122.066666667,
+		"height": 6.1
+	}
+},
+{
+	"pk" : 1346, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Santa Cruz",
+		"state_province": "California",
+		"country": "U.S.A.",
+		"coordinates": 1346
+	}
+},
+{
+	"pk" : 1347, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 35.7138888889,
+		"longitude": -105.961111111,
+		"height": 2118.4
+	}
+},
+{
+	"pk" : 1347, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Santa Fe",
+		"state_province": "New Mexico",
+		"country": "U.S.A.",
+		"coordinates": 1347
+	}
+},
+{
+	"pk" : 1348, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -33.45,
+		"longitude": -70.55,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1348, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Santiago",
+		"state_province": "",
+		"country": "Chile",
+		"coordinates": 1348
+	}
+},
+{
+	"pk" : 1349, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 18.5,
+		"longitude": -69.95,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1349, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Santo Domingo",
+		"state_province": "",
+		"country": "Dominican Republic",
+		"coordinates": 1349
+	}
+},
+{
+	"pk" : 1350, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 43.0666666667,
+		"longitude": 141.333333333,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1350, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Sapporo",
+		"state_province": "",
+		"country": "Japan",
+		"coordinates": 1350
+	}
+},
+{
+	"pk" : 1351, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 27.3472222222,
+		"longitude": -82.6166666667,
+		"height": 6.1
+	}
+},
+{
+	"pk" : 1351, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Sarasota",
+		"state_province": "Florida",
+		"country": "U.S.A.",
+		"coordinates": 1351
+	}
+},
+{
+	"pk" : 1352, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 32.1833333333,
+		"longitude": -81.1861111111,
+		"height": 6.1
+	}
+},
+{
+	"pk" : 1352, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Savannah",
+		"state_province": "Georgia",
+		"country": "U.S.A.",
+		"coordinates": 1352
+	}
+},
+{
+	"pk" : 1353, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.9166666667,
+		"longitude": -74.0333333333,
+		"height": 74.7
+	}
+},
+{
+	"pk" : 1353, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Schenectady",
+		"state_province": "New York",
+		"country": "U.S.A.",
+		"coordinates": 1353
+	}
+},
+{
+	"pk" : 1354, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.4888888889,
+		"longitude": -75.7777777778,
+		"height": 221.0
+	}
+},
+{
+	"pk" : 1354, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Scranton",
+		"state_province": "Pennsylvania",
+		"country": "U.S.A.",
+		"coordinates": 1354
+	}
+},
+{
+	"pk" : 1355, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 47.6888888889,
+		"longitude": -122.366666667,
+		"height": 3.0
+	}
+},
+{
+	"pk" : 1355, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Seattle",
+		"state_province": "Washington",
+		"country": "U.S.A.",
+		"coordinates": 1355
+	}
+},
+{
+	"pk" : 1356, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 43.7583333333,
+		"longitude": -87.8444444444,
+		"height": 192.0
+	}
+},
+{
+	"pk" : 1356, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Sheboygan",
+		"state_province": "Wisconsin",
+		"country": "U.S.A.",
+		"coordinates": 1356
+	}
+},
+{
+	"pk" : 1357, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 44.9361111111,
+		"longitude": -106.977777778,
+		"height": 1140.0
+	}
+},
+{
+	"pk" : 1357, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Sheridan",
+		"state_province": "Wyoming",
+		"country": "U.S.A.",
+		"coordinates": 1357
+	}
+},
+{
+	"pk" : 1358, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 32.6277777778,
+		"longitude": -93.8944444444,
+		"height": 62.2
+	}
+},
+{
+	"pk" : 1358, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Shreveport",
+		"state_province": "Louisiana",
+		"country": "U.S.A.",
+		"coordinates": 1358
+	}
+},
+{
+	"pk" : 1359, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 1.41666666667,
+		"longitude": 103.833333333,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1359, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Singapore",
+		"state_province": "",
+		"country": "Singapore",
+		"coordinates": 1359
+	}
+},
+{
+	"pk" : 1360, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.6111111111,
+		"longitude": -96.4833333333,
+		"height": 338.3
+	}
+},
+{
+	"pk" : 1360, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Sioux City",
+		"state_province": "Iowa",
+		"country": "U.S.A.",
+		"coordinates": 1360
+	}
+},
+{
+	"pk" : 1361, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 43.6305555556,
+		"longitude": -96.8138888889,
+		"height": 425.2
+	}
+},
+{
+	"pk" : 1361, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Sioux Falls",
+		"state_province": "South Dakota",
+		"country": "U.S.A.",
+		"coordinates": 1361
+	}
+},
+{
+	"pk" : 1362, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 34.0805555556,
+		"longitude": -106.961111111,
+		"height": 1420.0
+	}
+},
+{
+	"pk" : 1362, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Socorro",
+		"state_province": "New Mexico",
+		"country": "U.S.A.",
+		"coordinates": 1362
+	}
+},
+{
+	"pk" : 1363, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.6666666667,
+		"longitude": 23.3,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1363, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Sofia",
+		"state_province": "",
+		"country": "Bulgaria",
+		"coordinates": 1363
+	}
+},
+{
+	"pk" : 1364, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.425,
+		"longitude": -71.1194444444,
+		"height": 4.0
+	}
+},
+{
+	"pk" : 1364, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Somerville",
+		"state_province": "Massachusetts",
+		"country": "U.S.A.",
+		"coordinates": 1364
+	}
+},
+{
+	"pk" : 1365, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.7583333333,
+		"longitude": -86.2527777778,
+		"height": 216.4
+	}
+},
+{
+	"pk" : 1365, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "South Bend",
+		"state_province": "Indiana",
+		"country": "U.S.A.",
+		"coordinates": 1365
+	}
+},
+{
+	"pk" : 1366, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 34.9583333333,
+		"longitude": -81.95,
+		"height": 266.7
+	}
+},
+{
+	"pk" : 1366, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Spartanburg",
+		"state_province": "South Carolina",
+		"country": "U.S.A.",
+		"coordinates": 1366
+	}
+},
+{
+	"pk" : 1367, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 47.7388888889,
+		"longitude": -117.508333333,
+		"height": 576.1
+	}
+},
+{
+	"pk" : 1367, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Spokane",
+		"state_province": "Washington",
+		"country": "U.S.A.",
+		"coordinates": 1367
+	}
+},
+{
+	"pk" : 1368, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 39.9444444444,
+		"longitude": -89.775,
+		"height": 185.9
+	}
+},
+{
+	"pk" : 1368, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Springfield",
+		"state_province": "Illinois",
+		"country": "U.S.A.",
+		"coordinates": 1368
+	}
+},
+{
+	"pk" : 1369, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.1583333333,
+		"longitude": -72.6722222222,
+		"height": 25.9
+	}
+},
+{
+	"pk" : 1369, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Springfield",
+		"state_province": "Massachusetts",
+		"country": "U.S.A.",
+		"coordinates": 1369
+	}
+},
+{
+	"pk" : 1370, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 37.225,
+		"longitude": -93.3722222222,
+		"height": 396.2
+	}
+},
+{
+	"pk" : 1370, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Springfield",
+		"state_province": "Missouri",
+		"country": "U.S.A.",
+		"coordinates": 1370
+	}
+},
+{
+	"pk" : 1371, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.0222222222,
+		"longitude": -83.8805555556,
+		"height": 298.7
+	}
+},
+{
+	"pk" : 1371, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Springfield",
+		"state_province": "Ohio",
+		"country": "U.S.A.",
+		"coordinates": 1371
+	}
+},
+{
+	"pk" : 1372, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 59.9166666667,
+		"longitude": 30.25,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1372, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "St. Petersburg",
+		"state_province": "",
+		"country": "Russia",
+		"coordinates": 1372
+	}
+},
+{
+	"pk" : 1373, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.075,
+		"longitude": -73.6,
+		"height": 10.7
+	}
+},
+{
+	"pk" : 1373, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Stamford",
+		"state_province": "Connecticut",
+		"country": "U.S.A.",
+		"coordinates": 1373
+	}
+},
+{
+	"pk" : 1374, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.4666666667,
+		"longitude": -80.7472222222,
+		"height": 201.2
+	}
+},
+{
+	"pk" : 1374, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Steubenville",
+		"state_province": "Ohio",
+		"country": "U.S.A.",
+		"coordinates": 1374
+	}
+},
+{
+	"pk" : 1375, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 59.5833333333,
+		"longitude": 18.1,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1375, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Stockholm",
+		"state_province": "",
+		"country": "Sweden",
+		"coordinates": 1375
+	}
+},
+{
+	"pk" : 1376, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 38.0333333333,
+		"longitude": -121.327777778,
+		"height": 6.1
+	}
+},
+{
+	"pk" : 1376, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Stockton",
+		"state_province": "California",
+		"country": "U.S.A.",
+		"coordinates": 1376
+	}
+},
+{
+	"pk" : 1377, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 48.5833333333,
+		"longitude": 7.75,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1377, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Strasbourg",
+		"state_province": "",
+		"country": "France",
+		"coordinates": 1377
+	}
+},
+{
+	"pk" : 1378, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 48.7833333333,
+		"longitude": 9.18333333333,
+		"height": 245.0
+	}
+},
+{
+	"pk" : 1378, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Stuttgart",
+		"state_province": "",
+		"country": "Germany",
+		"coordinates": 1378
+	}
+},
+{
+	"pk" : 1379, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 46.7555555556,
+		"longitude": -92.1194444444,
+		"height": 192.0
+	}
+},
+{
+	"pk" : 1379, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Superior",
+		"state_province": "Wisconsin",
+		"country": "U.S.A.",
+		"coordinates": 1379
+	}
+},
+{
+	"pk" : 1380, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -28.0055555556,
+		"longitude": 153.433333333,
+		"height": 0.0
+	}
+},
+{
+	"pk" : 1380, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Surfers Paradise",
+		"state_province": "Queensland",
+		"country": "Australia",
+		"coordinates": 1380
+	}
+},
+{
+	"pk" : 1381, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -33.8666666667,
+		"longitude": 151.2,
+		"height": 60.0
+	}
+},
+{
+	"pk" : 1381, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Sydney",
+		"state_province": "New South Wales",
+		"country": "Australia",
+		"coordinates": 1381
+	}
+},
+{
+	"pk" : 1382, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 43.0611111111,
+		"longitude": -76.1888888889,
+		"height": 121.9
+	}
+},
+{
+	"pk" : 1382, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Syracuse",
+		"state_province": "New York",
+		"country": "U.S.A.",
+		"coordinates": 1382
+	}
+},
+{
+	"pk" : 1383, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 47.3972222222,
+		"longitude": -122.475,
+		"height": 33.5
+	}
+},
+{
+	"pk" : 1383, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Tacoma",
+		"state_province": "Washington",
+		"country": "U.S.A.",
+		"coordinates": 1383
+	}
+},
+{
+	"pk" : 1384, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 25.0333333333,
+		"longitude": 121.516666667,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1384, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Taipei",
+		"state_province": "",
+		"country": "Taiwan",
+		"coordinates": 1384
+	}
+},
+{
+	"pk" : 1385, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 30.5166666667,
+		"longitude": -84.4222222222,
+		"height": 45.7
+	}
+},
+{
+	"pk" : 1385, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Tallahassee",
+		"state_province": "Florida",
+		"country": "U.S.A.",
+		"coordinates": 1385
+	}
+},
+{
+	"pk" : 1386, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 59.45,
+		"longitude": 24.75,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1386, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Tallinn",
+		"state_province": "",
+		"country": "Estonia",
+		"coordinates": 1386
+	}
+},
+{
+	"pk" : 1387, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 28.0944444444,
+		"longitude": -82.5194444444,
+		"height": 4.6
+	}
+},
+{
+	"pk" : 1387, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Tampa",
+		"state_province": "Florida",
+		"country": "U.S.A.",
+		"coordinates": 1387
+	}
+},
+{
+	"pk" : 1388, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 39.475,
+		"longitude": -87.4722222222,
+		"height": 151.2
+	}
+},
+{
+	"pk" : 1388, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Terre Haute",
+		"state_province": "Indiana",
+		"country": "U.S.A.",
+		"coordinates": 1388
+	}
+},
+{
+	"pk" : 1389, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 33.55,
+		"longitude": -94.1166666667,
+		"height": 98.8
+	}
+},
+{
+	"pk" : 1389, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Texarkana",
+		"state_province": "Texas",
+		"country": "U.S.A.",
+		"coordinates": 1389
+	}
+},
+{
+	"pk" : 1390, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 35.75,
+		"longitude": 139.75,
+		"height": 9.1
+	}
+},
+{
+	"pk" : 1390, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Tokyo",
+		"state_province": "",
+		"country": "Japan",
+		"coordinates": 1390
+	}
+},
+{
+	"pk" : 1391, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.6888888889,
+		"longitude": -83.6416666667,
+		"height": 208.5
+	}
+},
+{
+	"pk" : 1391, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Toledo",
+		"state_province": "Ohio",
+		"country": "U.S.A.",
+		"coordinates": 1391
+	}
+},
+{
+	"pk" : 1392, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 39.0944444444,
+		"longitude": -95.7305555556,
+		"height": 283.5
+	}
+},
+{
+	"pk" : 1392, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Topeka",
+		"state_province": "Kansas",
+		"country": "U.S.A.",
+		"coordinates": 1392
+	}
+},
+{
+	"pk" : 1393, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 43.6777777778,
+		"longitude": -79.3833333333,
+		"height": 91.4
+	}
+},
+{
+	"pk" : 1393, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Toronto Ontario",
+		"state_province": "",
+		"country": "Canada",
+		"coordinates": 1393
+	}
+},
+{
+	"pk" : 1394, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 53.0055555556,
+		"longitude": 18.6888888889,
+		"height": 127.7
+	}
+},
+{
+	"pk" : 1394, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Torun Radiotelescope",
+		"state_province": "",
+		"country": "Poland",
+		"coordinates": 1394
+	}
+},
+{
+	"pk" : 1395, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.2555555556,
+		"longitude": -74.8027777778,
+		"height": 10.7
+	}
+},
+{
+	"pk" : 1395, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Trenton",
+		"state_province": "New Jersey",
+		"country": "U.S.A.",
+		"coordinates": 1395
+	}
+},
+{
+	"pk" : 1396, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 69.6833333333,
+		"longitude": 19.5833333333,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1396, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Tromso",
+		"state_province": "",
+		"country": "Norway",
+		"coordinates": 1396
+	}
+},
+{
+	"pk" : 1397, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.8416666667,
+		"longitude": -73.8277777778,
+		"height": 10.7
+	}
+},
+{
+	"pk" : 1397, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Troy",
+		"state_province": "New York",
+		"country": "U.S.A.",
+		"coordinates": 1397
+	}
+},
+{
+	"pk" : 1398, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 32.2583333333,
+		"longitude": -110.988888889,
+		"height": 728.5
+	}
+},
+{
+	"pk" : 1398, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Tucson",
+		"state_province": "Arizona",
+		"country": "U.S.A.",
+		"coordinates": 1398
+	}
+},
+{
+	"pk" : 1399, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 36.1833333333,
+		"longitude": -96.0777777778,
+		"height": 245.1
+	}
+},
+{
+	"pk" : 1399, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Tulsa",
+		"state_province": "Oklahoma",
+		"country": "U.S.A.",
+		"coordinates": 1399
+	}
+},
+{
+	"pk" : 1400, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 59.5,
+		"longitude": 17.6,
+		"height": 33.0
+	}
+},
+{
+	"pk" : 1400, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Uppsala University Observatory",
+		"state_province": "",
+		"country": "Sweden",
+		"coordinates": 1400
+	}
+},
+{
+	"pk" : 1401, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.2166666667,
+		"longitude": -88.2166666667,
+		"height": 221.0
+	}
+},
+{
+	"pk" : 1401, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Urbana",
+		"state_province": "Illinois",
+		"country": "U.S.A.",
+		"coordinates": 1401
+	}
+},
+{
+	"pk" : 1402, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 43.1333333333,
+		"longitude": -75.3083333333,
+		"height": 126.5
+	}
+},
+{
+	"pk" : 1402, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Utica",
+		"state_province": "New York",
+		"country": "U.S.A.",
+		"coordinates": 1402
+	}
+},
+{
+	"pk" : 1403, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 34.1888888889,
+		"longitude": -107.627777778,
+		"height": 2124.0
+	}
+},
+{
+	"pk" : 1403, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "VLA",
+		"state_province": "New Mexico",
+		"country": "U.S.A.",
+		"coordinates": 1403
+	}
+},
+{
+	"pk" : 1404, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 49.3555555556,
+		"longitude": -123.219444444,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1404, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Vancouver",
+		"state_province": "British Columbia",
+		"country": "Canada",
+		"coordinates": 1404
+	}
+},
+{
+	"pk" : 1405, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 43.2,
+		"longitude": 27.95,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1405, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Varna",
+		"state_province": "",
+		"country": "Bulgaria",
+		"coordinates": 1405
+	}
+},
+{
+	"pk" : 1406, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 48.5,
+		"longitude": -123.416666667,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1406, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Victoria",
+		"state_province": "British Columbia",
+		"country": "Canada",
+		"coordinates": 1406
+	}
+},
+{
+	"pk" : 1407, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 48.2,
+		"longitude": 16.3666666667,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1407, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Vienna",
+		"state_province": "",
+		"country": "Austria",
+		"coordinates": 1407
+	}
+},
+{
+	"pk" : 1408, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 31.5833333333,
+		"longitude": -97.1333333333,
+		"height": 123.4
+	}
+},
+{
+	"pk" : 1408, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Waco",
+		"state_province": "Texas",
+		"country": "U.S.A.",
+		"coordinates": 1408
+	}
+},
+{
+	"pk" : 1409, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 46.0888888889,
+		"longitude": -118.4,
+		"height": 285.3
+	}
+},
+{
+	"pk" : 1409, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Walla Walla",
+		"state_province": "Washington",
+		"country": "U.S.A.",
+		"coordinates": 1409
+	}
+},
+{
+	"pk" : 1410, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 52.25,
+		"longitude": 21.0,
+		"height": 109.7
+	}
+},
+{
+	"pk" : 1410, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Warsaw",
+		"state_province": "",
+		"country": "Poland",
+		"coordinates": 1410
+	}
+},
+{
+	"pk" : 1411, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 39.025,
+		"longitude": -77.0916666667,
+		"height": 7.6
+	}
+},
+{
+	"pk" : 1411, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Washington",
+		"state_province": "District of Columbia",
+		"country": "U.S.A.",
+		"coordinates": 1411
+	}
+},
+{
+	"pk" : 1412, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.5861111111,
+		"longitude": -73.1194444444,
+		"height": 79.2
+	}
+},
+{
+	"pk" : 1412, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Waterbury",
+		"state_province": "Connecticut",
+		"country": "U.S.A.",
+		"coordinates": 1412
+	}
+},
+{
+	"pk" : 1413, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.5944444444,
+		"longitude": -92.3888888889,
+		"height": 259.1
+	}
+},
+{
+	"pk" : 1413, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Waterloo",
+		"state_province": "Iowa",
+		"country": "U.S.A.",
+		"coordinates": 1413
+	}
+},
+{
+	"pk" : 1414, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -41.3527777778,
+		"longitude": 174.786111111,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1414, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Wellington",
+		"state_province": "",
+		"country": "New Zealand",
+		"coordinates": 1414
+	}
+},
+{
+	"pk" : 1415, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 26.8,
+		"longitude": -80.0694444444,
+		"height": 4.6
+	}
+},
+{
+	"pk" : 1415, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "West Palm Beach",
+		"state_province": "Florida",
+		"country": "U.S.A.",
+		"coordinates": 1415
+	}
+},
+{
+	"pk" : 1416, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.075,
+		"longitude": -80.7722222222,
+		"height": 198.1
+	}
+},
+{
+	"pk" : 1416, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Wheeling",
+		"state_province": "West Virginia",
+		"country": "U.S.A.",
+		"coordinates": 1416
+	}
+},
+{
+	"pk" : 1417, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.0333333333,
+		"longitude": -73.8833333333,
+		"height": 67.1
+	}
+},
+{
+	"pk" : 1417, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "White Plains",
+		"state_province": "New York",
+		"country": "U.S.A.",
+		"coordinates": 1417
+	}
+},
+{
+	"pk" : 1418, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 33.9944444444,
+		"longitude": -98.5611111111,
+		"height": 288.0
+	}
+},
+{
+	"pk" : 1418, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Wichita Falls",
+		"state_province": "Texas",
+		"country": "U.S.A.",
+		"coordinates": 1418
+	}
+},
+{
+	"pk" : 1419, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 37.7666666667,
+		"longitude": -97.3777777778,
+		"height": 393.2
+	}
+},
+{
+	"pk" : 1419, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Wichita",
+		"state_province": "Kansas",
+		"country": "U.S.A.",
+		"coordinates": 1419
+	}
+},
+{
+	"pk" : 1420, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.3222222222,
+		"longitude": -75.9305555556,
+		"height": 195.1
+	}
+},
+{
+	"pk" : 1420, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Wilkes-Barre",
+		"state_province": "Pennsylvania",
+		"country": "U.S.A.",
+		"coordinates": 1420
+	}
+},
+{
+	"pk" : 1421, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 39.8611111111,
+		"longitude": -75.675,
+		"height": 41.1
+	}
+},
+{
+	"pk" : 1421, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Wilmington",
+		"state_province": "Delaware",
+		"country": "U.S.A.",
+		"coordinates": 1421
+	}
+},
+{
+	"pk" : 1422, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 34.2722222222,
+		"longitude": -78.0944444444,
+		"height": 10.7
+	}
+},
+{
+	"pk" : 1422, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Wilmington",
+		"state_province": "North Carolina",
+		"country": "U.S.A.",
+		"coordinates": 1422
+	}
+},
+{
+	"pk" : 1423, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 49.8333333333,
+		"longitude": -97.1166666667,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1423, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Winnipeg",
+		"state_province": "Manitoba",
+		"country": "Canada",
+		"coordinates": 1423
+	}
+},
+{
+	"pk" : 1424, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 36.2277777778,
+		"longitude": -80.35,
+		"height": 262.1
+	}
+},
+{
+	"pk" : 1424, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Winston-Salem",
+		"state_province": "North Carolina",
+		"country": "U.S.A.",
+		"coordinates": 1424
+	}
+},
+{
+	"pk" : 1425, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -36.1666666667,
+		"longitude": 146.833333333,
+		"height": 153.0
+	}
+},
+{
+	"pk" : 1425, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Wodonga",
+		"state_province": "Victoria",
+		"country": "Australia",
+		"coordinates": 1425
+	}
+},
+{
+	"pk" : 1426, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": -34.4,
+		"longitude": 150.9,
+		"height": 20.0
+	}
+},
+{
+	"pk" : 1426, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Wollongong",
+		"state_province": "New South Wales",
+		"country": "Australia",
+		"coordinates": 1426
+	}
+},
+{
+	"pk" : 1427, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 42.3527777778,
+		"longitude": -71.8472222222,
+		"height": 144.8
+	}
+},
+{
+	"pk" : 1427, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Worcester",
+		"state_province": "Massachusetts",
+		"country": "U.S.A.",
+		"coordinates": 1427
+	}
+},
+{
+	"pk" : 1428, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 46.625,
+		"longitude": -120.608333333,
+		"height": 323.1
+	}
+},
+{
+	"pk" : 1428, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Yakima",
+		"state_province": "Washington",
+		"country": "U.S.A.",
+		"coordinates": 1428
+	}
+},
+{
+	"pk" : 1429, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.0694444444,
+		"longitude": -74.0333333333,
+		"height": 3.0
+	}
+},
+{
+	"pk" : 1429, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Yonkers",
+		"state_province": "New York",
+		"country": "U.S.A.",
+		"coordinates": 1429
+	}
+},
+{
+	"pk" : 1430, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 40.0472222222,
+		"longitude": -76.8166666667,
+		"height": 112.8
+	}
+},
+{
+	"pk" : 1430, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "York",
+		"state_province": "Pennsylvania",
+		"country": "U.S.A.",
+		"coordinates": 1430
+	}
+},
+{
+	"pk" : 1431, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 41.2416666667,
+		"longitude": -80.6555555556,
+		"height": 256.0
+	}
+},
+{
+	"pk" : 1431, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Youngstown",
+		"state_province": "Ohio",
+		"country": "U.S.A.",
+		"coordinates": 1431
+	}
+},
+{
+	"pk" : 1432, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 32.85,
+		"longitude": -114.683333333,
+		"height": 48.8
+	}
+},
+{
+	"pk" : 1432, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Yuma",
+		"state_province": "Arizona",
+		"country": "U.S.A.",
+		"coordinates": 1432
+	}
+},
+{
+	"pk" : 1433, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 45.9194444444,
+		"longitude": 16.1111111111,
+		"height": 135.0
+	}
+},
+{
+	"pk" : 1433, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Zagreb",
+		"state_province": "",
+		"country": "Croatia",
+		"coordinates": 1433
+	}
+},
+{
+	"pk" : 1434, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 39.9833333333,
+		"longitude": -82.0833333333,
+		"height": 219.5
+	}
+},
+{
+	"pk" : 1434, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Zanesville",
+		"state_province": "Ohio",
+		"country": "U.S.A.",
+		"coordinates": 1434
+	}
+},
+{
+	"pk" : 1435, 
+	"model" : "arcsecond.Coordinates", 
+	"fields" : {
+		"latitude": 47.4777777778,
+		"longitude": 8.56111111111,
+		"height": -1.0
+	}
+},
+{
+	"pk" : 1435, 
+	"model" : "arcsecond.ObservingSite", 
+	"fields" : {
+		"name": "Zürich",
+		"state_province": "",
+		"country": "Switzerland",
+		"coordinates": 1435
+	}
+}
+]
