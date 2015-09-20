@@ -45,16 +45,15 @@
 
 <div id="map-canvas-container" class="fluid-row">
     <ui-gmap-google-map center='map.center' zoom='map.zoom'>
-        <ui-gmap-marker ng-repeat="marker in markers track by $index"
-                        coords="marker.coords"
-                        idkey="marker.idKey"
-                        icon="marker.icon">
-            <ui-gmap-window>
-                <div>
-                    <h5>{{ marker.window.title }}</h5>
-                    {{ marker.window.subtitle }}
-                </div>
-            </ui-gmap-window>
-        </ui-gmap-marker>
+
+        <ui-gmap-markers idkey="'idKey'"
+                         models="map.markers"
+                         coords="'coords'"
+                         docluster="false"
+                         fit="'false'"
+                         icon="'icon'">
+
+        </ui-gmap-markers>
+
     </ui-gmap-google-map>
 </div>
