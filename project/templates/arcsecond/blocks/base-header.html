@@ -9,7 +9,15 @@
 
 {% include 'meta.html' %}
 
-<title>arcsecond.io :: Unified REST APIs for astronomical information</title>
+<title>
+    {% if settings.SITE_ID == 1 %}
+        [DEV]
+    {% elif settings.SITE_ID == 2 %}
+        [STAGING]
+    {% endif %}
+    arcsecond.io
+</title>
+
 
 <script src="{% static 'jquery/dist/jquery.js' %}"></script>
 <script src="{% static 'underscore/underscore-min.js' %}"></script>
