@@ -2,6 +2,15 @@ textarea:focus, input:focus{
     outline: 0;
 }
 
+.fixed-font-cell {
+    color: rgb(139, 139, 139);
+}
+
+.fixed-font {
+    font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
+    color: rgb(58, 58, 59);
+}
+
 #search-container  {
     padding-top: 0px;
     padding-bottom: 20px;
@@ -113,6 +122,12 @@ textarea:focus, input:focus{
     width: 100%;
     bottom: 0px;
 }
+
+.activity-table-container {
+    padding-top: 80px;
+}
+
+/* --- Dark lists --- */
 
 .dark li.active a,
 .dark li.active a:hover,

@@ -49,6 +49,7 @@ with open('../project/arcsecond/fixtures/xephem.json', 'w') as f:
 				f.write('\t\t\"name\": \"'+name+'\",\n')
 				f.write('\t\t\"state_province\": \"'+state+'\",\n')
 				f.write('\t\t\"country\": \"'+country+'\",\n')
+				f.write('\t\t\"sources\": [\"Xephem\"],\n')
 				f.write('\t\t\"coordinates\": '+str(index)+'\n')
 				f.write('\t}\n')
 				f.write('},\n')

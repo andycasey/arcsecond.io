@@ -15,6 +15,7 @@
 		"name": "ATCA Mopra",
 		"state_province": "",
 		"country": "Australia",
+		"sources": ["Xephem"],
 		"coordinates": 1000
 	}
 },
@@ -34,6 +35,7 @@
 		"name": "ATCA Narrabri",
 		"state_province": "",
 		"country": "Australia",
+		"sources": ["Xephem"],
 		"coordinates": 1001
 	}
 },
@@ -53,6 +55,7 @@
 		"name": "Aachen",
 		"state_province": "",
 		"country": "Germany",
+		"sources": ["Xephem"],
 		"coordinates": 1002
 	}
 },
@@ -72,6 +75,7 @@
 		"name": "Aberdeen",
 		"state_province": "Scotland",
 		"country": "U.K.",
+		"sources": ["Xephem"],
 		"coordinates": 1003
 	}
 },
@@ -91,6 +95,7 @@
 		"name": "Abilene",
 		"state_province": "",
 		"country": "Texas",
+		"sources": ["Xephem"],
 		"coordinates": 1004
 	}
 },
@@ -110,6 +115,7 @@
 		"name": "Adelaide",
 		"state_province": "South Astralia",
 		"country": "Australia",
+		"sources": ["Xephem"],
 		"coordinates": 1005
 	}
 },
@@ -129,6 +135,7 @@
 		"name": "Akron",
 		"state_province": "Ohio",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1006
 	}
 },
@@ -148,6 +155,7 @@
 		"name": "Albany",
 		"state_province": "New York",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1007
 	}
 },
@@ -167,6 +175,7 @@
 		"name": "Albuquerque",
 		"state_province": "New Mexico",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1008
 	}
 },
@@ -186,6 +195,7 @@
 		"name": "Alice Springs",
 		"state_province": "Northern Territory",
 		"country": "Australia",
+		"sources": ["Xephem"],
 		"coordinates": 1009
 	}
 },
@@ -205,6 +215,7 @@
 		"name": "Allentown",
 		"state_province": "Pennsylvania",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1010
 	}
 },
@@ -224,6 +235,7 @@
 		"name": "Altoona",
 		"state_province": "Pennsylvania",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1011
 	}
 },
@@ -243,6 +255,7 @@
 		"name": "Amarillo",
 		"state_province": "Texas",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1012
 	}
 },
@@ -262,6 +275,7 @@
 		"name": "Amsterdam",
 		"state_province": "",
 		"country": "Netherlands",
+		"sources": ["Xephem"],
 		"coordinates": 1013
 	}
 },
@@ -281,6 +295,7 @@
 		"name": "Anchorage",
 		"state_province": "Alaska",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1014
 	}
 },
@@ -300,6 +315,7 @@
 		"name": "Ann Arbor",
 		"state_province": "Michigan",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1015
 	}
 },
@@ -319,6 +335,7 @@
 		"name": "Antwerp",
 		"state_province": "",
 		"country": "Belgium",
+		"sources": ["Xephem"],
 		"coordinates": 1016
 	}
 },
@@ -338,6 +355,7 @@
 		"name": "Apache Point Observatory",
 		"state_province": "New Mexico",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1017
 	}
 },
@@ -357,6 +375,7 @@
 		"name": "Arecibo Radiotelescope",
 		"state_province": "Puerto Rico",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1018
 	}
 },
@@ -376,6 +395,7 @@
 		"name": "Arlington",
 		"state_province": "Virginia",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1019
 	}
 },
@@ -395,6 +415,7 @@
 		"name": "Asheville",
 		"state_province": "North Carolina",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1020
 	}
 },
@@ -414,6 +435,7 @@
 		"name": "Ashland",
 		"state_province": "Kentucky",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1021
 	}
 },
@@ -433,6 +455,7 @@
 		"name": "Athens",
 		"state_province": "",
 		"country": "Greece",
+		"sources": ["Xephem"],
 		"coordinates": 1022
 	}
 },
@@ -452,6 +475,7 @@
 		"name": "Atlanta",
 		"state_province": "Georgia",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1023
 	}
 },
@@ -471,6 +495,7 @@
 		"name": "Atlantic City",
 		"state_province": "New Jersey",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1024
 	}
 },
@@ -490,6 +515,7 @@
 		"name": "Augusta",
 		"state_province": "Georgia",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1025
 	}
 },
@@ -509,6 +535,7 @@
 		"name": "Augusta",
 		"state_province": "Maine",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1026
 	}
 },
@@ -528,6 +555,7 @@
 		"name": "Austin",
 		"state_province": "Texas",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1027
 	}
 },
@@ -547,6 +575,7 @@
 		"name": "BIMA Hat Creek",
 		"state_province": "California",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1028
 	}
 },
@@ -566,6 +595,7 @@
 		"name": "Bakersfield",
 		"state_province": "California",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1029
 	}
 },
@@ -585,6 +615,7 @@
 		"name": "Baltimore",
 		"state_province": "Maryland",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1030
 	}
 },
@@ -604,6 +635,7 @@
 		"name": "Bangkok",
 		"state_province": "",
 		"country": "Thailand",
+		"sources": ["Xephem"],
 		"coordinates": 1031
 	}
 },
@@ -623,6 +655,7 @@
 		"name": "Bangor",
 		"state_province": "Maine",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1032
 	}
 },
@@ -642,6 +675,7 @@
 		"name": "Barcelona",
 		"state_province": "",
 		"country": "Spain",
+		"sources": ["Xephem"],
 		"coordinates": 1033
 	}
 },
@@ -661,6 +695,7 @@
 		"name": "Barcelona",
 		"state_province": "",
 		"country": "Venezuela",
+		"sources": ["Xephem"],
 		"coordinates": 1034
 	}
 },
@@ -680,6 +715,7 @@
 		"name": "Barquisimeto",
 		"state_province": "",
 		"country": "Venezuela",
+		"sources": ["Xephem"],
 		"coordinates": 1035
 	}
 },
@@ -699,6 +735,7 @@
 		"name": "Baton Rouge",
 		"state_province": "Louisiana",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1036
 	}
 },
@@ -718,6 +755,7 @@
 		"name": "Battle Creek",
 		"state_province": "Michigan",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1037
 	}
 },
@@ -737,6 +775,7 @@
 		"name": "Batumi",
 		"state_province": "Georgia",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1038
 	}
 },
@@ -756,6 +795,7 @@
 		"name": "Bay City",
 		"state_province": "Michigan",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1039
 	}
 },
@@ -775,6 +815,7 @@
 		"name": "Beaumont",
 		"state_province": "Texas",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1040
 	}
 },
@@ -794,6 +835,7 @@
 		"name": "Beijing",
 		"state_province": "",
 		"country": "China",
+		"sources": ["Xephem"],
 		"coordinates": 1041
 	}
 },
@@ -813,6 +855,7 @@
 		"name": "Beirut",
 		"state_province": "",
 		"country": "Lebanon",
+		"sources": ["Xephem"],
 		"coordinates": 1042
 	}
 },
@@ -832,6 +875,7 @@
 		"name": "Belfast",
 		"state_province": "Northern Ireland",
 		"country": "U.K.",
+		"sources": ["Xephem"],
 		"coordinates": 1043
 	}
 },
@@ -851,6 +895,7 @@
 		"name": "Bellingham",
 		"state_province": "Washington",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1044
 	}
 },
@@ -870,6 +915,7 @@
 		"name": "Bentley",
 		"state_province": "Western Australia",
 		"country": "Australia",
+		"sources": ["Xephem"],
 		"coordinates": 1045
 	}
 },
@@ -889,6 +935,7 @@
 		"name": "Berkeley",
 		"state_province": "California",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1046
 	}
 },
@@ -908,6 +955,7 @@
 		"name": "Berlin",
 		"state_province": "",
 		"country": "Germany",
+		"sources": ["Xephem"],
 		"coordinates": 1047
 	}
 },
@@ -927,6 +975,7 @@
 		"name": "Bethlehem",
 		"state_province": "Pennsylvania",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1048
 	}
 },
@@ -946,6 +995,7 @@
 		"name": "Billings",
 		"state_province": "Montana",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1049
 	}
 },
@@ -965,6 +1015,7 @@
 		"name": "Biloxi",
 		"state_province": "Mississippi",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1050
 	}
 },
@@ -984,6 +1035,7 @@
 		"name": "Binghamton",
 		"state_province": "New York",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1051
 	}
 },
@@ -1003,6 +1055,7 @@
 		"name": "Birmingham",
 		"state_province": "Alabama",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1052
 	}
 },
@@ -1022,6 +1075,7 @@
 		"name": "Bismarck",
 		"state_province": "North Dakota",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1053
 	}
 },
@@ -1041,6 +1095,7 @@
 		"name": "Bloomington",
 		"state_province": "Illinois",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1054
 	}
 },
@@ -1060,6 +1115,7 @@
 		"name": "Bogota",
 		"state_province": "Colombia",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1055
 	}
 },
@@ -1079,6 +1135,7 @@
 		"name": "Boise",
 		"state_province": "Idaho",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1056
 	}
 },
@@ -1098,6 +1155,7 @@
 		"name": "Bombay",
 		"state_province": "",
 		"country": "India",
+		"sources": ["Xephem"],
 		"coordinates": 1057
 	}
 },
@@ -1117,6 +1175,7 @@
 		"name": "Bonn",
 		"state_province": "",
 		"country": "Germany",
+		"sources": ["Xephem"],
 		"coordinates": 1058
 	}
 },
@@ -1136,6 +1195,7 @@
 		"name": "Bordeaux",
 		"state_province": "",
 		"country": "France",
+		"sources": ["Xephem"],
 		"coordinates": 1059
 	}
 },
@@ -1155,6 +1215,7 @@
 		"name": "Boston",
 		"state_province": "Massachusetts",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1060
 	}
 },
@@ -1174,6 +1235,7 @@
 		"name": "Bowling Green",
 		"state_province": "Kentucky",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1061
 	}
 },
@@ -1193,6 +1255,7 @@
 		"name": "Bratislava",
 		"state_province": "",
 		"country": "Slovak Republic",
+		"sources": ["Xephem"],
 		"coordinates": 1062
 	}
 },
@@ -1212,6 +1275,7 @@
 		"name": "Brattleboro",
 		"state_province": "Vermont",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1063
 	}
 },
@@ -1231,6 +1295,7 @@
 		"name": "Bremen",
 		"state_province": "",
 		"country": "Germany",
+		"sources": ["Xephem"],
 		"coordinates": 1064
 	}
 },
@@ -1250,6 +1315,7 @@
 		"name": "Brest",
 		"state_province": "",
 		"country": "France",
+		"sources": ["Xephem"],
 		"coordinates": 1065
 	}
 },
@@ -1269,6 +1335,7 @@
 		"name": "Bridgeport",
 		"state_province": "Connecticut",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1066
 	}
 },
@@ -1288,6 +1355,7 @@
 		"name": "Brisbane",
 		"state_province": "Queensland",
 		"country": "Australia",
+		"sources": ["Xephem"],
 		"coordinates": 1067
 	}
 },
@@ -1307,6 +1375,7 @@
 		"name": "Brockton",
 		"state_province": "Massachusetts",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1068
 	}
 },
@@ -1326,6 +1395,7 @@
 		"name": "Broken Hill",
 		"state_province": "New South Wales",
 		"country": "Australia",
+		"sources": ["Xephem"],
 		"coordinates": 1069
 	}
 },
@@ -1345,6 +1415,7 @@
 		"name": "Brownsville",
 		"state_province": "Texas",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1070
 	}
 },
@@ -1364,6 +1435,7 @@
 		"name": "Brussels",
 		"state_province": "",
 		"country": "Belgium",
+		"sources": ["Xephem"],
 		"coordinates": 1071
 	}
 },
@@ -1383,6 +1455,7 @@
 		"name": "Bucharest",
 		"state_province": "",
 		"country": "Romania",
+		"sources": ["Xephem"],
 		"coordinates": 1072
 	}
 },
@@ -1402,6 +1475,7 @@
 		"name": "Budapest",
 		"state_province": "",
 		"country": "Hungary",
+		"sources": ["Xephem"],
 		"coordinates": 1073
 	}
 },
@@ -1421,6 +1495,7 @@
 		"name": "Buenos Aires",
 		"state_province": "",
 		"country": "Argentina",
+		"sources": ["Xephem"],
 		"coordinates": 1074
 	}
 },
@@ -1440,6 +1515,7 @@
 		"name": "Buffalo",
 		"state_province": "New York",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1075
 	}
 },
@@ -1459,6 +1535,7 @@
 		"name": "Burlington",
 		"state_province": "Vermont",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1076
 	}
 },
@@ -1478,6 +1555,7 @@
 		"name": "Butte",
 		"state_province": "Montana",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1077
 	}
 },
@@ -1497,6 +1575,7 @@
 		"name": "Buxton",
 		"state_province": "North Carolina",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1078
 	}
 },
@@ -1516,6 +1595,7 @@
 		"name": "Byurakan Observatory",
 		"state_province": "",
 		"country": "?",
+		"sources": ["Xephem"],
 		"coordinates": 1079
 	}
 },
@@ -1535,6 +1615,7 @@
 		"name": "Cairns",
 		"state_province": "Queensland",
 		"country": "Australia",
+		"sources": ["Xephem"],
 		"coordinates": 1080
 	}
 },
@@ -1554,6 +1635,7 @@
 		"name": "Cairo",
 		"state_province": "",
 		"country": "Egypt",
+		"sources": ["Xephem"],
 		"coordinates": 1081
 	}
 },
@@ -1573,6 +1655,7 @@
 		"name": "Cambridge",
 		"state_province": "England",
 		"country": "U.K.",
+		"sources": ["Xephem"],
 		"coordinates": 1082
 	}
 },
@@ -1592,6 +1675,7 @@
 		"name": "Cambridge",
 		"state_province": "Massachusetts",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1083
 	}
 },
@@ -1611,6 +1695,7 @@
 		"name": "Camden",
 		"state_province": "New Jersey",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1084
 	}
 },
@@ -1630,6 +1715,7 @@
 		"name": "Canberra",
 		"state_province": "Australian Capital Territory",
 		"country": "Australia",
+		"sources": ["Xephem"],
 		"coordinates": 1085
 	}
 },
@@ -1649,6 +1735,7 @@
 		"name": "Canton",
 		"state_province": "Ohio",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1086
 	}
 },
@@ -1668,6 +1755,7 @@
 		"name": "Capetown",
 		"state_province": "",
 		"country": "South Africa",
+		"sources": ["Xephem"],
 		"coordinates": 1087
 	}
 },
@@ -1687,6 +1775,7 @@
 		"name": "Caracas",
 		"state_province": "",
 		"country": "Venezuela",
+		"sources": ["Xephem"],
 		"coordinates": 1088
 	}
 },
@@ -1706,6 +1795,7 @@
 		"name": "Carmel-by-the-Sea",
 		"state_province": "California",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1089
 	}
 },
@@ -1725,6 +1815,7 @@
 		"name": "Carson City",
 		"state_province": "Nevada",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1090
 	}
 },
@@ -1744,6 +1835,7 @@
 		"name": "Cedar Rapids",
 		"state_province": "Iowa",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1091
 	}
 },
@@ -1763,6 +1855,7 @@
 		"name": "Central Coast (Erina)",
 		"state_province": "New South Wales",
 		"country": "Australia",
+		"sources": ["Xephem"],
 		"coordinates": 1092
 	}
 },
@@ -1782,6 +1875,7 @@
 		"name": "Central Islip",
 		"state_province": "New York",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1093
 	}
 },
@@ -1801,6 +1895,7 @@
 		"name": "Champaign",
 		"state_province": "Illinois",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1094
 	}
 },
@@ -1820,6 +1915,7 @@
 		"name": "Charleston",
 		"state_province": "South Carolina",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1095
 	}
 },
@@ -1839,6 +1935,7 @@
 		"name": "Charleston",
 		"state_province": "West Virginia",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1096
 	}
 },
@@ -1858,6 +1955,7 @@
 		"name": "Charlotte",
 		"state_province": "North Carolina",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1097
 	}
 },
@@ -1877,6 +1975,7 @@
 		"name": "Chattanooga",
 		"state_province": "Tennessee",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1098
 	}
 },
@@ -1896,6 +1995,7 @@
 		"name": "Cheyenne",
 		"state_province": "Wyoming",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1099
 	}
 },
@@ -1915,6 +2015,7 @@
 		"name": "Chicago",
 		"state_province": "Illinois",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1100
 	}
 },
@@ -1934,6 +2035,7 @@
 		"name": "Cincinnatti",
 		"state_province": "Ohio",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1101
 	}
 },
@@ -1953,6 +2055,7 @@
 		"name": "Cleveland",
 		"state_province": "Ohio",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1102
 	}
 },
@@ -1972,6 +2075,7 @@
 		"name": "Cologne",
 		"state_province": "",
 		"country": "Germany",
+		"sources": ["Xephem"],
 		"coordinates": 1103
 	}
 },
@@ -1991,6 +2095,7 @@
 		"name": "Colorado Springs",
 		"state_province": "Colorado",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1104
 	}
 },
@@ -2010,6 +2115,7 @@
 		"name": "Columbia",
 		"state_province": "Missouri",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1105
 	}
 },
@@ -2029,6 +2135,7 @@
 		"name": "Columbia",
 		"state_province": "South Carolina",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1106
 	}
 },
@@ -2048,6 +2155,7 @@
 		"name": "Columbus",
 		"state_province": "Georgia",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1107
 	}
 },
@@ -2067,6 +2175,7 @@
 		"name": "Columbus",
 		"state_province": "Ohio",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1108
 	}
 },
@@ -2086,6 +2195,7 @@
 		"name": "Concord",
 		"state_province": "New Hampshire",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1109
 	}
 },
@@ -2105,6 +2215,7 @@
 		"name": "Round Tower Observatory",
 		"state_province": "",
 		"country": "Denmark",
+		"sources": ["Xephem"],
 		"coordinates": 1110
 	}
 },
@@ -2124,6 +2235,7 @@
 		"name": "Corpus Christi",
 		"state_province": "Texas",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1111
 	}
 },
@@ -2143,6 +2255,7 @@
 		"name": "Crete",
 		"state_province": "",
 		"country": "Greece",
+		"sources": ["Xephem"],
 		"coordinates": 1112
 	}
 },
@@ -2162,6 +2275,7 @@
 		"name": "Dallas",
 		"state_province": "Texas",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1113
 	}
 },
@@ -2181,6 +2295,7 @@
 		"name": "Darwin",
 		"state_province": "Northern Territory",
 		"country": "Australia",
+		"sources": ["Xephem"],
 		"coordinates": 1114
 	}
 },
@@ -2200,6 +2315,7 @@
 		"name": "Davenport",
 		"state_province": "Iowa",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1115
 	}
 },
@@ -2219,6 +2335,7 @@
 		"name": "Dayton",
 		"state_province": "Ohio",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1116
 	}
 },
@@ -2238,6 +2355,7 @@
 		"name": "Daytona Beach",
 		"state_province": "Florida",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1117
 	}
 },
@@ -2257,6 +2375,7 @@
 		"name": "Decatur",
 		"state_province": "Illinois",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1118
 	}
 },
@@ -2276,6 +2395,7 @@
 		"name": "Denver",
 		"state_province": "Colorado",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1119
 	}
 },
@@ -2295,6 +2415,7 @@
 		"name": "Des Moines",
 		"state_province": "Iowa",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1120
 	}
 },
@@ -2314,6 +2435,7 @@
 		"name": "Detroit",
 		"state_province": "Michigan",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1121
 	}
 },
@@ -2333,6 +2455,7 @@
 		"name": "Dodge City",
 		"state_province": "Kansas",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1122
 	}
 },
@@ -2352,6 +2475,7 @@
 		"name": "Dortmund",
 		"state_province": "",
 		"country": "Germany",
+		"sources": ["Xephem"],
 		"coordinates": 1123
 	}
 },
@@ -2371,6 +2495,7 @@
 		"name": "Dublin",
 		"state_province": "",
 		"country": "Ireland",
+		"sources": ["Xephem"],
 		"coordinates": 1124
 	}
 },
@@ -2390,6 +2515,7 @@
 		"name": "Dubuque",
 		"state_province": "Iowa",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1125
 	}
 },
@@ -2409,6 +2535,7 @@
 		"name": "Duluth",
 		"state_province": "Minnesota",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1126
 	}
 },
@@ -2428,6 +2555,7 @@
 		"name": "Durham",
 		"state_province": "North Carolina",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1127
 	}
 },
@@ -2447,6 +2575,7 @@
 		"name": "Dusseldorf",
 		"state_province": "",
 		"country": "Germany",
+		"sources": ["Xephem"],
 		"coordinates": 1128
 	}
 },
@@ -2466,6 +2595,7 @@
 		"name": "Eau Claire",
 		"state_province": "Wisconsin",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1129
 	}
 },
@@ -2485,6 +2615,7 @@
 		"name": "Edinburgh",
 		"state_province": "Scotland",
 		"country": "U.K.",
+		"sources": ["Xephem"],
 		"coordinates": 1130
 	}
 },
@@ -2504,6 +2635,7 @@
 		"name": "Edmonton Alberta",
 		"state_province": "",
 		"country": "Canada",
+		"sources": ["Xephem"],
 		"coordinates": 1131
 	}
 },
@@ -2523,6 +2655,7 @@
 		"name": "El Manzano",
 		"state_province": "",
 		"country": "Venezuela",
+		"sources": ["Xephem"],
 		"coordinates": 1132
 	}
 },
@@ -2542,6 +2675,7 @@
 		"name": "El Paso",
 		"state_province": "Texas",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1133
 	}
 },
@@ -2561,6 +2695,7 @@
 		"name": "Elizabeth",
 		"state_province": "New Jersey",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1134
 	}
 },
@@ -2580,6 +2715,7 @@
 		"name": "Enid",
 		"state_province": "Oklahoma",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1135
 	}
 },
@@ -2599,6 +2735,7 @@
 		"name": "Erie",
 		"state_province": "Pennsylvania",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1136
 	}
 },
@@ -2618,6 +2755,7 @@
 		"name": "Essen",
 		"state_province": "",
 		"country": "Germany",
+		"sources": ["Xephem"],
 		"coordinates": 1137
 	}
 },
@@ -2637,6 +2775,7 @@
 		"name": "Eugene",
 		"state_province": "Oregon",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1138
 	}
 },
@@ -2656,6 +2795,7 @@
 		"name": "Eureka",
 		"state_province": "California",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1139
 	}
 },
@@ -2675,6 +2815,7 @@
 		"name": "Evansville",
 		"state_province": "Indiana",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1140
 	}
 },
@@ -2694,6 +2835,7 @@
 		"name": "Fall River",
 		"state_province": "Massachusetts",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1141
 	}
 },
@@ -2713,6 +2855,7 @@
 		"name": "Fargo",
 		"state_province": "North Dakota",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1142
 	}
 },
@@ -2732,6 +2875,7 @@
 		"name": "Flagstaff",
 		"state_province": "Arizona",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1143
 	}
 },
@@ -2751,6 +2895,7 @@
 		"name": "Flint",
 		"state_province": "Michigan",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1144
 	}
 },
@@ -2770,6 +2915,7 @@
 		"name": "Fort Smith",
 		"state_province": "Arkansas",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1145
 	}
 },
@@ -2789,6 +2935,7 @@
 		"name": "Fort Wayne",
 		"state_province": "Indiana",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1146
 	}
 },
@@ -2808,6 +2955,7 @@
 		"name": "Fort Worth",
 		"state_province": "Texas",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1147
 	}
 },
@@ -2827,6 +2975,7 @@
 		"name": "Frankfurt",
 		"state_province": "",
 		"country": "Germany",
+		"sources": ["Xephem"],
 		"coordinates": 1148
 	}
 },
@@ -2846,6 +2995,7 @@
 		"name": "Fremont Peak Observatory",
 		"state_province": "California",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1149
 	}
 },
@@ -2865,6 +3015,7 @@
 		"name": "Fresno",
 		"state_province": "California",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1150
 	}
 },
@@ -2884,6 +3035,7 @@
 		"name": "Gadsden",
 		"state_province": "Alabama",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1151
 	}
 },
@@ -2903,6 +3055,7 @@
 		"name": "Gainesville",
 		"state_province": "Florida",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1152
 	}
 },
@@ -2922,6 +3075,7 @@
 		"name": "Gallup",
 		"state_province": "New Mexico",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1153
 	}
 },
@@ -2941,6 +3095,7 @@
 		"name": "Galveston",
 		"state_province": "Texas",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1154
 	}
 },
@@ -2960,6 +3115,7 @@
 		"name": "Gary",
 		"state_province": "Indiana",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1155
 	}
 },
@@ -2979,6 +3135,7 @@
 		"name": "Geneva",
 		"state_province": "",
 		"country": "Switzerland",
+		"sources": ["Xephem"],
 		"coordinates": 1156
 	}
 },
@@ -2998,6 +3155,7 @@
 		"name": "Gillam Manitoba",
 		"state_province": "",
 		"country": "Canada",
+		"sources": ["Xephem"],
 		"coordinates": 1157
 	}
 },
@@ -3017,6 +3175,7 @@
 		"name": "Grand Junction",
 		"state_province": "Colorado",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1158
 	}
 },
@@ -3036,6 +3195,7 @@
 		"name": "Grand Rapids",
 		"state_province": "Michigan",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1159
 	}
 },
@@ -3055,6 +3215,7 @@
 		"name": "Graz",
 		"state_province": "",
 		"country": "Austria",
+		"sources": ["Xephem"],
 		"coordinates": 1160
 	}
 },
@@ -3074,6 +3235,7 @@
 		"name": "Great Falls",
 		"state_province": "Montana",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1161
 	}
 },
@@ -3093,6 +3255,7 @@
 		"name": "Green Bay",
 		"state_province": "Wisconsin",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1162
 	}
 },
@@ -3112,6 +3275,7 @@
 		"name": "Greensboro",
 		"state_province": "North Carolina",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1163
 	}
 },
@@ -3131,6 +3295,7 @@
 		"name": "Greenville",
 		"state_province": "South Carolina",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1164
 	}
 },
@@ -3150,6 +3315,7 @@
 		"name": "Greenwich",
 		"state_province": "",
 		"country": "England",
+		"sources": ["Xephem"],
 		"coordinates": 1165
 	}
 },
@@ -3169,6 +3335,7 @@
 		"name": "Groton",
 		"state_province": "New York",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1166
 	}
 },
@@ -3188,6 +3355,7 @@
 		"name": "Guatemala City",
 		"state_province": "",
 		"country": "Guatemala",
+		"sources": ["Xephem"],
 		"coordinates": 1167
 	}
 },
@@ -3207,6 +3375,7 @@
 		"name": "Gulfport",
 		"state_province": "Mississippi",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1168
 	}
 },
@@ -3226,6 +3395,7 @@
 		"name": "Halifax Nova Scotia",
 		"state_province": "",
 		"country": "Canada",
+		"sources": ["Xephem"],
 		"coordinates": 1169
 	}
 },
@@ -3245,6 +3415,7 @@
 		"name": "Hamburg",
 		"state_province": "",
 		"country": "Germany",
+		"sources": ["Xephem"],
 		"coordinates": 1170
 	}
 },
@@ -3264,6 +3435,7 @@
 		"name": "Hamilton",
 		"state_province": "Ohio",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1171
 	}
 },
@@ -3283,6 +3455,7 @@
 		"name": "Hanging Rock",
 		"state_province": "Victoria",
 		"country": "Australia",
+		"sources": ["Xephem"],
 		"coordinates": 1172
 	}
 },
@@ -3302,6 +3475,7 @@
 		"name": "Hannover",
 		"state_province": "",
 		"country": "Germany",
+		"sources": ["Xephem"],
 		"coordinates": 1173
 	}
 },
@@ -3321,6 +3495,7 @@
 		"name": "Harare",
 		"state_province": "",
 		"country": "Zimbabwe",
+		"sources": ["Xephem"],
 		"coordinates": 1174
 	}
 },
@@ -3340,6 +3515,7 @@
 		"name": "Harrisburg",
 		"state_province": "Pennsylvania",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1175
 	}
 },
@@ -3359,6 +3535,7 @@
 		"name": "Hartford",
 		"state_province": "Connecticut",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1176
 	}
 },
@@ -3378,6 +3555,7 @@
 		"name": "Helena",
 		"state_province": "Montana",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1177
 	}
 },
@@ -3397,6 +3575,7 @@
 		"name": "Helsinki",
 		"state_province": "",
 		"country": "Finland",
+		"sources": ["Xephem"],
 		"coordinates": 1178
 	}
 },
@@ -3416,6 +3595,7 @@
 		"name": "Hobart Tas",
 		"state_province": "",
 		"country": "Australia",
+		"sources": ["Xephem"],
 		"coordinates": 1179
 	}
 },
@@ -3435,6 +3615,7 @@
 		"name": "Holyoke",
 		"state_province": "Massachusetts",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1180
 	}
 },
@@ -3454,6 +3635,7 @@
 		"name": "Honolulu",
 		"state_province": "Hawaii",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1181
 	}
 },
@@ -3473,6 +3655,7 @@
 		"name": "Houston",
 		"state_province": "Texas",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1182
 	}
 },
@@ -3492,6 +3675,7 @@
 		"name": "Huntington",
 		"state_province": "West Virginia",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1183
 	}
 },
@@ -3511,6 +3695,7 @@
 		"name": "Huntsville",
 		"state_province": "Alabama",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1184
 	}
 },
@@ -3530,6 +3715,7 @@
 		"name": "Ilford NSW",
 		"state_province": "",
 		"country": "Australia",
+		"sources": ["Xephem"],
 		"coordinates": 1185
 	}
 },
@@ -3549,6 +3735,7 @@
 		"name": "Indianapolis",
 		"state_province": "Indiana",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1186
 	}
 },
@@ -3568,6 +3755,7 @@
 		"name": "Iowa City",
 		"state_province": "Iowa",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1187
 	}
 },
@@ -3587,6 +3775,7 @@
 		"name": "Jackson",
 		"state_province": "Michigan",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1188
 	}
 },
@@ -3606,6 +3795,7 @@
 		"name": "Jackson",
 		"state_province": "Mississippi",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1189
 	}
 },
@@ -3625,6 +3815,7 @@
 		"name": "Jacksonville",
 		"state_province": "Florida",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1190
 	}
 },
@@ -3644,6 +3835,7 @@
 		"name": "Jakarta",
 		"state_province": "",
 		"country": "Indonesia",
+		"sources": ["Xephem"],
 		"coordinates": 1191
 	}
 },
@@ -3663,6 +3855,7 @@
 		"name": "Jersey City",
 		"state_province": "New Jersey",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1192
 	}
 },
@@ -3682,6 +3875,7 @@
 		"name": "Jerusalem",
 		"state_province": "",
 		"country": "Israel",
+		"sources": ["Xephem"],
 		"coordinates": 1193
 	}
 },
@@ -3701,6 +3895,7 @@
 		"name": "Johannesburg",
 		"state_province": "",
 		"country": "South Africa",
+		"sources": ["Xephem"],
 		"coordinates": 1194
 	}
 },
@@ -3720,6 +3915,7 @@
 		"name": "Johnstown",
 		"state_province": "Pennsylvania",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1195
 	}
 },
@@ -3739,6 +3935,7 @@
 		"name": "Joplin",
 		"state_province": "Missouri",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1196
 	}
 },
@@ -3758,6 +3955,7 @@
 		"name": "Juneau",
 		"state_province": "Alaska",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1197
 	}
 },
@@ -3777,6 +3975,7 @@
 		"name": "Kalamazoo",
 		"state_province": "Michigan",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1198
 	}
 },
@@ -3796,6 +3995,7 @@
 		"name": "Kansas City",
 		"state_province": "Kansas",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1199
 	}
 },
@@ -3815,6 +4015,7 @@
 		"name": "Kenosha",
 		"state_province": "Wisconsin",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1200
 	}
 },
@@ -3834,6 +4035,7 @@
 		"name": "Kensington",
 		"state_province": "New South Wales",
 		"country": "Australia",
+		"sources": ["Xephem"],
 		"coordinates": 1201
 	}
 },
@@ -3853,6 +4055,7 @@
 		"name": "Key West",
 		"state_province": "Florida",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1202
 	}
 },
@@ -3872,6 +4075,7 @@
 		"name": "Knoxville",
 		"state_province": "Tennessee",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1203
 	}
 },
@@ -3891,6 +4095,7 @@
 		"name": "Kuala Lumpur",
 		"state_province": "",
 		"country": "Malaysia",
+		"sources": ["Xephem"],
 		"coordinates": 1204
 	}
 },
@@ -3910,6 +4115,7 @@
 		"name": "Lafayette",
 		"state_province": "Indiana",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1205
 	}
 },
@@ -3929,6 +4135,7 @@
 		"name": "Lancaster",
 		"state_province": "Pennsylvania",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1206
 	}
 },
@@ -3948,6 +4155,7 @@
 		"name": "Lansing",
 		"state_province": "Michigan",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1207
 	}
 },
@@ -3967,6 +4175,7 @@
 		"name": "Laredo",
 		"state_province": "Texas",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1208
 	}
 },
@@ -3986,6 +4195,7 @@
 		"name": "Las Vegas",
 		"state_province": "Nevada",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1209
 	}
 },
@@ -4005,6 +4215,7 @@
 		"name": "Lawrence",
 		"state_province": "Massachusetts",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1210
 	}
 },
@@ -4024,6 +4235,7 @@
 		"name": "Lexington",
 		"state_province": "Kentucky",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1211
 	}
 },
@@ -4043,6 +4255,7 @@
 		"name": "Lille",
 		"state_province": "",
 		"country": "France",
+		"sources": ["Xephem"],
 		"coordinates": 1212
 	}
 },
@@ -4062,6 +4275,7 @@
 		"name": "Lima",
 		"state_province": "Ohio",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1213
 	}
 },
@@ -4081,6 +4295,7 @@
 		"name": "Lincoln",
 		"state_province": "Nebraska",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1214
 	}
 },
@@ -4100,6 +4315,7 @@
 		"name": "Lisbon",
 		"state_province": "",
 		"country": "Portugal",
+		"sources": ["Xephem"],
 		"coordinates": 1215
 	}
 },
@@ -4119,6 +4335,7 @@
 		"name": "Little Rock",
 		"state_province": "Arkansas",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1216
 	}
 },
@@ -4138,6 +4355,7 @@
 		"name": "London",
 		"state_province": "",
 		"country": "England",
+		"sources": ["Xephem"],
 		"coordinates": 1217
 	}
 },
@@ -4157,6 +4375,7 @@
 		"name": "Long Beach",
 		"state_province": "California",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1218
 	}
 },
@@ -4176,6 +4395,7 @@
 		"name": "Longyearbyen",
 		"state_province": "",
 		"country": "Norway",
+		"sources": ["Xephem"],
 		"coordinates": 1219
 	}
 },
@@ -4195,6 +4415,7 @@
 		"name": "Lorain",
 		"state_province": "Ohio",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1220
 	}
 },
@@ -4214,6 +4435,7 @@
 		"name": "Los Angeles",
 		"state_province": "California",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1221
 	}
 },
@@ -4233,6 +4455,7 @@
 		"name": "Louisville",
 		"state_province": "Kentucky",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1222
 	}
 },
@@ -4252,6 +4475,7 @@
 		"name": "Lowell",
 		"state_province": "Massachusetts",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1223
 	}
 },
@@ -4271,6 +4495,7 @@
 		"name": "Lubbock",
 		"state_province": "Texas",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1224
 	}
 },
@@ -4290,6 +4515,7 @@
 		"name": "Lund",
 		"state_province": "",
 		"country": "Sweden",
+		"sources": ["Xephem"],
 		"coordinates": 1225
 	}
 },
@@ -4309,6 +4535,7 @@
 		"name": "Luxembourg",
 		"state_province": "",
 		"country": "Luxembourg",
+		"sources": ["Xephem"],
 		"coordinates": 1226
 	}
 },
@@ -4328,6 +4555,7 @@
 		"name": "Macon",
 		"state_province": "Georgia",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1227
 	}
 },
@@ -4347,6 +4575,7 @@
 		"name": "Madison",
 		"state_province": "Wisconsin",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1228
 	}
 },
@@ -4366,6 +4595,7 @@
 		"name": "Madrid",
 		"state_province": "",
 		"country": "Spain",
+		"sources": ["Xephem"],
 		"coordinates": 1229
 	}
 },
@@ -4385,6 +4615,7 @@
 		"name": "Magdalena Ridge Observatory",
 		"state_province": "New Mexico",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1230
 	}
 },
@@ -4404,6 +4635,7 @@
 		"name": "Managua",
 		"state_province": "",
 		"country": "Nicaragua",
+		"sources": ["Xephem"],
 		"coordinates": 1231
 	}
 },
@@ -4423,6 +4655,7 @@
 		"name": "Manchester",
 		"state_province": "New Hampshire",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1232
 	}
 },
@@ -4442,6 +4675,7 @@
 		"name": "Marseille",
 		"state_province": "",
 		"country": "France",
+		"sources": ["Xephem"],
 		"coordinates": 1233
 	}
 },
@@ -4461,6 +4695,7 @@
 		"name": "Marshall",
 		"state_province": "Texas",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1234
 	}
 },
@@ -4480,6 +4715,7 @@
 		"name": "Melbourne",
 		"state_province": "Victoria",
 		"country": "Australia",
+		"sources": ["Xephem"],
 		"coordinates": 1235
 	}
 },
@@ -4499,6 +4735,7 @@
 		"name": "Memphis",
 		"state_province": "Tennessee",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1236
 	}
 },
@@ -4518,6 +4755,7 @@
 		"name": "Menville",
 		"state_province": "",
 		"country": "France",
+		"sources": ["Xephem"],
 		"coordinates": 1237
 	}
 },
@@ -4537,6 +4775,7 @@
 		"name": "Merida",
 		"state_province": "",
 		"country": "Venezuela",
+		"sources": ["Xephem"],
 		"coordinates": 1238
 	}
 },
@@ -4556,6 +4795,7 @@
 		"name": "Meriden",
 		"state_province": "Connecticut",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1239
 	}
 },
@@ -4575,6 +4815,7 @@
 		"name": "Metepec",
 		"state_province": "Puebla",
 		"country": "Mexico",
+		"sources": ["Xephem"],
 		"coordinates": 1240
 	}
 },
@@ -4594,6 +4835,7 @@
 		"name": "Miami",
 		"state_province": "Florida",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1241
 	}
 },
@@ -4613,6 +4855,7 @@
 		"name": "Milano",
 		"state_province": "",
 		"country": "Italy",
+		"sources": ["Xephem"],
 		"coordinates": 1242
 	}
 },
@@ -4632,6 +4875,7 @@
 		"name": "Milwaukee",
 		"state_province": "Wisconsin",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1243
 	}
 },
@@ -4651,6 +4895,7 @@
 		"name": "Minneapolis",
 		"state_province": "Minnesota",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1244
 	}
 },
@@ -4670,6 +4915,7 @@
 		"name": "Minot",
 		"state_province": "North Dakota",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1245
 	}
 },
@@ -4689,6 +4935,7 @@
 		"name": "Mobile",
 		"state_province": "Alabama",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1246
 	}
 },
@@ -4708,6 +4955,7 @@
 		"name": "Moline",
 		"state_province": "Illinois",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1247
 	}
 },
@@ -4727,6 +4975,7 @@
 		"name": "Monte Alban",
 		"state_province": "Oaxaca",
 		"country": "Mexico",
+		"sources": ["Xephem"],
 		"coordinates": 1248
 	}
 },
@@ -4746,6 +4995,7 @@
 		"name": "Monterey",
 		"state_province": "California",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1249
 	}
 },
@@ -4765,6 +5015,7 @@
 		"name": "Montgomery",
 		"state_province": "Alabama",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1250
 	}
 },
@@ -4784,6 +5035,7 @@
 		"name": "Montpelier",
 		"state_province": "Vermont",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1251
 	}
 },
@@ -4803,6 +5055,7 @@
 		"name": "Montréal",
 		"state_province": "Québec",
 		"country": "Canada",
+		"sources": ["Xephem"],
 		"coordinates": 1252
 	}
 },
@@ -4822,6 +5075,7 @@
 		"name": "Moratuwa",
 		"state_province": "",
 		"country": "Sri Lanka",
+		"sources": ["Xephem"],
 		"coordinates": 1253
 	}
 },
@@ -4841,6 +5095,7 @@
 		"name": "Moscow",
 		"state_province": "",
 		"country": "Russia",
+		"sources": ["Xephem"],
 		"coordinates": 1254
 	}
 },
@@ -4860,6 +5115,7 @@
 		"name": "Mudgee",
 		"state_province": "New South Wales",
 		"country": "Australia",
+		"sources": ["Xephem"],
 		"coordinates": 1255
 	}
 },
@@ -4879,6 +5135,7 @@
 		"name": "Muncie",
 		"state_province": "Indiana",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1256
 	}
 },
@@ -4898,6 +5155,7 @@
 		"name": "Munich",
 		"state_province": "",
 		"country": "Germany",
+		"sources": ["Xephem"],
 		"coordinates": 1257
 	}
 },
@@ -4917,6 +5175,7 @@
 		"name": "Naples",
 		"state_province": "",
 		"country": "Italy",
+		"sources": ["Xephem"],
 		"coordinates": 1258
 	}
 },
@@ -4936,6 +5195,7 @@
 		"name": "Nashville",
 		"state_province": "Tennessee",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1259
 	}
 },
@@ -4955,6 +5215,7 @@
 		"name": "Natchez",
 		"state_province": "Mississippi",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1260
 	}
 },
@@ -4974,6 +5235,7 @@
 		"name": "New Bedford",
 		"state_province": "Massachusetts",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1261
 	}
 },
@@ -4993,6 +5255,7 @@
 		"name": "New Britain",
 		"state_province": "Connecticut",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1262
 	}
 },
@@ -5012,6 +5275,7 @@
 		"name": "New Delhi",
 		"state_province": "",
 		"country": "India",
+		"sources": ["Xephem"],
 		"coordinates": 1263
 	}
 },
@@ -5031,6 +5295,7 @@
 		"name": "New Haven",
 		"state_province": "Connecticut",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1264
 	}
 },
@@ -5050,6 +5315,7 @@
 		"name": "New Orleans",
 		"state_province": "Louisiana",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1265
 	}
 },
@@ -5069,6 +5335,7 @@
 		"name": "New York",
 		"state_province": "New York",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1266
 	}
 },
@@ -5088,6 +5355,7 @@
 		"name": "Newark",
 		"state_province": "New Jersey",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1267
 	}
 },
@@ -5107,6 +5375,7 @@
 		"name": "Newcastle",
 		"state_province": "New South Wales",
 		"country": "Australia",
+		"sources": ["Xephem"],
 		"coordinates": 1268
 	}
 },
@@ -5126,6 +5395,7 @@
 		"name": "Niagara Falls",
 		"state_province": "New York",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1269
 	}
 },
@@ -5145,6 +5415,7 @@
 		"name": "Norfolk",
 		"state_province": "Virginia",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1270
 	}
 },
@@ -5164,6 +5435,7 @@
 		"name": "Oakland",
 		"state_province": "California",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1271
 	}
 },
@@ -5183,6 +5455,7 @@
 		"name": "Oaxaca",
 		"state_province": "Oaxaca",
 		"country": "Mexico",
+		"sources": ["Xephem"],
 		"coordinates": 1272
 	}
 },
@@ -5202,6 +5475,7 @@
 		"name": "Observatoire Royal de Belgique",
 		"state_province": "",
 		"country": "Belgium",
+		"sources": ["Xephem"],
 		"coordinates": 1273
 	}
 },
@@ -5221,6 +5495,7 @@
 		"name": "Observatoire de Besançon",
 		"state_province": "",
 		"country": "France",
+		"sources": ["Xephem"],
 		"coordinates": 1274
 	}
 },
@@ -5240,6 +5515,7 @@
 		"name": "Observatoire de Calern",
 		"state_province": "",
 		"country": "France",
+		"sources": ["Xephem"],
 		"coordinates": 1275
 	}
 },
@@ -5259,6 +5535,7 @@
 		"name": "Observatoire de Nice",
 		"state_province": "",
 		"country": "France",
+		"sources": ["Xephem"],
 		"coordinates": 1276
 	}
 },
@@ -5278,6 +5555,7 @@
 		"name": "Observatoire de Paris",
 		"state_province": "",
 		"country": "France",
+		"sources": ["Xephem"],
 		"coordinates": 1277
 	}
 },
@@ -5297,6 +5575,7 @@
 		"name": "Ogden",
 		"state_province": "Utah",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1278
 	}
 },
@@ -5316,6 +5595,7 @@
 		"name": "Oklahoma City",
 		"state_province": "Oklahoma",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1279
 	}
 },
@@ -5335,6 +5615,7 @@
 		"name": "Omaha",
 		"state_province": "Nebraska",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1280
 	}
 },
@@ -5354,6 +5635,7 @@
 		"name": "Orlando",
 		"state_province": "Florida",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1281
 	}
 },
@@ -5373,6 +5655,7 @@
 		"name": "Oslo",
 		"state_province": "",
 		"country": "Norway",
+		"sources": ["Xephem"],
 		"coordinates": 1282
 	}
 },
@@ -5392,6 +5675,7 @@
 		"name": "Ottawa",
 		"state_province": "Ontario",
 		"country": "Canada",
+		"sources": ["Xephem"],
 		"coordinates": 1283
 	}
 },
@@ -5411,6 +5695,7 @@
 		"name": "Paducah",
 		"state_province": "Kentucky",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1284
 	}
 },
@@ -5430,6 +5715,7 @@
 		"name": "Paris",
 		"state_province": "",
 		"country": "France",
+		"sources": ["Xephem"],
 		"coordinates": 1285
 	}
 },
@@ -5449,6 +5735,7 @@
 		"name": "Parkes Radiotelescope",
 		"state_province": "",
 		"country": "Australia",
+		"sources": ["Xephem"],
 		"coordinates": 1286
 	}
 },
@@ -5468,6 +5755,7 @@
 		"name": "Pasadena",
 		"state_province": "California",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1287
 	}
 },
@@ -5487,6 +5775,7 @@
 		"name": "Paterson",
 		"state_province": "New Jersey",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1288
 	}
 },
@@ -5506,6 +5795,7 @@
 		"name": "Pensacola",
 		"state_province": "Florida",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1289
 	}
 },
@@ -5525,6 +5815,7 @@
 		"name": "Peoria",
 		"state_province": "Illinois",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1290
 	}
 },
@@ -5544,6 +5835,7 @@
 		"name": "Perth",
 		"state_province": "Western Australia",
 		"country": "Australia",
+		"sources": ["Xephem"],
 		"coordinates": 1291
 	}
 },
@@ -5563,6 +5855,7 @@
 		"name": "Philadelphia",
 		"state_province": "Pennsylvania",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1292
 	}
 },
@@ -5582,6 +5875,7 @@
 		"name": "Phoenix",
 		"state_province": "Arizona",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1293
 	}
 },
@@ -5601,6 +5895,7 @@
 		"name": "Pierre",
 		"state_province": "South Dakota",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1294
 	}
 },
@@ -5620,6 +5915,7 @@
 		"name": "Pittsburgh",
 		"state_province": "Pennsylvania",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1295
 	}
 },
@@ -5639,6 +5935,7 @@
 		"name": "Pittsfield",
 		"state_province": "Massachusetts",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1296
 	}
 },
@@ -5658,6 +5955,7 @@
 		"name": "Pocatello",
 		"state_province": "Idaho",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1297
 	}
 },
@@ -5677,6 +5975,7 @@
 		"name": "Port Arthur",
 		"state_province": "Texas",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1298
 	}
 },
@@ -5696,6 +5995,7 @@
 		"name": "Portland",
 		"state_province": "Maine",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1299
 	}
 },
@@ -5715,6 +6015,7 @@
 		"name": "Portland",
 		"state_province": "Oregon",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1300
 	}
 },
@@ -5734,6 +6035,7 @@
 		"name": "Portsmouth",
 		"state_province": "New Hampshire",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1301
 	}
 },
@@ -5753,6 +6055,7 @@
 		"name": "Portsmouth",
 		"state_province": "Virginia",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1302
 	}
 },
@@ -5772,6 +6075,7 @@
 		"name": "Prague",
 		"state_province": "",
 		"country": "Czech Republic",
+		"sources": ["Xephem"],
 		"coordinates": 1303
 	}
 },
@@ -5791,6 +6095,7 @@
 		"name": "Providence",
 		"state_province": "Rhode Island",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1304
 	}
 },
@@ -5810,6 +6115,7 @@
 		"name": "Provo",
 		"state_province": "Utah",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1305
 	}
 },
@@ -5829,6 +6135,7 @@
 		"name": "Prude Ranch",
 		"state_province": "Texas",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1306
 	}
 },
@@ -5848,6 +6155,7 @@
 		"name": "Puebla",
 		"state_province": "Puebla",
 		"country": "Mexico",
+		"sources": ["Xephem"],
 		"coordinates": 1307
 	}
 },
@@ -5867,6 +6175,7 @@
 		"name": "Pueblo",
 		"state_province": "Colorado",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1308
 	}
 },
@@ -5886,6 +6195,7 @@
 		"name": "Racine",
 		"state_province": "Wisconsin",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1309
 	}
 },
@@ -5905,6 +6215,7 @@
 		"name": "Raleigh",
 		"state_province": "North Carolina",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1310
 	}
 },
@@ -5924,6 +6235,7 @@
 		"name": "Rankin Inlet Nunavut",
 		"state_province": "",
 		"country": "Canada",
+		"sources": ["Xephem"],
 		"coordinates": 1311
 	}
 },
@@ -5943,6 +6255,7 @@
 		"name": "Rapid City",
 		"state_province": "South Dakota",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1312
 	}
 },
@@ -5962,6 +6275,7 @@
 		"name": "Reading",
 		"state_province": "Pennsylvania",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1313
 	}
 },
@@ -5981,6 +6295,7 @@
 		"name": "Real Observario de la Armada",
 		"state_province": "",
 		"country": "Spain",
+		"sources": ["Xephem"],
 		"coordinates": 1314
 	}
 },
@@ -6000,6 +6315,7 @@
 		"name": "Reno",
 		"state_province": "Nevada",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1315
 	}
 },
@@ -6019,6 +6335,7 @@
 		"name": "Reykjavik",
 		"state_province": "Iceland",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1316
 	}
 },
@@ -6038,6 +6355,7 @@
 		"name": "Richmond",
 		"state_province": "Virginia",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1317
 	}
 },
@@ -6057,6 +6375,7 @@
 		"name": "Rio de Janeiro",
 		"state_province": "",
 		"country": "Brazil",
+		"sources": ["Xephem"],
 		"coordinates": 1318
 	}
 },
@@ -6076,6 +6395,7 @@
 		"name": "Roanoke",
 		"state_province": "Virginia",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1319
 	}
 },
@@ -6095,6 +6415,7 @@
 		"name": "Rochester",
 		"state_province": "Minnesota",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1320
 	}
 },
@@ -6114,6 +6435,7 @@
 		"name": "Rochester",
 		"state_province": "New York",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1321
 	}
 },
@@ -6133,6 +6455,7 @@
 		"name": "Rockford",
 		"state_province": "Illinois",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1322
 	}
 },
@@ -6152,6 +6475,7 @@
 		"name": "Rome",
 		"state_province": "",
 		"country": "Italy",
+		"sources": ["Xephem"],
 		"coordinates": 1323
 	}
 },
@@ -6171,6 +6495,7 @@
 		"name": "Roque de los Muchachos",
 		"state_province": "La Palma",
 		"country": "Spain",
+		"sources": ["Xephem"],
 		"coordinates": 1324
 	}
 },
@@ -6190,6 +6515,7 @@
 		"name": "Royal Greenwich Observatory",
 		"state_province": "England",
 		"country": "U.K.",
+		"sources": ["Xephem"],
 		"coordinates": 1325
 	}
 },
@@ -6209,6 +6535,7 @@
 		"name": "Sacramento",
 		"state_province": "California",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1326
 	}
 },
@@ -6228,6 +6555,7 @@
 		"name": "Saginaw",
 		"state_province": "Michigan",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1327
 	}
 },
@@ -6247,6 +6575,7 @@
 		"name": "Saint Cloud",
 		"state_province": "Minnesota",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1328
 	}
 },
@@ -6266,6 +6595,7 @@
 		"name": "Saint Joseph",
 		"state_province": "Missouri",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1329
 	}
 },
@@ -6285,6 +6615,7 @@
 		"name": "Saint Louis",
 		"state_province": "Missouri",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1330
 	}
 },
@@ -6304,6 +6635,7 @@
 		"name": "Saint Lucia",
 		"state_province": "Queensland",
 		"country": "Australia",
+		"sources": ["Xephem"],
 		"coordinates": 1331
 	}
 },
@@ -6323,6 +6655,7 @@
 		"name": "Saint Paul",
 		"state_province": "Minnesota",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1332
 	}
 },
@@ -6342,6 +6675,7 @@
 		"name": "Saint Petersburg",
 		"state_province": "Florida",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1333
 	}
 },
@@ -6361,6 +6695,7 @@
 		"name": "Salem",
 		"state_province": "Oregon",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1334
 	}
 },
@@ -6380,6 +6715,7 @@
 		"name": "Salina",
 		"state_province": "Kansas",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1335
 	}
 },
@@ -6399,6 +6735,7 @@
 		"name": "Salt Lake City",
 		"state_province": "Utah",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1336
 	}
 },
@@ -6418,6 +6755,7 @@
 		"name": "Salzburg",
 		"state_province": "",
 		"country": "Austria",
+		"sources": ["Xephem"],
 		"coordinates": 1337
 	}
 },
@@ -6437,6 +6775,7 @@
 		"name": "San Angelo",
 		"state_province": "Texas",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1338
 	}
 },
@@ -6456,6 +6795,7 @@
 		"name": "San Antonio",
 		"state_province": "Texas",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1339
 	}
 },
@@ -6475,6 +6815,7 @@
 		"name": "San Bernardino",
 		"state_province": "California",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1340
 	}
 },
@@ -6494,6 +6835,7 @@
 		"name": "San Diego",
 		"state_province": "California",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1341
 	}
 },
@@ -6513,6 +6855,7 @@
 		"name": "San Francisco",
 		"state_province": "California",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1342
 	}
 },
@@ -6532,6 +6875,7 @@
 		"name": "San Jose",
 		"state_province": "California",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1343
 	}
 },
@@ -6551,6 +6895,7 @@
 		"name": "San Juan",
 		"state_province": "Puerto Rico",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1344
 	}
 },
@@ -6570,6 +6915,7 @@
 		"name": "Santa Barbara",
 		"state_province": "California",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1345
 	}
 },
@@ -6589,6 +6935,7 @@
 		"name": "Santa Cruz",
 		"state_province": "California",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1346
 	}
 },
@@ -6608,6 +6955,7 @@
 		"name": "Santa Fe",
 		"state_province": "New Mexico",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1347
 	}
 },
@@ -6627,6 +6975,7 @@
 		"name": "Santiago",
 		"state_province": "",
 		"country": "Chile",
+		"sources": ["Xephem"],
 		"coordinates": 1348
 	}
 },
@@ -6646,6 +6995,7 @@
 		"name": "Santo Domingo",
 		"state_province": "",
 		"country": "Dominican Republic",
+		"sources": ["Xephem"],
 		"coordinates": 1349
 	}
 },
@@ -6665,6 +7015,7 @@
 		"name": "Sapporo",
 		"state_province": "",
 		"country": "Japan",
+		"sources": ["Xephem"],
 		"coordinates": 1350
 	}
 },
@@ -6684,6 +7035,7 @@
 		"name": "Sarasota",
 		"state_province": "Florida",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1351
 	}
 },
@@ -6703,6 +7055,7 @@
 		"name": "Savannah",
 		"state_province": "Georgia",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1352
 	}
 },
@@ -6722,6 +7075,7 @@
 		"name": "Schenectady",
 		"state_province": "New York",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1353
 	}
 },
@@ -6741,6 +7095,7 @@
 		"name": "Scranton",
 		"state_province": "Pennsylvania",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1354
 	}
 },
@@ -6760,6 +7115,7 @@
 		"name": "Seattle",
 		"state_province": "Washington",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1355
 	}
 },
@@ -6779,6 +7135,7 @@
 		"name": "Sheboygan",
 		"state_province": "Wisconsin",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1356
 	}
 },
@@ -6798,6 +7155,7 @@
 		"name": "Sheridan",
 		"state_province": "Wyoming",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1357
 	}
 },
@@ -6817,6 +7175,7 @@
 		"name": "Shreveport",
 		"state_province": "Louisiana",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1358
 	}
 },
@@ -6836,6 +7195,7 @@
 		"name": "Singapore",
 		"state_province": "",
 		"country": "Singapore",
+		"sources": ["Xephem"],
 		"coordinates": 1359
 	}
 },
@@ -6855,6 +7215,7 @@
 		"name": "Sioux City",
 		"state_province": "Iowa",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1360
 	}
 },
@@ -6874,6 +7235,7 @@
 		"name": "Sioux Falls",
 		"state_province": "South Dakota",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1361
 	}
 },
@@ -6893,6 +7255,7 @@
 		"name": "Socorro",
 		"state_province": "New Mexico",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1362
 	}
 },
@@ -6912,6 +7275,7 @@
 		"name": "Sofia",
 		"state_province": "",
 		"country": "Bulgaria",
+		"sources": ["Xephem"],
 		"coordinates": 1363
 	}
 },
@@ -6931,6 +7295,7 @@
 		"name": "Somerville",
 		"state_province": "Massachusetts",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1364
 	}
 },
@@ -6950,6 +7315,7 @@
 		"name": "South Bend",
 		"state_province": "Indiana",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1365
 	}
 },
@@ -6969,6 +7335,7 @@
 		"name": "Spartanburg",
 		"state_province": "South Carolina",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1366
 	}
 },
@@ -6988,6 +7355,7 @@
 		"name": "Spokane",
 		"state_province": "Washington",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1367
 	}
 },
@@ -7007,6 +7375,7 @@
 		"name": "Springfield",
 		"state_province": "Illinois",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1368
 	}
 },
@@ -7026,6 +7395,7 @@
 		"name": "Springfield",
 		"state_province": "Massachusetts",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1369
 	}
 },
@@ -7045,6 +7415,7 @@
 		"name": "Springfield",
 		"state_province": "Missouri",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1370
 	}
 },
@@ -7064,6 +7435,7 @@
 		"name": "Springfield",
 		"state_province": "Ohio",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1371
 	}
 },
@@ -7083,6 +7455,7 @@
 		"name": "St. Petersburg",
 		"state_province": "",
 		"country": "Russia",
+		"sources": ["Xephem"],
 		"coordinates": 1372
 	}
 },
@@ -7102,6 +7475,7 @@
 		"name": "Stamford",
 		"state_province": "Connecticut",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1373
 	}
 },
@@ -7121,6 +7495,7 @@
 		"name": "Steubenville",
 		"state_province": "Ohio",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1374
 	}
 },
@@ -7140,6 +7515,7 @@
 		"name": "Stockholm",
 		"state_province": "",
 		"country": "Sweden",
+		"sources": ["Xephem"],
 		"coordinates": 1375
 	}
 },
@@ -7159,6 +7535,7 @@
 		"name": "Stockton",
 		"state_province": "California",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1376
 	}
 },
@@ -7178,6 +7555,7 @@
 		"name": "Strasbourg",
 		"state_province": "",
 		"country": "France",
+		"sources": ["Xephem"],
 		"coordinates": 1377
 	}
 },
@@ -7197,6 +7575,7 @@
 		"name": "Stuttgart",
 		"state_province": "",
 		"country": "Germany",
+		"sources": ["Xephem"],
 		"coordinates": 1378
 	}
 },
@@ -7216,6 +7595,7 @@
 		"name": "Superior",
 		"state_province": "Wisconsin",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1379
 	}
 },
@@ -7235,6 +7615,7 @@
 		"name": "Surfers Paradise",
 		"state_province": "Queensland",
 		"country": "Australia",
+		"sources": ["Xephem"],
 		"coordinates": 1380
 	}
 },
@@ -7254,6 +7635,7 @@
 		"name": "Sydney",
 		"state_province": "New South Wales",
 		"country": "Australia",
+		"sources": ["Xephem"],
 		"coordinates": 1381
 	}
 },
@@ -7273,6 +7655,7 @@
 		"name": "Syracuse",
 		"state_province": "New York",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1382
 	}
 },
@@ -7292,6 +7675,7 @@
 		"name": "Tacoma",
 		"state_province": "Washington",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1383
 	}
 },
@@ -7311,6 +7695,7 @@
 		"name": "Taipei",
 		"state_province": "",
 		"country": "Taiwan",
+		"sources": ["Xephem"],
 		"coordinates": 1384
 	}
 },
@@ -7330,6 +7715,7 @@
 		"name": "Tallahassee",
 		"state_province": "Florida",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1385
 	}
 },
@@ -7349,6 +7735,7 @@
 		"name": "Tallinn",
 		"state_province": "",
 		"country": "Estonia",
+		"sources": ["Xephem"],
 		"coordinates": 1386
 	}
 },
@@ -7368,6 +7755,7 @@
 		"name": "Tampa",
 		"state_province": "Florida",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1387
 	}
 },
@@ -7387,6 +7775,7 @@
 		"name": "Terre Haute",
 		"state_province": "Indiana",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1388
 	}
 },
@@ -7406,6 +7795,7 @@
 		"name": "Texarkana",
 		"state_province": "Texas",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1389
 	}
 },
@@ -7425,6 +7815,7 @@
 		"name": "Tokyo",
 		"state_province": "",
 		"country": "Japan",
+		"sources": ["Xephem"],
 		"coordinates": 1390
 	}
 },
@@ -7444,6 +7835,7 @@
 		"name": "Toledo",
 		"state_province": "Ohio",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1391
 	}
 },
@@ -7463,6 +7855,7 @@
 		"name": "Topeka",
 		"state_province": "Kansas",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1392
 	}
 },
@@ -7482,6 +7875,7 @@
 		"name": "Toronto Ontario",
 		"state_province": "",
 		"country": "Canada",
+		"sources": ["Xephem"],
 		"coordinates": 1393
 	}
 },
@@ -7501,6 +7895,7 @@
 		"name": "Torun Radiotelescope",
 		"state_province": "",
 		"country": "Poland",
+		"sources": ["Xephem"],
 		"coordinates": 1394
 	}
 },
@@ -7520,6 +7915,7 @@
 		"name": "Trenton",
 		"state_province": "New Jersey",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1395
 	}
 },
@@ -7539,6 +7935,7 @@
 		"name": "Tromso",
 		"state_province": "",
 		"country": "Norway",
+		"sources": ["Xephem"],
 		"coordinates": 1396
 	}
 },
@@ -7558,6 +7955,7 @@
 		"name": "Troy",
 		"state_province": "New York",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1397
 	}
 },
@@ -7577,6 +7975,7 @@
 		"name": "Tucson",
 		"state_province": "Arizona",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1398
 	}
 },
@@ -7596,6 +7995,7 @@
 		"name": "Tulsa",
 		"state_province": "Oklahoma",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1399
 	}
 },
@@ -7615,6 +8015,7 @@
 		"name": "Uppsala University Observatory",
 		"state_province": "",
 		"country": "Sweden",
+		"sources": ["Xephem"],
 		"coordinates": 1400
 	}
 },
@@ -7634,6 +8035,7 @@
 		"name": "Urbana",
 		"state_province": "Illinois",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1401
 	}
 },
@@ -7653,6 +8055,7 @@
 		"name": "Utica",
 		"state_province": "New York",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1402
 	}
 },
@@ -7672,6 +8075,7 @@
 		"name": "VLA",
 		"state_province": "New Mexico",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1403
 	}
 },
@@ -7691,6 +8095,7 @@
 		"name": "Vancouver",
 		"state_province": "British Columbia",
 		"country": "Canada",
+		"sources": ["Xephem"],
 		"coordinates": 1404
 	}
 },
@@ -7710,6 +8115,7 @@
 		"name": "Varna",
 		"state_province": "",
 		"country": "Bulgaria",
+		"sources": ["Xephem"],
 		"coordinates": 1405
 	}
 },
@@ -7729,6 +8135,7 @@
 		"name": "Victoria",
 		"state_province": "British Columbia",
 		"country": "Canada",
+		"sources": ["Xephem"],
 		"coordinates": 1406
 	}
 },
@@ -7748,6 +8155,7 @@
 		"name": "Vienna",
 		"state_province": "",
 		"country": "Austria",
+		"sources": ["Xephem"],
 		"coordinates": 1407
 	}
 },
@@ -7767,6 +8175,7 @@
 		"name": "Waco",
 		"state_province": "Texas",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1408
 	}
 },
@@ -7786,6 +8195,7 @@
 		"name": "Walla Walla",
 		"state_province": "Washington",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1409
 	}
 },
@@ -7805,6 +8215,7 @@
 		"name": "Warsaw",
 		"state_province": "",
 		"country": "Poland",
+		"sources": ["Xephem"],
 		"coordinates": 1410
 	}
 },
@@ -7824,6 +8235,7 @@
 		"name": "Washington",
 		"state_province": "District of Columbia",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1411
 	}
 },
@@ -7843,6 +8255,7 @@
 		"name": "Waterbury",
 		"state_province": "Connecticut",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1412
 	}
 },
@@ -7862,6 +8275,7 @@
 		"name": "Waterloo",
 		"state_province": "Iowa",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1413
 	}
 },
@@ -7881,6 +8295,7 @@
 		"name": "Wellington",
 		"state_province": "",
 		"country": "New Zealand",
+		"sources": ["Xephem"],
 		"coordinates": 1414
 	}
 },
@@ -7900,6 +8315,7 @@
 		"name": "West Palm Beach",
 		"state_province": "Florida",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1415
 	}
 },
@@ -7919,6 +8335,7 @@
 		"name": "Wheeling",
 		"state_province": "West Virginia",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1416
 	}
 },
@@ -7938,6 +8355,7 @@
 		"name": "White Plains",
 		"state_province": "New York",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1417
 	}
 },
@@ -7957,6 +8375,7 @@
 		"name": "Wichita Falls",
 		"state_province": "Texas",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1418
 	}
 },
@@ -7976,6 +8395,7 @@
 		"name": "Wichita",
 		"state_province": "Kansas",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1419
 	}
 },
@@ -7995,6 +8415,7 @@
 		"name": "Wilkes-Barre",
 		"state_province": "Pennsylvania",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1420
 	}
 },
@@ -8014,6 +8435,7 @@
 		"name": "Wilmington",
 		"state_province": "Delaware",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1421
 	}
 },
@@ -8033,6 +8455,7 @@
 		"name": "Wilmington",
 		"state_province": "North Carolina",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1422
 	}
 },
@@ -8052,6 +8475,7 @@
 		"name": "Winnipeg",
 		"state_province": "Manitoba",
 		"country": "Canada",
+		"sources": ["Xephem"],
 		"coordinates": 1423
 	}
 },
@@ -8071,6 +8495,7 @@
 		"name": "Winston-Salem",
 		"state_province": "North Carolina",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1424
 	}
 },
@@ -8090,6 +8515,7 @@
 		"name": "Wodonga",
 		"state_province": "Victoria",
 		"country": "Australia",
+		"sources": ["Xephem"],
 		"coordinates": 1425
 	}
 },
@@ -8109,6 +8535,7 @@
 		"name": "Wollongong",
 		"state_province": "New South Wales",
 		"country": "Australia",
+		"sources": ["Xephem"],
 		"coordinates": 1426
 	}
 },
@@ -8128,6 +8555,7 @@
 		"name": "Worcester",
 		"state_province": "Massachusetts",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1427
 	}
 },
@@ -8147,6 +8575,7 @@
 		"name": "Yakima",
 		"state_province": "Washington",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1428
 	}
 },
@@ -8166,6 +8595,7 @@
 		"name": "Yonkers",
 		"state_province": "New York",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1429
 	}
 },
@@ -8185,6 +8615,7 @@
 		"name": "York",
 		"state_province": "Pennsylvania",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1430
 	}
 },
@@ -8204,6 +8635,7 @@
 		"name": "Youngstown",
 		"state_province": "Ohio",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1431
 	}
 },
@@ -8223,6 +8655,7 @@
 		"name": "Yuma",
 		"state_province": "Arizona",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1432
 	}
 },
@@ -8242,6 +8675,7 @@
 		"name": "Zagreb",
 		"state_province": "",
 		"country": "Croatia",
+		"sources": ["Xephem"],
 		"coordinates": 1433
 	}
 },
@@ -8261,6 +8695,7 @@
 		"name": "Zanesville",
 		"state_province": "Ohio",
 		"country": "U.S.A.",
+		"sources": ["Xephem"],
 		"coordinates": 1434
 	}
 },
@@ -8280,6 +8715,7 @@
 		"name": "Zürich",
 		"state_province": "",
 		"country": "Switzerland",
+		"sources": ["Xephem"],
 		"coordinates": 1435
 	}
 }

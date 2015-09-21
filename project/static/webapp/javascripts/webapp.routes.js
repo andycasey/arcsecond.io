@@ -7,10 +7,6 @@
 
     config.$inject = ['$routeProvider'];
 
-    /**
-     * @name config
-     * @desc Define valid application routes
-     */
     function config($routeProvider) {
         $routeProvider
             .when('/observingsites', {
@@ -18,17 +14,16 @@
                 controllerAs: 'vm',
                 templateUrl: '/static/webapp/templates/layout/index.html'
             })
+            .when('/observingsites/activity', {
+                controller: 'ActivityController',
+                controllerAs: 'vm',
+                templateUrl: '/static/webapp/templates/layout/activity.html'
+            })
             .when('/observingsites/:site_name', {
                 controller: 'SingleController',
                 controllerAs: 'vm',
                 templateUrl: '/static/webapp/templates/layout/single.html'
             });
-            //.when('/observingsites/:site_name/update', {
-            //    controller: 'UpdateController',
-            //    controllerAs: 'vm',
-            //    templateUrl: '/static/webapp/templates/observingsites/update.html'
-            //})
-            //.otherwise('/observingsites');
     }
 })();
 

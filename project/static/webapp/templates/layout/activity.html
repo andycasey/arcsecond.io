@@ -1,0 +1,40 @@
+<div class="row" ng-cloak>
+    <div class="container activity-table-container">
+        <div>
+            <p><a href="/observingsites">< Back to Observing Sites</a><br/></p>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <tr ng-repeat="activity in vm.activities">
+                    <td>{{ activity.date | date:"d MMM yyyy 'at' H:mm" }}</td>
+                    <td>
+                        <a target="_self" href="/@{{ activity.user.username }}">{{ activity.user.username }}</a>
+                    </td>
+                    <td>
+                        <div ng-if="activity.property_name" class="fixed-font-cell">
+                            {{ activity.action }} <span class="fixed-font">{{ activity.property_name }}</span>
+                            from <span class="fixed-font">{{ activity.old_value }}</span>
+                            to <span class="fixed-font">{{ activity.new_value }}</span>
+                        </div>
+                        <div ng-if="activity.action_message" class="fixed-font-cell">
+                            {{ activity.action }} {{ activity.action_message }}
+                        </div>
+                    </td>
+                    <td>
+                        <div ng-if="activity.observing_site" class="fixed-font-cell">
+                            of site <span class="fixed-font">
+                                <a target="_self" href="/observingsites/{{ activity.observing_site.name }}">
+                                    {{ activity.observing_site.name }}
+                                </a>
+                            </span>
+                        </div>
+                    </td>
+                    <td class="fixed-font-cell">
+                        via <em>{{ activity.method }}</em>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
