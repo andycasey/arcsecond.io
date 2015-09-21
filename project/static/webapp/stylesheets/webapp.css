@@ -2,6 +2,15 @@ textarea:focus, input:focus{
     outline: 0;
 }
 
+.fixed-font-cell {
+    color: rgb(139, 139, 139);
+}
+
+.fixed-font {
+    font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
+    color: rgb(58, 58, 59);
+}
+
 #search-container  {
     padding-top: 0px;
     padding-bottom: 20px;

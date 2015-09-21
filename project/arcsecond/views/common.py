@@ -1,3 +1,4 @@
+from django.contrib import auth
 from rest_framework import generics
 
 from project.arcsecond import connectors
@@ -15,7 +16,9 @@ class PersonDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIView):
         person = generics.get_object_or_404(queryset)
         return person
 
-
+class UserDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIView):
+    queryset = auth.get_user_model().objects.all()
+    serializer_class = serializers.UserSerializer
 
 class PublicationDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIView):
     queryset = models.Publication.objects.all()
