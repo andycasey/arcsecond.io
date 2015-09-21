@@ -1,5 +1,8 @@
 # coding=utf-8
+from django.conf import settings
+from django.contrib import auth
 from django.db import models
+from django.utils import timezone
 from multiselectfield import MultiSelectField
 from .earth import *
 
@@ -54,8 +57,65 @@ class ObservingSite(models.Model):
     homepage = models.URLField(null=True, blank=True)
     wikipedia_article = models.URLField(null=True, blank=True)
 
+    SOURCE_UNDEFINED = "(Undefined)"
+    SOURCE_USER = "User"
+    SOURCE_IOBSERVE = "iObserve"
+    SOURCE_XEPHEM = "Xephem"
+    SOURCE_MPC = "MPC"
+
+    SOURCE_KEYS = (
+        SOURCE_UNDEFINED,
+        SOURCE_USER,
+        SOURCE_IOBSERVE,
+        SOURCE_XEPHEM,
+        SOURCE_MPC
+    )
+
+    SOURCE_VALUES = SOURCE_KEYS
+    SOURCE_CHOICES = tuple(zip(SOURCE_KEYS, SOURCE_VALUES))
+    sources = MultiSelectField(choices=SOURCE_CHOICES, null=True, blank=True)
+
+    is_deleted = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=True)
+
     def natural_key(self):
         return (self.name,)
+
+    def __unicode__(self):
+        return u"<ObservingSite {0} ({1}, {2}) [{3}]>".format(self.name, self.state_province, self.country, self.coordinates)
+
+
+class ObservingSiteActivity(models.Model):
+    date = models.DateTimeField(null=True, blank=True, default=timezone.now)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True)
+    observing_site = models.OneToOneField(ObservingSite, null=True, blank=True)
+
+    ACTION_UNDEFINED = "unk"
+    ACTION_LOAD = "load"
+    ACTION_PROPERTY_CHANGE = "prop"
+    ACTION_SITE_DELETION = "del"
+
+    ACTION_KEYS = (ACTION_UNDEFINED, ACTION_LOAD, ACTION_PROPERTY_CHANGE, ACTION_SITE_DELETION)
+    ACTION_VALUES = ("(Undefined)", "loaded", "changed property", "deleted site")
+    ACTION_CHOICES = tuple(zip(ACTION_KEYS, ACTION_VALUES))
+    action = models.CharField(max_length=10, choices=ACTION_CHOICES, default=ACTION_UNDEFINED)
+
+    property_name = models.CharField(max_length=200, null=True, blank=True)
+    old_value = models.CharField(max_length=200, null=True, blank=True)
+    new_value = models.CharField(max_length=200, null=True, blank=True)
+    action_message = models.CharField(max_length=1000, null=True, blank=True)
+
+    METHOD_UNDEFINED = "unk"
+    METHOD_DB = "db"
+    METHOD_DJANGO = "django"
+    METHOD_API = "api"
+    METHOD_WEB = "web"
+
+    METHOD_KEYS = (METHOD_UNDEFINED, METHOD_DB, METHOD_DJANGO, METHOD_API, METHOD_WEB)
+    METHOD_VALUES = METHOD_KEYS
+    METHOD_CHOICES = tuple(zip(METHOD_KEYS, METHOD_VALUES))
+    method = models.CharField(max_length=10, choices=METHOD_CHOICES, default=METHOD_UNDEFINED)
+
 
 
 class AstronomicalOrganisationManager(models.Manager):

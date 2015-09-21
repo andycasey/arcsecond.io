@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from project.arcsecond.models import Coordinates, ObservingSite
+from project.arcsecond.models import Coordinates, ObservingSite, ObservingSiteActivity
 
 ######################## Earth ########################
 
@@ -24,3 +24,7 @@ class ObservingSiteSerializer(serializers.ModelSerializer):
                                                      read_only=True,
                                                      view_name='telescope-detail',
                                                      lookup_field='name')
+
+class ObservingSiteActivitySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ObservingSiteActivity

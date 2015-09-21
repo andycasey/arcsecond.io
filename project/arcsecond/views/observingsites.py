@@ -29,6 +29,9 @@ class ObservingSiteListAPIView(mixins.RequestLogViewMixin, generics.ListAPIView)
             queryset = queryset.filter(continent=continent)
         return queryset
 
+class ObservingSiteActivityListAPIView(mixins.RequestLogViewMixin, generics.ListAPIView):
+    queryset = models.ObservingSiteActivity.objects.all().order_by('-date')
+    serializer_class = serializers.ObservingSiteActivitySerializer
 
 class ObservingSiteNamedDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIView):
     queryset = models.ObservingSite.objects.all()

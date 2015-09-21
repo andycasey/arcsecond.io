@@ -44,6 +44,9 @@ urlpatterns = patterns('',
         views.ObservingSiteListAPIView.as_view(),
         name="observingsite-list"),
 
+    url(r'^1/observingsites/activity$',
+        views.ObservingSiteActivityListAPIView.as_view(),
+        name="observingsiteactivity-list"),
 
     # ----- Telescopes -----
 
