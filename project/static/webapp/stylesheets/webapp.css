@@ -114,6 +114,12 @@ textarea:focus, input:focus{
     bottom: 0px;
 }
 
+.activity-table-container {
+    padding-top: 80px;
+}
+
+/* --- Dark lists --- */
+
 .dark li.active a,
 .dark li.active a:hover,
 .dark li.active a:focus {

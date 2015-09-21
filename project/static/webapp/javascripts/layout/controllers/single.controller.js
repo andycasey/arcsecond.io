@@ -13,13 +13,13 @@
         activate();
 
         function activate() {
-            ObservingSites.get($routeParams.site_name).then(observingsitesSuccessFn, observingsitesErrorFn);
+            ObservingSites.get($routeParams.site_name).then(successFn, errorFn);
 
-            function observingsitesSuccessFn(data, status, headers, config) {
+            function successFn(data, status, headers, config) {
                 vm.observingsite = data.data;
             }
 
-            function observingsitesErrorFn(data, status, headers, config) {
+            function errorFn(data, status, headers, config) {
                 Snackbar.error(data.error);
             }
         }

@@ -10,6 +10,7 @@
     function ObservingSitesController($scope, $window, ObservingSites) {
         var vm = this;
         vm.observingsites = [];
+        vm.continents = ObservingSites.continents;
         activate();
 
         function activate() {
@@ -17,7 +18,6 @@
         }
 
         function render(current, original) {
-            vm.continents = ObservingSites.continents;
             if (current !== original) {
                 vm.observingsites = current;
             }

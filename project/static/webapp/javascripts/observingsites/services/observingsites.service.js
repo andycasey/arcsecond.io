@@ -16,7 +16,8 @@
             all: all,
             create: create,
             get: get,
-            update: update
+            update: update,
+            activities: activities
         };
 
         ObservingSites.continents = [
@@ -57,6 +58,10 @@
                 long_name: long_name,
                 IAUCode: IAUCode
             });
+        }
+
+        function activities() {
+            return $http.get($window.ARCSECOND_API_ROOT_URL + '/1/observingsites/activities');
         }
     }
 })();

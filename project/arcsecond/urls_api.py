@@ -36,17 +36,17 @@ urlpatterns = patterns('',
 
     # ----- Observing Sites -----
 
-    url(r'^1/observingsites/(?P<name>'+full_string_regex+')/$',
-        views.ObservingSiteNamedDetailAPIView.as_view(),
-        name="observingsite-named-detail"),
-
     url(r'^1/observingsites/$',
         views.ObservingSiteListAPIView.as_view(),
         name="observingsite-list"),
 
-    url(r'^1/observingsites/activity$',
+    url(r'^1/observingsites/activities$',
         views.ObservingSiteActivityListAPIView.as_view(),
         name="observingsiteactivity-list"),
+
+    url(r'^1/observingsites/(?P<name>'+full_string_regex+')/$',
+        views.ObservingSiteNamedDetailAPIView.as_view(),
+        name="observingsite-named-detail"),
 
     # ----- Telescopes -----
 

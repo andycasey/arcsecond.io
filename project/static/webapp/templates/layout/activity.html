@@ -1,0 +1,20 @@
+<div class="row" ng-cloak>
+    <div class="container activity-table-container">
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <tr ng-repeat="activity in vm.activities">
+                    <td>{{ activity.date }}</td>
+                    <td>{{ activity.user }}</td>
+                    <td>{{ activity.observing_site }}</td>
+                    <td>{{ activity.action }}</td>
+                    <td>{{ activity.property_name }}</td>
+                    <td>{{ activity.old_value }}</td>
+                    <td>{{ activity.new_value }}</td>
+                    <td>{{ activity.action_message }}</td>
+                    <td>{{ activity.method }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
