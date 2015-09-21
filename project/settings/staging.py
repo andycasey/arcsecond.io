@@ -4,7 +4,6 @@ from defaults import *
 
 # Remember that DEBUG = True makes Celery leaking.
 DEBUG = True #bool(os.environ.get('DJANGO_DEBUG', ''))
-TEMPLATE_DEBUG = DEBUG
 
 # Allow all host headers
 # Check https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
