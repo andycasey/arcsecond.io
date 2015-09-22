@@ -20,7 +20,6 @@ MANAGERS = ADMINS
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-TEMPLATE_DEBUG = False
 SITE_ID = 1  # Local=1, Staging=2, Prod=3
 
 # Internationalization

@@ -25,7 +25,7 @@
 
                         <!-- Pre heading -->
                         <p class="heading__pre">
-                            Version 1 (alpha)
+                            •
                         </p>
 
                         <!-- Heading -->
@@ -35,14 +35,14 @@
 
                         <!-- Sub heading -->
                         <p class="heading__sub">
-                            Your integrated access point to world-wide astronomical data
+                            The astronomy cloud.
                         </p>
 
                         <!-- Button -->
                         <div class="text-center">
                             <a href="#about" class="btn btn-xl btn-primary">
                                 <span class="oi oi-arrow-right" title="Find out more" aria-hidden="true"></span>
-                                <span>Learn how to feed your next astro app</span>
+                                <span>Discover</span>
                             </a>
                         </div>
 
@@ -61,10 +61,12 @@
                 <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
                     <div class="lead text-center text">
                         <em>
-                            <strong>arcsecond.io</strong> aims at providing browsable, unified Application Programming
-                            Interfaces (APIs) where each piece of astronomical information has its own <i>URL</i>.
-                            SIMBAD, NASA Exoplanet Archive, JPL Horizons, ADS are among the sources of information that
-                            arcsecond.io intend to unify. Because we believe in the force of <strong>integration</strong>.
+                            <strong>arcsecond.io</strong> aims at unifying the world-wide astronomy data. Our goal is
+                            to build a unique place where everything is integrated. And by everything, we mean information
+                            about objects, exoplanets, observing sites, solar-system objects, telescopes, people,
+                            publications, telegrams, instruments, detectors, finding charts, and access to archived data.
+                            And by everything, we also mean <strong>your data</strong>: observing runs, night logs,
+                            reduced data, etc. Because we believe in the force of <strong>integration</strong>.
                         </em>
                     </div>
                     <div class="lead text-center text">
@@ -78,31 +80,39 @@
         </div> <!-- / .container -->
     </div> <!-- / .site-wrapper_classic -->
 
-
-    <!-- APIs
+    <!-- WEBAPP
     ============================== -->
-    <div class="site-wrapper site-wrapper-blue" id="APIs">
+    <div class="site-wrapper site-wrapper-blue" id="webapp">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
 
                     <!-- Heading -->
                     <h1 class="heading">
-                        One access point: <span class="text-primary">api.arcsecond.io</span>
+                        One sky, one arcsecond, <span class="text-primary">one account</span>.
                     </h1>
 
                     <!-- Sub heading -->
                     <p class="heading__sub">
-                        Our goal is to give access to as much information as possible, aggregating information with a
-                        philosophy centered around <em>resources</em>.
+                        Along with <a href="#APIs" target="_self">APIs</a>, arcsecond.io is actively being built.
+                        As of now, the part most developed are the
+                        <a href="{% host_url 'index_observingsites' host 'www' %}">Observing Sites</a>. We intend to provide
+                        <strong>a comprehensive community-curated list of all observing sites on this planet</strong>. Soon, everyone
+                        with an account will be able to add / update / edit these sites, and their telescopes.<br/>
                         To follow what's going on, read <a href="http://onekilopars.ec/blog">onekilopars.ec blog</a>.
                     </p>
 
                     <div class="text-center">
-                        <a href="{{ api_root_url }}" class="btn btn-xl btn-primary btn-primary-black">
-                            <span class="oi oi-arrow-right" title="Discover APIs" aria-hidden="true"></span>
-                            <span>Discover APIs</span>
-                        </a>
+                        On arcsecond.io, you soon will be able to see, discover, follow and explore all what astronomy
+                        data can provides, as well as managing your observing runs, being for professional observations,
+                        or amator's. Tell us if you like that idea on <a href="https://twitter.com/arcsecond_io">Twitter</a>,
+                        <a href="https://www.facebook.com/arcsecond.io">Facebook</a>,
+                        or use the <a href="#contact" target="_self">contact form</a>.
+                    </div>
+
+                    <div class="text-center">
+                        <br/><br/>
+                        <a href="https://twitter.com/arcsecond_io" class="twitter-follow-button" data-show-count="false" data-size="large" data-dnt="true">Follow @arcsecond_io</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
                     </div>
 
                 </div>
@@ -110,36 +120,32 @@
         </div>
     </div>
 
-    <!-- WEBAPP
+    <!-- APIs
     ============================== -->
-    <div class="site-wrapper" id="webapp">
+    <div class="site-wrapper" id="APIs">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
 
                     <!-- Heading -->
                     <h1 class="heading">
-                        One sky, <span class="text-primary">one account</span>.
+                        One data access point: <span class="text-primary">api.arcsecond.io</span>
                     </h1>
 
                     <!-- Sub heading -->
                     <p class="heading__sub">
-                        On www.arcsecond.io, you soon will be able to see, discover, follow and record all your "astro stuff",
-                        being it data, observing runs, telegrams, people etc. <br/>Tell us if you like that idea on Twitter, or
-                        use the <a href="#Contact" target="_self">contact form</a>.
+                        arcsecond.io is being built with modern web and data tools. That is, our services are provided atop
+                        <a href="https://en.wikipedia.org/wiki/Representational_state_transfer">REST</a>ful
+                        Application Programming Interfaces (APIs). Our goal is to give access to as much information
+                        as possible, aggregating information with a philosophy centered around <em>resources</em>.<br/>
+                        Visit <a href="http://api.arcsecond.io">api.arcsecond.io</a> to explore the details of the APIs.
                     </p>
 
                     <div class="text-center">
-                        For now, you can browse the current
-                        <a href="{% host_url 'index_observingsites' host 'www' %}">Observing Sites</a> managed by arcsecond.io. We intend to provide
-                        a comprehensive list of observing sites throughout the world. Soon, everyone with an account will
-                        be able to add / update / edit these sites, which will automatically be part of the
-                        <a target="_self" href="{{ api_root_url }}/1/observingsites">observing sites data</a>.
-                    </div>
-
-                    <div class="text-center">
-                        <br/><br/>
-                        <a href="https://twitter.com/arcsecond_io" class="twitter-follow-button" data-show-count="false" data-size="large" data-dnt="true">Follow @arcsecond_io</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                        <a href="{{ api_root_url }}" class="btn btn-xl btn-primary btn-primary-black">
+                            <span class="oi oi-arrow-right" title="Discover APIs" aria-hidden="true"></span>
+                            <span>Discover APIs</span>
+                        </a>
                     </div>
 
                 </div>
