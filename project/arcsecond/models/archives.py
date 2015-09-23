@@ -1,4 +1,5 @@
 from django.core.validators import RegexValidator
+from django.utils.timezone import utc
 from django.db import models
 
 from .constants import *
@@ -71,8 +72,14 @@ class ESOProgrammeSummary(models.Model):
     publications_url = models.URLField(max_length=500, null=True, blank=True)
 
 
+class ESOArchiveDataRowManager(models.Manager):
+    def get_queryset(self):
+        return super(ESOArchiveDataRowManager, self).get_queryset().order_by('-date')
+
+
 class ESOArchiveDataRow(models.Model):
     class Meta: app_label = 'arcsecond'
+    objects = ESOArchiveDataRowManager()
 
     summary = models.OneToOneField(ESOProgrammeSummary, null=True, blank=True)
     archive = models.ForeignKey(DataArchive, null=True, blank=True, related_name='data_rows')
@@ -85,6 +92,7 @@ class ESOArchiveDataRow(models.Model):
     telescope = models.ForeignKey(Telescope, null=True, blank=True, related_name='data_rows')
 
     dataset_id = models.CharField(max_length=100, null=True, blank=True, unique=True)
+    date = models.DateTimeField(null=True, blank=True, default=timezone.now)
     exposure_time = models.FloatField(null=True, blank=True)
     modified_julian_date = models.FloatField(null=True, blank=True)
 

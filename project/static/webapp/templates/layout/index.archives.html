@@ -6,7 +6,20 @@
 
         <div class="table-responsive">
             <table class="table table-striped">
+                <tr>
+                    <th>Archive</th>
+                    <th>Date</th>
+                    <th>Observing Site</th>
+                    <th>Telescope</th>
+                    <th>Instrument</th>
+                    <th>Dataset ID</th>
+                </tr>
                 <tr ng-repeat="data_row in vm.data_rows">
+                    <td><a target="_self" href="{{ data_row.archive.url }}">{{ data_row.archive.name }}</a></td>
+                    <td>{{ data_row.date | date:"d MMM yyyy 'at' H:mm" }}</td>
+                    <td></td>
+                    <td></td>
+                    <td>{{ data_row.instrument_name }}</td>
                     <td>{{ data_row.dataset_id }}</td>
                 </tr>
             </table>
