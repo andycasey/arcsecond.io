@@ -3,6 +3,14 @@ from django.db import models
 
 from .constants import *
 from .telescopes import *
+from .observingsites import *
+
+class DataArchive(models.Model):
+    class Meta: app_label = 'arcsecond'
+
+    name = models.CharField(max_length=100, null=True, blank=True)
+    url = models.URLField(null=True, blank=True)
+    organisations = models.ManyToManyField(AstronomicalOrganisation, blank=True, related_name='archive')
 
 
 class ESOProgrammeSummary(models.Model):
@@ -67,12 +75,15 @@ class ESOArchiveDataRow(models.Model):
     class Meta: app_label = 'arcsecond'
 
     summary = models.OneToOneField(ESOProgrammeSummary, null=True, blank=True)
+    archive = models.ForeignKey(DataArchive, null=True, blank=True, related_name='data_rows')
+
     header_url = models.URLField()
     more_url = models.URLField()
     seeing_url = models.URLField()
 
     instrument_name = models.CharField(max_length=100, null=True, blank=True)
-    telescope = models.ForeignKey(Telescope, null=True, blank=True, related_name='data_row')
+    telescope = models.ForeignKey(Telescope, null=True, blank=True, related_name='data_rows')
+
     dataset_id = models.CharField(max_length=100, null=True, blank=True, unique=True)
     exposure_time = models.FloatField(null=True, blank=True)
     modified_julian_date = models.FloatField(null=True, blank=True)
