@@ -17,6 +17,18 @@ class ESOProgrammeSummaryDetailAPIView(mixins.RequestLogViewMixin, generics.Retr
         obj = connectors.get_ESO_programme_id_summary(programme_id)
         return obj
 
+
+class ESOArchiveDataRowsListAPIView(mixins.RequestLogViewMixin, generics.ListAPIView):
+    queryset = models.ESOArchiveDataRow.objects.all()
+    serializer_class = serializers.ESOArchiveDataRowSerializer
+
+    def get_queryset(self):
+        row_pks = connectors.get_ESO_latest_data()
+        queryset = models.ESOArchiveDataRow.objects.filter(pk__in=row_pks)
+        return queryset
+
+
+
 class HSTProgrammeSummaryDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIView):
     queryset = models.HSTProgrammeSummary.objects.all()
     serializer_class = serializers.HSTProgrammeSummarySerializer
