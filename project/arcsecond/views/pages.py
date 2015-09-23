@@ -55,28 +55,6 @@ def index_api(request):
     return render_to_response('arcsecond/index_api.html', context_dict, context)
 
 
-
-
-
-from django.views.generic.base import TemplateView
-from django.utils.decorators import method_decorator
-
-
-class ObservingSitesIndexView(TemplateView):
-    template_name = 'arcsecond/index_webapp.html'
-
-    def get_context_data(self, **kwargs):
-        context = super(ObservingSitesIndexView, self).get_context_data(**kwargs)
-        context['angular_app'] = "webapp"
-        context['api_root_url'] = settings.ARCSECOND_API_ROOT_URL
-        context['meta'] = get_generic_meta(title="arcsecond.io", url=reverse_lazy('index_www'))
-        return context
-
-    @method_decorator(ensure_csrf_cookie)
-    def dispatch(self, *args, **kwargs):
-        return super(ObservingSitesIndexView, self).dispatch(*args, **kwargs)
-
-
 def custom_404(request):
     return render(request, 'arcsecond/404.html')
 
@@ -117,5 +95,41 @@ def user_settings(request, username):
             return render_to_response('arcsecond/user-settings.html', context_dict, context)
         else:
             return HttpResponse('Unauthorized', status=401)
+
+
+
+
+from django.views.generic.base import TemplateView
+from django.utils.decorators import method_decorator
+
+
+class ObservingSitesIndexView(TemplateView):
+    template_name = 'arcsecond/index_webapp.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(ObservingSitesIndexView, self).get_context_data(**kwargs)
+        context['angular_app'] = "webapp"
+        context['api_root_url'] = settings.ARCSECOND_API_ROOT_URL
+        context['meta'] = get_generic_meta(title="arcsecond.io", url=reverse_lazy('index_www'))
+        return context
+
+    @method_decorator(ensure_csrf_cookie)
+    def dispatch(self, *args, **kwargs):
+        return super(ObservingSitesIndexView, self).dispatch(*args, **kwargs)
+
+
+class ArchivesIndexView(TemplateView):
+    template_name = 'arcsecond/index_webapp.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(ArchivesIndexView, self).get_context_data(**kwargs)
+        context['angular_app'] = "webapp"
+        context['api_root_url'] = settings.ARCSECOND_API_ROOT_URL
+        context['meta'] = get_generic_meta(title="arcsecond.io", url=reverse_lazy('index_www'))
+        return context
+
+    @method_decorator(ensure_csrf_cookie)
+    def dispatch(self, *args, **kwargs):
+        return super(ArchivesIndexView, self).dispatch(*args, **kwargs)
 
 

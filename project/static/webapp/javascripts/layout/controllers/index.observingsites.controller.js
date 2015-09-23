@@ -49,7 +49,6 @@
             function successFn(data, status, headers, config) {
                 vm.observingsites = data.data;
                 $scope.map.markers = getMapMarkers(vm.observingsites);
-
             }
 
             function errorFn(data, status, headers, config) {
