@@ -1,0 +1,16 @@
+<div class="site-wrapper">
+    <div class="container">
+        <div id="times-container" class="row">
+            UT, JD etc...
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <tr ng-repeat="data_row in vm.data_rows">
+                    <td>{{ data_row.dataset_id }}</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+</div>

@@ -8,7 +8,8 @@
             'webapp.routes',
             'webapp.utils',
             'webapp.layout',
-            'webapp.observingsites'
+            'webapp.observingsites',
+            'webapp.archives'
         ]);
 
     angular

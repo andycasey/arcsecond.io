@@ -10,19 +10,25 @@
     function config($routeProvider) {
         $routeProvider
             .when('/observingsites', {
-                controller: 'IndexController',
+                controller: 'ObservingSitesIndexController',
                 controllerAs: 'vm',
-                templateUrl: '/static/webapp/templates/layout/index.html'
+                templateUrl: '/static/webapp/templates/layout/index.observingsites.html'
             })
             .when('/observingsites/activity', {
-                controller: 'ActivityController',
+                controller: 'ObservingSitesActivityController',
                 controllerAs: 'vm',
-                templateUrl: '/static/webapp/templates/layout/activity.html'
+                templateUrl: '/static/webapp/templates/layout/activity.observingsites.html'
             })
             .when('/observingsites/:site_name', {
-                controller: 'SingleController',
+                controller: 'ObservingSitesSingleController',
                 controllerAs: 'vm',
-                templateUrl: '/static/webapp/templates/layout/single.html'
+                templateUrl: '/static/webapp/templates/layout/single.observingsites.html'
+            })
+
+            .when('/archives', {
+                controller: 'ArchivesIndexController',
+                controllerAs: 'vm',
+                templateUrl: '/static/webapp/templates/layout/index.archives.html'
             });
     }
 })();

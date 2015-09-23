@@ -3,11 +3,11 @@
 
     angular
         .module('webapp.layout.controllers')
-        .controller('SingleController', SingleController);
+        .controller('ObservingSitesSingleController', ObservingSitesSingleController);
 
-    SingleController.$inject = ['$scope', '$routeParams', 'ObservingSites', 'Snackbar'];
+    ObservingSitesSingleController.$inject = ['$scope', '$routeParams', 'ObservingSites', 'Snackbar'];
 
-    function SingleController($scope, $routeParams, ObservingSites, Snackbar) {
+    function ObservingSitesSingleController($scope, $routeParams, ObservingSites, Snackbar) {
         var vm = this;
         vm.observingsite = undefined;
         activate();

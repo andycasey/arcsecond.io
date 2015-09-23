@@ -21,3 +21,6 @@ class ObservingSiteAdmin(admin.ModelAdmin):
 class ObservingSiteActivityAdmin(admin.ModelAdmin):
     list_display = ("pk", "date", "user", "observing_site", "action", "property_name", "old_value", "new_value", "action_message", "method")
 
+@admin.register(DataArchive)
+class ObservingSiteAdmin(admin.ModelAdmin):
+    list_display = ("pk", "name", "url")

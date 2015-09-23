@@ -90,6 +90,10 @@ urlpatterns = patterns('',
 
     # ----- Archives -----
 
+    url(r'^1/archives/ESO/$',
+        views.ESOArchiveDataRowsListAPIView.as_view(),
+        name="esoarchivedatarow-detail"),
+
     url(r'^1/archives/ESO/(?P<programme_id>'+constants.eso_programme_id_regex+')/summary/$',
         views.ESOProgrammeSummaryDetailAPIView.as_view(),
         name="esoprogrammesummary-detail"),

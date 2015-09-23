@@ -8,13 +8,13 @@ from django.conf import settings
 from meta.views import Meta
 
 def get_generic_meta(title=None, url=None):
-    # favicon_image_url = static('arcsecond/img/favicon-120.png')
     telescopes_image_url = static('arcsecond/img/screen-bg_11.jpg')
     site_domain = Site.objects.get_current().domain
 
     meta = Meta(
-        description=_("arcsecond.io aims to provide unified REST APIs for astronomical information."),
-        keywords=['data', 'astronomy', 'astrophysics', 'bigdata', 'json', 'REST', 'API', 'integration'],
+        description=_("The astronomy cloud."),
+        keywords=['astronomy', 'astrophysics', 'cloud', 'data', 'bigdata', 'REST', 'API', 'integration', 'sun', 'moon',
+                  'sky', 'planets', 'exoplanets', 'earth', 'observing sites', 'telescopes'],
         url='http://www.arcsecond.io',
         site_name='arcsecond.io',
         use_og=True,
