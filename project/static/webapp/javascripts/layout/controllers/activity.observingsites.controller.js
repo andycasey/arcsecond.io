@@ -3,11 +3,11 @@
 
     angular
         .module('webapp.layout.controllers')
-        .controller('ActivityController', ActivityController);
+        .controller('ObservingSitesActivityController', ObservingSitesActivityController);
 
-    ActivityController.$inject = ['$scope', 'ObservingSites', 'Snackbar'];
+    ObservingSitesActivityController.$inject = ['$scope', 'ObservingSites', 'Snackbar'];
 
-    function ActivityController($scope, ObservingSites, Snackbar) {
+    function ObservingSitesActivityController($scope, ObservingSites, Snackbar) {
         var vm = this;
         vm.activities = undefined;
         activate();

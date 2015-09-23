@@ -3,11 +3,11 @@
 
     angular
         .module('webapp.layout.controllers')
-        .controller('IndexController', IndexController);
+        .controller('ObservingSitesIndexController', ObservingSitesIndexController);
 
-    IndexController.$inject = ['$scope', 'ObservingSites', 'uiGmapGoogleMapApi', 'Snackbar'];
+    ObservingSitesIndexController.$inject = ['$scope', 'ObservingSites', 'uiGmapGoogleMapApi', 'Snackbar'];
 
-    function IndexController($scope, ObservingSites, uiGmapGoogleMapApi, Snackbar) {
+    function ObservingSitesIndexController($scope, ObservingSites, uiGmapGoogleMapApi, Snackbar) {
         var vm = this;
         vm.observingsites = undefined;
         activate();
