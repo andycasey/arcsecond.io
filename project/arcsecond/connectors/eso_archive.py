@@ -9,24 +9,29 @@ from datetime import datetime
 from project.arcsecond.models import ESOProgrammeSummary, ESOArchiveDataRow
 
 ESO_ARCHIVE_ROOT = "http://archive.eso.org/"
-ESO_ARCHIVE_DB_ROOT = ESO_ARCHIVE_ROOT + "wdb/wdb/eso/eso_archive_main/query?wdbo=votable/display&"
-ESO_ARCHIVE_DEFAULT_PARAMS = "resolver=simbad&format=SexaHour&"
+ESO_ARCHIVE_DB_ROOT = ESO_ARCHIVE_ROOT + "wdb/wdb/eso/eso_archive_main/query?"
+ESO_ARCHIVE_WDBO = "wdbo="+urllib2.quote("votable/display")+"&"
+
+ESO_ARCHIVE_DEFAULT_PARAMS = "max_rows_returned=10&format=SexaHour&resolver=simbad&aladin_colour=aladin_instrument&tab_night=on&"
+
 ESO_ARCHIVE_DEFAULT_ADDITIONAL_PARAMS = "tab_tel_airm_start=on&tab_stat_instrument=on&tab_ambient=on&tab_stat_exptime=on&tab_HDR=on&tab_mjd_obs=on&tab_stat_plot=on&tab_distance=on&tab_pos_angle=on&"
 ESO_ARCHIVE_DEFAULT_TABS_PARAMS = "tab_target_coord=on&tab_object=on&tab_night=on&tab_prog_id=on&tab_gto=on&tab_obs_mode=on&tab_title=on&tab_dp_cat=on&tab_dp_tech=on&tab_dp_cat=on&tab_dp_type=on&tab_dp_tech=on&tab_dp_id=on&tab_rel_date=on&tab_exptime=on&tab_filter_path=on&tab_instrument=on&"
-ESO_ARCHIVE_DEFAULT_SCIENCE_PARAMS = "dp_cat=SCIENCE&dp_type=OBJECT&"
+
+ESO_ARCHIVE_DEFAULT_SCIENCE_PARAM = "dp_cat=SCIENCE&"
+ESO_ARCHIVE_DEFAULT_OBJECT_PARAM = "dp_type=OBJECT&"
 
 
 # ------------------- DATA ROWS ---------------------------------------
 
 def get_ESO_latest_data(start_date=None, end_date=None, science_only=True):
-    url = ESO_ARCHIVE_DB_ROOT+ESO_ARCHIVE_DEFAULT_PARAMS+ESO_ARCHIVE_DEFAULT_ADDITIONAL_PARAMS+ESO_ARCHIVE_DEFAULT_TABS_PARAMS
+    url = ESO_ARCHIVE_DB_ROOT+ESO_ARCHIVE_WDBO+ESO_ARCHIVE_DEFAULT_PARAMS
     if science_only is True:
-        url += ESO_ARCHIVE_DEFAULT_SCIENCE_PARAMS
+        url += ESO_ARCHIVE_DEFAULT_SCIENCE_PARAM
 
-    url += "max_rows_returned=10&starttime=12&endtime=12&"
+    url += "starttime=12&endtime=12&"
 
     utc_date = datetime.utcnow()
-    url += urllib2.quote("night={0} {1} {2}&".format(utc_date.year, utc_date.month, utc_date.day))
+    url += "night="+urllib2.quote("{0} {1:02d} {2:02d}".format(utc_date.year, utc_date.month, utc_date.day))
 
     print url
 
