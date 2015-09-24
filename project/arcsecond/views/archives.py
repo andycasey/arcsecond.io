@@ -19,13 +19,12 @@ class ESOProgrammeSummaryDetailAPIView(mixins.RequestLogViewMixin, generics.Retr
 
 
 class ESOArchiveDataRowsListAPIView(mixins.RequestLogViewMixin, generics.ListAPIView):
-    queryset = models.ESOArchiveDataRow.objects.all()
+    queryset = models.ESOArchiveDataRow.objects.all().order_by("-date")
     serializer_class = serializers.ESOArchiveDataRowSerializer
 
     def get_queryset(self):
-        row_pks = connectors.get_ESO_latest_data()
-        queryset = models.ESOArchiveDataRow.objects.filter(pk__in=row_pks)
-        return queryset
+        # connectors.get_ESO_latest_data()
+        return super(ESOArchiveDataRowsListAPIView, self).get_queryset().order_by("-date")
 
 
 

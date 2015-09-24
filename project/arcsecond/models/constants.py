@@ -11,9 +11,9 @@ ESO_INSTRUMENTS = {
     "HARPS":  {"site": "La Silla", "telescope": "3.6m"},
     "SOFI":   {"site": "La Silla", "telescope": "New Technology Telescope"},
     "EFOSC2": {"site": "La Silla", "telescope": "New Technology Telescope"},
-    "WFI":    {"site": "La Silla", "telescope": "2.2m"},
-    "FEROS":  {"site": "La Silla", "telescope": "2.2m"},
-    "GROND":  {"site": "La Silla", "telescope": "2.2m"},
+    "WFI":    {"site": "La Silla", "telescope": "ESO 2.2m"},
+    "FEROS":  {"site": "La Silla", "telescope": "ESO 2.2m"},
+    "GROND":  {"site": "La Silla", "telescope": "ESO 2.2m"},
 
     "NACO":  {"site": "Paranal", "telescope": "Unit Telescope 1"},
     "FORS2": {"site": "Paranal", "telescope": "Unit Telescope 1"},
@@ -23,16 +23,16 @@ ESO_INSTRUMENTS = {
     "XSHOOTER": {"site": "Paranal", "telescope": "Unit Telescope 2"},
     "UVES":     {"site": "Paranal", "telescope": "Unit Telescope 2"},
 
-    "SPHERE": {"site": "Paranal", "telescope": "Unit Telescope 3"},
-    "VISIR":  {"site": "Paranal", "telescope": "Unit Telescope 3"},
-    "VIMOS":  {"site": "Paranal", "telescope": "Unit Telescope 3"},
+    "SPHER": {"site": "Paranal", "telescope": "Unit Telescope 3"},
+    "VISIR": {"site": "Paranal", "telescope": "Unit Telescope 3"},
+    "VIMOS": {"site": "Paranal", "telescope": "Unit Telescope 3"},
 
     "HAWK-I":  {"site": "Paranal", "telescope": "Unit Telescope 4"},
-    "SINFONI": {"site": "Paranal", "telescope": "Unit Telescope 4"},
+    "SINFO": {"site": "Paranal", "telescope": "Unit Telescope 4"},
     "MUSE":    {"site": "Paranal", "telescope": "Unit Telescope 4"},
 
-    "VIRCAM":   {"site": "Paranal", "telescope": "VISTA"},
-    "OmegaCAM": {"site": "Paranal", "telescope": "VST"},
+    "VCAM": {"site": "Paranal", "telescope": "VISTA"},
+    "OMEGA": {"site": "Paranal", "telescope": "VST"},
 
     # Decomissionned
 

@@ -3,21 +3,21 @@
         <div id="times-container" class="row text-center">
             <div>
                 <span class="time-title">Local Time :</span>
-                <span class="time-value">{{ date_local | date:'HH:mm:ss' }}</span> &nbsp;&nbsp;
+                <span class="time-value">{{ times.date_local | date:'HH:mm:ss' }}</span> &nbsp;&nbsp;
                 <span class="time-title">UT :</span>
-                <span class="time-value">{{ date_UTC | date:'HH:mm:ss' }}</span> &nbsp;&nbsp;
+                <span class="time-value">{{ times.date_UTC | date:'HH:mm:ss' }}</span> &nbsp;&nbsp;
                 <span class="time-title">Julian Day :</span>
-                <span class="time-value">{{ jd }}</span> &nbsp;&nbsp;
+                <span class="time-value">{{ times.jd }}</span> &nbsp;&nbsp;
                 <span class="time-title">MJD :</span>
-                <span class="time-value">{{ mjd }}</span>
+                <span class="time-value">{{ times.mjd }}</span>
             </div>
-            <div ng-if="lmst">
+            <div ng-if="times.lmst">
                 <span class="time-title">Longitude :</span>
                 <span class="time-value">{{ vm.coordinates.longitude | number:6 }}º</span> &nbsp;&nbsp;
                 <span class="time-title">Latitude :</span>
                 <span class="time-value">{{ vm.coordinates.latitude | number:6 }}º</span> &nbsp;&nbsp;
                 <span class="time-title">LMST :</span>
-                <span class="time-value">{{ lmst.h }}:{{ lmst.m }}:{{ lmst.s }}</span>
+                <span class="time-value">{{ times.lmst.h }}:{{ times.lmst.m }}:{{ times.lmst.s }}</span>
             </div>
         </div>
 

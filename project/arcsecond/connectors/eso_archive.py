@@ -30,6 +30,24 @@ ESO_ARCHIVE_DEFAULT_OBJECT_PARAM = "dp_type=OBJECT&"
 # ------------------- DATA ROWS ---------------------------------------
 
 def get_ESO_latest_data(start_date=None, end_date=None, science_only=True):
+
+    # rows = ESOArchiveDataRow.objects.all()
+    # for row in rows:
+    #     ins_name = row.instrument_name
+    #     telescope_string = ESO_INSTRUMENTS[ins_name]["telescope"]
+    #     try:
+    #         telescope = Telescope.objects.get(name__contains=telescope_string)
+    #     except ObjectDoesNotExist:
+    #         pass
+    #     except MultipleObjectsReturned:
+    #         print "oh really???" + telescope_string
+    #     else:
+    #         print 'TEL: ', telescope.name
+    #         row.telescope = telescope
+    #     row.save()
+    #
+    # return
+
     url = ESO_ARCHIVE_DB_ROOT+ESO_ARCHIVE_WDBO+ESO_ARCHIVE_DEFAULT_PARAMS
     if science_only is True:
         url += ESO_ARCHIVE_DEFAULT_SCIENCE_PARAM
@@ -37,7 +55,7 @@ def get_ESO_latest_data(start_date=None, end_date=None, science_only=True):
     # url += "starttime=12&endtime=12&"
 
     utc_date = datetime.utcnow()
-    url += "night="+urllib2.quote("{0} {1:02d} {2:02d}".format(utc_date.year, utc_date.month, utc_date.day))
+    url += "night="+urllib2.quote("{0} {1:02d} {2:02d}".format(utc_date.year, utc_date.month, utc_date.day-1))
 
     print url
 
