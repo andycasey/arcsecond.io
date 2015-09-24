@@ -1,18 +1,28 @@
 <div class="site-wrapper">
     <div class="col-md-12">
         <div id="times-container" class="row text-center">
-            <span class="time-title">Local Time :</span>
-            <span class="time-value">{{ date_local | date:'HH:mm:ss' }}</span> &nbsp;&nbsp;
-            <span class="time-title">UT :</span>
-            <span class="time-value">{{ date_UTC | date:'HH:mm:ss' }}</span> &nbsp;&nbsp;
-            <span class="time-title">Julian Day :</span>
-            <span class="time-value">{{ jd }}</span> &nbsp;&nbsp;
-            <span class="time-title">MJD :</span>
-            <span class="time-value">{{ mjd }}</span>
+            <div>
+                <span class="time-title">Local Time :</span>
+                <span class="time-value">{{ date_local | date:'HH:mm:ss' }}</span> &nbsp;&nbsp;
+                <span class="time-title">UT :</span>
+                <span class="time-value">{{ date_UTC | date:'HH:mm:ss' }}</span> &nbsp;&nbsp;
+                <span class="time-title">Julian Day :</span>
+                <span class="time-value">{{ jd }}</span> &nbsp;&nbsp;
+                <span class="time-title">MJD :</span>
+                <span class="time-value">{{ mjd }}</span>
+            </div>
+            <div ng-if="lmst">
+                <span class="time-title">Longitude :</span>
+                <span class="time-value">{{ vm.coordinates.longitude | number:6 }}º</span> &nbsp;&nbsp;
+                <span class="time-title">Latitude :</span>
+                <span class="time-value">{{ vm.coordinates.latitude | number:6 }}º</span> &nbsp;&nbsp;
+                <span class="time-title">LMST :</span>
+                <span class="time-value">{{ lmst.h }}:{{ lmst.m }}:{{ lmst.s }}</span>
+            </div>
         </div>
 
         <div class="container">
-            <div id="table-container" class="row">
+            <div id="archive-table-container" class="row">
                 <div class="table-responsive">
                     <table class="table table-striped">
                         <tr>

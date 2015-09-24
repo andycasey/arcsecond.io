@@ -123,6 +123,7 @@ textarea:focus, input:focus{
     bottom: 0px;
 }
 
+
 .activity-table-container {
     padding-top: 80px;
 }
@@ -161,12 +162,6 @@ ul {
     font-size: larger;
 }
 
-@media (max-width: 768px) {
-    #times-container {
-        margin-top: 0px;
-    }
-}
-
 .time-title {
     font-weight: bold;
 }
@@ -174,4 +169,15 @@ ul {
 .time-value {
     color: #48b0e3;
     font: "Anonymous Pro", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier New", monospace;
+}
+
+@media (max-width: 768px) {
+    #times-container {
+        margin-top: 0;
+        font-size: medium;
+    }
+}
+
+#archive-table-container  {
+    padding-top: 20px;
 }
