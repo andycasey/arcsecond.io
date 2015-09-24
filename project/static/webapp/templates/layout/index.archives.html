@@ -1,7 +1,8 @@
 <div class="site-wrapper">
     <div class="container">
         <div id="times-container" class="row">
-            UT, JD etc...
+            <p>{{ date_local | date:'yyyy MM dd HH:mm:ss' }}</p>
+            <p>{{ date_UTC | date:'yyyy MM dd HH:mm:ss' }}</p>
         </div>
 
         <div class="table-responsive">
