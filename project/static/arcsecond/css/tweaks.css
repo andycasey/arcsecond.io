@@ -201,3 +201,13 @@
     right: 30%;
     -webkit-border-radius: 2px;
 }
+
+#converter-coords-form {
+    display: block;
+}
+
+@media (max-width: 738px) {
+    #converter-coords-form {
+        display: none;
+    }
+}
