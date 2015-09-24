@@ -152,4 +152,26 @@ ul {
     list-style-type: none;
 }
 
+#times-container {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    background: #3a3a3b;
+    margin-top: -30px;
+    color: lightgray;
+    font-size: larger;
+}
 
+@media (max-width: 768px) {
+    #times-container {
+        margin-top: 0px;
+    }
+}
+
+.time-title {
+    font-weight: bold;
+}
+
+.time-value {
+    color: #48b0e3;
+    font: "Anonymous Pro", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier New", monospace;
+}

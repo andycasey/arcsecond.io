@@ -1,30 +1,39 @@
 <div class="site-wrapper">
-    <div class="container">
-        <div id="times-container" class="row">
-            <p>{{ date_local | date:'yyyy MM dd HH:mm:ss' }}</p>
-            <p>{{ date_UTC | date:'yyyy MM dd HH:mm:ss' }}</p>
+    <div class="col-md-12">
+        <div id="times-container" class="row text-center">
+            <span class="time-title">Local Time :</span>
+            <span class="time-value">{{ date_local | date:'HH:mm:ss' }}</span> &nbsp;&nbsp;
+            <span class="time-title">UT :</span>
+            <span class="time-value">{{ date_UTC | date:'HH:mm:ss' }}</span> &nbsp;&nbsp;
+            <span class="time-title">Julian Day :</span>
+            <span class="time-value">{{ jd }}</span> &nbsp;&nbsp;
+            <span class="time-title">MJD :</span>
+            <span class="time-value">{{ mjd }}</span>
         </div>
 
-        <div class="table-responsive">
-            <table class="table table-striped">
-                <tr>
-                    <th>Archive</th>
-                    <th>Date</th>
-                    <th>Observing Site</th>
-                    <th>Telescope</th>
-                    <th>Instrument</th>
-                    <th>Dataset ID</th>
-                </tr>
-                <tr ng-repeat="data_row in vm.data_rows">
-                    <td><a target="_self" href="{{ data_row.archive.url }}">{{ data_row.archive.name }}</a></td>
-                    <td>{{ data_row.date | date:"d MMM yyyy 'at' H:mm" }}</td>
-                    <td></td>
-                    <td></td>
-                    <td>{{ data_row.instrument_name }}</td>
-                    <td>{{ data_row.dataset_id }}</td>
-                </tr>
-            </table>
+        <div class="container">
+            <div id="table-container" class="row">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>Archive</th>
+                            <th>Date</th>
+                            <th>Observing Site</th>
+                            <th>Telescope</th>
+                            <th>Instrument</th>
+                            <th>Dataset ID</th>
+                        </tr>
+                        <tr ng-repeat="data_row in vm.data_rows">
+                            <td><a target="_self" href="{{ data_row.archive.url }}">{{ data_row.archive.name }}</a></td>
+                            <td>{{ data_row.date | date:"d MMM yyyy 'at' H:mm" }}</td>
+                            <td></td>
+                            <td></td>
+                            <td>{{ data_row.instrument_name }}</td>
+                            <td>{{ data_row.dataset_id }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
-
     </div>
 </div>
