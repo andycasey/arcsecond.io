@@ -21,8 +21,8 @@
             </div>
         </div>
 
-        <div class="container">
-            <div id="archive-table-container" class="row">
+        <div class="container" class="row">
+            <div id="archive-table-container">
                 <div class="table-responsive">
                     <table class="table table-striped">
                         <tr>
@@ -41,7 +41,7 @@
                                 {{ data_row.date | date:"d MMM yyyy 'at' H:mm" }}
                             </td>
                             <td>
-                                <a target="_self" href="/observingsite/{{ data_row.telescope.observing_site.name }}">
+                                <a target="_self" href="/observingsites/{{ data_row.telescope.observing_site.name }}">
                                     {{ data_row.telescope.observing_site.short_name || data_row.telescope.observing_site.name }}
                                 </a>
                             </td>
@@ -58,7 +58,8 @@
                     </table>
                 </div>
             </div>
+
+            <div my-loading-spinner="viewLoading"></div>
         </div>
     </div>
 </div>
-

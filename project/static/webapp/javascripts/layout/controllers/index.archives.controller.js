@@ -23,12 +23,15 @@
         activate();
 
         function activate() {
-            Archives.latest('ESO').then(successFn, errorFn);
+            $scope.viewLoading = true;
+
+            Archives.latest('ESO').then(archivesSuccessFn, archivesErrorFn);
+
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(positionSuccessFn, positionErrorFn, {enableHighAccuracy: true});
             }
 
-            function successFn(data, status, headers, config) {
+            function archivesSuccessFn(data, status, headers, config) {
                 vm.data_rows = data.data;
 
                 for (var i = 0; i < vm.data_rows.length; i++) {
@@ -43,10 +46,12 @@
                         }
                     }
                 }
+
+                $scope.viewLoading = false;
             }
 
-            function errorFn(data, status, headers, config) {
-                Snackbar.error(data.error);
+            function archivesErrorFn(data, status, headers, config) {
+                $scope.viewLoading = false;
                 console.log(data.error);
             }
 
@@ -55,7 +60,6 @@
             }
 
             function positionErrorFn(error) {
-                Snackbar.error(error);
                 console.log(error);
             }
 
