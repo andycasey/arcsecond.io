@@ -2,6 +2,25 @@ textarea:focus, input:focus{
     outline: 0;
 }
 
+a[rel="external"] {
+    position: relative;
+    color: #3a90b9;
+}
+
+a[rel="external"]:before {
+    content: "\f08e";
+    font-family: FontAwesome;
+    font-size: 0.8em;
+    position: absolute;
+    bottom: 1px;
+    right: 0;
+    text-decoration: none;
+}
+
+a[rel="external"]:after {
+  content: '\00a0\00a0\00a0\00a0';
+}
+
 .fixed-font-cell {
     color: rgb(139, 139, 139);
 }
@@ -180,4 +199,8 @@ ul {
 
 #archive-table-container  {
     padding-top: 20px;
+}
+
+body.classic .site-wrapper {
+    border-bottom: 0px;
 }

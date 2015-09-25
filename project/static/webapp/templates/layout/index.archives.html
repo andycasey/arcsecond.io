@@ -34,12 +34,26 @@
                             <th>Dataset ID</th>
                         </tr>
                         <tr ng-repeat="data_row in vm.data_rows">
-                            <td><a target="_self" href="{{ data_row.archive.url }}">{{ data_row.archive.name }}</a></td>
-                            <td>{{ data_row.date | date:"d MMM yyyy 'at' H:mm" }}</td>
-                            <td><a target="_self" href="/observingsite/{{ data_row.telescope.observing_site.name }}">{{ data_row.telescope.observing_site.name }}</a></td>
-                            <td>{{ data_row.telescope.name }</td>
-                            <td>{{ data_row.instrument_name }}</td>
-                            <td>{{ data_row.dataset_id }}</td>
+                            <td>
+                                <a target="_self" href="{{ data_row.archive.url }}" rel="external">{{ data_row.archive.name }}</a>
+                            </td>
+                            <td>
+                                {{ data_row.date | date:"d MMM yyyy 'at' H:mm" }}
+                            </td>
+                            <td>
+                                <a target="_self" href="/observingsite/{{ data_row.telescope.observing_site.name }}">
+                                    {{ data_row.telescope.observing_site.short_name || data_row.telescope.observing_site.name }}
+                                </a>
+                            </td>
+                            <td>
+                                {{ data_row.telescope.acronym || data_row.telescope.name }}
+                            </td>
+                            <td>
+                                {{ data_row.instrument_name }}
+                            </td>
+                            <td>
+                                {{ data_row.dataset_id }}
+                            </td>
                         </tr>
                     </table>
                 </div>
