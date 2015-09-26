@@ -7,7 +7,7 @@ from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
 
 from astropy.io import votable
 from bs4 import BeautifulSoup
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from project.arcsecond.models.archives import *
 from project.arcsecond.models.constants import ESO_INSTRUMENTS
@@ -18,7 +18,9 @@ ESO_ARCHIVE_ROOT = "http://archive.eso.org/"
 ESO_ARCHIVE_DB_ROOT = ESO_ARCHIVE_ROOT + "wdb/wdb/eso/eso_archive_main/query?"
 ESO_ARCHIVE_WDBO = "wdbo="+urllib2.quote("votable/display")+"&"
 
-ESO_ARCHIVE_DEFAULT_PARAMS = "max_rows_returned=1000&format=SexaHour&resolver=simbad&aladin_colour=aladin_instrument&tab_night=on&"
+ESO_ARCHIVE_LIMIT_OFFSET = 5
+ESO_ARCHIVE_MAX_ROWS = "10000"
+ESO_ARCHIVE_DEFAULT_PARAMS = "max_rows_returned="+ESO_ARCHIVE_MAX_ROWS+"&format=SexaHour&resolver=simbad&aladin_colour=aladin_instrument&tab_night=on&"
 
 ESO_ARCHIVE_DEFAULT_ADDITIONAL_PARAMS = "tab_tel_airm_start=on&tab_stat_instrument=on&tab_ambient=on&tab_stat_exptime=on&tab_HDR=on&tab_mjd_obs=on&tab_stat_plot=on&tab_distance=on&tab_pos_angle=on&"
 ESO_ARCHIVE_DEFAULT_TABS_PARAMS = "tab_target_coord=on&tab_object=on&tab_night=on&tab_prog_id=on&tab_gto=on&tab_obs_mode=on&tab_title=on&tab_dp_cat=on&tab_dp_tech=on&tab_dp_cat=on&tab_dp_type=on&tab_dp_tech=on&tab_dp_id=on&tab_rel_date=on&tab_exptime=on&tab_filter_path=on&tab_instrument=on&"
@@ -31,33 +33,86 @@ ESO_ARCHIVE_DEFAULT_OBJECT_PARAM = "dp_type=OBJECT&"
 
 def get_ESO_latest_data(start_date=None, end_date=None, science_only=True):
 
-    # rows = ESOArchiveDataRow.objects.all()
-    # for row in rows:
-    #     ins_name = row.instrument_name
-    #     telescope_string = ESO_INSTRUMENTS[ins_name]["telescope"]
-    #     try:
-    #         telescope = Telescope.objects.get(name__contains=telescope_string)
-    #     except ObjectDoesNotExist:
-    #         pass
-    #     except MultipleObjectsReturned:
-    #         print "oh really???" + telescope_string
-    #     else:
-    #         print 'TEL: ', telescope.name
-    #         row.telescope = telescope
-    #     row.save()
-    #
-    # return
-
     url = ESO_ARCHIVE_DB_ROOT+ESO_ARCHIVE_WDBO+ESO_ARCHIVE_DEFAULT_PARAMS
     if science_only is True:
         url += ESO_ARCHIVE_DEFAULT_SCIENCE_PARAM
 
-    # url += "starttime=12&endtime=12&"
+    now = datetime.utcnow()
+    max_offset = 0
 
-    utc_date = datetime.utcnow()
-    url += "night="+urllib2.quote("{0} {1:02d} {2:02d}".format(utc_date.year, utc_date.month, utc_date.day-1))
+    if start_date is not None:
+        start = timestring.Date(start_date, tz="UTC").date
+        if start is not None and start < datetime.utcnow():
+            delta = now - start
+            max_offset = max(delta.days, max_offset) # Cannot be < 1
 
-    print url
+
+    max_offset = min(max_offset, ESO_ARCHIVE_LIMIT_OFFSET)
+    archive, created = DataArchive.objects.get_or_create(name="ESO")
+
+    pks = []
+
+    if max_offset == 0:
+        new_pks = read_ESO_VOTable_first_table(archive, 0)
+        if len(new_pks) == 0:
+            new_pks = read_ESO_VOTable_first_table(archive, 1)
+        pks.append(new_pks)
+    else:
+        for offset in range(max_offset):
+            new_pks = read_ESO_VOTable_first_table(archive, offset)
+            pks.append(new_pks)
+
+    return pks
+
+
+def read_ESO_VOTable_first_table(archive, day_offset=0):
+
+    pks = []
+    table = get_ESO_VOTable_first_table(day_offset)
+
+    if table is not None:
+        dataset_id_index = -1
+        for index, field in enumerate(table.fields):
+            if field.name == 'dp_id':
+                dataset_id_index = index
+
+        for row in xrange(len(table.array)):
+            dataset_id = table.array[row][dataset_id_index]
+            data_row, created = ESOArchiveDataRow.objects.get_or_create(dataset_id=dataset_id)
+            data_row.archive = archive
+
+            ins_name = dataset_id.split('.')[0]
+            instrument_name = ESO_INSTRUMENTS[ins_name]["name"]
+            data_row.instrument_name = instrument_name
+
+            date_string = dataset_id[len(ins_name)+1:]
+            date_no_microseconds = timestring.Date(date_string, tz="UTC").date
+            microseconds = int(date_string.split('.')[-1])*1000
+            data_row.date = date_no_microseconds + timedelta(microseconds=microseconds)
+
+            telescope_string = ESO_INSTRUMENTS[ins_name]["telescope"]
+            try:
+                telescope = Telescope.objects.get(name__contains=telescope_string)
+            except ObjectDoesNotExist:
+                pass
+            except MultipleObjectsReturned:
+                print ">>>>>> oh really???" + telescope_string
+            else:
+                data_row.telescope = telescope
+
+            data_row.save()
+            pks.append(data_row.pk)
+
+    return pks
+
+
+def get_ESO_VOTable_first_table(day_offset):
+    url = ESO_ARCHIVE_DB_ROOT+ESO_ARCHIVE_WDBO+ESO_ARCHIVE_DEFAULT_PARAMS
+    # Science only for now
+    url += ESO_ARCHIVE_DEFAULT_SCIENCE_PARAM
+
+    # Adding night param
+    url += get_past_UTC_date_night(day_offset)
 
     try:
         response = urllib2.urlopen(url)
@@ -69,46 +124,15 @@ def get_ESO_latest_data(start_date=None, end_date=None, science_only=True):
             first_table = response_votable.get_first_table()
         except:
             return None
-
-        dataset_id_index = -1
-        for index, field in enumerate(first_table.fields):
-            if field.name == 'dp_id':
-                dataset_id_index = index
-
-        archive, created = DataArchive.objects.get_or_create(name="ESO")
-
-        pks = []
-        for row in xrange(len(first_table.array)):
-            dataset_id = first_table.array[row][dataset_id_index]
-            data_row, created = ESOArchiveDataRow.objects.get_or_create(dataset_id=dataset_id)
-            data_row.archive = archive
-
-            instrument_name = dataset_id.split('.')[0]
-            data_row.instrument_name = instrument_name
-
-            date_string = dataset_id[len(instrument_name)+1:]
-            data_row.date = timestring.Date(date_string, tz="UTC").date
-
-            # observingsite_string = ESO_INSTRUMENTS[instrument_name]["site"]
-            # observingsite = ObservingSite.objects.get(name__contains=observingsite_string)
-            #
-            # telescope_string = ESO_INSTRUMENTS[instrument_name]["telescope"]
-            # try:
-            #     telescope = Telescope.objects.filter(name__contains=telescope_string).filter(observing_site__exact=observingsite).first()
-            # except ObjectDoesNotExist:
-            #     pass
-            # except MultipleObjectsReturned:
-            #     print "oh really???" + telescope_string
-            # else:
-            #     data_row = telescope
-
-            data_row.save()
-
-            pks.append(data_row.pk)
-
-        return pks
+        else:
+            return first_table
 
 
+def get_past_UTC_date_night(day_offset=0):
+    utc_date = datetime.utcnow() - timedelta(days=day_offset)
+    night_string = "night="+urllib2.quote("{0} {1:02d} {2:02d}".format(utc_date.year, utc_date.month, utc_date.day))
+    print "Getting ESO Data for night: "+night_string
+    return night_string
 
 
 

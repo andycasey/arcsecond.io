@@ -14,13 +14,21 @@
 
         return Archives;
 
-        function latest(archive_name) {
+        function latest(archive_name, params) {
             var url = $window.ARCSECOND_API_ROOT_URL + '/1/archives/';
             if (archive_name !== undefined) {
                 url += archive_name+"/";
             }
             else {
                 url += "ESO/"
+            }
+            if (params !== undefined) {
+                url += "?";
+                for (var key in params) {
+                    if (params.hasOwnProperty(key)) {
+                        url += key+"="+params[key]+"&";
+                    }
+                }
             }
             return $http.get(url);
         }

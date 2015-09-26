@@ -8,34 +8,34 @@ times_regex = "([-+]?([0-9]*\.?[0-9]+)|([\d]{4}-[\d]{2}-[\d]{2}T[\d]{2}:[\d]{2}:
 time_formats_regex = 'byear|byear_str|cxcsec|datetime|decimalyear|gps|iso|isot|jd|jyear|jyear_str|mjd|plot_date|unix|yday'
 
 ESO_INSTRUMENTS = {
-    "HARPS":  {"site": "La Silla", "telescope": "3.6m"},
-    "SOFI":   {"site": "La Silla", "telescope": "New Technology Telescope"},
-    "EFOSC2": {"site": "La Silla", "telescope": "New Technology Telescope"},
-    "WFI":    {"site": "La Silla", "telescope": "ESO 2.2m"},
-    "FEROS":  {"site": "La Silla", "telescope": "ESO 2.2m"},
-    "GROND":  {"site": "La Silla", "telescope": "ESO 2.2m"},
+    "HARPS": {"name": "HARPS",  "site": "La Silla", "telescope": "3.6m"},
+    "SOFI":  {"name": "SOFI",   "site": "La Silla", "telescope": "New Technology Telescope"},
+    "EFOSC": {"name": "EFOSC2", "site": "La Silla", "telescope": "New Technology Telescope"},
+    "WFI":   {"name": "WFI",    "site": "La Silla", "telescope": "ESO 2.2m"},
+    "FEROS": {"name": "FEROS",  "site": "La Silla", "telescope": "ESO 2.2m"},
+    "GROND": {"name": "GROND",  "site": "La Silla", "telescope": "ESO 2.2m"},
 
-    "NACO":  {"site": "Paranal", "telescope": "Unit Telescope 1"},
-    "FORS2": {"site": "Paranal", "telescope": "Unit Telescope 1"},
-    "KMOS":  {"site": "Paranal", "telescope": "Unit Telescope 1"},
+    "NACO":  {"name": "NAOS-CONICA", "site": "Paranal", "telescope": "Unit Telescope 1"},
+    "FORS2": {"name": "FORS2", "site": "Paranal", "telescope": "Unit Telescope 1"},
+    "KMOS":  {"name": "KMOS", "site": "Paranal", "telescope": "Unit Telescope 1"},
 
-    "FLAMES":   {"site": "Paranal", "telescope": "Unit Telescope 2"},
-    "XSHOOTER": {"site": "Paranal", "telescope": "Unit Telescope 2"},
-    "UVES":     {"site": "Paranal", "telescope": "Unit Telescope 2"},
+    "FLAME": {"name": "FLAMES", "site": "Paranal", "telescope": "Unit Telescope 2"},
+    "XSHOO": {"name": "XSHOOTER", "site": "Paranal", "telescope": "Unit Telescope 2"},
+    "UVES":  {"name": "UVES", "site": "Paranal", "telescope": "Unit Telescope 2"},
 
-    "SPHER": {"site": "Paranal", "telescope": "Unit Telescope 3"},
-    "VISIR": {"site": "Paranal", "telescope": "Unit Telescope 3"},
-    "VIMOS": {"site": "Paranal", "telescope": "Unit Telescope 3"},
+    "SPHER": {"name": "SPHERE", "site": "Paranal", "telescope": "Unit Telescope 3"},
+    "VISIR": {"name": "VISIR", "site": "Paranal", "telescope": "Unit Telescope 3"},
+    "VIMOS": {"name": "VIMOS", "site": "Paranal", "telescope": "Unit Telescope 3"},
 
-    "HAWK-I":  {"site": "Paranal", "telescope": "Unit Telescope 4"},
-    "SINFO": {"site": "Paranal", "telescope": "Unit Telescope 4"},
-    "MUSE":    {"site": "Paranal", "telescope": "Unit Telescope 4"},
+    "HAWKI": {"name": "HAWK-I", "site": "Paranal", "telescope": "Unit Telescope 4"},
+    "SINFO": {"name": "SINFONI", "site": "Paranal", "telescope": "Unit Telescope 4"},
+    "MUSE":  {"name": "MUSE", "site": "Paranal", "telescope": "Unit Telescope 4"},
 
-    "VCAM": {"site": "Paranal", "telescope": "VISTA"},
-    "OMEGA": {"site": "Paranal", "telescope": "VST"},
+    "VCAM":  {"name": "VIRCAM", "site": "Paranal", "telescope": "VISTA"},
+    "OMEGA": {"name": "OmegaCam", "site": "Paranal", "telescope": "VST"},
 
     # Decomissionned
 
-    "FORS1": {"site": "Paranal", "telescope": "Unit Telescope 1"},
-    "ISAAC": {"site": "Paranal", "telescope": "Unit Telescope 3"},
+    "FORS1": {"name": "FORS1", "site": "Paranal", "telescope": "Unit Telescope 1"},
+    "ISAAC": {"name": "ISAAC", "site": "Paranal", "telescope": "Unit Telescope 3"},
 }

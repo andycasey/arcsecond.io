@@ -1,6 +1,7 @@
 from django.core import exceptions
 
 from rest_framework import generics
+import timestring
 
 from project.arcsecond import connectors
 from project.arcsecond import models
@@ -23,9 +24,18 @@ class ESOArchiveDataRowsListAPIView(mixins.RequestLogViewMixin, generics.ListAPI
     serializer_class = serializers.ESOArchiveDataRowSerializer
 
     def get_queryset(self):
-        # connectors.get_ESO_latest_data()
-        return super(ESOArchiveDataRowsListAPIView, self).get_queryset().order_by("-date")
+        params = self.request.query_params
+        date_start_string = params.get("start", None)
+        connectors.get_ESO_latest_data(start_date=date_start_string)
 
+        qs = super(ESOArchiveDataRowsListAPIView, self).get_queryset().order_by("-date")
+
+        if date_start_string is not None:
+            date_start = timestring.Date(date_start_string, tz="UTC").date
+            if date_start is not None:
+                qs = qs.filter(date__gt=date_start)
+
+        return qs
 
 
 class HSTProgrammeSummaryDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIView):
