@@ -19,5 +19,19 @@
                 return filtered;
             };
         });
+
+    angular
+        .module('webapp.filters', [])
+        .filter('timeAgo', ['$interval', function ($interval) {
+            $interval(function (){}, 60000);
+
+            function fromNowFilter(time){
+                return moment(time).fromNow();
+            }
+
+            fromNowFilter.$stateful = true;
+            return fromNowFilter;
+        }]);
+
 })();
 

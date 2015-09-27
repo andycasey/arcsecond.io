@@ -50,7 +50,7 @@
                                 <a target="_self" href="{{ data_row.archive.url }}" rel="external">{{ data_row.archive.name }}</a>
                             </td>
                             <td>
-                                {{ data_row.date | date:"d MMM yyyy 'at' H:mm" }}
+                                {{ data_row.date | timeAgo }}
                             </td>
                             <td>
                                 <a target="_self" href="/observingsites/{{ data_row.telescope.observingsite.name }}">
