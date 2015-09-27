@@ -32,7 +32,12 @@
             }
 
             function archivesSuccessFn(data, status, headers, config) {
-                vm.data_rows = data.data;
+                if (data.data.results !== undefined && data.data.count !== undefined) {
+                    vm.data_rows = data.data.results;
+                }
+                else {
+                    vm.data_rows = data.data;
+                }
 
                 for (var i = 0; i < vm.data_rows.length; i++) {
                     var data_row = vm.data_rows[i];

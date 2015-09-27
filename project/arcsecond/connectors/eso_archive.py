@@ -37,12 +37,12 @@ def get_ESO_latest_data(start_date=None, end_date=None, science_only=True):
     if science_only is True:
         url += ESO_ARCHIVE_DEFAULT_SCIENCE_PARAM
 
-    now = datetime.utcnow()
+    now = datetime.now(tz=timezone.utc)
     max_offset = 0
 
     if start_date is not None:
         start = timestring.Date(start_date, tz="UTC").date
-        if start is not None and start < datetime.utcnow():
+        if start is not None and start < now:
             delta = now - start
             max_offset = max(delta.days, max_offset) # Cannot be < 1
 
@@ -129,7 +129,7 @@ def get_ESO_VOTable_first_table(day_offset):
 
 
 def get_past_UTC_date_night(day_offset=0):
-    utc_date = datetime.utcnow() - timedelta(days=day_offset)
+    utc_date = datetime.now(tz=timezone.utc) - timedelta(days=day_offset)
     night_string = "night="+urllib2.quote("{0} {1:02d} {2:02d}".format(utc_date.year, utc_date.month, utc_date.day))
     print "Getting ESO Data for night: "+night_string
     return night_string

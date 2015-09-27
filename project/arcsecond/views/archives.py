@@ -1,7 +1,9 @@
 from django.core import exceptions
 
-from rest_framework import generics
 import timestring
+
+from rest_framework import generics
+from rest_framework import pagination
 
 from project.arcsecond import connectors
 from project.arcsecond import models
@@ -19,9 +21,13 @@ class ESOProgrammeSummaryDetailAPIView(mixins.RequestLogViewMixin, generics.Retr
         return obj
 
 
+class ESOArchiveDataRowsListPagination(pagination.PageNumberPagination):
+    page_size = 1000
+
 class ESOArchiveDataRowsListAPIView(mixins.RequestLogViewMixin, generics.ListAPIView):
     queryset = models.ESOArchiveDataRow.objects.all().order_by("-date")
     serializer_class = serializers.ESOArchiveDataRowSerializer
+    pagination_class = ESOArchiveDataRowsListPagination
 
     def get_queryset(self):
         params = self.request.query_params
