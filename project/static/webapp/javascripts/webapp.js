@@ -9,6 +9,7 @@
             'webapp.utils',
             'webapp.layout',
             'webapp.observingsites',
+            'webapp.telescopes',
             'webapp.archives'
         ]);
 

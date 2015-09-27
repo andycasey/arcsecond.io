@@ -44,8 +44,8 @@
             });
         }
 
-        function get(original_name) {
-            return $http.get($window.ARCSECOND_API_ROOT_URL + '/1/observingsites/' + original_name);
+        function get(original_name, config) {
+            return $http.get($window.ARCSECOND_API_ROOT_URL + '/1/observingsites/' + original_name, config);
         }
 
         function update(original_name, name, long_name, IAUCode) {
@@ -56,8 +56,8 @@
             });
         }
 
-        function activities() {
-            return $http.get($window.ARCSECOND_API_ROOT_URL + '/1/observingsites/activities');
+        function activities(config) {
+            return $http.get($window.ARCSECOND_API_ROOT_URL + '/1/observingsites/activities', config);
         }
     }
 })();

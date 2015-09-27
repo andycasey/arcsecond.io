@@ -5,14 +5,18 @@
         .module('webapp.layout.controllers')
         .controller('ArchivesIndexController', ArchivesIndexController);
 
-    ArchivesIndexController.$inject = ['$scope', '$http', '$interval', '$document', 'Archives', 'Times', 'Snackbar'];
+    ArchivesIndexController.$inject = ['$scope', '$http', '$interval', 'Archives', 'Times', 'Telescopes', 'ObservingSites', 'Snackbar'];
 
-    function ArchivesIndexController($scope, $http, $interval, $document, Archives, Times, Snackbar) {
+    function ArchivesIndexController($scope, $http, $interval, Archives, Times, Telescopes, ObservingSites, Snackbar) {
         var vm = this;
 
         vm.data_rows = undefined;
         vm.coordinates = undefined;
-        vm._mappings = {};
+        vm.instruments = [];
+        vm.observingsites = [];
+
+        vm._telRowsMapping = {};
+        vm._telSiteMapping = {};
 
         var tick = function() {
             $scope.times = Times.all(vm.coordinates);
@@ -32,37 +36,6 @@
                 navigator.geolocation.getCurrentPosition(positionSuccessFn, positionErrorFn, {enableHighAccuracy: true});
             }
 
-            function archivesSuccessFn(data, status, headers, config) {
-                if (data.data.results !== undefined && data.data.count !== undefined) {
-                    vm.data_rows = data.data.results;
-                }
-                else {
-                    vm.data_rows = data.data;
-                }
-
-                for (var i = 0; i < vm.data_rows.length; i++) {
-                    var data_row = vm.data_rows[i];
-                    if (data_row.telescope !== undefined) {
-                        var telescope = vm._mappings[data_row.instrument_name];
-                        if (telescope !== undefined) {
-                            data_row.telescope = telescope;
-                        }
-                        else {
-                            $http.get(data_row.telescope, {"data_row": data_row}).then(telescopeSuccessFn, telescopeErrorFn)
-                        }
-                    }
-                }
-
-                $scope.viewLoading = false;
-                $('#timer').css("display", "block");
-                document.getElementById("timer")['start']();
-            }
-
-            function archivesErrorFn(data, status, headers, config) {
-                $scope.viewLoading = false;
-                console.log(data.error);
-            }
-
             function positionSuccessFn(position) {
                 vm.coordinates = position.coords;
             }
@@ -71,27 +44,79 @@
                 console.log(error);
             }
 
-            function telescopeSuccessFn(response) {
-                var data_row = response.config.data_row;
-                data_row.telescope = response.data;
-                vm._mappings[data_row.instrument_name] = data_row.telescope;
-
-                var observing_site = vm._mappings[data_row.telescope.name];
-                if (observing_site !== undefined) {
-                    data_row.telescope.observing_site = observing_site;
+            function archivesSuccessFn(response, status, headers, config) {
+                if (response.data.results !== undefined && response.data.count !== undefined) {
+                    vm.data_rows = response.data.results;
                 }
                 else {
-                    $http.get(data_row.telescope.observing_site, {"telescope": data_row.telescope}).then(observingSiteSuccessFn, telescopeErrorFn)
+                    vm.data_rows = response.data;
                 }
+
+                var telescope_names = [];
+                for (var i = 0; i < vm.data_rows.length; i++) {
+                    var data_row = vm.data_rows[i];
+
+                    if (data_row.telescope !== undefined && data_row.telescope != null) {
+                        var encoded_telescope_name = URI(data_row.telescope).path().split("/").filter(function (el) {return el.length}).pop();
+                        var telescope_name = decodeURIComponent(encoded_telescope_name);
+
+                        if (vm._telRowsMapping[telescope_name] == undefined) {
+                            vm._telRowsMapping[telescope_name] = [];
+                        }
+                        vm._telRowsMapping[telescope_name].push(data_row);
+
+                        if ($.inArray(telescope_name, telescope_names) == -1) {
+                            telescope_names.push(telescope_name);
+                        }
+                    }
+
+                    if ($.inArray(data_row.instrument_name, vm.instruments) == -1) {
+                        vm.instruments.push(data_row.instrument_name);
+                    }
+                }
+
+                for (var j = 0; j < telescope_names.length; j++) {
+                    Telescopes.get(telescope_names[j]).then(telescopeSuccessFn, telescopeErrorFn);
+                }
+
+                $scope.viewLoading = false;
             }
 
-            function observingSiteSuccessFn(response) {
-                var telescope = response.config.telescope;
-                telescope.observing_site = response.data;
-                vm._mappings[telescope.name] = telescope.observing_site;
+            function archivesErrorFn(response, status, headers, config) {
+                $scope.viewLoading = false;
+                console.log(response.error);
+            }
+
+            function telescopeSuccessFn(response) {
+                var telescope = response.data;
+
+                var data_rows = vm._telRowsMapping[telescope.name];
+                for (var i = 0; i < data_rows.length; i++) {
+                    data_rows[i].telescope = telescope;
+                }
+                delete vm._telRowsMapping[telescope.name];
+
+                var encoded_observingsite_name = URI(telescope.observing_site).path().split("/").filter(function (el) {return el.length}).pop();
+                var observingsite_name = decodeURIComponent(encoded_observingsite_name);
+                if (vm._telSiteMapping[observingsite_name] === undefined) {
+                    ObservingSites.get(observingsite_name, {telescope: telescope}).then(observingsiteSuccessFn, observingsiteErrorFn);
+                }
+
+                $('#timer').css("display", "block");
+                document.getElementById("timer")['start']();
             }
 
             function telescopeErrorFn(response) {
+                console.log(response);
+            }
+
+            function observingsiteSuccessFn(response) {
+                var observingsite = response.data;
+                var telescope = response.config.telescope;
+                telescope.observingsite = observingsite;
+            }
+
+            function observingsiteErrorFn(response) {
                 console.log(response);
             }
         }
