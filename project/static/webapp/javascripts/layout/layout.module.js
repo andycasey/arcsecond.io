@@ -7,5 +7,5 @@
         ]);
 
     angular
-        .module('webapp.layout.controllers', []);
+        .module('webapp.layout.controllers', ['timer']);
 })();

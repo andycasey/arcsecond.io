@@ -1,3 +1,7 @@
+body.classic .site-wrapper {
+    border-bottom: 0px;
+}
+
 textarea:focus, input:focus{
     outline: 0;
 }
@@ -172,6 +176,8 @@ ul {
     list-style-type: none;
 }
 
+/* --- ARCHIVES --- */
+
 #times-container {
     padding-bottom: 15px;
     padding-top: 15px;
@@ -197,10 +203,11 @@ ul {
     }
 }
 
-#archive-table-container  {
-    padding-top: 20px;
+#timer-container {
+    padding-top: 15px;
 }
 
-body.classic .site-wrapper {
-    border-bottom: 0px;
+#archive-table-container  {
+    /*padding-top: 0px;*/
 }
+

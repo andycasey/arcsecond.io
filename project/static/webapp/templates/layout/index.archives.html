@@ -21,7 +21,19 @@
             </div>
         </div>
 
-        <div class="container" class="row">
+        <div class="row" id="timer-container">
+            <div class="col-md-6 col-md-offset-3">
+                <timer countdown="60" interval="1000" autostart="false" id="timer">
+                    <div class="progress active {{displayProgressActive}}" style="height: 20px;">
+                        <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="60" style="width: {{ (100*countdown/60)| number:0 }}%;">
+                            Update in {{countdown}} seconds
+                        </div>
+                    </div>
+                </timer>
+            </div>
+        </div>
+
+        <div class="row">
             <div id="archive-table-container">
                 <div class="table-responsive">
                     <table class="table table-striped">
@@ -59,7 +71,9 @@
                 </div>
             </div>
 
-            <div my-loading-spinner="viewLoading"></div>
+            <div my-loading-spinner="viewLoading">
+                Crunching archive data rows. Hang tight...
+            </div>
         </div>
     </div>
 </div>

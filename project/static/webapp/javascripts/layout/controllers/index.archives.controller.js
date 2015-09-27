@@ -5,9 +5,9 @@
         .module('webapp.layout.controllers')
         .controller('ArchivesIndexController', ArchivesIndexController);
 
-    ArchivesIndexController.$inject = ['$scope', '$http', '$interval', 'Archives', 'Times', 'Snackbar'];
+    ArchivesIndexController.$inject = ['$scope', '$http', '$interval', '$document', 'Archives', 'Times', 'Snackbar'];
 
-    function ArchivesIndexController($scope, $http, $interval, Archives, Times, Snackbar) {
+    function ArchivesIndexController($scope, $http, $interval, $document, Archives, Times, Snackbar) {
         var vm = this;
 
         vm.data_rows = undefined;
@@ -24,6 +24,7 @@
 
         function activate() {
             $scope.viewLoading = true;
+            $('#timer').css("display", "none");
 
             Archives.latest('ESO').then(archivesSuccessFn, archivesErrorFn);
 
@@ -53,6 +54,8 @@
                 }
 
                 $scope.viewLoading = false;
+                $('#timer').css("display", "block");
+                document.getElementById("timer")['start']();
             }
 
             function archivesErrorFn(data, status, headers, config) {
