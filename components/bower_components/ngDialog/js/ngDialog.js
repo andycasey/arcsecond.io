@@ -14,7 +14,9 @@
         }
     } else if (typeof define === 'function' && define.amd) {
         // AMD
-        define(['angular'], factory);
+        define(['ngDialog'], function (angular) {
+          factory(root.angular);
+        });
     } else {
         // Global Variables
         factory(root.angular);
@@ -77,19 +79,6 @@
             function ($document, $templateCache, $compile, $q, $http, $rootScope, $timeout, $window, $controller, $injector) {
                 var $elements = [];
 
-                angular.forEach(
-                    ['html', 'body'],
-                    function(elementName) {
-                        $elements[elementName] = $document.find(elementName);
-                        if (forceElementsReload[elementName]) {
-                            var eventName = privateMethods.getRouterLocationEventName();
-                            $rootScope.$on(eventName, function () {
-                                $elements[elementName] = $document.find(elementName);
-                            });
-                        }
-                    }
-                );
-
                 var privateMethods = {
                     onDocumentKeydown: function (event) {
                         if (event.keyCode === 27) {
@@ -124,6 +113,7 @@
                         var originalBodyPadding = parseInt(($elements.body.css('padding-right') || 0), 10);
                         $elements.body.css('padding-right', (originalBodyPadding + width) + 'px');
                         $elements.body.data('ng-dialog-original-padding', originalBodyPadding);
+                        $rootScope.$broadcast('ngDialog.setPadding', width);
                     },
 
                     resetBodyPadding: function () {
@@ -133,6 +123,7 @@
                         } else {
                             $elements.body.css('padding-right', '');
                         }
+                        $rootScope.$broadcast('ngDialog.setPadding', 0);
                     },
 
                     performCloseDialog: function ($dialog, value) {
@@ -163,7 +154,7 @@
                         }
 
                         var previousFocus = $dialog.data('$ngDialogPreviousFocus');
-                        if (previousFocus) {
+                        if (previousFocus && previousFocus.focus) {
                             previousFocus.focus();
                         }
 
@@ -499,7 +490,8 @@
                                 template += '<div class="ngdialog-close"></div>';
                             }
 
-                            $dialog = $el('<div id="ngdialog' + localID + '" class="ngdialog"></div>');
+                            var hasOverlayClass = options.overlay ? '' : ' ngdialog-no-overlay';
+                            $dialog = $el('<div id="ngdialog' + localID + '" class="ngdialog' + hasOverlayClass + '"></div>');
                             $dialog.html((options.overlay ?
                                 '<div class="ngdialog-overlay"></div><div class="ngdialog-content" role="document">' + template + '</div>' :
                                 '<div class="ngdialog-content" role="document">' + template + '</div>'));
@@ -515,26 +507,6 @@
                             } else if (options.data && angular.isObject(options.data)) {
                                 scope.ngDialogData = options.data;
                                 scope.ngDialogData.ngDialogId = dialogID;
-                            }
-
-                            if (options.controller && (angular.isString(options.controller) || angular.isArray(options.controller) || angular.isFunction(options.controller))) {
-
-                                var label;
-
-                                if (options.controllerAs && angular.isString(options.controllerAs)) {
-                                    label = options.controllerAs;
-                                }
-
-                                var controllerInstance = $controller(options.controller, angular.extend(
-                                    locals,
-                                    {
-                                        $scope: scope,
-                                        $element: $dialog
-                                    }),
-                                    null,
-                                    label
-                                );
-                                $dialog.data('$ngDialogControllerController', controllerInstance);
                             }
 
                             if (options.className) {
@@ -578,6 +550,26 @@
                             scope.closeThisDialog = function (value) {
                                 privateMethods.closeDialog($dialog, value);
                             };
+
+                            if (options.controller && (angular.isString(options.controller) || angular.isArray(options.controller) || angular.isFunction(options.controller))) {
+
+                                var label;
+
+                                if (options.controllerAs && angular.isString(options.controllerAs)) {
+                                    label = options.controllerAs;
+                                }
+
+                                var controllerInstance = $controller(options.controller, angular.extend(
+                                    locals,
+                                    {
+                                        $scope: scope,
+                                        $element: $dialog
+                                    }),
+                                    null,
+                                    label
+                                );
+                                $dialog.data('$ngDialogControllerController', controllerInstance);
+                            }
 
                             $timeout(function () {
                                 var $activeDialogs = document.querySelectorAll('.ngdialog');
@@ -766,6 +758,19 @@
                         return defaults;
                     }
                 };
+
+                angular.forEach(
+                    ['html', 'body'],
+                    function(elementName) {
+                        $elements[elementName] = $document.find(elementName);
+                        if (forceElementsReload[elementName]) {
+                            var eventName = privateMethods.getRouterLocationEventName();
+                            $rootScope.$on(eventName, function () {
+                                $elements[elementName] = $document.find(elementName);
+                            });
+                        }
+                    }
+                );
 
                 return publicMethods;
             }];

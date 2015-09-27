@@ -182,6 +182,7 @@ BOWER_INSTALLED_APPS = (
     'angular-route#1.4.4',
     'angular-resource#1.4.4',
     'angular-cookies#1.4.4',
+    'angular-timer',
     'ngDialog',
     'angular-google-maps',
     'snackbarjs',
