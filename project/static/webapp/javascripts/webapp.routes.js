@@ -24,7 +24,6 @@
                 controllerAs: 'vm',
                 templateUrl: '/static/webapp/templates/layout/single.observingsites.html'
             })
-
             .when('/archives', {
                 controller: 'ArchivesIndexController',
                 controllerAs: 'vm',

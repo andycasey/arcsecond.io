@@ -1,7 +1,3 @@
-/**
- * ObservingSites
- * @namespace webapp.observingsites.services
- */
 (function () {
     'use strict';
 

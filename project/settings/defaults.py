@@ -186,7 +186,7 @@ BOWER_INSTALLED_APPS = (
     'ngDialog',
     'angular-google-maps',
     'snackbarjs',
-
+    'uri.js'
 )
 
 # https://github.com/sunlightlabs/django-honeypot
