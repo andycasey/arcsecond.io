@@ -1,0 +1,13 @@
+<div class="row" ng-cloak>
+    <div ng-repeat="telegram in telegrams | nameContainsSubstring:searchString">
+        <div class="col-md-12">
+            <telegram telegram="telegram"></telegram>
+        </div>
+    </div>
+</div>
+
+<div ng-hide="telegrams">
+    <div class="col-sm-12 no-telegram-here">
+        <em>The are no telegrams here.</em>
+    </div>
+</div>

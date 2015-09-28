@@ -10,7 +10,8 @@
             'webapp.layout',
             'webapp.observingsites',
             'webapp.telescopes',
-            'webapp.archives'
+            'webapp.archives',
+            'webapp.telegrams'
         ]);
 
     angular
