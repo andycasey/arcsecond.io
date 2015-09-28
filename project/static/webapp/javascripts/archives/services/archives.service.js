@@ -22,14 +22,22 @@
             else {
                 url += "ESO/"
             }
+
+            var append = "";
             if (params !== undefined) {
-                url += "?";
                 for (var key in params) {
                     if (params.hasOwnProperty(key)) {
-                        url += key+"="+params[key]+"&";
+                        if (params[key] !== undefined) {
+                            append += key+"="+params[key]+"&";
+                        }
                     }
                 }
             }
+
+            if (append.length > 0) {
+                url += "?" + append;
+            }
+            console.log("---> "+url);
             return $http.get(url);
         }
     }

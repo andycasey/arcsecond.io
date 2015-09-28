@@ -22,10 +22,15 @@
         </div>
 
         <div class="row" id="timer-container">
-            <div class="col-md-6 col-md-offset-3">
-                <timer countdown="60" interval="1000" autostart="false" id="timer">
+            <div class="col-md-6 col-md-offset-3 text-center">
+                <h3>Science Data Rows in ESO archive.</h3>
+                <timer countdown="60" interval="1000" autostart="false" id="timer" finish-callback="updateCountdownFinished(this);">
                     <div class="progress active {{displayProgressActive}}" style="height: 20px;">
-                        <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="60" style="width: {{ (100*countdown/60)| number:0 }}%;">
+                        <div class="progress-bar progress-bar-info progress-bar-striped"
+                             role="progressbar"
+                             aria-valuemin="0"
+                             aria-valuemax="60"
+                             style="width: {{ (100*countdown/60)| number:0 }}%;">
                             Update in {{countdown}} seconds
                         </div>
                     </div>
@@ -71,9 +76,7 @@
                 </div>
             </div>
 
-            <div my-loading-spinner="viewLoading">
-                Crunching archive data rows. Hang tight...
-            </div>
+            <div my-loading-spinner="viewLoading"></div>
         </div>
     </div>
 </div>

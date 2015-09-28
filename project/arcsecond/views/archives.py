@@ -1,6 +1,7 @@
 from django.core import exceptions
 
 import timestring
+import datetime
 
 from rest_framework import generics
 from rest_framework import pagination
@@ -37,7 +38,7 @@ class ESOArchiveDataRowsListAPIView(mixins.RequestLogViewMixin, generics.ListAPI
         qs = super(ESOArchiveDataRowsListAPIView, self).get_queryset().order_by("-date")
 
         if date_start_string is not None:
-            date_start = timestring.Date(date_start_string, tz="UTC").date
+            date_start = timestring.Date(date_start_string, tz="UTC").date + datetime.timedelta(microseconds=500)
             if date_start is not None:
                 qs = qs.filter(date__gt=date_start)
 
