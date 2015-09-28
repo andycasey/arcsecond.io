@@ -133,3 +133,18 @@ class ArchivesIndexView(TemplateView):
         return super(ArchivesIndexView, self).dispatch(*args, **kwargs)
 
 
+class TelegramsIndexView(TemplateView):
+    template_name = 'arcsecond/index_webapp.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(TelegramsIndexView, self).get_context_data(**kwargs)
+        context['angular_app'] = "webapp"
+        context['api_root_url'] = settings.ARCSECOND_API_ROOT_URL
+        context['meta'] = get_generic_meta(title="arcsecond.io", url=reverse_lazy('index_www'))
+        return context
+
+    @method_decorator(ensure_csrf_cookie)
+    def dispatch(self, *args, **kwargs):
+        return super(TelegramsIndexView, self).dispatch(*args, **kwargs)
+
+

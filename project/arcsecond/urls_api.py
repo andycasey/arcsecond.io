@@ -48,6 +48,7 @@ urlpatterns = patterns('',
         views.ObservingSiteNamedDetailAPIView.as_view(),
         name="observingsite-named-detail"),
 
+
     # ----- Telescopes -----
 
     url(r'^1/telescopes/(?P<name>'+full_string_regex+')/$',

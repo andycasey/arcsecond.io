@@ -195,3 +195,8 @@ def get_GCN_circular(identifier):
 
         circular.save()
         return circular
+
+
+
+def read_last_GCNCirculars(page_size):
+    pass
