@@ -50,7 +50,7 @@
         }
 
         function fetch_last_data_rows() {
-            $('#timer').css("display", "none");
+            $('timer').css("display", "none");
 
             Archives.latest('ESO', {start:vm.first_data_row_date}).then(archivesSuccessFn, archivesErrorFn);
 
@@ -101,7 +101,7 @@
                 }
 
                 $scope.viewLoading = false;
-                $('#timer').css("display", "block");
+                $('timer').css("display", "block");
                 document.getElementById("timer")['start']();
             }
 

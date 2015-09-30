@@ -5,6 +5,7 @@ from django.db import models
 from .constants import *
 from .telescopes import *
 from .observingsites import *
+from .coordinates import AstronomicalCoordinates
 
 class DataArchive(models.Model):
     class Meta: app_label = 'arcsecond'
@@ -81,10 +82,11 @@ class ESOArchiveDataRow(models.Model):
     class Meta: app_label = 'arcsecond'
     objects = ESOArchiveDataRowManager()
 
-    summary = models.OneToOneField(ESOProgrammeSummary, null=True, blank=True)
+    summary = models.ForeignKey(ESOProgrammeSummary, null=True, blank=True, related_name='data_rows')
     archive = models.ForeignKey(DataArchive, null=True, blank=True, related_name='data_rows')
+    object_field = models.CharField(max_length=100, null=True, blank=True)
+    coordinates = models.ForeignKey(AstronomicalCoordinates, null=True, blank=True, related_name='eso_archive_data_rows')
 
-    header_url = models.URLField()
     more_url = models.URLField()
     seeing_url = models.URLField()
 
@@ -93,8 +95,14 @@ class ESOArchiveDataRow(models.Model):
 
     dataset_id = models.CharField(max_length=100, null=True, blank=True, unique=True)
     date = models.DateTimeField(null=True, blank=True, default=timezone.now)
-    exposure_time = models.FloatField(null=True, blank=True)
-    modified_julian_date = models.FloatField(null=True, blank=True)
+    exposure_time = models.CharField(max_length=100, null=True, blank=True)
+
+
+class FITSHeaderRow(models.Model):
+    key = models.CharField(max_length=100, null=True, blank=True)
+    value = models.CharField(max_length=100, null=True, blank=True)
+    comment = models.CharField(max_length=100, null=True, blank=True)
+    data_row = models.ForeignKey(ESOArchiveDataRow, null=True, blank=True, related_name='header_rows')
 
 
 

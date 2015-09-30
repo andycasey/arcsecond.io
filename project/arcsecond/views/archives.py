@@ -38,8 +38,10 @@ class ESOArchiveDataRowsListAPIView(mixins.RequestLogViewMixin, generics.ListAPI
         qs = super(ESOArchiveDataRowsListAPIView, self).get_queryset().order_by("-date")
 
         if date_start_string is not None:
-            date_start = timestring.Date(date_start_string, tz="UTC").date + datetime.timedelta(microseconds=500)
-            if date_start is not None:
+            date_no_microseconds = timestring.Date(date_start_string, tz="UTC").date
+            if date_no_microseconds is not None:
+                microseconds = int(date_start_string.split('.')[-1])*1000 + 500
+                date_start = date_no_microseconds + datetime.timedelta(microseconds=microseconds)
                 qs = qs.filter(date__gt=date_start)
 
         return qs

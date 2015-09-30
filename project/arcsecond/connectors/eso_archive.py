@@ -10,6 +10,7 @@ from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
 
 from project.arcsecond.models.archives import *
+from project.arcsecond.models.coordinates import AstronomicalCoordinates
 from project.arcsecond.models.constants import ESO_INSTRUMENTS
 
 # ---------------- LOCAL CONSTANTS -----------------------------------
@@ -66,42 +67,64 @@ def get_ESO_latest_data(start_date=None, end_date=None, science_only=True):
 
 
 def read_ESO_VOTable_first_table(archive, day_offset=0):
-
-    pks = []
     table = get_ESO_VOTable_first_table(day_offset)
 
-    if table is not None:
-        dataset_id_index = -1
-        for index, field in enumerate(table.fields):
-            if field.name == 'dp_id':
-                dataset_id_index = index
+    if table is None:
+        return []
 
-        for row in xrange(len(table.array)):
-            dataset_id = table.array[row][dataset_id_index]
-            data_row, created = ESOArchiveDataRow.objects.get_or_create(dataset_id=dataset_id)
-            data_row.archive = archive
+    pks = []
 
-            ins_name = dataset_id.split('.')[0]
-            instrument_name = ESO_INSTRUMENTS[ins_name]["name"]
-            data_row.instrument_name = instrument_name
+    indices = {}
+    for index, field in enumerate(table.fields):
+        indices[field.name] = index
 
-            date_string = dataset_id[len(ins_name)+1:]
-            date_no_microseconds = timestring.Date(date_string, tz="UTC").date
-            microseconds = int(date_string.split('.')[-1])*1000
-            data_row.date = date_no_microseconds + timedelta(microseconds=microseconds)
+    summary_requests = []
+    for row in xrange(len(table.array)):
 
-            telescope_string = ESO_INSTRUMENTS[ins_name]["telescope"]
-            try:
-                telescope = Telescope.objects.get(name__contains=telescope_string)
-            except ObjectDoesNotExist:
-                pass
-            except MultipleObjectsReturned:
-                print ">>>>>> oh really???" + telescope_string
-            else:
-                data_row.telescope = telescope
+        dataset_id = table.array[row][indices['dp_id']]
+        data_row, created = ESOArchiveDataRow.objects.get_or_create(dataset_id=dataset_id)
+        data_row.archive = archive
 
-            data_row.save()
-            pks.append(data_row.pk)
+        instrument_name = table.array[row][indices['ins_id']]
+        data_row.instrument_name = instrument_name
+
+        ins_name = dataset_id.split('.')[0]
+        date_string = dataset_id[len(ins_name)+1:]
+        date_no_microseconds = timestring.Date(date_string, tz="UTC").date
+        microseconds = int(date_string.split('.')[-1])*1000
+        data_row.date = date_no_microseconds + timedelta(microseconds=microseconds)
+
+        telescope_string = ESO_INSTRUMENTS[ins_name]["telescope"]
+        try:
+            telescope = Telescope.objects.get(name__contains=telescope_string)
+        except ObjectDoesNotExist:
+            pass
+        except MultipleObjectsReturned:
+            print ">>>>>> oh really???" + telescope_string
+        else:
+            data_row.telescope = telescope
+
+        prog_id = table.array[row][indices['prog_id']]
+        summary, created = ESOProgrammeSummary.objects.get_or_create(programme_id=prog_id)
+        data_row.summary = summary
+        if summary.period is None and prog_id not in summary_requests:
+            summary_requests.append(prog_id)
+            get_ESO_programme_id_summary(prog_id)
+
+        if 'exptime' in indices.keys():
+            data_row.exposure_time = table.array[row][indices['exptime']]
+
+        if 'ra' in indices.keys() and 'dec' in indices.keys():
+            ra = float(table.array[row][indices['ra']])
+            dec = float(table.array[row][indices['dec']])
+            coords, created = AstronomicalCoordinates.objects.get_or_create(right_ascension=ra, declination=dec)
+            data_row.coordinates = coords
+
+        if 'object' in indices.keys():
+            data_row.object_field = table.array[row][indices['object']]
+
+        data_row.save()
+        pks.append(data_row.pk)
 
     return pks
 
@@ -164,6 +187,7 @@ def get_ESO_programme_id_summary(programme_id):
     except urllib2.URLError:
         return None
     else:
+        print ESO_ARCHIVE_ROOT+ESO_ARCHIVE_PROGRAMME_ID_URL_FORMAT+urllib2.quote(programme_id)
         prog, created = ESOProgrammeSummary.objects.get_or_create(programme_id=programme_id)
         prog.programme_id = programme_id
 
@@ -218,17 +242,17 @@ def get_ESO_programme_id_summary(programme_id):
             elif line.startswith(LINE_ABSTRACT_PREFIX):
                 value = line.replace(LINE_ABSTRACT_PREFIX, "").strip()
                 value_soup = BeautifulSoup(value, "html.parser")
-                prog.abstract_url = ESO_ARCHIVE_ROOT+value_soup.a.get('href')
-
-                try:
-                    abstract_response = urllib2.urlopen(prog.abstract_url+"&wdbo=ascii")
-                except urllib2.URLError:
-                    return None
-                else:
-                    for abstract_line in abstract_response.readlines():
-                        if abstract_line.startswith(ABSTRACT_LINE_CONTENT_PREFIX):
-                            prog.abstract = abstract_line.replace(ABSTRACT_LINE_CONTENT_PREFIX, "").strip().decode('utf8')
-                            break
+                if value_soup.a is not None:
+                    prog.abstract_url = ESO_ARCHIVE_ROOT+value_soup.a.get('href')
+                    try:
+                        abstract_response = urllib2.urlopen(prog.abstract_url+"&wdbo=ascii")
+                    except urllib2.URLError:
+                        pass
+                    else:
+                        for abstract_line in abstract_response.readlines():
+                            if abstract_line.startswith(ABSTRACT_LINE_CONTENT_PREFIX):
+                                prog.abstract = abstract_line.replace(ABSTRACT_LINE_CONTENT_PREFIX, "").strip().decode('utf8')
+                                break
 
             elif line.startswith(LINE_OBSERVER_PREFIX):
                 prog.remarks = line.replace(LINE_OBSERVER_PREFIX, "").strip().decode('utf8')
@@ -236,12 +260,14 @@ def get_ESO_programme_id_summary(programme_id):
             elif line.startswith(LINE_RAW_FILES_PREFIX):
                 value = line.replace(LINE_RAW_FILES_PREFIX, "").strip()
                 value_soup = BeautifulSoup(value, "html.parser")
-                prog.raw_files_url = ESO_ARCHIVE_ROOT+value_soup.a.get('href')
+                if value_soup.a is not None:
+                    prog.raw_files_url = ESO_ARCHIVE_ROOT+value_soup.a.get('href')
 
             elif line.startswith(LINE_PUBLICATIONS_PREFIX):
                 value = line.replace(LINE_PUBLICATIONS_PREFIX, "").strip()
                 value_soup = BeautifulSoup(value, "html.parser")
-                prog.publications_url = value_soup.a.get('href')
+                if value_soup.a is not None:
+                    prog.publications_url = value_soup.a.get('href')
 
         prog.save()
         return prog
