@@ -21,6 +21,21 @@ a[rel="external"]:before {
     text-decoration: none;
 }
 
+a[rel="popover"] {
+    position: relative;
+}
+
+a[rel="popover"]:before {
+    content: "\f05a";
+    font-family: FontAwesome;
+    font-size: 1.0em;
+    position: absolute;
+    bottom: 1px;
+    right: -15px;
+    text-decoration: none;
+}
+
+
 a[rel="external"]:after {
   content: '\00a0\00a0\00a0\00a0';
 }

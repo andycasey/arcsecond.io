@@ -29,6 +29,11 @@
             fetch_last_data_rows();
         };
 
+        $scope.dynamicPopover = {
+            programmeTemplateUrl: 'programmeTemplate.html',
+            telescopeTemplateUrl: 'telescopeTemplate.html'
+        };
+
         activate();
 
         function activate() {

@@ -33,7 +33,6 @@ class Telescope(models.Model):
 
     name = models.CharField(max_length=1000, null=True, blank=True, unique=True)
     acronym = models.CharField(max_length=100, null=True, blank=True)
-    coordinates = models.ManyToManyField(Coordinates, related_name="observing_tool")
     dome = models.OneToOneField(Dome, blank=True, null=True, related_name='telescope')
     observing_site = models.ForeignKey(ObservingSite, null=True, blank=True, related_name='telescopes')
 
@@ -134,6 +133,9 @@ class Telescope(models.Model):
     has_adaptative_optics = models.NullBooleanField()
     has_laser_guide_star = models.NullBooleanField()
 
+    image_url = models.URLField(max_length=500, null=True, blank=True)
+    image_url_copyright = models.CharField(max_length=100, null=True, blank=True)
+
 
 class Mirror(models.Model):
     class Meta: app_label = 'arcsecond'
@@ -149,3 +151,5 @@ class Mirror(models.Model):
     coating = models.CharField(max_length=100, null=True, blank=True)
     central_obscuration = models.FloatField(null=True, blank=True)
     material = models.CharField(max_length=100, null=True, blank=True)
+
+
