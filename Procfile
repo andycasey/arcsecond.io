@@ -1,4 +1,4 @@
-web: gunicorn project.wsgi:application --workers $WEB_CONCURRENCY --timeout $TIMEOUT
+web: gunicorn project.wsgi:application --workers $WEB_CONCURRENCY
 
 
 
