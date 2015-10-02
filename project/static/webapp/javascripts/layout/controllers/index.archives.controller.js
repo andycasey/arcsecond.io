@@ -29,6 +29,10 @@
             fetch_last_data_rows();
         };
 
+        $scope.dynamicPopover = {
+            templateUrl: 'myPopoverTemplate.html',
+        };
+
         activate();
 
         function activate() {

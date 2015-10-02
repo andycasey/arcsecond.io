@@ -80,12 +80,37 @@
                             </td>
                             <td>
                                 <button popover-trigger="mouseenter"
-                                        popover-title="{{ data_row.summary.programme_id }}, {{ data_row.summary.period }}, {{ data_row.summary.observing_mode }}"
-                                        popover="{{ data_row.summary.programme_title }}, {{ data_row.summary.investigators_list }}, {{ data_row.summary.abstract }}"
+                                        popover-title="{{ data_row.summary.programme_id }}, {{ data_row.summary.observing_mode }} Mode"
+                                        popover-template="dynamicPopover.templateUrl"
                                         type="button"
                                         class="btn btn-info btn-xs">
                                     {{ data_row.summary.programme_id }}
                                 </button>
+
+                                <script type="text/ng-template" id="myPopoverTemplate.html">
+                                    <div>
+                                        <table>
+                                            <tr>
+                                                <td>{{ data_row.summary.programme_title }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>{{ data_row.summary.investigators_list }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>{{ data_row.summary.programme_type }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>{{ data_row.summary.allocated_time }} allocated</td>
+                                            </tr>
+                                            <tr>
+                                                <td>{{ data_row.summary.abstract }}</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="form-group">
+                                    </div>
+                                </script>
+
                             </td>
                             <td>
                                 {{ data_row.object_field }}
