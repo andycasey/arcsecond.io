@@ -7,7 +7,7 @@
 
     TelegramsIndexController.$inject = ['$scope', '$http', '$interval', 'Times', 'Telegrams', 'Snackbar'];
 
-    function ArchivesIndexController($scope, $http, $interval, Times, Telegrams, Snackbar) {
+    function TelegramsIndexController($scope, $http, $interval, Times, Telegrams, Snackbar) {
         var vm = this;
 
         vm.telegrams = [];
