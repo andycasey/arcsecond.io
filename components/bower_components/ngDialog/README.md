@@ -5,7 +5,7 @@
 [![npm version](http://badge.fury.io/js/ng-dialog.svg)](http://badge.fury.io/js/ng-dialog)
 [![github tag](https://img.shields.io/github/tag/likeastore/ngDialog.svg)](https://github.com/likeastore/ngDialog/tags)
 [![Download Count](https://img.shields.io/npm/dm/ng-dialog.svg)](http://www.npmjs.com/package/ng-dialog)
-
+[![Code Climate](https://codeclimate.com/github/likeastore/ngDialog/badges/gpa.svg)](https://codeclimate.com/github/likeastore/ngDialog)
 
 > Modal dialogs and popups provider for [Angular.js](http://angularjs.org/) applications.
 
@@ -40,6 +40,14 @@ app.controller('MainCtrl', function ($scope, ngDialog) {
     };
 });
 ```
+
+## Collaboration
+
+Your help is appreciated! If you've found a bug or something is not clear, please raise an issue.
+
+Ideally, if you've found an issue, you will submit a PR that meets our [contributor guidelines][contributor-guidelines].
+
+[![Throughput Graph](https://graphs.waffle.io/likeastore/ngDialog/throughput.svg)](https://waffle.io/likeastore/ngDialog/metrics)
 
 ## API
 
@@ -571,3 +579,5 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/likeastore/ngdialog/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
+[contributor-guidelines]: https://github.com/likeastore/ngDialog/blob/master/CONTRIBUTING.md

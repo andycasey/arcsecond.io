@@ -1,16 +1,104 @@
 <div class="site-wrapper">
-    <div class="container">
-        <div id="times-container" class="row">
-            UT, JD etc...
+    <div class="col-md-12">
+        <div id="times-container" class="row text-center">
+            <div>
+                <span class="time-title">Local Time :</span>
+                <span class="time-value">{{ times.date_local | date:'HH:mm:ss' }}</span> &nbsp;&nbsp;
+                <span class="time-title" title="Universal Time">UT :</span>
+                <span class="time-value">{{ times.date_UTC | date:'HH:mm:ss' }}</span> &nbsp;&nbsp;
+                <span class="time-title" title="Julian Day, yes, Day, not Date which is formally incorrect.">Julian Day :</span>
+                <span class="time-value">{{ times.jd }}</span> &nbsp;&nbsp;
+                <span class="time-title" title="Modified Julian Day">MJD :</span>
+                <span class="time-value">{{ times.mjd }}</span>
+            </div>
+            <div ng-if="times.lmst">
+                <span class="time-title">Longitude :</span>
+                <span class="time-value">{{ vm.coordinates.longitude | number:6 }}º</span> &nbsp;&nbsp;
+                <span class="time-title">Latitude :</span>
+                <span class="time-value">{{ vm.coordinates.latitude | number:6 }}º</span> &nbsp;&nbsp;
+                <span class="time-title" title="Local Mean Sidereal Time">LMST :</span>
+                <span class="time-value">{{ times.lmst.h }}:{{ times.lmst.m }}:{{ times.lmst.s }}</span>
+            </div>
         </div>
 
-        <div class="table-responsive">
-            <table class="table table-striped">
-                <tr ng-repeat="data_row in vm.data_rows">
-                    <td>{{ data_row.dataset_id }}</td>
-                </tr>
-            </table>
+        <div class="row" id="timer-container">
+            <div class="col-md-6 col-md-offset-3 text-center">
+                <h3>Science Data Rows in ESO archive.</h3>
+                <timer ng-hide="viewLoading" countdown="60" interval="1000" autostart="false" id="timer" finish-callback="updateCountdownFinished(this);">
+                    <div class="progress active {{displayProgressActive}}" style="height: 20px;">
+                        <div class="progress-bar progress-bar-info progress-bar-striped"
+                             role="progressbar"
+                             aria-valuemin="0"
+                             aria-valuemax="60"
+                             style="width: {{ (100*countdown/60)| number:0 }}%;">
+                            Update in {{countdown}} seconds
+                        </div>
+                    </div>
+                </timer>
+                <div my-loading-spinner="viewLoading"></div>
+            </div>
         </div>
 
+        <div class="row">
+            <div id="archive-table-container">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>Archive</th>
+                            <th>Date</th>
+                            <th>Observing Site</th>
+                            <th>Telescope</th>
+                            <th>Instrument</th>
+                            <th>Dataset ID</th>
+                            <th>Programme ID</th>
+                            <th>Object</th>
+                            <th>Exposure Time</th>
+                            <th>Coordinates</th>
+                        </tr>
+                        <tr ng-repeat="data_row in vm.data_rows">
+                            <td>
+                                <a target="_self" href="{{ data_row.archive.url }}" rel="external">{{ data_row.archive.name }}</a>
+                            </td>
+                            <td>
+                                {{ data_row.date | timeAgo }}
+                            </td>
+                            <td>
+                                <a target="_self" href="/observingsites/{{ data_row.telescope.observingsite.name }}">
+                                    {{ data_row.telescope.observingsite.short_name || data_row.telescope.observingsite.name }}
+                                </a>
+                            </td>
+                            <td>
+                                {{ data_row.telescope.acronym || data_row.telescope.name }}
+                            </td>
+                            <td>
+                                {{ data_row.instrument_name }}
+                            </td>
+                            <td>
+                                <a target="_self" href="http://archive.eso.org/hdr?DpId={{ data_row.dataset_id }}" rel="external">{{ data_row.dataset_id }}</a>
+                            </td>
+                            <td>
+                                <button popover-trigger="mouseenter"
+                                        popover-title="{{ data_row.summary.programme_id }}, {{ data_row.summary.period }}, {{ data_row.summary.observing_mode }}"
+                                        popover="{{ data_row.summary.programme_title }}, {{ data_row.summary.investigators_list }}, {{ data_row.summary.abstract }}"
+                                        type="button"
+                                        class="btn btn-info btn-xs">
+                                    {{ data_row.summary.programme_id }}
+                                </button>
+                            </td>
+                            <td>
+                                {{ data_row.object_field }}
+                            </td>
+                            <td>
+                                {{ data_row.exposure_time }}
+                            </td>
+                            <td>
+                                ({{ data_row.coordinates.right_ascension | sexagesimal:'hour' }}, {{ data_row.coordinates.declination | sexagesimal }})
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+

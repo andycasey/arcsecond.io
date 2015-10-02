@@ -9,7 +9,9 @@
             'webapp.utils',
             'webapp.layout',
             'webapp.observingsites',
-            'webapp.archives'
+            'webapp.telescopes',
+            'webapp.archives',
+            'webapp.telegrams'
         ]);
 
     angular
@@ -17,6 +19,9 @@
 
     angular
         .module('webapp.routes', ['ngRoute']);
+
+    angular
+        .module('webapp.archives', ['ui.bootstrap']);
 
     angular
         .module('webapp')

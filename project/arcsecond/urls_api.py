@@ -6,7 +6,7 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from project.arcsecond import views
 from project.arcsecond.models import constants
 
-full_string_regex = "[\s\d\w()\.+-_\'\,\:&]+"
+full_string_regex = "[\s\d\w().+-_',:&]+"
 
 urlpatterns = patterns('',
     url(r'^$', views.index_api, name='index_api'),
@@ -47,6 +47,7 @@ urlpatterns = patterns('',
     url(r'^1/observingsites/(?P<name>'+full_string_regex+')/$',
         views.ObservingSiteNamedDetailAPIView.as_view(),
         name="observingsite-named-detail"),
+
 
     # ----- Telescopes -----
 
@@ -117,7 +118,7 @@ urlpatterns = patterns('',
         name="coordinatesconversion-detail"),
 
 
-    url(r'^1/converters/times/(?P<input_format>'+constants.time_formats_regex+')/(?P<input_value>[\-\+\.\:0-9A-Z]+)/$',
+    url(r'^1/converters/times/(?P<input_format>'+constants.time_formats_regex+')/(?P<input_value>[-+.:0-9A-Z]+)/$',
         views.TimesDetailAPIView.as_view(),
         name="timesconversion-detail"),
 )

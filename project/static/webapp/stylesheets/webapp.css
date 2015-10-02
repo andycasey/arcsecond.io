@@ -1,5 +1,28 @@
+body.classic .site-wrapper {
+    border-bottom: 0px;
+}
+
 textarea:focus, input:focus{
     outline: 0;
+}
+
+a[rel="external"] {
+    position: relative;
+    color: #3a90b9;
+}
+
+a[rel="external"]:before {
+    content: "\f08e";
+    font-family: FontAwesome;
+    font-size: 0.8em;
+    position: absolute;
+    bottom: 1px;
+    right: 0;
+    text-decoration: none;
+}
+
+a[rel="external"]:after {
+  content: '\00a0\00a0\00a0\00a0';
 }
 
 .fixed-font-cell {
@@ -123,6 +146,7 @@ textarea:focus, input:focus{
     bottom: 0px;
 }
 
+
 .activity-table-container {
     padding-top: 80px;
 }
@@ -152,4 +176,39 @@ ul {
     list-style-type: none;
 }
 
+/* --- ARCHIVES --- */
+
+#times-container {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    background: #3a3a3b;
+    margin-top: -30px;
+    color: lightgray;
+    font-size: larger;
+}
+
+.time-title {
+    font-weight: bold;
+}
+
+.time-value {
+    color: #48b0e3;
+    font: "Anonymous Pro", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier New", monospace;
+}
+
+@media (max-width: 768px) {
+    #times-container {
+        margin-top: 0;
+        font-size: medium;
+    }
+}
+
+#timer-container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#archive-table-container  {
+    /*padding-top: 0px;*/
+}
 

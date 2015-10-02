@@ -1,9 +1,11 @@
 from django.core.validators import RegexValidator
+from django.utils.timezone import utc
 from django.db import models
 
 from .constants import *
 from .telescopes import *
 from .observingsites import *
+from .coordinates import AstronomicalCoordinates
 
 class DataArchive(models.Model):
     class Meta: app_label = 'arcsecond'
@@ -71,13 +73,20 @@ class ESOProgrammeSummary(models.Model):
     publications_url = models.URLField(max_length=500, null=True, blank=True)
 
 
+class ESOArchiveDataRowManager(models.Manager):
+    def get_queryset(self):
+        return super(ESOArchiveDataRowManager, self).get_queryset().order_by('-date')
+
+
 class ESOArchiveDataRow(models.Model):
     class Meta: app_label = 'arcsecond'
+    objects = ESOArchiveDataRowManager()
 
-    summary = models.OneToOneField(ESOProgrammeSummary, null=True, blank=True)
+    summary = models.ForeignKey(ESOProgrammeSummary, null=True, blank=True, related_name='data_rows')
     archive = models.ForeignKey(DataArchive, null=True, blank=True, related_name='data_rows')
+    object_field = models.CharField(max_length=100, null=True, blank=True)
+    coordinates = models.ForeignKey(AstronomicalCoordinates, null=True, blank=True, related_name='eso_archive_data_rows')
 
-    header_url = models.URLField()
     more_url = models.URLField()
     seeing_url = models.URLField()
 
@@ -85,8 +94,15 @@ class ESOArchiveDataRow(models.Model):
     telescope = models.ForeignKey(Telescope, null=True, blank=True, related_name='data_rows')
 
     dataset_id = models.CharField(max_length=100, null=True, blank=True, unique=True)
-    exposure_time = models.FloatField(null=True, blank=True)
-    modified_julian_date = models.FloatField(null=True, blank=True)
+    date = models.DateTimeField(null=True, blank=True, default=timezone.now)
+    exposure_time = models.DecimalField(max_digits=12, decimal_places=6, null=True, blank=True)
+
+
+class FITSHeaderRow(models.Model):
+    key = models.CharField(max_length=100, null=True, blank=True)
+    value = models.CharField(max_length=100, null=True, blank=True)
+    comment = models.CharField(max_length=100, null=True, blank=True)
+    data_row = models.ForeignKey(ESOArchiveDataRow, null=True, blank=True, related_name='header_rows')
 
 
 

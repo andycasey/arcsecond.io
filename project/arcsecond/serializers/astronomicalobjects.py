@@ -43,15 +43,16 @@ class AstronomicalObjectSerializer(serializers.ModelSerializer):
     age = AgeSerializer(required=False)
     effective_temperature = TemperatureSerializer(required=False)
 
-    planets = serializers.HyperlinkedRelatedField(many=True,
+    planets = serializers.HyperlinkedRelatedField(view_name='exoplanet-named-detail',
+                                                  lookup_field='name',
+                                                  many=True,
                                                   read_only=True,
-                                                  view_name='exoplanet-named-detail',
-                                                  lookup_field='name')
+                                                  required=False)
 
-    astronomer_telegrams = serializers.HyperlinkedRelatedField(many=True,
-                                                               view_name='astronomerstelegram-detail',
+    astronomer_telegrams = serializers.HyperlinkedRelatedField(view_name='astronomerstelegram-detail',
                                                                lookup_field='name',
                                                                lookup_url_kwarg='identifier',
+                                                               many=True,
                                                                read_only=True,
                                                                required=False)
 

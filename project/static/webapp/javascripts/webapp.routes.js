@@ -24,11 +24,15 @@
                 controllerAs: 'vm',
                 templateUrl: '/static/webapp/templates/layout/single.observingsites.html'
             })
-
             .when('/archives', {
                 controller: 'ArchivesIndexController',
                 controllerAs: 'vm',
                 templateUrl: '/static/webapp/templates/layout/index.archives.html'
+            })
+            .when('/telegrams', {
+                controller: 'TelegramsIndexController',
+                controllerAs: 'vm',
+                templateUrl: '/static/webapp/templates/layout/index.telegrams.html'
             });
     }
 })();

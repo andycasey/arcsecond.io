@@ -33,7 +33,8 @@ urlpatterns += patterns('',
     url(r'^@(?P<username>[\w@\.]+)/settings$', views.user_settings, name="user-settings"),
 
     url('^observingsites/.*$', views.ObservingSitesIndexView.as_view(), name='index_observingsites'),
-    url('^archives/.*$', views.ObservingSitesIndexView.as_view(), name='index_archives'),
+    url('^archives/.*$', views.ArchivesIndexView.as_view(), name='index_archives'),
+    url('^telegrams/.*$', views.TelegramsIndexView.as_view(), name='index_telegrams'),
 )
 
 handler404 = 'views.custom_404'

@@ -9,7 +9,7 @@
         ]);
 
     angular
-        .module('webapp.archives.controllers', []);
+        .module('webapp.archives.controllers', ['ui.bootstrap']);
 
     angular
         .module('webapp.archives.directives', ['ngDialog']);
