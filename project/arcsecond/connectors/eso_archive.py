@@ -99,7 +99,9 @@ def read_ESO_VOTable_first_table(archive, hour_offset=0):
 
         # http://stackoverflow.com/questions/2569015/django-floatfield-or-decimalfield-for-currency
         if 'exptime' in indices.keys():
-            data_row.exposure_time = decimal.Decimal(float(table.array[row][indices['exptime']]))
+            exp_time = float(table.array[row][indices['exptime']])
+            if not math.isnan(exp_time):
+                data_row.exposure_time = decimal.Decimal(exp_time)
 
         if 'ra' in indices.keys() and 'dec' in indices.keys():
             ra = float(table.array[row][indices['ra']])
