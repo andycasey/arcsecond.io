@@ -208,6 +208,15 @@ ul {
     padding-bottom: 15px;
 }
 
+.spinner {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.update-loading-timer-container {
+    max-height: 30px;
+}
+
 #archive-table-container  {
     /*padding-top: 0px;*/
 }
