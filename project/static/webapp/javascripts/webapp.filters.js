@@ -53,7 +53,7 @@
                     return sign+degrees.toString()+':'+minutes.toString()+':'+seconds.toFixed(2).toString();
                 }
                 else {
-                    return number;
+                    return inputNumber;
                 }
             }
         });
