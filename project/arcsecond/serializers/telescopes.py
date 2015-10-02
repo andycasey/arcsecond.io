@@ -18,7 +18,8 @@ class TelescopeSerializer(serializers.ModelSerializer):
         model = Telescope
         lookup_field = "name"
         fields = ('id', 'name', 'acronym', 'observing_site', 'mounting', 'optical_design', 'has_active_optics',
-                  'has_adaptative_optics', 'has_laser_guide_star', 'wavelength_domains', 'dome', 'mirrors')
+                  'has_adaptative_optics', 'has_laser_guide_star', 'wavelength_domains', 'dome', 'mirrors',
+                  'image_url', 'image_url_copyright')
 
     observing_site = serializers.HyperlinkedRelatedField(read_only=True,
                                                          view_name='observingsite-named-detail',

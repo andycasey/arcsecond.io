@@ -70,7 +70,31 @@
                                 </a>
                             </td>
                             <td>
-                                {{ data_row.telescope.acronym || data_row.telescope.name }}
+                                <a popover-trigger="mouseenter"
+                                   popover-title="{{ data_row.telescope.acronym || data_row.telescope.name }}"
+                                   popover-template="dynamicPopover.telescopeTemplateUrl"
+                                   type="button"
+                                   rel="popover">
+                                    {{ data_row.telescope.acronym || data_row.telescope.name }}
+                                </a>
+
+                                <script type="text/ng-template" id="telescopeTemplate.html">
+                                    <table>
+                                        <tr>
+                                            <td>{{ data_row.telescope.optical_design }}, {{ data_row.telescope.mounting }} Mounting</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Primary Mirror {{ data_row.telescope.mirrors[0].diameter }} mm</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img class="img-responsive" src="{{ data_row.telescope.image_url }}">
+                                                <small>{{ data_row.telescope.image_url_copyright }}</small>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </script>
+
                             </td>
                             <td>
                                 {{ data_row.instrument_name }}
@@ -79,15 +103,15 @@
                                 <a target="_self" href="http://archive.eso.org/hdr?DpId={{ data_row.dataset_id }}" rel="external">{{ data_row.dataset_id }}</a>
                             </td>
                             <td>
-                                <button popover-trigger="mouseenter"
-                                        popover-title="{{ data_row.summary.programme_id }}, {{ data_row.summary.observing_mode }} Mode"
-                                        popover-template="dynamicPopover.templateUrl"
-                                        type="button"
-                                        class="btn btn-info btn-xs">
+                                <a popover-trigger="mouseenter"
+                                   popover-title="{{ data_row.summary.programme_id }}, {{ data_row.summary.observing_mode }} Mode"
+                                   popover-template="dynamicPopover.programmeTemplateUrl"
+                                   type="button"
+                                   rel="popover">
                                     {{ data_row.summary.programme_id }}
-                                </button>
+                                </a>
 
-                                <script type="text/ng-template" id="myPopoverTemplate.html">
+                                <script type="text/ng-template" id="programmeTemplate.html">
                                     <div>
                                         <table>
                                             <tr>

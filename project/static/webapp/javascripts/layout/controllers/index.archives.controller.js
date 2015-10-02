@@ -30,7 +30,8 @@
         };
 
         $scope.dynamicPopover = {
-            templateUrl: 'myPopoverTemplate.html',
+            programmeTemplateUrl: 'programmeTemplate.html',
+            telescopeTemplateUrl: 'telescopeTemplate.html'
         };
 
         activate();

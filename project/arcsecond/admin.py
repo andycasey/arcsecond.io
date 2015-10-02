@@ -19,8 +19,14 @@ class ObservingSiteAdmin(admin.ModelAdmin):
 
 @admin.register(ObservingSiteActivity)
 class ObservingSiteActivityAdmin(admin.ModelAdmin):
-    list_display = ("pk", "date", "user", "observing_site", "action", "property_name", "old_value", "new_value", "action_message", "method")
+    list_display = ("pk", "date", "user", "observing_site", "action", "property_name", "old_value",
+                    "new_value", "action_message", "method")
 
 @admin.register(DataArchive)
 class ObservingSiteAdmin(admin.ModelAdmin):
     list_display = ("pk", "name", "url")
+
+@admin.register(Telescope)
+class TelescopeAdmin(admin.ModelAdmin):
+    list_display = ("pk", "name", "acronym", "wavelength_domains", "mounting", "optical_design", "has_active_optics",
+                    "has_adaptative_optics", "has_laser_guide_star", "image_url", "image_url_copyright")
