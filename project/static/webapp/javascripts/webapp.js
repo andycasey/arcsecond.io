@@ -21,6 +21,9 @@
         .module('webapp.routes', ['ngRoute']);
 
     angular
+        .module('webapp.archives', ['ui.bootstrap']);
+
+    angular
         .module('webapp')
         .run(run);
 

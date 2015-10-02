@@ -5,9 +5,9 @@
         .module('webapp.layout.controllers')
         .controller('ArchivesIndexController', ArchivesIndexController);
 
-    ArchivesIndexController.$inject = ['$scope', '$http', '$interval', 'Archives', 'Times', 'Telescopes', 'ObservingSites', 'Snackbar'];
+    ArchivesIndexController.$inject = ['$scope', '$interval', 'Archives', 'Times', 'Telescopes', 'ObservingSites', 'Snackbar'];
 
-    function ArchivesIndexController($scope, $http, $interval, Archives, Times, Telescopes, ObservingSites, Snackbar) {
+    function ArchivesIndexController($scope, $interval, Archives, Times, Telescopes, ObservingSites, Snackbar) {
         var vm = this;
 
         vm.data_rows = [];
@@ -32,8 +32,6 @@
         activate();
 
         function activate() {
-            $scope.viewLoading = true;
-
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(positionSuccessFn, positionErrorFn, {enableHighAccuracy: true});
             }
@@ -50,7 +48,7 @@
         }
 
         function fetch_last_data_rows() {
-            $('timer').css("display", "none");
+            $scope.viewLoading = true;
 
             Archives.latest('ESO', {start:vm.first_data_row_date}).then(archivesSuccessFn, archivesErrorFn);
 
@@ -101,7 +99,6 @@
                 }
 
                 $scope.viewLoading = false;
-                $('timer').css("display", "block");
                 document.getElementById("timer")['start']();
             }
 

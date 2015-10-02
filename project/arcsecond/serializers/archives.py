@@ -20,6 +20,7 @@ class ESOArchiveDataRowSerializer(serializers.ModelSerializer):
         model = ESOArchiveDataRow
 
     archive = DataArchiveSerializer(required=False)
+    summary = ESOProgrammeSummarySerializer(required=False)
     coordinates = AstronomicalCoordinatesSerializer(required=False)
     telescope = serializers.HyperlinkedRelatedField(view_name='telescope-detail',
                                                     lookup_field='name',
