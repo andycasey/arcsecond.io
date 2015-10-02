@@ -1,6 +1,7 @@
 # -- coding: utf-8 --
-import decimal
 
+import math
+import decimal
 import urllib2
 import timestring
 
@@ -103,8 +104,9 @@ def read_ESO_VOTable_first_table(archive, hour_offset=0):
         if 'ra' in indices.keys() and 'dec' in indices.keys():
             ra = float(table.array[row][indices['ra']])
             dec = float(table.array[row][indices['dec']])
-            coords, created = AstronomicalCoordinates.objects.get_or_create(right_ascension=ra, declination=dec)
-            data_row.coordinates = coords
+            if not math.isnan(ra) and not math.isnan(dec):
+                coords, created = AstronomicalCoordinates.objects.get_or_create(right_ascension=ra, declination=dec)
+                data_row.coordinates = coords
 
         if 'object' in indices.keys():
             data_row.object_field = table.array[row][indices['object']]
