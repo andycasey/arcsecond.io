@@ -20,6 +20,7 @@ ESO_INSTRUMENTS = {
     "KMOS":  {"name": "KMOS", "site": "Paranal", "telescope": "Unit Telescope 1"},
 
     "FLAME": {"name": "FLAMES", "site": "Paranal", "telescope": "Unit Telescope 2"},
+    "GIRAF": {"name": "GIRAFFE", "site": "Paranal", "telescope": "Unit Telescope 2"},
     "XSHOO": {"name": "XSHOOTER", "site": "Paranal", "telescope": "Unit Telescope 2"},
     "UVES":  {"name": "UVES", "site": "Paranal", "telescope": "Unit Telescope 2"},
 
