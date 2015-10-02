@@ -33,7 +33,7 @@ class ESOArchiveDataRowsListAPIView(mixins.RequestLogViewMixin, generics.ListAPI
     def get_queryset(self):
         params = self.request.query_params
         date_start_string = params.get("start", None)
-        connectors.get_ESO_latest_data(start_date=date_start_string)
+        connectors.get_ESO_latest_data(science_only=True)
 
         qs = super(ESOArchiveDataRowsListAPIView, self).get_queryset().order_by("-date")
 
@@ -41,7 +41,7 @@ class ESOArchiveDataRowsListAPIView(mixins.RequestLogViewMixin, generics.ListAPI
             date_no_microseconds = timestring.Date(date_start_string, tz="UTC").date
             if date_no_microseconds is not None:
                 microseconds_string = date_start_string.split('.')[-1]
-                microseconds = int(microseconds_string[:-1])*1000 + 500 # Avoid last Z letter
+                microseconds = int(microseconds_string[:-1])*1000 + 500 # Avoid last Z letter + 500 to avoid duplicate
                 date_start = date_no_microseconds + datetime.timedelta(microseconds=microseconds)
                 qs = qs.filter(date__gt=date_start)
 

@@ -20,8 +20,7 @@ ESO_ARCHIVE_ROOT = "http://archive.eso.org/"
 ESO_ARCHIVE_DB_ROOT = ESO_ARCHIVE_ROOT + "wdb/wdb/eso/eso_archive_main/query?"
 ESO_ARCHIVE_WDBO = "wdbo="+urllib2.quote("votable/display")+"&"
 
-ESO_ARCHIVE_LIMIT_OFFSET = 5
-ESO_ARCHIVE_MAX_ROWS = "10" if settings.DEBUG else "100"
+ESO_ARCHIVE_MAX_ROWS = "1000"
 ESO_ARCHIVE_DEFAULT_PARAMS = "max_rows_returned="+ESO_ARCHIVE_MAX_ROWS+"&format=SexaHour&resolver=simbad&aladin_colour=aladin_instrument&tab_night=on&"
 
 ESO_ARCHIVE_DEFAULT_ADDITIONAL_PARAMS = "tab_tel_airm_start=on&tab_stat_instrument=on&tab_ambient=on&tab_stat_exptime=on&tab_HDR=on&tab_mjd_obs=on&tab_stat_plot=on&tab_distance=on&tab_pos_angle=on&"
@@ -33,42 +32,27 @@ ESO_ARCHIVE_DEFAULT_OBJECT_PARAM = "dp_type=OBJECT&"
 
 # ------------------- DATA ROWS ---------------------------------------
 
-def get_ESO_latest_data(start_date=None, end_date=None, science_only=True):
+def get_ESO_latest_data(science_only=True):
 
     url = ESO_ARCHIVE_DB_ROOT+ESO_ARCHIVE_WDBO+ESO_ARCHIVE_DEFAULT_PARAMS
     if science_only is True:
         url += ESO_ARCHIVE_DEFAULT_SCIENCE_PARAM
 
-    now = datetime.now(tz=timezone.utc)
-    max_offset = 0
-
-    if start_date is not None:
-        start = timestring.Date(start_date, tz="UTC").date
-        if start is not None and start < now:
-            delta = now - start
-            max_offset = max(delta.days, max_offset) # Cannot be < 1
-
-
-    max_offset = min(max_offset, ESO_ARCHIVE_LIMIT_OFFSET)
     archive, created = DataArchive.objects.get_or_create(name="ESO")
 
+    offset = 0
     pks = []
-
-    if max_offset == 0:
-        new_pks = read_ESO_VOTable_first_table(archive, 0)
-        if len(new_pks) == 0:
-            new_pks = read_ESO_VOTable_first_table(archive, 1)
-        pks.append(new_pks)
-    else:
-        for offset in range(max_offset):
-            new_pks = read_ESO_VOTable_first_table(archive, offset)
-            pks.append(new_pks)
+    while len(pks) < 100:
+        new_pks = read_ESO_VOTable_first_table(archive, offset)
+        pks.extend(new_pks)
+        print " •• Extending ESO archive rows by", len(new_pks), "pks, total:", len(pks)
+        offset += 1
 
     return pks
 
 
-def read_ESO_VOTable_first_table(archive, day_offset=0):
-    table = get_ESO_VOTable_first_table(day_offset)
+def read_ESO_VOTable_first_table(archive, hour_offset=0):
+    table = get_ESO_VOTable_first_table(hour_offset)
 
     if table is None:
         return []
@@ -108,9 +92,9 @@ def read_ESO_VOTable_first_table(archive, day_offset=0):
         prog_id = table.array[row][indices['prog_id']]
         summary, created = ESOProgrammeSummary.objects.get_or_create(programme_id=prog_id)
         data_row.summary = summary
-        # if summary.period is None and prog_id not in summary_requests:
-        #     summary_requests.append(prog_id)
-        #     get_ESO_programme_id_summary(prog_id)
+        if summary.period is None and prog_id not in summary_requests:
+            summary_requests.append(prog_id)
+            get_ESO_programme_id_summary(prog_id)
 
         # http://stackoverflow.com/questions/2569015/django-floatfield-or-decimalfield-for-currency
         if 'exptime' in indices.keys():
@@ -131,13 +115,14 @@ def read_ESO_VOTable_first_table(archive, day_offset=0):
     return pks
 
 
-def get_ESO_VOTable_first_table(day_offset):
+def get_ESO_VOTable_first_table(hour_offset):
     url = ESO_ARCHIVE_DB_ROOT+ESO_ARCHIVE_WDBO+ESO_ARCHIVE_DEFAULT_PARAMS
     # Science only for now
     url += ESO_ARCHIVE_DEFAULT_SCIENCE_PARAM
 
     # Adding night param
-    url += get_past_UTC_date_night(day_offset)
+    url += get_past_UTC_date_night(hour_offset)
+    print url
 
     try:
         response = urllib2.urlopen(url)
@@ -153,11 +138,19 @@ def get_ESO_VOTable_first_table(day_offset):
             return first_table
 
 
-def get_past_UTC_date_night(day_offset=0):
-    utc_date = datetime.now(tz=timezone.utc) - timedelta(days=day_offset)
-    night_string = "night="+urllib2.quote("{0} {1:02d} {2:02d}".format(utc_date.year, utc_date.month, utc_date.day))
-    print "Getting ESO Data for night: "+night_string
-    return night_string
+def get_past_UTC_date_night(hour_offset=0):
+    utc_date_end   = datetime.now(tz=timezone.utc) - timedelta(hours=hour_offset)
+    utc_date_start = datetime.now(tz=timezone.utc) - timedelta(hours=hour_offset+1)
+
+    time_string_end_day  = "etime="  +urllib2.quote("{0} {1:02d} {2:02d}".format(utc_date_end.year, utc_date_end.month, utc_date_end.day))
+    time_string_end_hour = "endtime="+urllib2.quote("{0:02d}".format(utc_date_end.hour))
+
+    time_string_start_day  = "stime="    +urllib2.quote("{0} {1:02d} {2:02d}".format(utc_date_start.year, utc_date_start.month, utc_date_start.day))
+    time_string_start_hour = "starttime="+urllib2.quote("{0:02d}".format(utc_date_start.hour))
+
+    time_string = time_string_start_day +"&"+ time_string_start_hour +"&"+ time_string_end_day +"&"+ time_string_end_hour
+    print " •• Getting ESO Data for time range: "+time_string
+    return time_string
 
 
 
