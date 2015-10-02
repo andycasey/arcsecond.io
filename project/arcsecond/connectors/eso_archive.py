@@ -1,4 +1,5 @@
 # -- coding: utf-8 --
+import decimal
 
 import urllib2
 import timestring
@@ -111,8 +112,9 @@ def read_ESO_VOTable_first_table(archive, day_offset=0):
             summary_requests.append(prog_id)
             get_ESO_programme_id_summary(prog_id)
 
+        # http://stackoverflow.com/questions/2569015/django-floatfield-or-decimalfield-for-currency
         if 'exptime' in indices.keys():
-            data_row.exposure_time = table.array[row][indices['exptime']]
+            data_row.exposure_time = decimal.Decimal(float(table.array[row][indices['exptime']]))
 
         if 'ra' in indices.keys() and 'dec' in indices.keys():
             ra = float(table.array[row][indices['ra']])

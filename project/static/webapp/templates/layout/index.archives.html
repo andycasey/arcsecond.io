@@ -35,6 +35,7 @@
                         </div>
                     </div>
                 </timer>
+                <div my-loading-spinner="viewLoading"></div>
             </div>
         </div>
 
@@ -76,7 +77,7 @@
                                 <a target="_self" href="http://archive.eso.org/hdr?DpId={{ data_row.dataset_id }}" rel="external">{{ data_row.dataset_id }}</a>
                             </td>
                             <td>
-                                {{ data_row.summary.programme_id }}
+                                {{ data_row.summary }}
                             </td>
                             <td>
                                 {{ data_row.object_field }}
@@ -85,14 +86,12 @@
                                 {{ data_row.exposure_time }}
                             </td>
                             <td>
-                                ({{ data_row.coordinates.right_ascension }}, {{ data_row.coordinates.declination }})
+                                ({{ data_row.coordinates.right_ascension | sexagesimal:'hour' }}, {{ data_row.coordinates.declination | sexagesimal }})
                             </td>
                         </tr>
                     </table>
                 </div>
             </div>
-
-            <div my-loading-spinner="viewLoading"></div>
         </div>
     </div>
 </div>

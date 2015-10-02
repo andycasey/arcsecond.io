@@ -95,7 +95,7 @@ class ESOArchiveDataRow(models.Model):
 
     dataset_id = models.CharField(max_length=100, null=True, blank=True, unique=True)
     date = models.DateTimeField(null=True, blank=True, default=timezone.now)
-    exposure_time = models.CharField(max_length=100, null=True, blank=True)
+    exposure_time = models.DecimalField(max_digits=12, decimal_places=6, null=True, blank=True)
 
 
 class FITSHeaderRow(models.Model):
