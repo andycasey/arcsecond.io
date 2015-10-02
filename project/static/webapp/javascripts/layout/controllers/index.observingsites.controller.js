@@ -14,6 +14,7 @@
 
         function activate() {
             vm.continents = ObservingSites.continents;
+            $scope.viewLoading = true;
 
             uiGmapGoogleMapApi.then(function(maps) {
                 $scope.map = {
@@ -47,11 +48,13 @@
             ObservingSites.all().then(successFn, errorFn);
 
             function successFn(data, status, headers, config) {
+                $scope.viewLoading = false;
                 vm.observingsites = data.data;
                 $scope.map.markers = getMapMarkers(vm.observingsites);
             }
 
             function errorFn(data, status, headers, config) {
+                $scope.viewLoading = false;
                 Snackbar.error(data.error);
                 console.log(data.error);
             }
