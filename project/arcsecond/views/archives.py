@@ -40,7 +40,8 @@ class ESOArchiveDataRowsListAPIView(mixins.RequestLogViewMixin, generics.ListAPI
         if date_start_string is not None:
             date_no_microseconds = timestring.Date(date_start_string, tz="UTC").date
             if date_no_microseconds is not None:
-                microseconds = int(date_start_string.split('.')[-1])*1000 + 500
+                microseconds_string = date_start_string.split('.')[-1]
+                microseconds = int(microseconds_string[:-1])*1000 + 500 # Avoid last Z letter
                 date_start = date_no_microseconds + datetime.timedelta(microseconds=microseconds)
                 qs = qs.filter(date__gt=date_start)
 
