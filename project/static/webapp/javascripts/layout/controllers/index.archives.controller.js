@@ -63,7 +63,7 @@
                     vm.data_rows = response.data.concat(vm.data_rows);
                 }
 
-                var telescope_names = [];
+                var telescope_identifiers = [];
                 for (var i = 0; i < new_rows_count; i++) {
                     var data_row = vm.data_rows[i];
                     if (i == 0) {
@@ -74,28 +74,26 @@
                         vm.instruments.push(data_row.instrument_name);
                     }
 
-                    if (data_row.telescope !== undefined && data_row.telescope != null) {
-                        var encoded_telescope_name = URI(data_row.telescope).path().split("/").filter(function (el) {return el.length}).pop();
-                        var telescope_name = decodeURIComponent(encoded_telescope_name);
-
-                        if (undefined === vm.telescopes[telescope_name]) {
-                            if (vm._telRowsMapping[telescope_name] == undefined) {
-                                vm._telRowsMapping[telescope_name] = [];
+                    if (data_row.telescope !== undefined && data_row.telescope != null && isNumeric(data_row.telescope)) {
+                        var telescope_id = data_row.telescope.toString();
+                        if (undefined === vm.telescopes[telescope_id]) {
+                            if (vm._telRowsMapping[telescope_id] == undefined) {
+                                vm._telRowsMapping[telescope_id] = [];
                             }
-                            vm._telRowsMapping[telescope_name].push(data_row);
+                            vm._telRowsMapping[telescope_id].push(data_row);
 
-                            if ($.inArray(telescope_name, telescope_names) == -1) {
-                                telescope_names.push(telescope_name);
+                            if ($.inArray(telescope_id, telescope_identifiers) == -1) {
+                                telescope_identifiers.push(telescope_id);
                             }
                         }
                         else {
-                            data_row.telescope = vm.telescopes[telescope_name];
+                            data_row.telescope = vm.telescopes[telescope_id];
                         }
                     }
                 }
 
-                for (var j = 0; j < telescope_names.length; j++) {
-                    Telescopes.get(telescope_names[j]).then(telescopeSuccessFn, telescopeErrorFn);
+                for (var j = 0; j < telescope_identifiers.length; j++) {
+                    Telescopes.get(telescope_identifiers[j]).then(telescopeSuccessFn, telescopeErrorFn);
                 }
 
                 $scope.viewLoading = false;
@@ -109,13 +107,15 @@
 
             function telescopeSuccessFn(response) {
                 var telescope = response.data;
-                vm.telescopes[telescope.name] = telescope;
+                var telescope_id = telescope.id.toString();
 
-                var data_rows = vm._telRowsMapping[telescope.name];
+                vm.telescopes[telescope_id] = telescope;
+
+                var data_rows = vm._telRowsMapping[telescope_id];
                 for (var i = 0; i < data_rows.length; i++) {
                     data_rows[i].telescope = telescope;
                 }
-                delete vm._telRowsMapping[telescope.name];
+                delete vm._telRowsMapping[telescope_id];
 
                 var encoded_observingsite_name = URI(telescope.observing_site).path().split("/").filter(function (el) {return el.length}).pop();
                 var observingsite_name = decodeURIComponent(encoded_observingsite_name);
@@ -135,6 +135,10 @@
 
             function observingsiteErrorFn(response) {
                 console.log(response);
+            }
+
+            function isNumeric(value) {
+                return (!isNaN(parseFloat(value)) && isFinite(value));
             }
         }
     }

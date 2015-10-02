@@ -21,10 +21,7 @@ class ObservingSiteSerializer(serializers.ModelSerializer):
                   'time_zone', 'time_zone_name', 'telescopes')
 
     coordinates = CoordinatesSerializer()
-    telescopes = serializers.HyperlinkedRelatedField(many=True,
-                                                     read_only=True,
-                                                     view_name='telescope-detail',
-                                                     lookup_field='name')
+    telescopes = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:

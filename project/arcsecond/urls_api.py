@@ -51,9 +51,13 @@ urlpatterns = patterns('',
 
     # ----- Telescopes -----
 
-    url(r'^1/telescopes/(?P<name>'+full_string_regex+')/$',
+    url(r'^1/telescopes/(?P<pk>\d+)/$',
         views.TelescopeDetailAPIView.as_view(),
         name="telescope-detail"),
+
+    # url(r'^1/telescopes/(?P<name>'+full_string_regex+')/$',
+    #     views.TelescopeDetailAPIView.as_view(),
+    #     name="telescope-detail"),
 
     url(r'^1/telescopes/$',
         views.TelescopeListAPIView.as_view(),
