@@ -23,7 +23,7 @@ class ESOProgrammeSummaryDetailAPIView(mixins.RequestLogViewMixin, generics.Retr
 
 
 class ESOArchiveDataRowsListPagination(pagination.PageNumberPagination):
-    page_size = 1000
+    page_size = 100
 
 class ESOArchiveDataRowsListAPIView(mixins.RequestLogViewMixin, generics.ListAPIView):
     queryset = models.ESOArchiveDataRow.objects.all().order_by("-date")
