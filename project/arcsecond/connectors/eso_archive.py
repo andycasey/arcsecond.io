@@ -21,7 +21,7 @@ ESO_ARCHIVE_DB_ROOT = ESO_ARCHIVE_ROOT + "wdb/wdb/eso/eso_archive_main/query?"
 ESO_ARCHIVE_WDBO = "wdbo="+urllib2.quote("votable/display")+"&"
 
 ESO_ARCHIVE_LIMIT_OFFSET = 5
-ESO_ARCHIVE_MAX_ROWS = "10"
+ESO_ARCHIVE_MAX_ROWS = "10" if settings.DEBUG else "100"
 ESO_ARCHIVE_DEFAULT_PARAMS = "max_rows_returned="+ESO_ARCHIVE_MAX_ROWS+"&format=SexaHour&resolver=simbad&aladin_colour=aladin_instrument&tab_night=on&"
 
 ESO_ARCHIVE_DEFAULT_ADDITIONAL_PARAMS = "tab_tel_airm_start=on&tab_stat_instrument=on&tab_ambient=on&tab_stat_exptime=on&tab_HDR=on&tab_mjd_obs=on&tab_stat_plot=on&tab_distance=on&tab_pos_angle=on&"
@@ -108,9 +108,9 @@ def read_ESO_VOTable_first_table(archive, day_offset=0):
         prog_id = table.array[row][indices['prog_id']]
         summary, created = ESOProgrammeSummary.objects.get_or_create(programme_id=prog_id)
         data_row.summary = summary
-        if summary.period is None and prog_id not in summary_requests:
-            summary_requests.append(prog_id)
-            get_ESO_programme_id_summary(prog_id)
+        # if summary.period is None and prog_id not in summary_requests:
+        #     summary_requests.append(prog_id)
+        #     get_ESO_programme_id_summary(prog_id)
 
         # http://stackoverflow.com/questions/2569015/django-floatfield-or-decimalfield-for-currency
         if 'exptime' in indices.keys():
