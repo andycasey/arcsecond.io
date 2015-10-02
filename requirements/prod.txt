@@ -1,1 +1,2 @@
 -r defaults.txt
+opbeat==3.1.1
