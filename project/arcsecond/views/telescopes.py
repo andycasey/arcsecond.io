@@ -22,10 +22,5 @@ class TelescopeListAPIView(mixins.RequestLogViewMixin, generics.ListAPIView):
 class TelescopeDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIView):
     queryset = models.Telescope.objects.all()
     serializer_class = serializers.TelescopeSerializer
-    lookup_field = "name"
-
-    # def get_object(self):
-    #     name = self.kwargs.get("name", None)
-    #     return self.get_queryset().get(name=name)
 
 

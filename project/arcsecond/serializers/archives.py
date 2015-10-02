@@ -22,10 +22,7 @@ class ESOArchiveDataRowSerializer(serializers.ModelSerializer):
     archive = DataArchiveSerializer(required=False)
     summary = ESOProgrammeSummarySerializer(required=False)
     coordinates = AstronomicalCoordinatesSerializer(required=False)
-    telescope = serializers.HyperlinkedRelatedField(view_name='telescope-detail',
-                                                    lookup_field='name',
-                                                    read_only=True,
-                                                    required=False)
+    telescope = serializers.PrimaryKeyRelatedField(required=False, read_only=True)
 
 class HSTProgrammeSummarySerializer(serializers.ModelSerializer):
     class Meta:

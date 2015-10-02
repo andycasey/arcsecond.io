@@ -17,7 +17,7 @@ class TelescopeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Telescope
         lookup_field = "name"
-        fields = ('name', 'acronym', 'observing_site', 'mounting', 'optical_design', 'has_active_optics',
+        fields = ('id', 'name', 'acronym', 'observing_site', 'mounting', 'optical_design', 'has_active_optics',
                   'has_adaptative_optics', 'has_laser_guide_star', 'wavelength_domains', 'dome', 'mirrors')
 
     observing_site = serializers.HyperlinkedRelatedField(read_only=True,

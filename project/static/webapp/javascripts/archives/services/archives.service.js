@@ -37,7 +37,6 @@
             if (append.length > 0) {
                 url += "?" + append;
             }
-            console.log("---> "+url);
             return $http.get(url);
         }
     }
