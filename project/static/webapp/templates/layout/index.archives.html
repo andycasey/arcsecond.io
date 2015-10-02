@@ -74,7 +74,8 @@
                                    popover-title="{{ data_row.telescope.acronym || data_row.telescope.name }}"
                                    popover-template="dynamicPopover.telescopeTemplateUrl"
                                    type="button"
-                                   rel="popover">
+                                   rel="popover"
+                                   ng-show="data_row.telescope">
                                     {{ data_row.telescope.acronym || data_row.telescope.name }}
                                 </a>
 
@@ -86,7 +87,7 @@
                                         <tr>
                                             <td>Primary Mirror {{ data_row.telescope.mirrors[0].diameter }} mm</td>
                                         </tr>
-                                        <tr>
+                                        <tr ng-show="data_row.telescope.image_url">
                                             <td>
                                                 <img class="img-responsive" src="{{ data_row.telescope.image_url || '#' }}">
                                                 <small>{{ data_row.telescope.image_url_copyright }}</small>
@@ -107,7 +108,8 @@
                                    popover-title="{{ data_row.summary.programme_id }}, {{ data_row.summary.observing_mode }} Mode"
                                    popover-template="dynamicPopover.programmeTemplateUrl"
                                    type="button"
-                                   rel="popover">
+                                   rel="popover"
+                                   ng-show="data_row.summary">
                                     {{ data_row.summary.programme_id }}
                                 </a>
 
