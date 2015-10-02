@@ -4,20 +4,20 @@ from defaults import *
 
 DEBUG = False
 
-# INSTALLED_APPS += (
-#     'opbeat.contrib.django',
-# )
-#
-# OPBEAT = {
-#     'ORGANIZATION_ID': '29db67b358ce4dd5876cce447b379ea5',
-#     'APP_ID': '2bf4080a15',
-#     'SECRET_TOKEN': 'f9ce3e383470db99b4ad0ccf7db653066c72b80b',
-# }
-#
-# # The ending comma is crucial
-# MIDDLEWARE_CLASSES = (
-#     'opbeat.contrib.django.middleware.OpbeatAPMMiddleware',
-# ) + MIDDLEWARE_CLASSES
+INSTALLED_APPS += (
+    'opbeat.contrib.django',
+)
+
+OPBEAT = {
+    'ORGANIZATION_ID': '29db67b358ce4dd5876cce447b379ea5',
+    'APP_ID': '2bf4080a15',
+    'SECRET_TOKEN': 'f9ce3e383470db99b4ad0ccf7db653066c72b80b',
+}
+
+# The ending comma is crucial
+MIDDLEWARE_CLASSES = (
+    'opbeat.contrib.django.middleware.OpbeatAPMMiddleware',
+) + MIDDLEWARE_CLASSES
 
 ALLOWED_HOSTS = [
     '.arcsecond.io',
