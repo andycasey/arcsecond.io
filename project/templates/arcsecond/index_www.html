@@ -30,7 +30,7 @@
 
                         <!-- Heading -->
                         <h1 class="heading heading_lg">
-                            Welcome to <span class="text-primary">arcsecond.io</span>
+                            Welcome to <span class="text-primary">arcsecond</span>.<span class="text-primary">io</span>
                         </h1>
 
                         <!-- Sub heading -->
@@ -95,17 +95,13 @@
                     <!-- Sub heading -->
                     <p class="heading__sub">
                         Along with <a href="#APIs" target="_self">APIs</a>, arcsecond.io is actively being built.
-                        As of now, the part most developed are the
-                        <a href="{% host_url 'index_observingsites' host 'www' %}">Observing Sites</a>. We intend to provide
-                        <strong>a comprehensive community-curated list of all observing sites on this planet</strong>. Soon, everyone
-                        with an account will be able to add / update / edit these sites, and their telescopes.<br/>
+                        By opening an account with arcsecond.io you will have a complete workspace with the data, objects,
+                        information and people you want to follow. <br/>
                         To follow what's going on, read <a href="http://onekilopars.ec/blog">onekilopars.ec blog</a>.
                     </p>
 
                     <div class="text-center">
-                        On arcsecond.io, you soon will be able to see, discover, follow and explore all what astronomy
-                        data can provides, as well as managing your observing runs, being for professional observations,
-                        or amator's. Tell us if you like that idea on <a href="https://twitter.com/arcsecond_io">Twitter</a>,
+                        Tell us if you like that idea on <a href="https://twitter.com/arcsecond_io">Twitter</a>,
                         <a href="https://www.facebook.com/arcsecond.io">Facebook</a>,
                         or use the <a href="#contact" target="_self">contact form</a>.
                     </div>
@@ -120,9 +116,44 @@
         </div>
     </div>
 
+    <!-- Examples
+    ============================== -->
+    <div class="site-wrapper" id="examples">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+
+                    <!-- Heading -->
+                    <h1 class="heading">
+                        See astronomy data, <span class="text-primary">live</span>!
+                    </h1>
+
+                    <!-- Sub heading -->
+                    <p class="heading__sub">
+                        See data flowing into ESO archive, live!
+                    </p>
+
+                    <div class="text-center">
+                        <a target="_self" href="{% host_url 'index_archives' %}"><img src="{% static 'arcsecond/img/archives_screenshot.png' %}" width="100%"></a>
+                    </div>
+
+                    <!-- Sub heading -->
+                    <p class="heading__sub">
+                        Explore, and soon, update / created / edit Observing Sites in the world!
+                    </p>
+
+                    <div class="text-center">
+                        <a target="_self" href="{% host_url 'index_observingsites' %}"><img src="{% static 'arcsecond/img/observingsites_screenshot.png' %}" width="100%"></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- APIs
     ============================== -->
-    <div class="site-wrapper" id="APIs">
+    <div class="site-wrapper site-wrapper-blue" id="APIs">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
