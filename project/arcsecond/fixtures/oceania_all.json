@@ -12,7 +12,8 @@
     "pk": 79, 
     "model": "arcsecond.ObservingSite", 
     "fields": {
-        "name": "Adelaide", 
+        "name": "Adelaide Observatory", 
+        "short_name": "Adelaide", 
         "time_zone_name": "Australia/Adelaide", 
         "country": "Australia", 
         "time_zone": "+09:00", 
@@ -20,7 +21,6 @@
             138.58333333333334, 
             -34.916666666666664
         ], 
-        "long_name": "Adelaide Observatory", 
         "homepage": "http://www.adelaideobservatory.org", 
         "continent": "Oceania", 
         "wikipedia_article": "http://en.wikipedia.org/wiki/Adelaide_Observatory"
@@ -39,7 +39,8 @@
     "pk": 80, 
     "model": "arcsecond.ObservingSite", 
     "fields": {
-        "name": "Melbourne", 
+        "name": "Melbourne Observatory", 
+        "short_name": "Melbourne", 
         "time_zone_name": "Australia/Melbourne", 
         "country": "Australia", 
         "time_zone": "+10:00", 
@@ -48,7 +49,6 @@
             -37.831388888888895
         ], 
         "IAUCode": "907", 
-        "long_name": "Melbourne Observatory", 
         "homepage": "http://www.onlymelbourne.com.au/old-melbourne-observatory", 
         "continent": "Oceania", 
         "wikipedia_article": "http://en.wikipedia.org/wiki/Melbourne_Observatory"
@@ -67,7 +67,8 @@
     "pk": 81, 
     "model": "arcsecond.ObservingSite", 
     "fields": {
-        "name": "Mopra", 
+        "name": "Mopra Observatory", 
+        "short_name": "Mopra", 
         "time_zone_name": "Australia/Sydney", 
         "country": "Australia", 
         "time_zone": "+10:00", 
@@ -75,7 +76,6 @@
             149.09972222222223, 
             -31.267777777777777
         ], 
-        "long_name": "Mopra Observatory", 
         "homepage": "http://www.narrabri.atnf.csiro.au/mopra/", 
         "continent": "Oceania", 
         "wikipedia_article": "http://en.wikipedia.org/wiki/Mopra_Observatory"
@@ -94,7 +94,8 @@
     "pk": 82, 
     "model": "arcsecond.ObservingSite", 
     "fields": {
-        "name": "Mount Stromlo", 
+        "name": "Mount Stromlo Observatory", 
+        "short_name": "Mount Stromlo", 
         "time_zone_name": "Australia/Sydney", 
         "country": "Australia", 
         "time_zone": "+10:00", 
@@ -103,7 +104,6 @@
             -35.32027777777778
         ], 
         "IAUCode": "414", 
-        "long_name": "Mount Stromlo Observatory", 
         "homepage": "http://rsaa.anu.edu.au/observatories/mount-stromlo-observatory", 
         "continent": "Oceania", 
         "wikipedia_article": "http://en.wikipedia.org/wiki/Mount_Stromlo_Observatory"
@@ -122,7 +122,8 @@
     "pk": 83, 
     "model": "arcsecond.ObservingSite", 
     "fields": {
-        "name": "MRO", 
+        "name": "Murchison Radio-astronomy Observatory", 
+        "short_name": "MRO", 
         "time_zone_name": "Australia/Perth", 
         "country": "Australia", 
         "time_zone": "+08:00", 
@@ -130,7 +131,6 @@
             116.67081388888889, 
             -26.703319444444443
         ], 
-        "long_name": "Murchison Radio-astronomy Observatory", 
         "homepage": "http://www.atnf.csiro.au/facilities/mro.html", 
         "continent": "Oceania", 
         "wikipedia_article": "http://en.wikipedia.org/wiki/Murchison_Radio-astronomy_Observatory"
@@ -149,7 +149,8 @@
     "pk": 84, 
     "model": "arcsecond.ObservingSite", 
     "fields": {
-        "name": "Parkes", 
+        "name": "Parkes Observatory", 
+        "short_name": "Parkes", 
         "time_zone_name": "Australia/Sydney", 
         "country": "Australia", 
         "time_zone": "+10:00", 
@@ -157,7 +158,6 @@
             148.26232194444444, 
             -32.99996277777778
         ], 
-        "long_name": "Parkes Observatory", 
         "homepage": "http://www.parkes.atnf.csiro.au/", 
         "continent": "Oceania", 
         "wikipedia_article": "http://en.wikipedia.org/wiki/Parkes_Observatory"
@@ -176,7 +176,8 @@
     "pk": 85, 
     "model": "arcsecond.ObservingSite", 
     "fields": {
-        "name": "Paul Wild", 
+        "name": "Paul Wild Observatory", 
+        "short_name": "Paul Wild", 
         "time_zone_name": "Australia/Sydney", 
         "country": "Australia", 
         "time_zone": "+09:00", 
@@ -184,7 +185,6 @@
             149.56327777777778, 
             -30.31277777777778
         ], 
-        "long_name": "Paul Wild Observatory", 
         "homepage": "http://www.narrabri.atnf.csiro.au/", 
         "continent": "Oceania", 
         "wikipedia_article": "http://en.wikipedia.org/wiki/Paul_Wild_Observatory"
@@ -203,7 +203,8 @@
     "pk": 86, 
     "model": "arcsecond.ObservingSite", 
     "fields": {
-        "name": "Siding Spring", 
+        "name": "Siding Spring Observatory", 
+        "short_name": "Siding Spring", 
         "time_zone_name": "Australia/Sydney", 
         "country": "Australia", 
         "time_zone": "+10:00", 
@@ -212,7 +213,6 @@
             -31.277105555555554
         ], 
         "IAUCode": "413", 
-        "long_name": "Siding Spring Observatory", 
         "homepage": "http://rsaa.anu.edu.au/observatories/siding-spring-observatory", 
         "continent": "Oceania", 
         "wikipedia_article": "http://en.wikipedia.org/wiki/Siding_Spring_Observatory"

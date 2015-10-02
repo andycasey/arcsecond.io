@@ -1,1492 +1,1492 @@
 [
 {
-    "pk": 87,
-    "model": "arcsecond.Coordinates",
+    "pk": 87, 
+    "model": "arcsecond.Coordinates", 
     "fields": {
-        "latitude": -31.799405555555555,
-        "longitude": -69.3021,
+        "latitude": -31.799405555555555, 
+        "longitude": -69.3021, 
         "height": 1200
     }
 },
 {
-    "pk": 87,
-    "model": "arcsecond.ObservingSite",
+    "pk": 87, 
+    "model": "arcsecond.ObservingSite", 
     "fields": {
-        "name": "CASLEO",
-        "time_zone_name": "America/Argentina/San_Juan",
-        "country": "Argentina",
-        "time_zone": "-04:00",
+        "name": "Complejo Astronomic\u00f3 el Leoncito", 
+        "short_name": "CASLEO", 
+        "time_zone_name": "America/Argentina/San_Juan", 
+        "country": "Argentina", 
+        "time_zone": "-04:00", 
         "coordinates": [
-            -69.3021,
+            -69.3021, 
             -31.799405555555555
-        ],
-        "IAUCode": "829",
-        "long_name": "Complejo Astronomicó el Leoncito",
-        "homepage": "http://www.casleo.gov.ar/",
-        "continent": "South America",
+        ], 
+        "IAUCode": "829", 
+        "homepage": "http://www.casleo.gov.ar/", 
+        "continent": "South America", 
         "wikipedia_article": "http://en.wikipedia.org/wiki/Leoncito_Astronomical_Complex"
     }
 },
 {
-    "pk": 88,
-    "model": "arcsecond.Coordinates",
+    "pk": 88, 
+    "model": "arcsecond.Coordinates", 
     "fields": {
-        "latitude": -24.5975,
-        "longitude": -70.19638888888889,
+        "latitude": -24.5975, 
+        "longitude": -70.19638888888889, 
         "height": 3064
     }
 },
 {
-    "pk": 88,
-    "model": "arcsecond.ObservingSite",
+    "pk": 88, 
+    "model": "arcsecond.ObservingSite", 
     "fields": {
-        "name": "Cerro Armazones",
-        "time_zone_name": "America/Santiago",
-        "country": "Chile",
-        "time_zone": "-04:00",
+        "name": "Cerro Armazones Observatory", 
+        "short_name": "Cerro Armazones", 
+        "time_zone_name": "America/Santiago", 
+        "country": "Chile", 
+        "time_zone": "-04:00", 
         "coordinates": [
-            -70.19638888888889,
+            -70.19638888888889, 
             -24.5975
-        ],
-        "IAUCode": "I09",
-        "long_name": "Cerro Armazones Observatory",
-        "homepage": "http://www.eso.org/public/teles-instr/e-elt.html",
-        "continent": "South America",
+        ], 
+        "IAUCode": "I09", 
+        "homepage": "http://www.eso.org/public/teles-instr/e-elt.html", 
+        "continent": "South America", 
         "wikipedia_article": "http://en.wikipedia.org/wiki/Cerro_Armazones"
     }
 },
 {
-    "pk": 89,
-    "model": "arcsecond.Coordinates",
+    "pk": 89, 
+    "model": "arcsecond.Coordinates", 
     "fields": {
-        "latitude": -30.239444444444445,
-        "longitude": -70.73611111111111,
+        "latitude": -30.239444444444445, 
+        "longitude": -70.73611111111111, 
         "height": 2200
     }
 },
 {
-    "pk": 89,
-    "model": "arcsecond.ObservingSite",
+    "pk": 89, 
+    "model": "arcsecond.ObservingSite", 
     "fields": {
-        "name": "Cerro Pachón",
-        "time_zone_name": "America/Santiago",
-        "country": "Chile",
-        "time_zone": "-04:00",
+        "name": "Cerro Pach\u00f3n", 
+        "short_name": "Cerro Pach\u00f3n", 
+        "time_zone_name": "America/Santiago", 
+        "country": "Chile", 
+        "time_zone": "-04:00", 
         "coordinates": [
-            -70.73611111111111,
+            -70.73611111111111, 
             -30.239444444444445
-        ],
-        "IAUCode": "I11",
-        "long_name": "Cerro Pachón",
-        "homepage": "http://www.gemini.edu/",
-        "continent": "South America",
+        ], 
+        "IAUCode": "I11", 
+        "homepage": "http://www.gemini.edu/", 
+        "continent": "South America", 
         "wikipedia_article": "http://en.wikipedia.org/wiki/Gemini_Observatory"
     }
 },
 {
-    "pk": 90,
-    "model": "arcsecond.Coordinates",
+    "pk": 90, 
+    "model": "arcsecond.Coordinates", 
     "fields": {
-        "latitude": -24.625865833333332,
-        "longitude": -70.40323388888889,
+        "latitude": -24.625865833333332, 
+        "longitude": -70.40323388888889, 
         "height": 2635
     }
 },
 {
-    "pk": 90,
-    "model": "arcsecond.ObservingSite",
+    "pk": 90, 
+    "model": "arcsecond.ObservingSite", 
     "fields": {
-        "name": "Cerro Paranal",
-        "time_zone_name": "America/Santiago",
-        "country": "Chile",
-        "time_zone": "-04:00",
+        "name": "Cerro Paranal Observatory", 
+        "short_name": "Cerro Paranal", 
+        "time_zone_name": "America/Santiago", 
+        "country": "Chile", 
+        "time_zone": "-04:00", 
         "coordinates": [
-            -70.40323388888889,
+            -70.40323388888889, 
             -24.625865833333332
-        ],
-        "IAUCode": "309",
-        "long_name": "Cerro Paranal Observatory",
-        "homepage": "http://www.eso.org/public/teles-instr/vlt",
-        "continent": "South America",
+        ], 
+        "IAUCode": "309", 
+        "homepage": "http://www.eso.org/public/teles-instr/vlt", 
+        "continent": "South America", 
         "wikipedia_article": "http://en.wikipedia.org/wiki/Paranal_Observatory"
     }
 },
 {
-    "pk": 91,
-    "model": "arcsecond.Coordinates",
+    "pk": 91, 
+    "model": "arcsecond.Coordinates", 
     "fields": {
-        "latitude": -23.005777777777777,
-        "longitude": -67.75916666666667,
+        "latitude": -23.005777777777777, 
+        "longitude": -67.75916666666667, 
         "height": 5000
     }
 },
 {
-    "pk": 91,
-    "model": "arcsecond.ObservingSite",
+    "pk": 91, 
+    "model": "arcsecond.ObservingSite", 
     "fields": {
-        "name": "Chajnantor",
-        "time_zone_name": "America/Santiago",
-        "country": "Chile",
-        "time_zone": "-04:00",
+        "name": "Llano de Chajnantor Observatory", 
+        "short_name": "Chajnantor", 
+        "time_zone_name": "America/Santiago", 
+        "country": "Chile", 
+        "time_zone": "-04:00", 
         "coordinates": [
-            -67.75916666666667,
+            -67.75916666666667, 
             -23.005777777777777
-        ],
-        "long_name": "Llano de Chajnantor Observatory",
-        "homepage": "http://www.almaobservatory.org/",
-        "continent": "South America",
+        ], 
+        "homepage": "http://www.almaobservatory.org/", 
+        "continent": "South America", 
         "wikipedia_article": "http://en.wikipedia.org/wiki/Llano_de_Chajnantor_Observatory"
     }
 },
 {
-    "pk": 92,
-    "model": "arcsecond.Coordinates",
+    "pk": 92, 
+    "model": "arcsecond.Coordinates", 
     "fields": {
-        "latitude": -30.169116666666667,
-        "longitude": -70.8059,
+        "latitude": -30.169116666666667, 
+        "longitude": -70.8059, 
         "height": 2200
     }
 },
 {
-    "pk": 92,
-    "model": "arcsecond.ObservingSite",
+    "pk": 92, 
+    "model": "arcsecond.ObservingSite", 
     "fields": {
-        "name": "CTIO",
-        "time_zone_name": "America/Santiago",
-        "country": "Chile",
-        "time_zone": "-04:00",
+        "name": "Cerro Tololo Interamerican Observatory", 
+        "short_name": "CTIO", 
+        "time_zone_name": "America/Santiago", 
+        "country": "Chile", 
+        "time_zone": "-04:00", 
         "coordinates": [
-            -70.8059,
+            -70.8059, 
             -30.169116666666667
-        ],
-        "IAUCode": "807",
-        "long_name": "Cerro Tololo Interamerican Observatory",
-        "homepage": "http://www.ctio.noao.edu/",
-        "continent": "South America",
+        ], 
+        "IAUCode": "807", 
+        "homepage": "http://www.ctio.noao.edu/", 
+        "continent": "South America", 
         "wikipedia_article": "http://en.wikipedia.org/wiki/Cerro_Tololo_Inter-American_Observatory"
     }
 },
 {
-    "pk": 93,
-    "model": "arcsecond.Coordinates",
+    "pk": 93, 
+    "model": "arcsecond.Coordinates", 
     "fields": {
-        "latitude": -34.90838888888889,
-        "longitude": -57.93219444444444,
+        "latitude": -34.90838888888889, 
+        "longitude": -57.93219444444444, 
         "height": 11.1
     }
 },
 {
-    "pk": 93,
-    "model": "arcsecond.ObservingSite",
+    "pk": 93, 
+    "model": "arcsecond.ObservingSite", 
     "fields": {
-        "name": "La Plata",
-        "time_zone_name": "America/Argentina/Buenos_Aires",
-        "country": "Argentina",
-        "time_zone": "-03:00",
+        "name": "La Plata Astronomical Observatory", 
+        "short_name": "La Plata", 
+        "time_zone_name": "America/Argentina/Buenos_Aires", 
+        "country": "Argentina", 
+        "time_zone": "-03:00", 
         "coordinates": [
-            -57.93219444444444,
+            -57.93219444444444, 
             -34.90838888888889
-        ],
-        "IAUCode": "839",
-        "long_name": "La Plata Astronomical Observatory",
-        "homepage": "http://www.fcaglp.unlp.edu.ar/",
-        "continent": "South America",
+        ], 
+        "IAUCode": "839", 
+        "homepage": "http://www.fcaglp.unlp.edu.ar/", 
+        "continent": "South America", 
         "wikipedia_article": "http://en.wikipedia.org/wiki/La_Plata_Astronomical_Observatory"
     }
 },
 {
-    "pk": 94,
-    "model": "arcsecond.Coordinates",
+    "pk": 94, 
+    "model": "arcsecond.Coordinates", 
     "fields": {
-        "latitude": -29.255122222222223,
-        "longitude": -70.73174222222222,
+        "latitude": -29.255122222222223, 
+        "longitude": -70.73174222222222, 
         "height": 2400
     }
 },
 {
-    "pk": 94,
-    "model": "arcsecond.ObservingSite",
+    "pk": 94, 
+    "model": "arcsecond.ObservingSite", 
     "fields": {
-        "name": "La Silla",
-        "time_zone_name": "America/Santiago",
-        "country": "Chile",
-        "time_zone": "-04:00",
+        "name": "La Silla Observatory", 
+        "short_name": "La Silla", 
+        "time_zone_name": "America/Santiago", 
+        "country": "Chile", 
+        "time_zone": "-04:00", 
         "coordinates": [
-            -70.73174222222222,
+            -70.73174222222222, 
             -29.255122222222223
-        ],
-        "IAUCode": "809",
-        "long_name": "La Silla Observatory",
-        "homepage": "http://www.eso.org/public/teles-instr/lasilla/index.html",
-        "continent": "South America",
+        ], 
+        "IAUCode": "809", 
+        "homepage": "http://www.eso.org/public/teles-instr/lasilla/index.html", 
+        "continent": "South America", 
         "wikipedia_article": "http://en.wikipedia.org/wiki/La_Silla_Observatory"
     }
 },
 {
-    "pk": 95,
-    "model": "arcsecond.Coordinates",
+    "pk": 95, 
+    "model": "arcsecond.Coordinates", 
     "fields": {
-        "latitude": -29.003333333333334,
-        "longitude": -70.702,
+        "latitude": -29.003333333333334, 
+        "longitude": -70.702, 
         "height": 2400
     }
 },
 {
-    "pk": 95,
-    "model": "arcsecond.ObservingSite",
+    "pk": 95, 
+    "model": "arcsecond.ObservingSite", 
     "fields": {
-        "name": "Las Campanas",
-        "time_zone_name": "America/Santiago",
-        "country": "Chile",
-        "time_zone": "-04:00",
+        "name": "Las Campanas Observatory", 
+        "short_name": "Las Campanas", 
+        "time_zone_name": "America/Santiago", 
+        "country": "Chile", 
+        "time_zone": "-04:00", 
         "coordinates": [
-            -70.702,
+            -70.702, 
             -29.003333333333334
-        ],
-        "IAUCode": "304",
-        "long_name": "Las Campanas Observatory",
-        "homepage": "http://www.lco.cl",
-        "continent": "South America",
+        ], 
+        "IAUCode": "304", 
+        "homepage": "http://www.lco.cl", 
+        "continent": "South America", 
         "wikipedia_article": "http://en.wikipedia.org/wiki/Las_Campanas_Observatory"
     }
 },
 {
-    "pk": 96,
-    "model": "arcsecond.Coordinates",
+    "pk": 96, 
+    "model": "arcsecond.Coordinates", 
     "fields": {
-        "latitude": 8.788333333333334,
-        "longitude": -70.88722222222222,
+        "latitude": 8.788333333333334, 
+        "longitude": -70.88722222222222, 
         "height": 3600
     }
 },
 {
-    "pk": 96,
-    "model": "arcsecond.ObservingSite",
+    "pk": 96, 
+    "model": "arcsecond.ObservingSite", 
     "fields": {
-        "name": "Llano del Hato",
-        "time_zone_name": "America/Caracas",
-        "country": "Venezuela",
-        "time_zone": "-04:00",
+        "name": "Llano del Hato National Astronomical Observatory", 
+        "short_name": "Llano del Hato", 
+        "time_zone_name": "America/Caracas", 
+        "country": "Venezuela", 
+        "time_zone": "-04:00", 
         "coordinates": [
-            -70.88722222222222,
+            -70.88722222222222, 
             8.788333333333334
-        ],
-        "long_name": "Llano del Hato National Astronomical Observatory",
-        "homepage": "http://onekilopars.ec",
-        "continent": "South America",
+        ], 
+        "homepage": "http://onekilopars.ec", 
+        "continent": "South America", 
         "wikipedia_article": "http://en.wikipedia.org/wiki/Llano_del_Hato_National_Astronomical_Observatory"
     }
 },
 {
-    "pk": 97,
-    "model": "arcsecond.Coordinates",
+    "pk": 97, 
+    "model": "arcsecond.Coordinates", 
     "fields": {
-        "latitude": -22.534444444444446,
-        "longitude": -45.5825,
+        "latitude": -22.534444444444446, 
+        "longitude": -45.5825, 
         "height": 1864
     }
 },
 {
-    "pk": 97,
-    "model": "arcsecond.ObservingSite",
+    "pk": 97, 
+    "model": "arcsecond.ObservingSite", 
     "fields": {
-        "name": "Pico dos Dias",
-        "time_zone_name": "America/Sao_Paulo",
-        "country": "Brasil",
-        "time_zone": "-03:00",
+        "name": "Pico dos Dias Observatory", 
+        "short_name": "Pico dos Dias", 
+        "time_zone_name": "America/Sao_Paulo", 
+        "country": "Brasil", 
+        "time_zone": "-03:00", 
         "coordinates": [
-            -45.5825,
+            -45.5825, 
             -22.534444444444446
-        ],
-        "long_name": "Pico dos Dias Observatory",
-        "homepage": "http://www.lna.br/opd/opd.html",
-        "continent": "South America",
+        ], 
+        "homepage": "http://www.lna.br/opd/opd.html", 
+        "continent": "South America", 
         "wikipedia_article": "http://en.wikipedia.org/wiki/Pico_dos_Dias_Observatory"
     }
 },
 {
-    "pk": 98,
-    "model": "arcsecond.Coordinates",
+    "pk": 98, 
+    "model": "arcsecond.Coordinates", 
     "fields": {
-        "latitude": -33.26916666666666,
-        "longitude": -70.53444444444445,
+        "latitude": -33.26916666666666, 
+        "longitude": -70.53444444444445, 
         "height": 1450
     }
 },
 {
-    "pk": 98,
-    "model": "arcsecond.ObservingSite",
+    "pk": 98, 
+    "model": "arcsecond.ObservingSite", 
     "fields": {
-        "name": "Santa Martina",
-        "time_zone_name": "America/Santiago",
-        "country": "Chile",
-        "time_zone": "-04:00",
+        "name": "Santa Martina Observatory", 
+        "short_name": "Santa Martina", 
+        "time_zone_name": "America/Santiago", 
+        "country": "Chile", 
+        "time_zone": "-04:00", 
         "coordinates": [
-            -70.53444444444445,
+            -70.53444444444445, 
             -33.26916666666666
-        ],
-        "long_name": "Santa Martina Observatory",
-        "homepage": "http://www2.astro.puc.cl/ObsUC/index.php/UC_Observatory",
-        "continent": "South America",
+        ], 
+        "homepage": "http://www2.astro.puc.cl/ObsUC/index.php/UC_Observatory", 
+        "continent": "South America", 
         "wikipedia_article": ""
     }
 },
 {
-    "pk": 143,
-    "model": "arcsecond.Dome",
+    "pk": 143, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "Jorge Sahade Telescope (2.15m) Dome"
     }
 },
 {
-    "pk": 143,
-    "model": "arcsecond.Telescope",
+    "pk": 143, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "Jorge Sahade Telescope (2.15m)",
-        "observing_site": 87,
-        "mounting": "equ",
-        "has_active_optics": false,
-        "dome": 143,
-        "optical_design": "rc",
+        "name": "Jorge Sahade Telescope (2.15m)", 
+        "observing_site": 87, 
+        "mounting": "equ", 
+        "has_active_optics": false, 
+        "dome": 143, 
+        "optical_design": "rc", 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": false,
+        ], 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 143,
-    "model": "arcsecond.Mirror",
+    "pk": 143, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 1200.0,
-        "mirror_index": 0,
+        "diameter": 1200.0, 
+        "mirror_index": 0, 
         "telescope": 143
     }
 },
 {
-    "pk": 144,
-    "model": "arcsecond.Dome",
+    "pk": 144, 
+    "model": "arcsecond.Dome", 
     "fields": {
-        "name": "Telescopio Solar de Ondas Submilimétricas Dome"
+        "name": "Telescopio Solar de Ondas Submilim\u00e9tricas Dome"
     }
 },
 {
-    "pk": 144,
-    "model": "arcsecond.Telescope",
+    "pk": 144, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "Telescopio Solar de Ondas Submilimétricas",
-        "observing_site": 87,
-        "mounting": "equ",
-        "has_active_optics": false,
-        "dome": 144,
+        "name": "Telescopio Solar de Ondas Submilim\u00e9tricas", 
+        "observing_site": 87, 
+        "mounting": "equ", 
+        "has_active_optics": false, 
+        "dome": 144, 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": false,
+        ], 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 144,
-    "model": "arcsecond.Mirror",
+    "pk": 144, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 1500.0,
-        "mirror_index": 0,
+        "diameter": 1500.0, 
+        "mirror_index": 0, 
         "telescope": 144
     }
 },
 {
-    "pk": 145,
-    "model": "arcsecond.Dome",
+    "pk": 145, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "Helen Sawyer Hogg Telescope Dome"
     }
 },
 {
-    "pk": 145,
-    "model": "arcsecond.Telescope",
+    "pk": 145, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "Helen Sawyer Hogg Telescope",
-        "observing_site": 87,
-        "mounting": "equ",
-        "has_active_optics": false,
-        "dome": 145,
+        "name": "Helen Sawyer Hogg Telescope", 
+        "observing_site": 87, 
+        "mounting": "equ", 
+        "has_active_optics": false, 
+        "dome": 145, 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": false,
+        ], 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 145,
-    "model": "arcsecond.Mirror",
+    "pk": 145, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 609.6,
-        "mirror_index": 0,
+        "diameter": 609.6, 
+        "mirror_index": 0, 
         "telescope": 145
     }
 },
 {
-    "pk": 146,
-    "model": "arcsecond.Dome",
+    "pk": 146, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "Astrographe of Southerm Hemisphere Dome"
     }
 },
 {
-    "pk": 146,
-    "model": "arcsecond.Telescope",
+    "pk": 146, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "Astrographe of Southerm Hemisphere",
-        "observing_site": 87,
-        "mounting": "equ",
-        "has_active_optics": false,
-        "dome": 146,
+        "name": "Astrographe of Southerm Hemisphere", 
+        "observing_site": 87, 
+        "mounting": "equ", 
+        "has_active_optics": false, 
+        "dome": 146, 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": false,
+        ], 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 146,
-    "model": "arcsecond.Mirror",
+    "pk": 146, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 450.0,
-        "mirror_index": 0,
+        "diameter": 450.0, 
+        "mirror_index": 0, 
         "telescope": 146
     }
 },
 {
-    "pk": 147,
-    "model": "arcsecond.Dome",
+    "pk": 147, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "European Extremely Large Telescope Dome"
     }
 },
 {
-    "pk": 147,
-    "model": "arcsecond.Telescope",
+    "pk": 147, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "European Extremely Large Telescope",
-        "observing_site": 88,
-        "has_active_optics": false,
-        "dome": 147,
+        "name": "European Extremely Large Telescope", 
+        "observing_site": 88, 
+        "has_active_optics": false, 
+        "dome": 147, 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": true,
+        ], 
+        "has_adaptative_optics": true, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 147,
-    "model": "arcsecond.Mirror",
+    "pk": 147, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 42000.0,
-        "mirror_index": 0,
+        "diameter": 42000.0, 
+        "mirror_index": 0, 
         "telescope": 147
     }
 },
 {
-    "pk": 148,
-    "model": "arcsecond.Dome",
+    "pk": 148, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "Gemini South Dome"
     }
 },
 {
-    "pk": 148,
-    "model": "arcsecond.Telescope",
+    "pk": 148, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "Gemini South",
-        "observing_site": 89,
-        "mounting": "aaz",
-        "has_active_optics": true,
-        "dome": 148,
-        "optical_design": "rc",
+        "name": "Gemini South", 
+        "observing_site": 89, 
+        "mounting": "aaz", 
+        "has_active_optics": true, 
+        "dome": 148, 
+        "optical_design": "rc", 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": true,
+        ], 
+        "has_adaptative_optics": true, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 148,
-    "model": "arcsecond.Mirror",
+    "pk": 148, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 8100.0,
-        "mirror_index": 0,
+        "diameter": 8100.0, 
+        "mirror_index": 0, 
         "telescope": 148
     }
 },
 {
-    "pk": 149,
-    "model": "arcsecond.Dome",
+    "pk": 149, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "Unit Telescope 1 (Antu) Dome"
     }
 },
 {
-    "pk": 149,
-    "model": "arcsecond.Telescope",
+    "pk": 149, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "Unit Telescope 1 (Antu)",
-        "observing_site": 90,
-        "mounting": "aaz",
-        "has_active_optics": false,
-        "dome": 149,
-        "optical_design": "rc",
+        "name": "Unit Telescope 1 (Antu)", 
+        "observing_site": 90, 
+        "mounting": "aaz", 
+        "has_active_optics": false, 
+        "dome": 149, 
+        "optical_design": "rc", 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": true,
+        ], 
+        "has_adaptative_optics": true, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 149,
-    "model": "arcsecond.Mirror",
+    "pk": 149, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 8202.0,
-        "mirror_index": 0,
+        "diameter": 8202.0, 
+        "mirror_index": 0, 
         "telescope": 149
     }
 },
 {
-    "pk": 150,
-    "model": "arcsecond.Dome",
+    "pk": 150, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "Unit Telescope 2 (Kueyen) Dome"
     }
 },
 {
-    "pk": 150,
-    "model": "arcsecond.Telescope",
+    "pk": 150, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "Unit Telescope 2 (Kueyen)",
-        "observing_site": 90,
-        "mounting": "aaz",
-        "has_active_optics": false,
-        "dome": 150,
-        "optical_design": "rc",
+        "name": "Unit Telescope 2 (Kueyen)", 
+        "observing_site": 90, 
+        "mounting": "aaz", 
+        "has_active_optics": false, 
+        "dome": 150, 
+        "optical_design": "rc", 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": true,
+        ], 
+        "has_adaptative_optics": true, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 150,
-    "model": "arcsecond.Mirror",
+    "pk": 150, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 8202.0,
-        "mirror_index": 0,
+        "diameter": 8202.0, 
+        "mirror_index": 0, 
         "telescope": 150
     }
 },
 {
-    "pk": 151,
-    "model": "arcsecond.Dome",
+    "pk": 151, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "Unit Telescope 3 (Melipal) Dome"
     }
 },
 {
-    "pk": 151,
-    "model": "arcsecond.Telescope",
+    "pk": 151, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "Unit Telescope 3 (Melipal)",
-        "observing_site": 90,
-        "mounting": "aaz",
-        "has_active_optics": false,
-        "dome": 151,
-        "optical_design": "rc",
+        "name": "Unit Telescope 3 (Melipal)", 
+        "observing_site": 90, 
+        "mounting": "aaz", 
+        "has_active_optics": false, 
+        "dome": 151, 
+        "optical_design": "rc", 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": true,
+        ], 
+        "has_adaptative_optics": true, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 151,
-    "model": "arcsecond.Mirror",
+    "pk": 151, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 8202.0,
-        "mirror_index": 0,
+        "diameter": 8202.0, 
+        "mirror_index": 0, 
         "telescope": 151
     }
 },
 {
-    "pk": 152,
-    "model": "arcsecond.Dome",
+    "pk": 152, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "Unit Telescope 4 (Yepun) Dome"
     }
 },
 {
-    "pk": 152,
-    "model": "arcsecond.Telescope",
+    "pk": 152, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "Unit Telescope 4 (Yepun)",
-        "observing_site": 90,
-        "mounting": "aaz",
-        "has_active_optics": false,
-        "dome": 152,
-        "optical_design": "rc",
+        "name": "Unit Telescope 4 (Yepun)", 
+        "observing_site": 90, 
+        "mounting": "aaz", 
+        "has_active_optics": false, 
+        "dome": 152, 
+        "optical_design": "rc", 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": true,
+        ], 
+        "has_adaptative_optics": true, 
         "has_laser_guide_star": true
     }
 },
 {
-    "pk": 152,
-    "model": "arcsecond.Mirror",
+    "pk": 152, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 8202.0,
-        "mirror_index": 0,
+        "diameter": 8202.0, 
+        "mirror_index": 0, 
         "telescope": 152
     }
 },
 {
-    "pk": 153,
-    "model": "arcsecond.Dome",
+    "pk": 153, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "Visible and Infrared Survey Telescope for Astronomy  Dome"
     }
 },
 {
-    "pk": 153,
-    "model": "arcsecond.Telescope",
+    "pk": 153, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "Visible and Infrared Survey Telescope for Astronomy ",
-        "observing_site": 90,
-        "has_active_optics": true,
-        "dome": 153,
+        "name": "Visible and Infrared Survey Telescope for Astronomy ", 
+        "observing_site": 90, 
+        "has_active_optics": true, 
+        "dome": 153, 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": false,
+        ], 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 153,
-    "model": "arcsecond.Mirror",
+    "pk": 153, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 4100.0,
-        "mirror_index": 0,
+        "diameter": 4100.0, 
+        "mirror_index": 0, 
         "telescope": 153
     }
 },
 {
-    "pk": 154,
-    "model": "arcsecond.Dome",
+    "pk": 154, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "VLT Survey Telescope  Dome"
     }
 },
 {
-    "pk": 154,
-    "model": "arcsecond.Telescope",
+    "pk": 154, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "VLT Survey Telescope ",
-        "observing_site": 90,
-        "has_active_optics": false,
-        "dome": 154,
+        "name": "VLT Survey Telescope ", 
+        "observing_site": 90, 
+        "has_active_optics": false, 
+        "dome": 154, 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": false,
+        ], 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 154,
-    "model": "arcsecond.Mirror",
+    "pk": 154, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 2610.0,
-        "mirror_index": 0,
+        "diameter": 2610.0, 
+        "mirror_index": 0, 
         "telescope": 154
     }
 },
 {
-    "pk": 155,
-    "model": "arcsecond.Dome",
+    "pk": 155, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "Atacama Large Milimeter Array Dome"
     }
 },
 {
-    "pk": 155,
-    "model": "arcsecond.Telescope",
+    "pk": 155, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "Atacama Large Milimeter Array",
-        "observing_site": 91,
-        "has_active_optics": false,
-        "dome": 155,
+        "name": "Atacama Large Milimeter Array", 
+        "observing_site": 91, 
+        "has_active_optics": false, 
+        "dome": 155, 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": false,
+        ], 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 155,
-    "model": "arcsecond.Mirror",
+    "pk": 155, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 0.0,
-        "mirror_index": 0,
+        "diameter": 0.0, 
+        "mirror_index": 0, 
         "telescope": 155
     }
 },
 {
-    "pk": 156,
-    "model": "arcsecond.Dome",
+    "pk": 156, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "Atacama Pathfinder EXperiment Dome"
     }
 },
 {
-    "pk": 156,
-    "model": "arcsecond.Telescope",
+    "pk": 156, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "Atacama Pathfinder EXperiment",
-        "observing_site": 91,
-        "has_active_optics": false,
-        "dome": 156,
+        "name": "Atacama Pathfinder EXperiment", 
+        "observing_site": 91, 
+        "has_active_optics": false, 
+        "dome": 156, 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": false,
+        ], 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 156,
-    "model": "arcsecond.Mirror",
+    "pk": 156, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 12000.0,
-        "mirror_index": 0,
+        "diameter": 12000.0, 
+        "mirror_index": 0, 
         "telescope": 156
     }
 },
 {
-    "pk": 157,
-    "model": "arcsecond.Dome",
+    "pk": 157, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "Q/U Imaging ExperimenT Dome"
     }
 },
 {
-    "pk": 157,
-    "model": "arcsecond.Telescope",
+    "pk": 157, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "Q/U Imaging ExperimenT",
-        "observing_site": 91,
-        "has_active_optics": false,
-        "dome": 157,
+        "name": "Q/U Imaging ExperimenT", 
+        "observing_site": 91, 
+        "has_active_optics": false, 
+        "dome": 157, 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": false,
+        ], 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 157,
-    "model": "arcsecond.Mirror",
+    "pk": 157, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 0.0,
-        "mirror_index": 0,
+        "diameter": 0.0, 
+        "mirror_index": 0, 
         "telescope": 157
     }
 },
 {
-    "pk": 158,
-    "model": "arcsecond.Dome",
+    "pk": 158, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "4m Victor Blanco Telescope Dome"
     }
 },
 {
-    "pk": 158,
-    "model": "arcsecond.Telescope",
+    "pk": 158, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "4m Victor Blanco Telescope",
-        "observing_site": 92,
-        "mounting": "aaz",
-        "has_active_optics": true,
-        "dome": 158,
-        "optical_design": "rc",
+        "name": "4m Victor Blanco Telescope", 
+        "observing_site": 92, 
+        "mounting": "aaz", 
+        "has_active_optics": true, 
+        "dome": 158, 
+        "optical_design": "rc", 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": false,
+        ], 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 158,
-    "model": "arcsecond.Mirror",
+    "pk": 158, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 4022.9,
-        "mirror_index": 0,
+        "diameter": 4022.9, 
+        "mirror_index": 0, 
         "telescope": 158
     }
 },
 {
-    "pk": 159,
-    "model": "arcsecond.Dome",
+    "pk": 159, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "1.5m SMARTS Telescope Dome"
     }
 },
 {
-    "pk": 159,
-    "model": "arcsecond.Telescope",
+    "pk": 159, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "1.5m SMARTS Telescope",
-        "observing_site": 92,
-        "has_active_optics": true,
-        "dome": 159,
+        "name": "1.5m SMARTS Telescope", 
+        "observing_site": 92, 
+        "has_active_optics": true, 
+        "dome": 159, 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": false,
+        ], 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 159,
-    "model": "arcsecond.Mirror",
+    "pk": 159, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 1500.0,
-        "mirror_index": 0,
+        "diameter": 1500.0, 
+        "mirror_index": 0, 
         "telescope": 159
     }
 },
 {
-    "pk": 160,
-    "model": "arcsecond.Dome",
+    "pk": 160, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "1.3m SMARTS Telescope (ex-2MASS) Dome"
     }
 },
 {
-    "pk": 160,
-    "model": "arcsecond.Telescope",
+    "pk": 160, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "1.3m SMARTS Telescope (ex-2MASS)",
-        "observing_site": 92,
-        "mounting": "equ",
-        "has_active_optics": true,
-        "dome": 160,
+        "name": "1.3m SMARTS Telescope (ex-2MASS)", 
+        "observing_site": 92, 
+        "mounting": "equ", 
+        "has_active_optics": true, 
+        "dome": 160, 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": false,
+        ], 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 160,
-    "model": "arcsecond.Mirror",
+    "pk": 160, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 1300.0,
-        "mirror_index": 0,
+        "diameter": 1300.0, 
+        "mirror_index": 0, 
         "telescope": 160
     }
 },
 {
-    "pk": 161,
-    "model": "arcsecond.Dome",
+    "pk": 161, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "1.0m SMARTS Telescope (ex-YALLO) Dome"
     }
 },
 {
-    "pk": 161,
-    "model": "arcsecond.Telescope",
+    "pk": 161, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "1.0m SMARTS Telescope (ex-YALLO)",
-        "observing_site": 92,
-        "mounting": "equ",
-        "has_active_optics": true,
-        "dome": 161,
+        "name": "1.0m SMARTS Telescope (ex-YALLO)", 
+        "observing_site": 92, 
+        "mounting": "equ", 
+        "has_active_optics": true, 
+        "dome": 161, 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": false,
+        ], 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 161,
-    "model": "arcsecond.Mirror",
+    "pk": 161, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 1000.0,
-        "mirror_index": 0,
+        "diameter": 1000.0, 
+        "mirror_index": 0, 
         "telescope": 161
     }
 },
 {
-    "pk": 162,
-    "model": "arcsecond.Dome",
+    "pk": 162, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "0.9m SMARTS Telescope Dome"
     }
 },
 {
-    "pk": 162,
-    "model": "arcsecond.Telescope",
+    "pk": 162, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "0.9m SMARTS Telescope",
-        "observing_site": 92,
-        "has_active_optics": true,
-        "dome": 162,
+        "name": "0.9m SMARTS Telescope", 
+        "observing_site": 92, 
+        "has_active_optics": true, 
+        "dome": 162, 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": false,
+        ], 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 162,
-    "model": "arcsecond.Mirror",
+    "pk": 162, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 900.0,
-        "mirror_index": 0,
+        "diameter": 900.0, 
+        "mirror_index": 0, 
         "telescope": 162
     }
 },
 {
-    "pk": 163,
-    "model": "arcsecond.Dome",
+    "pk": 163, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "ESO 3.6m Dome"
     }
 },
 {
-    "pk": 163,
-    "model": "arcsecond.Telescope",
+    "pk": 163, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "ESO 3.6m",
-        "observing_site": 94,
-        "mounting": "equ",
-        "has_active_optics": false,
-        "dome": 163,
-        "optical_design": "rc",
+        "name": "ESO 3.6m", 
+        "observing_site": 94, 
+        "mounting": "equ", 
+        "has_active_optics": false, 
+        "dome": 163, 
+        "optical_design": "rc", 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": false,
+        ], 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 163,
-    "model": "arcsecond.Mirror",
+    "pk": 163, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 3600.0,
-        "mirror_index": 0,
+        "diameter": 3600.0, 
+        "mirror_index": 0, 
         "telescope": 163
     }
 },
 {
-    "pk": 164,
-    "model": "arcsecond.Dome",
+    "pk": 164, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "New Technology Telescope Dome"
     }
 },
 {
-    "pk": 164,
-    "model": "arcsecond.Telescope",
+    "pk": 164, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "New Technology Telescope",
-        "observing_site": 94,
-        "mounting": "aaz",
-        "has_active_optics": true,
-        "dome": 164,
-        "optical_design": "rc",
+        "name": "New Technology Telescope", 
+        "observing_site": 94, 
+        "mounting": "aaz", 
+        "has_active_optics": true, 
+        "dome": 164, 
+        "optical_design": "rc", 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": false,
+        ], 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 164,
-    "model": "arcsecond.Mirror",
+    "pk": 164, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 3580.0,
-        "mirror_index": 0,
+        "diameter": 3580.0, 
+        "mirror_index": 0, 
         "telescope": 164
     }
 },
 {
-    "pk": 165,
-    "model": "arcsecond.Dome",
+    "pk": 165, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "ESO 2.2m Dome"
     }
 },
 {
-    "pk": 165,
-    "model": "arcsecond.Telescope",
+    "pk": 165, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "ESO 2.2m",
-        "observing_site": 94,
-        "mounting": "equ",
-        "has_active_optics": false,
-        "dome": 165,
-        "optical_design": "rc",
+        "name": "ESO 2.2m", 
+        "observing_site": 94, 
+        "mounting": "equ", 
+        "has_active_optics": false, 
+        "dome": 165, 
+        "optical_design": "rc", 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": false,
+        ], 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 165,
-    "model": "arcsecond.Mirror",
+    "pk": 165, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 2200.0,
-        "mirror_index": 0,
+        "diameter": 2200.0, 
+        "mirror_index": 0, 
         "telescope": 165
     }
 },
 {
-    "pk": 166,
-    "model": "arcsecond.Dome",
+    "pk": 166, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "1.2m Euler (Swiss) Telescope Dome"
     }
 },
 {
-    "pk": 166,
-    "model": "arcsecond.Telescope",
+    "pk": 166, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "1.2m Euler (Swiss) Telescope",
-        "observing_site": 94,
-        "mounting": "equ",
-        "has_active_optics": false,
-        "dome": 166,
-        "optical_design": "rc",
+        "name": "1.2m Euler (Swiss) Telescope", 
+        "observing_site": 94, 
+        "mounting": "equ", 
+        "has_active_optics": false, 
+        "dome": 166, 
+        "optical_design": "rc", 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": false,
+        ], 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 166,
-    "model": "arcsecond.Mirror",
+    "pk": 166, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 1200.0,
-        "mirror_index": 0,
+        "diameter": 1200.0, 
+        "mirror_index": 0, 
         "telescope": 166
     }
 },
 {
-    "pk": 167,
-    "model": "arcsecond.Dome",
+    "pk": 167, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "Danish 1.54-metre Telescope Dome"
     }
 },
 {
-    "pk": 167,
-    "model": "arcsecond.Telescope",
+    "pk": 167, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "Danish 1.54-metre Telescope",
-        "observing_site": 94,
-        "mounting": "off",
-        "has_active_optics": false,
-        "dome": 167,
-        "optical_design": "rc",
+        "name": "Danish 1.54-metre Telescope", 
+        "observing_site": 94, 
+        "mounting": "off", 
+        "has_active_optics": false, 
+        "dome": 167, 
+        "optical_design": "rc", 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": false,
+        ], 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 167,
-    "model": "arcsecond.Mirror",
+    "pk": 167, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 1540.0,
-        "mirror_index": 0,
+        "diameter": 1540.0, 
+        "mirror_index": 0, 
         "telescope": 167
     }
 },
 {
-    "pk": 168,
-    "model": "arcsecond.Dome",
+    "pk": 168, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "The Rapid Eye Mount Telescope Dome"
     }
 },
 {
-    "pk": 168,
-    "model": "arcsecond.Telescope",
+    "pk": 168, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "The Rapid Eye Mount Telescope",
-        "observing_site": 94,
-        "has_active_optics": false,
-        "dome": 168,
+        "name": "The Rapid Eye Mount Telescope", 
+        "observing_site": 94, 
+        "has_active_optics": false, 
+        "dome": 168, 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": false,
+        ], 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 168,
-    "model": "arcsecond.Mirror",
+    "pk": 168, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 600.0,
-        "mirror_index": 0,
+        "diameter": 600.0, 
+        "mirror_index": 0, 
         "telescope": 168
     }
 },
 {
-    "pk": 169,
-    "model": "arcsecond.Dome",
+    "pk": 169, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "Rapid Action Telescope for Transient Objects Dome"
     }
 },
 {
-    "pk": 169,
-    "model": "arcsecond.Telescope",
+    "pk": 169, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "Rapid Action Telescope for Transient Objects",
-        "observing_site": 94,
-        "has_active_optics": false,
-        "dome": 169,
+        "name": "Rapid Action Telescope for Transient Objects", 
+        "observing_site": 94, 
+        "has_active_optics": false, 
+        "dome": 169, 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": false,
+        ], 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 169,
-    "model": "arcsecond.Mirror",
+    "pk": 169, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 250.0,
-        "mirror_index": 0,
+        "diameter": 250.0, 
+        "mirror_index": 0, 
         "telescope": 169
     }
 },
 {
-    "pk": 170,
-    "model": "arcsecond.Dome",
+    "pk": 170, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "TRAnsiting Planets and PlanetesImals Small Telescope Dome"
     }
 },
 {
-    "pk": 170,
-    "model": "arcsecond.Telescope",
+    "pk": 170, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "TRAnsiting Planets and PlanetesImals Small Telescope",
-        "observing_site": 94,
-        "has_active_optics": false,
-        "dome": 170,
-        "optical_design": "rc",
+        "name": "TRAnsiting Planets and PlanetesImals Small Telescope", 
+        "observing_site": 94, 
+        "has_active_optics": false, 
+        "dome": 170, 
+        "optical_design": "rc", 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": false,
+        ], 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 170,
-    "model": "arcsecond.Mirror",
+    "pk": 170, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 600.0,
-        "mirror_index": 0,
+        "diameter": 600.0, 
+        "mirror_index": 0, 
         "telescope": 170
     }
 },
 {
-    "pk": 171,
-    "model": "arcsecond.Dome",
+    "pk": 171, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "ESO 1-metre Schmidt Telescope Dome"
     }
 },
 {
-    "pk": 171,
-    "model": "arcsecond.Telescope",
+    "pk": 171, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "ESO 1-metre Schmidt Telescope",
-        "observing_site": 94,
-        "mounting": "equ",
-        "has_active_optics": false,
-        "dome": 171,
-        "optical_design": "sc",
+        "name": "ESO 1-metre Schmidt Telescope", 
+        "observing_site": 94, 
+        "mounting": "equ", 
+        "has_active_optics": false, 
+        "dome": 171, 
+        "optical_design": "sc", 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": false,
+        ], 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 171,
-    "model": "arcsecond.Mirror",
+    "pk": 171, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 1000.0,
-        "mirror_index": 0,
+        "diameter": 1000.0, 
+        "mirror_index": 0, 
         "telescope": 171
     }
 },
 {
-    "pk": 172,
-    "model": "arcsecond.Dome",
+    "pk": 172, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "Walter Baade Telescope (Magellan I) Dome"
     }
 },
 {
-    "pk": 172,
-    "model": "arcsecond.Telescope",
+    "pk": 172, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "Walter Baade Telescope (Magellan I)",
-        "observing_site": 95,
-        "mounting": "aaz",
-        "has_active_optics": true,
-        "dome": 172,
+        "name": "Walter Baade Telescope (Magellan I)", 
+        "observing_site": 95, 
+        "mounting": "aaz", 
+        "has_active_optics": true, 
+        "dome": 172, 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": false,
+        ], 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 172,
-    "model": "arcsecond.Mirror",
+    "pk": 172, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 6502.4,
-        "mirror_index": 0,
+        "diameter": 6502.4, 
+        "mirror_index": 0, 
         "telescope": 172
     }
 },
 {
-    "pk": 173,
-    "model": "arcsecond.Dome",
+    "pk": 173, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "Clay Telescope (Magellan II) Dome"
     }
 },
 {
-    "pk": 173,
-    "model": "arcsecond.Telescope",
+    "pk": 173, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "Clay Telescope (Magellan II)",
-        "observing_site": 95,
-        "mounting": "aaz",
-        "has_active_optics": true,
-        "dome": 173,
+        "name": "Clay Telescope (Magellan II)", 
+        "observing_site": 95, 
+        "mounting": "aaz", 
+        "has_active_optics": true, 
+        "dome": 173, 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": false,
+        ], 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 173,
-    "model": "arcsecond.Mirror",
+    "pk": 173, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 6502.4,
-        "mirror_index": 0,
+        "diameter": 6502.4, 
+        "mirror_index": 0, 
         "telescope": 173
     }
 },
 {
-    "pk": 174,
-    "model": "arcsecond.Dome",
+    "pk": 174, 
+    "model": "arcsecond.Dome", 
     "fields": {
-        "name": "2.5m Irénée du Pont Telescope Dome"
+        "name": "2.5m Ir\u00e9n\u00e9e du Pont Telescope Dome"
     }
 },
 {
-    "pk": 174,
-    "model": "arcsecond.Telescope",
+    "pk": 174, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "2.5m Irénée du Pont Telescope",
-        "observing_site": 95,
-        "mounting": "equ",
-        "has_active_optics": false,
-        "dome": 174,
-        "optical_design": "rc",
+        "name": "2.5m Ir\u00e9n\u00e9e du Pont Telescope", 
+        "observing_site": 95, 
+        "mounting": "equ", 
+        "has_active_optics": false, 
+        "dome": 174, 
+        "optical_design": "rc", 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": false,
+        ], 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 174,
-    "model": "arcsecond.Mirror",
+    "pk": 174, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 2540.0,
-        "mirror_index": 0,
+        "diameter": 2540.0, 
+        "mirror_index": 0, 
         "telescope": 174
     }
 },
 {
-    "pk": 175,
-    "model": "arcsecond.Dome",
+    "pk": 175, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "1m Henrietta Swope Telescope Dome"
     }
 },
 {
-    "pk": 175,
-    "model": "arcsecond.Telescope",
+    "pk": 175, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "1m Henrietta Swope Telescope",
-        "observing_site": 95,
-        "mounting": "equ",
-        "has_active_optics": false,
-        "dome": 175,
-        "optical_design": "rc",
+        "name": "1m Henrietta Swope Telescope", 
+        "observing_site": 95, 
+        "mounting": "equ", 
+        "has_active_optics": false, 
+        "dome": 175, 
+        "optical_design": "rc", 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": false,
+        ], 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 175,
-    "model": "arcsecond.Mirror",
+    "pk": 175, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 1016.0,
-        "mirror_index": 0,
+        "diameter": 1016.0, 
+        "mirror_index": 0, 
         "telescope": 175
     }
 },
 {
-    "pk": 176,
-    "model": "arcsecond.Dome",
+    "pk": 176, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "1.6m Perkin-Elmer Dome"
     }
 },
 {
-    "pk": 176,
-    "model": "arcsecond.Telescope",
+    "pk": 176, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "1.6m Perkin-Elmer",
-        "observing_site": 97,
-        "mounting": "off",
-        "has_active_optics": false,
-        "dome": 176,
-        "optical_design": "rc",
+        "name": "1.6m Perkin-Elmer", 
+        "observing_site": 97, 
+        "mounting": "off", 
+        "has_active_optics": false, 
+        "dome": 176, 
+        "optical_design": "rc", 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": false,
+        ], 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 176,
-    "model": "arcsecond.Mirror",
+    "pk": 176, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 1574.0,
-        "mirror_index": 0,
+        "diameter": 1574.0, 
+        "mirror_index": 0, 
         "telescope": 176
     }
 },
 {
-    "pk": 177,
-    "model": "arcsecond.Dome",
+    "pk": 177, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "0.6m Boller & Chivens Telescope Dome"
     }
 },
 {
-    "pk": 177,
-    "model": "arcsecond.Telescope",
+    "pk": 177, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "0.6m Boller & Chivens Telescope",
-        "observing_site": 97,
-        "mounting": "off",
-        "has_active_optics": false,
-        "dome": 177,
-        "optical_design": "rc",
+        "name": "0.6m Boller & Chivens Telescope", 
+        "observing_site": 97, 
+        "mounting": "off", 
+        "has_active_optics": false, 
+        "dome": 177, 
+        "optical_design": "rc", 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": false,
+        ], 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 177,
-    "model": "arcsecond.Mirror",
+    "pk": 177, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 609.0,
-        "mirror_index": 0,
+        "diameter": 609.0, 
+        "mirror_index": 0, 
         "telescope": 177
     }
 },
 {
-    "pk": 178,
-    "model": "arcsecond.Dome",
+    "pk": 178, 
+    "model": "arcsecond.Dome", 
     "fields": {
         "name": "0.6m Zeiss Telescope Dome"
     }
 },
 {
-    "pk": 178,
-    "model": "arcsecond.Telescope",
+    "pk": 178, 
+    "model": "arcsecond.Telescope", 
     "fields": {
-        "name": "0.6m Zeiss Telescope",
-        "observing_site": 97,
-        "mounting": "cas",
-        "has_active_optics": false,
-        "dome": 178,
+        "name": "0.6m Zeiss Telescope", 
+        "observing_site": 97, 
+        "mounting": "cas", 
+        "has_active_optics": false, 
+        "dome": 178, 
         "wavelength_domains": [
             "opt"
-        ],
-        "has_adaptative_optics": false,
+        ], 
+        "has_adaptative_optics": false, 
         "has_laser_guide_star": false
     }
 },
 {
-    "pk": 178,
-    "model": "arcsecond.Mirror",
+    "pk": 178, 
+    "model": "arcsecond.Mirror", 
     "fields": {
-        "diameter": 600.0,
-        "mirror_index": 0,
+        "diameter": 600.0, 
+        "mirror_index": 0, 
         "telescope": 178
     }
 }

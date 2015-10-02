@@ -113,8 +113,8 @@ def create_fixtures():
 
             observing_site = {'model': 'arcsecond.ObservingSite', 'pk': site_index}
             observing_site['fields'] = {
-                'name': obs['name'],
-                'long_name': obs['longName'],
+                'short_name': obs['name'],
+                'name': obs['longName'],
                 'coordinates': [longitude_value, latitude_value],
                 'continent': continent_key,
                 'country': obs['country'],
