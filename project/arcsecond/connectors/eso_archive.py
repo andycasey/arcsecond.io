@@ -21,7 +21,7 @@ ESO_ARCHIVE_DB_ROOT = ESO_ARCHIVE_ROOT + "wdb/wdb/eso/eso_archive_main/query?"
 ESO_ARCHIVE_WDBO = "wdbo="+urllib2.quote("votable/display")+"&"
 
 ESO_ARCHIVE_LIMIT_OFFSET = 5
-ESO_ARCHIVE_MAX_ROWS = "10" if settings.DEBUG else "100"
+ESO_ARCHIVE_MAX_ROWS = "10"
 ESO_ARCHIVE_DEFAULT_PARAMS = "max_rows_returned="+ESO_ARCHIVE_MAX_ROWS+"&format=SexaHour&resolver=simbad&aladin_colour=aladin_instrument&tab_night=on&"
 
 ESO_ARCHIVE_DEFAULT_ADDITIONAL_PARAMS = "tab_tel_airm_start=on&tab_stat_instrument=on&tab_ambient=on&tab_stat_exptime=on&tab_HDR=on&tab_mjd_obs=on&tab_stat_plot=on&tab_distance=on&tab_pos_angle=on&"
