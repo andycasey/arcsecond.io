@@ -146,11 +146,13 @@ def get_past_UTC_date_night(hour_offset=0):
     utc_date_end   = datetime.now(tz=timezone.utc) - timedelta(hours=hour_offset)
     utc_date_start = datetime.now(tz=timezone.utc) - timedelta(hours=hour_offset+1)
 
+    # +1 in hours is requested as ESO archive start at 1 and finish at 24.
+
     time_string_end_day  = "etime="  +urllib2.quote("{0} {1:02d} {2:02d}".format(utc_date_end.year, utc_date_end.month, utc_date_end.day))
-    time_string_end_hour = "endtime="+urllib2.quote("{0:02d}".format(utc_date_end.hour))
+    time_string_end_hour = "endtime="+urllib2.quote("{0:02d}".format(utc_date_end.hour+1))
 
     time_string_start_day  = "stime="    +urllib2.quote("{0} {1:02d} {2:02d}".format(utc_date_start.year, utc_date_start.month, utc_date_start.day))
-    time_string_start_hour = "starttime="+urllib2.quote("{0:02d}".format(utc_date_start.hour))
+    time_string_start_hour = "starttime="+urllib2.quote("{0:02d}".format(utc_date_start.hour+1))
 
     time_string = time_string_start_day +"&"+ time_string_start_hour +"&"+ time_string_end_day +"&"+ time_string_end_hour
     print " •• Getting ESO Data for time range: "+time_string
