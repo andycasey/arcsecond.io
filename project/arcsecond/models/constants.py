@@ -32,6 +32,8 @@ ESO_INSTRUMENTS = {
     "SINFO": {"name": "SINFONI", "site": "Paranal", "telescope": "Unit Telescope 4"},
     "MUSE":  {"name": "MUSE", "site": "Paranal", "telescope": "Unit Telescope 4"},
 
+    "PIONI": {"name": "PIONIER", "site": "Paranal", "telescope": "VLTI"},
+
     "VCAM":  {"name": "VIRCAM", "site": "Paranal", "telescope": "VISTA"},
     "OMEGA": {"name": "OmegaCam", "site": "Paranal", "telescope": "VST"},
 
