@@ -7,14 +7,15 @@ from django.conf import settings
 
 from meta.views import Meta
 
-def get_generic_meta(title=None, url=None):
-    telescopes_image_url = static('arcsecond/img/screen-bg_11.jpg')
-    site_domain = Site.objects.get_current().domain
+def get_generic_meta(title=None, url=None, api=False):
+    image_filename = 'screen-bg_11.jpg' if api is False else 'screen-bg_10.jpg'
+    image_url = static('arcsecond/img/'+image_filename)
 
     meta = Meta(
-        description=_("The astronomy cloud."),
         keywords=['astronomy', 'astrophysics', 'cloud', 'data', 'bigdata', 'REST', 'API', 'integration', 'sun', 'moon',
                   'sky', 'planets', 'exoplanets', 'earth', 'observing sites', 'telescopes'],
+
+        description=_("The astronomy cloud."),
         url='http://www.arcsecond.io',
         site_name='arcsecond.io',
         use_og=True,
@@ -22,7 +23,8 @@ def get_generic_meta(title=None, url=None):
         twitter_creator="@onekiloparsec",
         twitter_site="@arcsecond_io",
         twitter_card="summary_large_image",
-        image="http://{0}{1}".format(site_domain, telescopes_image_url),
+
+        image="http://www.arcsecond.io{0}".format(image_url),
     )
 
     if title is not None:
