@@ -255,10 +255,15 @@ ul {
     margin-bottom: 10px;
 }
 
-.hidden-row-image {
-    width: 130px;
+.hidden-row-image-container {
     float: left;
     padding: 10px;
+}
+
+.hidden-row-image {
+    width: 300px;
+    float: left;
+    padding-bottom: 10px;
 }
 
 .hidden-row-abstract {
