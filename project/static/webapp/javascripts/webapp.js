@@ -32,6 +32,9 @@
     function run($http) {
         $http.defaults.xsrfHeaderName = 'X-CSRFToken';
         $http.defaults.xsrfCookieName = 'csrftoken';
+
+        $http.defaults.useXDomain = true;
+        delete $http.defaults.headers.common['X-Requested-With'];
     }
 
 })();
