@@ -43,7 +43,7 @@ def get_ESO_latest_data(science_only=True):
 
     offset = 0
     pks = []
-    while len(pks) < 10 if settings.DEBUG else 100:
+    while len(pks) < 100:
         new_pks = read_ESO_VOTable_first_table(archive, offset)
         pks.extend(new_pks)
         print " •• Extending ESO archive rows by", len(new_pks), "pks, total:", len(pks)
@@ -93,9 +93,9 @@ def read_ESO_VOTable_first_table(archive, hour_offset=0):
         prog_id = table.array[row][indices['prog_id']]
         summary, created = ESOProgrammeSummary.objects.get_or_create(programme_id=prog_id)
         data_row.summary = summary
-        # if summary.period is None and prog_id not in summary_requests:
-        #     summary_requests.append(prog_id)
-        #     get_ESO_programme_id_summary(prog_id)
+        if summary.period is None and prog_id not in summary_requests:
+            summary_requests.append(prog_id)
+            get_ESO_programme_id_summary(prog_id)
 
         # http://stackoverflow.com/questions/2569015/django-floatfield-or-decimalfield-for-currency
         if 'exptime' in indices.keys():
