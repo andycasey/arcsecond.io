@@ -93,9 +93,9 @@ def read_ESO_VOTable_first_table(archive, hour_offset=0):
         prog_id = table.array[row][indices['prog_id']]
         summary, created = ESOProgrammeSummary.objects.get_or_create(programme_id=prog_id)
         data_row.summary = summary
-        if summary.period is None and prog_id not in summary_requests:
-            summary_requests.append(prog_id)
-            get_ESO_programme_id_summary(prog_id)
+        # if summary.period is None and prog_id not in summary_requests:
+        #     summary_requests.append(prog_id)
+        #     get_ESO_programme_id_summary(prog_id)
 
         # http://stackoverflow.com/questions/2569015/django-floatfield-or-decimalfield-for-currency
         if 'exptime' in indices.keys():
@@ -126,7 +126,6 @@ def get_ESO_VOTable_first_table(hour_offset):
 
     # Adding night param
     url += get_past_UTC_date_night(hour_offset)
-    print url
 
     try:
         response = urllib2.urlopen(url)
@@ -188,7 +187,6 @@ def get_ESO_programme_id_summary(programme_id):
     except urllib2.URLError:
         return None
     else:
-        print ESO_ARCHIVE_ROOT+ESO_ARCHIVE_PROGRAMME_ID_URL_FORMAT+urllib2.quote(programme_id)
         prog, created = ESOProgrammeSummary.objects.get_or_create(programme_id=programme_id)
         prog.programme_id = programme_id
 
