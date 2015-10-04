@@ -97,12 +97,12 @@
                 }
 
                 $scope.viewLoading = false;
-                document.getElementById("timer")['start']();
             }
 
             function archivesErrorFn(response, status, headers, config) {
                 $scope.viewLoading = false;
-                console.log(response.error);
+                console.log('Failed to load data from /archives/ APIs. Restarting timer.');
+                document.getElementById("timer")['start']();
             }
 
             function telescopeSuccessFn(response) {
@@ -124,7 +124,7 @@
             }
 
             function telescopeErrorFn(response) {
-                console.log(response);
+                console.log('Failed to load data from /telescopes/ APIs.');
             }
 
             function observingsiteSuccessFn(response) {
@@ -134,7 +134,7 @@
             }
 
             function observingsiteErrorFn(response) {
-                console.log(response);
+                console.log('Failed to load data from /observingsites/ APIs.');
             }
 
             function isNumeric(value) {
