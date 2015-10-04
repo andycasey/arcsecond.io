@@ -21,7 +21,7 @@ ESO_ARCHIVE_ROOT = "http://archive.eso.org/"
 ESO_ARCHIVE_DB_ROOT = ESO_ARCHIVE_ROOT + "wdb/wdb/eso/eso_archive_main/query?"
 ESO_ARCHIVE_WDBO = "wdbo="+urllib2.quote("votable/display")+"&"
 
-ESO_ARCHIVE_MAX_ROWS = "1000"
+ESO_ARCHIVE_MAX_ROWS = "10" if settings.DEBUG else "1000"
 ESO_ARCHIVE_DEFAULT_PARAMS = "max_rows_returned="+ESO_ARCHIVE_MAX_ROWS+"&format=SexaHour&resolver=simbad&aladin_colour=aladin_instrument&tab_night=on&"
 
 ESO_ARCHIVE_DEFAULT_ADDITIONAL_PARAMS = "tab_tel_airm_start=on&tab_stat_instrument=on&tab_ambient=on&tab_stat_exptime=on&tab_HDR=on&tab_mjd_obs=on&tab_stat_plot=on&tab_distance=on&tab_pos_angle=on&"
@@ -43,7 +43,7 @@ def get_ESO_latest_data(science_only=True):
 
     offset = 0
     pks = []
-    while len(pks) < 100:
+    while len(pks) < 10 if settings.DEBUG else 100:
         new_pks = read_ESO_VOTable_first_table(archive, offset)
         pks.extend(new_pks)
         print " •• Extending ESO archive rows by", len(new_pks), "pks, total:", len(pks)

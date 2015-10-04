@@ -44,7 +44,8 @@
         <div class="row">
             <div id="archive-table-container">
                 <div class="table-responsive">
-                    <table class="table table-striped">
+                    <table class="table" style="border-collapse:collapse;">
+                        <thead>
                         <tr>
                             <th>Archive</th>
                             <th>Date</th>
@@ -57,97 +58,94 @@
                             <th>Exposure Time</th>
                             <th>Coordinates</th>
                         </tr>
-                        <tr ng-repeat="data_row in vm.data_rows">
+                        </thead>
+
+                        <tbody ng-repeat="data_row in vm.data_rows">
+                        <tr class="{{ $index%2 == 0 && 'highlight' }}">
                             <td>
-                                <a target="_self" href="{{ data_row.archive.url }}" rel="external">{{ data_row.archive.name }}</a>
+                                <a target="_blank" href="{{ data_row.archive.url }}" rel="external">{{ data_row.archive.name }}</a>
                             </td>
+
                             <td>
                                 {{ data_row.date | timeAgo }}
                             </td>
+
                             <td>
                                 <a target="_self" href="/observingsites/{{ data_row.telescope.observingsite.name }}">
                                     {{ data_row.telescope.observingsite.short_name || data_row.telescope.observingsite.name }}
                                 </a>
                             </td>
+
                             <td>
-                                <a popover-trigger="mouseenter"
-                                   popover-title="{{ data_row.telescope.name }}"
-                                   popover-template="dynamicPopover.telescopeTemplateUrl"
-                                   type="button"
-                                   rel="popover"
-                                   ng-show="data_row.telescope">
+                                <a href="#"
+                                   data-toggle="collapse"
+                                   data-target="#row_tel_{{ $index }}"
+                                   class="accordion-toggle btn btn-standard btn-standard-row"
+                                   ng-show="data_row.telescope"
+                                   rel="info">
                                     {{ data_row.telescope.acronym || data_row.telescope.name }}
                                 </a>
-
-                                <script type="text/ng-template" id="telescopeTemplate.html">
-                                    <table>
-                                        <tr>
-                                            <td>{{ data_row.telescope.optical_design }}, {{ data_row.telescope.mounting }} Mounting</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Primary Mirror {{ data_row.telescope.mirrors[0].diameter }} mm</td>
-                                        </tr>
-                                        <tr ng-show="data_row.telescope.image_url">
-                                            <td>
-                                                <img class="img-responsive" src="{{ data_row.telescope.image_url }}">
-                                                <small>{{ data_row.telescope.image_url_copyright }}</small>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </script>
-
                             </td>
+
                             <td>
                                 {{ data_row.instrument_name }}
                             </td>
+
                             <td>
-                                <a target="_self" href="http://archive.eso.org/hdr?DpId={{ data_row.dataset_id }}" rel="external">{{ data_row.dataset_id }}</a>
+                                <a target="_blank" href="http://archive.eso.org/hdr?DpId={{ data_row.dataset_id }}" rel="external">{{ data_row.dataset_id }}</a>
                             </td>
+
                             <td>
-                                <a popover-trigger="mouseenter"
-                                   popover-title="{{ data_row.summary.programme_id }}, {{ data_row.summary.observing_mode }} Mode"
-                                   popover-template="dynamicPopover.programmeTemplateUrl"
-                                   type="button"
-                                   rel="popover"
-                                   ng-show="data_row.summary">
+                                <a href="#"
+                                   data-toggle="collapse"
+                                   data-target="#row_prog_{{ $index }}"
+                                   class="accordion-toggle btn btn-standard btn-standard-row"
+                                   ng-show="data_row.summary"
+                                   rel="info">
                                     {{ data_row.summary.programme_id }}
                                 </a>
-
-                                <script type="text/ng-template" id="programmeTemplate.html">
-                                    <div>
-                                        <table>
-                                            <tr>
-                                                <td>{{ data_row.summary.programme_title }}</td>
-                                            </tr>
-                                            <tr>
-                                                <td>{{ data_row.summary.investigators_list }}</td>
-                                            </tr>
-                                            <tr>
-                                                <td>{{ data_row.summary.programme_type }}</td>
-                                            </tr>
-                                            <tr>
-                                                <td>{{ data_row.summary.allocated_time }} allocated</td>
-                                            </tr>
-                                            <tr>
-                                                <td>{{ data_row.summary.abstract }}</td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="form-group">
-                                    </div>
-                                </script>
-
                             </td>
+
                             <td>
                                 {{ data_row.object_field }}
                             </td>
+
                             <td>
                                 {{ data_row.exposure_time }}
                             </td>
+
                             <td>
                                 ({{ data_row.coordinates.right_ascension | sexagesimal:'hour' }}, {{ data_row.coordinates.declination | sexagesimal }})
                             </td>
                         </tr>
+
+                        <tr>
+                            <td colspan="10" class="hidden-row">
+                                <div id="row_tel_{{ $index }}" class="accordian-body collapse hidden-row-container" ng-show="data_row.telescope">
+                                    <img class="img-responsive hidden-row-image" ng-show="data_row.telescope.image_url" src="{{ data_row.telescope.image_url }}">
+                                    <h5>{{ data_row.telescope.name }}</h5>
+                                    {{ data_row.telescope.optical_design }}, {{ data_row.telescope.mounting }} Mounting<br/>
+                                    Primary Mirror {{ data_row.telescope.mirrors[0].diameter }} mm<br/>
+                                    <small>{{ data_row.telescope.image_url_credits }}</small>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="10" class="hidden-row">
+                                <div id="row_prog_{{ $index }}" class="accordian-body collapse hidden-row-container" ng-show="data_row.summary">
+                                    <h5>{{ data_row.summary.programme_title }}</h5>
+                                    ({{ data_row.summary.programme_type }}, {{ data_row.summary.observing_mode }} Mode, {{ data_row.summary.allocated_time }} allocated,
+                                    <a rel="external" target="_blank" href="http://archive.eso.org/wdb/wdb/eso/sched_rep_arc/query?progid={{ data_row.summary.programme_id }}">{{ data_row.summary.programme_id }}</a>)<br/>
+                                    {{ data_row.summary.investigators_list }}
+                                    <div class="hidden-row-abstract">
+                                        {{ data_row.summary.abstract }}
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+
+                        </tbody>
                     </table>
                 </div>
             </div>

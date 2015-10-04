@@ -21,23 +21,23 @@ a[rel="external"]:before {
     text-decoration: none;
 }
 
-a[rel="popover"] {
+a[rel="info"] {
     position: relative;
 }
 
-a[rel="popover"]:before {
+a[rel="info"]:before {
     content: "\f05a";
     font-family: FontAwesome;
     font-size: 1.0em;
     position: absolute;
     bottom: 1px;
-    right: -15px;
+    right: -12px;
     text-decoration: none;
 }
 
 
 a[rel="external"]:after {
-  content: '\00a0\00a0\00a0\00a0';
+    content: '\00a0\00a0\00a0\00a0';
 }
 
 .fixed-font-cell {
@@ -236,3 +236,36 @@ ul {
     /*padding-top: 0px;*/
 }
 
+.table > tbody > tr,
+.table > tbody > td {
+    border: 0;
+}
+
+.btn-standard-row {
+    padding: 0px 10px;
+}
+
+.hidden-row {
+    padding: 0 !important;
+    border: hidden;
+}
+
+.hidden-row-container {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.hidden-row-image {
+    width: 130px;
+    float: left;
+    padding: 10px;
+}
+
+.hidden-row-abstract {
+    max-height: 150px;
+    overflow: scroll;
+}
+
+.highlight {
+    background-color: #F9F9F9;
+}
