@@ -21,10 +21,10 @@ ALLOWED_HOSTS = [
 
 SITE_ID = 2  # Local=1, Staging=2, Prod=3
 
-CORS_ORIGIN_ALLOW_ALL = False
-CORS_ORIGIN_WHITELIST = (
-    'arcsecond-staging.herokuapp.com',
-)
+CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_WHITELIST = (
+#     'arcsecond-staging.herokuapp.com',
+# )
 
 ARCSECOND_API_ROOT_URL = "http://arcsecond-staging.herokuapp.com/api"
 PARENT_HOST = "arcsecond-staging.herokuapp.com"

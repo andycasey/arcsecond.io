@@ -281,7 +281,7 @@ ACCOUNT_EMAIL_REQUIRED = True
 # An integer specifying the minimum password length.
 ACCOUNT_PASSWORD_MIN_LENGTH = 10
 
-CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_ALLOW_ALL = True
 CSRF_COOKIE_DOMAIN = "*"
 
 CORS_ALLOW_HEADERS = (
