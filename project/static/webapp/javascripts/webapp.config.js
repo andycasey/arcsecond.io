@@ -5,9 +5,12 @@
         .module('webapp.config')
         .config(config);
 
-    config.$inject = ['$locationProvider', 'uiGmapGoogleMapApiProvider'];
+    config.$inject = ['$httpProvider', '$locationProvider', 'uiGmapGoogleMapApiProvider'];
 
-    function config($locationProvider, uiGmapGoogleMapApiProvider) {
+    function config($httpProvider, $locationProvider, uiGmapGoogleMapApiProvider) {
+        $httpProvider.defaults.useXDomain = true;
+        delete $httpProvider.defaults.headers.common['X-Requested-With'];
+
         $locationProvider.html5Mode(true);
         $locationProvider.hashPrefix('!');
 
