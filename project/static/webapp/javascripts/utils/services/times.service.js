@@ -13,24 +13,18 @@
         return Times;
 
         function all(coordinates) {
-            var now = new Date();
             var times = {};
+
+            var now = new Date();
             times.date_local = now;
 
-            var now_UT = new Date(Date.UTC(
-                now.getFullYear(),
-                now.getMonth(),
-                now.getDate(),
-                now.getHours(),
-                now.getMinutes(),
-                now.getSeconds()
-            ));
+            var now_UT = new Date(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(),  now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds());
             times.date_UTC = now_UT;
 
-            var year = parseFloat(now_UT.getFullYear());
-            var month = parseFloat(now_UT.getMonth());
-            var day = parseFloat(now_UT.getDate());
-            var ut = parseFloat(now_UT.getHours()) + parseFloat(now_UT.getMinutes())/60.0 + parseFloat(now_UT.getSeconds())/3600.0;
+            var year  = parseFloat(now_UT.getFullYear());
+            var month = parseFloat(now_UT.getMonth()) + 1;
+            var day   = parseFloat(now_UT.getDate());
+            var ut    = parseFloat(now_UT.getHours()) + parseFloat(now_UT.getMinutes())/60.0 + parseFloat(now_UT.getSeconds())/3600.0;
 
             var jd = 367.0*year - Math.floor( 7.0*( year+Math.floor((month+9.0)/12.0))/4.0 ) -
                 Math.floor( 3.0*(Math.floor((year+(month-9.0)/7.0)/100.0) +1.0)/4.0) +
