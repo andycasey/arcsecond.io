@@ -122,7 +122,7 @@
                         <tr>
                             <td colspan="10" class="hidden-row">
                                 <div id="row_tel_{{ $index }}" class="accordian-body collapse hidden-row-container" ng-show="data_row.telescope">
-                                    <img class="img-responsive hidden-row-image" ng-show="data_row.telescope.image_url" src="{{ data_row.telescope.image_url }}">
+                                    <img class="img-responsive hidden-row-image" ng-src="{{ data_row.telescope.image_url }}">
                                     <h5>{{ data_row.telescope.name }}</h5>
                                     {{ data_row.telescope.optical_design }}, {{ data_row.telescope.mounting }} Mounting<br/>
                                     Primary Mirror {{ data_row.telescope.mirrors[0].diameter }} mm<br/>
