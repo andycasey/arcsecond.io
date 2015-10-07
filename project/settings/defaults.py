@@ -183,11 +183,12 @@ BOWER_INSTALLED_APPS = (
     'angular-resource#1.4.4',
     'angular-cookies#1.4.4',
     'angular-timer',
+    'angular-xeditable',
     'angular-bootstrap',
     'ngDialog',
     'angular-google-maps',
     'snackbarjs',
-    'uri.js'
+    'uri.js',
 )
 
 # https://github.com/sunlightlabs/django-honeypot
