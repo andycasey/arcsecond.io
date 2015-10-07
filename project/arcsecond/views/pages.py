@@ -30,7 +30,7 @@ def index_www(request):
                     'initial': True,
                     'angular_app': 'webapp',
                     'api_root_url': settings.ARCSECOND_API_ROOT_URL,
-                    'meta': get_generic_meta(title="arcsecond.io", url=reverse_lazy('index_www'))}
+                    'meta': get_generic_meta(title="arcsecond.io")}
 
     if request.method == 'POST':
         form = forms.ContactForm(request=request, data=request.POST)
@@ -50,7 +50,7 @@ def index_api(request):
                     'api_version': '1',
                     'initial': True,
                     'api_root_url': settings.ARCSECOND_API_ROOT_URL,
-                    'meta': get_generic_meta(title="api.arcsecond.io", url=reverse_lazy('index_api'), api=True)}
+                    'meta': get_generic_meta(title="api.arcsecond.io", api=True)}
 
     return render_to_response('arcsecond/index_api.html', context_dict, context)
 
@@ -116,7 +116,7 @@ class ObservingSitesIndexView(TemplateView):
         context = super(ObservingSitesIndexView, self).get_context_data(**kwargs)
         context['angular_app'] = "webapp"
         context['api_root_url'] = settings.ARCSECOND_API_ROOT_URL
-        context['meta'] = get_generic_meta(title="arcsecond.io", url=reverse_lazy('index_www'))
+        context['meta'] = get_generic_meta(title="arcsecond.io")
         return context
 
     @method_decorator(ensure_csrf_cookie)
@@ -131,7 +131,7 @@ class ArchivesIndexView(TemplateView):
         context = super(ArchivesIndexView, self).get_context_data(**kwargs)
         context['angular_app'] = "webapp"
         context['api_root_url'] = settings.ARCSECOND_API_ROOT_URL
-        context['meta'] = get_generic_meta(title="arcsecond.io", url=reverse_lazy('index_www'))
+        context['meta'] = get_generic_meta(title="arcsecond.io")
         return context
 
     @method_decorator(ensure_csrf_cookie)
@@ -146,7 +146,7 @@ class TelegramsIndexView(TemplateView):
         context = super(TelegramsIndexView, self).get_context_data(**kwargs)
         context['angular_app'] = "webapp"
         context['api_root_url'] = settings.ARCSECOND_API_ROOT_URL
-        context['meta'] = get_generic_meta(title="arcsecond.io", url=reverse_lazy('index_www'))
+        context['meta'] = get_generic_meta(title="arcsecond.io")
         return context
 
     @method_decorator(ensure_csrf_cookie)
