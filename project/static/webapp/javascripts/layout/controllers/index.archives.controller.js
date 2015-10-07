@@ -101,8 +101,9 @@
             }
 
             function archivesErrorFn(response, status, headers, config) {
-                $scope.viewLoading = false;
                 console.log('Failed to load data from /archives/ APIs. Restarting timer.');
+                $scope.viewLoading = false;
+                document.getElementById("timer")['start']();
             }
 
             function telescopeSuccessFn(response) {
