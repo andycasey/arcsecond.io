@@ -24,3 +24,8 @@ class TelescopeDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIVie
     serializer_class = serializers.TelescopeSerializer
 
 
+class TelescopeNamedDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIView):
+    queryset = models.Telescope.objects.all()
+    serializer_class = serializers.TelescopeSerializer
+    lookup_field = 'name'
+
