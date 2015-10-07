@@ -2,6 +2,7 @@ from django.conf import settings
 from django.conf.urls import patterns, url, include
 from django.contrib import admin
 from django.http import HttpResponse
+from django.views.generic.base import RedirectView
 
 from project.arcsecond import views
 
@@ -24,7 +25,10 @@ if settings.SITE_ID == 2:
 
 urlpatterns += patterns('',
     url(r'^robots\.txt$', lambda r: HttpResponse(robots_content)),
+    url(r'^favicon\.ico$', RedirectView.as_view(url='/static/favicon.ico')),
+
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^privacy', views.privacy_policy, name='privacy-policy'),
 
     # The allauth login process first redirect to accounts/profile, which we redirect to @<username>
     url(r'^accounts/', include('allauth.urls')),
