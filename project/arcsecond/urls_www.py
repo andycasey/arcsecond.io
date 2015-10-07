@@ -33,7 +33,7 @@ urlpatterns += patterns('',
     # The allauth login process first redirect to accounts/profile, which we redirect to @<username>
     url(r'^accounts/', include('allauth.urls')),
     url(r'^accounts/profile', views.user_account_profile, name='user-account-profile'),
-    url(r'^@(?P<username>[\w@\.]+)/$', views.user_profile, name="user-profile"),
+    url(r'^@(?P<username>[\w@\.]+)$', views.user_profile, name="user-profile"),
     url(r'^@(?P<username>[\w@\.]+)/settings$', views.user_settings, name="user-settings"),
 
     url('^observingsites/.*$', views.ObservingSitesIndexView.as_view(), name='index_observingsites'),
