@@ -1,0 +1,30 @@
+{% extends 'arcsecond/base.html' %}
+
+{% load staticfiles %}
+{% load i18n %}
+{% load hosts %}
+
+{% block body_block %}
+
+    <div class="welcome_404" id="welcome">
+        <div class="welcome-404-classic__inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+
+                        <p class="heading__pre">
+                            Privacy Policy on arcsecond.io
+                        </p>
+
+                        <p class="heading__sub">
+                            We do not collect any personnal information. The web app is monitored for unique
+                            performance purposes.
+                        </p>
+
+                    </div>
+                </div> <!-- / .row -->
+            </div> <!-- / .container -->
+        </div> <!-- / .classic-welcome__inner -->
+    </div> <!-- / .welcome_classic -->
+
+{% endblock body_block %}

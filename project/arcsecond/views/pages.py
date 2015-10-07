@@ -97,6 +97,12 @@ def user_settings(request, username):
             return HttpResponse('Unauthorized', status=401)
 
 
+def privacy_policy(request):
+    context = RequestContext(request)
+    context_dict = {"title": ("arcsecond.io - Privacy Policy")}
+    return render_to_response('arcsecond/privacy-policy.html', context_dict, context)
+
+
 
 
 from django.views.generic.base import TemplateView
