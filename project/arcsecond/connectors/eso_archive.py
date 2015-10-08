@@ -43,7 +43,7 @@ def get_ESO_latest_data(science_only=True):
 
     offset = 0
     pks = []
-    while len(pks) < 100:
+    while len(pks) < 10:
         new_pks = read_ESO_VOTable_first_table(archive, offset)
         pks.extend(new_pks)
         print " •• Extending ESO archive rows by", len(new_pks), "pks, total:", len(pks)
