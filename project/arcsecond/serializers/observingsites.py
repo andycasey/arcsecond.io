@@ -1,16 +1,13 @@
-from django.contrib import auth
+
 from rest_framework import serializers
 from project.arcsecond.models import Coordinates, ObservingSite, ObservingSiteActivity
+from project.arcsecond.serializers import accounts
 
-######################## Earth ########################
 
 class CoordinatesSerializer(serializers.ModelSerializer):
     class Meta:
         model = Coordinates
         fields = ('longitude', 'latitude', 'height')
-
-######################## Observing Sites ########################
-
 
 class ObservingSiteSerializer(serializers.ModelSerializer):
     class Meta:
@@ -23,18 +20,13 @@ class ObservingSiteSerializer(serializers.ModelSerializer):
     coordinates = CoordinatesSerializer()
     telescopes = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
 
-class UserSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = auth.get_user_model()
-        fields = ('id', 'first_name', 'last_name', 'username', 'email')
-
 class ObservingSiteActivitySerializer(serializers.ModelSerializer):
     class Meta:
         model = ObservingSiteActivity
         fields = ('date', 'user', 'observing_site', 'action', 'property_name', 'old_value', 'new_value',
                   'action_message', 'method')
 
-    user = UserSerializer(required=False)
+    user = accounts.UserSerializer(required=False)
     observing_site = ObservingSiteSerializer(required=False)
 
     action = serializers.SerializerMethodField()
