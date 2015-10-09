@@ -7,5 +7,5 @@
         ]);
 
     angular
-        .module('webapp.layout.controllers', ['timer']);
+        .module('webapp.layout.controllers', ['timer', 'xeditable']);
 })();

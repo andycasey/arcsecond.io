@@ -13,7 +13,6 @@
             },
             templateUrl: '/static/webapp/templates/observingsites/observingsite.html'
         };
-
         return directive;
     }
 })();
