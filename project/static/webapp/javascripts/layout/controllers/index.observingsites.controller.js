@@ -56,6 +56,11 @@
                         }
                     }
                 };
+
+                $scope.zoomInToObservingSite = function(site) {
+                    $scope.map.center = site.coordinates;
+                    $scope.map.zoom = 8;
+                };
             });
 
             ObservingSites.all().then(successFn, errorFn);
