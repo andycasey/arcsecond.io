@@ -8,6 +8,7 @@
             'webapp.routes',
             'webapp.utils',
             'webapp.layout',
+            'webapp.authentication',
             'webapp.observingsites',
             'webapp.telescopes',
             'webapp.archives',
