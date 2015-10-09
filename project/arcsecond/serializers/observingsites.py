@@ -26,7 +26,7 @@ class ObservingSiteSerializer(serializers.ModelSerializer):
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = auth.get_user_model()
-        fields = ('id', 'first_name', 'last_name', 'username')
+        fields = ('id', 'first_name', 'last_name', 'username', 'email')
 
 class ObservingSiteActivitySerializer(serializers.ModelSerializer):
     class Meta:

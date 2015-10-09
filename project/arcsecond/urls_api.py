@@ -125,6 +125,26 @@ urlpatterns = patterns('',
     url(r'^1/converters/times/(?P<input_format>'+constants.time_formats_regex+')/(?P<input_value>[-+.:0-9A-Z]+)/$',
         views.TimesDetailAPIView.as_view(),
         name="timesconversion-detail"),
+
+
+    # ----- Users -----
+
+    url(r'^1/users/(?P<pk>\d+)/$',
+        views.UserDetailAPIView.as_view(),
+        name="user-detail"),
+
+    url(r'^1/users/$',
+        views.UserListAPIView.as_view(),
+        name="user-list"),
+
+    url(r'^1/profiles/(?P<pk>\d+)/$',
+        views.UserProfileDetailAPIView.as_view(),
+        name="userprofile-detail"),
+
+    url(r'^1/profiles/$',
+        views.UserProfileListAPIView.as_view(),
+        name="userprofile-list"),
+
 )
 
 if settings.SITE_ID == 2:
