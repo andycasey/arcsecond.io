@@ -1,6 +1,7 @@
 <div class="site-wrapper">
-    <div class="container observingsites-search-container">
+    <div class="container">
         <div id="search-container" class="row">
+
             <form class="form-inline">
                 <div class="form-group">
                     <div class="input-group">
@@ -8,7 +9,7 @@
                                autofocus="autofocus"
                                class="query"
                                id="observingsite_search"
-                               placeholder="Find an Observing Site by Name"
+                               placeholder="Find an Observing Site by Name, Country, Coordinates..."
                                type="text"
                                ng-model="searchString" />
                     </div>
@@ -27,7 +28,7 @@
         <div id="observingsites-container" class="row">
             <div my-loading-spinner="viewLoading"></div>
             <div class="row" ng-cloak>
-                <div ng-repeat="observingsite in vm.observingsites | nameContainsSubstring:searchString">
+                <div ng-repeat="observingsite in vm.observingsites | filter:searchString">
                     <div class="col-md-12">
                         <observingsite observingsite="observingsite"></observingsite>
                     </div>
@@ -47,7 +48,7 @@
 </div>
 
 <div id="map-canvas-container" class="fluid-row">
-    <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+    <ui-gmap-google-map center='map.center' zoom='map.zoom' dragging="true">
 
         <ui-gmap-markers idkey="'idKey'"
                          models="map.markers | nameContainsSubstring:searchString"

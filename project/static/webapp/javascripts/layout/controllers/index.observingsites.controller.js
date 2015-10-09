@@ -5,9 +5,9 @@
         .module('webapp.layout.controllers')
         .controller('ObservingSitesIndexController', ObservingSitesIndexController);
 
-    ObservingSitesIndexController.$inject = ['$scope', 'ObservingSites', 'uiGmapGoogleMapApi', 'Snackbar'];
+    ObservingSitesIndexController.$inject = ['$scope', 'ObservingSites', 'Authentication', 'uiGmapGoogleMapApi', 'Snackbar'];
 
-    function ObservingSitesIndexController($scope, ObservingSites, uiGmapGoogleMapApi, Snackbar) {
+    function ObservingSitesIndexController($scope, ObservingSites, Authentication, uiGmapGoogleMapApi, Snackbar) {
         var vm = this;
         vm.observingsites = undefined;
         activate();
