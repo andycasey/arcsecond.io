@@ -139,6 +139,14 @@ a[rel="external"]:after {
     background: #dbf0fc;
 }
 
+.observingsite:hover .observingsite__edit {
+    display: block;
+}
+
+.observingsite__edit {
+    display: none;
+}
+
 .lighter {
     color: darkgray;
 }
