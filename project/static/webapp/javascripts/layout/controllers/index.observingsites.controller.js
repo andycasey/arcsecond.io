@@ -27,36 +27,42 @@
                     markersEvents: {
                         click: function(marker, eventName, model, args) {
                             $scope.map.window.model = model;
-                            $scope.map.window.show = true;
+                            $scope.map.windowOptions.show = true;
                         }
                     },
                     window: {
-                        marker: {},
-                        show: false,
+                        model: {},
                         closeClick: function() {
-                            this.show = false;
-                        },
-                        options: {} // define when map is ready
+                            this.model = {};
+                            $scope.windowOptions.show = false;
+                        }
+                    },
+                    options: {
+                        scrollwheel: false,
+                        dragging: true
+                    },
+                    closeClick: function () {
+                        $scope.map.window.model = {};
+                        $scope.map.windowOptions.show = false;
+                    },
+                    windowOptions: {
+                        show: false
                     }
-                };
-                $scope.options = {
-                    scrollwheel: false
                 };
             });
 
-            $scope.markers = [];
             ObservingSites.all().then(successFn, errorFn);
 
-            function successFn(data, status, headers, config) {
+            function successFn(response, status, headers, config) {
                 $scope.viewLoading = false;
-                vm.observingsites = data.data;
+                vm.observingsites = response.data;
                 $scope.map.markers = getMapMarkers(vm.observingsites);
             }
 
-            function errorFn(data, status, headers, config) {
+            function errorFn(response, status, headers, config) {
                 $scope.viewLoading = false;
-                Snackbar.error(data.error);
-                console.log(data.error);
+                Snackbar.error(response.error);
+                console.log(response.error);
             }
 
             function getMapMarkers(observingsites) {
@@ -71,11 +77,8 @@
                             "longitude": site.coordinates.longitude
                         },
                         "name": site.name,
+                        "country": site.country,
                         "icon": "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
-                        "window": {
-                            "title": site.name,
-                            "subtitle": site.country
-                        }
                     };
                     markers.push(marker);
                 }

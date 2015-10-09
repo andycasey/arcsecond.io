@@ -48,14 +48,23 @@
 </div>
 
 <div id="map-canvas-container" class="fluid-row">
-    <ui-gmap-google-map center='map.center' zoom='map.zoom' dragging="true">
+    <ui-gmap-google-map center='map.center' zoom='map.zoom' options="map.options">
 
-        <ui-gmap-markers idkey="'idKey'"
-                         models="map.markers | nameContainsSubstring:searchString"
-                         coords="'coords'"
-                         docluster="true"
-                         fit="false"
-                         icon="'icon'">
+        <ui-gmap-window show="map.windowOptions.show" coords="map.window.model.coords" closeClick="map.closeClick()">
+            <div>
+                <h5>{{map.window.model.name}}</h5>
+                {{map.window.model.country}}
+            </div>
+        </ui-gmap-window>
+
+        <ui-gmap-markers
+                idkey="'idKey'"
+                models="map.markers | filter:searchString"
+                coords="'coords'"
+                docluster="true"
+                fit="false"
+                icon="'icon'"
+                events="map.markersEvents">
 
         </ui-gmap-markers>
 
