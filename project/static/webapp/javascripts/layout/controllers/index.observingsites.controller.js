@@ -68,7 +68,11 @@
             function successFn(response, status, headers, config) {
                 $scope.viewLoading = false;
                 vm.observingsites = response.data;
-                $scope.map.markers = getMapMarkers(vm.observingsites);
+
+                var markersPromise = getMapMarkers(vm.observingsites);
+                markersPromise.done(function(data){
+                    $scope.map.markers = data;
+                });
             }
 
             function errorFn(response, status, headers, config) {
@@ -78,6 +82,8 @@
             }
 
             function getMapMarkers(observingsites) {
+                var deferred = $.Deferred();
+
                 var markers = [];
                 for (var i = 0; i < observingsites.length; i++) {
                     var site = observingsites[i];
@@ -90,11 +96,13 @@
                         },
                         "name": site.name,
                         "country": site.country,
-                        "icon": "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+                        "icon": "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
                     };
                     markers.push(marker);
                 }
-                return markers;
+                deferred.resolve(markers);
+
+                return deferred.promise();
             }
         }
     }
