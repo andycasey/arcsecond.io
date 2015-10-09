@@ -54,14 +54,11 @@ a[rel="external"]:after {
     padding-left: 5px;
 }
 
-#search-container .form-group {
-    width: 100%;
-}
 #search-container .input-group {
     width: 100%;
 }
 
-.query {
+#search-input {
     -webkit-appearance: none;
     -webkit-background-clip: border-box;
     -webkit-background-origin: padding-box;
@@ -97,7 +94,7 @@ a[rel="external"]:after {
     line-height: 57px;
     padding: 1px;
     text-align: start;
-    width: 95%;
+    width: 100%;
     word-spacing: 0px;
     writing-mode: lr-tb;
 }
@@ -114,11 +111,9 @@ a[rel="external"]:after {
 
 .observingsite {
     width: 90%;
-    padding: 1px;
-}
-
-.observingsite  {
     padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .observingsite__name {
@@ -218,11 +213,6 @@ ul {
     font: "Anonymous Pro", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier New", monospace;
 }
 
-#timer-container {
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
 .spinner {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -232,17 +222,13 @@ ul {
     max-height: 30px;
 }
 
-#archive-table-container  {
-    /*padding-top: 0px;*/
-}
-
 .table > tbody > tr,
 .table > tbody > td {
     border: 0;
 }
 
 .btn-standard-row {
-    padding: 0px 10px;
+    padding: 0 10px;
 }
 
 .hidden-row {
@@ -311,7 +297,6 @@ ul {
         color: darkgray;
         display:inline-block;
     }
-
 
     .angular-google-map-container {
         height: 210px;

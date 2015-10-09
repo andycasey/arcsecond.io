@@ -1,22 +1,22 @@
 <div class="site-wrapper">
-    <div class="container">
-        <div id="search-container" class="row">
+    <div class="container" id="search-container">
 
-            <form class="form-inline">
-                <div class="form-group">
-                    <div class="input-group">
-                        <input autocomplete="off"
-                               autofocus="autofocus"
-                               class="query"
-                               id="observingsite_search"
-                               placeholder="Find an Observing Site by Name, Country, Coordinates..."
-                               type="text"
-                               ng-model="searchString" />
-                    </div>
-                </div>
-            </form>
+        <div class="row input-group">
+            <div class="col-sm-7 col-md-9">
+                <input autocomplete="off"
+                       autofocus="autofocus"
+                       id="search-input"
+                       placeholder="Find an Observing Site by Name, Country, Coordinates..."
+                       type="text"
+                       ng-model="searchString" />
+            </div>
+            <div class="col-md-2">
+                <a ng-href="/observingsites/new" class="btn btn-default btn-sm">Create A New Observing Site</a>
+            </div>
+        </div>
 
-            <div class="heading__sub pull-left">
+        <div class="row">
+            <div class="col-md-12 search_subtitle">
                 Total: {{ vm.observingsites.length }},
                 Sources: <a target="_self" href="http://onekilopars.ec/apps">iObserve</a>,
                 <a target="_self" href="http://www.clearskyinstitute.com/xephem/">Xephem</a> (filtered),
