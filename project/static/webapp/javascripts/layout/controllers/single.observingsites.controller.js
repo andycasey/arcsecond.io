@@ -13,14 +13,16 @@
         activate();
 
         function activate() {
-            ObservingSites.get($routeParams.site_name).then(successFn, errorFn);
-
-            function successFn(data, status, headers, config) {
-                vm.observingsite = data.data;
+            if ($routeParams.site_name !== "new" && $routeParams.site_name !== undefined) {
+                ObservingSites.get($routeParams.site_name).then(successFn, errorFn);
             }
 
-            function errorFn(data, status, headers, config) {
-                Snackbar.error(data.error);
+            function successFn(response, status, headers, config) {
+                vm.observingsite = response.data;
+            }
+
+            function errorFn(response, status, headers, config) {
+                //Snackbar.error(data.error);
             }
         }
     }

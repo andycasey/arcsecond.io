@@ -1,5 +1,11 @@
-<div class="site-wrapper">
+<div class="site-wrapper" ng-cloak>
     <div class="container">
-        <observingsite observingsite="vm.observingsite"></observingsite>
+        <observingsite observingsite="vm.observingsite" ng-show="vm.observingsite"></observingsite>
+    </div>
+</div>
+
+<div ng-hide="observingsite">
+    <div class="col-sm-12 no-observingsite-here">
+        <em>The are no observing site here.</em>
     </div>
 </div>
