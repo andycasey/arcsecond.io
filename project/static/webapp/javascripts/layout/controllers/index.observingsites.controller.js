@@ -47,6 +47,13 @@
                     },
                     windowOptions: {
                         show: false
+                    },
+                    events: {
+                        bounds_changed: function(map, eventName, args) {
+                            vm.observingsites.filter(function (el) {
+                                return map.LatLngBounds.contains(el.coordinates);
+                            });
+                        }
                     }
                 };
             });
