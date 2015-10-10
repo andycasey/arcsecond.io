@@ -28,14 +28,18 @@
         .module('webapp')
         .run(run);
 
-    run.$inject = ['$http'];
+    run.$inject = ['$http', 'editableOptions', 'editableThemes'];
 
-    function run($http) {
+    function run($http, editableOptions, editableThemes) {
         $http.defaults.xsrfHeaderName = 'X-CSRFToken';
         $http.defaults.xsrfCookieName = 'csrftoken';
 
         $http.defaults.useXDomain = true;
         delete $http.defaults.headers.common['X-Requested-With'];
+
+        editableOptions.theme = 'bs3';
+        editableThemes.bs3.inputClass = 'input-sm';
+        editableThemes.bs3.buttonsClass = 'btn-sm';
     }
 
 })();

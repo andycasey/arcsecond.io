@@ -1,0 +1,36 @@
+<div class="row" ng-cloak>
+    <div class="col-sm-12">
+        <div class="observingsitedetail">
+            <div class="observingsitedetail__text">
+                <label class="edit">Name:</label>
+                <a href="#" editable-text="observingsitedetail.name" rel="edit">{{ observingsitedetail.name }}</a>
+            </div>
+            <div class="observingsitedetail__text">
+                <label class="edit">Short Name:</label>
+                <a href="#" editable-text="observingsitedetail.short_name" rel="edit">{{ observingsitedetail.short_name }}</a>
+            </div>
+            <div class="observingsitedetail__text">
+                <label class="edit">Alternate Name 1:</label>
+                <a href="#" editable-text="observingsitedetail.alternate_name_1" rel="edit">{{ observingsitedetail.alternate_name_1 }}</a>
+            </div>
+            <div class="observingsitedetail__text">
+                <label class="edit">Alternate Name 2:</label>
+                <a href="#" editable-text="observingsitedetail.alternate_name_2" rel="edit">{{ observingsitedetail.alternate_name_1 }}</a>
+            </div>
+            <div class="observingsitedetail__text">
+                <label class="edit">Country:</label>
+                <a href="#" editable-text="observingsitedetail.country" rel="edit">{{ observingsitedetail.country }}</a>
+            </div>
+            <div class="observingsitedetail__text">
+                <label class="edit">IAU Code:</label>
+                <a href="#" editable-text="observingsitedetail.IAUCode" rel="edit">{{ observingsitedetail.IAUCode }}</a>
+            </div>
+            <div class="observingsitedetail__text">
+                <label class="edit">Continent:</label>
+                <a href="#" editable-select="observingsitedetail.continent"
+                   rel="edit"
+                   e-ng-options="c for c in continents">{{ showContinents() }}</a>
+            </div>
+        </div>
+    </div>
+</div>

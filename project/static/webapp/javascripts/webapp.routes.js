@@ -20,9 +20,9 @@
                 templateUrl: '/static/webapp/templates/layout/activity.observingsites.html'
             })
             .when('/observingsites/:site_name', {
-                controller: 'ObservingSitesSingleController',
+                controller: 'ObservingSiteUpdateController',
                 controllerAs: 'vm',
-                templateUrl: '/static/webapp/templates/layout/single.observingsites.html'
+                templateUrl: '/static/webapp/templates/layout/update.observingsite.html'
             })
             .when('/archives', {
                 controller: 'ArchivesIndexController',

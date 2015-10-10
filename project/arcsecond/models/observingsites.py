@@ -14,8 +14,8 @@ class ObservingSite(models.Model):
     class Meta: app_label = 'arcsecond'
     objects = ObservingSiteManager()
 
-    short_name = models.CharField(max_length=100, null=True, blank=True, unique=True)
     name = models.CharField(max_length=100, null=True, blank=True)
+    short_name = models.CharField(max_length=100, null=True, blank=True, unique=True)
     alternate_name_1 = models.CharField(max_length=100, null=True, blank=True)
     alternate_name_2 = models.CharField(max_length=100, null=True, blank=True)
     acronym = models.CharField(max_length=100, null=True, blank=True, unique=True)
