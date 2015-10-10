@@ -94,8 +94,8 @@ a[rel="external"]:after {
     border-top-width: 0px;
     box-sizing: border-box;
     color: rgb(72, 176, 227);
-    font-size: 34px;
-    line-height: 57px;
+    font-size: 28px;
+    line-height: 47px;
     padding: 1px;
     text-align: start;
     width: 100%;
@@ -122,16 +122,16 @@ a[rel="external"]:after {
 }
 
 .observingsite__name {
-    font-size: 20pt;
+    font-size: 18pt;
     clear: none;
 }
 
 .observingsite__subtitle {
-    font-size: 16pt;
+    font-size: 14pt;
 }
 
 .observingsite__elements {
-    font-size: 14pt;
+    font-size: 12pt;
     color: darkgray;
 }
 

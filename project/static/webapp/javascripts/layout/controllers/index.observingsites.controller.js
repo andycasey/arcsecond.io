@@ -10,6 +10,7 @@
     function ObservingSitesIndexController($scope, ObservingSites, Authentication, uiGmapGoogleMapApi, Snackbar) {
         var vm = this;
         vm.observingsites = undefined;
+        vm._all_observingsites = undefined;
         activate();
 
         function activate() {
@@ -22,7 +23,7 @@
                         latitude: 15.0,
                         longitude: 0.0
                     },
-                    zoom: 2,
+                    zoom: 1,
                     markers: [], // array of models to display
                     markersEvents: {
                         click: function(marker, eventName, model, args) {
@@ -50,8 +51,9 @@
                     },
                     events: {
                         bounds_changed: function(map, eventName, args) {
-                            vm.observingsites.filter(function (el) {
-                                return map.LatLngBounds.contains(el.coordinates);
+                            vm.observingsites = vm._all_observingsites.filter(function (el) {
+                                var ll = new google.maps.LatLng(el.coordinates.latitude, el.coordinates.longitude);
+                                return map.getBounds().contains(ll);
                             });
                         }
                     }
@@ -67,6 +69,7 @@
 
             function successFn(response, status, headers, config) {
                 $scope.viewLoading = false;
+                vm._all_observingsites = response.data;
                 vm.observingsites = response.data;
 
                 var markersPromise = getMapMarkers(vm.observingsites);
