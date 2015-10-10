@@ -6,12 +6,12 @@ from project.arcsecond import serializers
 from project.arcsecond import mixins
 
 class ObservingSiteListAPIView(mixins.RequestLogViewMixin, generics.ListAPIView):
-    queryset = models.ObservingSite.objects.all()
+    queryset = models.ObservingSite.objects.all().order_by('name')
     serializer_class = serializers.ObservingSiteSerializer
     lookup_field = "name"
 
     def get_queryset(self):
-        queryset = models.ObservingSite.objects.all()
+        queryset = models.ObservingSite.objects.all().order_by('name')
         continent = self.request.query_params.get('continent', None)
         if continent is not None:
             queryset = queryset.filter(continent=continent)
