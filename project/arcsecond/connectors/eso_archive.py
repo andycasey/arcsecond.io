@@ -84,7 +84,12 @@ def read_ESO_VOTable_first_table(archive, hour_offset=0):
         try:
             telescope = Telescope.objects.get(name__contains=telescope_string)
         except ObjectDoesNotExist:
-            pass
+            try:
+                telescope = Telescope.objects.get(acronym__contains=telescope_string)
+            except ObjectDoesNotExist:
+                pass
+            except MultipleObjectsReturned:
+                print ">>>>>> oh really???" + telescope_string
         except MultipleObjectsReturned:
             print ">>>>>> oh really???" + telescope_string
         else:
