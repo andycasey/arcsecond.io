@@ -1,46 +1,52 @@
 <div class="site-wrapper">
-    <div class="container" id="search-container">
+    <div class="container">
 
-        <div class="row input-group">
-            <div class="col-sm-7 col-md-9">
+        <div class="row" id="search-container">
+            <div class="col-md-10">
                 <input autocomplete="off"
                        autofocus="autofocus"
                        id="search-input"
                        placeholder="Find an Observing Site by Name, Country, Coordinates..."
                        type="text"
                        ng-model="searchString" />
+
+                <div class="search_subtitle">
+                    Total: {{ vm.all_observingsites.length }},
+                    Sources: <a target="_self" href="http://onekilopars.ec/apps">iObserve</a>,
+                    <a target="_self" href="http://www.clearskyinstitute.com/xephem/">Xephem</a> (filtered),
+                    <a href="/observingsites/activity">See Observing Sites Activity > </a>
+                </div>
+
             </div>
+
             <div class="col-md-2">
-                <a ng-href="/observingsites/new" class="btn btn-default btn-sm">Create A New Observing Site</a>
+                <div class="btn-group">
+                    <a ng-href="/observingsites/new" class="btn btn-default btn-sm">Create A New Observing Site</a>
+                    <label class="checkbox-label">
+                        <input type="checkbox" ng-model="vm.filter_observingsites" ng-change="toggleMapBoundsFilteringObservingsites()">
+                        Automatic Map Bounds Filtering
+                    </label>
+                </div>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-md-12 search_subtitle">
-                Total: {{ vm.observingsites.length }},
-                Sources: <a target="_self" href="http://onekilopars.ec/apps">iObserve</a>,
-                <a target="_self" href="http://www.clearskyinstitute.com/xephem/">Xephem</a> (filtered),
-                <a href="/observingsites/activity">See Observing Sites Activity > </a>
-            </div>
-        </div>
+            <div class="col-md-10" id="observingsites-container">
+                <div my-loading-spinner="viewLoading"></div>
 
-        <div id="observingsites-container" class="row">
-            <div my-loading-spinner="viewLoading"></div>
-            <div class="row" ng-cloak>
                 <div ng-repeat="observingsite in vm.observingsites | filter:searchString">
                     <div class="col-md-12">
                         <observingsite observingsite="observingsite" data-ng-click="zoomInToObservingSite(observingsite)"></observingsite>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="row" ng-hide="vm.observingsites.length">
-            <div class="col-sm-12 no-observingsite-here">
+            <div class="col-md-10 no-observingsite-here" ng-hide="vm.observingsites.length">
                 <em>No observing sites could be found. That's a problem. </em>
                 Inform Cédric about it via <a href="mailto:cedric@arcsecond.io">@</a>,
                 or <a href="https://twitter.com/arcsecond_io" class="social__item"><i class="fa fa-twitter"></i></a>.
             </div>
+
         </div>
 
     </div>

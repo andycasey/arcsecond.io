@@ -52,14 +52,13 @@ a[rel="external"]:after {
     padding-bottom: 5px;
 }
 
-#search-container  {
-    padding-top: 0;
-    padding-bottom: 20px;
-    padding-left: 5px;
+.checkbox-label {
+    padding-top: 10px;
 }
 
-#search-container .input-group {
-    width: 100%;
+#search-container  {
+    padding-top: 0;
+    padding-left: 15px;
 }
 
 #search-input {
@@ -117,8 +116,6 @@ a[rel="external"]:after {
     width: 90%;
     padding-top: 5px;
     padding-bottom: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 .observingsite__name {
@@ -156,8 +153,6 @@ a[rel="external"]:after {
     padding-bottom: 400px;
 }
 
-/* --- MAP --- */
-
 .angular-google-map-container {
     height: 400px;
 }
@@ -165,7 +160,7 @@ a[rel="external"]:after {
 #map-canvas-container {
     position: fixed;
     width: 100%;
-    bottom: 0px;
+    bottom: 0;
 }
 
 
