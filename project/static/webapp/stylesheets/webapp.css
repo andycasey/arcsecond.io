@@ -54,18 +54,32 @@ a[rel="edit"]:before {
     text-decoration: none;
 }
 
+span.editable {
+    font-size: 20px;
+    color: #3a90b9;
+}
+
 .observingsitedetail__text {
-    margin: 8px;
-    padding-bottom: 5px;
+    margin: 5px;
+    padding-bottom: 3px;
 }
 
 .observingsitedetail__url {
-    margin: 8px;
-    padding-bottom: 5px;
+    margin: 5px;
+    padding-bottom: 3px;
 }
 
-.observingsitedetail__url a.editable-click {
+.observingsitedetail__text_small {
+    margin: 5px;
+    padding-bottom: 3px;
+}
+
+.observingsitedetail__url span.editable {
     font-size: 15px;
+}
+
+.observingsitedetail__text_small span.editable {
+    font-size: 16px;
 }
 
 label[class="edit"] {
@@ -213,8 +227,8 @@ label[class="edit"] {
 }
 
 #map-canvas-square-container {
-    width: 400px;
-    height: 300px;
+    width: 100%;
+    height: 200px;
 }
 
 
