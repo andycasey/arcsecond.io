@@ -14,8 +14,8 @@ class ObservingSiteSerializer(serializers.ModelSerializer):
         model = ObservingSite
         lookup_field = "name"
         fields = ('id', 'short_name', 'name', 'alternate_name_1', 'alternate_name_2', 'IAUCode', 'continent',
-                  'coordinates', 'address_line_1', 'address_line_2', 'zip_code', 'country',
-                  'time_zone', 'time_zone_name', 'telescopes')
+                  'coordinates', 'address_line_1', 'address_line_2', 'zip_code', 'country', 'state_province',
+                  'time_zone', 'time_zone_name', 'telescopes', 'homepage', 'wikipedia_article')
 
     coordinates = CoordinatesSerializer()
     telescopes = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
