@@ -1,73 +1,78 @@
 <div class="row" ng-cloak>
-    <div class="col-md-3">
-        <img ng-src="/static/arcsecond/img/ObservatoryIcon_512x512.png" width="50"/>
-        <span class="heading__sub">Original Source:</span> <span class="heading_with_menu">{{ observingsitedetail.source || 'Unknown' }}</span>
+    <div class="col-md-1 col-md-offset-1">
+        <img ng-src="/static/arcsecond/img/ObservatoryIcon_512x512.png" width="40"/>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 col-md-offset-5 text-right">
+        <span class="heading_with_menu">Original Source:</span> <span class="heading__sub">{{ observingsitedetail.source || 'Unknown' }}</span>,
+        <span class="heading_with_menu">ID: </span><span class="heading__sub">{{ observingsitedetail.id || '?' }}</span>
+    </div>
+</div>
+<div class="row" ng-cloak>
+    <div class="col-md-5 col-md-offset-3">
         <h4>Observing Site Metadata</h4>
     </div>
 </div>
 
 <div class="row" ng-cloak>
-    <div class="col-md-6">
+    <div class="col-md-5">
         <div class="observingsitedetail">
             <div class="observingsitedetail__text">
                 <label class="edit">Name:</label>
-                <a href="#" editable-text="observingsitedetail.name" rel="edit">{{ observingsitedetail.name }}</a>
+                <a href="#" editable-text="observingsitedetail.name" rel="edit">{{ observingsitedetail.name || 'Name' }}</a>
             </div>
             <div class="observingsitedetail__text">
                 <label class="edit">Short Name:</label>
-                <a href="#" editable-text="observingsitedetail.short_name" rel="edit">{{ observingsitedetail.short_name }}</a>
+                <a href="#" editable-text="observingsitedetail.short_name" rel="edit">{{ observingsitedetail.short_name || 'Short Name'  }}</a>
             </div>
             <div class="observingsitedetail__text">
                 <label class="edit">Zip Code:</label>
-                <a href="#" editable-text="observingsitedetail.zip_code" rel="edit">{{ observingsitedetail.zip_code }}</a>
+                <a href="#" editable-text="observingsitedetail.zip_code" rel="edit">{{ observingsitedetail.zip_code || 'Zip Code'  }}</a>
             </div>
             <div class="observingsitedetail__text">
                 <label class="edit">State or Province:</label>
-                <a href="#" editable-text="observingsitedetail.state_province" rel="edit">{{ observingsitedetail.state_province }}</a>
+                <a href="#" editable-text="observingsitedetail.state_province" rel="edit">{{ observingsitedetail.state_province || 'State or Province'  }}</a>
             </div>
             <div class="observingsitedetail__text">
                 <label class="edit">Country:</label>
-                <a href="#" editable-text="observingsitedetail.country" rel="edit">{{ observingsitedetail.country }}</a>
+                <a href="#" editable-text="observingsitedetail.country" rel="edit">{{ observingsitedetail.country || 'Country' }}</a>
             </div>
             <div class="observingsitedetail__text">
                 <label class="edit">IAU Code (see <a href="http://www.minorplanetcenter.net/iau/lists/ObsCodesF.html" rel="external" target="_blank">list</a>):</label>
-                <a href="#" editable-text="observingsitedetail.IAUCode" rel="edit">{{ observingsitedetail.IAUCode }}</a>
+                <a href="#" editable-text="observingsitedetail.IAUCode" rel="edit">{{ observingsitedetail.IAUCode || 'IAU Code' }}</a>
             </div>
             <div class="observingsitedetail__text">
                 <label class="edit">Continent:</label>
-                <a href="#" editable-select="observingsitedetail.continent" e-ng-options="c.name for c in continents" rel="edit">{{ showContinents() }}</a>
+                <a href="#" editable-select="observingsitedetail.continent" e-ng-options="c.name for c in continents" rel="edit">{{ showContinents() || 'Undefined' }}</a>
             </div>
 
         </div>
     </div>
 
-    <div class="col-md-6">
+    <div class="col-md-7">
         <div class="observingsitedetail">
             <div class="observingsitedetail__text">
                 <label class="edit">Alternate Name 1:</label>
-                <a href="#" editable-text="observingsitedetail.alternate_name_1" rel="edit">{{ observingsitedetail.alternate_name_1 }}</a>
+                <a href="#" editable-text="observingsitedetail.alternate_name_1" rel="edit">{{ observingsitedetail.alternate_name_1 || 'Alternate Name 1' }}</a>
             </div>
             <div class="observingsitedetail__text">
                 <label class="edit">Alternate Name 2:</label>
-                <a href="#" editable-text="observingsitedetail.alternate_name_2" rel="edit">{{ observingsitedetail.alternate_name_1 }}</a>
+                <a href="#" editable-text="observingsitedetail.alternate_name_2" rel="edit">{{ observingsitedetail.alternate_name_1 || 'Alternate Name 2' }}</a>
             </div>
             <div class="observingsitedetail__text">
                 <label class="edit">Address Line 1:</label>
-                <a href="#" editable-text="observingsitedetail.address_line_1" rel="edit">{{ observingsitedetail.address_line_1 }}</a>
+                <a href="#" editable-text="observingsitedetail.address_line_1" rel="edit">{{ observingsitedetail.address_line_1 || 'Address Line 1' }}</a>
             </div>
             <div class="observingsitedetail__text">
                 <label class="edit">Address Line 2:</label>
-                <a href="#" editable-text="observingsitedetail.address_line_2" rel="edit">{{ observingsitedetail.address_line_2 }}</a>
+                <a href="#" editable-text="observingsitedetail.address_line_2" rel="edit">{{ observingsitedetail.address_line_2 || 'Address Line 2' }}</a>
             </div>
-            <div class="observingsitedetail__text">
+            <div class="observingsitedetail__url">
                 <label class="edit">Homepage URL:</label>
-                <a href="#" editable-url="observingsitedetail.homepage" rel="edit">{{ observingsitedetail.homepage }}</a>
+                <a href="#" editable-url="observingsitedetail.homepage" rel="edit">{{ observingsitedetail.homepage || 'Homepage URL' }}</a>
             </div>
-            <div class="observingsitedetail__text">
+            <div class="observingsitedetail__url">
                 <label class="edit">Wikipedia Article URL:</label>
-                <a href="#" editable-url="observingsitedetail.wikipedia_article" rel="edit">{{ observingsitedetail.wikipedia_article }}</a>
+                <a href="#" editable-url="observingsitedetail.wikipedia_article" rel="edit">{{ observingsitedetail.wikipedia_article || 'Wikipedia Article URL' }}</a>
             </div>
         </div>
     </div>
@@ -80,7 +85,7 @@
 </div>
 
 <div class="row" ng-cloak>
-    <div class="col-md-6">
+    <div class="col-md-5">
         <div class="observingsitedetail">
             <div class="observingsitedetail__text">
                 <label class="edit">Longitude (degrees) :</label>
@@ -88,7 +93,7 @@
                    rel="edit"
                    editable-text="observingsitedetail.coordinates.longitude"
                    onbeforesave="checkLongitude($data)">
-                    {{ observingsitedetail.coordinates.longitude }}
+                    {{ observingsitedetail.coordinates.longitude || 'Longitude' }}
                 </a>
             </div>
 
@@ -98,7 +103,7 @@
                    rel="edit"
                    editable-text="observingsitedetail.coordinates.latitude"
                    onbeforesave="checkLatitude($data)">
-                    {{ observingsitedetail.coordinates.latitude }}
+                    {{ observingsitedetail.coordinates.latitude || 'Latitude' }}
                 </a>
             </div>
 
@@ -108,18 +113,16 @@
                    rel="edit"
                    editable-text="observingsitedetail.coordinates.height"
                    onbeforesave="checkAltitude($data)">
-                    {{ observingsitedetail.coordinates.height }}
+                    {{ observingsitedetail.coordinates.height || 'Altitude' }}
                 </a>
             </div>
         </div>
     </div>
 
-    <div class="col-md-6">
+    <div class="col-md-7">
         <div id="map-canvas-square-container">
             <ui-gmap-google-map center='map.center' zoom='map.zoom' options="map.options"></ui-gmap-google-map>
         </div>
     </div>
-
-      <div class="clearfix visible-md-block"></div>
 </div>
 

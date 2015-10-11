@@ -59,6 +59,15 @@ a[rel="edit"]:before {
     padding-bottom: 5px;
 }
 
+.observingsitedetail__url {
+    margin: 8px;
+    padding-bottom: 5px;
+}
+
+.observingsitedetail__url a.editable-click {
+    font-size: 15px;
+}
+
 label[class="edit"] {
     width: 150px;
     text-align: right;

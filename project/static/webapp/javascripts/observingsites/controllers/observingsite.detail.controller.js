@@ -14,10 +14,10 @@
         $scope.continents = ObservingSites.continents;
         $scope.showContinents = function() {
             if (vm.observingsitedetail === undefined) {
-                return null;
+                return 'Undefined';
             }
             var selected = $filter('filter')($scope.continents, {'name': vm.observingsitedetail.continent});
-            return (vm.observingsitedetail.continent && selected.length) ? selected[0].name : null;
+            return (vm.observingsitedetail.continent && selected.length) ? selected[0].name : 'Undefined';
         };
 
         activate();
