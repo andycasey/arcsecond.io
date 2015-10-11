@@ -5,20 +5,46 @@
         .module('webapp.observingsites.controllers')
         .controller('ObservingSiteDetailController', ObservingSiteDetailController);
 
-    ObservingSiteDetailController.$inject = ['$scope'];
+    ObservingSiteDetailController.$inject = ['$scope', '$filter', 'ObservingSites', 'uiGmapGoogleMapApi'];
 
-    function ObservingSiteDetailController($scope) {
+    function ObservingSiteDetailController($scope, $filter, ObservingSites, uiGmapGoogleMapApi) {
         var vm = this;
-        vm.observingsite_detail = undefined;
+        vm.observingsitedetail = undefined;
+
+        $scope.continents = ObservingSites.continents;
+        $scope.showContinents = function() {
+            if (vm.observingsitedetail === undefined) {
+                return null;
+            }
+            var selected = $filter('filter')($scope.continents, {'name': vm.observingsitedetail.continent});
+            return (vm.observingsitedetail.continent && selected.length) ? selected[0].name : null;
+        };
+
         activate();
 
         function activate() {
-            $scope.$watch(function () { return $scope.observingsite_detail; }, render);
+            $scope.$watch(function () { return $scope.observingsitedetail; }, render);
         }
 
         function render(current, original) {
             if (current !== original) {
-                vm.observingsite_detail = current;
+                vm.observingsitedetail = current;
+
+                uiGmapGoogleMapApi.then(function(maps) {
+                    $scope.map = {
+                        center: {
+                            latitude: vm.observingsitedetail.coordinates.latitude,
+                            longitude: vm.observingsitedetail.coordinates.longitude
+                        },
+                        zoom: 15,
+                        options: {
+                            scrollwheel: false,
+                            dragging: false,
+                            mapTypeId: google.maps.MapTypeId.HYBRID
+                        }
+                    }
+                });
+
             }
         }
     }

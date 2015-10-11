@@ -60,7 +60,7 @@ a[rel="edit"]:before {
 }
 
 label[class="edit"] {
-    width: 200px;
+    width: 150px;
     text-align: right;
     padding-right: 10px;
 }
@@ -203,6 +203,11 @@ label[class="edit"] {
     bottom: 0;
 }
 
+#map-canvas-square-container {
+    width: 400px;
+    height: 300px;
+}
+
 
 .activity-table-container {
     padding-top: 80px;
@@ -233,7 +238,6 @@ ul {
     list-style-type: none;
 }
 
-/* --- ARCHIVES --- */
 
 #times-container {
     padding-bottom: 15px;
