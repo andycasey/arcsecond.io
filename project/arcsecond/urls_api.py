@@ -10,7 +10,6 @@ full_string_regex = "[\s\d\w().+-_',:&]+"
 
 urlpatterns = patterns('',
     url(r'^$', views.index_api, name='index_api'),
-    url(r'^accounts/', include('allauth.urls')),
 
     # ----- Objects -----
 
@@ -149,6 +148,12 @@ urlpatterns = patterns('',
         views.UserProfileListAPIView.as_view(),
         name="userprofile-list"),
 
+
+    # ----- Auth -----
+
+    url(r'^rest-auth/', include('rest_auth.urls')),
+    url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
+    url(r'^rest-auth/facebook/$', views.FacebookLogin.as_view(), name='fb_login')
 )
 
 if settings.SITE_ID == 2:
