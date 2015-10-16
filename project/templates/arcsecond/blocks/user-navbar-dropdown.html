@@ -35,8 +35,8 @@
 
 {% else %}
 
-    <li><a href="{% host_url 'account_login' %}">Log In</a></li>
-    <li><a href="{% host_url 'account_signup' %}">Sign Up</a></li>
+    <li><a href="{% host_url 'account_login' host 'www' %}">Log In</a></li>
+    <li><a href="{% host_url 'account_signup' host 'www' %}">Sign Up</a></li>
 
 {% endif %}
 
