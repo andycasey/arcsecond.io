@@ -6,9 +6,6 @@
 <html {% if angular_app %}ng-app="{{ angular_app }}"{% endif %}>
 <head>
     {% include 'arcsecond/blocks/base-header.html' %}
-    <script>
-        var ARCSECOND_API_ROOT_URL = "{{ api_root_url }}";
-    </script>
     {% block head_end_block %}{% endblock head_end_block %}
 </head>
 
