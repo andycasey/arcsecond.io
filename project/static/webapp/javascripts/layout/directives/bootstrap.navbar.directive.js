@@ -6,11 +6,31 @@
         .directive('bootstrapNavbar', bootstrapNavbar);
 
     function bootstrapNavbar() {
-        var directive = {
+        var directive;
+        directive = {
             restrict: 'E',
             replace: true,
-            transclude: true,
-            templateUrl: '/static/webapp/templates/layout/bootstrap.navbar.html'
+            scope: {
+                initial: '='
+            },
+            templateUrl: '/static/webapp/templates/layout/bootstrap.navbar.html',
+            controller: ['$scope', '$rootScope', '$location', function ($scope, $rootScope, $location) {
+                if ($location.path() === "/") {
+                    $(".navbar").addClass("navbar__initial scrollspy_menu");
+                }
+                else {
+                    $(".navbar").removeClass("navbar__initial scrollspy_menu");
+                }
+
+                $rootScope.$on("$routeChangeStart", function (event, next, current) {
+                    if ($location.path() === "/") {
+                        $(".navbar").addClass("navbar__initial scrollspy_menu");
+                    }
+                    else {
+                        $(".navbar").removeClass("navbar__initial scrollspy_menu");
+                    }
+                });
+            }]
         };
         return directive;
     }
