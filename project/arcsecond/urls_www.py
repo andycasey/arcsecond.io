@@ -10,20 +10,6 @@ robots_content = "" if settings.SITE_ID == 3 else "User-agent: *\nDisallow: /"
 
 # The request-based view for the strictly empty URL / of host 'www'.
 urlpatterns = patterns('',
-    url(r'^$', views.index_www, name='index_www'),
-)
-
-# Because we can't have a STAGING sub-subdomain api.arcsecond-staging.herokuapp.com, we put /api behind.
-if settings.SITE_ID == 2:
-    import urls_api
-    urlpatterns += patterns('',
-        url(r'^api/', include(urls_api.urlpatterns))
-    )
-
-# All remaining non-empty patterns of the 'www'. Order matters! Put the all-catching webapp in last position,
-# to ensure all other have a chance to be caught.
-
-urlpatterns += patterns('',
     url(r'^robots\.txt$', lambda r: HttpResponse(robots_content)),
     url(r'^favicon\.ico$', RedirectView.as_view(url='/static/favicon.ico')),
 
@@ -32,14 +18,27 @@ urlpatterns += patterns('',
 
     # The allauth login process first redirect to accounts/profile, which we redirect to @<username>
     url(r'^accounts/', include('allauth.urls')),
-    url(r'^accounts/profile', views.user_account_profile, name='user-account-profile'),
-    url(r'^@(?P<username>[\w@\.]+)$', views.user_profile, name="user-profile"),
-    url(r'^@(?P<username>[\w@\.]+)/settings$', views.user_settings, name="user-settings"),
+    # url(r'^accounts/profile/$', RedirectView.as_view(url='/'), name='profile-redirect'),
+    # url(r'^accounts/profile', views.user_account_profile, name='user-account-profile'),
+    # url(r'^@(?P<username>[\w@\.]+)$', views.user_profile, name="user-profile"),
+    # url(r'^@(?P<username>[\w@\.]+)/settings$', views.user_settings, name="user-settings"),
 
-    url('^observingsites/.*$', views.ObservingSitesIndexView.as_view(), name='index_observingsites'),
-    url('^archives/.*$', views.ArchivesIndexView.as_view(), name='index_archives'),
-    url('^telegrams/.*$', views.TelegramsIndexView.as_view(), name='index_telegrams'),
+    url(r'^rest-auth/', include('rest_auth.urls')),
+    url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
+
+    url(r'^.*$', views.IndexView.as_view(), name='index_www'),
+    url(r'^.*/$', views.IndexView.as_view(), name='index_www'),
 )
+
+
+
+# Because we can't have a STAGING sub-subdomain api.arcsecond-staging.herokuapp.com, we put /api behind.
+if settings.SITE_ID == 2:
+    import urls_api
+    urlpatterns += patterns('',
+        url(r'^api/', include(urls_api.urlpatterns))
+    )
+
 
 handler404 = 'views.custom_404'
 

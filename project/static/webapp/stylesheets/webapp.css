@@ -1,3 +1,7 @@
+.ng-view {
+    height:100%;
+}
+
 body.classic .site-wrapper {
     border-bottom: 0px;
 }

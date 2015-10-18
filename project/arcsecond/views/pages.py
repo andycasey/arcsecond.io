@@ -108,6 +108,25 @@ def privacy_policy(request):
 from django.views.generic.base import TemplateView
 from django.utils.decorators import method_decorator
 
+class IndexView(TemplateView):
+    template_name = 'arcsecond/index_webapp.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(IndexView, self).get_context_data(**kwargs)
+        context["title"] = "arcsecond.io"
+        context['api_version'] = '1'
+        context['initial'] = True
+        context['angular_app'] = "webapp"
+        context['api_root_url'] = settings.ARCSECOND_API_ROOT_URL
+        context['meta'] = get_generic_meta(title="arcsecond.io")
+        return context
+
+    @method_decorator(ensure_csrf_cookie)
+    def dispatch(self, *args, **kwargs):
+        return super(IndexView, self).dispatch(*args, **kwargs)
+
+
+
 
 class ObservingSitesIndexView(TemplateView):
     template_name = 'arcsecond/index_webapp.html'

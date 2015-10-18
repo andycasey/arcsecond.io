@@ -9,6 +9,11 @@
 
     function config($routeProvider) {
         $routeProvider
+            .when('/', {
+                controller: 'IndexController',
+                controllerAs: 'vm',
+                templateUrl: '/static/webapp/templates/layout/index.www.html'
+            })
             .when('/observingsites', {
                 controller: 'ObservingSitesIndexController',
                 controllerAs: 'vm',
