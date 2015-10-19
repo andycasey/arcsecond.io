@@ -31,7 +31,6 @@ urlpatterns = patterns('',
 )
 
 
-
 # Because we can't have a STAGING sub-subdomain api.arcsecond-staging.herokuapp.com, we put /api behind.
 if settings.SITE_ID == 2:
     import urls_api

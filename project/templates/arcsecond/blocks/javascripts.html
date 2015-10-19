@@ -38,9 +38,11 @@
     <script type="text/javascript" src="{% static 'webapp/javascripts/webapp.routes.js' %}"></script>
 
 
-    <!-- Angular WebApp: Utils -->
+    <!-- Angular WebApp: Auth -->
     <script type="text/javascript" src="{% static 'webapp/javascripts/authentication/authentication.module.js' %}"></script>
     <script type="text/javascript" src="{% static 'webapp/javascripts/authentication/services/authentication.service.js' %}"></script>
+    <script type="text/javascript" src="{% static 'webapp/javascripts/authentication/services/djangoAuth.js' %}"></script>
+    <script type="text/javascript" src="{% static 'webapp/javascripts/authentication/services/validate.js' %}"></script>
 
 
     <!-- Angular WebApp: Layout -->
@@ -55,13 +57,6 @@
 
     <script type="text/javascript" src="{% static 'webapp/javascripts/layout/controllers/activity.observingsites.controller.js' %}"></script>
     <script type="text/javascript" src="{% static 'webapp/javascripts/layout/controllers/update.observingsite.controller.js' %}"></script>
-
-
-    <!-- Angular WebApp: Utils -->
-    <script type="text/javascript" src="{% static 'webapp/javascripts/utils/utils.module.js' %}"></script>
-    <script type="text/javascript" src="{% static 'webapp/javascripts/utils/services/snackbar.service.js' %}"></script>
-    <script type="text/javascript" src="{% static 'webapp/javascripts/utils/services/times.service.js' %}"></script>
-    <script type="text/javascript" src="{% static 'webapp/javascripts/utils/directives/loadingspinner.directive.js' %}"></script>
 
 
     <!-- Angular WebApp: ObservingSites -->
@@ -94,6 +89,13 @@
 
     <script type="text/javascript" src="{% static 'webapp/javascripts/telegrams/controllers/telegram.controller.js' %}"></script>
     <script type="text/javascript" src="{% static 'webapp/javascripts/telegrams/controllers/telegrams.controller.js' %}"></script>
+
+
+    <!-- Angular WebApp: Utils -->
+    <script type="text/javascript" src="{% static 'webapp/javascripts/utils/utils.module.js' %}"></script>
+    <script type="text/javascript" src="{% static 'webapp/javascripts/utils/services/snackbar.service.js' %}"></script>
+    <script type="text/javascript" src="{% static 'webapp/javascripts/utils/services/times.service.js' %}"></script>
+    <script type="text/javascript" src="{% static 'webapp/javascripts/utils/directives/loadingspinner.directive.js' %}"></script>
 
 {% endif %}
 

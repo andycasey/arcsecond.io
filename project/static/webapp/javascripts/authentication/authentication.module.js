@@ -7,5 +7,5 @@
         ]);
 
     angular
-        .module('webapp.authentication.services', ['ngCookies']);
+        .module('webapp.authentication.services', ['ngCookies', 'ngResource', 'ngSanitize', 'ngRoute']);
 })();
