@@ -5,6 +5,7 @@
         .module('webapp', [
             'webapp.config',
             'webapp.filters',
+            'webapp.master',
             'webapp.routes',
             'webapp.utils',
             'webapp.layout',
@@ -20,6 +21,9 @@
 
     angular
         .module('webapp.routes', ['ngRoute']);
+
+    angular
+        .module('webapp.master', []);
 
     angular
         .module('webapp.archives', ['ui.bootstrap']);
@@ -45,6 +49,6 @@
         editableThemes.bs3.inputClass = 'input-sm';
         editableThemes.bs3.buttonsClass = 'btn-sm';
 
-        djangoAuth.initialize('//127.0.0.1:8000/rest-auth', false);
+        djangoAuth.initialize('//www.lvho.st:8000/rest-auth', true);
     }
 })();

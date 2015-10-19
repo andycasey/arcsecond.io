@@ -3,13 +3,16 @@
 {% load staticfiles %}
 {% load socialaccount %}
 
-<html {% if angular_app %}ng-app="{{ angular_app }}"{% endif %}>
+<html>
 <head>
     {% include 'arcsecond/blocks/base-header.html' %}
     {% block head_end_block %}{% endblock head_end_block %}
 </head>
 
-<body class="classic" data-spy="scroll" data-target=".scrollspy_menu">
+<body class="classic"
+      data-spy="scroll"
+      data-target=".scrollspy_menu"
+      {% if angular_app %}ng-app="{{ angular_app }}" ng-controller="MasterCtrl"{% endif %}>
 
 {% include 'arcsecond/blocks/messages-alerts.html' %}
 
