@@ -179,19 +179,23 @@ BOWER_COMPONENTS_ROOT = os.path.join(ROOT_PATH, 'components')
 BOWER_INSTALLED_APPS = (
     'jquery',
     'underscore',
-    'bootstrap-social#~4.9.1',
+    'bootstrap',
+    'bootstrap-social',
     'bootstrap-select',
-    'angular#1.4.4',
-    'angular-route#1.4.4',
-    'angular-resource#1.4.4',
-    'angular-cookies#1.4.4',
+    'angular#~1.4.7',
+    'angular-route',
+    'angular-resource',
+    'angular-cookies',
+    "angular-sanitize",
     'angular-timer',
     'angular-xeditable',
     'angular-bootstrap',
-    'ngDialog',
     'angular-google-maps',
+    'ngDialog',
     'snackbarjs',
     'uri.js',
+    "json3#~3.2.6",
+    "es5-shim#~2.1.0",
 )
 
 # https://github.com/sunlightlabs/django-honeypot
@@ -220,6 +224,7 @@ TEMPLATES = [
 
                 # `allauth` needs this from django
                 'django.template.context_processors.request',
+                # 'allauth.socialaccount.context_processors.socialaccount',
             ],
         },
     },
@@ -271,23 +276,25 @@ AUTHENTICATION_BACKENDS = (
 ACCOUNT_AUTHENTICATION_METHOD = "email"
 
 # Used by django-allauth. No need to call url resolver 'reverse'.
-LOGIN_URL = 'account_login'
+# LOGIN_URL = 'account_login'
 # LOGIN_REDIRECT_URL = 'user-profile'
-
-# django-allauth
-# The URL to redirect to after a successful e-mail confirmation, in case no user is logged in
-ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL = LOGIN_URL
-# The URL to redirect to after a successful e-mail confirmation, in case of an authenticated user.
-# Set to None to use settings.LOGIN_REDIRECT_URL.
-# ACCOUNT_EMAIL_CONFIRMATION_AUTHENTICATED_REDIRECT_URL = LOGIN_REDIRECT_URL
-# The user is required to hand over an e-mail address when signing up.
+# ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL = LOGIN_URL
+ACCOUNT_PASSWORD_MIN_LENGTH = 4
 ACCOUNT_EMAIL_REQUIRED = True
-# An integer specifying the minimum password length.
-ACCOUNT_PASSWORD_MIN_LENGTH = 10
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+
+REST_SESSION_LOGIN = False
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    )
+}
+
 
 CORS_ORIGIN_ALLOW_ALL = True
 CSRF_COOKIE_DOMAIN = "*"
-
+CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_HEADERS = (
     'x-requested-with',
     'content-type',
