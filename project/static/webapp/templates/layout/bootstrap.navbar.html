@@ -14,6 +14,28 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="fullpage__nav nav navbar-nav navbar-right">
+                <li ng-hide="authenticated"><a href="/login">Log In</a></li>
+                <li ng-hide="authenticated"><a href="/register">Sign Up</a></li>
+
+                <div ng-show="authenticated" class="navbar-form navbar-right" role="form">
+                    <div class="btn-group">
+                        <button type="button"
+                                class="btn btn-info auth-menu-button {% if white %}auth-menu-button-white{% endif %}"
+                                onclick="location.href='/@{{ user.username }}';">@{{ user.username }}
+                        </button>
+
+                        <button type="button" class="btn btn-info auth-menu-button {% if white %}auth-menu-button-white{% endif %} dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="{% url 'user-settings' user.username %}">Settings</a></li>
+                            <li class="divider"></li>
+                            <li><a href="{% url 'account_logout' %}">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+
             </ul>
         </div>
     </div>

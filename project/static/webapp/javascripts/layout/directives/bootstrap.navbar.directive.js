@@ -15,20 +15,20 @@
             },
             templateUrl: '/static/webapp/templates/layout/bootstrap.navbar.html',
             controller: ['$scope', '$rootScope', '$location', function ($scope, $rootScope, $location) {
-                if ($location.path() === "/") {
-                    $(".navbar").addClass("navbar__initial scrollspy_menu");
-                }
-                else {
-                    $(".navbar").removeClass("navbar__initial scrollspy_menu");
-                }
-
-                $rootScope.$on("$routeChangeStart", function (event, next, current) {
+                var toggleNavbarInitial = function() {
                     if ($location.path() === "/") {
                         $(".navbar").addClass("navbar__initial scrollspy_menu");
+                        Waypoint.enableAll();
                     }
                     else {
+                        Waypoint.disableAll();
                         $(".navbar").removeClass("navbar__initial scrollspy_menu");
                     }
+                };
+
+                toggleNavbarInitial();
+                $rootScope.$on("$routeChangeSuccess", function (event, next, current) {
+                    toggleNavbarInitial();
                 });
             }]
         };
