@@ -273,7 +273,7 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 
-ACCOUNT_AUTHENTICATION_METHOD = "email"
+# ACCOUNT_AUTHENTICATION_METHOD = "email"
 
 # Used by django-allauth. No need to call url resolver 'reverse'.
 # LOGIN_URL = 'account_login'

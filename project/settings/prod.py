@@ -27,6 +27,8 @@ ALLOWED_HOSTS = [
 SITE_ID = 3  # Local=1, Staging=2, Prod=3
 
 CORS_ORIGIN_ALLOW_ALL = True
+CSRF_COOKIE_DOMAIN = ".arcsecond.io"
+
 # CORS_ORIGIN_WHITELIST = (
 #     'arcsecond.io',
 # )
@@ -34,3 +36,4 @@ CORS_ORIGIN_ALLOW_ALL = True
 ARCSECOND_API_ROOT_URL = "http://api.arcsecond.io"
 PARENT_HOST = "arcsecond.io"
 
+ACCOUNT_PASSWORD_MIN_LENGTH = 10

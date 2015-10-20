@@ -28,7 +28,7 @@
         <div class="login-or">{% trans 'or' %}</div>
     </div>
 
-    <form class="signup form-horizontal" id="signup_form" method="post" action="{% url 'account_signup' %}">
+    <form class="signup form-horizontal" id="signup_form" method="post" action="{% url 'rest_register' %}">
         {% csrf_token %}
         {% if form.errors %}
             <p class="errornote">

@@ -5,11 +5,10 @@
         .module('webapp.layout.controllers')
         .controller('IndexController', IndexController);
 
-    IndexController.$inject = ['$scope', '$routeParams', 'uiGmapGoogleMapApi'];
+    IndexController.$inject = ['$scope', '$routeParams'];
 
-    function IndexController($scope, $routeParams, uiGmapGoogleMapApi) {
-        $scope.initial = true;
-
+    function IndexController($scope, $routeParams) {
+        console.log('??'+$scope.authenticated);
         var vm = this;
         activate();
 

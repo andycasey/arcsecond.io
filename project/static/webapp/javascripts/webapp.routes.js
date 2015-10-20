@@ -19,6 +19,22 @@
                     }]
                 }
             })
+            .when('/login', {
+                templateUrl: '/static/webapp/templates/authentication/login.html',
+                resolve: {
+                    authenticated: ['djangoAuth', function(djangoAuth){
+                        return djangoAuth.authenticationStatus();
+                    }]
+                }
+            })
+            .when('/userProfile', {
+                templateUrl: '/static/webapp/templates/authentication/userprofile.html',
+                resolve: {
+                    authenticated: ['djangoAuth', function(djangoAuth){
+                        return djangoAuth.authenticationStatus();
+                    }]
+                }
+            })
             .when('/observingsites', {
                 controller: 'ObservingSitesIndexController',
                 controllerAs: 'vm',
