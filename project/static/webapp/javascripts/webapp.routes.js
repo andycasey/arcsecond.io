@@ -35,6 +35,14 @@
                     }]
                 }
             })
+            .when('/register', {
+                templateUrl: '/static/webapp/templates/authentication/register.html',
+                resolve: {
+                    authenticated: ['djangoAuth', function(djangoAuth){
+                        return djangoAuth.authenticationStatus();
+                    }]
+                }
+            })
             .when('/userProfile', {
                 templateUrl: '/static/webapp/templates/authentication/userprofile.html',
                 resolve: {
