@@ -14,8 +14,8 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="fullpage__nav nav navbar-nav navbar-right">
-                <li ng-hide="authenticated"><a href="/accounts/login">Log In</a></li>
-                <li ng-hide="authenticated"><a href="/accounts/signup">Sign Up</a></li>
+                <li ng-hide="authenticated"><a href="/login">Log In</a></li>
+                <li ng-hide="authenticated"><a href="/signup">Sign Up</a></li>
 
                 <div ng-show="authenticated" class="navbar-form navbar-right" role="form">
                     <div class="btn-group">
@@ -30,7 +30,7 @@
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="/users/{{ profile.username }}/settings">Settings</a></li>
                             <li class="divider"></li>
-                            <li><a href="/accounts/logout">Logout</a></li>
+                            <li><a href="/logout">Logout</a></li>
                         </ul>
                     </div>
                 </div>
