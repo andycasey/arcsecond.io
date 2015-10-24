@@ -17,8 +17,8 @@
                 'authPromise': null,
                 'request': function(args) {
                     // Let's retrieve the token from the cookie, if available
-                    if($cookies.token){
-                        $http.defaults.headers.common.Authorization = 'Token ' + $cookies.token;
+                    if (localStorage.getItem('webapp.token')){
+                        $http.defaults.headers.common.Authorization = 'Token ' + localStorage.getItem('webapp.token');
                     }
                     // Continue
                     params = args.params || {};
@@ -33,7 +33,7 @@
                         url: url,
                         withCredentials: this.use_session,
                         method: method.toUpperCase(),
-                        headers: {'X-CSRFToken': $cookies['csrftoken']},
+                        headers: {'X-CSRFToken': $cookies.get('csrftoken')},
                         params: params,
                         data: data
                     })
@@ -71,7 +71,7 @@
                         'password1':password1,
                         'password2':password2,
                         'email':email
-                    }
+                    };
                     data = angular.extend(data,more);
                     return this.request({
                         'method': "POST",
@@ -89,10 +89,7 @@
                             'password':password
                         }
                     }).then(function(data){
-                        if(!djangoAuth.use_session){
-                            $http.defaults.headers.common.Authorization = 'Token ' + data.key;
-                            $cookies.token = data.key;
-                        }
+                        localStorage.setItem('webapp.token', data.key);
                         djangoAuth.authenticated = true;
                         $rootScope.$broadcast("djangoAuth.logged_in", data);
                     });
