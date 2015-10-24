@@ -12,7 +12,7 @@ BROKER_POOL_LIMIT = 1
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-ARCSECOND_API_ROOT_URL = "http://api.lvho.st:8000"
+ARCSECOND_API_ROOT_URL = "//api.lvho.st:8000"
 PARENT_HOST = "lvho.st:8000"
 
 

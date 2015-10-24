@@ -1,7 +1,9 @@
 from django.conf import settings
 from django.conf.urls import patterns, include, url
+from django.views.generic import TemplateView
 
 from rest_framework.urlpatterns import format_suffix_patterns
+from arcsecond.views import AccountConfirmEmailView
 
 from project.arcsecond import views
 from project.arcsecond.models import constants
@@ -150,6 +152,10 @@ urlpatterns = patterns('',
 
 
     # ----- Auth -----
+
+    url(r'^rest-auth/registration/account-confirm-email/(?P<key>\w+)/$', AccountConfirmEmailView.as_view(), name='account_confirm_email'),
+    url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
+    url(r'^rest-auth/', include('rest_auth.urls')),
 
     # url(r'^rest-auth/', include('rest_auth.urls')),
     # url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),

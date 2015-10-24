@@ -20,11 +20,8 @@ urlpatterns = patterns('',
     url(r'^accounts/', include('allauth.urls')),
     # url(r'^accounts/profile/$', RedirectView.as_view(url='/'), name='profile-redirect'),
     # url(r'^accounts/profile', views.user_account_profile, name='user-account-profile'),
-    url(r'^users/(?P<username>[\w@\.]+)$', views.user_profile, name="user-profile"),
-    url(r'^users/(?P<username>[\w@\.]+)/settings$', views.user_settings, name="user-settings"),
-
-    url(r'^rest-auth/', include('rest_auth.urls')),
-    url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
+    # url(r'^users/(?P<username>[\w@\.]+)$', views.user_profile, name="user-profile"),
+    # url(r'^users/(?P<username>[\w@\.]+)/settings$', views.user_settings, name="user-settings"),
 
     url(r'^.*$', views.IndexView.as_view(), name='index_www'),
     url(r'^.*/$', views.IndexView.as_view(), name='index_www'),

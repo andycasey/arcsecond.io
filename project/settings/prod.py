@@ -33,7 +33,7 @@ CSRF_COOKIE_DOMAIN = ".arcsecond.io"
 #     'arcsecond.io',
 # )
 
-ARCSECOND_API_ROOT_URL = "http://api.arcsecond.io"
+ARCSECOND_API_ROOT_URL = "//api.arcsecond.io"
 PARENT_HOST = "arcsecond.io"
 
 ACCOUNT_PASSWORD_MIN_LENGTH = 10

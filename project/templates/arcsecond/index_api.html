@@ -12,6 +12,61 @@
 
 {% block body_block %}
 
+    <!-- NAVBAR
+    ============================== -->
+    <div id="main_navbar" class="navbar navbar-default {% if initial %}navbar__initial scrollspy_menu{% endif %} navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                {% if settings.SITE_ID == 2 %}
+                    <a class="navbar-brand" target="_self" href="http://arcsecond-staging.herokuapp.com">
+                        <img src="{% static 'arcsecond/img/favicon-60.png' %}" border="0" width="20px" style="float:left;">&nbsp;
+                        [STAGING]
+                    </a>
+                {% else %}
+                    <a class="navbar-brand" target="_self" href="{% host_url 'index_www' host 'www' %}">
+                        <img src="{% static 'arcsecond/img/favicon-60.png' %}" border="0" width="20px" style="float:left;">&nbsp;
+                        arcsecond.io
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+
+    <!-- SIDEBAR
+    ============================== -->
+
+    <!-- Sidebar button open -->
+    <div class="hidden sidebar__btn sidebar__btn_open">
+        <span class="sidebar-btn__caption">Menu</span>
+        <span class="oi oi-menu sidebar-btn__icon sidebar-btn-icon__unhover " title="Open menu" aria-hidden="true"></span>
+        <span class="oi oi-arrow-left sidebar-btn__icon sidebar-btn-icon__hover" title="Open menu" aria-hidden="true"></span>
+    </div>
+
+    <!-- Sidebar menu -->
+    <div class="sidebar__menu sidebar__menu_hidden {% if initial %}scrollspy_menu{% endif %}">
+
+        <!-- Sidebar button close -->
+        <div class="sidebar__btn sidebar__btn_close">
+            <span class="sidebar-btn__caption">Menu</span>
+            <span class="oi oi-menu sidebar-btn__icon sidebar-btn-icon__unhover " title="Close menu" aria-hidden="true"></span>
+            <span class="oi oi-arrow-right sidebar-btn__icon sidebar-btn-icon__hover" title="Close menu" aria-hidden="true"></span>
+        </div>
+
+        <!-- Sidebar brand name -->
+        <div class="sidebar-menu__brand">arcsecond.io</div>
+
+    </div> <!-- / .sidebar-menu__ul -->
+
+
+
+
     <!-- WELCOME
     ============================== -->
     <div class="welcome_classic welcome_classic_api" id="welcome" title="Amazing picture by ESO/Y. Beletsky">
@@ -164,7 +219,7 @@
                             {% if settings.SITE_ID == 2 %}
                                 <a href="http://arcsecond-staging.herokuapp.com/observingsites">See them here!</a>
                             {% else %}
-                                <a href="{% host_url 'index_observingsites' host 'www' %}">See them here!</a>
+                                <a href="{% host_url 'index_www' host 'www' %}observingsites">See them here!</a>
                             {% endif %}
                             <br/>You can use <code>?continent=&lt;Continent Name&gt;</code> to filter according to continents.
                         </p>
@@ -687,7 +742,28 @@
 {% block after_body_raw_block %}
     {{ block.super }}
 
-    {% include 'arcsecond/blocks/footer.html' %}
+    <!-- FOOTER
+    ============================== -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    2015 &copy; arcsecond.io. All Rights Reserved. Amazing Images Credits: <a href="http://www.eso.org">E.S.O.</a>
+                </div>
+                <div class="col-xs col-sm-6">
+                    <div class="social__items">
+                        <a href="https://twitter.com/arcsecond_io" class="social__item">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="http://facebook.com/arcsecond.io" class="social__item">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </div> <!-- / .social__links -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
 
     <script>
         $(document).ready(function () {

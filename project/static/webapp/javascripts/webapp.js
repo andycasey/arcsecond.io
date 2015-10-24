@@ -35,12 +35,13 @@
         .module('webapp')
         .run(run);
 
-    run.$inject = ['$http', 'editableOptions', 'editableThemes', 'djangoAuth'];
+    run.$inject = ['$http', '$window', 'editableOptions', 'editableThemes', 'djangoAuth'];
 
-    function run($http, editableOptions, editableThemes, djangoAuth) {
+    function run($http, $window, editableOptions, editableThemes, djangoAuth) {
         $http.defaults.xsrfHeaderName = 'X-CSRFToken';
         $http.defaults.xsrfCookieName = 'csrftoken';
         $http.defaults.withCredentials = true;
+        //$http.defaults.headers.post['X-CSRFToken'] = $cookies.csrftoken;
 
         $http.defaults.useXDomain = true;
         delete $http.defaults.headers.common['X-Requested-With'];
@@ -49,6 +50,6 @@
         editableThemes.bs3.inputClass = 'input-sm';
         editableThemes.bs3.buttonsClass = 'btn-sm';
 
-        djangoAuth.initialize('//www.lvho.st:8000/rest-auth', true);
+        djangoAuth.initialize($window.ARCSECOND_API_ROOT_URL+'/rest-auth', true);
     }
 })();
