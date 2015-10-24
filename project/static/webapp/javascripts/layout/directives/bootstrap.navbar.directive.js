@@ -34,6 +34,17 @@
                     });
                 });
 
+                $scope.$on('djangoAuth.logged_out', function () {
+                    $scope.authenticated = false;
+                    delete $scope.profile;
+                });
+                $scope.$on('djangoAuth.logged_in', function () {
+                    $scope.authenticated = true;
+                    djangoAuth.profile().then(function (data) {
+                        $scope.profile = data;
+                    });
+                });
+
                 toggleNavbarInitial();
                 $rootScope.$on("$routeChangeSuccess", function (event, next, current) {
                     toggleNavbarInitial();
