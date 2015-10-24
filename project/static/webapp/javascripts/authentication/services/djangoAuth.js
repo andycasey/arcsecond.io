@@ -89,6 +89,7 @@
                             'password':password
                         }
                     }).then(function(data){
+                        $http.defaults.headers.common.Authorization = 'Token ' + data.key;
                         localStorage.setItem('webapp.token', data.key);
                         djangoAuth.authenticated = true;
                         $rootScope.$broadcast("djangoAuth.logged_in", data);
@@ -101,6 +102,7 @@
                         'url': "/logout/"
                     }).then(function(data){
                         delete $http.defaults.headers.common.Authorization;
+                        localStorage.removeItem('webapp.token');
                         delete $cookies.token;
                         djangoAuth.authenticated = false;
                         $rootScope.$broadcast("djangoAuth.logged_out");
