@@ -273,15 +273,10 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 
-# ACCOUNT_AUTHENTICATION_METHOD = "email"
-
-# Used by django-allauth. No need to call url resolver 'reverse'.
-# LOGIN_URL = 'account_login'
-# LOGIN_REDIRECT_URL = 'user-profile'
-# ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL = LOGIN_URL
 ACCOUNT_PASSWORD_MIN_LENGTH = 4
-# ACCOUNT_EMAIL_REQUIRED = True
-# ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+# CSRF_COOKIE_DOMAIN = "*" # Do NOT set it, as it will make CSRF fails (for instance in confirm-email from allauth).
 
 REST_SESSION_LOGIN = False
 REST_FRAMEWORK = {
@@ -291,9 +286,7 @@ REST_FRAMEWORK = {
     )
 }
 
-
 CORS_ORIGIN_ALLOW_ALL = True
-CSRF_COOKIE_DOMAIN = "*"
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_HEADERS = (
     'x-requested-with',
