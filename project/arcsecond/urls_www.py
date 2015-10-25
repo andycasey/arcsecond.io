@@ -20,13 +20,8 @@ urlpatterns = patterns('',
     url(r'^auth/registration/', include('rest_auth.registration.urls')),
     url(r'^auth/', include('rest_auth.urls')),
 
-    # url(r'^rest-auth/', include('rest_auth.urls')),
-    # url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
-    # url(r'^rest-auth/twitter/$', views.TwitterLogin.as_view(), name='tw_login')
-
-
-    # The allauth login process first redirect to accounts/profile, which we redirect to @<username>
     url(r'^accounts/', include('allauth.urls')),
+
     # url(r'^accounts/profile/$', RedirectView.as_view(url='/'), name='profile-redirect'),
     # url(r'^accounts/profile', views.user_account_profile, name='user-account-profile'),
     # url(r'^users/(?P<username>[\w@\.]+)$', views.user_profile, name="user-profile"),
