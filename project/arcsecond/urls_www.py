@@ -4,7 +4,7 @@ from django.contrib import admin
 from django.http import HttpResponse
 from django.views.generic.base import RedirectView
 
-from arcsecond import views
+from project.arcsecond import views
 
 robots_content = "" if settings.SITE_ID == 3 else "User-agent: *\nDisallow: /"
 

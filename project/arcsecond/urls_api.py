@@ -3,8 +3,8 @@ from django.conf.urls import patterns, url
 
 from rest_framework.urlpatterns import format_suffix_patterns
 
-from arcsecond import views
-from arcsecond.models import constants
+from project.arcsecond import views
+from project.arcsecond.models import constants
 
 full_string_regex = "[\s\d\w().+-_',:&]+"
 
