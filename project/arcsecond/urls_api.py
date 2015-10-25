@@ -1,12 +1,10 @@
 from django.conf import settings
-from django.conf.urls import patterns, include, url
-from django.views.generic import TemplateView
+from django.conf.urls import patterns, url
 
 from rest_framework.urlpatterns import format_suffix_patterns
-from arcsecond.views import AccountConfirmEmailView
 
-from project.arcsecond import views
-from project.arcsecond.models import constants
+from arcsecond import views
+from arcsecond.models import constants
 
 full_string_regex = "[\s\d\w().+-_',:&]+"
 
@@ -150,16 +148,6 @@ urlpatterns = patterns('',
         views.UserProfileListAPIView.as_view(),
         name="userprofile-list"),
 
-
-    # ----- Auth -----
-
-    url(r'^rest-auth/registration/account-confirm-email/(?P<key>\w+)/$', AccountConfirmEmailView.as_view(), name='account_confirm_email'),
-    url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
-    url(r'^rest-auth/', include('rest_auth.urls')),
-
-    # url(r'^rest-auth/', include('rest_auth.urls')),
-    # url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
-    # url(r'^rest-auth/twitter/$', views.TwitterLogin.as_view(), name='tw_login')
 )
 
 if settings.SITE_ID == 2:

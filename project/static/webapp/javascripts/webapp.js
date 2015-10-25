@@ -50,6 +50,6 @@
         editableThemes.bs3.inputClass = 'input-sm';
         editableThemes.bs3.buttonsClass = 'btn-sm';
 
-        djangoAuth.initialize($window.ARCSECOND_API_ROOT_URL+'/rest-auth', true);
+        djangoAuth.initialize('/auth', true);
     }
 })();

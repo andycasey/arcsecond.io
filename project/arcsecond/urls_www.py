@@ -4,7 +4,7 @@ from django.contrib import admin
 from django.http import HttpResponse
 from django.views.generic.base import RedirectView
 
-from project.arcsecond import views
+from arcsecond import views
 
 robots_content = "" if settings.SITE_ID == 3 else "User-agent: *\nDisallow: /"
 
@@ -15,6 +15,15 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^privacy', views.privacy_policy, name='privacy-policy'),
+
+    url(r'^auth/registration/account-confirm-email/(?P<key>\w+)/$', views.AccountConfirmEmailView.as_view(), name='account_confirm_email'),
+    url(r'^auth/registration/', include('rest_auth.registration.urls')),
+    url(r'^auth/', include('rest_auth.urls')),
+
+    # url(r'^rest-auth/', include('rest_auth.urls')),
+    # url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
+    # url(r'^rest-auth/twitter/$', views.TwitterLogin.as_view(), name='tw_login')
+
 
     # The allauth login process first redirect to accounts/profile, which we redirect to @<username>
     url(r'^accounts/', include('allauth.urls')),
