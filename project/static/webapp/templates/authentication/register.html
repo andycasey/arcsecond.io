@@ -4,8 +4,10 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-3">
                 <h1>Register</h1>
-                <p>Already have an account? Then please <a ng-href="/login">log in</a>.</p>
-                <br/>
+                <div ng-if="complete == false">
+                    <p>Already have an account? Then please <a ng-href="/login">log in</a>.</p>
+                    <br/>
+                </div>
             </div>
         </div>
 
