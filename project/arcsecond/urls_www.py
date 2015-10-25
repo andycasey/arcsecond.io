@@ -23,11 +23,7 @@ urlpatterns = patterns('',
     url(r'^accounts/register/$', views.IndexView.as_view(), name='account_signup'),
 
     url(r'^accounts/', include('allauth.urls')),
-
-    url(r'^.*$', views.IndexView.as_view(), name='index_www'),
-    url(r'^.*/$', views.IndexView.as_view(), name='index_www'),
 )
-
 
 # Because we can't have a STAGING sub-subdomain api.arcsecond-staging.herokuapp.com, we put /api behind.
 if settings.SITE_ID == 2:
@@ -35,6 +31,14 @@ if settings.SITE_ID == 2:
     urlpatterns += patterns('',
         url(r'^api/', include(urls_api.urlpatterns))
     )
+
+
+# Angular WebApp
+
+urlpatterns += patterns('',
+    url(r'^.*$', views.IndexView.as_view(), name='index_www'),
+    url(r'^.*/$', views.IndexView.as_view(), name='index_www'),
+)
 
 
 handler404 = 'views.custom_404'

@@ -150,11 +150,6 @@ urlpatterns = patterns('',
 
 )
 
-if settings.SITE_ID == 2:
-    urlpatterns += patterns('',
-        url(r'^api/$', views.index_api, name='index_api'),
-    )
-
 if settings.DEBUG == False:
     urlpatterns += format_suffix_patterns(urlpatterns)
 
