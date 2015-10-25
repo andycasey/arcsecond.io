@@ -1,5 +1,6 @@
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
+
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -12,10 +13,11 @@
                 arcsecond.io
             </a>
         </div>
+
         <div class="navbar-collapse collapse">
             <ul class="fullpage__nav nav navbar-nav navbar-right">
-                <li ng-hide="authenticated"><a href="/login">Log In</a></li>
-                <li ng-hide="authenticated"><a href="/register">Register</a></li>
+                <li ng-hide="authenticated"><a href="/accounts/login/">Log In</a></li>
+                <li ng-hide="authenticated"><a href="/accounts/register/">Register</a></li>
 
                 <div ng-show="authenticated" class="navbar-form navbar-right" role="form">
                     <div class="btn-group">
@@ -30,12 +32,12 @@
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="/{{ profile.username }}/settings">Settings</a></li>
                             <li class="divider"></li>
-                            <li><a href="/logout">Logout</a></li>
+                            <li><a href="/accounts/logout/">Logout</a></li>
                         </ul>
                     </div>
                 </div>
-
             </ul>
         </div>
+
     </div>
 </div>

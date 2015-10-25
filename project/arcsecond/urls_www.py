@@ -16,16 +16,13 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^privacy', views.privacy_policy, name='privacy-policy'),
 
-    url(r'^auth/registration/account-confirm-email/(?P<key>\w+)/$', views.AccountConfirmEmailView.as_view(), name='account_confirm_email'),
-    url(r'^auth/registration/', include('rest_auth.registration.urls')),
     url(r'^auth/', include('rest_auth.urls')),
+    url(r'^auth/registration/', include('rest_auth.registration.urls')),
+
+    url(r'^accounts/login/$', views.IndexView.as_view(), name='account_login'),
+    url(r'^accounts/register/$', views.IndexView.as_view(), name='account_signup'),
 
     url(r'^accounts/', include('allauth.urls')),
-
-    # url(r'^accounts/profile/$', RedirectView.as_view(url='/'), name='profile-redirect'),
-    # url(r'^accounts/profile', views.user_account_profile, name='user-account-profile'),
-    # url(r'^users/(?P<username>[\w@\.]+)$', views.user_profile, name="user-profile"),
-    # url(r'^users/(?P<username>[\w@\.]+)/settings$', views.user_settings, name="user-settings"),
 
     url(r'^.*$', views.IndexView.as_view(), name='index_www'),
     url(r'^.*/$', views.IndexView.as_view(), name='index_www'),

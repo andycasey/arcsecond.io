@@ -19,7 +19,7 @@
                     }]
                 }
             })
-            .when('/login', {
+            .when('/accounts/login/', {
                 templateUrl: '/static/webapp/templates/authentication/login.html',
                 resolve: {
                     authenticated: ['djangoAuth', function(djangoAuth){
@@ -27,7 +27,7 @@
                     }]
                 }
             })
-            .when('/logout', {
+            .when('/accounts/logout/', {
                 templateUrl: '/static/webapp/templates/authentication/logout.html',
                 resolve: {
                     authenticated: ['djangoAuth', function(djangoAuth){
@@ -35,7 +35,7 @@
                     }]
                 }
             })
-            .when('/register', {
+            .when('/accounts/register/', {
                 templateUrl: '/static/webapp/templates/authentication/register.html',
                 resolve: {
                     authenticated: ['djangoAuth', function(djangoAuth){
@@ -43,7 +43,7 @@
                     }]
                 }
             })
-            .when('/userProfile', {
+            .when('/users/profile/', {
                 templateUrl: '/static/webapp/templates/authentication/userprofile.html',
                 resolve: {
                     authenticated: ['djangoAuth', function(djangoAuth){
