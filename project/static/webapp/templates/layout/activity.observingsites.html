@@ -13,13 +13,23 @@
                     <td>
                         <div ng-if="activity.property_name" class="fixed-font-cell">
                             {{ activity.action }} <span class="fixed-font">{{ activity.property_name }}</span>
-                            from <span class="fixed-font">{{ activity.old_value }}</span>
-                            to <span class="fixed-font">{{ activity.new_value }}</span>
                         </div>
                         <div ng-if="activity.action_message" class="fixed-font-cell">
                             {{ activity.action }} {{ activity.action_message }}
                         </div>
                     </td>
+
+                    <td>
+                        <div ng-if="activity.property_name" class="fixed-font-cell">
+                            from <span class="fixed-font">{{ activity.old_value }}</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div ng-if="activity.property_name" class="fixed-font-cell">
+                            to <span class="fixed-font">{{ activity.new_value }}</span>
+                        </div>
+                    </td>
+
                     <td>
                         <div ng-if="activity.observing_site" class="fixed-font-cell">
                             of site <span class="fixed-font">
