@@ -17,6 +17,7 @@
         };
 
         ObservingSites.continents = [
+            {name:'(undefined)', key:'undefined'},
             {name:'Africa', key:'africa'},
             {name:'Antarctica', key:'antarctica'},
             {name:'Asia', key:'asia'},
@@ -39,25 +40,21 @@
         }
 
         function create(content) {
-            return $http.post('/1/observingsites/', {
+            return $http.post($window.ARCSECOND_API_ROOT_URL + '/1/observingsites/', {
                 content: content
             });
         }
 
-        function get(original_name, config) {
-            return $http.get($window.ARCSECOND_API_ROOT_URL + '/1/observingsites/' + original_name, config);
+        function get(name, config) {
+            return $http.get($window.ARCSECOND_API_ROOT_URL + '/1/observingsites/' + name + '/', config);
         }
 
-        function update(original_name, name, long_name, IAUCode) {
-            return $http.post('/1/observingsites/'+original_name, {
-                name: name,
-                long_name: long_name,
-                IAUCode: IAUCode
-            });
+        function update(site, data) {
+            return $http.put($window.ARCSECOND_API_ROOT_URL + '/1/observingsites/'+ site.name + '/', data);
         }
 
         function activities(config) {
-            return $http.get($window.ARCSECOND_API_ROOT_URL + '/1/observingsites/activities', config);
+            return $http.get($window.ARCSECOND_API_ROOT_URL + '/1/observingsites/activities/', config);
         }
     }
 })();
