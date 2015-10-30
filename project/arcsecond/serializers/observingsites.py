@@ -17,8 +17,15 @@ class ObservingSiteSerializer(serializers.ModelSerializer):
                   'coordinates', 'address_line_1', 'address_line_2', 'zip_code', 'country', 'state_province',
                   'time_zone', 'time_zone_name', 'telescopes', 'homepage', 'wikipedia_article', 'sources')
 
-    coordinates = CoordinatesSerializer()
+    coordinates = CoordinatesSerializer(required=False)
     telescopes = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+
+
+class ObservingSiteShortSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ObservingSite
+        lookup_field = "name"
+        fields = ('id', 'short_name', 'name')
 
 class ObservingSiteActivitySerializer(serializers.ModelSerializer):
     class Meta:
@@ -27,7 +34,7 @@ class ObservingSiteActivitySerializer(serializers.ModelSerializer):
                   'action_message', 'method')
 
     user = accounts.UserSerializer(required=False)
-    observing_site = ObservingSiteSerializer(required=False)
+    observing_site = ObservingSiteShortSerializer(required=False)
 
     action = serializers.SerializerMethodField()
     method = serializers.SerializerMethodField()
