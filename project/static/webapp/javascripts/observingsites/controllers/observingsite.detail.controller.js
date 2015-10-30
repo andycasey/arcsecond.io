@@ -5,9 +5,9 @@
         .module('webapp.observingsites.controllers')
         .controller('ObservingSiteDetailController', ObservingSiteDetailController);
 
-    ObservingSiteDetailController.$inject = ['$scope', '$filter', 'ObservingSites', 'Authentication', 'uiGmapGoogleMapApi'];
+    ObservingSiteDetailController.$inject = ['$scope', '$filter', 'ObservingSites', 'uiGmapGoogleMapApi'];
 
-    function ObservingSiteDetailController($scope, $filter, ObservingSites, Authentication, uiGmapGoogleMapApi) {
+    function ObservingSiteDetailController($scope, $filter, ObservingSites, uiGmapGoogleMapApi) {
         var vm = this;
         vm.observingsitedetail = undefined;
 
