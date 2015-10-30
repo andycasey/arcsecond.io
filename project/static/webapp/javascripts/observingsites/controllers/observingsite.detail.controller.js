@@ -22,12 +22,12 @@
         };
 
         $scope.checkAndShow = function(sender, btnName) {
-            //if (Authentication.isAuthenticated()) {
-            //    sender[btnName].$show();
-            //}
-            //else {
+            if ($scope.authenticated) {
+                sender[btnName].$show();
+            }
+            else {
                 $scope.showAuthenticationWarning = true;
-            //}
+            }
         };
 
         $scope.closeAlert = function(sender) {
