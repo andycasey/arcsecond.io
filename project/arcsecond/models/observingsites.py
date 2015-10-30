@@ -87,8 +87,8 @@ class ObservingSite(models.Model):
 
 class ObservingSiteActivity(models.Model):
     date = models.DateTimeField(null=True, blank=True, default=timezone.now)
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True)
-    observing_site = models.OneToOneField(ObservingSite, null=True, blank=True)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True, related_name='observingsite_activities')
+    observing_site = models.ForeignKey(ObservingSite, null=True, blank=True, related_name='activities')
 
     ACTION_UNDEFINED = "unk"
     ACTION_LOAD = "load"
