@@ -1,7 +1,10 @@
 from django.core.exceptions import ObjectDoesNotExist
 from django.http import Http404
+
 from rest_framework import generics
-from rest_framework.response import Response
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.parsers import JSONParser
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 from project.arcsecond import models
 from project.arcsecond import serializers
@@ -23,9 +26,37 @@ class ObservingSiteActivityListAPIView(mixins.RequestLogViewMixin, generics.List
     queryset = models.ObservingSiteActivity.objects.all().order_by('-date')
     serializer_class = serializers.ObservingSiteActivitySerializer
 
-class ObservingSiteDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIView):
+class ObservingSiteDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveUpdateAPIView):
     queryset = models.ObservingSite.objects.all()
     serializer_class = serializers.ObservingSiteSerializer
+    authentication_classes = (TokenAuthentication,)
+    permission_classes = (IsAuthenticatedOrReadOnly,)
+
+    def put(self, request, *args, **kwargs):
+        old_values = {}
+        try:
+            obssite = self.get_object()
+        except:
+            pass
+        else:
+            for key in request.data.keys():
+                old_values[key] = getattr(obssite, key)
+
+        result = super(ObservingSiteDetailAPIView, self).put(request, args, kwargs)
+
+        if result.status_code == 200:
+            for key in request.data.keys():
+                activity = models.ObservingSiteActivity.objects.create(user=request.user)
+                activity.action = models.ObservingSiteActivity.ACTION_PROPERTY_CHANGE
+                activity.observing_site = obssite
+                activity.property_name = key
+                activity.old_value = old_values.get(key, "?")
+                activity.new_value = request.data.get(key, "?")
+                activity.method = models.ObservingSiteActivity.METHOD_WEB
+                activity.save()
+
+        return result
+
 
 class ObservingSiteNamedDetailAPIView(ObservingSiteDetailAPIView):
     lookup_field = "name"
