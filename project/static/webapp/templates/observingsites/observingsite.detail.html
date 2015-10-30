@@ -33,7 +33,7 @@
         <div class="observingsitedetail">
             <div class="observingsitedetail__text">
                 <label class="edit">Name:</label>
-                <span e-form="nameBtnForm" editable-text="observingsitedetail.name" class="edit">{{ observingsitedetail.name }}</span>
+                <span e-form="nameBtnForm" editable-text="observingsitedetail.name" rel="edit" onbeforesave="updateObservingSite('name', $data)">{{ observingsitedetail.name }}</span>
                 <button type="button" class="btn btn-default btn-xs" ng-click="checkAndShow(this, 'nameBtnForm')" ng-show="!nameBtnForm.$visible">
                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                 </button>
@@ -41,7 +41,7 @@
 
             <div class="observingsitedetail__text">
                 <label class="edit">Short Name:</label>
-                <span e-form="shortNameBtnForm" editable-text="observingsitedetail.short_name" rel="edit">{{ observingsitedetail.short_name }}</span>
+                <span e-form="shortNameBtnForm" editable-text="observingsitedetail.short_name" rel="edit" onbeforesave="updateObservingSite('short_name', $data)">{{ observingsitedetail.short_name }}</span>
                 <button type="button" class="btn btn-default btn-xs" ng-click="checkAndShow(this, 'shortNameBtnForm')" ng-show="!shortNameBtnForm.$visible">
                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                 </button>
@@ -49,7 +49,7 @@
 
             <div class="observingsitedetail__text">
                 <label class="edit">Zip Code:</label>
-                <span e-form="zipCodeBtnForm" editable-text="observingsitedetail.zip_code" rel="edit">{{ observingsitedetail.zip_code }}</span>
+                <span e-form="zipCodeBtnForm" editable-text="observingsitedetail.zip_code" rel="edit" onbeforesave="updateObservingSite('zip_code', $data)">{{ observingsitedetail.zip_code }}</span>
                 <button type="button" class="btn btn-default btn-xs" ng-click="checkAndShow(this, 'zipCodeBtnForm')" ng-show="!zipCodeBtnForm.$visible">
                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                 </button>
@@ -57,7 +57,7 @@
 
             <div class="observingsitedetail__text">
                 <label class="edit">State or Province:</label>
-                <span e-form="stateProvBtnForm" editable-text="observingsitedetail.state_province" rel="edit">{{ observingsitedetail.state_province }}</span>
+                <span e-form="stateProvBtnForm" editable-text="observingsitedetail.state_province" rel="edit" onbeforesave="updateObservingSite('name', $data)">{{ observingsitedetail.state_province }}</span>
                 <button type="button" class="btn btn-default btn-xs" ng-click="checkAndShow(this, 'stateProvBtnForm')" ng-show="!stateProvBtnForm.$visible">
                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                 </button>
@@ -65,7 +65,7 @@
 
             <div class="observingsitedetail__text">
                 <label class="edit">Country:</label>
-                <span e-form="countryBtnForm" editable-text="observingsitedetail.country" rel="edit">{{ observingsitedetail.country }}</span>
+                <span e-form="countryBtnForm" editable-text="observingsitedetail.country" rel="edit" onbeforesave="updateObservingSite('country', $data)">{{ observingsitedetail.country }}</span>
                 <button type="button" class="btn btn-default btn-xs" ng-click="checkAndShow(this, 'countryBtnForm')" ng-show="!countryBtnForm.$visible">
                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                 </button>
@@ -73,7 +73,7 @@
 
             <div class="observingsitedetail__text">
                 <label class="edit">IAU Code (see <a href="http://www.minorplanetcenter.net/iau/lists/ObsCodesF.html" rel="external" target="_blank">list</a>):</label>
-                <span e-form="iauCodeBtnForm" editable-text="observingsitedetail.IAUCode" rel="edit">{{ observingsitedetail.IAUCode }}</span>
+                <span e-form="iauCodeBtnForm" editable-text="observingsitedetail.IAUCode" rel="edit" onbeforesave="updateObservingSite('IAUCode', $data)">{{ observingsitedetail.IAUCode }}</span>
                 <button type="button" class="btn btn-default btn-xs" ng-click="checkAndShow(this, 'iauCodeBtnForm')" ng-show="!iauCodeBtnForm.$visible">
                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                 </button>
@@ -81,7 +81,7 @@
 
             <div class="observingsitedetail__text">
                 <label class="edit">Continent:</label>
-                <span e-form="continentBtnForm" editable-select="observingsitedetail.continent" e-ng-options="c.name for c in continents" rel="edit">{{ showContinents() || 'Undefined' }}</span>
+                <span e-form="continentBtnForm" editable-select="observingsitedetail.continent" e-ng-options="c for c in continents" rel="edit" onbeforesave="updateObservingSite('continent', $data)" onaftersace="showContinents()">{{ showContinents() || 'Undefined' }}</span>
                 <button type="button" class="btn btn-default btn-xs" ng-click="checkAndShow(this, 'continentBtnForm')" ng-show="!continentBtnForm.$visible">
                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                 </button>
@@ -94,7 +94,7 @@
         <div class="observingsitedetail">
             <div class="observingsitedetail__text">
                 <label class="edit">Alternate Name 1:</label>
-                <span e-form="altName1BtnForm" editable-text="observingsitedetail.alternate_name_1" rel="edit">{{ observingsitedetail.alternate_name_1 }}</span>
+                <span e-form="altName1BtnForm" editable-text="observingsitedetail.alternate_name_1" rel="edit" onbeforesave="updateObservingSite('alternate_name_1', $data)">{{ observingsitedetail.alternate_name_1 }}</span>
                 <button type="button" class="btn btn-default btn-xs" ng-click="checkAndShow(this, 'altName1BtnForm')" ng-show="!altName1BtnForm.$visible">
                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                 </button>
@@ -102,7 +102,7 @@
 
             <div class="observingsitedetail__text">
                 <label class="edit">Alternate Name 2:</label>
-                <span e-form="altName2BtnForm" editable-text="observingsitedetail.alternate_name_2" rel="edit">{{ observingsitedetail.alternate_name_1 }}</span>
+                <span e-form="altName2BtnForm" editable-text="observingsitedetail.alternate_name_2" rel="edit" onbeforesave="updateObservingSite('alternate_name_2', $data)">{{ observingsitedetail.alternate_name_2 }}</span>
                 <button type="button" class="btn btn-default btn-xs" ng-click="checkAndShow(this, 'altName2BtnForm')" ng-show="!altName2BtnForm.$visible">
                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                 </button>
@@ -110,7 +110,7 @@
 
             <div class="observingsitedetail__text">
                 <label class="edit">Address Line 1:</label>
-                <span e-form="addressLine1BtnForm" editable-text="observingsitedetail.address_line_1" rel="edit">{{ observingsitedetail.address_line_1 }}</span>
+                <span e-form="addressLine1BtnForm" editable-text="observingsitedetail.address_line_1" rel="edit" onbeforesave="updateObservingSite('address_line_1', $data)">{{ observingsitedetail.address_line_1 }}</span>
                 <button type="button" class="btn btn-default btn-xs" ng-click="checkAndShow(this, 'addressLine1BtnForm')" ng-show="!addressLine1BtnForm.$visible">
                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                 </button>
@@ -118,7 +118,7 @@
 
             <div class="observingsitedetail__text">
                 <label class="edit">Address Line 2:</label>
-                <span e-form="addressLine2BtnForm" editable-text="observingsitedetail.address_line_2" rel="edit">{{ observingsitedetail.address_line_2 }}</span>
+                <span e-form="addressLine2BtnForm" editable-text="observingsitedetail.address_line_2" rel="edit" onbeforesave="updateObservingSite('address_line_2', $data)">{{ observingsitedetail.address_line_2 }}</span>
                 <button type="button" class="btn btn-default btn-xs" ng-click="checkAndShow(this, 'addressLine1BtnForm')" ng-show="!addressLine1BtnForm.$visible">
                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                 </button>
@@ -126,7 +126,7 @@
 
             <div class="observingsitedetail__url">
                 <label class="edit">Homepage URL:</label>
-                <span e-form="homepageBtnForm" editable-url="observingsitedetail.homepage" rel="edit">{{ observingsitedetail.homepage }}</span>
+                <span e-form="homepageBtnForm" editable-url="observingsitedetail.homepage" rel="edit" onbeforesave="updateObservingSite('homepage', $data)">{{ observingsitedetail.homepage }}</span>
                 <button type="button" class="btn btn-default btn-xs" ng-click="checkAndShow(this, 'homepageBtnForm')" ng-show="!homepageBtnForm.$visible">
                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                 </button>
@@ -134,7 +134,7 @@
 
             <div class="observingsitedetail__url">
                 <label class="edit">Wikipedia Article URL:</label>
-                <span e-form="wikipediaBtnForm" editable-url="observingsitedetail.wikipedia_article" rel="edit">{{ observingsitedetail.wikipedia_article }}</span>
+                <span e-form="wikipediaBtnForm" editable-url="observingsitedetail.wikipedia_article" rel="edit" onbeforesave="updateObservingSite('wikipedia_article', $data)">{{ observingsitedetail.wikipedia_article }}</span>
                 <button type="button" class="btn btn-default btn-xs" ng-click="checkAndShow(this, 'wikipediaBtnForm')" ng-show="!wikipediaBtnForm.$visible">
                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                 </button>

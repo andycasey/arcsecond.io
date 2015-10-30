@@ -5,24 +5,30 @@
         .module('webapp.observingsites.controllers')
         .controller('ObservingSiteDetailController', ObservingSiteDetailController);
 
-    ObservingSiteDetailController.$inject = ['$scope', '$filter', 'ObservingSites', 'uiGmapGoogleMapApi'];
+    ObservingSiteDetailController.$inject = ['$rootScope', '$scope', '$filter', 'ObservingSites', 'uiGmapGoogleMapApi'];
 
-    function ObservingSiteDetailController($scope, $filter, ObservingSites, uiGmapGoogleMapApi) {
+    function ObservingSiteDetailController($rootScope, $scope, $filter, ObservingSites, uiGmapGoogleMapApi) {
         var vm = this;
         vm.observingsitedetail = undefined;
 
         $scope.showAuthenticationWarning = false;
-        $scope.continents = ObservingSites.continents;
+        $scope.continents = [
+            '(undefined)',
+            'Africa',
+            'Antarctica',
+            'Asia',
+            'Europe',
+            'North America',
+            'Oceania',
+            'South America'
+        ];
         $scope.showContinents = function() {
-            if (vm.observingsitedetail === undefined) {
-                return 'Undefined';
-            }
-            var selected = $filter('filter')($scope.continents, {'name': vm.observingsitedetail.continent});
-            return (vm.observingsitedetail.continent && selected.length) ? selected[0].name : 'Undefined';
+            var selected = $filter('filter')($scope.continents, vm.observingsitedetail.continent);
+            return (vm.observingsitedetail.continent && selected.length) ? selected[0] : '(toto)';
         };
 
         $scope.checkAndShow = function(sender, btnName) {
-            if ($scope.authenticated) {
+            if ($rootScope.authenticated) {
                 sender[btnName].$show();
             }
             else {
@@ -32,6 +38,12 @@
 
         $scope.closeAlert = function(sender) {
             $scope.showAuthenticationWarning = false;
+        };
+
+        $scope.updateObservingSite = function (field_name, data) {
+            var update_data = {};
+            update_data[field_name.toString()] = data;
+            return ObservingSites.update(vm.observingsitedetail, update_data);
         };
 
         activate();
