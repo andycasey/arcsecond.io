@@ -5,9 +5,9 @@
         .module('webapp.layout.controllers')
         .controller('ObservingSiteUpdateController', ObservingSiteUpdateController);
 
-    ObservingSiteUpdateController.$inject = ['$scope', '$routeParams', 'ObservingSites', 'uiGmapGoogleMapApi', 'Snackbar'];
+    ObservingSiteUpdateController.$inject = ['$scope', '$routeParams', 'ObservingSites', 'Snackbar'];
 
-    function ObservingSiteUpdateController($scope, $routeParams, ObservingSites, uiGmapGoogleMapApi, Snackbar) {
+    function ObservingSiteUpdateController($scope, $routeParams, ObservingSites, Snackbar) {
         var vm = this;
         vm.observingsitedetail = undefined;
 
@@ -23,7 +23,7 @@
             }
 
             function errorFn(response, status, headers, config) {
-                //Snackbar.error(data.error);
+                console.log(response);
             }
         }
     }
