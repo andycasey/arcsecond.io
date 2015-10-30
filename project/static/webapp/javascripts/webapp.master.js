@@ -3,24 +3,24 @@
 
     angular
         .module('webapp.master')
-        .controller('MasterCtrl', function ($scope, $location, djangoAuth) {
+        .controller('MasterCtrl', function ($rootScope, $location, djangoAuth) {
 
             // Assume user is not logged in until we hear otherwise
-            $scope.authenticated = false;
+            $rootScope.authenticated = false;
             // Wait for the status of authentication, set scope var to true if it resolves
             djangoAuth.authenticationStatus(true).then(function () {
-                $scope.authenticated = true;
+                $rootScope.authenticated = true;
             });
             // Wait and respond to the logout event.
-            $scope.$on('djangoAuth.logged_out', function () {
-                $scope.authenticated = false;
+            $rootScope.$on('djangoAuth.logged_out', function () {
+                $rootScope.authenticated = false;
             });
             // Wait and respond to the log in event.
-            $scope.$on('djangoAuth.logged_in', function () {
-                $scope.authenticated = true;
+            $rootScope.$on('djangoAuth.logged_in', function () {
+                $rootScope.authenticated = true;
             });
             // If the user attempts to access a restricted page, redirect them back to the main page.
-            $scope.$on('$routeChangeError', function (ev, current, previous, rejection) {
+            $rootScope.$on('$routeChangeError', function (ev, current, previous, rejection) {
                 console.error("Unable to change routes.  Error: ", rejection);
                 $location.path('/restricted').replace();
             });
