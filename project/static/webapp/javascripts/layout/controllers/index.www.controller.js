@@ -8,7 +8,6 @@
     IndexController.$inject = ['$scope', '$routeParams'];
 
     function IndexController($scope, $routeParams) {
-        console.log('??'+$scope.authenticated);
         var vm = this;
         activate();
 
