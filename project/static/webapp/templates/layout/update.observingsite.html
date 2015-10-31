@@ -1,11 +1,10 @@
 <div class="site-wrapper" ng-cloak>
     <div class="container">
+        <div my-loading-spinner="viewLoading"></div>
         <observingsitedetail observingsitedetail="vm.observingsitedetail" ng-show="vm.observingsitedetail"></observingsitedetail>
+        <div class="col-sm-12 no-observingsite-here" ng-hide="vm.observingsitedetail || viewLoading">
+            <em>We couldn't find an observing site here???</em>
+        </div>
     </div>
 </div>
 
-<div ng-hide="vm.observingsitedetail" ng-cloak>
-    <div class="col-sm-12 no-observingsite-here">
-        <em>The are no observing site here.</em>
-    </div>
-</div>
