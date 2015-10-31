@@ -57,6 +57,10 @@ a[rel="edit"]:before {
     text-decoration: none;
 }
 
+.lighter {
+    color:darkgray;
+}
+
 span.editable {
     font-size: 20px;
     color: #3a90b9;
