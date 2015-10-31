@@ -32,7 +32,6 @@ if settings.SITE_ID == 2:
         url(r'^api/', include(urls_api.urlpatterns))
     )
 
-
 # Angular WebApp
 
 urlpatterns += patterns('',

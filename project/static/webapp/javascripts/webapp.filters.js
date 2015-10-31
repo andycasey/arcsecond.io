@@ -35,6 +35,15 @@
 
     angular
         .module('webapp.filters')
+        .filter('timeSince', function () {
+            function sinceFilter(time){
+                return moment(time).calendar();
+            }
+            return sinceFilter
+        });
+
+    angular
+        .module('webapp.filters')
         .filter('sexagesimal', function (numberFilter) {
             function isNumeric(value) {
                 return (!isNaN(parseFloat(value)) && isFinite(value));

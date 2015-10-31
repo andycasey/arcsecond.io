@@ -22,12 +22,13 @@ class UserProfileDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIV
     queryset = models.UserProfile.objects.all()
     serializer_class = serializers.UserProfileSerializer
 
+class UserProfileNamedDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIView):
+    queryset = models.UserProfile.objects.all()
+    serializer_class = serializers.UserProfileSerializer
+    lookup_field = 'username'
 
-class UserListAPIView(mixins.RequestLogViewMixin, generics.ListAPIView):
-    queryset = get_user_model().objects.all()
-    serializer_class = serializers.UserSerializer
-
-class UserDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIView):
-    queryset = get_user_model().objects.all()
-    serializer_class = serializers.UserSerializer
-
+    def get_object(self):
+        username = self.kwargs.get("username", None)
+        queryset = self.get_queryset().filter(user__username=username)
+        profile = generics.get_object_or_404(queryset)
+        return profile

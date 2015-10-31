@@ -132,17 +132,13 @@ urlpatterns = patterns('',
 
     # ----- Users -----
 
-    url(r'^1/users/(?P<pk>\d+)/$',
-        views.UserDetailAPIView.as_view(),
-        name="user-detail"),
-
-    url(r'^1/users/$',
-        views.UserListAPIView.as_view(),
-        name="user-list"),
-
     url(r'^1/profiles/(?P<pk>\d+)/$',
         views.UserProfileDetailAPIView.as_view(),
         name="userprofile-detail"),
+
+    url(r'^1/profiles/(?P<username>\w+)/$',
+        views.UserProfileNamedDetailAPIView.as_view(),
+        name="userprofile-named-detail"),
 
     url(r'^1/profiles/$',
         views.UserProfileListAPIView.as_view(),

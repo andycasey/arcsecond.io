@@ -21,18 +21,18 @@
 
                 <div ng-show="authenticated" class="navbar-form navbar-right" role="form">
                     <div class="btn-group">
-                        <button type="button"
-                                class="btn btn-info auth-menu-button">{{ profile.username }}
-                        </button>
+                        <a type="button" class="btn btn-info auth-menu-button" ng-href="/users/{{ profile.username }}">
+                            {{ profile.username }}
+                        </a>
 
                         <button type="button" class="btn btn-info auth-menu-button dropdown-toggle" data-toggle="dropdown">
                             <span class="caret"></span>
                             <span class="sr-only">Toggle Dropdown</span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="/{{ profile.username }}/settings">Settings</a></li>
+                            <li><a ng-href="/users/{{ profile.username }}/settings">Settings</a></li>
                             <li class="divider"></li>
-                            <li><a href="/accounts/logout/">Logout</a></li>
+                            <li><a ng-href="/accounts/logout/">Logout</a></li>
                         </ul>
                     </div>
                 </div>

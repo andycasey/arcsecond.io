@@ -12,12 +12,7 @@
             .when('/', {
                 controller: 'IndexController',
                 controllerAs: 'vm',
-                templateUrl: '/static/webapp/templates/layout/index.www.html',
-                resolve: {
-                    authenticated: ['djangoAuth', function(djangoAuth){
-                        return djangoAuth.authenticationStatus();
-                    }]
-                }
+                templateUrl: '/static/webapp/templates/layout/index.www.html'
             })
             .when('/accounts/login/', {
                 templateUrl: '/static/webapp/templates/authentication/login.html',
@@ -43,7 +38,7 @@
                     }]
                 }
             })
-            .when('/users/profile/', {
+            .when('/users/:username/', {
                 templateUrl: '/static/webapp/templates/authentication/userprofile.html',
                 resolve: {
                     authenticated: ['djangoAuth', function(djangoAuth){
@@ -54,22 +49,12 @@
             .when('/observingsites', {
                 controller: 'ObservingSitesIndexController',
                 controllerAs: 'vm',
-                templateUrl: '/static/webapp/templates/layout/index.observingsites.html',
-                resolve: {
-                    authenticated: ['djangoAuth', function(djangoAuth){
-                        return djangoAuth.authenticationStatus();
-                    }]
-                }
+                templateUrl: '/static/webapp/templates/layout/index.observingsites.html'
             })
             .when('/observingsites/activity', {
                 controller: 'ObservingSitesActivityController',
                 controllerAs: 'vm',
-                templateUrl: '/static/webapp/templates/layout/activity.observingsites.html',
-                resolve: {
-                    authenticated: ['djangoAuth', function(djangoAuth){
-                        return djangoAuth.authenticationStatus();
-                    }]
-                }
+                templateUrl: '/static/webapp/templates/layout/activity.observingsites.html'
             })
             .when('/observingsites/:site_name', {
                 controller: 'ObservingSiteUpdateController',
@@ -84,22 +69,12 @@
             .when('/archives', {
                 controller: 'ArchivesIndexController',
                 controllerAs: 'vm',
-                templateUrl: '/static/webapp/templates/layout/index.archives.html',
-                resolve: {
-                    authenticated: ['djangoAuth', function(djangoAuth){
-                        return djangoAuth.authenticationStatus();
-                    }]
-                }
+                templateUrl: '/static/webapp/templates/layout/index.archives.html'
             })
             .when('/telegrams', {
                 controller: 'TelegramsIndexController',
                 controllerAs: 'vm',
-                templateUrl: '/static/webapp/templates/layout/index.telegrams.html',
-                resolve: {
-                    authenticated: ['djangoAuth', function(djangoAuth){
-                        return djangoAuth.authenticationStatus();
-                    }]
-                }
+                templateUrl: '/static/webapp/templates/layout/index.telegrams.html'
             });
     }
 })();

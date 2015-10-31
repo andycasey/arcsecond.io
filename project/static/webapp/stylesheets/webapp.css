@@ -43,7 +43,6 @@ a[rel="info"]:before {
     text-decoration: none;
 }
 
-
 a[rel="edit"] {
     position: relative;
 }
@@ -122,6 +121,17 @@ label[class="edit"] {
 .checkbox-label {
     padding-top: 10px;
 }
+
+.userprofile__username {
+    font-size: 42px;
+    color: #3a90b9;
+}
+
+.userprofile__name {
+    font-size: 21px;
+    color: #4b4b4b;
+}
+
 
 #search-container  {
     padding-top: 0;

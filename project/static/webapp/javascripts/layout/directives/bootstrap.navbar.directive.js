@@ -15,6 +15,10 @@
             },
             templateUrl: '/static/webapp/templates/layout/bootstrap.navbar.html',
             controller: ['$scope', '$rootScope', '$location', 'djangoAuth', function ($scope, $rootScope, $location, djangoAuth) {
+                $scope.go = function ( path ) {
+                    $location.path( path );
+                };
+
                 var toggleNavbarInitial = function() {
                     if ($location.path() === "/") {
                         $(".navbar").addClass("navbar__initial scrollspy_menu");
