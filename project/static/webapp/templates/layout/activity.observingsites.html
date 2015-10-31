@@ -1,7 +1,7 @@
-<div class="row" ng-cloak>
-    <div class="container activity-table-container">
+<div class="row-fluid" ng-cloak>
+    <div class="activity-table-container">
         <div>
-            <p><a href="/observingsites">< Back to Observing Sites</a><br/></p>
+            <p>&nbsp;&nbsp;<a href="/observingsites">< Back to Observing Sites</a><br/></p>
         </div>
         <div class="table-responsive">
             <table class="table table-striped">
@@ -12,7 +12,7 @@
                     </td>
                     <td>
                         <div ng-if="activity.property_name" class="fixed-font-cell">
-                            {{ activity.action }} <span class="fixed-font">{{ activity.property_name }}</span>
+                            {{ activity.action }} '<span class="fixed-font">{{ activity.property_name }}</span>'
                         </div>
                         <div ng-if="activity.action_message" class="fixed-font-cell">
                             {{ activity.action }} {{ activity.action_message }}
@@ -21,12 +21,12 @@
 
                     <td>
                         <div ng-if="activity.property_name" class="fixed-font-cell">
-                            from <span class="fixed-font">{{ activity.old_value }}</span>
+                            from '<span class="fixed-font">{{ activity.old_value }}</span>'
                         </div>
                     </td>
                     <td>
                         <div ng-if="activity.property_name" class="fixed-font-cell">
-                            to <span class="fixed-font">{{ activity.new_value }}</span>
+                            to '<span class="fixed-font">{{ activity.new_value }}</span>'
                         </div>
                     </td>
 
@@ -36,7 +36,7 @@
                                 <a target="_self" href="/observingsites/{{ activity.observing_site.name }}">
                                     {{ activity.observing_site.name }}
                                 </a>
-                            </span>
+                            </span>(#{{ activity.observing_site.id }})
                         </div>
                     </td>
                     <td class="fixed-font-cell">
