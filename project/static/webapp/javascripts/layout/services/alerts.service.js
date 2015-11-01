@@ -17,6 +17,22 @@
             $rootScope.alerts.push({'type': type, 'msg': msg});
         };
 
+        alertService.addError = function(msg) {
+            alertService.add("danger", msg);
+        };
+
+        alertService.addWarning = function(msg) {
+            alertService.add("warning", msg);
+        };
+
+        alertService.addInfo = function(msg) {
+            alertService.add("info", msg);
+        };
+
+        alertService.addSuccess = function(msg) {
+            alertService.add("success", msg);
+        };
+
         alertService.closeAlert = function(index) {
             $rootScope.alerts.splice(index, 1);
         };

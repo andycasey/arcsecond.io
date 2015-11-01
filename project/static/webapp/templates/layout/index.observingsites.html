@@ -2,7 +2,7 @@
     <div class="container">
 
         <div class="row">
-            <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">
+            <alert ng-repeat="alert in alerts" close="closeAlert($index)" type="{{ alert.type }}">
                 {{ alert.msg }}
             </alert>
         </div>

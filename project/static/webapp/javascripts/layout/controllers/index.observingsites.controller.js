@@ -30,11 +30,11 @@
                     $scope.observingSiteCreating = true;
                 }
                 else {
-                    alertService.add("error", "You must be authenticated to create a new observing site.");
+                    alertService.addError("You must be authenticated to create a new observing site.");
                 }
             }
             else {
-                alertService.add("error", "Zoom must be larger than 10 to create a new observing site.");
+                alertService.addError("Map zoom must be at least 10 to create a new observing site.");
             }
         };
 

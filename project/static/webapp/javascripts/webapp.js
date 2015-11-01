@@ -28,6 +28,9 @@
         .module('webapp.routes', ['ngRoute']);
 
     angular
+        .module('webapp.layout', ['ui.bootstrap']);
+
+    angular
         .module('webapp.authentication', ['ngCookies', 'ngResource', 'ngSanitize', 'ngRoute']);
 
     angular
