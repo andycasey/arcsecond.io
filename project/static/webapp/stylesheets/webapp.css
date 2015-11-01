@@ -193,6 +193,18 @@ label[class="edit"] {
     text-align: center;
 }
 
+#createsite__button {
+    font-size: large;
+}
+
+.createsite__label {
+    color: darkgray;
+}
+
+.createsite__element {
+    font-size: large;
+}
+
 .observingsite {
     width: 90%;
     padding-top: 5px;
@@ -363,7 +375,7 @@ ul {
     }
 
     .query {
-        font-size: 20px;
+        font-size: 18px;
         line-height: 37px;
     }
 

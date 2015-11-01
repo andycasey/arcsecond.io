@@ -1,6 +1,12 @@
 <div class="site-wrapper">
     <div class="container">
 
+        <div class="row">
+            <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">
+                {{ alert.msg }}
+            </alert>
+        </div>
+
         <div class="row" id="search-container">
             <div class="col-md-10">
                 <input autocomplete="off"
@@ -33,8 +39,12 @@
             <div class="col-md-10" id="observingsites-container">
                 <div my-loading-spinner="viewLoading"></div>
                 <div ng-show="searchString.length > 0" class="observingsite__new">
-                    Create New Site with Name:
-                    <button id="createButton" type="button" class="btn btn-primary" ng-click="createNewObservingSite(this, searchString)">{{ searchString }}</button>
+                    <button id="createsite__button" type="button" class="btn btn-primary" ng-click="createNewObservingSite()">Create New Site</button>
+                    <span class="createsite__label">with name : </span>
+                    <span class="createsite__element">{{ searchString }}</span>
+                    <span class="createsite__label">and coordinates [map center] : </span>
+                    <span class="createsite__element">{{ map.center.longitude | number:6 }}, {{ map.center.latitude | number:6 }}</span>
+                    <span class="createsite__label"> [map zoom: {{ map.zoom }}, min: 10]</span>
                 </div>
 
                 <div ng-repeat="observingsite in observingsites | filter:searchString">
