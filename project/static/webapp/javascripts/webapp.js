@@ -11,7 +11,6 @@
             'webapp.layout',
             'webapp.authentication',
             'webapp.observingsites',
-            'webapp.telescopes',
             'webapp.archives',
             'webapp.telegrams'
         ]);
@@ -20,16 +19,22 @@
         .module('webapp.config', ['uiGmapgoogle-maps']);
 
     angular
-        .module('webapp.routes', ['ngRoute']);
+        .module('webapp.filters', []);
 
     angular
         .module('webapp.master', []);
 
     angular
-        .module('webapp.archives', ['ui.bootstrap']);
+        .module('webapp.routes', ['ngRoute']);
 
     angular
         .module('webapp.authentication', ['ngCookies', 'ngResource', 'ngSanitize', 'ngRoute']);
+
+    angular
+        .module('webapp.observingsites', ['ui.bootstrap']);
+
+    angular
+        .module('webapp.archives', ['ui.bootstrap']);
 
     angular
         .module('webapp')

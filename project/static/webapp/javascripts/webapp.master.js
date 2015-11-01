@@ -3,7 +3,9 @@
 
     angular
         .module('webapp.master')
-        .controller('MasterCtrl', function ($rootScope, $location, djangoAuth) {
+        .controller('MasterCtrl', function ($rootScope, $location, djangoAuth, alertService) {
+
+            $rootScope.closeAlert = alertService.closeAlert;
 
             // Assume user is not logged in until we hear otherwise
             $rootScope.authenticated = false;

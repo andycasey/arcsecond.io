@@ -5,9 +5,9 @@
         .module('webapp.layout.controllers')
         .controller('ObservingSitesIndexController', ObservingSitesIndexController);
 
-    ObservingSitesIndexController.$inject = ['$scope', '$routeParams', 'ObservingSites', 'uiGmapGoogleMapApi', 'uiGmapIsReady', 'Snackbar'];
+    ObservingSitesIndexController.$inject = ['$scope', 'ObservingSites', 'uiGmapGoogleMapApi', 'alertService', 'Snackbar'];
 
-    function ObservingSitesIndexController($scope, $routeParams, ObservingSites, uiGmapGoogleMapApi, uiGmapIsReady, Snackbar) {
+    function ObservingSitesIndexController($scope, ObservingSites, uiGmapGoogleMapApi, alertService, Snackbar) {
         var vm = this;
 
         $scope.searchString = "";
@@ -24,9 +24,17 @@
         };
 
         $scope.observingSiteCreating = false;
-        $scope.createNewObservingSite = function(sender, site_name) {
-            if (site_name !== undefined && site_name.length > 0) {
-                $scope.observingSiteCreating = true;
+        $scope.createNewObservingSite = function() {
+            if ($scope.searchString.length > 0 && $scope.map.zoom >= 10) {
+                if ($rootScope.authenticated) {
+                    $scope.observingSiteCreating = true;
+                }
+                else {
+                    alertService.add("error", "You must be authenticated to create a new observing site.");
+                }
+            }
+            else {
+                alertService.add("error", "Zoom must be larger than 10 to create a new observing site.");
             }
         };
 
