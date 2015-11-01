@@ -5,9 +5,9 @@
         .module('webapp.layout.controllers')
         .controller('ObservingSitesIndexController', ObservingSitesIndexController);
 
-    ObservingSitesIndexController.$inject = ['$scope', 'ObservingSites', 'uiGmapGoogleMapApi', 'alertService', 'Snackbar'];
+    ObservingSitesIndexController.$inject = ['$rootScope', '$scope', '$location', 'ObservingSites', 'uiGmapGoogleMapApi', 'alertService', 'Snackbar'];
 
-    function ObservingSitesIndexController($scope, ObservingSites, uiGmapGoogleMapApi, alertService, Snackbar) {
+    function ObservingSitesIndexController($rootScope, $scope, $location, ObservingSites, uiGmapGoogleMapApi, alertService, Snackbar) {
         var vm = this;
 
         $scope.searchString = "";
@@ -28,6 +28,18 @@
             if ($scope.searchString.length > 0 && $scope.map.zoom >= 10) {
                 if ($rootScope.authenticated) {
                     $scope.observingSiteCreating = true;
+                    var obsname = $scope.searchString;
+                    ObservingSites.create(
+                        obsname,
+                        $scope.map.center.longitude.toString(),
+                        $scope.map.center.latitude.toString(),
+                        "0.0")
+                        .then(function(response) {
+                            $location.path('/observingsites/'+obsname)
+                        },
+                        function(response) {
+                            alertService.addError(response.error);
+                        })
                 }
                 else {
                     alertService.addError("You must be authenticated to create a new observing site.");
@@ -120,7 +132,7 @@
             for (var i = 0; i < $scope.observingsites.length; i++) {
                 var site = $scope.observingsites[i];
                 var siteName = (site.hasOwnProperty('name')) ? site.name : "";
-                var siteCountry = (site.hasOwnProperty('country')) ? site.country : "";
+                var siteCountry = (site.country !== null || site.hasOwnProperty('country')) ? site.country : "";
 
                 if (site.coordinates != null &&
                     ($scope.searchString.length == 0 ||

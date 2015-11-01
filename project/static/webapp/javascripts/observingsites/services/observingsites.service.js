@@ -39,9 +39,14 @@
             return $http.get(url);
         }
 
-        function create(content) {
+        function create(name, longitude, latitude, height) {
             return $http.post($window.ARCSECOND_API_ROOT_URL + '/1/observingsites/', {
-                content: content
+                name: name,
+                coordinates: {
+                    longitude: longitude,
+                    latitude: latitude,
+                    height: height
+                }
             });
         }
 

@@ -3,16 +3,17 @@ from django.http import Http404
 
 from rest_framework import generics
 from rest_framework.authentication import TokenAuthentication
-from rest_framework.parsers import JSONParser
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 from project.arcsecond import models
 from project.arcsecond import serializers
 from project.arcsecond import mixins
 
-class ObservingSiteListAPIView(mixins.RequestLogViewMixin, generics.ListAPIView):
+class ObservingSiteListAPIView(mixins.RequestLogViewMixin, generics.ListCreateAPIView):
     queryset = models.ObservingSite.objects.all().order_by('name')
     serializer_class = serializers.ObservingSiteSerializer
+    authentication_classes = (TokenAuthentication,)
+    permission_classes = (IsAuthenticatedOrReadOnly,)
     lookup_field = "name"
 
     def get_queryset(self):

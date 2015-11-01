@@ -20,6 +20,30 @@ class ObservingSiteSerializer(serializers.ModelSerializer):
     coordinates = CoordinatesSerializer(required=False)
     telescopes = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
 
+    def create(self, validated_data):
+        coordinates_data = validated_data.pop('coordinates')
+        site = ObservingSite.objects.create(**validated_data)
+        if coordinates_data is not None:
+            site.coordinates = Coordinates.objects.create(**coordinates_data)
+            site.save()
+        return site
+
+    def update(self, instance, validated_data):
+        coordinates_data = validated_data.pop('coordinates')
+        coordinates = instance.coordinates
+
+        excluded_fields = ["id", "coordinates", "telescopes"]
+        filtered_fields = [f for f in self.fields if f not in excluded_fields]
+        for field in filtered_fields:
+            new_value = validated_data.get(field, getattr(instance, field))
+            setattr(instance, field, new_value)
+
+        if coordinates is None and coordinates_data is not None:
+            instance.coordinates = Coordinates.objects.create(**coordinates_data)
+
+        instance.save()
+        return instance
+
 
 class ObservingSiteShortSerializer(serializers.ModelSerializer):
     class Meta:
