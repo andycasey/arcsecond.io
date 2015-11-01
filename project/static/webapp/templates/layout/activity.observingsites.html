@@ -8,7 +8,7 @@
                 <tr ng-repeat="activity in vm.activities">
                     <td>{{ activity.date | date:"d MMM yyyy 'at' H:mm" }}</td>
                     <td>
-                        <a target="_self" href="/@{{ activity.user.username }}">{{ activity.user.username }}</a>
+                        <a target="_self" href="/users/{{ activity.user.username }}">{{ activity.user.username }}</a>
                     </td>
                     <td>
                         <div ng-if="activity.property_name || activity.action" class="fixed-font-cell">
