@@ -38,7 +38,11 @@
                             $location.path('/observingsites/'+obsname)
                         },
                         function(response) {
-                            alertService.addError(response.error);
+                            var msg = "<strong>" + response.statusText + "</strong> ("+response.status+") ";
+                            if (response.data.hasOwnProperty('coordinates')) {
+                                msg += response.data.coordinates.non_field_errors;
+                            }
+                            alertService.addError(msg);
                         })
                 }
                 else {
@@ -131,8 +135,8 @@
             var markers = [];
             for (var i = 0; i < $scope.observingsites.length; i++) {
                 var site = $scope.observingsites[i];
-                var siteName = (site.hasOwnProperty('name')) ? site.name : "";
-                var siteCountry = (site.country !== null || site.hasOwnProperty('country')) ? site.country : "";
+                var siteName = ('name' in site && site.name !== null) ? site.name : "";
+                var siteCountry = ('country' in site && site.country !== null) ? site.country : "";
 
                 if (site.coordinates != null &&
                     ($scope.searchString.length == 0 ||

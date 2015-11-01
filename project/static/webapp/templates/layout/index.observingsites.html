@@ -3,7 +3,7 @@
 
         <div class="row">
             <alert ng-repeat="alert in alerts" close="closeAlert($index)" type="{{ alert.type }}">
-                {{ alert.msg }}
+                <div ng-bind-html="alert.msg"></div>
             </alert>
         </div>
 
