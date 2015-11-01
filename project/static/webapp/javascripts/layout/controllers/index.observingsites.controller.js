@@ -5,101 +5,120 @@
         .module('webapp.layout.controllers')
         .controller('ObservingSitesIndexController', ObservingSitesIndexController);
 
-    ObservingSitesIndexController.$inject = ['$scope', 'ObservingSites', 'uiGmapGoogleMapApi', 'Snackbar'];
+    ObservingSitesIndexController.$inject = ['$scope', '$routeParams', 'ObservingSites', 'uiGmapGoogleMapApi', 'uiGmapIsReady', 'Snackbar'];
 
-    function ObservingSitesIndexController($scope, ObservingSites, uiGmapGoogleMapApi, Snackbar) {
+    function ObservingSitesIndexController($scope, $routeParams, ObservingSites, uiGmapGoogleMapApi, uiGmapIsReady, Snackbar) {
         var vm = this;
-        vm.observingsites = undefined;
-        vm.all_observingsites = undefined;
-        vm.filter_observingsites = true;
 
-        $scope.toggleMapBoundsFilteringObservingsites = function() {
-            vm.observingsites = vm.all_observingsites.filter(function (el) {
-                var ll = new google.maps.LatLng(el.coordinates.latitude, el.coordinates.longitude);
-                return !vm.filter_observingsites || map.getBounds().contains(ll);
-            });
+        $scope.searchString = "";
+        $scope.continents = ObservingSites.continents;
+        $scope.observingsites = undefined;
+        $scope.all_observingsites = undefined;
+        $scope.filter_observingsites = true;
+
+        $scope.toggleMapBoundsFiltering = function() {
+            if ($scope.gmap !== undefined) {
+                filterObservingSitesOnMapBounds();
+                reloadMapMarkers();
+            }
         };
 
-        activate();
+        $scope.observingSiteCreating = false;
+        $scope.createNewObservingSite = function(sender, site_name) {
+            if (site_name !== undefined && site_name.length > 0) {
+                $scope.observingSiteCreating = true;
+            }
+        };
 
-        function activate() {
-            vm.continents = ObservingSites.continents;
-            $scope.viewLoading = true;
+        $scope.viewLoading = true;
 
-            uiGmapGoogleMapApi.then(function(maps) {
-                $scope.map = {
-                    center: {
-                        latitude: 15.0,
-                        longitude: 0.0
-                    },
-                    zoom: 1,
-                    markers: [], // array of models to display
-                    markersEvents: {
-                        click: function(marker, eventName, model, args) {
-                            $scope.map.window.model = model;
-                            $scope.map.windowOptions.show = true;
-                        }
-                    },
-                    window: {
-                        model: {},
-                        closeClick: function() {
-                            this.model = {};
-                            $scope.windowOptions.show = false;
-                        }
-                    },
-                    options: {
-                        scrollwheel: false,
-                        dragging: true
-                    },
-                    closeClick: function () {
-                        $scope.map.window.model = {};
-                        $scope.map.windowOptions.show = false;
-                    },
-                    windowOptions: {
-                        show: false
-                    },
-                    events: {
-                        bounds_changed: function(map, eventName, args) {
-                            vm.observingsites = vm.all_observingsites.filter(function (el) {
-                                var ll = new google.maps.LatLng(el.coordinates.latitude, el.coordinates.longitude);
-                                return !vm.filter_observingsites || map.getBounds().contains(ll);
-                            });
-                        }
+        uiGmapGoogleMapApi.then(function(maps) {
+            $scope.map = {
+                center: {
+                    latitude: 15.0,
+                    longitude: 0.0
+                },
+                zoom: 1,
+                markers: [], // array of models to display
+                markersEvents: {
+                    click: function(marker, eventName, model, args) {
+                        $scope.map.window.model = model;
+                        $scope.map.windowOptions.show = true;
                     }
-                };
+                },
+                window: {
+                    model: {},
+                    closeClick: function() {
+                        this.model = {};
+                        $scope.windowOptions.show = false;
+                    }
+                },
+                options: {
+                    scrollwheel: false,
+                    dragging: true
+                },
+                closeClick: function () {
+                    $scope.map.window.model = {};
+                    $scope.map.windowOptions.show = false;
+                },
+                windowOptions: {
+                    show: false
+                },
+                events: {
+                    bounds_changed: function(map, eventName, args) {
+                        $scope.gmap = map;
+                        filterObservingSitesOnMapBounds();
+                        reloadMapMarkers();
+                    }
+                }
+            };
 
-                $scope.zoomInToObservingSite = function(site) {
-                    $scope.map.center = site.coordinates;
-                    $scope.map.zoom = 8;
-                };
+            $scope.zoomInToObservingSite = function(site) {
+                $scope.map.center = site.coordinates;
+                $scope.map.zoom = 8;
+            };
+        });
+
+        ObservingSites.all().then(successFn, errorFn);
+
+        function successFn(response, status, headers, config) {
+            $scope.viewLoading = false;
+            $scope.observingsites = response.data;
+            $scope.all_observingsites = response.data;
+
+            $scope.$watch(function() {
+                return $scope.searchString;
+            }, function(newValue, oldValue, scope) {
+                reloadMapMarkers();
             });
+        }
 
-            ObservingSites.all().then(successFn, errorFn);
+        function errorFn(response, status, headers, config) {
+            $scope.viewLoading = false;
+            Snackbar.error(response.error);
+            console.log(response.error);
+        }
 
-            function successFn(response, status, headers, config) {
-                $scope.viewLoading = false;
-                vm.all_observingsites = response.data;
-                vm.observingsites = response.data;
+        function filterObservingSitesOnMapBounds() {
+            $scope.observingsites = $scope.all_observingsites.filter(function (el) {
+                if (el.coordinates == null) { return true; }
+                var ll = new google.maps.LatLng(el.coordinates.latitude, el.coordinates.longitude);
+                return !$scope.filter_observingsites || $scope.gmap.getBounds().contains(ll);
+            });
+        }
 
-                var markersPromise = getMapMarkers(vm.observingsites);
-                markersPromise.done(function(data){
-                    $scope.map.markers = data;
-                });
-            }
+        function reloadMapMarkers() {
+            var markers = [];
+            for (var i = 0; i < $scope.observingsites.length; i++) {
+                var site = $scope.observingsites[i];
+                var siteName = (site.hasOwnProperty('name')) ? site.name : "";
+                var siteCountry = (site.hasOwnProperty('country')) ? site.country : "";
 
-            function errorFn(response, status, headers, config) {
-                $scope.viewLoading = false;
-                Snackbar.error(response.error);
-                console.log(response.error);
-            }
-
-            function getMapMarkers(observingsites) {
-                var deferred = $.Deferred();
-
-                var markers = [];
-                for (var i = 0; i < observingsites.length; i++) {
-                    var site = observingsites[i];
-
+                if (site.coordinates != null &&
+                    ($scope.searchString.length == 0 ||
+                    siteName.indexOf($scope.searchString) > -1 ||
+                    siteCountry.indexOf($scope.searchString) > -1))
+                {
                     var marker = {
                         "idKey": site.id,
                         "coords": {
@@ -112,10 +131,8 @@
                     };
                     markers.push(marker);
                 }
-                deferred.resolve(markers);
-
-                return deferred.promise();
             }
+            $scope.map.markers = markers;
         }
     }
 })();
