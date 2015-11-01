@@ -95,9 +95,10 @@ class ObservingSiteActivity(models.Model):
     ACTION_LOAD = "load"
     ACTION_PROPERTY_CHANGE = "prop"
     ACTION_SITE_DELETION = "del"
+    ACTION_SITE_CREATION = "cre"
 
-    ACTION_KEYS = (ACTION_UNDEFINED, ACTION_LOAD, ACTION_PROPERTY_CHANGE, ACTION_SITE_DELETION)
-    ACTION_VALUES = ("(Undefined)", "loaded", "changed property", "deleted site")
+    ACTION_KEYS = (ACTION_UNDEFINED, ACTION_LOAD, ACTION_PROPERTY_CHANGE, ACTION_SITE_DELETION, ACTION_SITE_CREATION)
+    ACTION_VALUES = ("(Undefined)", "loaded", "changed property", "deleted site", "created site")
     ACTION_CHOICES = tuple(zip(ACTION_KEYS, ACTION_VALUES))
     action = models.CharField(max_length=10, choices=ACTION_CHOICES, default=ACTION_UNDEFINED)
 

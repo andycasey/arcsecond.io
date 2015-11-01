@@ -11,31 +11,26 @@
                         <a target="_self" href="/@{{ activity.user.username }}">{{ activity.user.username }}</a>
                     </td>
                     <td>
-                        <div ng-if="activity.property_name" class="fixed-font-cell">
-                            {{ activity.action }} '<span class="fixed-font">{{ activity.property_name }}</span>'
-                        </div>
-                        <div ng-if="activity.action_message" class="fixed-font-cell">
-                            {{ activity.action }} {{ activity.action_message }}
+                        <div ng-if="activity.property_name || activity.action" class="fixed-font-cell">
+                            {{ activity.action }} <span class="fixed-font">{{ activity.property_name }}</span> {{ activity.action_message }}
                         </div>
                     </td>
 
                     <td>
                         <div ng-if="activity.property_name" class="fixed-font-cell">
-                            from '<span class="fixed-font">{{ activity.old_value }}</span>'
+                            from <span class="fixed-font">{{ activity.old_value }}</span>
                         </div>
                     </td>
                     <td>
                         <div ng-if="activity.property_name" class="fixed-font-cell">
-                            to '<span class="fixed-font">{{ activity.new_value }}</span>'
+                            to <span class="fixed-font">{{ activity.new_value }}</span>
                         </div>
                     </td>
 
                     <td>
                         <div ng-if="activity.observing_site" class="fixed-font-cell">
                             of site <span class="fixed-font">
-                                <a target="_self" href="/observingsites/{{ activity.observing_site.name }}">
-                                    {{ activity.observing_site.name }}
-                                </a>
+                                <a target="_self" href="/observingsites/{{ activity.observing_site.name }}">{{ activity.observing_site.name }}</a>
                             </span>(#{{ activity.observing_site.id }})
                         </div>
                     </td>

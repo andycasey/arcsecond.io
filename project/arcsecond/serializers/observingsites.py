@@ -29,7 +29,7 @@ class ObservingSiteSerializer(serializers.ModelSerializer):
         return site
 
     def update(self, instance, validated_data):
-        coordinates_data = validated_data.pop('coordinates')
+        coordinates_data = validated_data.pop('coordinates', None)
         coordinates = instance.coordinates
 
         excluded_fields = ["id", "coordinates", "telescopes"]

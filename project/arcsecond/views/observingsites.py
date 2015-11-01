@@ -23,6 +23,24 @@ class ObservingSiteListAPIView(mixins.RequestLogViewMixin, generics.ListCreateAP
             queryset = queryset.filter(continent=continent)
         return queryset
 
+    def post(self, request, *args, **kwargs):
+        result = super(ObservingSiteListAPIView, self).post(request, *args, **kwargs)
+
+        obssite = None
+        try:
+            obssite = self.get_queryset().get(id=result.data.get("id"))
+        except:
+            pass
+
+        if result.status_code == 201 and obssite is not None:
+            activity = models.ObservingSiteActivity.objects.create(user=request.user)
+            activity.action = models.ObservingSiteActivity.ACTION_SITE_CREATION
+            activity.observing_site = obssite
+            activity.method = models.ObservingSiteActivity.METHOD_WEB
+            activity.save()
+
+        return result
+
 class ObservingSiteActivityListAPIView(mixins.RequestLogViewMixin, generics.ListAPIView):
     queryset = models.ObservingSiteActivity.objects.all().order_by('-date')
     serializer_class = serializers.ObservingSiteActivitySerializer
@@ -34,6 +52,7 @@ class ObservingSiteDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveUp
     permission_classes = (IsAuthenticatedOrReadOnly,)
 
     def put(self, request, *args, **kwargs):
+        obssite = None
         old_values = {}
         try:
             obssite = self.get_object()
@@ -45,7 +64,7 @@ class ObservingSiteDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveUp
 
         result = super(ObservingSiteDetailAPIView, self).put(request, args, kwargs)
 
-        if result.status_code == 200:
+        if result.status_code == 200 and obssite is not None:
             for key in request.data.keys():
                 activity = models.ObservingSiteActivity.objects.create(user=request.user)
                 activity.action = models.ObservingSiteActivity.ACTION_PROPERTY_CHANGE
