@@ -199,6 +199,10 @@ label[class="edit"] {
     padding-bottom: 5px;
 }
 
+.observingsite__new {
+    padding-left: 15px;
+}
+
 .observingsite__name {
     font-size: 18pt;
     clear: none;
