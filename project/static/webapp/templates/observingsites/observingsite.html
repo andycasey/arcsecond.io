@@ -2,17 +2,12 @@
     <div class="col-sm-12">
         <div class="observingsite">
             <span class="observingsite__name">
-                <a href="/observingsites/{{ observingsite.name }}">
+                <a href="/observingsites/{{ observingsite.name }}/">
                     {{ observingsite.name }}
                 </a>
             </span>
             <span class="observingsite__subtitle">
                 {{ observingsite.country }}
-            </span>
-            <span class="observingsite__edit pull-right">
-                <a type="button" class="btn btn-standard btn-xs" ng-href="/observingsites/{{ observingsite.name }}">
-                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
-                </a>
             </span>
             <span class="observingsite__elements">
                 (long. {{ observingsite.coordinates.longitude | number:2 }}º,
