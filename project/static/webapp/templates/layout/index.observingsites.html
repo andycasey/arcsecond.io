@@ -6,12 +6,12 @@
                 <input autocomplete="off"
                        autofocus="autofocus"
                        id="search-input"
-                       placeholder="Find an Observing Site by Name, Country, Coordinates..."
+                       placeholder="Find a Site by Name or Country. Or Enter New Name to Create One!"
                        type="text"
                        ng-model="searchString" />
 
                 <div class="search_subtitle">
-                    Total: {{ vm.all_observingsites.length }},
+                    Total: {{ all_observingsites.length }},
                     Sources: <a target="_self" href="http://onekilopars.ec/apps">iObserve</a>,
                     <a target="_self" href="http://www.clearskyinstitute.com/xephem/">Xephem</a> (filtered),
                     <a href="/observingsites/activity">See Observing Sites Activity > </a>
@@ -21,9 +21,8 @@
 
             <div class="col-md-2">
                 <div class="btn-group">
-                    <a ng-href="/observingsites/new" class="btn btn-default btn-sm">Create A New Observing Site</a>
                     <label class="checkbox-label">
-                        <input type="checkbox" ng-model="vm.filter_observingsites" ng-change="toggleMapBoundsFilteringObservingsites()">
+                        <input type="checkbox" ng-model="filter_observingsites" ng-change="toggleMapBoundsFiltering()">
                         Automatic Map Bounds Filtering
                     </label>
                 </div>
@@ -33,18 +32,16 @@
         <div class="row">
             <div class="col-md-10" id="observingsites-container">
                 <div my-loading-spinner="viewLoading"></div>
+                <div ng-show="searchString.length > 0" class="observingsite__new">
+                    Create New Site with Name:
+                    <button id="createButton" type="button" class="btn btn-primary" ng-click="createNewObservingSite(this, searchString)">{{ searchString }}</button>
+                </div>
 
-                <div ng-repeat="observingsite in vm.observingsites | filter:searchString">
+                <div ng-repeat="observingsite in observingsites | filter:searchString">
                     <div class="col-md-12">
                         <observingsite observingsite="observingsite" data-ng-click="zoomInToObservingSite(observingsite)"></observingsite>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-md-10 no-observingsite-here" ng-hide="vm.observingsites.length">
-                <em>No observing sites could be found. That's a problem. </em>
-                Inform Cédric about it via <a href="mailto:cedric@arcsecond.io">@</a>,
-                or <a href="https://twitter.com/arcsecond_io" class="social__item"><i class="fa fa-twitter"></i></a>.
             </div>
 
         </div>
@@ -64,7 +61,7 @@
 
         <ui-gmap-markers
                 idkey="'idKey'"
-                models="map.markers | filter:searchString"
+                models="map.markers"
                 coords="'coords'"
                 docluster="true"
                 fit="false"
