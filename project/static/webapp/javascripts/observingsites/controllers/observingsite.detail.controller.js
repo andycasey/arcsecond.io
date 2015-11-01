@@ -13,7 +13,6 @@
 
         $scope.showAuthenticationWarning = false;
         $scope.continents = [
-            '(undefined)',
             'Africa',
             'Antarctica',
             'Asia',
@@ -22,9 +21,11 @@
             'Oceania',
             'South America'
         ];
+
         $scope.showContinents = function() {
+            if (vm.observingsitedetail == undefined) { return ''; }
             var selected = $filter('filter')($scope.continents, vm.observingsitedetail.continent);
-            return (vm.observingsitedetail.continent && selected.length) ? selected[0] : '(toto)';
+            return (vm.observingsitedetail.continent && selected.length) ? selected[0] : '';
         };
 
         $scope.checkAndShow = function(sender, btnName) {
@@ -41,6 +42,7 @@
         };
 
         $scope.updateObservingSite = function (field_name, data) {
+            if (field_name === 'name' && data.length == 0) { return false; }
             var update_data = {};
             update_data[field_name.toString()] = data;
             return ObservingSites.update(vm.observingsitedetail, update_data);
