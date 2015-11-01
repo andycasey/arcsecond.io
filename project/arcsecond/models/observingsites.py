@@ -44,7 +44,7 @@ class ObservingSite(models.Model):
     )
 
     continent = models.CharField(max_length=100, choices=CONTINENTS_TYPES_CHOICES, default=CONTINENT_UNDEFINED)
-    coordinates = models.OneToOneField(Coordinates, related_name="site")
+    coordinates = models.OneToOneField(Coordinates, null=True, related_name="site")
 
     address_line_1 = models.CharField(max_length=200, null=True, blank=True)
     address_line_2 = models.CharField(max_length=200, null=True, blank=True)
