@@ -30,7 +30,7 @@
         }
 
         function get(name, config) {
-            return $http.get($window.ARCSECOND_API_ROOT_URL + '/1/telescopes/' + name, config);
+            return $http.get($window.ARCSECOND_API_ROOT_URL + '/1/telescopes/' + name + "/", config);
         }
 
         function activities(config) {
