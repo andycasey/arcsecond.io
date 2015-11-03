@@ -75,6 +75,11 @@
                 controller: 'TelegramsIndexController',
                 controllerAs: 'vm',
                 templateUrl: '/static/webapp/templates/layout/index.telegrams.html'
+            })
+            .when('/OMM', {
+                controller: 'LeadsIndexController',
+                controllerAs: 'vm',
+                templateUrl: '/static/webapp/templates/layout/index.leads.html'
             });
     }
 })();

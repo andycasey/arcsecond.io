@@ -6,6 +6,9 @@
     background-image: url(../img/bg-pattern_alt.png), url(../img/screen-bg_10.jpg);
 }
 
+.welcome_leads_OMM {
+    background-image: url(../img/bg-pattern_alt.png), url(../img/screen-bg_omm.jpg);
+}
 
 .btn-primary {
     border-radius: 2px;
