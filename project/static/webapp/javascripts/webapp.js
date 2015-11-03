@@ -11,6 +11,7 @@
             'webapp.layout',
             'webapp.authentication',
             'webapp.observingsites',
+            'webapp.telescopes',
             'webapp.archives',
             'webapp.telegrams'
         ]);
