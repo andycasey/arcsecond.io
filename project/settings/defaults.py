@@ -154,7 +154,10 @@ SETTINGS_EXPORT = [
 ]
 
 import dj_database_url
-DATABASES = { 'default': dj_database_url.config(default=os.environ['DATABASE_URL']) }
+DATABASES = {}
+DATABASES['default'] = dj_database_url.config(default=os.environ['DATABASE_URL'])
+DATABASES['default']['CONN_MAX_AGE'] = 500
+
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
