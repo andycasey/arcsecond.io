@@ -33,15 +33,15 @@ class Publication(models.Model):
     bibcode = models.CharField(max_length=50, default="", validators=[RegexValidator(regex=bibcode_regex, message='Invalid bibcode', code='nomatch')])
     eprint_id = models.CharField(max_length=50, null=True, blank=True)
 
-    PUBLICATION_UNKNOWN = "unk"
-    PUBLICATION_ARTICLE = "art"
-    PUBLICATION_PROCEEDINGS = "proc"
+    PUBLICATION_TYPE_UNKNOWN = "unk"
+    PUBLICATION_TYPE_ARTICLE = "art"
+    PUBLICATION_TYPE_PROCEEDINGS = "proc"
 
-    PUBLICATION_KEYS = (PUBLICATION_UNKNOWN, PUBLICATION_ARTICLE, PUBLICATION_PROCEEDINGS)
-    PUBLICATION_VALUES = ('unknown', 'article', 'proceedings')
-    PUBLICATION_CHOICES = tuple(zip(PUBLICATION_KEYS, PUBLICATION_VALUES))
+    PUBLICATION_TYPE_KEYS = (PUBLICATION_TYPE_UNKNOWN, PUBLICATION_TYPE_ARTICLE, PUBLICATION_TYPE_PROCEEDINGS)
+    PUBLICATION_TYPE_VALUES = ('unknown', 'article', 'proceedings')
+    PUBLICATION_TYPE_CHOICES = tuple(zip(PUBLICATION_TYPE_KEYS, PUBLICATION_TYPE_VALUES))
 
-    publication_type = models.CharField(max_length=3, choices=PUBLICATION_CHOICES, default=PUBLICATION_UNKNOWN)
+    publication_type = models.CharField(max_length=5, choices=PUBLICATION_TYPE_CHOICES, default=PUBLICATION_TYPE_UNKNOWN)
     publication_date = models.DateField(null=True, blank=True)
 
     journal_name = models.CharField(max_length=100, null=True, blank=True)
