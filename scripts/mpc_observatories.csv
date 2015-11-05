@@ -1,4 +1,4 @@
-code,long,cosphip,sinphip,gclat,gdlat,height,name
+#code,long,cosphip,sinphip,gclat,gdlat,height,name
 000,0.0,0.62411,0.77873,51.2897,51.4774,65.7933,Greenwich
 001,0.1542,0.62992,0.77411,50.8636,51.0518,267.705,Crowborough
 002,0.62,0.622,0.781,51.4657,51.653,3041.2,Rayleigh
@@ -741,7 +741,7 @@ code,long,cosphip,sinphip,gclat,gdlat,height,name
 779,280.578,0.72219,0.68943,43.6706,43.8628,240.371,"David Dunlap Observatory, Richmond Hill"
 780,281.478,0.78868,0.6128,37.847,38.0336,225.572,"Leander McCormick Observatory, Charlottesville"
 781,281.508,1.00045,-0.00405,-0.231942,-0.233505,2922.8,Quito
-782,281.65,0.999,0.0,0.0,0.0,-6378.14,"Quito, comet astrograph station"
+#782,281.65,0.999,0.0,0.0,0.0,-6378.14,"Quito, comet astrograph station"
 783,282.02,0.783,0.622,38.4629,38.6503,8213.04,Rixeyville
 784,282.215,0.7414,0.66895,42.0593,42.2507,585.706,"Stull Observatory, Alfred University"
 785,285.354,0.76323,0.64397,40.1558,40.3456,38.9962,"Fitz-Randolph Observatory, Princeton"
