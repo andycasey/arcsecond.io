@@ -67,9 +67,9 @@ with open('scripts/mpc_observatories.csv', 'r') as x:
 			except Exception:
 				# No site with such IAO code. Let's try with coordinates.
 				coords, created = Coordinates.objects.get_or_create(longitude=longitude, latitude=latitude, height=height)					
-				
+								
 				# We get coordinates. Testing against site or 'created' bool is identical.
-				if coords.site is None and created is False:
+				if 'site' not in coords._meta.get_all_field_names() and created is False:
 					print "coordinates are used for something else???"
 					print site, code, name, "\n\n\n"
 					sys.exit(1)
@@ -98,7 +98,7 @@ with open('scripts/mpc_observatories.csv', 'r') as x:
 						site.save()
 				else:
 					pass # Do NOT update coordinates, as MPC data are not as good as iObserve's
-								
+
 			if site.name is None:
 				site.name = name
 			elif site.name != name:
