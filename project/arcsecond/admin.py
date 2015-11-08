@@ -13,6 +13,10 @@ admin.site.register(Site, WebSiteAdmin)
 
 # Register your models here.
 
+@admin.register(UserProfile)
+class UserProfileAdmin(admin.ModelAdmin):
+    list_display = ("pk", "user", "membership_date")
+
 @admin.register(ObservingSite)
 class ObservingSiteAdmin(admin.ModelAdmin):
     list_display = ("pk", "name", "state_province", "country", "IAUCode", "coordinates")
