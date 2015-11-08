@@ -319,6 +319,10 @@ ul {
     padding-bottom: 15px;
 }
 
+.my-loading-spinner-container  {
+    padding-top: 80px;
+}
+
 .update-loading-timer-container {
     max-height: 30px;
 }

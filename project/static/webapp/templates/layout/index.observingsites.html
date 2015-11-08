@@ -17,10 +17,11 @@
                        ng-model="searchString" />
 
                 <div class="search_subtitle">
-                    Total: {{ all_observingsites.length }},
-                    Sources: <a target="_self" href="http://onekilopars.ec/apps">iObserve</a>,
-                    <a target="_self" href="http://www.clearskyinstitute.com/xephem/">Xephem</a> (filtered),
-                    <a href="/observingsites/activity">See Observing Sites Activity > </a>
+                    Total: {{ all_observingsites.length || '~2000+ (loading)' }},
+                    Combined Sources: <a target="_self" href="http://onekilopars.ec/apps">iObserve</a>,
+                    <a target="_self" href="http://www.clearskyinstitute.com/xephem/">Xephem</a>,
+                    <a target="_self" href="http://www.minorplanetcenter.net/iau/lists/ObsCodesF.html">Minor Planet Center</a>.
+                    See <a href="/observingsites/activity">Activity</a> to follow the changes.
                 </div>
 
             </div>
@@ -37,7 +38,6 @@
 
         <div class="row">
             <div class="col-md-10" id="observingsites-container">
-                <div my-loading-spinner="viewLoading"></div>
                 <div ng-show="searchString.length > 0" class="observingsite__new">
                     <button id="createsite__button" type="button" class="btn btn-primary" ng-click="createNewObservingSite()">Create New Site</button>
                     <span class="createsite__label">with name : </span>
@@ -46,6 +46,8 @@
                     <span class="createsite__element">{{ map.center.longitude | number:6 }}, {{ map.center.latitude | number:6 }}</span>
                     <span class="createsite__label"> [map zoom: {{ map.zoom }}, min: 10]</span>
                 </div>
+
+                <div my-loading-spinner="viewLoading"></div>
 
                 <div ng-repeat="observingsite in observingsites | filter:searchString">
                     <div class="col-md-12">
