@@ -22,6 +22,16 @@ class ObservingSite(models.Model):
     acronym = models.CharField(max_length=100, null=True, blank=True, unique=True)
 
     IAUCode = models.CharField(max_length=200, null=True, blank=True, unique=True)
+    coordinates = models.OneToOneField(Coordinates, null=True, related_name="site")
+
+    address_line_1 = models.CharField(max_length=200, null=True, blank=True)
+    address_line_2 = models.CharField(max_length=200, null=True, blank=True)
+    zip_code = models.IntegerField(null=True, blank=True)
+    state_province = models.CharField(max_length=200, null=True)
+    country = models.CharField(max_length=200, null=True)
+
+    time_zone = models.CharField(max_length=200, null=True, blank=True)
+    time_zone_name = models.CharField(max_length=200, null=True, blank=True)
 
     CONTINENT_UNDEFINED = "(Undefined)"
     CONTINENT_ASIA = "Asia"
@@ -44,16 +54,6 @@ class ObservingSite(models.Model):
     )
 
     continent = models.CharField(max_length=100, choices=CONTINENTS_TYPES_CHOICES, default=CONTINENT_UNDEFINED)
-    coordinates = models.OneToOneField(Coordinates, null=True, related_name="site")
-
-    address_line_1 = models.CharField(max_length=200, null=True, blank=True)
-    address_line_2 = models.CharField(max_length=200, null=True, blank=True)
-    zip_code = models.IntegerField(null=True, blank=True)
-    state_province = models.CharField(max_length=200, null=True)
-    country = models.CharField(max_length=200, null=True)
-
-    time_zone = models.CharField(max_length=200, null=True, blank=True)
-    time_zone_name = models.CharField(max_length=200, null=True, blank=True)
 
     homepage = models.URLField(null=True, blank=True)
     wikipedia_article = models.URLField(null=True, blank=True)
@@ -74,7 +74,7 @@ class ObservingSite(models.Model):
 
     SOURCE_VALUES = SOURCE_KEYS
     SOURCE_CHOICES = tuple(zip(SOURCE_KEYS, SOURCE_VALUES))
-    sources = MultiSelectField(choices=SOURCE_CHOICES, null=True, blank=True)
+    sources = MultiSelectField(max_length=100, choices=SOURCE_CHOICES, null=True, blank=True)
 
     is_deleted = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)

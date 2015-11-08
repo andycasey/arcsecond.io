@@ -14,7 +14,7 @@
         $scope.continents = ObservingSites.continents;
         $scope.observingsites = undefined;
         $scope.all_observingsites = undefined;
-        $scope.filter_observingsites = true;
+        $scope.filter_observingsites = false;
 
         $scope.toggleMapBoundsFiltering = function() {
             if ($scope.gmap !== undefined) {
