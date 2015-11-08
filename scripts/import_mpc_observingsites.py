@@ -61,6 +61,7 @@ with open('scripts/mpc_observatories.csv', 'r') as x:
 				latitude += 180.0
 				
 			print '('+code+')', name, longitude, latitude
+			changed = False
 						
 			try:
 				site = ObservingSite.objects.get(IAUCode=code)
@@ -79,6 +80,7 @@ with open('scripts/mpc_observatories.csv', 'r') as x:
 					site = ObservingSite.objects.create(IAUCode=code)
 					site.coordinates = coords
 					site.save()
+					changed = True
 				else:
 					# Coordinates exists. Hence, look for site (which may have no IAU code yet).
 					try:
@@ -88,9 +90,11 @@ with open('scripts/mpc_observatories.csv', 'r') as x:
 						site = ObservingSite.objects.create(IAUCode=code)
 						site.coordinates = coords
 						site.save()
+						changed = True
 					else:
 						site.IAUCode = code
 						site.save()
+						changed = True
 					
 			else:
 				# We have a site.
@@ -103,18 +107,22 @@ with open('scripts/mpc_observatories.csv', 'r') as x:
 					else:
 						site.coordinates = coords				
 						site.save()
+						changed = True
 				else:
 					pass # Do NOT update coordinates, as MPC data are not as good as iObserve's
 
 			if site.name is None:
 				site.name = name
+				changed = True
 			elif site.name != name:
 				site.alternate_name_1 = name
+				changed = True
 				
-			if site.sources is None:
-				site.sources = ['MPC']
-			elif 'MPC' not in site.sources:
-				site.sources += ['MPC']
+			if changed is True:
+				if site.sources is None:
+					site.sources = [ObservingSite.SOURCE_MPC]
+				elif ObservingSite.SOURCE_MPC not in site.sources:
+					site.sources += [ObservingSite.SOURCE_MPC]
 			
 			site.save()
 				
