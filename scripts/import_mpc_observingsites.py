@@ -81,9 +81,16 @@ with open('scripts/mpc_observatories.csv', 'r') as x:
 					site.save()
 				else:
 					# Coordinates exists. Hence, look for site (which may have no IAU code yet).
-					site = coords.site
-					site.IAUCode = code
-					site.save()
+					try:
+						site = coords.site
+					except Exception:
+						# should be rare
+						site = ObservingSite.objects.create(IAUCode=code)
+						site.coordinates = coords
+						site.save()
+					else:
+						site.IAUCode = code
+						site.save()
 					
 			else:
 				# We have a site.
