@@ -27,6 +27,12 @@ class PublicationDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIV
 
     def get_object(self):
         bibcode = self.kwargs.get("bibcode", None)
-        publication = connectors.get_ADS_publication(bibcode=bibcode)
+        publication = connectors.get_ADS_publication_from_bibcode(bibcode)
         return publication
 
+class PublicationListAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIView):
+    queryset = models.Publication.objects.all()
+    serializer_class = serializers.PublicationSerializer
+
+    def get_queryset(self):
+        pass

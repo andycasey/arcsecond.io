@@ -2,19 +2,99 @@
 
 import xml
 import urllib2
-from project.arcsecond.models import *
-from django.core.exceptions import MultipleObjectsReturned
+import ads
 
+from django.core.exceptions import MultipleObjectsReturned
+from django.conf import settings
+
+from project.arcsecond.models import *
+from ._utils_ import *
+
+ads.config.token = settings.ADS_CONFIG_TOKEN
 
 ATEL_ROOT_URL = "http://www.astronomerstelegram.org/?read="
 ATEL_REGEX = "(http:\/\/www\.astronomerstelegram\.org\/\?read\=[\d+])"
-OBJECTS_REGEX = "(\W[A-Z]+[\d]?[\s]{,1}[a-zA-Z]?[\d\+\-\.]+\W)|(\W[\d]+[a-zA-Z]?[\s]{,1}[\w\+\-\.]+\W)"
 
 NASA_ADS_ROOT_1 = "http://adsabs.harvard.edu/abs/"
 NASA_ADS_ROOT_2 = "http://cdsads.u-strasbg.fr/abs/"
 NASA_ADS_FORMAT_SUFFIX = "?data_type=XML"
 
-def get_ADS_publication(bibcode):
+PUBLICATION_PROPERTY_OPENACCESS = 'OPENACCESS'
+PUBLICATION_PROPERTY_REFEREED = 'REFEREED'
+PUBLICATION_PROPERTY_NOT_REFEREED = 'NOT REFEREED'
+PUBLICATION_PROPERTY_EPRINT_OPENACCESS = 'EPRINT_OPENACCESS'
+PUBLICATION_PROPERTY_PUB_OPENACCESS = 'PUB_OPENACCESS'
+PUBLICATION_PROPERTY_ADS_OPENACCESS = 'ADS_OPENACCESS'
+PUBLICATION_PROPERTY_ARTICLE = 'ARTICLE'
+PUBLICATION_PROPERTY_NONARTICLE = 'NONARTICLE'
+
+def get_ADS_publication_from_bibcode(bibcode):
+    if not re.match(bibcode_regex, bibcode):
+        return None
+
+    papers = list(ads.SearchQuery(bibcode=bibcode, sort="pubdate"))
+    if len(papers) > 1:
+        print "We get multiple papers for ADS bibcode", bibcode, " ???"
+        return None
+
+    publication = import_ADS_paper(papers[0])
+    return publication
+
+def get_ADS_publications_list_from_querystring(querystring):
+    if re.match(bibcode_regex, querystring):
+        publication = get_ADS_publication_from_bibcode(querystring)
+        return [publication,] if publication is not None else None
+
+    papers = list(ads.SearchQuery(q=querystring, sort="pubdate"))
+    publications = []
+    for paper in papers:
+        publication = import_ADS_paper(paper)
+        if publication is not None:
+            publications.append(publication)
+
+    return publications
+
+
+def import_ADS_paper(paper):
+    try:
+        publication, created = Publication.objects.get_or_create(bibcode=paper.bibcode)
+    except MultipleObjectsReturned:
+        return None
+
+    publication.abstract = paper.abstract
+    publication.title = paper.title
+    publication.keywords = paper.keyword
+    publication.is_refereed = PUBLICATION_PROPERTY_REFEREED in paper.property
+
+    for citation_bibcode in paper.citation: # yes, no plural...
+        citation, created = Publication.objects.get_or_create(bibcode=citation_bibcode)
+        publication.citations.add(citation)
+
+    for reference_bibcode in paper.citation: # yes, no plural...
+        reference, created = Publication.objects.get_or_create(bibcode=reference_bibcode)
+        publication.references.add(reference)
+
+    for organisation_name, author_name in zip(paper.aff, paper.author):
+        name_elements = get_author_name(author_name)
+        author, created = Person.objects.get_flexibly_or_create(**name_elements)
+        publication.authors.add(author)
+
+        organisation, created = Organisation.objects.get_or_create(name=organisation_name)
+        affiliation, created = Affiliation.objects.get_or_create(person=author, organisation=organisation)
+
+    if paper.pub.upper() == paper.pub:
+        publisher, created = Publisher.objects.get_flexibly_or_create(acronym=paper.pub)
+    else:
+        publisher, created = Publisher.objects.get_flexibly_or_create(name=paper.pub)
+
+    publication.journal = publisher
+    publication.volume = paper.volume
+    publication.year = paper.year
+
+    publication.save()
+    return publication
+
+def get_ADS_publication_old(bibcode):
 
     try:
         response = urllib2.urlopen(NASA_ADS_ROOT_1+urllib2.quote(bibcode)+NASA_ADS_FORMAT_SUFFIX)

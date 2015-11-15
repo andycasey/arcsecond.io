@@ -88,6 +88,9 @@ urlpatterns = patterns('',
         views.PublicationDetailAPIView.as_view(),
         name="publication-detail"),
 
+    url(r'^1/publications/(?P<query>\w+)$',
+        views.PublicationListAPIView.as_view(),
+        name="publication-list"),
 
     # ----- People -----
 
