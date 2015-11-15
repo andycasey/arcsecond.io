@@ -3,6 +3,7 @@
 import xml
 import urllib2
 import ads
+import timestring
 
 from django.core.exceptions import MultipleObjectsReturned
 from django.conf import settings
@@ -62,7 +63,7 @@ def import_ADS_paper(paper):
         return None
 
     publication.abstract = paper.abstract
-    publication.title = paper.title
+    publication.title = paper.title[0] if type(paper.title) is list else paper.title
     publication.keywords = paper.keyword
     publication.is_refereed = PUBLICATION_PROPERTY_REFEREED in paper.property
 
@@ -70,7 +71,7 @@ def import_ADS_paper(paper):
         citation, created = Publication.objects.get_or_create(bibcode=citation_bibcode)
         publication.citations.add(citation)
 
-    for reference_bibcode in paper.citation: # yes, no plural...
+    for reference_bibcode in paper.reference: # yes, no plural...
         reference, created = Publication.objects.get_or_create(bibcode=reference_bibcode)
         publication.references.add(reference)
 
@@ -88,8 +89,18 @@ def import_ADS_paper(paper):
         publisher, created = Publisher.objects.get_flexibly_or_create(name=paper.pub)
 
     publication.journal = publisher
-    publication.volume = paper.volume
-    publication.year = paper.year
+
+    publication.volume_number = int(paper.volume)
+    publication.issue_number = int(paper.issue)
+    publication.first_page_number = int(paper.page[0]) if type(paper.page) is list else int(paper.page)
+
+    # Date stamps comes with a day '0' hence the replace.
+    # The return type of timestring.Date() is not a datetime object. Hence, the .date.
+    # But the expected field is a DateField and not a DateTimeField. Hence, the final .date()
+    # publication.publication_date = timestring.Date(paper.pubdate.replace('-00', '-01')).date.date() if paper.pubdate is not None else None
+    publication.publication_date = paper.pubdate
+    publication.year = int(paper.year)
+    publication.month = int(paper.pubdate.split('-')[1]) if paper.pubdate is not None else None
 
     publication.save()
     return publication

@@ -138,12 +138,14 @@ class Publication(models.Model):
     PUBLICATION_TYPE_CHOICES = tuple(zip(PUBLICATION_TYPE_KEYS, PUBLICATION_TYPE_VALUES))
 
     publication_type = models.CharField(max_length=5, choices=PUBLICATION_TYPE_CHOICES, default=PUBLICATION_TYPE_UNKNOWN)
-    publication_date = models.DateField(null=True, blank=True)
+    publication_date = models.CharField(max_length=25, null=True, blank=True)
 
+    title = models.CharField(max_length=1000, default="", null=True, blank=True)
     abstract = models.CharField(max_length=5000, null=True, blank=True)
     abstract_copyright = models.CharField(max_length=200, null=True, blank=True)
 
     authors = models.ManyToManyField(Person, related_name="publications")
+    related_objects = models.ManyToManyField(AstronomicalObject, related_name="related_objects")
 
     bibcode = models.CharField(max_length=50, unique=True, validators=[RegexValidator(regex=bibcode_regex, message='Invalid bibcode', code='nomatch')])
     eprint_id = models.CharField(max_length=50, null=True, blank=True)
@@ -156,16 +158,15 @@ class Publication(models.Model):
     subjects = ArrayField(models.CharField(max_length=200, null=True, blank=True), default=list)
 
     journal = models.ForeignKey(Publisher, null=True, blank=True, related_name='publications')
+
     volume_number = models.IntegerField(null=True, blank=True)
     issue_number = models.IntegerField(null=True, blank=True)
     first_page_number = models.IntegerField(null=True, blank=True)
     number_of_pages = models.IntegerField(null=True, blank=True)
-    is_refereed = models.BooleanField(default=False, blank=True)
-
-    title = models.CharField(max_length=1000, default="", null=True, blank=True)
+    month = models.IntegerField(default=0, null=True, blank=True)
     year = models.IntegerField(default=0, null=True, blank=True)
 
-    related_objects = models.ManyToManyField(AstronomicalObject, related_name="related_objects")
+    is_refereed = models.BooleanField(default=False, blank=True)
 
 
 
