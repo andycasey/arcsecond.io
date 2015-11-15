@@ -84,11 +84,11 @@ urlpatterns = patterns('',
 
     # ----- Publications -----
 
-    url(r'^1/publications/(?P<bibcode>'+constants.bibcode_regex+')$',
+    url(r'^1/publications/(?P<bibcode>'+constants.bibcode_regex+')/$',
         views.PublicationDetailAPIView.as_view(),
         name="publication-detail"),
 
-    url(r'^1/publications/(?P<query>\w+)$',
+    url(r'^1/publications/(?P<query>\w+)/$',
         views.PublicationListAPIView.as_view(),
         name="publication-list"),
 
