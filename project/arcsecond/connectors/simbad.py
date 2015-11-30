@@ -112,7 +112,7 @@ def get_SIMBAD_object_types(name):
         if line.find(QUERY_DATA_DELIMITER) >= 0:
             ok = True
 
-    if len(value_line) > 0:
+    if value_line is not None and len(value_line) > 0:
         values = value_line.split(",")
         for value in values:
             otype, created = ObjectType.objects.get_or_create(value=value)
