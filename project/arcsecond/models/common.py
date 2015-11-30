@@ -21,9 +21,9 @@ class Link(models.Model):
 class PersonManager(models.Manager):
     def get_flexibly_or_create(self, **kwargs):
         created = False
-        last_name = kwargs.get('last_name', "").strip()
+        last_name = kwargs.get('last_name', "").strip() if kwargs.get('last_name', "") is not None else ""
         initials = kwargs.get('initials', [])
-        first_name = kwargs.get('first_name', "").strip()
+        first_name = kwargs.get('first_name', "").strip() if kwargs.get('first_name', "") is not None else ""
         person = None
         try:
             person = Person.objects.get(last_name=last_name, first_name=first_name, initials__overlap=initials)

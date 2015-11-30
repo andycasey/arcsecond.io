@@ -35,4 +35,6 @@ class PublicationListAPIView(mixins.RequestLogViewMixin, generics.RetrieveAPIVie
     serializer_class = serializers.PublicationSerializer
 
     def get_queryset(self):
-        pass
+        query = self.kwargs.get("query", None)
+        publications = connectors.get_ADS_publications_list_from_querystring(query)
+        return publications
