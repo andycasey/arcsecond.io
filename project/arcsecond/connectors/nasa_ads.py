@@ -67,21 +67,24 @@ def import_ADS_paper(paper):
     publication.keywords = paper.keyword
     publication.is_refereed = PUBLICATION_PROPERTY_REFEREED in paper.property
 
-    for citation_bibcode in paper.citation: # yes, no plural...
-        citation, created = Publication.objects.get_or_create(bibcode=citation_bibcode)
-        publication.citations.add(citation)
+    if paper.citation is not None:
+        for citation_bibcode in paper.citation: # yes, no plural...
+            citation, created = Publication.objects.get_or_create(bibcode=citation_bibcode)
+            publication.citations.add(citation)
 
-    for reference_bibcode in paper.reference: # yes, no plural...
-        reference, created = Publication.objects.get_or_create(bibcode=reference_bibcode)
-        publication.references.add(reference)
+    if paper.reference is not None:
+        for reference_bibcode in paper.reference: # yes, no plural...
+            reference, created = Publication.objects.get_or_create(bibcode=reference_bibcode)
+            publication.references.add(reference)
 
-    for organisation_name, author_name in zip(paper.aff, paper.author):
-        name_elements = get_author_name(author_name)
-        author, created = Person.objects.get_flexibly_or_create(**name_elements)
-        publication.authors.add(author)
+    if paper.aff is not None and paper.author is not None:
+        for organisation_name, author_name in zip(paper.aff, paper.author):
+            name_elements = get_author_name(author_name)
+            author, created = Person.objects.get_flexibly_or_create(**name_elements)
+            publication.authors.add(author)
 
-        organisation, created = Organisation.objects.get_or_create(name=organisation_name)
-        affiliation, created = Affiliation.objects.get_or_create(person=author, organisation=organisation)
+            organisation, created = Organisation.objects.get_or_create(name=organisation_name)
+            affiliation, created = Affiliation.objects.get_or_create(person=author, organisation=organisation)
 
     if paper.pub.upper() == paper.pub:
         publisher, created = Publisher.objects.get_flexibly_or_create(acronym=paper.pub)
@@ -90,17 +93,25 @@ def import_ADS_paper(paper):
 
     publication.journal = publisher
 
-    publication.volume_number = int(paper.volume)
-    publication.issue_number = int(paper.issue)
-    publication.first_page_number = int(paper.page[0]) if type(paper.page) is list else int(paper.page)
+    if paper.volume is not None:
+        publication.volume_number = int(paper.volume)
+    if paper.issue is not None:
+        publication.issue_number = int(paper.issue)
+    if paper.page is not None:
+        try:
+            publication.first_page_number = int(paper.page[0]) if type(paper.page) is list else int(paper.page)
+        except:
+            pass
 
     # Date stamps comes with a day '0' hence the replace.
     # The return type of timestring.Date() is not a datetime object. Hence, the .date.
     # But the expected field is a DateField and not a DateTimeField. Hence, the final .date()
     # publication.publication_date = timestring.Date(paper.pubdate.replace('-00', '-01')).date.date() if paper.pubdate is not None else None
-    publication.publication_date = paper.pubdate
-    publication.year = int(paper.year)
-    publication.month = int(paper.pubdate.split('-')[1]) if paper.pubdate is not None else None
+    if paper.pubdate is not None:
+        publication.publication_date = paper.pubdate
+        publication.month = int(paper.pubdate.split('-')[1]) if paper.pubdate is not None else None
+    if paper.year is not None:
+        publication.year = int(paper.year)
 
     publication.save()
     return publication
