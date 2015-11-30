@@ -35,7 +35,7 @@ kombu==3.0.26
 langdetect==1.0.5
 mandrill==1.0.57
 Markdown==2.6.2
-numpy==1.9.2
+numpy==1.10.1
 paramiko==1.15.2
 psycopg2==2.6
 pycrypto==2.6.1

@@ -208,7 +208,7 @@ INSTALLED_APPS += ('django_nose',)
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 NOSE_ARGS = [
     '--with-coverage',
-    '--cover-package=project.arcsecond.forms,project.arcsecond.models,project.arcsecond.views',
+    '--cover-package=project.arcsecond.models,project.arcsecond.views',
 ]
 
 FULL_TEMPLATE_PATH = os.path.join(PROJECT_PATH, 'templates')
