@@ -36,9 +36,11 @@ ESO_INSTRUMENTS = {
     "MUSE":  {"name": "MUSE", "site": "Paranal", "telescope": "Unit Telescope 4"},
 
     "PIONI": {"name": "PIONIER", "site": "Paranal", "telescope": "VLTI"},
+    "AMBER": {"name": "AMBER", "site": "Paranal", "telescope": "VLTI"},
 
     "VCAM":  {"name": "VIRCAM", "site": "Paranal", "telescope": "VISTA"},
     "OMEGA": {"name": "OmegaCam", "site": "Paranal", "telescope": "VST"},
+    "OMEGACAM": {"name": "OmegaCam", "site": "Paranal", "telescope": "VST"},
 
     # Decomissionned
 
