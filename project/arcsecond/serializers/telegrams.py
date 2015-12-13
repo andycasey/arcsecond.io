@@ -11,16 +11,12 @@ class AstronomersTelegramSerializer(serializers.ModelSerializer):
         fields = ('identifier', 'title', 'credential_certification', 'subjects', 'content', 'authors',
                   'related_telegrams', 'detected_objects', 'external_links')
 
-    related_telegrams = serializers.HyperlinkedRelatedField(many=True,
-                                                            read_only=True,
-                                                            view_name='astronomerstelegram-detail',
-                                                            lookup_field='identifier')
+    related_telegrams = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+    detected_objects = serializers.SlugRelatedField(many=True, read_only=True, slug_field='name')
 
-    detected_objects = serializers.HyperlinkedRelatedField(many=True,
-                                                           read_only=True,
-                                                           view_name='astronomicalobject-detail',
-                                                           lookup_field='name')
-
+    subjects = serializers.SerializerMethodField()
+    def get_subjects(self, obj):
+        return [AstronomersTelegram.SUBJECTS_VALUES[AstronomersTelegram.SUBJECTS_KEYS.index(domain)] for domain in obj.subjects]
 
 class GCNCircularSerializer(serializers.ModelSerializer):
     class Meta:
@@ -30,9 +26,9 @@ class GCNCircularSerializer(serializers.ModelSerializer):
                   'related_circulars', 'external_links')
 
     submitter = PersonSerializer(required=False)
-    related_circulars = serializers.HyperlinkedRelatedField(many=True,
-                                                            read_only=True,
-                                                            view_name='gcncircular-detail',
-                                                            lookup_field='identifier')
+    related_circulars = serializers.HyperlinkedIdentityField(many=True,
+                                                             read_only=True,
+                                                             view_name='gcncircular-detail',
+                                                             lookup_field='identifier')
 
 

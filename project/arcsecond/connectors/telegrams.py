@@ -76,7 +76,17 @@ def get_ATel(identifier):
 
         subjects_tag = telegram_tag.find("div", id="subjects")
         if subjects_tag is not None:
-            atel.subjects = subjects_tag.find("p").string.replace('Subjects:', '').strip()
+            atel.subjects = [] # Reinitialisation in case we had wrong values
+            potential_subjects = [ s.strip() for s in subjects_tag.find("p").string.replace('Subjects:', '').strip().split(',') ]
+            subjects_set = set()
+            for potential_subject in potential_subjects:
+                if potential_subject in AstronomersTelegram.SUBJECTS_VALUES:
+                    subjects_set.add(potential_subject)
+                else:
+                    print potential_subject, "not in ATEL SUBJECTS_VALUES"
+            atel.subjects = list(subjects_set)
+
+        print atel.subjects
 
         credentialsIndex = -1
         subjectsIndex = -1
