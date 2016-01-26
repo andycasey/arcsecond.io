@@ -9,9 +9,10 @@ class AstronomersTelegramSerializer(serializers.ModelSerializer):
         model = AstronomersTelegram
         lookup_field = "identifier"
         fields = ('identifier', 'title', 'credential_certification', 'subjects', 'content', 'authors',
-                  'related_telegrams', 'detected_objects', 'external_links')
+                  'related_telegrams', 'referring_telegrams', 'detected_objects', 'external_links')
 
     related_telegrams = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+    referring_telegrams = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
     detected_objects = serializers.SlugRelatedField(many=True, read_only=True, slug_field='name')
 
     subjects = serializers.SerializerMethodField()

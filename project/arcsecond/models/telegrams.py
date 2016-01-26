@@ -13,6 +13,7 @@ class AstronomersTelegram(models.Model):
     content = models.CharField(max_length=20000, null=True, blank=True)
 
     related_telegrams = models.ManyToManyField('self')
+    referring_telegrams = models.ManyToManyField('self')
 
     authors = models.ManyToManyField(Person, related_name='astronomer_telegrams')
     external_links = models.ManyToManyField(Link, related_name='astronomer_telegrams')
