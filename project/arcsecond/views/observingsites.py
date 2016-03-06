@@ -1,13 +1,25 @@
 from django.core.exceptions import ObjectDoesNotExist
+from django.core.exceptions import MultipleObjectsReturned
+from django.db.models import Q
+
 from django.http import Http404
+from django.http import HttpResponse
 
 from rest_framework import generics
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework.status import HTTP_300_MULTIPLE_CHOICES
+from rest_framework.exceptions import APIException
 
 from project.arcsecond import models
 from project.arcsecond import serializers
 from project.arcsecond import mixins
+
+
+class MultipleObjectsException(APIException):
+    status_code = HTTP_300_MULTIPLE_CHOICES
+    default_detail = 'There are multiple objects pointed by this resource path.'
+
 
 class ObservingSiteListAPIView(mixins.RequestLogViewMixin, generics.ListCreateAPIView):
     queryset = models.ObservingSite.objects.all().order_by('name')
@@ -41,9 +53,11 @@ class ObservingSiteListAPIView(mixins.RequestLogViewMixin, generics.ListCreateAP
 
         return result
 
+
 class ObservingSiteActivityListAPIView(mixins.RequestLogViewMixin, generics.ListAPIView):
     queryset = models.ObservingSiteActivity.objects.all().order_by('-date')
     serializer_class = serializers.ObservingSiteActivitySerializer
+
 
 class ObservingSiteDetailAPIView(mixins.RequestLogViewMixin, generics.RetrieveUpdateAPIView):
     queryset = models.ObservingSite.objects.all()
@@ -83,22 +97,17 @@ class ObservingSiteNamedDetailAPIView(ObservingSiteDetailAPIView):
 
     def get_object(self):
         name = self.kwargs.get("name", None)
+        conditions = Q(name=name) | Q(short_name=name) | Q(alternate_name_1=name) | Q(alternate_name_2=name)
         queryset = self.get_queryset()
 
         try:
-            obj = queryset.get(name=name)
+            obj = queryset.get(conditions)
+        except MultipleObjectsReturned:
+            raise MultipleObjectsException()
         except ObjectDoesNotExist:
-            try:
-                obj = queryset.get(short_name=name)
-            except ObjectDoesNotExist:
-                try:
-                    obj = queryset.get(alternate_name_1=name)
-                except ObjectDoesNotExist:
-                    try:
-                        obj = queryset.get(alternate_name_2=name)
-                    except ObjectDoesNotExist:
-                        raise Http404()
+            raise Http404()
 
         return obj
 
-
+    def handle_exception(self, exc):
+        return super(ObservingSiteNamedDetailAPIView, self).handle_exception(exc)
