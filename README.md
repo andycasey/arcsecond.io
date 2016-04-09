@@ -1,4 +1,4 @@
-![alt tag](https://raw.githubusercontent.com/onekiloparsec/arcsecond.io/project/static/arcsecond/img/favicon-96.png)
+![alt tag](https://raw.githubusercontent.com/onekiloparsec/arcsecond.io/master/project/static/arcsecond/img/favicon-96.png)
 
 arcsecond.io
 ============
