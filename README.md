@@ -121,6 +121,8 @@ and that's it! You have a own local server of arcsecond.io. If you want to load 
 
 - ```(arcsecond)$ python manage.py loaddata project/arcsecond/fixtures/*_all.json```
 
+To test your local server, you can use: ```http://api.lvh.me:8000``` for the APIs part.
+
 
 Structure
 ---------
