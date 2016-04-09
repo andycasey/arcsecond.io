@@ -110,6 +110,15 @@ Initial Setup
 - ```$ git clone https://github.com/<username>/arcsecond.io.git```
 - ```$ cd arcsecond.io```
 - ```$ git checkout staging```
+- create a ```.env``` file containing:
+```
+SECRET_KEY='<create your own secret key>'
+DATABASE_URL='postgres://localhost:5432/arcsecond'
+DJANGO_SETTINGS_MODULE=project.settings.dev
+WEB_CONCURRENCY = 3
+```
+You can create secret keys [here](http://www.miniwebtool.com/django-secret-key-generator/)
+
 - ```$ mkvirtualenv -p /usr/bin/<your version of python> arcsecond```
 - ```(arcsecond)$ pip install -r requirements.txt```
 - ```(arcsecond)$ python manage.py migrate --noinput```
