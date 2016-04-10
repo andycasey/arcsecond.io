@@ -22,8 +22,7 @@ are accessible the same way, through usual individual and group permissions that
 control.
 
 Imagine even furthermore that **community-curated informations** is also accessible that way! This
-is what has been started with observing sites. A list of observing sites accross the globe,
-big or not, institutional or not. Imagine now this list constantly updated, and enhanced by
+is what has been started with observing sites (see below). Imagine now this list constantly updated, and enhanced by
 informations about domes and telescopes, and further more... instruments and detectors.
 All accessible freely, always the same way. A kind of scientific data-based wikipedia!
 
@@ -40,14 +39,17 @@ a new backend for a new version of his OSX/iOS app [iObserve](http://onekilopars
 arcsecond.io has 2 feet: *api* and *www*
 ------------------------------------
 
-**api** is for the data part. The REST service. To every resource, there is an URL. This
+**api.arcsecond.io** is for the data part: the REST service. To every resource, there is an URL. This
 is clearly the first and main part to develop first. It is already well underway, as you can
-[see by yourself](http://api.arcsecond.io).
+[see for yourself](http://api.arcsecond.io).
 
-**www** is for the web/front-end part. It is the first example of consumption of the *api* part. This
-is where usual web-app stuff is being developed: accounts, profile, storage etc. It also provides basic web
-pages that could be useful to the whole community. Like a **[community-curated list of existing Observing Sites around the world](http://arcsecond.io/observingsites)**!
-Or a **[live stream of data from the VLT poured into the ESO archive](http://www.arcsecond.io/archives)** (beta).
+**www.arcsecond.io** is the web/front-end part. It is a first example of consumption of the *api* part.
+Other services can use *api.arcsecond.io* and ignore *www.arcsecond.io* at all. But it can nonetheless
+be a very good start at creating more services that could be useful to the whole community.
+
+Two pages exemplifies this right now already:
+- See http://www.arcsecond.io/observingsites for a community-curated list of existing Observing Sites around the world!
+- And http://www.arcsecond.io/archives (in beta), for a live stream of data from the VLT poured into the ESO archive.
 
 
 arcsecond.io is built with Python
@@ -58,15 +60,14 @@ The RESTful part uses the famous Django REST Framework, making it easy to create
 as REST resources. For the scientific part, it uses the excellent **AstroPy** among other excellent
 libraries.
 
-The *www* part is build with Google's **AngularJS** (v1), with Twitter Bootstrap framwork (v3).
+The *www* part is build with Google's **AngularJS** (v1), with Twitter Bootstrap framework (v3).
 
 
 arcsecond.io is hosted on Heroku
 --------------------------------
 
 Arcsecond.io is hosted on the great [PaaS](https://en.wikipedia.org/wiki/Platform_as_a_service):
-[Heroku.com](http://heroku.com), and [onekiloparsec](https://twitter.com/onekiloparsec).
-As for now, I (onekiloparsec) am taking care of it (and pay for it...). But as the project hopefully grows,
+[Heroku.com](http://heroku.com). As for now, I (onekiloparsec) am taking care of it (and pay for it...). But as the project hopefully grows,
 other developers will be added to the Heroku dashboard.
 
 In the current setup, arcsecond.io is costing roughly 30US$ a month. You can
@@ -133,6 +134,16 @@ and that's it! You have a own local server of arcsecond.io. If you want to load 
 To test your local server, you can use: ```http://api.lvh.me:8000``` for the APIs part.
 
 
+Django
+-------
+
+*Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.*
+You can [get started](https://www.djangoproject.com/start/) or [read the docs](https://docs.djangoproject.com/en/1.9/)
+
+For wonderful and up-to-date video tutorials about Django, check out
+[this page](https://opbeat.com/events/djangocon-eu-2016) from OpBeats
+
+
 Structure
 ---------
 
@@ -182,13 +193,6 @@ The arcsecond.io project is structured the following way:
   - requirements.txt (python requirements, forwarding to specific requirements in requirements directory)
 
 
-Django
--------
-
-*Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.*
-You can [get started](https://www.djangoproject.com/start/) or [read the docs](https://docs.djangoproject.com/en/1.9/)
-
-
 Django REST Framework
 ---------------------
 
@@ -201,6 +205,7 @@ Angular JS
 ----------
 
 Soon...
+
 
 
 Update Channels
