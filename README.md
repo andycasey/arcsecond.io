@@ -22,7 +22,7 @@ are accessible the same way, through usual individual and group permissions that
 control.
 
 Imagine even furthermore that **community-curated informations** is also accessible that way! This
-is what has been started with observing sites (see below). Imagine now this list constantly updated, and enhanced by
+is what has been started with observing sites around the world (see below). Imagine now this list constantly updated, and enhanced by
 informations about domes and telescopes, and further more... instruments and detectors.
 All accessible freely, always the same way. A kind of scientific data-based wikipedia!
 
@@ -39,15 +39,15 @@ a new backend for a new version of his OSX/iOS app [iObserve](http://onekilopars
 arcsecond.io has 2 feet: *api* and *www*
 ------------------------------------
 
-**api.arcsecond.io** is for the data part: the REST service. To every resource, there is an URL. This
+**[api.arcsecond.io](http://api.arcsecond.io)** is for the data part: the REST service. To every resource, there is an URL. This
 is clearly the first and main part to develop first. It is already well underway, as you can
 [see for yourself](http://api.arcsecond.io).
 
 **www.arcsecond.io** is the web/front-end part. It is a first example of consumption of the *api* part.
-Other services can use *api.arcsecond.io* and ignore *www.arcsecond.io* at all. But it can nonetheless
+Other services can use *[api.arcsecond.io](http://api.arcsecond.io)* and ignore *www.arcsecond.io* at all. But it can nonetheless
 be a very good start at creating more services that could be useful to the whole community.
 
-Two pages exemplifies this right now already:
+Two pages exemplify this already:
 - See http://www.arcsecond.io/observingsites for a community-curated list of existing Observing Sites around the world!
 - And http://www.arcsecond.io/archives (in beta), for a live stream of data from the VLT poured into the ESO archive.
 
@@ -95,7 +95,7 @@ Requirements
 
 - Python 2 (I know, we must migrate to Python 3...)
 - virtualenvs (```pip install virtualenv```)
-- PostgreSQL [Mac App](http://postgresapp.com)
+- PostgreSQL (here is a [Mac App](http://postgresapp.com))
 - [Bower](http://bower.io) (```npm install -g bower```)
 
 Optionally, you can use the excellent [Paw.app](https://luckymarmot.com/paw) on Mac, to test HTTP and REST requests.
@@ -206,6 +206,13 @@ Angular JS
 
 Soon...
 
+Getting Started
+===============
+
+Probably the best way to get started is to:
+- Study a bit how [Django model classes are built](https://docs.djangoproject.com/en/1.9/intro/tutorial02/), and which type of properties they have
+- Select one of the connectors of arcsecond.io and play with it to fill model properties.
+- And finally study how these properties are serialized in the associated serializer (see Structure above).
 
 
 Update Channels
